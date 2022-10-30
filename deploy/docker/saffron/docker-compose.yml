@@ -1,4 +1,4 @@
-# docker-compose to deploy multiple collectors onto saffron
+# docker-compose to deploy multiple collectors
 version: '3.1'
 
 services:
@@ -6,83 +6,65 @@ services:
   ukraine_regions:
     container_name: ukraine_regions
     volumes:
-      - ./../../data/ukraine_regions:/app/data
-      - ./ukraine_regions/specs:/app/specs
-      - ./ukraine_regions/credentials.csv:/app/credentials.csv
-      - ./ukraine_regions/.env:/app/.env
-      - ./ukraine_regions/cronjob:/etc/cron.d/cronjob
+      - ./data/ukraine_regions:/app/data
     build:
+      args:
+        collection_dir: "./deploy/docker/saffron/ukraine_regions"
       context: ../../../
       dockerfile: ./deploy/docker/Dockerfile
-    command: cron -f; source /app/utils/launch.sh
     restart: unless-stopped
 
   ukraine_neighbours1:
     container_name: ukraine_neighbours1
     volumes:
-      - ./../../data/ukraine_neighbours1:/app/data
-      - ./ukraine_neighbours1/specs:/app/specs
-      - ./ukraine_neighbours1/credentials.csv:/app/credentials.csv
-      - ./ukraine_neighbours1/.env:/app/.env
-      - ./ukraine_neighbours1/cronjob:/etc/cron.d/cronjob
+      - ./data/ukraine_neighbours1:/app/data
     build:
+      args:
+        collection_dir: "./deploy/docker/saffron/ukraine_neighbours1"
       context: ../../../
       dockerfile: ./deploy/docker/Dockerfile
-    command: cron -f; source /app/utils/launch.sh
     restart: unless-stopped
 
   ukraine_neighbours2:
     container_name: ukraine_neighbours2
     volumes:
-      - ./../../data/ukraine_neighbours2:/app/data
-      - ./ukraine_neighbours2/specs:/app/specs
-      - ./ukraine_neighbours2/credentials.csv:/app/credentials.csv
-      - ./ukraine_neighbours2/.env:/app/.env
-      - ./ukraine_neighbours2/cronjob:/etc/cron.d/cronjob
+      - ./data/ukraine_neighbours2:/app/data
     build:
+      args:
+        collection_dir: "./deploy/docker/saffron/ukraine_neighbours2"
       context: ../../../
       dockerfile: ./deploy/docker/Dockerfile
-    command: cron -f; source /app/utils/launch.sh
     restart: unless-stopped
 
   ukraine_language:
     container_name: ukraine_language
     volumes:
-      - ./../../data/ukraine_language:/app/data
-      - ./ukraine_language/specs:/app/specs
-      - ./ukraine_language/credentials.csv:/app/credentials.csv
-      - ./ukraine_language/.env:/app/.env
-      - ./ukraine_language/cronjob:/etc/cron.d/cronjob
+      - ./data/ukraine_language:/app/data
     build:
+      args:
+        collection_dir: "./deploy/docker/saffron/ukraine_language"
       context: ../../../
       dockerfile: ./deploy/docker/Dockerfile
-    command: cron -f; source /app/utils/launch.sh
     restart: unless-stopped
 
   ukraine_europe:
     container_name: ukraine_europe
     volumes:
-      - ./../../data/ukraine_europe:/app/data
-      - ./ukraine_europe/specs:/app/specs
-      - ./ukraine_europe/credentials.csv:/app/credentials.csv
-      - ./ukraine_europe/.env:/app/.env
-      - ./ukraine_europe/cronjob:/etc/cron.d/cronjob
+      - ./data/ukraine_europe:/app/data
     build:
+      args:
+        collection_dir: "./deploy/docker/saffron/ukraine_europe"
       context: ../../../
       dockerfile: ./deploy/docker/Dockerfile
-    command: cron -f; source /app/utils/launch.sh
     restart: unless-stopped
 
   ukraine_countries:
     container_name: ukraine_countries
     volumes:
-      - ./../../data/ukraine_countries:/app/data
-      - ./ukraine_countries/specs:/app/specs
-      - ./ukraine_countries/credentials.csv:/app/credentials.csv
-      - ./ukraine_countries/.env:/app/.env
-      - ./ukraine_countries/cronjob:/etc/cron.d/cronjob
+      - ./data/ukraine_countries:/app/data
     build:
+      args:
+        collection_dir: "./deploy/docker/saffron/ukraine_countries"
       context: ../../../
       dockerfile: ./deploy/docker/Dockerfile
-    command: cron -f; source /app/utils/launch.sh
     restart: unless-stopped

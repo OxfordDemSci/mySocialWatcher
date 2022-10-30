@@ -4,14 +4,12 @@ version: '3.1'
 services:
   example_collection:
     container_name: example_collection
+    volumes:
+      - ./data/example_collection:/app/data
     build:
+      args:
+        virtual_machine: example_virtual_machine
+        collection: example_collection
       context: ../../../
       dockerfile: ./deploy/docker/Dockerfile
-    volumes:
-      - ./example_collection/data:/app/data
-      - ./example_collection/specs:/app/specs
-      - ./example_collection/credentials.csv:/app/credentials.csv
-      - ./example_collection/.env:/app/.env
-      - ./example_collection/cronjob:/etc/cron.d/cronjob
-    command: cron -f; source /app/utils/launch.sh
     restart: unless-stopped

@@ -21,8 +21,20 @@ COPY mysocialwatcher mysocialwatcher
 COPY mysocialwatcher/main.py main.py
 COPY ./deploy/utils utils
 
-# cron
-RUN chmod 0644 /etc/cron.d/cronjob && crontab /etc/cron.d/cronjob
+# collection config
+ARG collection_dir=${collection_dir}
+COPY $collection_dir/credentials.csv credentials.csv
+COPY $collection_dir/.env .env
+COPY $collection_dir/specs specs
+COPY $collection_dir/cronjob /etc/cron.d/cronjob
 
-# # commmand
-# ENTRYPOINT ["cron", "-f;", "source", "utils/lanuch.sh"]
+# chmod executables
+RUN chmod 0744 ./utils/launch.sh
+RUN chmod 0744 ./utils/cleanup.sh
+
+# cron
+RUN chmod 0644 /etc/cron.d/cronjob
+RUN crontab /etc/cron.d/cronjob
+
+# commmand
+ENTRYPOINT ["./utils/launch.sh", "&", "cron", "-f"]
