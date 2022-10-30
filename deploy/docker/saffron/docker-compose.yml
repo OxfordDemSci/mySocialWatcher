@@ -2,10 +2,11 @@
 version: '3.1'
 
 services:
+
   ukraine_regions:
     container_name: ukraine_regions
     volumes:
-      - ./ukraine_regions/data:/app/data
+      - ./../../data/ukraine_regions:/app/data
       - ./ukraine_regions/specs:/app/specs
       - ./ukraine_regions/credentials.csv:/app/credentials.csv
       - ./ukraine_regions/.env:/app/.env
