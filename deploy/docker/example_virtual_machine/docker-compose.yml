@@ -12,5 +12,6 @@ services:
       - ./example_collection/specs:/app/specs
       - ./example_collection/credentials.csv:/app/credentials.csv
       - ./example_collection/.env:/app/.env
+      - ./example_collection/cronjob:/etc/cron.d/cronjob
     command: cron -f; source /app/utils/launch.sh
     restart: unless-stopped

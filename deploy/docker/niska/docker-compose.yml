@@ -1,0 +1,32 @@
+# docker-compose to deploy multiple collectors onto saffron
+version: '3.1'
+
+services:
+
+  rus_exodus_facebook:
+    container_name: rus_exodus_facebook
+    volumes:
+      - ./../../data/rus_exodus_facebook:/app/data
+      - ./rus_exodus_facebook/specs:/app/specs
+      - ./rus_exodus_facebook/credentials.csv:/app/credentials.csv
+      - ./rus_exodus_facebook/.env:/app/.env
+      - ./rus_exodus_facebook/cronjob:/etc/cron.d/cronjob
+    build:
+      context: ../../../
+      dockerfile: ./deploy/docker/Dockerfile
+    command: cron -f; source /app/utils/launch.sh
+    restart: unless-stopped
+
+  rus_exodus_instagram:
+    container_name: rus_exodus_instagram
+    volumes:
+      - ./../../data/rus_exodus_instagram:/app/data
+      - ./rus_exodus_instagram/specs:/app/specs
+      - ./rus_exodus_instagram/credentials.csv:/app/credentials.csv
+      - ./rus_exodus_instagram/.env:/app/.env
+      - ./rus_exodus_instagram/cronjob:/etc/cron.d/cronjob
+    build:
+      context: ../../../
+      dockerfile: ./deploy/docker/Dockerfile
+    command: cron -f; source /app/utils/launch.sh
+    restart: unless-stopped

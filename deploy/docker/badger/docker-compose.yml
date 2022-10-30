@@ -1,0 +1,18 @@
+# docker-compose to deploy multiple collectors onto saffron
+version: '3.1'
+
+services:
+
+  dgg_national:
+    container_name: dgg_national
+    volumes:
+      - ./../../data/dgg_national:/app/data
+      - ./dgg_national/specs:/app/specs
+      - ./dgg_national/credentials.csv:/app/credentials.csv
+      - ./dgg_national/.env:/app/.env
+      - ./dgg_national/cronjob:/etc/cron.d/cronjob
+    build:
+      context: ../../../
+      dockerfile: ./deploy/docker/Dockerfile
+    command: cron -f; source /app/utils/launch.sh
+    restart: unless-stopped

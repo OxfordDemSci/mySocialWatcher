@@ -28,7 +28,7 @@ if __name__ == '__main__':
     # ---- create credentials.csv ---- #
 
     # path for output credentials.csv
-    credentials_path = os.path.join('deploy', 'cluster', vm, collection, 'credentials.csv')
+    credentials_path = os.path.join('deploy', 'docker', vm, collection, 'credentials.csv')
 
     # load master credentials
     master_credentials = pd.read_csv(master_credentials_path)
@@ -45,7 +45,7 @@ if __name__ == '__main__':
     # ---- create collection specs ---- #
 
     # output directory
-    specs_dir = os.path.join('deploy', 'cluster', vm, collection, 'specs')
+    specs_dir = os.path.join('deploy', 'docker', vm, collection, 'specs')
     os.makedirs(specs_dir, exist_ok=True)
 
     # load template json (to potentially modify)

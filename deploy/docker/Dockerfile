@@ -20,7 +20,6 @@ RUN python3 setup.py install
 COPY mysocialwatcher mysocialwatcher
 COPY mysocialwatcher/main.py main.py
 COPY ./deploy/utils utils
-COPY ./deploy/utils/cronjob /etc/cron.d/cronjob
 
 # cron
 RUN chmod 0644 /etc/cron.d/cronjob && crontab /etc/cron.d/cronjob

@@ -1,0 +1,6 @@
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+# m h dom mon dow user  command
+55 23 * * * root cd /app; source utils/cleanup.sh
+0 0 * * * root cd /app; source utils/launch.sh
+@reboot root cd /app; source utils/launch.sh
