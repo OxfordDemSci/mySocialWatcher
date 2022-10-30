@@ -1,0 +1,1729 @@
+{
+    "name": "BY",
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "BY"
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 515,
+                    "country_code": "BY",
+                    "name": "Gomel Region"
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 519,
+                    "country_code": "BY",
+                    "name": "Mogilev Region"
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 516,
+                    "country_code": "BY",
+                    "name": "Grodno Region"
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 514,
+                    "country_code": "BY",
+                    "name": "Brest Region"
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 517,
+                    "country_code": "BY",
+                    "name": "Minsk"
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 520,
+                    "country_code": "BY",
+                    "name": "Vitebsk Region"
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4455,
+                    "country_code": "BY",
+                    "name": "Minsk Region"
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 279027,
+                    "region": "Gomel Region",
+                    "region_id": 515,
+                    "country_code": "BY",
+                    "name": "Gomel",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 283566,
+                    "region": "Gomel Region",
+                    "region_id": 515,
+                    "country_code": "BY",
+                    "name": "Mazyr",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 286043,
+                    "region": "Gomel Region",
+                    "region_id": 515,
+                    "country_code": "BY",
+                    "name": "Pietryka\u016d",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 280270,
+                    "region": "Gomel Region",
+                    "region_id": 515,
+                    "country_code": "BY",
+                    "name": "Hoiniki",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 291102,
+                    "region": "Gomel Region",
+                    "region_id": 515,
+                    "country_code": "BY",
+                    "name": "Zhlobin",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 286227,
+                    "region": "Gomel Region",
+                    "region_id": 515,
+                    "country_code": "BY",
+                    "name": "Rechitsa",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 279800,
+                    "region": "Gomel Region",
+                    "region_id": 515,
+                    "country_code": "BY",
+                    "name": "Kalinkovichi",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 286307,
+                    "region": "Gomel Region",
+                    "region_id": 515,
+                    "country_code": "BY",
+                    "name": "Rogachev",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 278076,
+                    "region": "Gomel Region",
+                    "region_id": 515,
+                    "country_code": "BY",
+                    "name": "Dobrush",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 277547,
+                    "region": "Gomel Region",
+                    "region_id": 515,
+                    "country_code": "BY",
+                    "name": "Chechersk",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 283684,
+                    "region": "Gomel Region",
+                    "region_id": 515,
+                    "country_code": "BY",
+                    "name": "Narovlya",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 282217,
+                    "region": "Gomel Region",
+                    "region_id": 515,
+                    "country_code": "BY",
+                    "name": "Loyew",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 288331,
+                    "region": "Gomel Region",
+                    "region_id": 515,
+                    "country_code": "BY",
+                    "name": "Svetlogorsk, Homyel'Skaya Voblasts'",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 282540,
+                    "region": "Mogilev Region",
+                    "region_id": 519,
+                    "country_code": "BY",
+                    "name": "Mahilyow",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 276781,
+                    "region": "Mogilev Region",
+                    "region_id": 519,
+                    "country_code": "BY",
+                    "name": "Bobruisk",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 279497,
+                    "region": "Mogilev Region",
+                    "region_id": 519,
+                    "country_code": "BY",
+                    "name": "Horki",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 277543,
+                    "region": "Mogilev Region",
+                    "region_id": 519,
+                    "country_code": "BY",
+                    "name": "Chausy",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 280390,
+                    "region": "Mogilev Region",
+                    "region_id": 519,
+                    "country_code": "BY",
+                    "name": "Kirawsk",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 281491,
+                    "region": "Mogilev Region",
+                    "region_id": 519,
+                    "country_code": "BY",
+                    "name": "Krychaw",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 277481,
+                    "region": "Mogilev Region",
+                    "region_id": 519,
+                    "country_code": "BY",
+                    "name": "Bykhov",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 287150,
+                    "region": "Mogilev Region",
+                    "region_id": 519,
+                    "country_code": "BY",
+                    "name": "Shklov",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 283571,
+                    "region": "Mogilev Region",
+                    "region_id": 519,
+                    "country_code": "BY",
+                    "name": "Mstislavl",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 284590,
+                    "region": "Mogilev Region",
+                    "region_id": 519,
+                    "country_code": "BY",
+                    "name": "Osipovichi, Minsk",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 278918,
+                    "region": "Mogilev Region",
+                    "region_id": 519,
+                    "country_code": "BY",
+                    "name": "Gmina G\u0142usk",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 279298,
+                    "region": "Grodno Region",
+                    "region_id": 516,
+                    "country_code": "BY",
+                    "name": "Grodno",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 282013,
+                    "region": "Grodno Region",
+                    "region_id": 516,
+                    "country_code": "BY",
+                    "name": "Lida",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 283253,
+                    "region": "Grodno Region",
+                    "region_id": 516,
+                    "country_code": "BY",
+                    "name": "Mir",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 287468,
+                    "region": "Grodno Region",
+                    "region_id": 516,
+                    "country_code": "BY",
+                    "name": "Slonim",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 289588,
+                    "region": "Grodno Region",
+                    "region_id": 516,
+                    "country_code": "BY",
+                    "name": "Volkovysk",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 284053,
+                    "region": "Grodno Region",
+                    "region_id": 516,
+                    "country_code": "BY",
+                    "name": "Novogrudok",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 287487,
+                    "region": "Grodno Region",
+                    "region_id": 516,
+                    "country_code": "BY",
+                    "name": "Smarhon",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 284564,
+                    "region": "Grodno Region",
+                    "region_id": 516,
+                    "country_code": "BY",
+                    "name": "Oshmyany",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 287042,
+                    "region": "Grodno Region",
+                    "region_id": 516,
+                    "country_code": "BY",
+                    "name": "Shchuchin",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 276577,
+                    "region": "Grodno Region",
+                    "region_id": 516,
+                    "country_code": "BY",
+                    "name": "Berestovitsa",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 282932,
+                    "region": "Grodno Region",
+                    "region_id": 516,
+                    "country_code": "BY",
+                    "name": "Masty",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 279677,
+                    "region": "Grodno Region",
+                    "region_id": 516,
+                    "country_code": "BY",
+                    "name": "Ivye",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 288363,
+                    "region": "Grodno Region",
+                    "region_id": 516,
+                    "country_code": "BY",
+                    "name": "Svisloch",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 289642,
+                    "region": "Grodno Region",
+                    "region_id": 516,
+                    "country_code": "BY",
+                    "name": "Voranava",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 287519,
+                    "region": "Grodno Region",
+                    "region_id": 516,
+                    "country_code": "BY",
+                    "name": "Smorgon, Hrodzyenskaya Voblasts'",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 284674,
+                    "region": "Grodno Region",
+                    "region_id": 516,
+                    "country_code": "BY",
+                    "name": "Ostrovets",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 277251,
+                    "region": "Brest Region",
+                    "region_id": 514,
+                    "country_code": "BY",
+                    "name": "Brest",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 290009,
+                    "region": "Brest Region",
+                    "region_id": 514,
+                    "country_code": "BY",
+                    "name": "Wysokie Litewskie",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 276325,
+                    "region": "Brest Region",
+                    "region_id": 514,
+                    "country_code": "BY",
+                    "name": "Baranovichi",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 279672,
+                    "region": "Brest Region",
+                    "region_id": 514,
+                    "country_code": "BY",
+                    "name": "Ivatsevichy",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 285185,
+                    "region": "Brest Region",
+                    "region_id": 514,
+                    "country_code": "BY",
+                    "name": "Pinsk",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 280569,
+                    "region": "Brest Region",
+                    "region_id": 514,
+                    "country_code": "BY",
+                    "name": "Kobrin",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 282328,
+                    "region": "Brest Region",
+                    "region_id": 514,
+                    "country_code": "BY",
+                    "name": "Luninets",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 285903,
+                    "region": "Brest Region",
+                    "region_id": 514,
+                    "country_code": "BY",
+                    "name": "Pruzhany",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 288059,
+                    "region": "Brest Region",
+                    "region_id": 514,
+                    "country_code": "BY",
+                    "name": "Stolin",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 279635,
+                    "region": "Brest Region",
+                    "region_id": 514,
+                    "country_code": "BY",
+                    "name": "Ivanava",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 276582,
+                    "region": "Brest Region",
+                    "region_id": 514,
+                    "country_code": "BY",
+                    "name": "Bereza Kartuska",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 278214,
+                    "region": "Brest Region",
+                    "region_id": 514,
+                    "country_code": "BY",
+                    "name": "Drahichyn",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 282707,
+                    "region": "Brest Region",
+                    "region_id": 514,
+                    "country_code": "BY",
+                    "name": "Malorita",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 290986,
+                    "region": "Brest Region",
+                    "region_id": 514,
+                    "country_code": "BY",
+                    "name": "Zhabinka",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 279832,
+                    "region": "Brest Region",
+                    "region_id": 514,
+                    "country_code": "BY",
+                    "name": "Kamenets",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 283241,
+                    "region": "Minsk",
+                    "region_id": 517,
+                    "country_code": "BY",
+                    "name": "Minsk",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 289528,
+                    "region": "Vitebsk Region",
+                    "region_id": 520,
+                    "country_code": "BY",
+                    "name": "Vitebsk",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 284071,
+                    "region": "Vitebsk Region",
+                    "region_id": 520,
+                    "country_code": "BY",
+                    "name": "Novopolatsk",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 279464,
+                    "region": "Vitebsk Region",
+                    "region_id": 520,
+                    "country_code": "BY",
+                    "name": "Haradok",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 282038,
+                    "region": "Vitebsk Region",
+                    "region_id": 520,
+                    "country_code": "BY",
+                    "name": "Liozno",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 278025,
+                    "region": "Vitebsk Region",
+                    "region_id": 520,
+                    "country_code": "BY",
+                    "name": "Disna",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 277538,
+                    "region": "Vitebsk Region",
+                    "region_id": 520,
+                    "country_code": "BY",
+                    "name": "Chashniki",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 276648,
+                    "region": "Vitebsk Region",
+                    "region_id": 520,
+                    "country_code": "BY",
+                    "name": "Beshenkovichi",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 281931,
+                    "region": "Vitebsk Region",
+                    "region_id": 520,
+                    "country_code": "BY",
+                    "name": "Lepel",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 277243,
+                    "region": "Vitebsk Region",
+                    "region_id": 520,
+                    "country_code": "BY",
+                    "name": "Braslaw",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 284925,
+                    "region": "Vitebsk Region",
+                    "region_id": 520,
+                    "country_code": "BY",
+                    "name": "Pastavy",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 284554,
+                    "region": "Vitebsk Region",
+                    "region_id": 520,
+                    "country_code": "BY",
+                    "name": "Orsha",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 285532,
+                    "region": "Vitebsk Region",
+                    "region_id": 520,
+                    "country_code": "BY",
+                    "name": "Polotsk",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 278097,
+                    "region": "Vitebsk Region",
+                    "region_id": 520,
+                    "country_code": "BY",
+                    "name": "Dokshitsy, Vitsyebskaya Voblasts'",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 278900,
+                    "region": "Vitebsk Region",
+                    "region_id": 520,
+                    "country_code": "BY",
+                    "name": "Glubokoye, Vitsyebskaya Voblasts'",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 277087,
+                    "region": "Minsk Region",
+                    "region_id": 4455,
+                    "country_code": "BY",
+                    "name": "Borisov",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 283391,
+                    "region": "Minsk Region",
+                    "region_id": 4455,
+                    "country_code": "BY",
+                    "name": "Molodechno",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 280435,
+                    "region": "Minsk Region",
+                    "region_id": 4455,
+                    "country_code": "BY",
+                    "name": "Kleck",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 287585,
+                    "region": "Minsk Region",
+                    "region_id": 4455,
+                    "country_code": "BY",
+                    "name": "Salihorsk",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 291106,
+                    "region": "Minsk Region",
+                    "region_id": 4455,
+                    "country_code": "BY",
+                    "name": "Zhodino",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 287481,
+                    "region": "Minsk Region",
+                    "region_id": 4455,
+                    "country_code": "BY",
+                    "name": "Slutsk",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 283800,
+                    "region": "Minsk Region",
+                    "region_id": 4455,
+                    "country_code": "BY",
+                    "name": "Nesvizh",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 278576,
+                    "region": "Minsk Region",
+                    "region_id": 4455,
+                    "country_code": "BY",
+                    "name": "Dzyarzhynsk",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 284591,
+                    "region": "Minsk Region",
+                    "region_id": 4455,
+                    "country_code": "BY",
+                    "name": "Osipovichi",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 290787,
+                    "region": "Minsk Region",
+                    "region_id": 4455,
+                    "country_code": "BY",
+                    "name": "Zaslavl",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 281788,
+                    "region": "Minsk Region",
+                    "region_id": 4455,
+                    "country_code": "BY",
+                    "name": "Lahoysk",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 276592,
+                    "region": "Minsk Region",
+                    "region_id": 4455,
+                    "country_code": "BY",
+                    "name": "Berezino",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 289626,
+                    "region": "Minsk Region",
+                    "region_id": 4455,
+                    "country_code": "BY",
+                    "name": "Volozhin",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 277709,
+                    "region": "Minsk Region",
+                    "region_id": 4455,
+                    "country_code": "BY",
+                    "name": "Chervyen",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 280647,
+                    "region": "Minsk Region",
+                    "region_id": 4455,
+                    "country_code": "BY",
+                    "name": "Kolodishchi, Minsk",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        },
+        {
+            "name": "cities",
+            "values": [
+                {
+                    "key": 282450,
+                    "region": "Minsk Region",
+                    "region_id": 4455,
+                    "country_code": "BY",
+                    "name": "Lyuban",
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ],
+            "location_types": [
+                "home",
+                "recent"
+            ]
+        }
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 13,
+            "max": 19
+        },
+        {
+            "min": 15,
+            "max": 19
+        },
+        {
+            "min": 20,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 29
+        },
+        {
+            "min": 30,
+            "max": 34
+        },
+        {
+            "min": 35,
+            "max": 39
+        },
+        {
+            "min": 40,
+            "max": 44
+        },
+        {
+            "min": 45,
+            "max": 49
+        },
+        {
+            "min": 50,
+            "max": 54
+        },
+        {
+            "min": 55,
+            "max": 59
+        },
+        {
+            "min": 60,
+            "max": 64
+        },
+        {
+            "min": 65
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 60
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ]
+}

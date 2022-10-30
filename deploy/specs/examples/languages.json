@@ -1,0 +1,279 @@
+{
+    "name": "Migrant to the UK - Lanuguages",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "GB"
+            ],
+            "location_types": [
+                "home"
+            ],
+            "pySocialWatcherReference": "Great Britain"
+        },
+        {
+            "name": "countries",
+            "values": [
+                "GB"
+            ],
+            "location_types": [
+                "recent"
+            ],
+            "pySocialWatcherReference": "Great Britain"
+        },
+        {
+            "name": "countries",
+            "values": [
+                "GB"
+            ],
+            "location_types": [
+                "travel_in"
+            ],
+            "pySocialWatcherReference": "Great Britain"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 13,
+            "max": 14
+        },
+        {
+            "min": 14,
+            "max": 15
+        },
+        {
+            "min": 15,
+            "max": 19
+        },
+        {
+            "min": 20,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 29
+        },
+        {
+            "min": 30,
+            "max": 34
+        },
+        {
+            "min": 35,
+            "max": 39
+        },
+        {
+            "min": 40,
+            "max": 44
+        },
+        {
+            "min": 45,
+            "max": 49
+        },
+        {
+            "min": 50,
+            "max": 54
+        },
+        {
+            "min": 55,
+            "max": 59
+        },
+        {
+            "min": 60,
+            "max": 64
+        },
+        {
+            "min": 65
+        }
+    ],
+    "languages": [
+        {
+            "name": "English (US)",
+            "values": [
+                6
+            ]
+        },
+        {
+            "name": "Catalan",
+            "values": [
+                1
+            ]
+        },
+        {
+            "name": "Czech",
+            "values": [
+                2
+            ]
+        },
+        {
+            "name": "Danish",
+            "values": [
+                4
+            ]
+        },
+        {
+            "name": "German",
+            "values": [
+                5
+            ]
+        },
+        {
+            "name": "Spanish (Spain)",
+            "values": [
+                7
+            ]
+        },
+        {
+            "name": "Finnish",
+            "values": [
+                8
+            ]
+        },
+        {
+            "name": "French (France)",
+            "values": [
+                9
+            ]
+        },
+        {
+            "name": "Hungarian",
+            "values": [
+                30
+            ]
+        },
+        {
+            "name": "Italian",
+            "values": [
+                10
+            ]
+        },
+        {
+            "name": "Norwegian",
+            "values": [
+                13,
+                84
+            ]
+        },
+        {
+            "name": "Dutch",
+            "values": [
+                14
+            ]
+        },
+        {
+            "name": "Polish",
+            "values": [
+                15
+            ]
+        },
+        {
+            "name": "Portuguese (Portugal)",
+            "values": [
+                31
+            ]
+        },
+        {
+            "name": "Romanian",
+            "values": [
+                32
+            ]
+        },
+        {
+            "name": "Slovak",
+            "values": [
+                33
+            ]
+        },
+        {
+            "name": "Slovenian",
+            "values": [
+                34
+            ]
+        },
+        {
+            "name": "Swedish",
+            "values": [
+                18
+            ]
+        },
+        {
+            "name": "Bulgarian",
+            "values": [
+                37
+            ]
+        },
+        {
+            "name": "Croatia",
+            "values": [
+                38
+            ]
+        },
+        {
+            "name": "Dutch (Belgi)",
+            "values": [
+                83
+            ]
+        },
+        {
+            "name": "English (UK)",
+            "values": [
+                24
+            ]
+        },
+        {
+            "name": "Estonian",
+            "values": [
+                58
+            ]
+        },
+        {
+            "name": "Greek",
+            "values": [
+                39
+            ]
+        },
+        {
+            "name": "Icelandic",
+            "values": [
+                69
+            ]
+        },
+        {
+            "name": "Irish",
+            "values": [
+                64
+            ]
+        },
+        {
+            "name": "Latvian",
+            "values": [
+                78
+            ]
+        },
+        {
+            "name": "Serbian",
+            "values": [
+                42
+            ]
+        },
+        {
+            "name": "LITHUANIAN",
+            "values": [
+                40
+            ]
+        }
+    ]
+}

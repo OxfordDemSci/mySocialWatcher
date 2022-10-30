@@ -1,0 +1,179 @@
+{
+  "name": "Migrant to the UK",
+  "publisher_platforms": ["facebook"],
+  "geo_locations": [
+    {
+      "name": "countries",
+      "values": ["GB"],
+      "location_types": ["home"],
+      "pySocialWatcherReference": "Great Britain"
+    },
+    {
+      "name": "countries",
+      "values": ["GB"],
+      "location_types": ["recent"],
+      "pySocialWatcherReference": "Great Britain"
+    },
+    {
+      "name": "countries",
+      "values": ["GB"],
+      "location_types": ["travel_in"],
+      "pySocialWatcherReference": "Great Britain"
+    }
+  ],
+  "genders": [1],
+  "behavior": [
+    null,
+    {
+      "not": [6015559470583],
+      "name": "No Expats (All)"
+    },
+    {
+      "or": [6015559470583],
+      "name": "Expats (All)"
+    },
+    {
+      "or": [6025753961783],
+      "name": "Family of Expats"
+    },
+    {
+      "or": [6023675997383],
+      "name": "Expats (Austria)"
+    },
+    {
+      "or": [6043702804583],
+      "name": "Expats (Belgium)"
+    },
+    {
+      "or": [6068209522983],
+      "name": "Expats (Finland)"
+    },
+    {
+      "or": [6019367014383],
+      "name": "Expats (France)"
+    },
+    {
+      "or": [6019367052983],
+      "name": "Expats (Germany)"
+    },
+    {
+      "or": [6023676017583],
+      "name": "Expats (Greece)"
+    },
+    {
+      "or": [6019396650783],
+      "name": "Expats (Ireland)"
+    },
+    {
+      "or": [6019396654583],
+      "name": "Expats (Italy)"
+    },
+    {
+      "or": [6023287393783],
+      "name": "Expats (Netherlands)"
+    },
+    {
+      "or": [6021354882783],
+      "name": "Expats (Portugal)"
+    },
+    {
+      "or": [6019366943583],
+      "name": "Expats (Spain)"
+    },
+    {
+      "or": [6019377644783],
+      "name": "Expats (Switzerland)"
+    },
+    {
+      "or": [6023287351383],
+      "name": "Expats (Estonia)"
+    },
+    {
+      "or": [6019396657183],
+      "name": "Expats (Poland)"
+    },
+    {
+      "or": [6019396638383],
+      "name": "Expats (Hungary)"
+    },
+    {
+      "or": [6068613839383],
+      "name": "Expats (Latvia)"
+    },
+    {
+      "or": [6027148962983],
+      "name": "Expats (Romania)"
+    }
+  ],
+  "ages_ranges": [
+    {
+      "min": 15
+    },
+    {
+      "min": 15,
+      "max": 19
+    },
+    {
+      "min": 20,
+      "max": 24
+    },
+    {
+      "min": 25,
+      "max": 29
+    },
+    {
+      "min": 30,
+      "max": 34
+    },
+    {
+      "min": 35,
+      "max": 39
+    },
+    {
+      "min": 40,
+      "max": 49
+    },
+    {
+      "min": 50,
+      "max": 59
+    },
+    {
+      "min": 60,
+      "max": 64
+    },
+    {
+      "min": 65
+    }
+  ],
+  "scholarities": [
+    null,
+    {
+      "name": "Graduated",
+      "or": [3, 8, 9, 11]
+    },
+    {
+      "name": "In College",
+      "or": [2]
+    },
+    {
+      "name": "In High School",
+      "or": [1]
+    },
+    {
+      "name": "In Grad School",
+      "or": [7]
+    },
+    {
+      "name": "Unspecified",
+      "or": [12]
+    },
+    {
+      "name": "No Degree",
+      "or": [13]
+    },
+    {
+      "name": "High School",
+      "or": [4, 5, 6, 10]
+    }
+  ]
+}

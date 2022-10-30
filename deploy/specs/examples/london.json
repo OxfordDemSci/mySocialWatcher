@@ -1,0 +1,816 @@
+{
+    "name": "Migrant to the UK - Mid Population",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "zips",
+            "values": [
+                {
+                    "key": "GB:EC2A 1"
+                },
+                {
+                    "key": "GB:EC2A 2"
+                },
+                {
+                    "key": "GB:EC2A 3"
+                },
+                {
+                    "key": "GB:EC2A 4"
+                },
+                {
+                    "key": "GB:EC2M 1"
+                },
+                {
+                    "key": "GB:EC2M 2"
+                },
+                {
+                    "key": "GB:EC2M 3"
+                },
+                {
+                    "key": "GB:EC2M 4"
+                },
+                {
+                    "key": "GB:EC2M 5"
+                },
+                {
+                    "key": "GB:EC2M 6"
+                },
+                {
+                    "key": "GB:EC2M 7"
+                },
+                {
+                    "key": "GB:EC2N 1"
+                },
+                {
+                    "key": "GB:EC2N 2"
+                },
+                {
+                    "key": "GB:EC2N 1"
+                },
+                {
+                    "key": "GB:EC2N 3"
+                },
+                {
+                    "key": "GB:EC2N 4"
+                },
+                {
+                    "key": "GB:EC2P 2"
+                },
+                {
+                    "key": "GB:EC2R 5"
+                },
+                {
+                    "key": "GB:EC2R 6"
+                },
+                {
+                    "key": "GB:EC2R 7"
+                },
+                {
+                    "key": "GB:EC2R 8"
+                },
+                {
+                    "key": "GB:EC2V 5"
+                },
+                {
+                    "key": "GB:EC2V 6"
+                },
+                {
+                    "key": "GB:EC2V 7"
+                },
+                {
+                    "key": "GB:EC2V 8"
+                },
+                {
+                    "key": "GB:EC2Y 5"
+                },
+                {
+                    "key": "GB:EC2Y 8"
+                },
+                {
+                    "key": "GB:EC2Y 9"
+                },
+                {
+                    "key": "GB:EC3A 1"
+                },
+                {
+                    "key": "GB:EC3A 2"
+                },
+                {
+                    "key": "GB:EC3A 3"
+                },
+                {
+                    "key": "GB:EC3A 4"
+                },
+                {
+                    "key": "GB:EC3A 5"
+                },
+                {
+                    "key": "GB:EC3A 6"
+                },
+                {
+                    "key": "GB:EC3A 7"
+                },
+                {
+                    "key": "GB:EC3A 8"
+                },
+                {
+                    "key": "GB:EC3M 1"
+                },
+                {
+                    "key": "GB:EC3M 2"
+                },
+                {
+                    "key": "GB:EC3M 3"
+                },
+                {
+                    "key": "GB:EC3M 4"
+                },
+                {
+                    "key": "GB:EC3M 5"
+                },
+                {
+                    "key": "GB:EC3M 6"
+                },
+                {
+                    "key": "GB:EC3M 7"
+                },
+                {
+                    "key": "GB:EC3M 8"
+                },
+                {
+                    "key": "GB:EC3N 1"
+                },
+                {
+                    "key": "GB:EC3N 2"
+                },
+                {
+                    "key": "GB:EC3N 3"
+                },
+                {
+                    "key": "GB:EC3N 4"
+                },
+                {
+                    "key": "GB:EC3R 5"
+                },
+                {
+                    "key": "GB:EC3R 6"
+                },
+                {
+                    "key": "GB:EC3R 7"
+                },
+                {
+                    "key": "GB:EC3R 8"
+                },
+                {
+                    "key": "GB:EC3V 0"
+                },
+                {
+                    "key": "GB:EC3V 1"
+                },
+                {
+                    "key": "GB:EC3V 3"
+                },
+                {
+                    "key": "GB:EC3V 4"
+                },
+                {
+                    "key": "GB:EC3V 9"
+                },
+                {
+                    "key": "GB:EC4A 1"
+                },
+                {
+                    "key": "GB:EC4A 2"
+                },
+                {
+                    "key": "GB:EC4A 3"
+                },
+                {
+                    "key": "GB:EC4A 4"
+                },
+                {
+                    "key": "GB:EC4M 5"
+                },
+                {
+                    "key": "GB:EC4M 6"
+                },
+                {
+                    "key": "GB:EC4M 7"
+                },
+                {
+                    "key": "GB:EC4M 8"
+                },
+                {
+                    "key": "GB:EC4N 1"
+                },
+                {
+                    "key": "GB:EC4N 4"
+                },
+                {
+                    "key": "GB:EC4N 5"
+                },
+                {
+                    "key": "GB:EC4N 6"
+                },
+                {
+                    "key": "GB:EC4N 7"
+                },
+                {
+                    "key": "GB:EC4R 0"
+                },
+                {
+                    "key": "GB:EC4R 1"
+                },
+                {
+                    "key": "GB:EC4R 2"
+                },
+                {
+                    "key": "GB:EC4R 3"
+                },
+                {
+                    "key": "GB:EC4R 9"
+                },
+                {
+                    "key": "GB:EC4V 2"
+                },
+                {
+                    "key": "GB:EC4V 3"
+                },
+                {
+                    "key": "GB:EC4V 4"
+                },
+                {
+                    "key": "GB:EC4V 5"
+                },
+                {
+                    "key": "GB:EC4V 6"
+                },
+                {
+                    "key": "GB:EC4Y 0"
+                },
+                {
+                    "key": "GB:EC4Y 7"
+                },
+                {
+                    "key": "GB:EC4Y 8"
+                },
+                {
+                    "key": "GB:EC4Y 9"
+                }
+            ],
+            "location_types": [
+                "home"
+            ],
+            "pySocialWatcherReference": "london1"
+        },
+        {
+            "name": "zips",
+            "values": [
+                {
+                    "key": "GB:EC2A 1"
+                },
+                {
+                    "key": "GB:EC2A 2"
+                },
+                {
+                    "key": "GB:EC2A 3"
+                },
+                {
+                    "key": "GB:EC2A 4"
+                },
+                {
+                    "key": "GB:EC2M 1"
+                },
+                {
+                    "key": "GB:EC2M 2"
+                },
+                {
+                    "key": "GB:EC2M 3"
+                },
+                {
+                    "key": "GB:EC2M 4"
+                },
+                {
+                    "key": "GB:EC2M 5"
+                },
+                {
+                    "key": "GB:EC2M 6"
+                },
+                {
+                    "key": "GB:EC2M 7"
+                },
+                {
+                    "key": "GB:EC2N 1"
+                },
+                {
+                    "key": "GB:EC2N 2"
+                },
+                {
+                    "key": "GB:EC2N 1"
+                },
+                {
+                    "key": "GB:EC2N 3"
+                },
+                {
+                    "key": "GB:EC2N 4"
+                },
+                {
+                    "key": "GB:EC2P 2"
+                },
+                {
+                    "key": "GB:EC2R 5"
+                },
+                {
+                    "key": "GB:EC2R 6"
+                },
+                {
+                    "key": "GB:EC2R 7"
+                },
+                {
+                    "key": "GB:EC2R 8"
+                },
+                {
+                    "key": "GB:EC2V 5"
+                },
+                {
+                    "key": "GB:EC2V 6"
+                },
+                {
+                    "key": "GB:EC2V 7"
+                },
+                {
+                    "key": "GB:EC2V 8"
+                },
+                {
+                    "key": "GB:EC2Y 5"
+                },
+                {
+                    "key": "GB:EC2Y 8"
+                },
+                {
+                    "key": "GB:EC2Y 9"
+                },
+                {
+                    "key": "GB:EC3A 1"
+                },
+                {
+                    "key": "GB:EC3A 2"
+                },
+                {
+                    "key": "GB:EC3A 3"
+                },
+                {
+                    "key": "GB:EC3A 4"
+                },
+                {
+                    "key": "GB:EC3A 5"
+                },
+                {
+                    "key": "GB:EC3A 6"
+                },
+                {
+                    "key": "GB:EC3A 7"
+                },
+                {
+                    "key": "GB:EC3A 8"
+                },
+                {
+                    "key": "GB:EC3M 1"
+                },
+                {
+                    "key": "GB:EC3M 2"
+                },
+                {
+                    "key": "GB:EC3M 3"
+                },
+                {
+                    "key": "GB:EC3M 4"
+                },
+                {
+                    "key": "GB:EC3M 5"
+                },
+                {
+                    "key": "GB:EC3M 6"
+                },
+                {
+                    "key": "GB:EC3M 7"
+                },
+                {
+                    "key": "GB:EC3M 8"
+                },
+                {
+                    "key": "GB:EC3N 1"
+                },
+                {
+                    "key": "GB:EC3N 2"
+                },
+                {
+                    "key": "GB:EC3N 3"
+                },
+                {
+                    "key": "GB:EC3N 4"
+                },
+                {
+                    "key": "GB:EC3R 5"
+                },
+                {
+                    "key": "GB:EC3R 6"
+                },
+                {
+                    "key": "GB:EC3R 7"
+                },
+                {
+                    "key": "GB:EC3R 8"
+                },
+                {
+                    "key": "GB:EC3V 0"
+                },
+                {
+                    "key": "GB:EC3V 1"
+                },
+                {
+                    "key": "GB:EC3V 3"
+                },
+                {
+                    "key": "GB:EC3V 4"
+                },
+                {
+                    "key": "GB:EC3V 9"
+                },
+                {
+                    "key": "GB:EC4A 1"
+                },
+                {
+                    "key": "GB:EC4A 2"
+                },
+                {
+                    "key": "GB:EC4A 3"
+                },
+                {
+                    "key": "GB:EC4A 4"
+                },
+                {
+                    "key": "GB:EC4M 5"
+                },
+                {
+                    "key": "GB:EC4M 6"
+                },
+                {
+                    "key": "GB:EC4M 7"
+                },
+                {
+                    "key": "GB:EC4M 8"
+                },
+                {
+                    "key": "GB:EC4N 1"
+                },
+                {
+                    "key": "GB:EC4N 4"
+                },
+                {
+                    "key": "GB:EC4N 5"
+                },
+                {
+                    "key": "GB:EC4N 6"
+                },
+                {
+                    "key": "GB:EC4N 7"
+                },
+                {
+                    "key": "GB:EC4R 0"
+                },
+                {
+                    "key": "GB:EC4R 1"
+                },
+                {
+                    "key": "GB:EC4R 2"
+                },
+                {
+                    "key": "GB:EC4R 3"
+                },
+                {
+                    "key": "GB:EC4R 9"
+                },
+                {
+                    "key": "GB:EC4V 2"
+                },
+                {
+                    "key": "GB:EC4V 3"
+                },
+                {
+                    "key": "GB:EC4V 4"
+                },
+                {
+                    "key": "GB:EC4V 5"
+                },
+                {
+                    "key": "GB:EC4V 6"
+                },
+                {
+                    "key": "GB:EC4Y 0"
+                },
+                {
+                    "key": "GB:EC4Y 7"
+                },
+                {
+                    "key": "GB:EC4Y 8"
+                },
+                {
+                    "key": "GB:EC4Y 9"
+                }
+            ],
+            "location_types": [
+                "recent"
+            ],
+            "pySocialWatcherReference": "london2"
+        },
+        {
+            "name": "zips",
+            "values": [
+                {
+                    "key": "GB:EC2A 1"
+                },
+                {
+                    "key": "GB:EC2A 2"
+                },
+                {
+                    "key": "GB:EC2A 3"
+                },
+                {
+                    "key": "GB:EC2A 4"
+                },
+                {
+                    "key": "GB:EC2M 1"
+                },
+                {
+                    "key": "GB:EC2M 2"
+                },
+                {
+                    "key": "GB:EC2M 3"
+                },
+                {
+                    "key": "GB:EC2M 4"
+                },
+                {
+                    "key": "GB:EC2M 5"
+                },
+                {
+                    "key": "GB:EC2M 6"
+                },
+                {
+                    "key": "GB:EC2M 7"
+                },
+                {
+                    "key": "GB:EC2N 1"
+                },
+                {
+                    "key": "GB:EC2N 2"
+                },
+                {
+                    "key": "GB:EC2N 1"
+                },
+                {
+                    "key": "GB:EC2N 3"
+                },
+                {
+                    "key": "GB:EC2N 4"
+                },
+                {
+                    "key": "GB:EC2P 2"
+                },
+                {
+                    "key": "GB:EC2R 5"
+                },
+                {
+                    "key": "GB:EC2R 6"
+                },
+                {
+                    "key": "GB:EC2R 7"
+                },
+                {
+                    "key": "GB:EC2R 8"
+                },
+                {
+                    "key": "GB:EC2V 5"
+                },
+                {
+                    "key": "GB:EC2V 6"
+                },
+                {
+                    "key": "GB:EC2V 7"
+                },
+                {
+                    "key": "GB:EC2V 8"
+                },
+                {
+                    "key": "GB:EC2Y 5"
+                },
+                {
+                    "key": "GB:EC2Y 8"
+                },
+                {
+                    "key": "GB:EC2Y 9"
+                },
+                {
+                    "key": "GB:EC3A 1"
+                },
+                {
+                    "key": "GB:EC3A 2"
+                },
+                {
+                    "key": "GB:EC3A 3"
+                },
+                {
+                    "key": "GB:EC3A 4"
+                },
+                {
+                    "key": "GB:EC3A 5"
+                },
+                {
+                    "key": "GB:EC3A 6"
+                },
+                {
+                    "key": "GB:EC3A 7"
+                },
+                {
+                    "key": "GB:EC3A 8"
+                },
+                {
+                    "key": "GB:EC3M 1"
+                },
+                {
+                    "key": "GB:EC3M 2"
+                },
+                {
+                    "key": "GB:EC3M 3"
+                },
+                {
+                    "key": "GB:EC3M 4"
+                },
+                {
+                    "key": "GB:EC3M 5"
+                },
+                {
+                    "key": "GB:EC3M 6"
+                },
+                {
+                    "key": "GB:EC3M 7"
+                },
+                {
+                    "key": "GB:EC3M 8"
+                },
+                {
+                    "key": "GB:EC3N 1"
+                },
+                {
+                    "key": "GB:EC3N 2"
+                },
+                {
+                    "key": "GB:EC3N 3"
+                },
+                {
+                    "key": "GB:EC3N 4"
+                },
+                {
+                    "key": "GB:EC3R 5"
+                },
+                {
+                    "key": "GB:EC3R 6"
+                },
+                {
+                    "key": "GB:EC3R 7"
+                },
+                {
+                    "key": "GB:EC3R 8"
+                },
+                {
+                    "key": "GB:EC3V 0"
+                },
+                {
+                    "key": "GB:EC3V 1"
+                },
+                {
+                    "key": "GB:EC3V 3"
+                },
+                {
+                    "key": "GB:EC3V 4"
+                },
+                {
+                    "key": "GB:EC3V 9"
+                },
+                {
+                    "key": "GB:EC4A 1"
+                },
+                {
+                    "key": "GB:EC4A 2"
+                },
+                {
+                    "key": "GB:EC4A 3"
+                },
+                {
+                    "key": "GB:EC4A 4"
+                },
+                {
+                    "key": "GB:EC4M 5"
+                },
+                {
+                    "key": "GB:EC4M 6"
+                },
+                {
+                    "key": "GB:EC4M 7"
+                },
+                {
+                    "key": "GB:EC4M 8"
+                },
+                {
+                    "key": "GB:EC4N 1"
+                },
+                {
+                    "key": "GB:EC4N 4"
+                },
+                {
+                    "key": "GB:EC4N 5"
+                },
+                {
+                    "key": "GB:EC4N 6"
+                },
+                {
+                    "key": "GB:EC4N 7"
+                },
+                {
+                    "key": "GB:EC4R 0"
+                },
+                {
+                    "key": "GB:EC4R 1"
+                },
+                {
+                    "key": "GB:EC4R 2"
+                },
+                {
+                    "key": "GB:EC4R 3"
+                },
+                {
+                    "key": "GB:EC4R 9"
+                },
+                {
+                    "key": "GB:EC4V 2"
+                },
+                {
+                    "key": "GB:EC4V 3"
+                },
+                {
+                    "key": "GB:EC4V 4"
+                },
+                {
+                    "key": "GB:EC4V 5"
+                },
+                {
+                    "key": "GB:EC4V 6"
+                },
+                {
+                    "key": "GB:EC4Y 0"
+                },
+                {
+                    "key": "GB:EC4Y 7"
+                },
+                {
+                    "key": "GB:EC4Y 8"
+                },
+                {
+                    "key": "GB:EC4Y 9"
+                }
+            ],
+            "location_types": [
+                "travel_in"
+            ],
+            "pySocialWatcherReference": "london3"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "behavior": [
+        null,
+        {
+            "not": [
+                6015559470583
+            ],
+            "name": "No Expats (All)"
+        },
+        {
+            "or": [
+                6015559470583
+            ],
+            "name": "Expats (All)"
+        }
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ]
+}
