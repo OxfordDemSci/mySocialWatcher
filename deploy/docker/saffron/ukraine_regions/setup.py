@@ -1,4 +1,5 @@
 import os
+import shutil
 import json
 import pandas as pd
 
@@ -18,6 +19,10 @@ if __name__ == '__main__':
     # specs template json
     specs_template_path = os.path.join('deploy', 'specs', 'templates', 'UA_regions.json')
 
+    # ---- environment ---- #
+
+    shutil.copy(src=os.path.join('deploy', 'private', '.env'),
+                dst=os.path.join('deploy', 'docker', vm, collection, '.env'))
 
     # ---- credentials ---- #
 

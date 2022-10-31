@@ -1,4 +1,5 @@
 import os
+import shutil
 import json
 import pandas as pd
 
@@ -14,6 +15,11 @@ if __name__ == '__main__':
 
     # credentials master file
     master_credentials_path = os.path.join('deploy', 'private', 'credentials_master.csv')
+
+    # ---- environment ---- #
+
+    shutil.copy(src=os.path.join('deploy', 'private', '.env'),
+                dst=os.path.join('deploy', 'docker', vm, collection, '.env'))
 
     # ---- credentials ---- #
 

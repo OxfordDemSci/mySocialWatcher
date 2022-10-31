@@ -1,4 +1,5 @@
 import os
+import shutil
 import json
 import pandas as pd
 
@@ -11,6 +12,11 @@ if __name__ == '__main__':
 
     # collection name
     collection = 'ukraine_neighbours1'
+
+    # ---- environment ---- #
+
+    shutil.copy(src=os.path.join('deploy', 'private', '.env'),
+                dst=os.path.join('deploy', 'docker', vm, collection, '.env'))
 
     # ---- credentials ---- #
 
