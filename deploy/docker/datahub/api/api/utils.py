@@ -14,10 +14,10 @@ def timestr():
 def conn_to_database(mode='r'):
 
     if mode == 'w':
-        user = 'dgg_writer'
+        user = 'api_writer'
         pw = os.environ.get('POSTGRES_WPASS')
     else:
-        user = 'dgg_reader'
+        user = 'api_reader'
         pw = os.environ.get('POSTGRES_RPASS')
 
     conn = psycopg2.connect(host=os.environ.get('POSTGRES_HOST'),

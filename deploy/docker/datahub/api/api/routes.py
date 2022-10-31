@@ -1,7 +1,7 @@
 from flask import request, current_app, jsonify
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
-from app import app, endpoints
+from api import app, endpoints
 
 
 # define rate limiting
@@ -10,7 +10,7 @@ limiter = Limiter(app,
                   # application_limits=['60/minute', '1000/hour', '10000/day'],
                   default_limits=['60/minute', '1000/hour', '10000/day'],
                   strategy='fixed-window-elastic-expiry',
-                  storage_uri="memcached://dgg_memcached:11211",
+                  storage_uri="memcached://memcached_psw:11211",
                   storage_options={}
                   )
 

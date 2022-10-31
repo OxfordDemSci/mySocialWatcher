@@ -23,7 +23,7 @@ services:
     build: ./api/
     command: gunicorn --config gunicorn.config.py wsgi:app
     volumes:
-      - ./api/app/static/docs.html:/app/static/docs.html
+      - ./api/api/static/docs.html:/app/static/docs.html
     depends_on:
       - postgres_psw
     networks:
