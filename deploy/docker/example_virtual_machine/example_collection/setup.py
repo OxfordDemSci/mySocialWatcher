@@ -1,4 +1,5 @@
 import os
+import shutil
 import json
 import pandas as pd
 
@@ -10,22 +11,20 @@ vm = 'example_virtual_machine'
 # collection name
 collection = 'example_collection'
 
-# collection country
-country = 'GB'
-
-# specs template json
-specs_template_path = os.path.join('deploy', 'specs', 'templates', country + '_regions.json')
-
-# credentials master file
-# (csv with required columns: vm, collection, token, app)
-# (NOTE: use "./deploy/my/credentials_master.csv" to keep your tokens private)
-# (i.e. private* file names and folders are in .gitignore)
-master_credentials_path = os.path.join('deploy', 'credentials_master.csv')
-
-
 if __name__ == '__main__':
 
+    # ---- environment ---- #
+
+    shutil.copy(src=os.path.join('deploy', 'example_private', 'template.env'),
+                dst=os.path.join('deploy', 'docker', vm, collection, '.env'))
+
     # ---- create credentials.csv ---- #
+
+    # credentials master file
+    # (csv with required columns: vm, collection, token, app)
+    # (NOTE: use "./deploy/my/credentials_master.csv" to keep your tokens private)
+    # (i.e. private* file names and folders are in .gitignore)
+    master_credentials_path = os.path.join('deploy', 'example_private', 'credentials_master.csv')
 
     # path for output credentials.csv
     credentials_path = os.path.join('deploy', 'docker', vm, collection, 'credentials.csv')
@@ -47,6 +46,12 @@ if __name__ == '__main__':
     # output directory
     specs_dir = os.path.join('deploy', 'docker', vm, collection, 'specs')
     os.makedirs(specs_dir, exist_ok=True)
+
+    # collection country
+    country = 'GB'
+
+    # specs template json
+    specs_template_path = os.path.join('deploy', 'specs', 'templates', country + '_regions.json')
 
     # load template json (to potentially modify)
     with open(specs_template_path) as f:
