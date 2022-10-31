@@ -1,5 +1,5 @@
 # example docker-compose to deploy one or more collections on a virtual machine
-version: '3.1'
+version: '3.3'
 
 services:
   example_collection:

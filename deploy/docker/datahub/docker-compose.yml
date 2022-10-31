@@ -1,0 +1,61 @@
+version: "3.3"
+
+services:
+
+  nginx_psw:
+    container_name: web_psw
+    image: nginx:latest
+    volumes:
+      - ./www/conf.d/nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - ./www/public_html/:/var/www/public_html/
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - net_psw
+    depends_on:
+      - flask_psw
+    restart: unless-stopped
+
+  flask_psw:
+    container_name: api_psw
+    env_file: .env
+    build: ./api/
+    command: gunicorn --config gunicorn.config.py wsgi:app
+    volumes:
+      - ./api/app/static/docs.html:/app/static/docs.html
+    depends_on:
+      - postgress_psw
+    networks:
+      - net_psw
+    ports:
+      - "5000:5000"
+      - "8000:8000"
+    restart: unless-stopped
+
+
+  memcached_psw:
+    container_name: limiter_psw
+    image: memcached:latest
+    networks:
+      - net_psw
+    ports:
+      - "11211:11211"
+    restart: unless-stopped
+
+
+  postgres_psw:
+    container_name: db_psw
+    image: postgres:latest
+    env_file: .env
+    volumes:
+      - ./sql/initdb.sh:/docker-entrypoint-initdb.d/initdb.sh
+    networks:
+      - net_psw
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+
+networks:
+  new_psw:
