@@ -19,7 +19,7 @@ specs_template_path = os.path.join('deploy', 'specs', 'templates', country + '_r
 # credentials master file
 # (csv with required columns: vm, collection, token, app)
 # (NOTE: use "./deploy/my/credentials_master.csv" to keep your tokens private)
-# (i.e. my* file names and folders are in .gitignore)
+# (i.e. private* file names and folders are in .gitignore)
 master_credentials_path = os.path.join('deploy', 'credentials_master.csv')
 
 

@@ -14,7 +14,7 @@ if __name__ == '__main__':
     collection = 'dgg_national'
 
     # credentials master file
-    master_credentials_path = os.path.join('deploy', 'my', 'credentials_master.csv')
+    master_credentials_path = os.path.join('deploy', 'private', 'credentials_master.csv')
 
     # ---- credentials ---- #
 

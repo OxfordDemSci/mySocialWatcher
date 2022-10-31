@@ -15,7 +15,7 @@ if __name__ == '__main__':
     # ---- credentials ---- #
 
     # credentials master file
-    master_credentials_path = os.path.join('deploy', 'my', 'credentials_master.csv')
+    master_credentials_path = os.path.join('deploy', 'private', 'credentials_master.csv')
 
     # path for output credentials.csv
     credentials_path = os.path.join('deploy', 'docker', vm, collection, 'credentials.csv')

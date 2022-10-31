@@ -13,7 +13,7 @@ if __name__ == '__main__':
     collection = 'ukraine_regions'
 
     # credentials master file
-    master_credentials_path = os.path.join('deploy', 'my', 'credentials_master.csv')
+    master_credentials_path = os.path.join('deploy', 'private', 'credentials_master.csv')
 
     # specs template json
     specs_template_path = os.path.join('deploy', 'specs', 'templates', 'UA_regions.json')
