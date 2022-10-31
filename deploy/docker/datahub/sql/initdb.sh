@@ -1,10 +1,13 @@
+# ---- users ----#
 psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
 "
 CREATE ROLE api_reader LOGIN PASSWORD '${POSTGRES_RPASS}';
 CREATE ROLE api_writer LOGIN PASSWORD '${POSTGRES_WPASS}';
+"
 
-
-# ---- contributors ----#
+# ---- contributors ---- #
+psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
+"
 CREATE TABLE contributors (
 	id serial PRIMARY KEY,
 	created_on DATE NOT NULL DEFAULT CURRENT_DATE,
@@ -13,15 +16,15 @@ CREATE TABLE contributors (
 	lastname VARCHAR (25) NOT NULL,
 	email VARCHAR(50) NOT NULL
 );
-
 GRANT SELECT ON contributors TO api_reader;
 
-# add contributors
 INSERT INTO contributors (firstname, lastname, email)
 VALUES ('Hoban', 'Washburne', 'hoban.washburne@serenity.io');
-
+"
 
 # ---- tokens ----#
+psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
+"
 CREATE TABLE tokens (
 	id serial PRIMARY KEY,
 	created_on DATE NOT NULL DEFAULT CURRENT_DATE,
@@ -31,17 +34,15 @@ CREATE TABLE tokens (
 	token VARCHAR(50) UNIQUE NOT NULL DEFAULT MD5(random()::text),
 	FOREIGN KEY(contributor_id) REFERENCES contributors(id)
 );
-
 GRANT SELECT ON tokens TO api_reader;
 
-# add token
 INSERT INTO tokens (contributor_id, write)
 VALUES (1, TRUE);
-
+"
 
 # ---- geometries ---- #
-DROP TABLE IF EXISTS geo;
-
+psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
+"
 CREATE TABLE geo (
 	id serial PRIMARY KEY,
 
@@ -57,15 +58,16 @@ CREATE TABLE geo (
 	geo_value VARCHAR(25),
 	geom GEOMETRY
 );
-
 CREATE INDEX id_index ON geo(id);
 
 GRANT SELECT ON geo TO api_reader;
 GRANT SELECT,INSERT ON geo TO api_writer;
 GRANT USAGE,SELECT ON SEQUENCE geo_id_seq TO api_reader, api_writer;
-
+"
 
 #---- facebook ----#
+psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
+"
 CREATE TABLE facebook (
 
 	id serial PRIMARY KEY,
@@ -103,16 +105,17 @@ CREATE TABLE facebook (
 
 	UNIQUE (country, geo_locations, timestamp_iso, gender, age_min, age_max, targeting, response)
 );
-
-CREATE INDEX geo_id_index ON facebook(geo_id);
-CREATE INDEX country_index ON facebook(country);
+CREATE INDEX geo_id_fb_index ON facebook(geo_id);
+CREATE INDEX country_fb_index ON facebook(country);
 
 GRANT SELECT ON facebook TO api_reader;
 GRANT SELECT,INSERT ON facebook TO api_writer;
 GRANT USAGE,SELECT ON SEQUENCE facebook_id_seq TO api_reader, api_writer;
-
+"
 
 # ---- facebook (temporary storage of invalid data) ---- #
+psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
+"
 CREATE TABLE facebook_invalid (
 
 	id serial PRIMARY KEY,
@@ -151,15 +154,17 @@ CREATE TABLE facebook_invalid (
 	UNIQUE (country, geo_locations, timestamp_iso, gender, age_min, age_max, targeting, response)
 );
 
-CREATE INDEX geo_id_index ON facebook_invalid(geo_id);
-CREATE INDEX country_index ON facebook_invalid(country);
+CREATE INDEX geo_id_fbi_index ON facebook_invalid(geo_id);
+CREATE INDEX country_fbi_index ON facebook_invalid(country);
 
 GRANT SELECT ON facebook_invalid TO api_reader;
 GRANT SELECT,INSERT ON facebook_invalid TO api_writer;
 GRANT USAGE,SELECT ON SEQUENCE facebook_invalid_id_seq TO api_reader, api_writer;
-
+"
 
 #--- instagram ----#
+psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
+"
 CREATE TABLE instagram (
 
 	id serial PRIMARY KEY,
@@ -198,18 +203,17 @@ CREATE TABLE instagram (
 	UNIQUE (country, geo_locations, timestamp_iso, gender, age_min, age_max, targeting, response)
 );
 
-CREATE INDEX geo_id_index ON instagram(geo_id);
-CREATE INDEX country_index ON instagram(country);
+CREATE INDEX geo_id_ig_index ON instagram(geo_id);
+CREATE INDEX country_ig_index ON instagram(country);
 
 GRANT SELECT ON instagram TO api_reader;
 GRANT SELECT,INSERT ON instagram TO api_writer;
 GRANT USAGE,SELECT ON SEQUENCE instagram_id_seq TO api_reader, api_writer;
-
-
-# create table: population mau and dau
-DROP TABLE IF EXISTS instagram_invalid;
+"
 
 # ---- instagram (temporary storage of invalid data) ---- #
+psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
+"
 CREATE TABLE instagram_invalid (
 
 	id serial PRIMARY KEY,
@@ -248,8 +252,8 @@ CREATE TABLE instagram_invalid (
 	UNIQUE (country, geo_locations, timestamp_iso, gender, age_min, age_max, targeting, response)
 );
 
-CREATE INDEX geo_id_index ON instagram_invalid(geo_id);
-CREATE INDEX country_index ON instagram_invalid(country);
+CREATE INDEX geo_id_ig2_index ON instagram_invalid(geo_id);
+CREATE INDEX country_ig2_index ON instagram_invalid(country);
 
 GRANT SELECT ON instagram_invalid TO api_reader;
 GRANT SELECT,INSERT ON instagram_invalid TO api_writer;
