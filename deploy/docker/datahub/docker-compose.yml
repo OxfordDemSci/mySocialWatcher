@@ -25,7 +25,7 @@ services:
     volumes:
       - ./api/app/static/docs.html:/app/static/docs.html
     depends_on:
-      - postgress_psw
+      - postgres_psw
     networks:
       - net_psw
     ports:
@@ -58,4 +58,4 @@ services:
 
 
 networks:
-  new_psw:
+  net_psw:
