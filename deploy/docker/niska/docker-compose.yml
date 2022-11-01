@@ -6,7 +6,7 @@ services:
   rus_exodus_facebook:
     container_name: rus_exodus_facebook
     volumes:
-      - ./data/rus_exodus_facebook:/app/data
+      - ./../../data/niska/rus_exodus_facebook:/app/data
     build:
       args:
         collection_dir: "./deploy/docker/niska/rus_exodus_facebook"
@@ -17,7 +17,7 @@ services:
   rus_exodus_instagram:
     container_name: rus_exodus_instagram
     volumes:
-      - ./../../docker/niska/data/rus_exodus_instagram:/app/data
+      - ./../../data/niska/rus_exodus_instagram:/app/data
     build:
       args:
         collection_dir: "./deploy/docker/niska/rus_exodus_instagram"

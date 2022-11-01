@@ -1,7 +1,7 @@
 from flask import request, current_app, jsonify
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
-from api import app, endpoints
+from mysocialwatcher.api import app, endpoints
 
 
 # define rate limiting

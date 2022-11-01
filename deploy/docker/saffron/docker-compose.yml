@@ -6,7 +6,7 @@ services:
   ukraine_regions:
     container_name: ukraine_regions
     volumes:
-      - ./data/ukraine_regions:/app/data
+      - ./../../data/saffron/ukraine_regions:/app/data
     build:
       args:
         collection_dir: "./deploy/docker/saffron/ukraine_regions"
@@ -17,7 +17,7 @@ services:
   ukraine_neighbours1:
     container_name: ukraine_neighbours1
     volumes:
-      - ./data/ukraine_neighbours1:/app/data
+      - ./../../data/saffron/ukraine_neighbours1:/app/data
     build:
       args:
         collection_dir: "./deploy/docker/saffron/ukraine_neighbours1"
@@ -28,7 +28,7 @@ services:
   ukraine_neighbours2:
     container_name: ukraine_neighbours2
     volumes:
-      - ./data/ukraine_neighbours2:/app/data
+      - ./../../data/saffron/ukraine_neighbours2:/app/data
     build:
       args:
         collection_dir: "./deploy/docker/saffron/ukraine_neighbours2"
@@ -39,7 +39,7 @@ services:
   ukraine_language:
     container_name: ukraine_language
     volumes:
-      - ./data/ukraine_language:/app/data
+      - ./../../data/saffron/ukraine_language:/app/data
     build:
       args:
         collection_dir: "./deploy/docker/saffron/ukraine_language"
@@ -50,7 +50,7 @@ services:
   ukraine_europe:
     container_name: ukraine_europe
     volumes:
-      - ./data/ukraine_europe:/app/data
+      - ./../../data/saffron/ukraine_europe:/app/data
     build:
       args:
         collection_dir: "./deploy/docker/saffron/ukraine_europe"
@@ -61,7 +61,7 @@ services:
   ukraine_countries:
     container_name: ukraine_countries
     volumes:
-      - ./data/ukraine_countries:/app/data
+      - ./../../data/saffron/ukraine_countries:/app/data
     build:
       args:
         collection_dir: "./deploy/docker/saffron/ukraine_countries"

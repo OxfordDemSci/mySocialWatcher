@@ -16,8 +16,13 @@ if __name__ == '__main__':
 
     # ---- environment ---- #
 
-    shutil.copy(src=os.path.join('deploy', 'private', '.env'),
+    shutil.copy(src=os.path.join('deploy', 'config', 'private', 'collector.env'),
                 dst=os.path.join('deploy', 'docker', vm, collection, '.env'))
+
+    # ---- cron ---- #
+
+    shutil.copy(src=os.path.join('deploy', 'config', 'cronjob_weekly'),
+                dst=os.path.join('deploy', 'docker', vm, collection, 'cronjob'))
 
     # ---- credentials ---- #
 

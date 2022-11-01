@@ -6,7 +6,7 @@ services:
   dgg_national:
     container_name: dgg_national
     volumes:
-      - ./data/dgg_national:/app/data
+      - ./../../data/badger/dgg_national:/app/data
     build:
       args:
         collection_dir: "./deploy/docker/badger/dgg_national"

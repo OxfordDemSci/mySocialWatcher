@@ -5,7 +5,7 @@ services:
   example_collection:
     container_name: example_collection
     volumes:
-      - ./data/example_collection:/app/data
+      - ./../../data/example_virtual_machine/example_collection:/app/data
     build:
       args:
         virtual_machine: example_virtual_machine

@@ -6,7 +6,7 @@ services:
     container_name: web_psw
     image: nginx:latest
     volumes:
-      - ./www/conf.d/nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - ./www/nginx.conf:/etc/nginx/conf.d/nginx.conf
       - ./www/public_html/:/var/www/public_html/
     ports:
       - "80:80"
@@ -23,7 +23,7 @@ services:
     build: ./api/
     command: gunicorn --config gunicorn.config.py wsgi:app
     volumes:
-      - ./api/api/static/docs.html:/app/static/docs.html
+      - ./api/static/docs.html:/app/static/docs.html
     depends_on:
       - postgres_psw
     networks:

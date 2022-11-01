@@ -2,8 +2,9 @@ import datetime
 import json
 import pandas as pd
 from ast import literal_eval
-from .utils import timestr, conn_to_database
+import mysocialwatcher.api.utils
 from dotenv import load_dotenv
+
 load_dotenv()
 
 
@@ -162,19 +163,22 @@ def query_fun(args):
     """Process requests to API endpoint '/api/v1/social_media_audience/query' by selecting queried data from a PostgreSQL table.
     Args:
         args (dict): Arguments of GET request passed from request.args
+    Examples:
+        - args = {'platform': 'facebook', 'country': 'AT', 'date_start': '2022-10-01'}
     Returns:
         dict: http response compatible with json format
     """
 
     # default valid = True
-    if not 'valid' in args.keys():
+    if 'valid' not in args.keys():
         args['valid'] = True
 
     # check arguments
     result = check_args(args,
                         required=['platform'],
                         required_oneof=[],
-                        optional=['valid', 'country', 'contributor_id', 'gender', 'age_min', 'age_max', 'date_start', 'date_end'])
+                        optional=['valid', 'contributor_id', 'country', 'date_start', 'date_end',
+                                  'gender', 'age_min', 'age_max'])
     args = result.get('args')
     status = result.get('status')
     message = result.get('message')
@@ -211,13 +215,17 @@ def query_fun(args):
         try:
             conn = conn_to_database()
             data = pd.read_sql(sql_query, conn)
-
             data = data.to_json()
             message = 'OK: Data successfully selected from database.'
+
         except:
             status = 500
             message = 'Internal Server Error: Error returned from PostgreSQL server on SELECT.'
-        conn.close()
+
+        finally:
+            try: conn.close()
+            except: pass
+
 
     # return result
     return {"status": status, "message": message, "timestamp": timestr(), "data": data}

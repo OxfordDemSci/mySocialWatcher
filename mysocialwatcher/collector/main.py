@@ -3,7 +3,7 @@ import os
 import logging
 from datetime import datetime
 from dotenv import load_dotenv
-from mysocialwatcher.utils import submit_psw_csv
+import mysocialwatcher.collector.utils
 from pysocialwatcher import watcherAPI, constants
 
 # environment variables
