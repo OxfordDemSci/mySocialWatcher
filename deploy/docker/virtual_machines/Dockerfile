@@ -8,15 +8,13 @@ RUN apt-get install -y curl
 RUN apt-get install -y git
 RUN apt-get install -y procps
 
-# install pySocialWatcher
+# install python packages
 WORKDIR /app
-COPY pysocialwatcher pysocialwatcher
-COPY setup.py setup.py
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
-RUN python3 setup.py install
 
-# install mySocialWatcher
+# install pysocialwatcher and mysocialwatcher
+COPY pysocialwatcher pysocialwatcher
 COPY mysocialwatcher mysocialwatcher
 COPY mysocialwatcher/collector/main.py main.py
 COPY deploy/docker/virtual_machines/_utils utils
