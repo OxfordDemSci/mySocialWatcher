@@ -2,7 +2,7 @@ import datetime
 import json
 import pandas as pd
 from ast import literal_eval
-import mysocialwatcher.api.utils
+from mysocialwatcher.api.utils import timestr, conn_to_database
 from dotenv import load_dotenv
 
 load_dotenv()
