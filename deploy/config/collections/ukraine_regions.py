@@ -2,15 +2,16 @@ import os
 import shutil
 import json
 import pandas as pd
-from mysocialwatcher.specs.utils import dgg_specs
 
 if __name__ == '__main__':
 
+    # ---- settings ---- #
+
     # virtual machine name
-    vm = 'badger'
+    vm = 'saffron'
 
     # collection name
-    collection = 'dgg_national'
+    collection = 'ukraine_regions'
 
     # make directory
     out_dir = os.path.join('deploy', 'docker', vm, collection)
@@ -18,6 +19,9 @@ if __name__ == '__main__':
 
     # credentials master file
     master_credentials_path = os.path.join('deploy', 'config', 'private', 'credentials_master.csv')
+
+    # specs template json
+    specs_template_path = os.path.join('deploy', 'specs', 'templates', 'UA_regions.json')
 
     # ---- environment ---- #
 
@@ -53,13 +57,47 @@ if __name__ == '__main__':
     specs_dir = os.path.join(out_dir, 'specs')
     os.makedirs(specs_dir, exist_ok=True)
 
+    # template json
+    with open(specs_template_path) as f:
+        specs = json.load(f)
+
     # cleanup old specs
     for f in os.listdir(specs_dir):
         os.remove(os.path.join(specs_dir, f))
 
-    # specs json
-    specs = dgg_specs()
+    # ---- All languages ----#
+    specs['languages'] = [None]
 
+    # write to file
     file_out = os.path.join(specs_dir, 'specs1.json')
+    with open(file_out, "w") as f:
+        f.write(json.dumps(specs))
+
+
+    # ---- Ukrainian language ----#
+    specs['languages'] = [{'name': 'Ukrainian', 'values': [52]}]
+
+    # write to file
+    file_out = os.path.join(specs_dir, 'specs2.json')
+    with open(file_out, "w") as f:
+        f.write(json.dumps(specs))
+
+
+    # ---- Russian language ---- #
+    specs['languages'] = [{'name': 'Russian', 'values': [17]}]
+
+    # write to file
+    file_out = os.path.join(specs_dir, 'specs3.json')
+    with open(file_out, "w") as f:
+        f.write(json.dumps(specs))
+
+
+    # ---- All languages ['home', 'recent']----#
+    specs['languages'] = [None]
+    for i in range(len(specs.get('geo_locations'))):
+        specs['geo_locations'][i]['location_types'] = [['home', 'recent']]
+
+    # write to file
+    file_out = os.path.join(specs_dir, 'specs4.json')
     with open(file_out, "w") as f:
         f.write(json.dumps(specs))

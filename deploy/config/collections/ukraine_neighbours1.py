@@ -2,22 +2,20 @@ import os
 import shutil
 import json
 import pandas as pd
-from mysocialwatcher.specs.utils import dgg_specs
 
 if __name__ == '__main__':
 
+    # ---- settings ---- #
+
     # virtual machine name
-    vm = 'badger'
+    vm = 'saffron'
 
     # collection name
-    collection = 'dgg_national'
+    collection = 'ukraine_neighbours1'
 
     # make directory
     out_dir = os.path.join('deploy', 'docker', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
-
-    # credentials master file
-    master_credentials_path = os.path.join('deploy', 'config', 'private', 'credentials_master.csv')
 
     # ---- environment ---- #
 
@@ -30,6 +28,9 @@ if __name__ == '__main__':
                 dst=os.path.join(out_dir, 'cronjob'))
 
     # ---- credentials ---- #
+
+    # credentials master file
+    master_credentials_path = os.path.join('deploy', 'config', 'private', 'credentials_master.csv')
 
     # path for output credentials.csv
     credentials_path = os.path.join(out_dir, 'credentials.csv')
@@ -49,6 +50,9 @@ if __name__ == '__main__':
 
     # ---- collection specs ---- #
 
+    # countries
+    countries = ['PL', 'HU', 'SK']
+
     # output directory
     specs_dir = os.path.join(out_dir, 'specs')
     os.makedirs(specs_dir, exist_ok=True)
@@ -57,9 +61,26 @@ if __name__ == '__main__':
     for f in os.listdir(specs_dir):
         os.remove(os.path.join(specs_dir, f))
 
-    # specs json
-    specs = dgg_specs()
+    i_count = 0
+    for country in countries:
 
-    file_out = os.path.join(specs_dir, 'specs1.json')
-    with open(file_out, "w") as f:
-        f.write(json.dumps(specs))
+        # specs template json
+        specs_template_path = os.path.join('deploy', 'specs', 'templates', country + '_regions.json')
+
+        # template json
+        with open(specs_template_path) as f:
+            specs = json.load(f)
+
+        # 10-year age classes
+        specs['ages_ranges'] = [[13, None], [18, None], [20, None], [60, None], [65, None],
+                                [13, 19], [15, 49], [15, 64], [20, 59], [18, 60],
+                                [20, 29], [30, 39], [40, 49], [50, 59]]
+
+        # ---- All languages ----#
+        i_count += 1
+
+        specs['languages'] = [None]
+
+        file_out = os.path.join(specs_dir, 'specs' + str(i_count) + '.json')
+        with open(file_out, "w") as f:
+            f.write(json.dumps(specs))
