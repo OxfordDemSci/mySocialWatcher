@@ -1,7 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 
 cd /app
 
+echo "---" >> data/launch.log
 echo "`date`: Collections launched." >> data/launch.log
 
 for file in specs/specs*.json

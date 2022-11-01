@@ -18,8 +18,8 @@ RUN python3 setup.py install
 
 # install mySocialWatcher
 COPY mysocialwatcher mysocialwatcher
-COPY mysocialwatcher/main.py main.py
-COPY ./deploy/docker/virtual_machines/_utils utils
+COPY mysocialwatcher/collector/main.py main.py
+COPY deploy/docker/virtual_machines/_utils utils
 
 # collection config
 ARG collection_dir=${collection_dir}
