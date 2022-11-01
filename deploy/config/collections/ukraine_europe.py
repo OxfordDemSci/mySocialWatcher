@@ -13,24 +13,25 @@ if __name__ == '__main__':
     # collection name
     collection = 'ukraine_europe'
 
-    # make directory
-    out_dir = os.path.join('deploy', 'docker', vm, collection)
+    # paths
+    master_credentials_path = os.path.join('deploy', 'config', 'private', 'credentials_master.csv')
+    specs_template_path = os.path.join('deploy', 'config', 'specs', 'templates')
+    env_template_path = os.path.join('deploy', 'config', 'private', 'collector.env')
+    cron_template_path = os.path.join('deploy', 'config', 'cron', 'weekly')
+    out_dir = os.path.join('deploy', 'docker', 'virtual_machines', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
 
     # ---- environment ---- #
 
-    shutil.copy(src=os.path.join('deploy', 'config', 'private', 'collector.env'),
+    shutil.copy(src=env_template_path,
                 dst=os.path.join(out_dir, '.env'))
 
     # ---- cron ---- #
 
-    shutil.copy(src=os.path.join('deploy', 'config', 'cron', 'weekly'),
+    shutil.copy(src=cron_template_path,
                 dst=os.path.join(out_dir, 'cronjob'))
 
     # ---- credentials ---- #
-
-    # credentials master file
-    master_credentials_path = os.path.join('deploy', 'config', 'private', 'credentials_master.csv')
 
     # path for output credentials.csv
     credentials_path = os.path.join(out_dir, 'credentials.csv')
@@ -66,10 +67,10 @@ if __name__ == '__main__':
     for country in countries:
 
         # specs template json
-        specs_template_path = os.path.join('deploy', 'specs', 'templates', country + '_regions.json')
+        country_specs_template_path = os.path.join(specs_template_path, country + '_regions.json')
 
         # template json
-        with open(specs_template_path) as f:
+        with open(country_specs_template_path) as f:
             specs = json.load(f)
 
         # 10-year age classes

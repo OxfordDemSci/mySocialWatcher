@@ -13,24 +13,22 @@ if __name__ == '__main__':
     # collection name
     collection = 'ukraine_regions'
 
-    # make directory
-    out_dir = os.path.join('deploy', 'docker', vm, collection)
-    os.makedirs(out_dir, exist_ok=True)
-
-    # credentials master file
+    # paths
     master_credentials_path = os.path.join('deploy', 'config', 'private', 'credentials_master.csv')
-
-    # specs template json
-    specs_template_path = os.path.join('deploy', 'specs', 'templates', 'UA_regions.json')
+    specs_template_path = os.path.join('deploy', 'config', 'specs', 'templates', 'UA_regions.json')
+    env_template_path = os.path.join('deploy', 'config', 'private', 'collector.env')
+    cron_template_path = os.path.join('deploy', 'config', 'cron', 'daily')
+    out_dir = os.path.join('deploy', 'docker', 'virtual_machines', vm, collection)
+    os.makedirs(out_dir, exist_ok=True)
 
     # ---- environment ---- #
 
-    shutil.copy(src=os.path.join('deploy', 'config', 'private', 'collector.env'),
+    shutil.copy(src=env_template_path,
                 dst=os.path.join(out_dir, '.env'))
 
     # ---- cron ---- #
 
-    shutil.copy(src=os.path.join('deploy', 'config', 'cron', 'daily'),
+    shutil.copy(src=cron_template_path,
                 dst=os.path.join(out_dir, 'cronjob'))
 
     # ---- credentials ---- #
