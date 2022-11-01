@@ -1,4 +1,4 @@
-# docker-compose to deploy multiple collectors
+# docker-compose to deploy one or multiple collectors (i.e. services)
 version: '3.3'
 
 services:

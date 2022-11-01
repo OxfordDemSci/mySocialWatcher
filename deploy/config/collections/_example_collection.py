@@ -6,17 +6,18 @@ import pandas as pd
 # ---- settings ---- #
 
 # virtual machine name
-vm = 'example_virtual_machine'
+vm = '_example_virtual_machine'
 
 # collection name
-collection = 'example_collection'
+collection = '_example_collection'
+
 
 if __name__ == '__main__':
 
     # paths
-    master_credentials_path = os.path.join('deploy', 'config', 'example_private', 'credentials_master.csv')
+    master_credentials_path = os.path.join('deploy', 'config', '_example_private', 'credentials_master.csv')
+    env_template_path = os.path.join('deploy', 'config', '_example_private', 'collector.env')
     specs_template_path = os.path.join('deploy', 'config', 'specs', 'templates')
-    env_template_path = os.path.join('deploy', 'config', 'private', 'collector.env')
     cron_template_path = os.path.join('deploy', 'config', 'cron', 'daily')
     out_dir = os.path.join('deploy', 'docker', 'virtual_machines', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
