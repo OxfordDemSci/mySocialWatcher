@@ -2,7 +2,7 @@ from flask import Flask
 from flask_cors import CORS
 
 app = Flask(__name__)
-from api import routes
+from mysocialwatcher.api import routes
 
 # Cross Origin Resource Sharing (for AJAX)
 CORS(app)

@@ -6,8 +6,8 @@ services:
     container_name: web_psw
     image: nginx:latest
     volumes:
-      - ./www/nginx.conf:/etc/nginx/conf.d/nginx.conf
-      - ./www/public_html/:/var/www/public_html/
+      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - ./public_html/:/var/www/public_html/
     ports:
       - "80:80"
       - "443:443"
@@ -20,10 +20,10 @@ services:
   flask_psw:
     container_name: api_psw
     env_file: .env
-    build: ./api/
-    command: gunicorn --config gunicorn.config.py wsgi:app
-    volumes:
-      - ./api/static/docs.html:/app/static/docs.html
+    build:
+      dockerfile: ./deploy/docker/datahub/Dockerfile
+      context: ./../../../
+    command: gunicorn --config gunicorn_config.py wsgi:app
     depends_on:
       - postgres_psw
     networks:
@@ -49,7 +49,7 @@ services:
     image: postgis/postgis:14-3.3
     env_file: .env
     volumes:
-      - ./sql/initdb.sh:/docker-entrypoint-initdb.d/initdb.sh
+      - ./initdb.sh:/docker-entrypoint-initdb.d/initdb.sh
     networks:
       - net_psw
     ports:
