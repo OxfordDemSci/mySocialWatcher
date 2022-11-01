@@ -3,17 +3,14 @@ import shutil
 import json
 import pandas as pd
 
+# virtual machine and collection names
+vm = 'saffron'
+collection = 'ukraine_regions'
+
+
 if __name__ == '__main__':
 
-    # ---- settings ---- #
-
-    # virtual machine name
-    vm = 'saffron'
-
-    # collection name
-    collection = 'ukraine_regions'
-
-    # paths
+    # ---- paths ---- #
     master_credentials_path = os.path.join('deploy', 'config', 'private', 'credentials_master.csv')
     specs_template_path = os.path.join('deploy', 'config', 'specs', 'templates', 'UA_regions.json')
     env_template_path = os.path.join('deploy', 'config', 'private', 'collector.env')
@@ -22,12 +19,10 @@ if __name__ == '__main__':
     os.makedirs(out_dir, exist_ok=True)
 
     # ---- environment ---- #
-
     shutil.copy(src=env_template_path,
                 dst=os.path.join(out_dir, '.env'))
 
     # ---- cron ---- #
-
     shutil.copy(src=cron_template_path,
                 dst=os.path.join(out_dir, 'cronjob'))
 
