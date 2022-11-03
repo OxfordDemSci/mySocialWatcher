@@ -2,6 +2,7 @@ version: "3.3"
 
 services:
 
+
   nginx_psw:
     container_name: web_psw
     image: nginx:latest
@@ -16,6 +17,7 @@ services:
     depends_on:
       - flask_psw
     restart: unless-stopped
+
 
   flask_psw:
     container_name: api_psw
