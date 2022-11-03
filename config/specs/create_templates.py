@@ -7,7 +7,7 @@ from pysocialwatcher import watcherAPI
 if __name__ == '__main__':
 
     # root directory
-    output_dir = os.path.join('deploy', 'specs', 'templates')
+    output_dir = os.path.join('config', 'specs', 'templates')
 
     # initialize
     watcher = watcherAPI(api_version='15.0')
