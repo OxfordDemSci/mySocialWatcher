@@ -19,7 +19,7 @@ if __name__ == '__main__':
     env_template_path = os.path.join('config', '_example_private', 'collector.env')
     specs_template_path = os.path.join('config', 'specs', 'templates')
     cron_template_path = os.path.join('config', 'cron', 'daily')
-    out_dir = os.path.join('docker', 'virtual_machines', vm, collection)
+    out_dir = os.path.join('docker', 'collectors', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
 
     # ---- environment ---- #
