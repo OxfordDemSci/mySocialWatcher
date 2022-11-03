@@ -17,7 +17,7 @@ RUN pip install -r requirements.txt
 COPY pysocialwatcher pysocialwatcher
 COPY mysocialwatcher mysocialwatcher
 COPY mysocialwatcher/collector/main.py main.py
-COPY deploy/docker/virtual_machines/_utils utils
+COPY docker/virtual_machines/_utils utils
 
 # collection config
 ARG collection_dir=${collection_dir}
@@ -35,4 +35,4 @@ RUN chmod 0644 /etc/cron.d/cronjob
 RUN crontab /etc/cron.d/cronjob
 
 # commmand
-ENTRYPOINT ["./utils/launch.sh", "&", "cron", "-f"]
+CMD ["bash", "./utils/launch.sh", "&", "cron", "-f"]

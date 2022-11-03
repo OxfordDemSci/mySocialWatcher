@@ -9,8 +9,8 @@ services:
       - ./../../../data/ukraine_regions:/app/data
     build:
       args:
-        collection_dir: "./deploy/docker/virtual_machines/saffron/ukraine_regions"
-      context: ../../../../
+        collection_dir: "./docker/virtual_machines/saffron/ukraine_regions"
+      context: ./../../../
       dockerfile: ./deploy/docker/virtual_machines/Dockerfile
     restart: unless-stopped
 
@@ -20,9 +20,9 @@ services:
       - ./../../../data/ukraine_neighbours1:/app/data
     build:
       args:
-        collection_dir: "./deploy/docker/virtual_machines/saffron/ukraine_neighbours1"
-      context: ../../../../
-      dockerfile: ./deploy/docker/virtual_machines/Dockerfile
+        collection_dir: "./docker/virtual_machines/saffron/ukraine_neighbours1"
+      context: ./../../../
+      dockerfile: ./docker/virtual_machines/Dockerfile
     restart: unless-stopped
 
   ukraine_neighbours2:
@@ -31,9 +31,9 @@ services:
       - ./../../../data/ukraine_neighbours2:/app/data
     build:
       args:
-        collection_dir: "./deploy/docker/virtual_machines/saffron/ukraine_neighbours2"
-      context: ../../../../
-      dockerfile: ./deploy/docker/virtual_machines/Dockerfile
+        collection_dir: "./docker/virtual_machines/saffron/ukraine_neighbours2"
+      context: ./../../../
+      dockerfile: ./docker/virtual_machines/Dockerfile
     restart: unless-stopped
 
   ukraine_language:
@@ -42,9 +42,9 @@ services:
       - ./../../../data/ukraine_language:/app/data
     build:
       args:
-        collection_dir: "./deploy/docker/virtual_machines/saffron/ukraine_language"
-      context: ../../../../
-      dockerfile: ./deploy/docker/virtual_machines/Dockerfile
+        collection_dir: "./docker/virtual_machines/saffron/ukraine_language"
+      context: ./../../../
+      dockerfile: ./docker/virtual_machines/Dockerfile
     restart: unless-stopped
 
   ukraine_europe:
@@ -53,9 +53,9 @@ services:
       - ./../../../data/ukraine_europe:/app/data
     build:
       args:
-        collection_dir: "./deploy/docker/virtual_machines/saffron/ukraine_europe"
-      context: ../../../../
-      dockerfile: ./deploy/docker/virtual_machines/Dockerfile
+        collection_dir: "./docker/virtual_machines/saffron/ukraine_europe"
+      context: ./../../../
+      dockerfile: ./docker/virtual_machines/Dockerfile
     restart: unless-stopped
 
   ukraine_countries:
@@ -64,7 +64,7 @@ services:
       - ./../../../data/ukraine_countries:/app/data
     build:
       args:
-        collection_dir: "./deploy/docker/virtual_machines/saffron/ukraine_countries"
-      context: ../../../../
-      dockerfile: ./deploy/docker/virtual_machines/Dockerfile
+        collection_dir: "./docker/virtual_machines/saffron/ukraine_countries"
+      context: ./../../../
+      dockerfile: ./docker/virtual_machines/Dockerfile
     restart: unless-stopped

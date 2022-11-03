@@ -1,5 +1,3 @@
-#!/bin/sh
-
 # kill launch script
 python3 utils/kill.py "launch.py"
 

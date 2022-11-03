@@ -9,9 +9,9 @@ services:
       - ./../../../data/rus_exodus_facebook:/app/data
     build:
       args:
-        collection_dir: "./deploy/docker/virtual_machines/niska/rus_exodus_facebook"
-      context: ../../../../
-      dockerfile: ./deploy/docker/virtual_machines/Dockerfile
+        collection_dir: "./docker/virtual_machines/niska/rus_exodus_facebook"
+      context: ./../../../
+      dockerfile: ./docker/virtual_machines/Dockerfile
     restart: unless-stopped
 
   rus_exodus_instagram:
@@ -20,7 +20,7 @@ services:
       - ./../../../data/rus_exodus_instagram:/app/data
     build:
       args:
-        collection_dir: "./deploy/docker/virtual_machines/niska/rus_exodus_instagram"
-      context: ../../../../
-      dockerfile: ./deploy/docker/virtual_machines/Dockerfile
+        collection_dir: "./docker/virtual_machines/niska/rus_exodus_instagram"
+      context: ./../../../
+      dockerfile: ./docker/virtual_machines/Dockerfile
     restart: unless-stopped

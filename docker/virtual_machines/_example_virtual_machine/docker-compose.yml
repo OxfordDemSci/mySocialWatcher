@@ -8,7 +8,7 @@ services:
       - ./../../../data/_example_collection:/app/data
     build:
       args:
-        collection_dir: "./deploy/docker/virtual_machines/_example_virtual_machine/_example_collection"
-      context: ./../../../../
-      dockerfile: ./deploy/docker/virtual_machines/Dockerfile
+        collection_dir: "./docker/virtual_machines/_example_virtual_machine/_example_collection"
+      context: ./../../../
+      dockerfile: ./docker/virtual_machines/Dockerfile
     restart: unless-stopped
