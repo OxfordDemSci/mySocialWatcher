@@ -29,7 +29,6 @@ CREATE TABLE tokens (
 	id serial PRIMARY KEY,
 	created_on DATE NOT NULL DEFAULT CURRENT_DATE,
 	contributor_id INT NOT NULL,
-	read BOOLEAN NOT NULL DEFAULT TRUE,
 	write BOOLEAN NOT NULL DEFAULT FALSE,
 	token VARCHAR(50) UNIQUE NOT NULL DEFAULT MD5(random()::text),
 	FOREIGN KEY(contributor_id) REFERENCES contributors(id)

@@ -3,44 +3,49 @@ import os
 import logging
 from datetime import datetime
 from dotenv import load_dotenv
-import mysocialwatcher.collector.utils
-from pysocialwatcher import watcherAPI, constants
+from mysocialwatcher.collector.utils import submit_psw_csv
 
 # environment variables
 load_dotenv()
 
-# log file
+# start time
+timestamp = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
+
+# logging
 os.makedirs(os.path.join('data', 'logs'), exist_ok=True)
-timestamp = str(int(datetime.timestamp(datetime.now())))
-logfile = os.path.join('data', 'logs', timestamp + '.log')
-logging.basicConfig(filename=logfile,
-                    level=logging.INFO,
+logging.basicConfig(filename=os.path.join('data', 'logs', timestamp + '.log'),
                     format='%(asctime)s (%(levelname)s) - %(message)s',
-                    datefmt='%d-%b-%y %H:%M:%S')
+                    datefmt='%d-%b-%y %H:%M:%S',
+                    filemode='w')
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+
+from pysocialwatcher import watcherAPI, constants
 
 
 if __name__ == '__main__':
 
-    # command line argument
-    if sys.argv[1] is None:
-        files = os.listdir('./specs')
-        files = [f for f in files if f.endswith('.json')]
-        specs_filepath = os.path.join('specs', files[0])
-    else:
-        specs_filepath = os.path.abspath(sys.argv[1])
-
-    if specs_filepath is None or not specs_filepath.endswith('.json'):
-        raise Exception('Error: No collection specs could be found.')
-
-    # data directories
-    data_directory = 'data'
-    os.makedirs(data_directory, exist_ok=True)
-    os.makedirs(os.path.join(data_directory, 'logs'), exist_ok=True)
-    os.makedirs(os.path.join(data_directory, 'skeleton'), exist_ok=True)
-    os.makedirs(os.path.join(data_directory, 'collecting'), exist_ok=True)
-    os.makedirs(os.path.join(data_directory, 'finished'), exist_ok=True)
-
     try:
+
+        # command line argument
+        if sys.argv[1] is None:
+            files = os.listdir('./specs')
+            files = [f for f in files if f.endswith('.json')]
+            specs_filepath = os.path.join('specs', files[0])
+        else:
+            specs_filepath = os.path.abspath(sys.argv[1])
+
+        if specs_filepath is None or not specs_filepath.endswith('.json'):
+            raise Exception('Error: No collection specs could be found.')
+
+        # data directories
+        data_directory = 'data'
+        os.makedirs(data_directory, exist_ok=True)
+        os.makedirs(os.path.join(data_directory, 'logs'), exist_ok=True)
+        os.makedirs(os.path.join(data_directory, 'skeleton'), exist_ok=True)
+        os.makedirs(os.path.join(data_directory, 'collecting'), exist_ok=True)
+        os.makedirs(os.path.join(data_directory, 'finished'), exist_ok=True)
+
         # instantiate watcher
         watcher = watcherAPI(api_version='15.0', sleep_time=20)
 
@@ -62,28 +67,7 @@ if __name__ == '__main__':
                                          output_dir=data_directory,
                                          remove_tmp_files=False)
 
-        # write collection to SQL via API
-        # response = submit_psw_csv(
-        #     filename=os.path.join('data', 'finished', 'dataframe_collected_finished_' + timestamp + '.csv'),
-        #     token=os.environ['DATABASE_TOKEN'],
-        #     platform='facebook',
-        #     country='XX',
-        #     valid=True)
-
-        # save API responses
-        # response.to_csv(os.path.join('data', 'logs', str(timestamp) + '_sql.csv'))
-
     except Exception as e:
 
         # log exception
-        logging.error('Exception:', exc_info=e)
-
-        # healthcheck.io fail notification
-        # requests.get('https://hc-ping.com/' + os.environ['HEALTHCHECK_UUID'] + '/fail')
-
-    finally:
-
-        # move logfile to data directory
-        os.makedirs(os.path.join('data', 'logs'), exist_ok=True)
-        os.rename(logfile, os.path.join('data', 'logs', os.path.basename(logfile)))
-
+        logger.error('Exception:', exc_info=e)
