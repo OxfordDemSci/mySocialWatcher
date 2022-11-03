@@ -23,9 +23,8 @@ services:
     container_name: api_psw
     env_file: .env
     build:
-      dockerfile: ./deploy/docker/datahub/Dockerfile
-      context: ./../../../
-    command: gunicorn --config gunicorn_config.py wsgi:app
+      dockerfile: ./docker/datahub/Dockerfile
+      context: ./../../
     depends_on:
       - postgres_psw
     networks:
