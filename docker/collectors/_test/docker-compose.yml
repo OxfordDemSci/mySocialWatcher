@@ -1,0 +1,14 @@
+# example docker-compose to deploy one or more collections on a virtual machine
+version: '3.3'
+
+services:
+  test:
+    container_name: test
+    volumes:
+      - ./../../../data/_test/_test:/app/data
+    build:
+      args:
+        collection_dir: "./docker/collectors/_test/_test"
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
