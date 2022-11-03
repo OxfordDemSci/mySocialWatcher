@@ -3,7 +3,7 @@ import os
 import logging
 from datetime import datetime
 from dotenv import load_dotenv
-import mysocialwatcher.collector.utils
+from mysocialwatcher.collector.utils import submit_psw_csv
 from pysocialwatcher import watcherAPI, constants
 
 # environment variables
@@ -21,26 +21,27 @@ logging.basicConfig(filename=logfile,
 
 if __name__ == '__main__':
 
-    # command line argument
-    if sys.argv[1] is None:
-        files = os.listdir('./specs')
-        files = [f for f in files if f.endswith('.json')]
-        specs_filepath = os.path.join('specs', files[0])
-    else:
-        specs_filepath = os.path.abspath(sys.argv[1])
-
-    if specs_filepath is None or not specs_filepath.endswith('.json'):
-        raise Exception('Error: No collection specs could be found.')
-
-    # data directories
-    data_directory = 'data'
-    os.makedirs(data_directory, exist_ok=True)
-    os.makedirs(os.path.join(data_directory, 'logs'), exist_ok=True)
-    os.makedirs(os.path.join(data_directory, 'skeleton'), exist_ok=True)
-    os.makedirs(os.path.join(data_directory, 'collecting'), exist_ok=True)
-    os.makedirs(os.path.join(data_directory, 'finished'), exist_ok=True)
-
     try:
+
+        # command line argument
+        if sys.argv[1] is not None:
+            specs_filepath = os.path.abspath(sys.argv[1])
+        else:
+            files = os.listdir('./specs')
+            files = [f for f in files if f.endswith('.json')]
+            specs_filepath = os.path.join('specs', files[0])
+
+        if specs_filepath is None or not specs_filepath.endswith('.json'):
+            raise Exception('Error: No collection specs could be found.')
+
+        # data directories
+        data_directory = 'data'
+        os.makedirs(data_directory, exist_ok=True)
+        os.makedirs(os.path.join(data_directory, 'logs'), exist_ok=True)
+        os.makedirs(os.path.join(data_directory, 'skeleton'), exist_ok=True)
+        os.makedirs(os.path.join(data_directory, 'collecting'), exist_ok=True)
+        os.makedirs(os.path.join(data_directory, 'finished'), exist_ok=True)
+
         # instantiate watcher
         watcher = watcherAPI(api_version='15.0', sleep_time=20)
 
@@ -63,12 +64,12 @@ if __name__ == '__main__':
                                          remove_tmp_files=False)
 
         # write collection to SQL via API
-        # response = submit_psw_csv(
-        #     filename=os.path.join('data', 'finished', 'dataframe_collected_finished_' + timestamp + '.csv'),
-        #     token=os.environ['DATABASE_TOKEN'],
-        #     platform='facebook',
-        #     country='XX',
-        #     valid=True)
+        response = submit_psw_csv(
+            filename=os.path.join('data', 'finished', 'dataframe_collected_finished_' + timestamp + '.csv'),
+            token=os.environ['DATABASE_TOKEN'],
+            platform='facebook',
+            country='XX',
+            valid=True)
 
         # save API responses
         # response.to_csv(os.path.join('data', 'logs', str(timestamp) + '_sql.csv'))
