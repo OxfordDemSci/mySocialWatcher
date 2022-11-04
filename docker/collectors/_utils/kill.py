@@ -2,7 +2,7 @@ import os
 import signal
 import sys
 
-name = "collection_run.py"
+name = "main.py"
 if len(sys.argv) > 1:
     name = sys.argv[1]
 

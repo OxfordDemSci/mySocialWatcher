@@ -31,7 +31,7 @@ def fb_query():
     args = dict(request.args)
     if len(args) == 0:
         return "<h1>400 Error</h1><p>Bad Request: This API endpoint requires arguments. " \
-               "See <a href='./'>API documentation</a> for more information.", \
+               "See <a href='./../'>API documentation</a> for more information.", \
                400
     else:
         result = endpoints.query_fun(args)
@@ -44,7 +44,7 @@ def fb_write():
     args = dict(request.args)
     if len(args) == 0:
         return "<h1>400 Error</h1><p>Bad Request: This API endpoint requires arguments. " \
-               "See <a href='./'>API documentation</a> for more information.", \
+               "See <a href='./../'>API documentation</a> for more information.", \
                400
     else:
         result = endpoints.write_fun(args)

@@ -11,11 +11,11 @@ collection = 'rus_exodus_facebook'
 if __name__ == '__main__':
 
     # ---- paths ---- #
-    master_credentials_path = os.path.join('deploy', 'config', 'private', 'credentials_master.csv')
-    specs_template_path = os.path.join('deploy', 'config', 'specs', 'templates')
-    env_template_path = os.path.join('deploy', 'config', 'private', 'collector.env')
-    cron_template_path = os.path.join('deploy', 'config', 'cron', 'daily')
-    out_dir = os.path.join('deploy', 'docker', 'virtual_machines', vm, collection)
+    master_credentials_path = os.path.join('config', 'private', 'credentials_master.csv')
+    specs_template_path = os.path.join('config', 'specs', 'templates')
+    env_template_path = os.path.join('config', 'private', 'collector.env')
+    cron_template_path = os.path.join('config', 'cron', 'daily')
+    out_dir = os.path.join('docker', 'collectors', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
 
     # ---- environment ---- #

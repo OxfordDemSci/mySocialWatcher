@@ -12,7 +12,7 @@ services:
       - "80:80"
       - "443:443"
     networks:
-      - net_psw
+      - net_datahub
     depends_on:
       - flask_psw
     restart: unless-stopped
@@ -21,28 +21,25 @@ services:
     container_name: api_psw
     env_file: .env
     build:
-      dockerfile: ./deploy/docker/datahub/Dockerfile
-      context: ./../../../
-    command: gunicorn --config gunicorn_config.py wsgi:app
+      dockerfile: ./docker/datahub/Dockerfile
+      context: ./../../
     depends_on:
       - postgres_psw
     networks:
-      - net_psw
+      - net_datahub
     ports:
       - "5000:5000"
       - "8000:8000"
     restart: unless-stopped
 
-
   memcached_psw:
     container_name: limiter_psw
     image: memcached:latest
     networks:
-      - net_psw
+      - net_datahub
     ports:
       - "11211:11211"
     restart: unless-stopped
-
 
   postgres_psw:
     container_name: db_psw
@@ -51,11 +48,10 @@ services:
     volumes:
       - ./initdb.sh:/docker-entrypoint-initdb.d/initdb.sh
     networks:
-      - net_psw
+      - net_datahub
     ports:
       - "5432:5432"
     restart: unless-stopped
 
-
 networks:
-  net_psw:
+  net_datahub:

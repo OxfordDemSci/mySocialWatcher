@@ -20,15 +20,17 @@ def conn_to_database(mode='r'):
         user = 'api_reader'
         pw = os.environ.get('POSTGRES_RPASS')
 
-    conn = psycopg2.connect(host=os.environ.get('POSTGRES_HOST'),
-                            database=os.environ.get('POSTGRES_DB'),
-                            user=user,
-                            password=pw)
+    # conn = psycopg2.connect(host=os.environ.get('POSTGRES_HOST'),
+    #                         port=os.environ.get('POSTGRES_PORT'),
+    #                         database=os.environ.get('POSTGRES_DB'),
+    #                         user=user,
+    #                         password=pw)
 
-    # conn = create_engine('postgresql+psycopg2://' + \
-    #                      user + ':' + \
-    #                      pw + '@' + \
-    #                      os.environ.get('POSTGRES_HOST') + '/' + \
-    #                      os.environ.get('POSTGRES_DB'))
+    conn = create_engine('postgresql+psycopg2://' + \
+                         user + ':' + \
+                         pw + '@' + \
+                         os.environ.get('POSTGRES_HOST') + ':' + \
+                         os.environ.get('POSTGRES_PORT') + '/' + \
+                         os.environ.get('POSTGRES_DB'))
 
     return conn

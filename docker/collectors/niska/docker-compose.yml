@@ -6,21 +6,21 @@ services:
   rus_exodus_facebook:
     container_name: rus_exodus_facebook
     volumes:
-      - ./../../../data/rus_exodus_facebook:/app/data
+      - ./../../../data/niska/rus_exodus_facebook:/app/data
     build:
       args:
-        collection_dir: "./docker/virtual_machines/niska/rus_exodus_facebook"
+        collection_dir: "./docker/collectors/niska/rus_exodus_facebook"
       context: ./../../../
-      dockerfile: ./docker/virtual_machines/Dockerfile
+      dockerfile: ./docker/collectors/Dockerfile
     restart: unless-stopped
 
   rus_exodus_instagram:
     container_name: rus_exodus_instagram
     volumes:
-      - ./../../../data/rus_exodus_instagram:/app/data
+      - ./../../../data/niska/rus_exodus_instagram:/app/data
     build:
       args:
-        collection_dir: "./docker/virtual_machines/niska/rus_exodus_instagram"
+        collection_dir: "./docker/collectors/niska/rus_exodus_instagram"
       context: ./../../../
-      dockerfile: ./docker/virtual_machines/Dockerfile
+      dockerfile: ./docker/collectors/Dockerfile
     restart: unless-stopped

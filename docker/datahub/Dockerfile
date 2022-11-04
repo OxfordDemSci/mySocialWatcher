@@ -9,4 +9,4 @@ COPY mysocialwatcher mysocialwatcher
 COPY mysocialwatcher/api/gunicorn_config.py gunicorn_config.py
 COPY mysocialwatcher/api/wsgi.py wsgi.py
 
-# CMD [ "gunicorn", "--config", "gunicorn_config.py", "wsgi:app"]
+CMD [ "gunicorn", "--config", "gunicorn_config.py", "wsgi:app"]

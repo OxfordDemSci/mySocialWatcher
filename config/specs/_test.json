@@ -1,0 +1,58 @@
+{
+  "name": "test",
+  "geo_locations": [
+    {
+      "name": "countries",
+      "values": [
+        "GB"
+      ],
+      "location_types": [
+        "recent"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": 4079,
+          "country_code": "GB",
+          "name": "England"
+        }
+      ],
+      "location_types": [
+        "recent"
+      ]
+    },
+    {
+      "name": "cities",
+      "values": [
+        {
+          "key": 814016,
+          "region": "England",
+          "region_id": 4079,
+          "country_code": "GB",
+          "name": "Oxford, Oxfordshire",
+          "distance_unit": "kilometer",
+          "radius": 0
+        }
+      ],
+      "location_types": [
+        "recent"
+      ]
+    }
+  ],
+  "ages_ranges": [
+    {
+      "min": 13
+    }
+  ],
+  "genders": [
+    0
+  ],
+  "publisher_platforms": [
+    "facebook"
+  ],
+  "languages": [
+    null
+  ]
+}

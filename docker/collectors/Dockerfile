@@ -8,6 +8,11 @@ RUN apt-get install -y curl
 RUN apt-get install -y git
 RUN apt-get install -y procps
 
+# Add Tini
+ENV TINI_VERSION v0.19.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
+RUN chmod +x /tini
+
 # install python packages
 WORKDIR /app
 COPY requirements.txt requirements.txt
@@ -17,7 +22,7 @@ RUN pip install -r requirements.txt
 COPY pysocialwatcher pysocialwatcher
 COPY mysocialwatcher mysocialwatcher
 COPY mysocialwatcher/collector/main.py main.py
-COPY docker/virtual_machines/_utils utils
+COPY docker/collectors/_utils utils
 
 # collection config
 ARG collection_dir=${collection_dir}
@@ -35,4 +40,8 @@ RUN chmod 0644 /etc/cron.d/cronjob
 RUN crontab /etc/cron.d/cronjob
 
 # commmand
-CMD ["bash", "./utils/launch.sh", "&", "cron", "-f"]
+#ENTRYPOINT ["/bin/bash", "-c"]
+ENTRYPOINT ["/tini", "--"]
+
+# CMD ["/bin/bash", "-c", "./utils/launch.sh; cron -f"]
+CMD ["/bin/bash", "-c", "./utils/launch.sh"]

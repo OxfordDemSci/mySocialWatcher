@@ -15,11 +15,11 @@ collection = '_example_collection'
 if __name__ == '__main__':
 
     # paths
-    master_credentials_path = os.path.join('deploy', 'config', '_example_private', 'credentials_master.csv')
-    env_template_path = os.path.join('deploy', 'config', '_example_private', 'collector.env')
-    specs_template_path = os.path.join('deploy', 'config', 'specs', 'templates')
-    cron_template_path = os.path.join('deploy', 'config', 'cron', 'daily')
-    out_dir = os.path.join('deploy', 'docker', 'virtual_machines', vm, collection)
+    master_credentials_path = os.path.join('config', '_example_private', 'credentials_master.csv')
+    env_template_path = os.path.join('config', '_example_private', 'collector.env')
+    specs_template_path = os.path.join('config', 'specs', 'templates')
+    cron_template_path = os.path.join('config', 'cron', 'daily')
+    out_dir = os.path.join('docker', 'collectors', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
 
     # ---- environment ---- #

@@ -1,17 +1,17 @@
 import os
 import json
-from mysocialwatcher.specs import master_specs
+from mysocialwatcher.specs.utils import master_specs
 from pysocialwatcher import watcherAPI
 
 
 if __name__ == '__main__':
 
     # root directory
-    output_dir = os.path.join('deploy', 'specs', 'templates')
+    output_dir = os.path.join('config', 'specs', 'templates')
 
     # initialize
     watcher = watcherAPI(api_version='15.0')
-    watcher.load_credentials_file(os.path.join('deploy', 'docker', 'saffron', 'ukraine_regions', 'credentials.csv'))
+    watcher.load_credentials_file(os.path.join('docker', 'virtual_machines', '_test', '_test', 'credentials.csv'))
 
     # all countries
     countries = ['AD', 'AE', 'AF', 'AG', 'AI', 'AL', 'AM', 'AO', 'AR', 'AS', 'AT', 'AU', 'AW', 'AZ', 'BA', 'BB', 'BD',
@@ -28,7 +28,7 @@ if __name__ == '__main__':
                  'TD', 'TG', 'TH', 'TJ', 'TL', 'TM', 'TN', 'TO', 'TR', 'TT', 'TV', 'TW', 'TZ', 'UA', 'UG', 'US', 'UY',
                  'UZ', 'VC', 'VE', 'VG', 'VI', 'VN', 'VU', 'WF', 'WS', 'XK', 'YE', 'YT', 'ZA', 'ZM', 'ZW']
 
-    countries_city = ['BY', 'HU', 'MD', 'PL', 'RO', 'RU', 'SK', 'UA']
+    countries_city = ['BY', 'GB', 'HU', 'MD', 'PL', 'RO', 'RU', 'SK', 'UA']
 
     # ---- region specs ---- #
     for country in countries:

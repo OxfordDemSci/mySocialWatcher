@@ -139,23 +139,27 @@ def check_args(args, required=[], required_oneof=[], optional=[]):
     return {'status': status, 'message': message, 'args': args}
 
 
-def validate_token(token):
+def validate_token(token, write=False):
     conn = conn_to_database()
-    cur = conn.cursor()
-    sql_query = "SELECT id FROM contributors WHERE token='{}';".format(token)
-    cur.execute(sql_query)
-    response = cur.fetchall()
-    authenticated = len(response) > 0
+
+    sql = "SELECT contributor_id FROM tokens WHERE token='{}';".format(token)
+    if write:
+        sql = sql.replace(';', ' and write=True;')
+
+    df = pd.read_sql(sql, conn)
+
+    result = list(df['contributor_id'])
+    authenticated = len(result) > 0
 
     if authenticated:
-        contributor_id = str(response[0][0])
+        contributor_id = str(result[0])
         status = 200
         message = 'OK: Token authenticated successfully.'
     else:
         status = 401
         message = "Unauthorized: Token failed authentication."
         contributor_id = None
-    conn.close()
+
     return {'status': status, 'message': message, 'contributor_id': contributor_id}
 
 
@@ -175,7 +179,7 @@ def query_fun(args):
 
     # check arguments
     result = check_args(args,
-                        required=['platform'],
+                        required=['token', 'platform'],
                         required_oneof=[],
                         optional=['valid', 'contributor_id', 'country', 'date_start', 'date_end',
                                   'gender', 'age_min', 'age_max'])
@@ -183,6 +187,18 @@ def query_fun(args):
     status = result.get('status')
     message = result.get('message')
     data = None
+
+    if status == 200:
+
+        # validate token
+        result = validate_token(token=args.get('token'))
+
+        status = result.get('status')
+        if status == 200:
+            args['contributor_id'] = result.get('contributor_id')
+            args.pop('token')
+        else:
+            message = result.get('message')
 
     if status == 200:
 
@@ -202,30 +218,26 @@ def query_fun(args):
         args.pop('table')
 
         # create sql query
-        sql_query = "SELECT " + ','.join(cols) + " FROM " + table + " WHERE "
+        sql = "SELECT " + ','.join(cols) + " FROM " + table + " WHERE "
         for i in set(args.keys()).intersection(['contributor_id', 'platform', 'country', 'gender', 'age_min', 'age_max']):
-            sql_query +=  i + '=' + str(args.get(i)) + ' AND '
+            sql +=  i + '=' + str(args.get(i)) + ' AND '
         if 'date_start' in args.keys():
-            sql_query += "timestamp_iso::date >= " + str(args.get('date_start')) + " AND "
+            sql += "timestamp_iso::date >= " + str(args.get('date_start')) + " AND "
         if 'date_end' in args.keys():
-            sql_query += "timestamp_iso::date <= " + str(args.get('date_start')) + " AND "
-        sql_query = sql_query[:-5] + ';'
+            sql += "timestamp_iso::date <= " + str(args.get('date_start')) + " AND "
+        sql = sql[:-5] + ';'
 
         # query database
         try:
             conn = conn_to_database()
-            data = pd.read_sql(sql_query, conn)
+            data = pd.read_sql(sql, conn)
             data = data.to_json()
             message = 'OK: Data successfully selected from database.'
 
-        except:
+        except Exception as e:
+
             status = 500
-            message = 'Internal Server Error: Error returned from PostgreSQL server on SELECT.'
-
-        finally:
-            try: conn.close()
-            except: pass
-
+            message = 'Internal Server Error: PostgreSQL error ' + str(e)
 
     # return result
     return {"status": status, "message": message, "timestamp": timestr(), "data": data}
@@ -255,7 +267,7 @@ def write_fun(args):
     if status == 200:
 
         # validate token
-        result = validate_token(token=args.get('token'))
+        result = validate_token(token=args.get('token'), write=True)
 
         status = result.get('status')
         if status == 200:
@@ -271,25 +283,24 @@ def write_fun(args):
         args['timestamp_iso'] = "'" + datetime.datetime.fromtimestamp(int(args.get('timestamp')), tz=datetime.timezone.utc).isoformat(sep=" ")[:-3] + "'"
 
         # table name
-        table = args.get('table')
-        args.pop('table')
+        table = args.pop('table')
 
         # create sql query
-        sql_query = "INSERT INTO " + table + "({}) VALUES({});".format(','.join(args.keys()), ','.join([str(i) for i in args.values()]))
+        sql = "INSERT INTO " + table + "({}) VALUES({});".format(','.join(args.keys()), ','.join([str(i) for i in args.values()]))
 
         # query database
         try:
-            conn = conn_to_database()
-            cur = conn.cursor()
-            cur.execute(sql_query)
-            conn.commit()
+            conn = conn_to_database(mode='w')
+            result = conn.execute(sql)
             message = 'OK: Data successfully written into database.'
-        except:
-            status = 500
-            message = 'Internal Server Error: UNIQUE constraint or other error returned from PostgreSQL server on INSERT.'
-        conn.close()
 
-        if status == 200 and 'invalid' in table: message += " Written with flag 'valid=false' so data will not persist in database."
+        except Exception as e:
+
+            status = 500
+            message = 'Internal Server Error: PostgreSQL error ' + str(e)
+
+        if status == 200 and 'invalid' in table:
+            message += " Written with flag 'valid=false' so data will not persist in database."
 
     # return result
     return {"status": status, "message": message, "timestamp": timestr()}

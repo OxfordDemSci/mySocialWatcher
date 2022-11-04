@@ -16,7 +16,7 @@ CREATE TABLE contributors (
 	lastname VARCHAR (25) NOT NULL,
 	email VARCHAR(50) NOT NULL
 );
-GRANT SELECT ON contributors TO api_reader;
+GRANT SELECT ON contributors TO api_reader, api_writer;
 
 INSERT INTO contributors (firstname, lastname, email)
 VALUES ('Hoban', 'Washburne', 'hoban.washburne@serenity.io');
@@ -29,12 +29,11 @@ CREATE TABLE tokens (
 	id serial PRIMARY KEY,
 	created_on DATE NOT NULL DEFAULT CURRENT_DATE,
 	contributor_id INT NOT NULL,
-	read BOOLEAN NOT NULL DEFAULT TRUE,
 	write BOOLEAN NOT NULL DEFAULT FALSE,
 	token VARCHAR(50) UNIQUE NOT NULL DEFAULT MD5(random()::text),
 	FOREIGN KEY(contributor_id) REFERENCES contributors(id)
 );
-GRANT SELECT ON tokens TO api_reader;
+GRANT SELECT ON tokens TO api_reader, api_writer;
 
 INSERT INTO tokens (contributor_id, write)
 VALUES (1, TRUE);
@@ -60,8 +59,8 @@ CREATE TABLE geo (
 );
 CREATE INDEX id_index ON geo(id);
 
-GRANT SELECT ON geo TO api_reader;
-GRANT SELECT,INSERT ON geo TO api_writer;
+GRANT SELECT ON geo TO api_reader, api_writer;
+GRANT INSERT ON geo TO api_writer;
 GRANT USAGE,SELECT ON SEQUENCE geo_id_seq TO api_reader, api_writer;
 "
 
@@ -108,8 +107,8 @@ CREATE TABLE facebook (
 CREATE INDEX geo_id_fb_index ON facebook(geo_id);
 CREATE INDEX country_fb_index ON facebook(country);
 
-GRANT SELECT ON facebook TO api_reader;
-GRANT SELECT,INSERT ON facebook TO api_writer;
+GRANT SELECT ON facebook TO api_reader, api_writer;
+GRANT INSERT ON facebook TO api_writer;
 GRANT USAGE,SELECT ON SEQUENCE facebook_id_seq TO api_reader, api_writer;
 "
 
@@ -157,8 +156,8 @@ CREATE TABLE facebook_invalid (
 CREATE INDEX geo_id_fbi_index ON facebook_invalid(geo_id);
 CREATE INDEX country_fbi_index ON facebook_invalid(country);
 
-GRANT SELECT ON facebook_invalid TO api_reader;
-GRANT SELECT,INSERT ON facebook_invalid TO api_writer;
+GRANT SELECT ON facebook_invalid TO api_reader, api_writer;
+GRANT INSERT ON facebook_invalid TO api_writer;
 GRANT USAGE,SELECT ON SEQUENCE facebook_invalid_id_seq TO api_reader, api_writer;
 "
 
@@ -206,8 +205,8 @@ CREATE TABLE instagram (
 CREATE INDEX geo_id_ig_index ON instagram(geo_id);
 CREATE INDEX country_ig_index ON instagram(country);
 
-GRANT SELECT ON instagram TO api_reader;
-GRANT SELECT,INSERT ON instagram TO api_writer;
+GRANT SELECT ON instagram TO api_reader, api_writer;
+GRANT INSERT ON instagram TO api_writer;
 GRANT USAGE,SELECT ON SEQUENCE instagram_id_seq TO api_reader, api_writer;
 "
 
@@ -255,7 +254,7 @@ CREATE TABLE instagram_invalid (
 CREATE INDEX geo_id_ig2_index ON instagram_invalid(geo_id);
 CREATE INDEX country_ig2_index ON instagram_invalid(country);
 
-GRANT SELECT ON instagram_invalid TO api_reader;
-GRANT SELECT,INSERT ON instagram_invalid TO api_writer;
+GRANT SELECT ON instagram_invalid TO api_reader, api_writer;
+GRANT INSERT ON instagram_invalid TO api_writer;
 GRANT USAGE,SELECT ON SEQUENCE instagram_invalid_id_seq TO api_reader, api_writer;
 "
