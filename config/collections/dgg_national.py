@@ -2,7 +2,7 @@ import os
 import shutil
 import json
 import pandas as pd
-from mysocialwatcher.specs.utils import dgg_specs
+from mysocialwatcher.collector.utils import dgg_specs
 
 # virtual machine and collection
 vm = 'badger'

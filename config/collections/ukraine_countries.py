@@ -2,7 +2,7 @@ import os
 import shutil
 import json
 import pandas as pd
-from mysocialwatcher.specs.utils import multicountry_specs
+from mysocialwatcher.collector.utils import multicountry_specs
 
 # virtual machine and collection names
 vm = 'saffron'

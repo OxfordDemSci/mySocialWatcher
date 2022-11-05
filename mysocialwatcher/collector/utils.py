@@ -18,132 +18,166 @@ def gunzip(source_filepath, dest_filepath, block_size=65536):
                 d_file.write(block)
 
 
-def country_from_geo(geo):
-    country = []
+def master_specs(country, regions=True, cities=False):
+    """
+    Master JSON for national, sub-national, and city-level demographic collections.
 
-    if geo['name'] == 'countries':
-        country.append(geo['values'][0])
+    args:
+        country (str): IS02 country code
+        regions (boolean): Toggle region collection
+        cities (boolean): Toggle city collections
+    returns:
+        dict: specification for collections
+    """
 
-    elif geo['name'] in ['regions', 'cities']:
+    # sex
+    genderlist = Genders(True, True, True)
 
-        if 'country_code' in geo.get('values')[0].keys():
-            country += [geo.get('values')[i].get('country_code') for i in range(len(geo.get('values')))]
-        elif 'PySocialWatcherReference' in geo.keys():
-            for i in range(len(geo.get('values'))):
-                x = list(filter(lambda i: 'country:' in i, geo.get('pySocialWatcherReference').split('; ')))
-                x = x[0].replace('country:', '')
-                country.append(x)
-                geo['values'][i]['country_code'] = x
+    # age
+    ages = [[13, None], [18, None], [20, None], [60, None], [65, None],
+            [13, 19], [15, 49], [15, 64], [20, 59], [18, 60],
+            [20, 29], [30, 39], [40, 49], [50, 59],
+            [15, 19], [20, 24], [25, 29], [30, 34], [35, 39], [40, 44], [45, 49], [50, 54], [55, 59], [60, 64]]
 
-    return list(set(country))
+    agelist = AgeList()
+    for i in range(len(ages)):
+        agelist.add(Age(ages[i][0], ages[i][1]))
 
+    # locations
+    loclist = LocationList()
 
-def submit_psw_csv(filename, token, valid=False,
-                   url='http://10.131.129.27/api/v1/social_media_audience/write'):
-    """Submit pysocialwatcher csv to /api/v1/fb/write"""
+    loclist.add(Location(loc_type='countries',
+                         values=[country]))
 
-    # load data
-    dat = pd.read_csv(filename)
+    all_regions = None
+    if regions:
+        all_regions = watcherAPI.get_KMLs_for_regions_in_country(country)
+        if isinstance(all_regions, pd.DataFrame):
+            loclist.get_location_list_from_df(all_regions)
 
-    for index in range(len(dat)):
+    all_cities = None
+    if cities:
+        all_cities = watcherAPI.get_all_cities_given_country_code(country)
+        if isinstance(all_cities, pd.DataFrame):
+            loclist.get_location_list_from_df(all_cities)
 
-        row = dat.iloc[index]
+    # build json
+    specs = JSONBuilder(name=country,
+                        age_list=agelist,
+                        location_list=loclist,
+                        genders=genderlist).jsonfy()
 
-        # ---- platform ---- #
-        platform = literal_eval(row['publisher_platforms'])
+    # platform
+    specs["publisher_platforms"] = ["facebook"]
 
-        if len(platform) > 1:
-            next
-        else:
-            platform = platform[0]
-
-        # ---- all_fields ---- #
-        all_fields = {k: v for k, v in literal_eval(row.get('all_fields'))}
-
-        # ---- targeting ---- #
-        targeting = literal_eval(row.get('targeting'))
-
-        # ---- response ----#
-        if row.get('response')[:2] == "b\'":
-            response_bytes = literal_eval(row.get('response'))
-        else:
-            response_bytes = bytes(row.get('response'), encoding='utf-8')
-
-        response = json.loads(response_bytes.decode('utf-8'))
-
-        # ---- prepare: geo_locations ----#
-        geo = all_fields['geo_locations']  # literal_eval(row.get('geo_locations'))
-
-        # ---- country ----#
-        country = country_from_geo(geo)
-
-        if len(country) == 1:
-            country = country[0]
-        else:
-            dat.loc[index, 'row_index'] = index
-            dat.loc[index, 'status'] = 400
-            dat.loc[index, 'message'] = 'Bad Request: Could not identify a single country.'
-            next
-
-        # prepare API arguments
-        args = {'valid': valid,
-                'token': token,
-                'platform': platform,
-                'country': country,
-                'timestamp': row.get('timestamp'),
-                'gender': row.get('genders'),
-                'age_min': all_fields.get('ages_ranges').get('min'),
-                'age_max': all_fields.get('ages_ranges').get('max'),
-                'dau': row.get('dau_audience'),
-                'mau': row.get('mau_audience'),
-                'mau_upper': row.get('mau_audience_upper_bound'),
-                'mau_lower': row.get('mau_audience_lower_bound'),
-                'geo_locations': json.dumps(geo),
-                'all_fields': json.dumps(all_fields),
-                'targeting': json.dumps(targeting),
-                'response': json.dumps(response)
-                }
-
-        # drop arguments with no data
-        drop = []
-        for i in args.keys():
-            if args.get(i) is None:
-                drop.append(i)
-            elif isinstance(args.get(i), float) and math.isnan(args.get(i)):
-                drop.append(i)
-        for i in drop:
-            del args[i]
-
-        # submit api request
-        response = requests.get(url=url, params=args)
-        response = literal_eval(json.dumps(response.json()))
-
-        # format results
-        dat.loc[index, 'row_index'] = int(index)
-        dat.loc[index, 'timestamp'] = response.get('timestamp')
-        dat.loc[index, 'status'] = int(response.get('status'))
-        dat.loc[index, 'message'] = response.get('message')
+    # location types
+    for i in range(len(specs['geo_locations'])):
+        specs['geo_locations'][i]['location_types'] = ['recent']
 
     # return result
-    result = dat[['row_index', 'timestamp', 'status', 'message']]
-
-    return result
+    return {'specs': specs, 'regions': all_regions, 'cities': all_cities}
 
 
-def crawler(crawl_dir):
-    # crawl_dir = 'data/_test'
+def multicountry_specs(name='multicountry', countries=None, ages=None, genders=[0, 1, 2]):
 
-    for collection in os.listdir(crawl_dir):
-        for fname in os.listdir(os.path.join(crawl_dir, collection, 'finished')):
+    if countries is None:
 
-            # write collection to SQL via API
-            response = submit_psw_csv(
-                filename=os.path.join(crawl_dir, collection, 'finished', fname),
-                url=os.environ.get('API_URL'),
-                token=os.environ.get('API_TOKEN'),
-                valid=True)
+        countries = ['US', 'CA', 'GB', 'AR', 'AU', 'AT', 'BE', 'BR', 'CL', 'CN', 'CO', 'HR', 'DK', 'DO', 'EG', 'FI',
+                     'FR', 'DE', 'GR', 'HK', 'IN', 'ID', 'IE', 'IL', 'IT', 'JP', 'JO', 'KW', 'LB', 'MY', 'MX', 'NL',
+                     'NZ', 'NG', 'NO', 'PK', 'PA', 'PE', 'PH', 'PL', 'RU', 'SA', 'RS', 'SG', 'ZA', 'KR', 'ES', 'SE',
+                     'CH', 'TW', 'TH', 'TR', 'AE', 'VE', 'PT', 'LU', 'BG', 'CZ', 'SI', 'IS', 'SK', 'LT', 'TT', 'BD',
+                     'LK', 'KE', 'HU', 'MA', 'CY', 'JM', 'EC', 'RO', 'BO', 'GT', 'CR', 'QA', 'SV', 'HN', 'NI', 'PY',
+                     'UY', 'PR', 'BA', 'PS', 'TN', 'BH', 'VN', 'GH', 'MU', 'UA', 'MT', 'BS', 'MV', 'OM', 'MK', 'LV',
+                     'EE', 'IQ', 'DZ', 'AL', 'NP', 'MO', 'ME', 'SN', 'GE', 'BN', 'UG', 'GP', 'BB', 'AZ', 'TZ', 'LY',
+                     'MQ', 'CM', 'BW', 'ET', 'KZ', 'MG', 'NC', 'MD', 'FJ', 'BY', 'JE', 'GU', 'YE', 'ZM', 'IM', 'HT',
+                     'KH', 'AW', 'PF', 'AF', 'BM', 'GY', 'AM', 'MW', 'AG', 'RW', 'GG', 'GM', 'FO', 'LC', 'KY', 'BJ',
+                     'AD', 'GD', 'VI', 'BZ', 'VC', 'MN', 'MZ', 'ML', 'AO', 'GF', 'UZ', 'DJ', 'BF', 'MC', 'TG', 'GL',
+                     'GA', 'GI', 'CD', 'KG', 'PG', 'BT', 'KN', 'SZ', 'LS', 'LA', 'LI', 'MP', 'SR', 'SC', 'VG', 'TC',
+                     'DM', 'MR', 'SM', 'SL', 'NE', 'CG', 'AI', 'YT', 'CV', 'GN', 'TM', 'BI', 'TJ', 'VU', 'SB', 'ER',
+                     'WS', 'AS', 'FK', 'GQ', 'TO', 'KM', 'PW', 'FM', 'CF', 'SO', 'MH', 'TD', 'KI', 'ST', 'TV', 'NR',
+                     'RE', 'LR', 'ZW', 'CI', 'MM', 'BQ', 'CK', 'CW', 'GW', 'XK', 'MS', 'NF', 'BL', 'SH', 'MF', 'PM',
+                     'SX', 'SS', 'TL', 'WF']
 
-            timestamp = fname.replace('dataframe_collected_finished_', '').replace('.csv', '')
+    # age
+    if ages is None:
+        ages = [[13, None], [18, None], [20, None], [60, None], [65, None],
+                [13, 19], [15, 49], [15, 64], [20, 59], [18, 60],
+                [20, 29], [30, 39], [40, 49], [50, 59],
+                [15, 19], [20, 24], [25, 29], [30, 34], [35, 39], [40, 44], [45, 49], [50, 54], [55, 59], [60, 64]]
 
-            # save API responses
-            response.to_csv(os.path.join('data', 'logs', str(timestamp) + '_sql.csv'))
+    agelist = AgeList()
+    for i in range(len(ages)):
+        agelist.add(Age(ages[i][0], ages[i][1]))
+
+    # genders
+    genderlist = Genders(1 in genders,
+                         2 in genders,
+                         0 in genders)
+
+    # locations
+    loclist = LocationList()
+
+    for country in countries:
+        loclist.add(Location(loc_type='countries', values=[country]))
+
+    # build json
+    specs = JSONBuilder(name=name,
+                        age_list=agelist,
+                        location_list=loclist,
+                        genders=genderlist).jsonfy()
+
+    # return json
+    return specs
+
+
+def dgg_specs():
+    """JSON for national all countries collections for all digital gender gaps.
+
+    args:
+        filename (string): Filename to save json containing collection specifications.
+    returns:
+        dict: collection specification for collections"""
+
+    # countries
+    countries = ['US', 'CA', 'GB', 'AR', 'AU', 'AT', 'BE', 'BR', 'CL', 'CN', 'CO', 'HR', 'DK', 'DO', 'EG', 'FI', 'FR',
+                 'DE', 'GR', 'HK', 'IN', 'ID', 'IE', 'IL', 'IT', 'JP', 'JO', 'KW', 'LB', 'MY', 'MX', 'NL', 'NZ', 'NG',
+                 'NO', 'PK', 'PA', 'PE', 'PH', 'PL', 'RU', 'SA', 'RS', 'SG', 'ZA', 'KR', 'ES', 'SE', 'CH', 'TW', 'TH',
+                 'TR', 'AE', 'VE', 'PT', 'LU', 'BG', 'CZ', 'SI', 'IS', 'SK', 'LT', 'TT', 'BD', 'LK', 'KE', 'HU', 'MA',
+                 'CY', 'JM', 'EC', 'RO', 'BO', 'GT', 'CR', 'QA', 'SV', 'HN', 'NI', 'PY', 'UY', 'PR', 'BA', 'PS', 'TN',
+                 'BH', 'VN', 'GH', 'MU', 'UA', 'MT', 'BS', 'MV', 'OM', 'MK', 'LV', 'EE', 'IQ', 'DZ', 'AL', 'NP', 'MO',
+                 'ME', 'SN', 'GE', 'BN', 'UG', 'GP', 'BB', 'AZ', 'TZ', 'LY', 'MQ', 'CM', 'BW', 'ET', 'KZ', 'MG', 'NC',
+                 'MD', 'FJ', 'BY', 'JE', 'GU', 'YE', 'ZM', 'IM', 'HT', 'KH', 'AW', 'PF', 'AF', 'BM', 'GY', 'AM', 'MW',
+                 'AG', 'RW', 'GG', 'GM', 'FO', 'LC', 'KY', 'BJ', 'AD', 'GD', 'VI', 'BZ', 'VC', 'MN', 'MZ', 'ML', 'AO',
+                 'GF', 'UZ', 'DJ', 'BF', 'MC', 'TG', 'GL', 'GA', 'GI', 'CD', 'KG', 'PG', 'BT', 'KN', 'SZ', 'LS', 'LA',
+                 'LI', 'MP', 'SR', 'SC', 'VG', 'TC', 'DM', 'MR', 'SM', 'SL', 'NE', 'CG', 'AI', 'YT', 'CV', 'GN', 'TM',
+                 'BI', 'TJ', 'VU', 'SB', 'ER', 'WS', 'AS', 'FK', 'GQ', 'TO', 'KM', 'PW', 'FM', 'CF', 'SO', 'MH', 'TD',
+                 'KI', 'ST', 'TV', 'NR', 'RE', 'LR', 'ZW', 'CI', 'MM', 'BQ', 'CK', 'CW', 'GW', 'XK', 'MS', 'NF', 'BL',
+                 'SH', 'MF', 'PM', 'SX', 'SS', 'TL', 'WF']
+
+    # genders
+    genderlist = Genders(True, True, True)
+
+    # ages
+    ages = [[18, None], [20, None], [21, None], [25, None], [50, None], [60, None], [65, None],
+            [13, 14], [14, 15], [15, 16], [16, 17], [17, 18], [18, 19],
+            [15, 19], [20, 24], [25, 29], [30, 34], [35, 39], [40, 44], [45, 49], [50, 54], [55, 59], [60, 64],
+            [18, 23], [20, 64], [25, 49], [25, 64]]
+
+    agelist = AgeList()
+    for i in range(len(ages)):
+        agelist.add(Age(ages[i][0], ages[i][1]))
+
+    # locations
+    loclist = LocationList()
+
+    for country in countries:
+        loclist.add(Location(loc_type='countries', values=[country]))
+
+    # build json
+    specs = JSONBuilder(name='dgg_national',
+                        age_list=agelist,
+                        location_list=loclist,
+                        genders=genderlist).jsonfy()
+
+    # return json
+    return specs

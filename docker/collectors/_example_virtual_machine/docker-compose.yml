@@ -3,17 +3,6 @@ version: '3.3'
 
 services:
 
-  data_crawler:
-    container_name: data_crawler
-    volumes:
-      - ./../../../data/_example_virtual_machine:/app/data
-    build:
-      args:
-        collection_dir: "./docker/collectors/_example_virtual_machine/_example_collection"
-      context: ./../../../
-      dockerfile: ./docker/collectors/Dockerfile
-    restart: unless-stopped
-
   example_collection:
     container_name: example_collection
     volumes:
