@@ -2,8 +2,8 @@ version: "3.3"
 
 services:
 
-  nginx_psw:
-    container_name: web_psw
+  datahub_web:
+    container_name: datahub_web
     image: nginx:latest
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
@@ -12,46 +12,46 @@ services:
       - "80:80"
       - "443:443"
     networks:
-      - net_datahub
+      - datahub_net
     depends_on:
-      - flask_psw
+      - datahub_api
     restart: unless-stopped
 
-  flask_psw:
-    container_name: api_psw
+  datahub_api:
+    container_name: datahub_api
     env_file: .env
     build:
       dockerfile: ./docker/datahub/Dockerfile
       context: ./../../
     depends_on:
-      - postgres_psw
+      - datahub_db
     networks:
-      - net_datahub
+      - datahub_net
     ports:
       - "5000:5000"
       - "8000:8000"
     restart: unless-stopped
 
-  memcached_psw:
-    container_name: limiter_psw
+  datahub_limiter:
+    container_name: datahub_limiter
     image: memcached:latest
     networks:
-      - net_datahub
+      - datahub_net
     ports:
       - "11211:11211"
     restart: unless-stopped
 
-  postgres_psw:
-    container_name: db_psw
+  datahub_db:
+    container_name: datahub_db
     image: postgis/postgis:14-3.3
     env_file: .env
     volumes:
       - ./initdb.sh:/docker-entrypoint-initdb.d/initdb.sh
     networks:
-      - net_datahub
+      - datahub_net
     ports:
       - "5432:5432"
     restart: unless-stopped
 
 networks:
-  net_datahub:
+  datahub_net:
