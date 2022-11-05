@@ -203,7 +203,7 @@ def unstrict_literal_eval(string):
 
 
 def load_dataframe_from_file(file_path):
-    dataframe = pd.DataFrame.from_csv(file_path)
+    dataframe = pd.read_csv(file_path)
     return dataframe.applymap(unstrict_literal_eval)
 
 
