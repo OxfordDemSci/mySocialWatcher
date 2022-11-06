@@ -78,7 +78,7 @@ if __name__ == '__main__':
 
             specs['languages'] = [None]
 
-            file_out = os.path.join(specs_dir, 'specs' + str(i_count) + '.json')
+            file_out = os.path.join(specs_dir, 'specs' + str(i_count).zfill(3) + '.json')
             with open(file_out, "w") as f:
                 f.write(json.dumps(specs))
 
@@ -87,6 +87,6 @@ if __name__ == '__main__':
 
             specs['languages'] = [{'name': 'Russian', 'values': [17]}]
 
-            file_out = os.path.join(specs_dir, 'specs' + str(i_count) + '.json')
+            file_out = os.path.join(specs_dir, 'specs' + str(i_count).zfill(3) + '.json')
             with open(file_out, "w") as f:
                 f.write(json.dumps(specs))

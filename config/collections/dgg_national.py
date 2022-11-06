@@ -64,13 +64,13 @@ if __name__ == '__main__':
     # facebook
     specs["publisher_platforms"] = ['facebook']
 
-    file_out = os.path.join(specs_dir, 'specs1.json')
+    file_out = os.path.join(specs_dir, 'specs001.json')
     with open(file_out, "w") as f:
         f.write(json.dumps(specs))
 
     # instagram
     specs["publisher_platforms"] = ['instagram']
 
-    file_out = os.path.join(specs_dir, 'specs2.json')
+    file_out = os.path.join(specs_dir, 'specs002.json')
     with open(file_out, "w") as f:
         f.write(json.dumps(specs))

@@ -69,6 +69,6 @@ if __name__ == '__main__':
     pass
 
     # write json to file
-    file_out = os.path.join(specs_dir, 'specs1.json')
+    file_out = os.path.join(specs_dir, 'specs001.json')
     with open(file_out, "w") as f:
         f.write(json.dumps(specs))

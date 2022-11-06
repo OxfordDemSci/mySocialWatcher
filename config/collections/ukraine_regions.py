@@ -62,7 +62,7 @@ if __name__ == '__main__':
     specs['languages'] = [None]
 
     # write to file
-    file_out = os.path.join(specs_dir, 'specs1.json')
+    file_out = os.path.join(specs_dir, 'specs001.json')
     with open(file_out, "w") as f:
         f.write(json.dumps(specs))
 
@@ -71,7 +71,7 @@ if __name__ == '__main__':
     specs['languages'] = [{'name': 'Ukrainian', 'values': [52]}]
 
     # write to file
-    file_out = os.path.join(specs_dir, 'specs2.json')
+    file_out = os.path.join(specs_dir, 'specs002.json')
     with open(file_out, "w") as f:
         f.write(json.dumps(specs))
 
@@ -80,7 +80,7 @@ if __name__ == '__main__':
     specs['languages'] = [{'name': 'Russian', 'values': [17]}]
 
     # write to file
-    file_out = os.path.join(specs_dir, 'specs3.json')
+    file_out = os.path.join(specs_dir, 'specs003.json')
     with open(file_out, "w") as f:
         f.write(json.dumps(specs))
 
@@ -91,6 +91,6 @@ if __name__ == '__main__':
         specs['geo_locations'][i]['location_types'] = [['home', 'recent']]
 
     # write to file
-    file_out = os.path.join(specs_dir, 'specs4.json')
+    file_out = os.path.join(specs_dir, 'specs004.json')
     with open(file_out, "w") as f:
         f.write(json.dumps(specs))

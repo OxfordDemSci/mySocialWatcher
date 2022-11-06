@@ -1,10 +1,6 @@
-import os
-import requests
-import json
 import gzip
-import math
 import pandas as pd
-from ast import literal_eval
+from pysocialwatcher.json_builder import JSONBuilder, AgeList, Age, Genders, LocationList, Location
 
 
 def gunzip(source_filepath, dest_filepath, block_size=65536):
