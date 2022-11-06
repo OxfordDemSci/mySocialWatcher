@@ -1,11 +1,14 @@
 import os
-import sys
 import requests
 import json
 import math
 import pandas as pd
 from ast import literal_eval
+from dotenv import load_dotenv
 
+# environment variables
+load_dotenv()
+load_dotenv('./config/private/collector.env')
 
 
 def country_from_geo(geo):
@@ -29,8 +32,9 @@ def country_from_geo(geo):
     return list(set(country))
 
 
-def submit_psw_csv(filename, token, valid=False,
-                   url='http://10.131.129.27/api/v1/social_media_audience/write'):
+def submit_psw_csv(filename, token,
+                   valid=False,
+                   url='http://127.0.0.1/api/v1/social_media_audience/write'):
     """Submit pysocialwatcher csv to /api/v1/fb/write"""
 
     # load data
@@ -121,24 +125,41 @@ def submit_psw_csv(filename, token, valid=False,
     return result
 
 
-def crawler(crawl_dir):
+def crawler(crawl_dir, token,
+            url='http://127.0.0.1/api/v1/social_media_audience/write'):
     # crawl_dir = 'data/_test'
 
-    for collection in os.listdir(crawl_dir):
-        for fname in os.listdir(os.path.join(crawl_dir, collection, 'finished')):
+    # file list
+    file_list = []
+    for (root, dirs, file) in os.walk(crawl_dir):
+        for f in file:
+            full_path = os.path.join(root, f)
+            if "finished/dataframe_collected_finished_" in full_path and os.path.splitext(f)[1] == '.csv':
+                file_list.append(full_path)
+        for f in file:
+            if "collecting/dataframe_collecting_" in full_path and os.path.splitext(f)[1] == '.csv':
+                file_list.append(full_path)
 
-            # write collection to SQL via API
-            response = submit_psw_csv(
-                filename=os.path.join(crawl_dir, collection, 'finished', fname),
-                url=os.environ.get('API_URL'),
-                token=os.environ.get('API_TOKEN'),
-                valid=True)
+    for file in file_list:
 
-            timestamp = fname.replace('dataframe_collected_finished_', '').replace('.csv', '')
+        # write collection to SQL via API
+        response = submit_psw_csv(
+            filename=file,
+            url=url,
+            token=token,
+            valid=True)
 
-            # save API responses
-            response.to_csv(os.path.join('data', 'logs', str(timestamp) + '_sql.csv'))
+        collect_info = os.path.basename(file).\
+            replace('dataframe_collecting_', '').\
+            replace('dataframe_collected_finished_', '').\
+            replace('.csv', '')
+
+        # save API responses
+        response.to_csv(os.path.join('data', 'logs', collect_info + '_api.csv'))
 
 
 if __name__ == "__main__":
-    crawler()
+
+    crawler(crawl_dir='./data',
+            token=os.environ.get('API_TOKEN'),
+            url=os.environ.get('API_URL'))

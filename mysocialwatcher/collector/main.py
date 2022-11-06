@@ -1,12 +1,8 @@
-import sys
 import os
 import logging
 from time import sleep
 from datetime import datetime, timedelta
-from dotenv import load_dotenv
 
-# environment variables
-load_dotenv()
 
 if __name__ == '__main__':
 
@@ -24,8 +20,11 @@ if __name__ == '__main__':
 
             specs_filepath = os.path.abspath(os.path.join('specs', file))
 
-            if specs_filepath is None or not specs_filepath.endswith('.json'):
-                raise Exception('Error: No collection specs could be found.')
+            if specs_filepath is None:
+                raise Exception('Error: Specs filepath is non-existent.')
+            elif not specs_filepath.endswith('.json'):
+                logger.warning(f'Skipping specs ({specs_filepath}) that do not have a .json file extension.')
+                next
 
             specs_name = os.path.splitext(os.path.basename(specs_filepath))[0]
 
@@ -108,6 +107,7 @@ if __name__ == '__main__':
             except:
                 logger.error('An error occurred while collecting new data.', exc_info=True)
 
+    # Sleep until midnight if collection completed in less than 24 hours
     duration = datetime.now() - collection_start_time
     if duration < timedelta(hours=24):
         now = datetime.now()
