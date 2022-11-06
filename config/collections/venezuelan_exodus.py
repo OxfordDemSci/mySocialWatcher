@@ -1,21 +1,20 @@
 import os
 import shutil
-import json
 import pandas as pd
-from mysocialwatcher.collector.specs import multicountry_specs
 
-# virtual machine and collection names
-vm = 'saffron'
-collection = 'ukraine_countries'
+# virtual machine and collection
+vm = 'mingo'
+collection = 'venezuelan_exodus'
 
 
 if __name__ == '__main__':
 
     # ---- paths ---- #
     master_credentials_path = os.path.join('config', 'private', 'credentials_master.csv')
-    specs_template_path = None
+    specs_template_path = os.path.join('config', 'specs', 'examples', 'venezuelan_exodus.json')
     env_template_path = os.path.join('config', 'private', 'collector.env')
-    cron_template_path = os.path.join('config', 'cron', 'weekly')
+    cron_template_path = os.path.join('config', 'cron', 'monthly')
+
     out_dir = os.path.join('docker', 'collectors', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
 
@@ -23,7 +22,7 @@ if __name__ == '__main__':
     shutil.copy(src=env_template_path,
                 dst=os.path.join(out_dir, '.env'))
 
-    env_lines = ['FREQUENCY=7']
+    env_lines = ['FREQUENCY=45']
     with open(os.path.join(out_dir, '.env'), 'a') as f:
         f.writelines(env_lines)
 
@@ -51,11 +50,6 @@ if __name__ == '__main__':
 
     # ---- collection specs ---- #
 
-    # countries
-    countries = ['UA', 'MD', 'RO', 'PL', 'HU', 'SK', 'BY', 'IT', 'CZ', 'DE', 'ES', 'PT', 'FR', 'GR', 'GB', 'BG', 'EE',
-                 'AT', 'LV', 'SE', 'BE', 'HR', 'DK', 'FI', 'IS', 'IE', 'LI', 'LT', 'LU', 'MT', 'NL', 'NO', 'SI', 'CH',
-                 'US']
-
     # output directory
     specs_dir = os.path.join(out_dir, 'specs')
     os.makedirs(specs_dir, exist_ok=True)
@@ -64,33 +58,6 @@ if __name__ == '__main__':
     for f in os.listdir(specs_dir):
         os.remove(os.path.join(specs_dir, f))
 
-    specs_template = multicountry_specs(countries=countries, name='ukraine_countries')
-
-    languages = [None,
-                 {'name': 'Ukrainian', 'values': [52]},
-                 {'name': 'Russian', 'values': [17]}]
-
-    location_types = ['recent',
-                      'home',
-                      'travel_in',
-                      ['home', 'recent']]
-
-    i_count = 0
-    for location_type in location_types:
-        for language in languages:
-
-            i_count += 1
-
-            specs = specs_template
-
-            # language
-            specs['languages'] = [language]
-
-            # location types
-            for i in range(len(specs['geo_locations'])):
-                specs['geo_locations'][i]['location_types'] = [location_type]
-
-            # save json
-            file_out = os.path.join(specs_dir, 'specs' + str(i_count).zfill(3) + '.json')
-            with open(file_out, "w") as f:
-                f.write(json.dumps(specs))
+    # specs json
+    shutil.copyfile(src=specs_template_path,
+                    dst=os.path.join(specs_dir, os.path.basename(specs_template_path)))

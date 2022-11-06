@@ -1,0 +1,26 @@
+# docker-compose to deploy multiple collectors
+version: '3.3'
+
+services:
+
+  venezuelan_exodus:
+    container_name: venezuelan_exodus
+    volumes:
+      - ./../../../data/mingo/venezuelan_exodus:/app/data
+    build:
+      args:
+        collection_dir: "./docker/collectors/mingo/venezuelan_exodus"
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: unless-stopped
+
+#  ukraine_qcri:
+#    container_name: ukraine_qcri
+#    volumes:
+#      - ./../../../data/mingo/ukraine_qcri:/app/data
+#    build:
+#      args:
+#        collection_dir: "./docker/collectors/mingo/ukraine_qcri"
+#      context: ./../../../
+#      dockerfile: ./docker/collectors/Dockerfile
+#    restart: unless-stopped

@@ -1,0 +1,176 @@
+{
+  "name": "Ukraine subnational collection - RECENT - Part: 0",
+  "publisher_platforms": [
+    "facebook"
+  ],
+  "geo_locations": [
+    {
+      "name": "countries",
+      "values": [
+        "UA"
+      ],
+      "location_types": [
+        "recent"
+      ],
+      "pySocialWatcherReference": "Ukraine"
+    }
+  ],
+  "genders": [
+    0,
+    1,
+    2
+  ],
+  "ages_ranges": [
+    {
+      "min": 18
+    },
+    {
+      "min": 18,
+      "max": 24
+    },
+    {
+      "min": 25,
+      "max": 44
+    },
+    {
+      "min": 45
+    }
+  ],
+  "languages": [
+    null,
+    {
+      "name": "Ukrainian",
+      "values": [
+        52
+      ]
+    },
+    {
+      "name": "Russian",
+      "values": [
+        17
+      ]
+    }
+  ],
+  "life_events": [
+    null,
+    {
+      "or": [
+        6003053860372,
+        6003053857372
+      ],
+      "name": "Away_from_hometown_OR_family"
+    }
+  ],
+  "target_groups": [
+    {
+      "behavior": {
+        "access_device": [
+          null,
+          {
+            "or": [
+              6004386044572
+            ],
+            "name": "Android"
+          },
+          {
+            "or": [
+              6004384041172
+            ],
+            "name": "iOS"
+          },
+          {
+            "not": [
+              6004384041172,
+              6004386044572
+            ],
+            "name": "Other"
+          }
+        ]
+      }
+    },
+    {
+      "scholarities": [
+        {
+          "name": "Some_type_of_university_degree",
+          "or": [
+            3,
+            7,
+            8,
+            9,
+            11
+          ]
+        },
+        {
+          "name": "declared_but_not_a_university_degree",
+          "or": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            10,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "genders": [
+        0
+      ],
+      "ages_ranges": [
+        {
+          "min": 18
+        }
+      ],
+      "family_statuses": [
+        {
+          "name": "Parents_(All)",
+          "or": [
+            6002714398372
+          ]
+        },
+        {
+          "name": "Parents_with_young_children",
+          "or": [
+            6023005372383,
+            6023005458383,
+            6023005529383
+          ]
+        }
+      ]
+    },
+    {
+      "genders": [
+        0
+      ],
+      "ages_ranges": [
+        {
+          "min": 18
+        }
+      ],
+      "behavior": {
+        "access_device": [
+          {
+            "or": [
+              6017253511583
+            ],
+            "name": "FB_access_network_3G"
+          },
+          {
+            "or": [
+              6017253531383
+            ],
+            "name": "FB_access_network_4G"
+          },
+          {
+            "or": [
+              6015235495383
+            ],
+            "name": "FB_access_network_WiFi"
+          }
+        ]
+      }
+    }
+  ]
+}

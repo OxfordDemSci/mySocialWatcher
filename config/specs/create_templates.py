@@ -1,6 +1,6 @@
 import os
 import json
-from mysocialwatcher.specs.utils import master_specs
+from mysocialwatcher.collector.specs import master_specs
 from pysocialwatcher import watcherAPI
 
 

@@ -22,6 +22,10 @@ if __name__ == '__main__':
     shutil.copy(src=env_template_path,
                 dst=os.path.join(out_dir, '.env'))
 
+    env_lines = ['FREQUENCY=7']
+    with open(os.path.join(out_dir, '.env'), 'a') as f:
+        f.writelines(env_lines)
+
     # ---- cron ---- #
     shutil.copy(src=cron_template_path,
                 dst=os.path.join(out_dir, 'cronjob'))

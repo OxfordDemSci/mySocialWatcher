@@ -2,7 +2,7 @@ import os
 import shutil
 import json
 import pandas as pd
-from mysocialwatcher.collector.utils import dgg_specs
+from mysocialwatcher.collector.specs import dgg_specs
 
 # virtual machine and collection
 vm = 'badger'
@@ -22,6 +22,10 @@ if __name__ == '__main__':
     # ---- environment ---- #
     shutil.copy(src=env_template_path,
                 dst=os.path.join(out_dir, '.env'))
+
+    env_lines = ['FREQUENCY=2']
+    with open(os.path.join(out_dir, '.env'), 'a') as f:
+        f.writelines(env_lines)
 
     # ---- cron ---- #
     shutil.copy(src=cron_template_path,
