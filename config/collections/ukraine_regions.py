@@ -53,6 +53,7 @@ if __name__ == '__main__':
     # template json
     with open(specs_template_path) as f:
         specs = json.load(f)
+    specs['name'] = collection
 
     # cleanup old specs
     for f in os.listdir(specs_dir):

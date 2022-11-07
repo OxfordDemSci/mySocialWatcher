@@ -65,8 +65,9 @@ if __name__ == '__main__':
     with open(country_specs_template_path) as f:
         specs = json.load(f)
 
-    # modify template json (no modification shown here)
-    pass
+    # modify template json
+    # (no modification shown here other than defining the name of the collection)
+    specs['name'] = collection
 
     # write json to file
     file_out = os.path.join(specs_dir, 'specs001.json')

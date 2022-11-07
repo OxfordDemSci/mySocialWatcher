@@ -66,6 +66,7 @@ if __name__ == '__main__':
         # template json
         with open(country_specs_template_path) as f:
             specs = json.load(f)
+        specs['name'] = collection
 
         # 10-year age classes
         specs['ages_ranges'] = [[13, None], [18, None], [20, None], [60, None], [65, None],

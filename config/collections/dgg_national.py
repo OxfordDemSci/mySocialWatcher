@@ -61,6 +61,7 @@ if __name__ == '__main__':
 
     # specs json
     specs = dgg_specs()
+    specs['name'] = collection
 
     # drop Russia
     specs['geo_locations'] = [i for i in specs.get('geo_locations') if 'RU' not in i.get('values')]

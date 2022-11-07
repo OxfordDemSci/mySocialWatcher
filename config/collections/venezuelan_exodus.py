@@ -1,4 +1,5 @@
 import os
+import json
 import shutil
 import pandas as pd
 
@@ -58,6 +59,16 @@ if __name__ == '__main__':
     for f in os.listdir(specs_dir):
         os.remove(os.path.join(specs_dir, f))
 
-    # specs json
-    shutil.copyfile(src=specs_template_path,
-                    dst=os.path.join(specs_dir, os.path.basename(specs_template_path)))
+    # load template json
+    with open(specs_template_path) as f:
+        specs = json.load(f)
+
+    # modify template json
+    # (no modification shown here other than defining the name of the collection)
+    specs['name'] = collection
+
+    # write json to file
+    file_out = os.path.join(specs_dir, os.path.basename(specs_template_path))
+    with open(file_out, "w") as f:
+        f.write(json.dumps(specs))
+

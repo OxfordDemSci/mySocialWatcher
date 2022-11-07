@@ -65,6 +65,7 @@ if __name__ == '__main__':
         os.remove(os.path.join(specs_dir, f))
 
     specs_template = multicountry_specs(countries=countries, name='ukraine_countries')
+    specs_template['name'] = collection
 
     languages = [None,
                  {'name': 'Ukrainian', 'values': [52]},

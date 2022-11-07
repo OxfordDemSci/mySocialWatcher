@@ -69,6 +69,7 @@ if __name__ == '__main__':
             # template json
             with open(country_specs_template_path) as f:
                 specs = json.load(f)
+            specs['name'] = collection
 
             # location types
             for i in range(len(specs['geo_locations'])):
