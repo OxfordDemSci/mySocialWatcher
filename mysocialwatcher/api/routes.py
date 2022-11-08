@@ -1,8 +1,12 @@
+import os
 from flask import request, current_app, jsonify
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from mysocialwatcher.api import app, endpoints
+from dotenv import load_dotenv
 
+load_dotenv()
+limiter_host = os.environ.get('LIMITER_HOST')
 
 # define rate limiting
 limiter = Limiter(app,
@@ -10,7 +14,7 @@ limiter = Limiter(app,
                   # application_limits=['60/minute', '1000/hour', '10000/day'],
                   default_limits=['60/minute', '1000/hour', '10000/day'],
                   strategy='fixed-window-elastic-expiry',
-                  storage_uri="memcached://memcached_psw:11211",
+                  storage_uri="memcached://" + limiter_host + ":11211",
                   storage_options={}
                   )
 
@@ -39,6 +43,7 @@ def fb_query():
 
 
 @app.route('/social_media_audience/write', methods=['GET'])
+@limiter.exempt()
 def fb_write():
     """API endpoint to insert data into the 'social_media_audience' database."""
     args = dict(request.args)

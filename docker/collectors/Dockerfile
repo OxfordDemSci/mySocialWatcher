@@ -19,11 +19,12 @@ RUN chmod 0744 ./utils/launch.sh
 RUN chmod 0744 ./utils/cleanup.sh
 
 # collection config
-ARG collection_dir=${collection_dir}
-COPY $collection_dir/credentials.csv credentials.csv
-COPY $collection_dir/.env .env
-COPY $collection_dir/specs specs
+RUN ln -s in/.env .env
+RUN ln -s in/credentials.csv credentials.csv
+RUN ln -s in/specs specs
 
 # commmand
 ENTRYPOINT ["/bin/sh", "-c"]
 CMD ["./utils/launch.sh"]
+
+#CMD ["tail", "-f", "/dev/null"]

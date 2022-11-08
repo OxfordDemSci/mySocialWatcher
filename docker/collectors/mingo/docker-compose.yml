@@ -6,10 +6,9 @@ services:
   venezuelan_exodus:
     container_name: venezuelan_exodus
     volumes:
+      - ./venezuelan_exodus:/app/in
       - ./../../../data/mingo/venezuelan_exodus:/app/data
     build:
-      args:
-        collection_dir: "./docker/collectors/mingo/venezuelan_exodus"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: unless-stopped
@@ -17,6 +16,7 @@ services:
 #  ukraine_qcri:
 #    container_name: ukraine_qcri
 #    volumes:
+#      - ./ukraine_qcri:/app/in
 #      - ./../../../data/mingo/ukraine_qcri:/app/data
 #    build:
 #      args:

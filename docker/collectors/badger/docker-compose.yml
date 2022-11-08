@@ -6,10 +6,9 @@ services:
   dgg_national:
     container_name: dgg_national
     volumes:
+      - ./dgg_national:/app/in
       - ./../../../data/badger/dgg_national:/app/data
     build:
-      args:
-        collection_dir: "./docker/collectors/badger/dgg_national"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: unless-stopped

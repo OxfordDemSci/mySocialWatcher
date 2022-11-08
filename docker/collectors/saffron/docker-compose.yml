@@ -6,10 +6,9 @@ services:
   ukraine_regions:
     container_name: ukraine_regions
     volumes:
+      - ./ukraine_regions:/app/in
       - ./../../../data/saffron/ukraine_regions:/app/data
     build:
-      args:
-        collection_dir: "./docker/collectors/saffron/ukraine_regions"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: unless-stopped
@@ -17,10 +16,9 @@ services:
   ukraine_neighbours1:
     container_name: ukraine_neighbours1
     volumes:
+      - ./ukraine_neighbours1:/app/in
       - ./../../../data/saffron/ukraine_neighbours1:/app/data
     build:
-      args:
-        collection_dir: "./docker/collectors/saffron/ukraine_neighbours1"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: unless-stopped
@@ -28,10 +26,9 @@ services:
   ukraine_neighbours2:
     container_name: ukraine_neighbours2
     volumes:
+      - ./ukraine_neighbours2:/app/in
       - ./../../../data/saffron/ukraine_neighbours2:/app/data
     build:
-      args:
-        collection_dir: "./docker/collectors/saffron/ukraine_neighbours2"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: unless-stopped
@@ -39,10 +36,9 @@ services:
   ukraine_language:
     container_name: ukraine_language
     volumes:
+      - ./ukraine_language:/app/in
       - ./../../../data/saffron/ukraine_language:/app/data
     build:
-      args:
-        collection_dir: "./docker/collectors/saffron/ukraine_language"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: unless-stopped
@@ -50,10 +46,9 @@ services:
   ukraine_europe:
     container_name: ukraine_europe
     volumes:
+      - ./ukraine_europe:/app/in
       - ./../../../data/saffron/ukraine_europe:/app/data
     build:
-      args:
-        collection_dir: "./docker/collectors/saffron/ukraine_europe"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: unless-stopped
@@ -61,10 +56,9 @@ services:
   ukraine_countries:
     container_name: ukraine_countries
     volumes:
+      - ./ukraine_countries:/app/in
       - ./../../../data/saffron/ukraine_countries:/app/data
     build:
-      args:
-        collection_dir: "./docker/collectors/saffron/ukraine_countries"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: unless-stopped

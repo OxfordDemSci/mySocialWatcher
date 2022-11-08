@@ -73,9 +73,9 @@ if __name__ == '__main__':
     with open(file_out, "w") as f:
         f.write(json.dumps(specs))
 
-    # instagram
-    specs["publisher_platforms"] = ['instagram']
-
-    file_out = os.path.join(specs_dir, 'specs002.json')
-    with open(file_out, "w") as f:
-        f.write(json.dumps(specs))
+    # # instagram
+    # specs["publisher_platforms"] = ['instagram']
+    #
+    # file_out = os.path.join(specs_dir, 'specs002.json')
+    # with open(file_out, "w") as f:
+    #     f.write(json.dumps(specs))

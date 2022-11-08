@@ -89,7 +89,7 @@ if __name__ == '__main__':
     # ---- All languages ['home', 'recent']----#
     specs['languages'] = [None]
     for i in range(len(specs.get('geo_locations'))):
-        specs['geo_locations'][i]['location_types'] = [['home', 'recent']]
+        specs['geo_locations'][i]['location_types'] = ['home', 'recent']
 
     # write to file
     file_out = os.path.join(specs_dir, 'specs004.json')

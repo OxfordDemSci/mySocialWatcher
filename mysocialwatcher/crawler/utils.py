@@ -4,11 +4,6 @@ import json
 import math
 import pandas as pd
 from ast import literal_eval
-from dotenv import load_dotenv
-
-# environment variables
-load_dotenv()
-load_dotenv('./config/private/collector.env')
 
 
 def country_from_geo(geo):
@@ -43,6 +38,9 @@ def submit_psw_csv(filename, token,
     for index in range(len(dat)):
 
         row = dat.iloc[index]
+
+        # ---- collection ---- #
+        collection_name = filename.split('/')[-3].strip('_')
 
         # ---- platform ---- #
         platform = literal_eval(row['publisher_platforms'])
@@ -82,6 +80,7 @@ def submit_psw_csv(filename, token,
 
         # prepare API arguments
         args = {'valid': valid,
+                'collection': collection_name,
                 'token': token,
                 'platform': platform,
                 'country': country,
@@ -125,7 +124,7 @@ def submit_psw_csv(filename, token,
     return result
 
 
-def crawler(crawl_dir, token,
+def crawler(crawl_dir, token, temporary_files=False,
             url='http://127.0.0.1/api/v1/social_media_audience/write'):
     # crawl_dir = 'data/_test'
 
@@ -136,11 +135,14 @@ def crawler(crawl_dir, token,
             full_path = os.path.join(root, f)
             if "finished/dataframe_collected_finished_" in full_path and os.path.splitext(f)[1] == '.csv':
                 file_list.append(full_path)
-        for f in file:
-            if "collecting/dataframe_collecting_" in full_path and os.path.splitext(f)[1] == '.csv':
-                file_list.append(full_path)
+        if temporary_files:
+            for f in file:
+                if "collecting/dataframe_collecting_" in full_path and os.path.splitext(f)[1] == '.csv':
+                    file_list.append(full_path)
 
     for file in file_list:
+        # file = file_list[1]
+        print(file)
 
         # write collection to SQL via API
         response = submit_psw_csv(
@@ -149,17 +151,5 @@ def crawler(crawl_dir, token,
             token=token,
             valid=True)
 
-        collect_info = os.path.basename(file).\
-            replace('dataframe_collecting_', '').\
-            replace('dataframe_collected_finished_', '').\
-            replace('.csv', '')
-
         # save API responses
-        response.to_csv(os.path.join('data', 'logs', collect_info + '_api.csv'))
-
-
-if __name__ == "__main__":
-
-    crawler(crawl_dir='./data',
-            token=os.environ.get('API_TOKEN'),
-            url=os.environ.get('API_URL'))
+        # response.to_csv(file.replace('.csv', '_dblog.csv'))

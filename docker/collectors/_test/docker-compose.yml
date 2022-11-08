@@ -17,10 +17,12 @@ services:
   test:
     container_name: test
     volumes:
+      - ./_test:/app/in
       - ./../../../data/_test/_test:/app/data
     build:
+      context: ./../../../
       args:
         collection_dir: "./docker/collectors/_test/_test"
-      context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
+
     restart: on-failure
