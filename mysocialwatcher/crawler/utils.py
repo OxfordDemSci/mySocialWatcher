@@ -2,6 +2,9 @@ import os
 import requests
 import json
 import math
+import datetime
+import warnings
+from time import sleep
 import pandas as pd
 from ast import literal_eval
 
@@ -27,20 +30,15 @@ def country_from_geo(geo):
     return list(set(country))
 
 
-def submit_psw_csv(filename, token,
-                   valid=False,
-                   url='http://127.0.0.1/api/v1/social_media_audience/write'):
+def psw_to_sql(df, collection_name, token,
+               valid=False,
+               url='http://127.0.0.1/api/v1/social_media_audience/write'):
     """Submit pysocialwatcher csv to /api/v1/fb/write"""
 
-    # load data
-    dat = pd.read_csv(filename)
+    for index in range(len(df)):
+        # index = 0
 
-    for index in range(len(dat)):
-
-        row = dat.iloc[index]
-
-        # ---- collection ---- #
-        collection_name = filename.split('/')[-3].strip('_')
+        row = df.iloc[index]
 
         # ---- platform ---- #
         platform = literal_eval(row['publisher_platforms'])
@@ -73,12 +71,21 @@ def submit_psw_csv(filename, token,
         if len(country) == 1:
             country = country[0]
         else:
-            dat.loc[index, 'row_index'] = index
-            dat.loc[index, 'status'] = 400
-            dat.loc[index, 'message'] = 'Bad Request: Could not identify a single country.'
+            df.loc[index, 'row_index'] = index
+            df.loc[index, 'status'] = 400
+            df.loc[index, 'message'] = 'Bad Request: Could not identify a single country.'
             next
 
-        # prepare API arguments
+        # ---- age ---- #
+        ages_ranges = literal_eval(row.get('ages_ranges'))
+        if isinstance(ages_ranges, dict):
+            age_min = ages_ranges.get('min')
+            age_max = ages_ranges.get('max')
+        elif isinstance(ages_ranges, list):
+            age_min = ages_ranges[0]
+            age_max = ages_ranges[1]
+
+        # ---- prepare API arguments ---- #
         args = {'valid': valid,
                 'collection': collection_name,
                 'token': token,
@@ -86,8 +93,8 @@ def submit_psw_csv(filename, token,
                 'country': country,
                 'timestamp': row.get('timestamp'),
                 'gender': row.get('genders'),
-                'age_min': all_fields.get('ages_ranges').get('min'),
-                'age_max': all_fields.get('ages_ranges').get('max'),
+                'age_min': age_min,
+                'age_max': age_max,
                 'dau': row.get('dau_audience'),
                 'mau': row.get('mau_audience'),
                 'mau_upper': row.get('mau_audience_upper_bound'),
@@ -109,47 +116,86 @@ def submit_psw_csv(filename, token,
             del args[i]
 
         # submit api request
-        response = requests.get(url=url, params=args)
-        response = literal_eval(json.dumps(response.json()))
+        try:
+            response = requests.get(url=url, params=args)
+            response = literal_eval(json.dumps(response.json()))
 
-        # format results
-        dat.loc[index, 'row_index'] = int(index)
-        dat.loc[index, 'timestamp'] = response.get('timestamp')
-        dat.loc[index, 'status'] = int(response.get('status'))
-        dat.loc[index, 'message'] = response.get('message')
+            df.loc[index, 'timestamp_api'] = response.get('timestamp')
+            df.loc[index, 'status_api'] = int(response.get('status'))
+            df.loc[index, 'message_api'] = response.get('message')
+
+        except Exception as e:
+            warnings.warn(str(e))
+            df.loc[index, 'timestamp_api'] = str(datetime.datetime.now())
+            df.loc[index, 'status_api'] = 500
+            df.loc[index, 'message_api'] = str(e)
 
     # return result
-    result = dat[['row_index', 'timestamp', 'status', 'message']]
+    # return df[['timestamp_api', 'status_api', 'message_api']]
+    return df
 
-    return result
+
+def governor(func, hours=1):
+    def wrapper(*args, **kwargs):
+        start_time = datetime.datetime.now()
+
+        func(*args, **kwargs)
+
+        # sleep if crawl was less than an hour
+        time_diff = datetime.datetime.now() - start_time
+        sleep_time = datetime.timedelta(hours=hours) - time_diff
+        if sleep_time.seconds > 0:
+            print('[' + str(datetime.datetime.now()) + '] Sleeping for ' + str(sleep_time))
+            sleep(sleep_time.seconds)
+
+    return wrapper
 
 
-def crawler(crawl_dir, token, temporary_files=False,
-            url='http://127.0.0.1/api/v1/social_media_audience/write'):
+@governor
+def crawler(data_dir, token, url='http://127.0.0.1/api/v1/social_media_audience/write'):
     # crawl_dir = 'data/_test'
+
+    print('-----------------------------')
+    print('[' + str(datetime.datetime.now()) + '] Starting crawler...')
+
+    data_dir = os.path.abspath(data_dir.rstrip('/'))
+    crawl_dir = os.path.join(data_dir, 'crawler')
+    os.makedirs(crawl_dir, exist_ok=True)
 
     # file list
     file_list = []
-    for (root, dirs, file) in os.walk(crawl_dir):
+    for (root, dirs, file) in os.walk(data_dir):
         for f in file:
             full_path = os.path.join(root, f)
             if "finished/dataframe_collected_finished_" in full_path and os.path.splitext(f)[1] == '.csv':
                 file_list.append(full_path)
-        if temporary_files:
-            for f in file:
-                if "collecting/dataframe_collecting_" in full_path and os.path.splitext(f)[1] == '.csv':
-                    file_list.append(full_path)
 
+    # ---- finished ---- #
     for file in file_list:
-        # file = file_list[1]
-        print(file)
+        # file = file_list[0]
+        # file = './data/_test/_test/finished/dataframe_collected_finished_specs001_20221106.csv'
 
-        # write collection to SQL via API
-        response = submit_psw_csv(
-            filename=file,
-            url=url,
-            token=token,
-            valid=True)
+        out_path = file.replace(data_dir, crawl_dir) + '.gz'
+        os.makedirs(os.path.dirname(out_path), exist_ok=True)
 
-        # save API responses
-        # response.to_csv(file.replace('.csv', '_dblog.csv'))
+        if not os.path.exists(out_path):
+
+            print('[' + str(datetime.datetime.now()) + '] ' + file)
+
+            # load data
+            df = pd.read_csv(file)
+            collection_name = file.split('/')[-3].lstrip('_')
+
+            # write collection to SQL via API
+            response = psw_to_sql(
+                df=df,
+                collection_name=collection_name,
+                url=url,
+                token=token,
+                valid=True)
+
+            # save compressed data and API responses
+            response.to_csv(out_path, compression='gzip')
+
+    print('[' + str(datetime.datetime.now()) + '] Crawler finished.')
+
