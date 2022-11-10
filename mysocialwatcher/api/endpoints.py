@@ -1,3 +1,5 @@
+import sqlalchemy.exc
+
 from mysocialwatcher.api.utils import *
 
 
@@ -28,8 +30,11 @@ def query_fun(args):
 
     if status == 200:
 
+        # connect to database
+        conn = conn_to_database()
+
         # validate token
-        result = validate_token(token=args.get('token'))
+        result = validate_token(token=args.get('token'), conn=conn)
 
         status = result.get('status')
         if status == 200:
@@ -41,7 +46,7 @@ def query_fun(args):
     if status == 200:
 
         # list query columns
-        cols = ['id', 'collection', 'contributor_id', 'contributed_on', 'country', 'geo_locations',
+        cols = ['id', 'collection_id', 'contributor_id', 'contributed_on', 'country', 'geo_locations',
                 'date', 'timestamp', 'gender', 'age_min', 'age_max',
                 'dau',  'mau', 'mau_lower', 'mau_upper', 'all_fields', 'targeting', 'response']
 
@@ -57,7 +62,7 @@ def query_fun(args):
 
         # create sql query
         sql = "SELECT " + ','.join(cols) + " FROM " + table + " WHERE "
-        for i in set(args.keys()).intersection(['contributor_id', 'platform', 'country', 'gender', 'age_min', 'age_max']):
+        for i in set(args.keys()).intersection(['collection_id', 'contributor_id', 'platform', 'country', 'gender', 'age_min', 'age_max']):
             sql +=  i + '=' + str(args.get(i)) + ' AND '
         if 'date_start' in args.keys():
             sql += "date >= " + str(args.get('date_start')) + " AND "
@@ -67,15 +72,14 @@ def query_fun(args):
 
         # query database
         try:
-            conn = conn_to_database()
             data = pd.read_sql(sql, conn)
             data = data.to_json()
             message = 'OK: Data successfully selected from database.'
 
         except Exception as e:
-
-            status = 500
-            message = 'Internal Server Error: PostgreSQL error ' + str(e)
+            exc = e.__dict__
+            status = exc.get('code')
+            message = exc.get('orig')
 
     # return result
     return {"status": status, "message": message, "timestamp": timestr(), "data": data}
@@ -141,14 +145,17 @@ def write_fun(args):
 
         # query database
         try:
-
             result = conn.execute(sql)
             message = 'OK: Data successfully written into database.'
 
-        except Exception as e:
-
-            status = 500
-            message = 'Internal Server Error: PostgreSQL error ' + str(e)
+        except sqlalchemy.exc.SQLAlchemyError as e:
+            # exc = e
+            if isinstance(e, sqlalchemy.exc.IntegrityError) and isinstance(e.orig, psycopg2.errors.UniqueViolation):
+                status = 409
+                message = '(sqlalchemy code: ' + str(e.code) + ') Conflict: Data already in database with UNIQUE constraint. '
+            else:
+                status = e.code
+                message = e._message()
 
         if status == 200 and 'invalid' in table:
             message += " Written with flag 'valid=false' so data will not persist in database."

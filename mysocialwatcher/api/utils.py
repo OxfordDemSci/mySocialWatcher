@@ -2,7 +2,7 @@ import os
 import json
 import datetime
 import pandas as pd
-from sqlalchemy import create_engine
+import sqlalchemy, psycopg2
 from ast import literal_eval
 from dotenv import load_dotenv
 
@@ -18,7 +18,7 @@ def timestr():
 
 def conn_to_database():
 
-    conn = create_engine('postgresql+psycopg2://' + \
+    conn = sqlalchemy.create_engine('postgresql+psycopg2://' + \
                          'writer:' + \
                          postgres_wpass + '@' + \
                          postgres_host + ':' + \
