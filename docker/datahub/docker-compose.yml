@@ -26,7 +26,7 @@ services:
     depends_on:
       - datahub_db
     networks:
-      - datahub_net
+      - net
     ports:
       - "5000:5000"
       - "8000:8000"
@@ -36,7 +36,7 @@ services:
     container_name: datahub_limiter
     image: memcached:latest
     networks:
-      - datahub_net
+      - net
     ports:
       - "11211:11211"
     restart: unless-stopped
@@ -47,11 +47,12 @@ services:
     env_file: .env
     volumes:
       - ./initdb.sh:/docker-entrypoint-initdb.d/initdb.sh
+      - ./postgresql.conf:/etc/postgresql/postgresql.conf
     networks:
-      - datahub_net
+      - net
     ports:
       - "5432:5432"
     restart: unless-stopped
 
 networks:
-  datahub_net:
+  net:

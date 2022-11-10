@@ -34,8 +34,7 @@ GRANT USAGE,SELECT ON SEQUENCE contributors_id_seq TO writer, reader;
 
 INSERT INTO contributors (id, name, email)
 VALUES
-(1,'Zoe Alleyne Washburne','zoe.washburne@browncoats.mil'),
-(2,'Hoban Washburne','hoban.washburne@serenity.io');
+(1,'Doug Leasure','douglas.leasure@demography.ox.ac.uk')
 "
 
 # tokens
@@ -49,8 +48,7 @@ CREATE TABLE tokens (
 	created_on DATE NOT NULL DEFAULT CURRENT_DATE,
 	write BOOLEAN NOT NULL DEFAULT FALSE,
 	token VARCHAR(50) UNIQUE NOT NULL DEFAULT MD5(random()::text),
-	FOREIGN KEY(contributor_id) REFERENCES contributors(id),
-	UNIQUE(contributor_id)
+	UNIQUE(contributor_id, write)
 );
 GRANT SELECT ON tokens TO writer;
 GRANT USAGE,SELECT ON SEQUENCE tokens_id_seq TO writer, reader;
@@ -58,7 +56,7 @@ GRANT USAGE,SELECT ON SEQUENCE tokens_id_seq TO writer, reader;
 INSERT INTO tokens (contributor_id, write)
 VALUES
 (1, True),
-(2, False);
+(1, False);
 "
 
 #---------- data ----------#
