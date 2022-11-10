@@ -12,7 +12,7 @@ services:
       - "80:80"
       - "443:443"
     networks:
-      - datahub_net
+      - net
     depends_on:
       - datahub_api
     restart: unless-stopped

@@ -40,6 +40,11 @@ echo -e "\tIdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
 cd ~
 git clone github:OxfordDemSci/mySocialWatcher
 
+# copy private config files via ssh (run this command from local machine, not server)
+cd ~/git/OxfordDemSci/mySocialWatcher/config
+scp -r ./private psw_datahub:~/mySocialWatcher/config
+
 # deploy datahub (for example)
 cd ~/mySocialWatcher/docker/datahub
+cp ../../config/private/datahub.env .env
 docker-compose up -d --build
