@@ -3,24 +3,23 @@ version: '3.3'
 
 services:
 
-  venezuelan_exodus:
-    container_name: venezuelan_exodus
+  venezuelan_exodus1:
+    container_name: venezuelan_exodus1
     volumes:
-      - ./venezuelan_exodus:/app/in
-      - ./../../../data/mingo/venezuelan_exodus:/app/data
+      - ./venezuelan_exodus1:/app/in
+      - ./../../../data/mingo/venezuelan_exodus1:/app/data
     build:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: unless-stopped
 
-#  ukraine_qcri:
-#    container_name: ukraine_qcri
-#    volumes:
-#      - ./ukraine_qcri:/app/in
-#      - ./../../../data/mingo/ukraine_qcri:/app/data
-#    build:
-#      args:
-#        collection_dir: "./docker/collectors/mingo/ukraine_qcri"
-#      context: ./../../../
-#      dockerfile: ./docker/collectors/Dockerfile
-#    restart: unless-stopped
+  venezuelan_exodus2:
+    container_name: venezuelan_exodus2
+    volumes:
+      - ./venezuelan_exodus2:/app/in
+      - ./../../../data/mingo/venezuelan_exodus2:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: unless-stopped
+

@@ -41,7 +41,7 @@ if __name__ == '__main__':
     master_credentials = pd.read_csv(master_credentials_path)
 
     # filter vm and collection
-    credentials = master_credentials.loc[(master_credentials.vm == vm) & (master_credentials.collection == collection)]
+    credentials = master_credentials.loc[(master_credentials.vm == 'saffron') & (master_credentials.collection == 'ukraine_regions')]
 
     # save to csv
     credentials.to_csv(credentials_path,

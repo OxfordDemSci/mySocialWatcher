@@ -212,6 +212,7 @@ def save_response_in_dataframe(shared_queue_list, df):
         result_index = result_tuple[0]
         result_response = result_tuple[1]
         df.loc[result_index, "response"] = result_response
+        df.loc[result_index, "timestamp"] = str(time.time()).split(".")[0]
 
 
 def save_skeleton_dataframe(dataframe, output_dir=""):
@@ -236,9 +237,10 @@ def save_after_collecting_dataframe_without_full_response(dataframe, output_dir=
     dataframe.to_csv(output_dir + constants.DATAFRAME_AFTER_COLLECTION_FILE_NAME_WITHOUT_FULL_RESPONSE)
 
 
-def remove_temporary_dataframes():
-    for file in [constants.DATAFRAME_SKELETON_FILE_NAME, constants.DATAFRAME_TEMPORARY_COLLECTION_FILE_NAME]:
-        os.remove(file)
+def remove_temporary_dataframes(output_dir=""):
+    if os.path.exists(output_dir + constants.DATAFRAME_AFTER_COLLECTION_FILE_NAME):
+        for file in [constants.DATAFRAME_SKELETON_FILE_NAME, constants.DATAFRAME_TEMPORARY_COLLECTION_FILE_NAME]:
+            os.remove(output_dir + file)
 
 
 def print_warning(message):

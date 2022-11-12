@@ -2,6 +2,7 @@ import os
 import requests
 import json
 import math
+import shutil
 import datetime
 import warnings
 from time import sleep
@@ -71,9 +72,9 @@ def psw_to_sql(df, collection_name, token,
         if len(country) == 1:
             country = country[0]
         else:
-            df.loc[index, 'row_index'] = index
-            df.loc[index, 'status'] = 400
-            df.loc[index, 'message'] = 'Bad Request: Could not identify a single country.'
+            df.loc[index, 'timestamp_api'] = str(datetime.datetime.now())
+            df.loc[index, 'status_api'] = 400
+            df.loc[index, 'message_api'] = 'Bad Request: Could not identify a single country.'
             next
 
         # ---- age ---- #
@@ -131,8 +132,8 @@ def psw_to_sql(df, collection_name, token,
             df.loc[index, 'message_api'] = str(e)
 
     # return result
-    # return df[['timestamp_api', 'status_api', 'message_api']]
-    return df
+    return df[['timestamp_api', 'status_api', 'message_api']]
+    # return df
 
 
 def governor(func, hours=1):
@@ -165,17 +166,18 @@ def crawler(data_dir, token, url='http://127.0.0.1/api/v1/social_media_audience/
     # file list
     file_list = []
     for (root, dirs, file) in os.walk(data_dir):
-        for f in file:
-            full_path = os.path.join(root, f)
-            if "finished/dataframe_collected_finished_" in full_path and os.path.splitext(f)[1] == '.csv':
-                file_list.append(full_path)
+        if crawl_dir not in root:
+            for f in file:
+                full_path = os.path.join(root, f)
+                if "finished/dataframe_collected_finished_" in full_path:
+                    file_list.append(full_path)
 
     # ---- finished ---- #
     for file in file_list:
         # file = file_list[0]
         # file = './data/_test/_test/finished/dataframe_collected_finished_specs001_20221106.csv'
 
-        out_path = file.replace(data_dir, crawl_dir) + '.gz'
+        out_path = file.replace(data_dir, crawl_dir).replace('.csv.gz', '_log.csv.gz')
         os.makedirs(os.path.dirname(out_path), exist_ok=True)
 
         if not os.path.exists(out_path):
@@ -194,8 +196,7 @@ def crawler(data_dir, token, url='http://127.0.0.1/api/v1/social_media_audience/
                 token=token,
                 valid=True)
 
-            # save compressed data and API responses
-            response.to_csv(out_path, compression='gzip')
+            # save API responses
+            response.to_csv(out_path)
 
     print('[' + str(datetime.datetime.now()) + '] Crawler finished.')
-

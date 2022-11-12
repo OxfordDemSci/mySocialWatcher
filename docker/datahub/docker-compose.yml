@@ -10,7 +10,7 @@ services:
       - ./public_html/:/var/www/public_html/
     ports:
       - "80:80"
-      - "443:443"
+      # - "443:443"
     networks:
       - net
     depends_on:
@@ -28,7 +28,7 @@ services:
     networks:
       - net
     ports:
-      - "5000:5000"
+      # - "5000:5000"
       - "8000:8000"
     restart: unless-stopped
 

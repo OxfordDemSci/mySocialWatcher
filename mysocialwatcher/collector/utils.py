@@ -1,12 +1,61 @@
-import gzip
+import os
+import logging
+import datetime
+from time import sleep
+from dotenv import load_dotenv
+
+load_dotenv()  # load_dotenv('docker/collectors/saffron/ukraine_regions/.env')
+data_dir = os.path.abspath(os.environ.get('DATA_DIR'))  # data_dir = 'data/saffron/ukraine_regions'
+specs_dir = os.path.abspath(os.environ.get('SPECS_DIR'))  # specs_dir = 'docker/collectors/saffron/ukraine_regions/specs'
+
+# start time
+collection_start_time = datetime.datetime.now()
+
+# logging
+log_dir = os.path.join(data_dir, 'logs')
+os.makedirs(log_dir, exist_ok=True)
+logging.basicConfig(
+    filename=os.path.join(log_dir, collection_start_time.strftime('%Y%m%d_%H%M%S') + '.log'),
+    format='%(asctime)s (%(levelname)s) - %(message)s',
+    datefmt='%d-%b-%y %H:%M:%S',
+    filemode='a')
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+
+def get_df_names(data_dir, specs_filename):
+    # data_dir = 'data/_test/_test'
+    # specs_filename = 'specs001.json'
+
+    specs_name = specs_filename.rstrip('.json')
+
+    collecting_list = os.listdir(os.path.join(data_dir, 'collecting'))
+    collecting_list = [i for i in collecting_list if specs_name in i]
+    collecting_list.sort()
+
+    if len(collecting_list) > 0:
+        date_stamp = collecting_list[-1].rstrip('.csv.gz').split('_')[-1]
+        continue_previous_collection = True
+    else:
+        date_stamp = datetime.datetime.now().strftime('%Y%m%d')
+        continue_previous_collection = False
+
+    result = {'skeleton': os.path.join('skeleton',
+                                       'dataframe_skeleton_' + specs_name + '_' + date_stamp + '.csv.gz'),
+              'collecting': os.path.join('collecting',
+                                         'dataframe_collecting_' + specs_name + '_' + date_stamp + '.csv.gz'),
+              'finished': os.path.join('finished',
+                                       'dataframe_collected_finished_' + specs_name + '_' + date_stamp + '.csv.gz'),
+              'continue_previous_collection': continue_previous_collection}
+    return result
 
 
-def gunzip(source_filepath, dest_filepath, block_size=65536):
-    """unzip .csv.gz files from pySocialWatcher"""
-    with gzip.open(source_filepath, 'rb') as s_file, open(dest_filepath, 'wb') as d_file:
-        while True:
-            block = s_file.read(block_size)
-            if not block:
-                break
-            else:
-                d_file.write(block)
+def sleep_the_day(start_time):
+    duration = datetime.datetime.now() - start_time
+    if duration < datetime.timedelta(hours=24):
+        now = datetime.datetime.now()
+        tomorrow = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(1)
+
+        sleep_duration = tomorrow - now
+        if sleep_duration.seconds > 0:
+            logger.info('Sleeping until tomorrow (' + str(sleep_duration) + ').')
+            sleep(sleep_duration.seconds)

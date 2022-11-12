@@ -280,7 +280,7 @@ class PySocialWatcher:
         save_after_collecting_dataframe(collection_dataframe, output_dir)
 
         if remove_tmp_files:
-            remove_temporary_dataframes()
+            remove_temporary_dataframes(output_dir)
 
         return collection_dataframe
 
