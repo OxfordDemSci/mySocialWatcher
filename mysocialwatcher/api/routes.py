@@ -30,6 +30,7 @@ def home():
 
 
 @app.route('/social_media_audience/query', methods=['GET'])
+@app.route('/query', methods=['GET'])
 def fb_query():
     """API endpoint to select data from the 'social_media_audience' database."""
     args = dict(request.args)
@@ -43,6 +44,7 @@ def fb_query():
 
 
 @app.route('/social_media_audience/write', methods=['GET'])
+@app.route('/write', methods=['GET'])
 @limiter.exempt()
 def fb_write():
     """API endpoint to insert data into the 'social_media_audience' database."""
@@ -56,7 +58,8 @@ def fb_write():
         return jsonify(result), result.get("status")
 
 
-@app.route('/social_media_audience/write_geo', methods=['GET'])
-def fb_write_geo():
-    result = endpoints.write_geo_fun(dict(request.args))
-    return jsonify(result), result.get("status")
+# @app.route('/social_media_audience/write_geo', methods=['GET'])
+# @app.route('/write_geo', methods=['GET'])
+# def fb_write_geo():
+#     result = endpoints.write_geo_fun(dict(request.args))
+#     return jsonify(result), result.get("status")
