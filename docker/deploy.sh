@@ -20,6 +20,10 @@ sudo apt-get update && sudo apt-get install -y docker-compose
 # add user to docker group
 sudo usermod -aG docker ubuntu
 
+# crontab to persist read/write access to docker socket
+sudo crontab -e
+# @reboot chmod a+rw /var/run/docker.sock
+
 
 #---- github ----#
 sudo apt install git
@@ -28,9 +32,9 @@ sudo apt install git
 cd ~/.ssh
 ssh-keygen
 
-#!! Remember to authorize the key on GitHub
+#!! Remember to authorize the deploy key on GitHub
 
-# ssh config for github
+# ssh config for github authentication
 echo "Host github" >> ~/.ssh/config
 echo -e "\tHostName ssh.github.com" >> ~/.ssh/config
 echo -e "\tUser git" >> ~/.ssh/config
@@ -40,14 +44,16 @@ echo -e "\tIdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
 cd ~
 git clone github:OxfordDemSci/mySocialWatcher
 
-# copy private config files via ssh (run this command from local machine, not server)
-cd ~/git/OxfordDemSci/mySocialWatcher/config
-scp -r ./private/ psw_datahub:~/mySocialWatcher/config/private/
+# ---- deploy mySocialWatcher ---- #
 
 # python setup (for running scripts in ./config/collections)
 sudo apt install python3-pip
 cd ~/mySocialWatcher
 pip install -r requirements.txt
+
+# copy private config files via ssh (run this command from local machine, not server)
+cd ~/git/OxfordDemSci/mySocialWatcher/config
+scp -r ./private/ psw_datahub:~/mySocialWatcher/config/private/
 
 # setup collections
 cd ~/mySocialWatcher
@@ -63,6 +69,23 @@ python3 config/collections/ukraine_regions.py
 python3 config/collections/venezuelan_exodus1.py
 python3 config/collections/venezuelan_exodus2.py
 
-# deploy datahub (for example)
+# deploy datahub
 cd ~/mySocialWatcher/docker/datahub
+docker-compose up -d --build
+
+# deploy collectors
+cd ~/mySocialWatcher/collectors/badger
+docker-compose up -d --build
+
+cd ~/mySocialWatcher/collectors/mingo
+docker-compose up -d --build
+
+cd ~/mySocialWatcher/collectors/niska
+docker-compose up -d --build
+
+cd ~/mySocialWatcher/collectors/saffron
+docker-compose up -d --build
+
+# deploy crawler
+cd ~/mySocialWatcher/crawler
 docker-compose up -d --build
