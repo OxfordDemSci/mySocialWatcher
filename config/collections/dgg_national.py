@@ -2,6 +2,8 @@ import os
 import shutil
 import json
 import pandas as pd
+import sys
+sys.path.append(os.getcwd())
 from mysocialwatcher.collector.specs import dgg_specs
 
 # virtual machine and collection
