@@ -5,12 +5,12 @@ output: rmdformats::readthedown
 
 # Social Media Audience
 
-The series of API endpoints located at `http://18.135.72.18/api/v1/[endpoint]` 
-provide access to the LCDS database containing numbers of social media users for 
-specific locations, time periods, and demographic groups.  
+The API endpoints located at `http://18.135.72.18/api/v1/[endpoint]` 
+provide access to the LCDS database containing counts of social media users for 
+specific locations, time periods, and demographic groups. This API requires 
+approved credentials for access.  
 
-**Note:** This API requires approved credentials for access. 
-By accessing any Meta Platform Data returned by this API, you are agreeing to comply with 
+**Note:** By accessing any Meta Platform Data returned by this API, you are agreeing to comply with 
 <a href="https://developers.facebook.com/terms" target="_blank">Meta's Platform Terms</a>.
 
 ## Overview of all endpoints
