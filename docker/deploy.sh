@@ -42,9 +42,27 @@ git clone github:OxfordDemSci/mySocialWatcher
 
 # copy private config files via ssh (run this command from local machine, not server)
 cd ~/git/OxfordDemSci/mySocialWatcher/config
-scp -r ./private psw_datahub:~/mySocialWatcher/config
+scp -r ./private/ psw_datahub:~/mySocialWatcher/config/private/
+
+# python setup (for running scripts in ./config/collections)
+sudo apt install python3-pip
+cd ~/mySocialWatcher
+pip install -r requirements.txt
+
+# setup collections
+cd ~/mySocialWatcher
+python3 config/collections/dgg_national.py
+python3 config/collections/rus_exodus_facebook.py
+python3 config/collections/rus_exodus_instagram.py
+python3 config/collections/ukraine_countries.py
+python3 config/collections/ukraine_europe.py
+python3 config/collections/ukraine_language.py
+python3 config/collections/ukraine_neighbours1.py
+python3 config/collections/ukraine_neighbours2.py
+python3 config/collections/ukraine_regions.py
+python3 config/collections/venezuelan_exodus1.py
+python3 config/collections/venezuelan_exodus2.py
 
 # deploy datahub (for example)
 cd ~/mySocialWatcher/docker/datahub
-cp ../../config/private/datahub.env .env
 docker-compose up -d --build
