@@ -1,0 +1,70 @@
+import os
+import json
+import shutil
+import pandas as pd
+
+# virtual machine and collection
+vm = 'mingo'
+collection = 'ukraine_qcri'
+
+
+if __name__ == '__main__':
+
+    # ---- paths ---- #
+    master_credentials_path = os.path.join('config', 'private', 'credentials_master.csv')
+    specs_template_path = os.path.join('config', 'specs', 'examples', 'ukraine_qcri.json')
+    env_template_path = os.path.join('config', 'private', 'collector.env')
+    cron_template_path = os.path.join('config', 'cron', 'daily')
+
+    out_dir = os.path.join('docker', 'collectors', vm, collection)
+    os.makedirs(out_dir, exist_ok=True)
+
+    # ---- environment ---- #
+    shutil.copy(src=env_template_path,
+                dst=os.path.join(out_dir, '.env'))
+
+    # ---- cron ---- #
+    shutil.copy(src=cron_template_path,
+                dst=os.path.join(out_dir, 'cronjob'))
+
+    # ---- credentials ---- #
+
+    # path for output credentials.csv
+    credentials_path = os.path.join(out_dir, 'credentials.csv')
+
+    # load master credentials
+    master_credentials = pd.read_csv(master_credentials_path)
+
+    # filter vm and collection
+    credentials = master_credentials.loc[(master_credentials.vm == vm) &
+                                         (master_credentials.collection == collection)]
+
+    # save to csv
+    credentials.to_csv(credentials_path,
+                       columns=['token', 'app'],
+                       header=False,
+                       index=False)
+
+    # ---- collection specs ---- #
+
+    # output directory
+    specs_dir = os.path.join(out_dir, 'specs')
+    os.makedirs(specs_dir, exist_ok=True)
+
+    # cleanup old specs
+    for f in os.listdir(specs_dir):
+        os.remove(os.path.join(specs_dir, f))
+
+    # load template json
+    with open(specs_template_path) as f:
+        specs = json.load(f)
+
+    # modify template json
+    # (no modification shown here other than defining the name of the collection)
+    specs['name'] = collection
+
+    # write json to file
+    file_out = os.path.join(specs_dir, os.path.basename(specs_template_path))
+    with open(file_out, "w") as f:
+        f.write(json.dumps(specs))
+

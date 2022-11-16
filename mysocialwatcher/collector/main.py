@@ -1,89 +1,87 @@
-import sys
-import os
-import logging
-from datetime import datetime
-from dotenv import load_dotenv
-import mysocialwatcher.collector.utils
+from mysocialwatcher.collector.utils import *
 from pysocialwatcher import watcherAPI, constants
-
-# environment variables
-load_dotenv()
-
-# log file
-os.makedirs(os.path.join('data', 'logs'), exist_ok=True)
-timestamp = str(int(datetime.timestamp(datetime.now())))
-logfile = os.path.join('data', 'logs', timestamp + '.log')
-logging.basicConfig(filename=logfile,
-                    level=logging.INFO,
-                    format='%(asctime)s (%(levelname)s) - %(message)s',
-                    datefmt='%d-%b-%y %H:%M:%S')
 
 
 if __name__ == '__main__':
 
-    # command line argument
-    if sys.argv[1] is None:
-        files = os.listdir('./specs')
-        files = [f for f in files if f.endswith('.json')]
-        specs_filepath = os.path.join('specs', files[0])
-    else:
-        specs_filepath = os.path.abspath(sys.argv[1])
+    # specs
+    specs_list = os.listdir(specs_dir)
+    specs_list = [f for f in specs_list if f.endswith('.json')]
+    specs_list.sort()
 
-    if specs_filepath is None or not specs_filepath.endswith('.json'):
-        raise Exception('Error: No collection specs could be found.')
+    for specs_filename in specs_list:
+        # specs_filename = specs_list[0]
 
-    # data directories
-    data_directory = 'data'
-    os.makedirs(data_directory, exist_ok=True)
-    os.makedirs(os.path.join(data_directory, 'logs'), exist_ok=True)
-    os.makedirs(os.path.join(data_directory, 'skeleton'), exist_ok=True)
-    os.makedirs(os.path.join(data_directory, 'collecting'), exist_ok=True)
-    os.makedirs(os.path.join(data_directory, 'finished'), exist_ok=True)
+        # ---- prepare to collect data ---- #
+        try:
 
-    try:
-        # instantiate watcher
-        watcher = watcherAPI(api_version='15.0', sleep_time=20)
+            logger.info(' ')
+            logger.info('--------------------------------------------------')
 
-        # load credentials
-        watcher.load_credentials_file('credentials.csv')
+            specs_filepath = os.path.abspath(os.path.join('specs', specs_filename))
+            if specs_filepath is None:
+                raise Exception('Error: Specs filepath does not exist.')
 
-        # reconfigure temporary file locations
-        constants.DATAFRAME_SKELETON_FILE_NAME = (
-                "/skeleton/dataframe_skeleton_" + timestamp + ".csv")
-        constants.DATAFRAME_TEMPORARY_COLLECTION_FILE_NAME = (
-                "/collecting/dataframe_collecting_" + timestamp + ".csv")
-        constants.DATAFRAME_AFTER_COLLECTION_FILE_NAME = (
-                    "/finished/dataframe_collected_finished_" + timestamp + ".csv")
-        constants.DATAFRAME_AFTER_COLLECTION_FILE_NAME_WITHOUT_FULL_RESPONSE = (
-                    "/clean/collect_finished_clean" + timestamp + ".csv")
+            # data directories
+            os.makedirs(data_dir, exist_ok=True)
+            os.makedirs(log_dir, exist_ok=True)
+            os.makedirs(os.path.join(data_dir, 'skeleton'), exist_ok=True)
+            os.makedirs(os.path.join(data_dir, 'collecting'), exist_ok=True)
+            os.makedirs(os.path.join(data_dir, 'finished'), exist_ok=True)
 
-        # collect data
-        df = watcher.run_data_collection(json_input_file_path=specs_filepath,
-                                         output_dir=data_directory,
-                                         remove_tmp_files=False)
+            # temporary file locations
+            df_names = get_df_names(data_dir=data_dir, specs_filename=specs_filename)
 
-        # write collection to SQL via API
-        # response = submit_psw_csv(
-        #     filename=os.path.join('data', 'finished', 'dataframe_collected_finished_' + timestamp + '.csv'),
-        #     token=os.environ['DATABASE_TOKEN'],
-        #     platform='facebook',
-        #     country='XX',
-        #     valid=True)
+            # check if collection already completed for the day
+            if os.path.exists(os.path.join(data_dir, df_names.get('finished'))):
+                continue
 
-        # save API responses
-        # response.to_csv(os.path.join('data', 'logs', str(timestamp) + '_sql.csv'))
+            # start log
+            logger.info('Preparing collection with specification: ' + specs_filepath)
 
-    except Exception as e:
+            # instantiate watcher
+            watcher = watcherAPI(api_version='15.0',
+                                 sleep_time=12,
+                                 save_every_x=100)
 
-        # log exception
-        logging.error('Exception:', exc_info=e)
+            # load credentials
+            watcher.load_credentials_file('credentials.csv')
 
-        # healthcheck.io fail notification
-        # requests.get('https://hc-ping.com/' + os.environ['HEALTHCHECK_UUID'] + '/fail')
+            # configure temporary files
+            constants.DATAFRAME_SKELETON_FILE_NAME = df_names.get('skeleton')
+            constants.DATAFRAME_TEMPORARY_COLLECTION_FILE_NAME = df_names.get('collecting')
+            constants.DATAFRAME_AFTER_COLLECTION_FILE_NAME = df_names.get('finished')
 
-    finally:
+        except:
+            logger.error('An error occurred while preparing to collect data.', exc_info=True)
 
-        # move logfile to data directory
-        os.makedirs(os.path.join('data', 'logs'), exist_ok=True)
-        os.rename(logfile, os.path.join('data', 'logs', os.path.basename(logfile)))
+        # ---- continue a previous collection ---- #
+        continue_previous_collection = df_names.get('continue_previous_collection')
+        if continue_previous_collection:
+            try:
+                logger.info('Continuing a previous collection: ' + df_names.get('collecting'))
 
+                df = watcher.load_data_and_continue_collection(
+                    input_file_path=os.path.join(data_dir, constants.DATAFRAME_TEMPORARY_COLLECTION_FILE_NAME),
+                    output_dir=data_dir + '/',
+                    remove_tmp_files=True)
+            except:
+                logger.warning('An error occurred while continuing a previous collection.', exc_info=True)
+                continue_previous_collection = False
+
+        # ---- start a new collection ---- #
+        if not continue_previous_collection:
+            try:
+                logger.info('Beginning a new collection: ' + df_names.get('collecting'))
+
+                df = watcher.run_data_collection(
+                    json_input_file_path=specs_filepath,
+                    output_dir=data_dir + '/',
+                    remove_tmp_files=True)
+            except:
+                logger.error('An error occurred while collecting new data.', exc_info=True)
+
+        del watcher
+
+    # Sleep until midnight if collection completed in less than 24 hours
+    sleep_the_day(start_time=collection_start_time)

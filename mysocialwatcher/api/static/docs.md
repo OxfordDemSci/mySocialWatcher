@@ -3,200 +3,101 @@ title: API Docs
 output: rmdformats::readthedown
 ---
 
-# Digital Gender Gaps API (v1)
+# Social Media Audience
 
-The Digital Gender Gaps API allows you to access all data displayed at **digitalgendergaps.org**. 
-This provides a way to automate data requests for individual countries, specific dates, or bulk downloads. 
-We aim to update our data once per month and to make them openly available for free. 
-Web developers can use this API to develop web applications that query our database on-the-fly based on the needs of your 
-users.
+The API endpoints located at `http://18.135.72.18/api/v1/[endpoint]` 
+provide access to the LCDS database containing counts of social media users for 
+specific locations, time periods, and demographic groups. This API requires 
+approved credentials for access.  
+
+**Note:** By accessing any Meta Platform Data returned by this API, you are agreeing to comply with 
+<a href="https://developers.facebook.com/terms" target="_blank">Meta's Platform Terms</a>.
 
 ## Overview of all endpoints
 
-**./api/v1/init**  
-Returns data needed to initialize the web application.
+**./api/v1/query**  
+Returns social media audience estimates for specific locations, dates, and demographic groups.
 
-**./api/v1/query_specific_country**  
-Returns digital gender gap estimates for all dates for a single country. See below for a list of required 
-arguments. 
-
-**./api/v1/query_national**  
-Returns digital gender gap estimates for all countries for a single date. See below for a list of required 
-arguments.
-
-**./api/v1/download_data_with_dates**  
-Returns digital gender gap estimates for all countries within a range of dates. See below for a list of required 
-arguments.
-
-**./api/v1/write_national**  
-Writes new digital gender gap estimates into the database for a single country and date. See below for a list of 
-required arguments.
+**./api/v1/write**  
+Write new data into the database (requires authentication with write-access).
 
 
-## Endpoint: init
-Returns data needed to initialize the web application including:  
-- A list of countries with data  
-- A list of dates with data  
-- Descriptions of each indicator used to measure digital gender gaps  
-- Types of indicators (e.g. mobile phone access, internet access)  
-- Colour palette for mapping results  
-- Contact email address  
+## Endpoint: query
 
-**Example query**  
-<a href="http://digitalgendergaps.org/api/v1/init" target="_blank">`http://digitalgendergaps.org/api/v1/init`</a>
+This API endpoint is for querying data from *social_media_audience* database. 
+You can use it to pull a subset of data directly into R or Python (examples below).  
 
-> **Note:** Click the link above and paste the JSON response <a href="https://duckduckgo.com/?q=json+beautifier" target="_blank">here</a> to view 
-it in a cleaner format.
+URL: `http://18.135.72.18/api/v1/query`  
 
-**Arguments**  
-None
-
-**Response**  
-The JSON response includes the following elements:  
-
-| Response  | Description | 
-|---|---|
-| countries | A list of all countries with data. This includes country names and <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements" target="_blank">ISO-2 country codes</a>. |   
-| dates     | A list of dates with data formatted as YYYYMM. |               
-| models    | An object containing descriptions of all indicators (i.e. models) including their name, formatted name, type, description, and display order. | 
-| types     | A list of indicator types (e.g. mobile, internet).|  
-| palette   | Colour palette for mapping results including colour hex codes, break point, legend title, subtitles, and labels. |  
-| contact   | A contact email address. |
-| status    | http status code. |
-| message   | Status message. |
+Arguments syntax: `http://18.135.72.18/api/v1/query?argument1=value1&argument2=value2`  
 
 
-## Endpoint: query_specific_country
-Returns data for all dates from a single country.
+**API Arguments**  
 
-**Example queries**  
-<a href="http://digitalgendergaps.org/api/v1/query_specific_country?iso2code=GB" target="_blank">`http://digitalgendergaps.org/api/v1/query_specific_country?iso2code=GB`</a>  
+*Required Arguments*  
 
-<a href="http://digitalgendergaps.org/api/v1/query_specific_country?iso2code=GB&model=['internet_online_model_prediction']" target="_blank">`http://digitalgendergaps.org/api/v1/query_specific_country?iso2code=GB&model=['internet_online_model_prediction']`</a>
+Argument | Description
+|:-- |:-----------
+token | API token for read access (contact [douglas.leasure@demography.ox.ac.uk](mailto:douglas.leasure@demography.ox.ac.uk))
+platform | Name of platform where data were collected. Acceptable values: facebook, instagram
 
-> **Note:** Click the links above and paste the JSON responses <a href="https://duckduckgo.com/?q=json+beautifier" target="_blank">here</a> to view them in a cleaner format.
+*Optional Arguments*  
 
-**Arguments**  
+Argument | Description 
+|:-- |:----------- 
+country | A single country code using ISO-2 format (see <a href="https://www.iban.com/country-codes">https://www.iban.com/country-codes</a>). If omitted, all countries will be returned.
+gender | Gender of the population represented by data. Acceptable values: 0, 1, 2, where 0=all, 1=male, 2=female.
+age_min | Lower bound of age of the audience size reported. Default = 0.
+age_max | Upper bound of age of the audience size reported. Default = 999.
+date_start | Earliest date to include in the query result
+date_end | Latest date to include in the query result
+contributor_id | ID number of contributor whose data you would like to return
+valid | Return only data marked as valid by contributors? Default = true. Acceptable values: true, t, yes, y, on, 1. All other values will be treated as: false.
 
-| Argument | Description |
-|---|---|
-| iso2code | (required) Country as a two character <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements" target="_blank">ISO-2 country codes</a>. |
-| model | (optional) List of indicators to return. Note: Get possible values from keys of the "model" element returned from the "init" endpoint. | 
+**API Response**  
+The API will return a json response with four elements:
 
-**Response**  
-The JSON response includes the following elements:  
+Element | Description 
+|:-- |:----------- 
+status | http status code
+message | Message describing outcome of operation writing to the database
+timestamp | Date and time of response
+data | Data resulting from query in json format
 
-| Response | Description  |
-|---|---|
-| data | Digital gender gap estimates for each indicator and date. | 
-| status   | http status code.  |
-| message  | Status message. |
+For example:
+```
+{
+  "message": "OK: Data successfully selected from database.",
+  "status": "200",
+  "timestamp": "2022-01-03 18:30:26+00",
+  "data": '{"id":{"0":1362778,"1":1362779,"2":1362780,"3":1362781, ... }'
+}
+```
 
+**Examples**
 
-## Endpoint: query_national
-Returns data for all countries for a single date.
+*Query data using a url:*  
+```
+http://18.135.72.18/api/v1/query?platform=facebook&country=GB&gender=0&date_start=2020-03-11
+```
 
-**Example queries**  
-<a href="http://digitalgendergaps.org/api/v1/query_national?date=202206" target="_blank">`http://digitalgendergaps.org/api/v1/query_national?date=202206`</a>
-
-<a href="http://digitalgendergaps.org/api/v1/query_national?date=202206&model=['internet_online_model_prediction']" target="_blank">`http://digitalgendergaps.org/api/v1/query_national?date=202206&model=['internet_online_model_prediction']`</a>
-
-> **Note:** Click the links above and paste the JSON responses <a href="https://duckduckgo.com/?q=json+beautifier" target="_blank">here</a> to view them in a cleaner format.
-
-**Arguments**  
-
-| Argument | Description  |
-|---|---|
-| date | (required) Date in format YYYYMM.  |                                                                  
-| model | (optional) List of indicators to return. Note: Get possible values from keys of the "model" element returned from the "init" endpoint. | 
-
-**Response**  
-The JSON response includes the following elements:  
-
-| Response | Description  |
-|---|---|
-| data | Digital gender gap estimates for each indicator and date. |
-| message  | Status message. |                                            
-| status   | http status code. |
-
-
-## Endpoint: download_data_with_dates
-Returns data for all countries within a range of dates.
-
-**Example query**  
-<a href="http://digitalgendergaps.org/api/v1/download_data_with_dates?start_date=202206&end_date=202207" target="_blank">`http://digitalgendergaps.org/api/v1/download_data_with_dates?start_date=202206&end_date=202207`</a>
-
-> **Note:** Click the link above and paste the JSON response <a href="https://duckduckgo.com/?q=json+beautifier" target="_blank">here</a> to view it in a cleaner format.
-
-**Arguments**  
-
-| Argument   | Description | 
-|---|---|
-| start_date | (required) Initial date in range in format YYYYMM. |
-| end_date   | (required) Last date in range in format YYYYMM.    |
-| pretty_names | (optional) Return formatted column names (boolean; default = True) |
-
-
-**Response**  
-The JSON response includes the following elements:  
-
-| Response | Description  |
-|---|---|
-| data | Digital gender gap estimates for each country, date, and indicator. |
-| message  | Status message.  |
-| status   | http status code. |
-
-
-## Endpoint: write_national
-Writes new digital gender gap estimates into the database for a single country and date.
-
-**Example query**  
-<a href="http://digitalgendergaps.org/api/v1/write_national?token=XXXXX&iso2=GB&date=202210&Ground_Truth_Internet_GG=0.5" target="_blank">`http://digitalgendergaps.org/api/v1/write_national?token=XXXXX&iso2=GB&date=202210&Ground_Truth_Internet_GG=0.5`</a>
-
-
-> **Note:** This endpoint requires an access token and is not available for public access.
-
-**Arguments**  
-
-| Argument | Description | 
-|---|---|
-| token | (required) Access token.  |
-| date | (required) Date in format YYYYMM. |  
-| iso2 | (required) Country as a two character <a href="https://en.wikipedia.org/wiki/ISO_3166-2" target="_blank">ISO-2 country code</a>.| | internet_online_model_prediction | (optional) Value to write into database for this indicator. |
-| internet_online_offline_model_prediction | (optional) Value to write into database for this indicator. |
-| internet_offline_model_prediction        | (optional) Value to write into database for this indicator. |
-| ground_truth_internet_gg                 | (optional) Value to write into database for this indicator. |
-| mobile_online_model_prediction           | (optional) Value to write into database for this indicator. |
-| mobile_online_offline_model_prediction   | (optional) Value to write into database for this indicator. |
-| mobile_offline_model_prediction          | (optional) Value to write into database for this indicator. |
-| ground_truth_mobile_gg                   | (optional) Value to write into database for this indicator. |
-
-**Response**  
-The JSON response includes the following elements:  
-
-| Response | Description | 
-|---|---|
-| message | Status message. |  
-| status | http status code. |  
-
-
-## Query API from Python or R
-
-### Python
-
-```{python}
+*Query data from Python:*  
+```
 # import packages
 import requests
 import pandas as pd
 
 # query arguments
 args = {
-  "iso2code": "AT"
+  "token": "xxxxxxxxx",
+  "platform": "facebook",
+  "country": "GB",
+  "gender": "0",
+  "date_start": "2020-03-11"
   }
 
 # submit query as GET request
-response = requests.get(url = 'http://digitalgendergaps.org/api/v1/query_specific_country', 
-                        params = args)
+response = requests.get(url='http://18.135.72.18/api/v1/query', params=args)
 
 # format response as dictionary
 response = response.json()
@@ -210,20 +111,24 @@ if response.get('status') == 200:
   data = pd.DataFrame(json.loads(response.get('data')))
 ```
 
-### R
+**Query data from R:**  
 
-```{r}
+```
 # import packages
 library('httr')
 library('jsonlite')
 options(scipen = 999)
 
 # query arguments
-args <- list(iso2code = "AT")
+args <- list(token = "xxxxxxxxx",
+             platform = "facebook",
+             country = "GB",
+             gender = 0,
+             date_start = "2020-03-11")
 
 # submit query as GET request
-response <- httr::GET(url = 'http://digitalgendergaps.org/', 
-                      path = 'api/v1/query_specific_country',
+response <- httr::GET(url = 'http://18.135.72.18/', 
+                      path = 'api/v1/query',
                       query = args)
 
 # format response as list
@@ -246,5 +151,158 @@ if(response$status == 200){
   # note: this is a convenient format for dealing with JSONs for some data.frame cells in R.
   data <- as.data.frame(do.call(cbind, data))
   
+  #-- unlist data --#
+  
+  # identify columns storing json objects
+  json_cols <- c('geo_locations','all_fields','targeting','response')
+  
+  # non-json cells: unlist
+  for(name in names(data)[!names(data) %in% json_cols]){
+    data[,name] <- unlist(data[,name])
+  }
+  
+  # json cells: lists -> json strings
+  for(name in json_cols){
+    data[,name] <- unlist(lapply(data[,name], jsonlite::toJSON))
+  }
 }
 ```
+
+
+## Endpoint: write
+
+URL: `http://18.135.72.18/api/v1/write`  
+
+Arguments syntax: `http://18.135.72.18/api/v1/write?argument1=value1&argument2=value2`  
+
+This API endpoint is for writing data into the *social_media_audience* database. 
+You can use it to write data into the database directly from R or Python (example below).  
+
+**Note:** An API token is required to access this endpoint. Please contact [douglas.leasure@demography.ox.ac.uk](mailto:douglas.leasure@demography.ox.ac.uk) for more information.
+
+**API Arguments**  
+
+*Required arguments*  
+
+Argument | Description
+|:-- |:-----------
+token | API token for write access (contact [douglas.leasure@demography.ox.ac.uk](mailto:douglas.leasure@demography.ox.ac.uk)).
+valid | Indicates if data are valid. Invalid data will not persist in the database. Default="False". Acceptable values (not case sensitive): "true", "t", "y", "yes", "on", "1". All other values will be interpreted as "False".
+platform | Name of platform where data were collected. Acceptable values: "facebook", "instagram".
+timestamp | Timestamp in Unix epoch format (seconds since 1 JAN 1970 UTC) corresponding to the time of the original data collection.
+country | Country code of data collection using ISO-2 format (see <a href="https://www.iban.com/country-codes">https://www.iban.com/country-codes</a>).
+gender | Gender of the population represented by data. Acceptable values: "0", "1", "2", where 0=all, 1=male, 2=female.
+geo_locations | Definition of geolocation in json format. See docs for pySocialWatcher or Facebook Marketing API for more information.
+
+*Require at least one of these arguments*  
+
+Argument | Description 
+|:-- |:----------- 
+dau | Daily active users
+mau | Monthly active user
+mau_lower | Lower bound of monthly active users
+mau_upper | Upper bound of monthly active users
+
+*Optional arguments*  
+
+Argument | Description 
+|:-- |:----------- 
+age_min | Lower bound of age of the audience size reported. Default = 0.
+age_max | Upper bound of age of the audence size reported. Default = 999.
+all_fields | All fields of special targeting audience specification. This is a default field returned from pySocialWatcher as a string representation of a Python tuple of tuples.
+targeting | Audience targeting json as submitted to Facebook API. This is a default field returned from pySocialWatcher.
+response | Response from Facebook API. This is a default field returned from pySocialWatcher as a string representation of a Python bytes array.
+
+**API Response**  
+The API will return a json response with three elements:
+
+Element | Description 
+|:-- |:----------- 
+status | http status code
+message | Message describing outcome of operation writing to the database
+timestamp | Date and time of response
+
+For example:  
+```
+{
+  "message": "OK: Data successfully written to database.",
+  "status": "200",
+  "timestamp": "2022-01-03 18:30:26+00"
+}
+```
+
+**Examples**  
+
+*Submit data as a url:*    
+
+```
+http://18.135.72.18/api/v1/write?token=[your token]&valid=true&platform=facebook&timestamp=1640574003&country=GB&gender=0&dau=1000&geo_locations={'name': 'countries', 'values': ['GB'], 'location_types': ['home']}
+```
+
+*Submit data from Python:*  
+
+```
+import requests
+
+args = {
+  "token": "[your token]",
+  "valid": "true",
+  "platform": "facebook",
+  "timestamp": "1640574003",
+  "country": "GB",
+  "gender": "0",
+  "dau": "345",
+  "mau_lower": "1000",
+  "mau_upper": "3000",
+  "geo_locations": "{'name': 'countries', 'values': ['GB'], 'location_types': ['home']}"
+  }
+
+response = requests.get(url='http://18.135.72.18/api/v1/write', params=args)
+response.text
+```
+
+**Note:** The `valid` argument will default to `false` if you do not explicitly set it to `true`. If `false`, the data you submit will be removed from the database at midnight. This is intended to allow for testing and to require data contributors to explicitly verify when valid data are being submitted that should be retained indefinitely.  
+
+## PostgreSQL
+
+In most cases, it is preferable to query the PostgreSQL server using the API 
+endpoints above, but it can be useful to connect directly to the SQL server (read-only) to:  
+
+1. Browse the database using a GUI like [DBeaver](https://dbeaver.io)  
+2. Submit advanced SQL queries not currently supported by the `/query` API endpoint (see [query section](#query)).  
+
+**Note:** You must be connected to the University of Oxford VPN 
+(i.e. Cisco Anyconnect client) to connect directly to the database.
+
+**SQL Server Information**  
+
+Attribute | Value
+|:--|:-----|
+Hostname | 18.135.72.18
+Port | 5432
+Database | social_media_audience
+User | reader
+Password | [contact douglas.leasure@demography.ox.ac.uk]
+
+**Examples**  
+
+*SQL query from Python*  
+
+```
+# import packages
+import psycopg2
+import pandas as pd
+
+# connect to database
+conn = psycopg2.connect(host='18.135.72.18', database='social_media_audience', user='reader', password='#####')
+
+# SQL query
+sql_query = "SELECT * FROM facebook WHERE country = 'GB' AND platform = 'facebook' AND date = '2022-01-01'"
+
+# retrieve data as pandas dataframe
+data = pd.read_sql(sql_query, conn)
+```
+
+See this excellent [PostgreSQL Tutorial](https://www.postgresqltutorial.com/what-is-postgresql/) or the official [PostgreSQL documentation](https://www.postgresql.org/) for more information about syntax for advanced SQL queries. Of particular interest, may be [querying data stored in JSON format](https://www.postgresqltutorial.com/postgresql-json/) such as the specific social media audience targeting parameters found in the following columns in the *social_media_audience* database: *geo_locations*, *all_fields*, *targeting*, and *response*.
+
+See the [psycopg2 documentation](https://www.psycopg.org/docs/) for more information about the *psycopg2* Python module. Of particular interest may be using cursors rather than pandas (as the example above) to better handle large SQL results. See a basic example [here](https://www.psycopg.org/docs/usage.html)).

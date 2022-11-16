@@ -1,0 +1,58 @@
+version: "3.3"
+
+services:
+
+  datahub_web:
+    container_name: datahub_web
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - ./public_html/:/var/www/public_html/
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - net
+    depends_on:
+      - datahub_api
+    restart: unless-stopped
+
+  datahub_api:
+    container_name: datahub_api
+    env_file: .env
+    build:
+      dockerfile: ./docker/datahub/Dockerfile
+      context: ./../../
+    depends_on:
+      - datahub_db
+    networks:
+      - net
+    ports:
+      - "5000:5000"
+      - "8000:8000"
+    restart: unless-stopped
+
+  datahub_limiter:
+    container_name: datahub_limiter
+    image: memcached:latest
+    networks:
+      - net
+    ports:
+      - "11211:11211"
+    restart: unless-stopped
+
+  datahub_db:
+    container_name: datahub_db
+    image: postgis/postgis:14-3.3
+    env_file: .env
+    volumes:
+      - ./initdb.sh:/docker-entrypoint-initdb.d/initdb.sh
+      - ./postgresql.conf:/etc/postgresql/postgresql.conf
+    networks:
+      - net
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+networks:
+  net:

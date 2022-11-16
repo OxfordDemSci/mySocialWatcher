@@ -1,0 +1,14 @@
+# docker-compose to deploy one or multiple collectors (i.e. services)
+version: '3.3'
+
+services:
+
+  dgg_national:
+    container_name: dgg_national
+    volumes:
+      - ./dgg_national:/app/in
+      - ./../../../data/badger/dgg_national:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: unless-stopped

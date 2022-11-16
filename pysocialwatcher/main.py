@@ -280,7 +280,7 @@ class PySocialWatcher:
         save_after_collecting_dataframe(collection_dataframe, output_dir)
 
         if remove_tmp_files:
-            remove_temporary_dataframes()
+            remove_temporary_dataframes(output_dir)
 
         return collection_dataframe
 
@@ -319,9 +319,9 @@ class PySocialWatcher:
         return collection_dataframe
 
     @staticmethod
-    def load_data_and_continue_collection(input_file_path):
+    def load_data_and_continue_collection(input_file_path, output_dir="", remove_tmp_files=False):
         collection_dataframe = load_dataframe_from_file(input_file_path)
-        collection_dataframe = PySocialWatcher.perform_collection_data_on_facebook(collection_dataframe)
+        collection_dataframe = PySocialWatcher.perform_collection_data_on_facebook(collection_dataframe, output_dir, remove_tmp_files)
         return collection_dataframe
 
     @staticmethod

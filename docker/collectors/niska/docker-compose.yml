@@ -1,0 +1,24 @@
+# docker-compose to deploy multiple collectors
+version: '3.3'
+
+services:
+
+  rus_exodus_facebook:
+    container_name: rus_exodus_facebook
+    volumes:
+      - ./rus_exodus_facebook:/app/in
+      - ./../../../data/niska/rus_exodus_facebook:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: unless-stopped
+
+  rus_exodus_instagram:
+    container_name: rus_exodus_instagram
+    volumes:
+      - ./rus_exodus_instagram:/app/in
+      - ./../../../data/niska/rus_exodus_instagram:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: unless-stopped

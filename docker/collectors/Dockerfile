@@ -1,0 +1,30 @@
+# syntax=docker/dockerfile:1
+FROM python:slim-buster
+
+# install packages
+RUN apt-get update
+
+# install python packages
+WORKDIR /app
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+
+# install pysocialwatcher and mysocialwatcher
+COPY pysocialwatcher pysocialwatcher
+COPY mysocialwatcher mysocialwatcher
+COPY mysocialwatcher/collector/main.py main.py
+COPY docker/collectors/_utils utils
+
+RUN chmod 0744 ./utils/launch.sh
+RUN chmod 0744 ./utils/cleanup.sh
+
+# collection config
+RUN ln -s in/.env .env
+RUN ln -s in/credentials.csv credentials.csv
+RUN ln -s in/specs specs
+
+# commmand
+ENTRYPOINT ["/bin/sh", "-c"]
+CMD ["./utils/launch.sh"]
+
+#CMD ["tail", "-f", "/dev/null"]

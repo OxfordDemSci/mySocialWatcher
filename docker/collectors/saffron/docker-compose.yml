@@ -1,0 +1,64 @@
+# docker-compose to deploy multiple collectors
+version: '3.3'
+
+services:
+
+  ukraine_regions:
+    container_name: ukraine_regions
+    volumes:
+      - ./ukraine_regions:/app/in
+      - ./../../../data/saffron/ukraine_regions:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: unless-stopped
+
+  ukraine_neighbours1:
+    container_name: ukraine_neighbours1
+    volumes:
+      - ./ukraine_neighbours1:/app/in
+      - ./../../../data/saffron/ukraine_neighbours1:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: unless-stopped
+
+  ukraine_neighbours2:
+    container_name: ukraine_neighbours2
+    volumes:
+      - ./ukraine_neighbours2:/app/in
+      - ./../../../data/saffron/ukraine_neighbours2:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: unless-stopped
+
+  ukraine_language:
+    container_name: ukraine_language
+    volumes:
+      - ./ukraine_language:/app/in
+      - ./../../../data/saffron/ukraine_language:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: unless-stopped
+
+  ukraine_europe:
+    container_name: ukraine_europe
+    volumes:
+      - ./ukraine_europe:/app/in
+      - ./../../../data/saffron/ukraine_europe:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: unless-stopped
+
+  ukraine_countries:
+    container_name: ukraine_countries
+    volumes:
+      - ./ukraine_countries:/app/in
+      - ./../../../data/saffron/ukraine_countries:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: unless-stopped
