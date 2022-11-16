@@ -10,4 +10,4 @@ sudo cp ~/mySocialWatcher/collectors/niska/niska_crontab /etc/cron.d/
 
 # docker
 cd ~/mySocialWatcher/collectors/niska
-docker-compose up -d
+docker-compose up -d --build

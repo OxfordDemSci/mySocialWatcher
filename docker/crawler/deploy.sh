@@ -8,4 +8,4 @@ sudo cp ~/mySocialWatcher/docker/crawler/crawler_crontab /etc/cron.d/
 
 # docker
 cd ~/mySocialWatcher/docker/crawler
-docker-compose up -d
+docker-compose up -d --build

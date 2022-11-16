@@ -14,4 +14,4 @@ sudo cp ~/mySocialWatcher/collectors/saffron/saffron_crontab /etc/cron.d/
 
 # docker
 cd ~/mySocialWatcher/collectors/saffron
-docker-compose up -d
+docker-compose up -d --build

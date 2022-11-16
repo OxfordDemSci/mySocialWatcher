@@ -10,4 +10,4 @@ sudo cp ~/mySocialWatcher/collectors/mingo/mingo_crontab /etc/cron.d/
 
 # docker
 cd ~/mySocialWatcher/collectors/mingo
-docker-compose up -d
+docker-compose up -d --build

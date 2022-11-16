@@ -5,4 +5,4 @@ cp ~/mySocialWatcher/config/private/datahub.env ~/mySocialWatcher/docker/datahub
 
 # deploy datahub
 cd ~/mySocialWatcher/docker/datahub
-docker-compose up -d
+docker-compose up -d --build
