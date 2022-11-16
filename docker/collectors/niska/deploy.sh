@@ -6,8 +6,7 @@ python3 config/collections/venezuelan_exodus1.py
 python3 config/collections/venezuelan_exodus2.py
 
 # cron
-cd ~/mySocialWatcher/collectors/niska
-sudo cp niska_crontab /etc/cron.d/
+sudo cp ~/mySocialWatcher/collectors/niska/niska_crontab /etc/cron.d/
 
 # docker
 cd ~/mySocialWatcher/collectors/niska

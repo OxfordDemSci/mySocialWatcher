@@ -10,8 +10,7 @@ python3 config/collections/ukraine_neighbours2.py
 python3 config/collections/ukraine_regions.py
 
 # cron
-cd ~/mySocialWatcher/collectors/saffron
-sudo cp saffron_crontab /etc/cron.d/
+sudo cp ~/mySocialWatcher/collectors/saffron/saffron_crontab /etc/cron.d/
 
 # docker
 cd ~/mySocialWatcher/collectors/saffron
