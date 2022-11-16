@@ -152,7 +152,6 @@ def governor(func, hours=1):
     return wrapper
 
 
-@governor
 def crawler(data_dir, token, url='http://127.0.0.1/api/v1/social_media_audience/write'):
     # crawl_dir = 'data/_test'
 
