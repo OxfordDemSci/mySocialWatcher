@@ -2,4 +2,4 @@ SHELL=/bin/bash
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 # m h dom mon dow user  command
 @reboot ubuntu cd ~/mySocialWatcher/docker/collectors/niska; docker-compose up -d
-@daily ubuntu cd ~/mySocialWatcher/docker/collectors/niska; docker-compose up -d
+@daily ubuntu cd ~/mySocialWatcher/docker/collectors/niska; docker-compose up -d --build

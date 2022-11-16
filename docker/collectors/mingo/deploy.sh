@@ -6,8 +6,8 @@ python3 config/collections/rus_exodus_facebook.py
 python3 config/collections/rus_exodus_instagram.py
 
 # cron
-sudo cp ~/mySocialWatcher/collectors/mingo/mingo_crontab /etc/cron.d/
+sudo cp ~/mySocialWatcher/docker/collectors/mingo/mingo_crontab /etc/cron.d/
 
 # docker
-cd ~/mySocialWatcher/collectors/mingo
+cd ~/mySocialWatcher/docker/collectors/mingo
 docker-compose up -d --build

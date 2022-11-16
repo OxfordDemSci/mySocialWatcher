@@ -5,8 +5,8 @@ cd ~/mySocialWatcher
 python3 config/collections/dgg_national.py
 
 # cron
-sudo cp ~/mySocialWatcher/collectors/badger/badger_crontab /etc/cron.d/
+sudo cp ~/mySocialWatcher/docker/collectors/badger/badger_crontab /etc/cron.d/
 
 # docker
-cd ~/mySocialWatcher/collectors/badger
+cd ~/mySocialWatcher/docker/collectors/badger
 docker-compose up -d --build
