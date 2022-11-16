@@ -1,5 +1,4 @@
 SHELL=/bin/bash
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 # m h dom mon dow user  command
-@monthly root cd /app; ./utils/cleanup.sh; ./utils/launch.sh
-@reboot root cd /app; ./utils/launch.sh
+@hourly ubuntu cd ~/mySocialWatcher/docker/crawler; docker-compose up -d

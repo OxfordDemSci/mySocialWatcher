@@ -14,7 +14,6 @@ if __name__ == '__main__':
     master_credentials_path = os.path.join('config', 'private', 'credentials_master.csv')
     specs_template_path = os.path.join('config', 'specs', 'templates')
     env_template_path = os.path.join('config', 'private', 'collector.env')
-    cron_template_path = os.path.join('config', 'cron', 'weekly')
     out_dir = os.path.join('docker', 'collectors', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
 
@@ -25,10 +24,6 @@ if __name__ == '__main__':
     env_lines = ['FREQUENCY=7']
     with open(os.path.join(out_dir, '.env'), 'a') as f:
         f.writelines(env_lines)
-
-    # ---- cron ---- #
-    shutil.copy(src=cron_template_path,
-                dst=os.path.join(out_dir, 'cronjob'))
 
     # ---- credentials ---- #
 
