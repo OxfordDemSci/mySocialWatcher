@@ -11,7 +11,7 @@ services:
     build:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
-    restart: unless-stopped
+    restart: on-failure
 
   ukraine_neighbours1:
     container_name: ukraine_neighbours1
@@ -21,7 +21,7 @@ services:
     build:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
-    restart: unless-stopped
+    restart: on-failure
 
   ukraine_neighbours2:
     container_name: ukraine_neighbours2
@@ -31,7 +31,7 @@ services:
     build:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
-    restart: unless-stopped
+    restart: on-failure
 
   ukraine_language:
     container_name: ukraine_language
@@ -41,7 +41,7 @@ services:
     build:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
-    restart: unless-stopped
+    restart: on-failure
 
   ukraine_europe:
     container_name: ukraine_europe
@@ -51,7 +51,7 @@ services:
     build:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
-    restart: unless-stopped
+    restart: on-failure
 
   ukraine_countries:
     container_name: ukraine_countries
@@ -61,4 +61,4 @@ services:
     build:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
-    restart: unless-stopped
+    restart: on-failure

@@ -81,7 +81,10 @@ if __name__ == '__main__':
             except:
                 logger.error('An error occurred while collecting new data.', exc_info=True)
 
+        logger.info('Finished collection: ' + df_names.get('collecting'))
         del watcher
 
+    logger.info('Finished collection.')
+
     # Sleep until midnight if collection completed in less than 24 hours
-    sleep_the_day(start_time=collection_start_time)
+    # sleep_the_day(start_time=collection_start_time)

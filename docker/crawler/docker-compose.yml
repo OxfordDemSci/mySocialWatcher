@@ -12,5 +12,5 @@ services:
     build:
       context: ./../../
       dockerfile: ./docker/crawler/Dockerfile
-    restart: unless-stopped
+    restart: on-failure
 

@@ -1,4 +1,8 @@
 #!/bin/bash
+# This script is intended to guide the setup of a new virtual machine.
+# It should be run line-by-line rather than executed all at once.
+
+# update and upgrade software
 sudo apt-get update -y
 sudo apt-get upgrade -y
 
@@ -54,38 +58,3 @@ pip install -r requirements.txt
 # copy private config files via ssh (run this command from local machine, not server)
 cd ~/git/OxfordDemSci/mySocialWatcher/config
 scp -r ./private/ psw_datahub:~/mySocialWatcher/config/private/
-
-# setup collections
-cd ~/mySocialWatcher
-python3 config/collections/dgg_national.py
-python3 config/collections/rus_exodus_facebook.py
-python3 config/collections/rus_exodus_instagram.py
-python3 config/collections/ukraine_countries.py
-python3 config/collections/ukraine_europe.py
-python3 config/collections/ukraine_language.py
-python3 config/collections/ukraine_neighbours1.py
-python3 config/collections/ukraine_neighbours2.py
-python3 config/collections/ukraine_regions.py
-python3 config/collections/venezuelan_exodus1.py
-python3 config/collections/venezuelan_exodus2.py
-
-# deploy datahub
-cd ~/mySocialWatcher/docker/datahub
-docker-compose up -d --build
-
-# deploy collectors
-cd ~/mySocialWatcher/collectors/badger
-docker-compose up -d --build
-
-cd ~/mySocialWatcher/collectors/mingo
-docker-compose up -d --build
-
-cd ~/mySocialWatcher/collectors/niska
-docker-compose up -d --build
-
-cd ~/mySocialWatcher/collectors/saffron
-docker-compose up -d --build
-
-# deploy crawler
-cd ~/mySocialWatcher/crawler
-docker-compose up -d --build
