@@ -2,11 +2,9 @@ import os
 import logging
 import datetime
 from time import sleep
-from dotenv import load_dotenv
 
-load_dotenv()  # load_dotenv('docker/collectors/saffron/ukraine_regions/.env')
-data_dir = os.path.abspath(os.environ.get('DATA_DIR'))  # data_dir = 'data/saffron/ukraine_regions'
-specs_dir = os.path.abspath(os.environ.get('SPECS_DIR'))  # specs_dir = 'docker/collectors/saffron/ukraine_regions/specs'
+data_dir = 'data'  # data_dir = 'data/saffron/ukraine_regions'
+specs_dir = 'specs'  # specs_dir = 'docker/collectors/saffron/ukraine_regions/specs'
 
 # start time
 collection_start_time = datetime.datetime.now()
