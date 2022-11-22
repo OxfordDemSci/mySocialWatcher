@@ -1,0 +1,54 @@
+# docker-compose to deploy one or multiple collectors (i.e. services)
+version: '3.3'
+
+services:
+
+  dailyuk:
+    container_name: dailyuk
+    volumes:
+      - ./dailyuk:/app/in
+      - ./../../../data/bester/dailyuk:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
+  eupop:
+    container_name: eupop
+    volumes:
+      - ./eupop:/app/in
+      - ./../../../data/bester/eupop:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
+  migrationuk_mon_all:
+    container_name: migrationuk_mon_all
+    volumes:
+      - ./migrationuk_mon_all:/app/in
+      - ./../../../data/bester/migrationuk_mon_all:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
+  migrationuk_tue_men:
+    container_name: migrationuk_tue_men
+    volumes:
+      - ./migrationuk_tue_men:/app/in
+      - ./../../../data/bester/migrationuk_tue_men:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
+  migrationuk_wed_women:
+    container_name: migrationuk_wed_women
+    volumes:
+      - ./migrationuk_wed_women:/app/in
+      - ./../../../data/bester/migrationuk_wed_women:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
