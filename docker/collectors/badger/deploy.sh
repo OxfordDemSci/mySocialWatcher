@@ -1,12 +1,19 @@
 #!/bin/bash
 
-# config
-cd ~/mySocialWatcher
-python3 config/collections/dgg_national.py
+VM="badger"
+COLLECTIONS=("dgg_national")
+DIR="~/mySocialWatcher"
 
 # cron
-sudo cp ~/mySocialWatcher/docker/collectors/badger/badger_crontab /etc/cron.d/
+sudo cp ${DIR}/docker/collectors/${VM}_crontab /etc/cron.d/
+
+# config
+cd ${DIR}
+for COLLECTION in ${COLLECTIONS[@]};
+do
+  python3 config/collections/${COLLECTION}.py
+done
 
 # docker
-cd ~/mySocialWatcher/docker/collectors/badger
+cd ${DIR}/docker/collectors/${VM}
 docker-compose up -d --build

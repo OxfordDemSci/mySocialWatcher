@@ -1,7 +1,7 @@
 #!/bin/bash
 
-VM="saffron"
-COLLECTIONS=("ukraine_countries" "ukraine_europe" "ukraine_language" "ukraine_neighbours1" "ukraine_neighbours2" "ukraine_regions")
+VM="bester"
+COLLECTIONS=("dailyuk" "eupop" "migrationuk_mon_all" "migrationuk_tue_men" "migrationuk_wed_women")
 DIR="~/mySocialWatcher"
 
 # cron

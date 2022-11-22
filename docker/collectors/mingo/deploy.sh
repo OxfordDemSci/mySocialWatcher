@@ -1,13 +1,19 @@
 #!/bin/bash
 
-# config
-cd ~/mySocialWatcher
-python3 config/collections/rus_exodus_facebook.py
-python3 config/collections/rus_exodus_instagram.py
+VM="mingo"
+COLLECTIONS=("rus_exodus_facebook" "rus_exodus_instagram")
+DIR="~/mySocialWatcher"
 
 # cron
-sudo cp ~/mySocialWatcher/docker/collectors/mingo/mingo_crontab /etc/cron.d/
+sudo cp ${DIR}/docker/collectors/${VM}_crontab /etc/cron.d/
+
+# config
+cd ${DIR}
+for COLLECTION in ${COLLECTIONS[@]};
+do
+  python3 config/collections/${COLLECTION}.py
+done
 
 # docker
-cd ~/mySocialWatcher/docker/collectors/mingo
+cd ${DIR}/docker/collectors/${VM}
 docker-compose up -d --build
