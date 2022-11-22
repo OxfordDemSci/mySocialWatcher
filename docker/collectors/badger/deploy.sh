@@ -2,7 +2,7 @@
 
 VM="badger"
 COLLECTIONS=("dgg_national")
-DIR="~/mySocialWatcher"
+DIR="/home/ubuntu/mySocialWatcher"
 
 # cron
 sudo cp ${DIR}/docker/collectors/${VM}_crontab /etc/cron.d/
@@ -17,3 +17,7 @@ done
 # docker
 cd ${DIR}/docker/collectors/${VM}
 docker-compose up -d --build
+
+unset VM
+unset COLLECTIONS
+unset DIR
