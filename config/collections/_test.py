@@ -16,21 +16,9 @@ if __name__ == '__main__':
 
     # paths
     master_credentials_path = os.path.join('config', 'private', 'credentials_master.csv')
-    env_template_path = os.path.join('config', 'private', 'collector.env')
     specs_template_path = os.path.join('config', 'specs', '_test.json')
-    cron_template_path = os.path.join('config', 'cron', 'daily')
     out_dir = os.path.join('docker', 'collectors', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
-
-    # ---- environment ---- #
-
-    shutil.copy(src=env_template_path,
-                dst=os.path.join(out_dir, '.env'))
-
-    # ---- cron ---- #
-
-    shutil.copy(src=cron_template_path,
-                dst=os.path.join(out_dir, 'cronjob'))
 
     # ---- create credentials.csv ---- #
 
