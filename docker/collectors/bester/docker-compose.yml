@@ -23,6 +23,16 @@ services:
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
+  k_fertility:
+    container_name: k_fertility
+    volumes:
+      - ./k_fertility:/app/in
+      - ./../../../data/bester/k_fertility:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
   migrationuk_mon_all:
     container_name: migrationuk_mon_all
     volumes:
