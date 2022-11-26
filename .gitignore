@@ -1,7 +1,7 @@
 data
 private*
 venv
-.env
+*.env
 
 .Rhistory
 .idea/
