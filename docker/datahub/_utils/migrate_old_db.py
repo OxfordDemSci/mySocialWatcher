@@ -86,12 +86,14 @@ if __name__ == '__main__':
         sql = 'select * from facebook where contributor_id = 4;'
         result = conn.execute(sql)
 
+        i = 0
         for row in result.mappings():
-            write_row(row,
-                      table='facebook',
-                      collection='dgg_national',
-                      token=jiani_token,
-                      valid=True)
+            i += 1
+            response = write_row(row,
+                                 table='facebook',
+                                 collection='dgg_national',
+                                 token=jiani_token,
+                                 valid=True)
 
     # Ian's Facebook collections for DGG
     with engine.connect() as conn:
@@ -100,7 +102,9 @@ if __name__ == '__main__':
         sql = 'select * from facebook where contributor_id = 3;'
         result = conn.execute(sql)
 
+        i = 0
         for row in result.mappings():
+            i += 1
             response = write_row(row,
                                  table='facebook',
                                  collection='dgg_national',
