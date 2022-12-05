@@ -164,12 +164,13 @@ def crawler(data_dir, token, url='http://127.0.0.1/api/v1/social_media_audience/
 
     # file list
     file_list = []
-    for (root, dirs, file) in os.walk(data_dir):
-        if crawl_dir not in root:
-            for f in file:
-                full_path = os.path.join(root, f)
-                if "finished/dataframe_collected_finished_" in full_path:
-                    file_list.append(full_path)
+    exclude_dirs = ['crawler', 'db-data']
+    for (root, dirs, file) in os.walk(data_dir, topdown=True):
+        dirs[:] = [d for d in dirs if d not in exclude_dirs]
+        for f in file:
+            full_path = os.path.join(root, f)
+            if "finished/dataframe_collected_finished_" in full_path:
+                file_list.append(full_path)
 
     # ---- finished ---- #
     for file in file_list:
