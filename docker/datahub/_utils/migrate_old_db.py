@@ -1,5 +1,6 @@
 import os
 import json
+import math
 import logging
 import datetime
 import requests
@@ -23,7 +24,7 @@ logging.basicConfig(
     datefmt='%d-%b-%y %H:%M:%S',
     filemode='a')
 logger = logging.getLogger()
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.WARNING)
 
 
 def write_row(row, table, token, collection=None, valid=False):
@@ -56,6 +57,8 @@ def write_row(row, table, token, collection=None, valid=False):
             drop.append(i)
         elif isinstance(args.get(i), float) and math.isnan(args.get(i)):
             drop.append(i)
+        elif args.get(i) == '{}':
+            drop.append(i)
     for i in drop:
         del args[i]
 
@@ -64,7 +67,7 @@ def write_row(row, table, token, collection=None, valid=False):
         response = requests.get(url=api_url, params=args)
         response = literal_eval(json.dumps(response.json()))
 
-        if response.get('status') == 200:
+        if response.get('status') in [200, 409]:
             logger.info(str(response))
         else:
             logger.warning(str(response))
@@ -83,30 +86,38 @@ if __name__ == '__main__':
     # Jiani's Facebook collections for DGG
     with engine.connect() as conn:
 
+        logger.info('Migrating Jiani\'s collections...')
+
         sql = 'select * from facebook where contributor_id = 4;'
         result = conn.execute(sql)
 
-        i = 0
+        row_idx = 0
         for row in result.mappings():
-            i += 1
+            row_idx += 1
             response = write_row(row,
                                  table='facebook',
                                  collection='dgg_national',
                                  token=jiani_token,
                                  valid=True)
 
-    # Ian's Facebook collections for DGG
-    with engine.connect() as conn:
-        # conn = engine.connect()
+        logger.info('Finished migrating Jiani\'s collections...')
 
-        sql = 'select * from facebook where contributor_id = 3;'
-        result = conn.execute(sql)
-
-        i = 0
-        for row in result.mappings():
-            i += 1
-            response = write_row(row,
-                                 table='facebook',
-                                 collection='dgg_national',
-                                 token=ian_token,
-                                 valid=False)
+    # # Ian's Facebook collections for DGG
+    # with engine.connect() as conn:
+    #     # conn = engine.connect()
+    #
+    #     logger.info('Migrating Ian\'s collections...')
+    #
+    #     sql = 'select * from facebook where contributor_id = 3;'
+    #     result = conn.execute(sql)
+    #
+    #     row_idx = 0
+    #     for row in result.mappings():
+    #         row_idx += 1
+    #         response = write_row(row,
+    #                              table='facebook',
+    #                              collection='dgg_national',
+    #                              token=ian_token,
+    #                              valid=True)
+    #
+    #     logger.info('Finished migrating Ian\'s collections.')
