@@ -11,7 +11,7 @@ if __name__ == '__main__':
 
     # ---- paths ---- #
     master_credentials_path = os.path.join('config', 'private', 'credentials_master.csv')
-    specs_template_path = os.path.join('config', 'specs', 'examples', collection + '.json')
+    specs_template_path = os.path.join('config', 'specs', 'examples')
     out_dir = os.path.join('docker', 'collectors', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
 
@@ -43,4 +43,6 @@ if __name__ == '__main__':
     for f in os.listdir(specs_dir):
         os.remove(os.path.join(specs_dir, f))
 
-    shutil.copy(specs_template_path, os.path.join(specs_dir, collection + '.json'))
+    specs = ['dgg_national.json', 'dgg_national_18.json', 'dgg_national_android.json']
+    for spec in specs:
+        shutil.copy(os.path.join(specs_template_path, spec), os.path.join(specs_dir, spec))
