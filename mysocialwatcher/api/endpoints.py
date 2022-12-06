@@ -99,10 +99,9 @@ def write_fun(args):
 
     # check arguments
     result = check_args(args,
-                        required=['token', 'platform', 'timestamp', 'country', 'geo_locations', 'gender',
-                                  'age_min', 'dau'],
+                        required=['token', 'platform', 'timestamp', 'geo_locations', 'gender', 'age_min', 'dau'],
                         required_oneof=['mau', 'mau_lower', 'mau_upper'],
-                        optional=['valid', 'collection', 'age_max', 'all_fields', 'targeting', 'response'])
+                        optional=['valid', 'country', 'collection', 'age_max', 'all_fields', 'targeting', 'response'])
     args = result.get('args')
     status = result.get('status')
     message = result.get('message')

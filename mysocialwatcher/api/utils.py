@@ -2,6 +2,7 @@ import os
 import json
 import datetime
 import pandas as pd
+import warnings
 import sqlalchemy, psycopg2
 from ast import literal_eval
 from dotenv import load_dotenv
@@ -63,6 +64,31 @@ def register_collection(collection_name, conn):
 
     result = int(df['id'][0])
     return result
+
+
+def countries_from_geo_locations(geo_locations):
+
+    if geo_locations.get('name') == 'countries':
+        result = geo_locations.get('values')
+
+    else:
+        result = []
+
+        if 'pySocialWatcherReference' in geo_locations.keys():
+            x = list(filter(lambda k: 'country:' in k,
+                            geo_locations.get('pySocialWatcherReference').split('; ')))
+            result += list(set([item.split(':')[1] for item in x]))
+
+        for value in geo_locations.get('values'):
+            country_keys = [k for k in value.keys()
+                            if 'country' in k and
+                            isinstance(value.get(k), str) and
+                            len(value.get(k)) == 2]
+
+            for country_key in list(set(country_keys)):
+                result.append(value.get(country_key))
+
+    return list(set(result))
 
 
 def check_args(args, required=[], required_oneof=[], optional=[]):
@@ -146,21 +172,19 @@ def check_args(args, required=[], required_oneof=[], optional=[]):
     # compare country to geo_locations
     if status == 200 and 'geo_locations' in args.keys():
         geo_locations = literal_eval(args.get('geo_locations'))
-        if geo_locations.get('name') == 'countries':
-            if len(geo_locations.get('values')) > 1:
-                status = 400
-                message = "Bad request: Each record may only contain data for a single geography (i.e. country)."
-            elif not geo_locations.get('values')[0] == args.get('country'):
-                args['country'] = geo_locations.get('values')[0]
-                message += " Redefined 'country' using 'geo_locations' due to mismatch."
-        elif geo_locations.get('name') == 'regions':
-            if len(geo_locations.get('values')) > 1:
-                status = 400
-                message = "Bad request: Each record may only contain data for a single geography (i.e. region)."
-            elif not geo_locations.get('values')[0].get('country_code') == args.get('country'):
-                args['country'] = geo_locations.get('values')[0].get('country_code')
-                message += " Redefined 'country' using 'geo_locations' due to mismatch."
-        elif args.get('country') in ['XX']:
+
+        countries = countries_from_geo_locations(geo_locations)
+        if len(countries) == 0:
+            status = 400
+            message = "Bad request: iso-2 country code could not be determined from 'geo_locations' argument."
+        elif len(countries) > 1:
+            status = 400
+            message = "Bad request: More than one iso-2 country code identified from 'geo_locations' argument."
+        elif not args.get('country') == countries[0]:
+            args['country'] = countries[0]
+            message += " Redefined 'country' using 'geo_locations' due to mismatch."
+
+        if status == 200 and args.get('country') in ['XX']:
             status = 400
             message = "Bad request: '{}' is not a valid country code.".format(args.get('country'))
 
