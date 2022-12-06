@@ -55,10 +55,7 @@ CREATE TABLE tokens (
 GRANT SELECT ON tokens TO writer;
 GRANT USAGE,SELECT ON SEQUENCE tokens_id_seq TO writer, reader;
 
-INSERT INTO tokens (contributor_id, write)
-VALUES
-(1, True),
-(1, False);
+INSERT INTO tokens (contributor_id, write) VALUES (1, True),
 "
 
 #---------- data ----------#
@@ -70,8 +67,8 @@ CREATE TABLE facebook (
 	collection_id INT REFERENCES collections(id) ON DELETE SET NULL,
 	contributor_id INT REFERENCES contributors(id) ON DELETE SET NULL,
   contributed_on TIMESTAMPTZ(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
-  country CHAR(2) NOT NULL,
   date DATE NOT NULL,
+  country CHAR(2) NOT NULL,
   gender SMALLINT NOT NULL,
 	age_min SMALLINT NOT NULL DEFAULT 0,
 	age_max SMALLINT NOT NULL DEFAULT 999,
@@ -111,8 +108,8 @@ CREATE TABLE facebook_invalid (
 	collection_id INT REFERENCES collections(id) ON DELETE SET NULL,
 	contributor_id INT REFERENCES contributors(id) ON DELETE SET NULL,
   contributed_on TIMESTAMPTZ(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
-  country CHAR(2) NOT NULL,
   date DATE NOT NULL,
+  country CHAR(2) NOT NULL,
   gender SMALLINT NOT NULL,
 	age_min SMALLINT NOT NULL DEFAULT 0,
 	age_max SMALLINT NOT NULL DEFAULT 999,
@@ -138,8 +135,8 @@ CREATE TABLE instagram (
 	collection_id INT REFERENCES collections(id) ON DELETE SET NULL,
 	contributor_id INT REFERENCES contributors(id) ON DELETE SET NULL,
   contributed_on TIMESTAMPTZ(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
-  country CHAR(2) NOT NULL,
   date DATE NOT NULL,
+  country CHAR(2) NOT NULL,
   gender SMALLINT NOT NULL,
 	age_min SMALLINT NOT NULL DEFAULT 0,
 	age_max SMALLINT NOT NULL DEFAULT 999,
@@ -179,8 +176,8 @@ CREATE TABLE instagram_invalid (
 	collection_id INT REFERENCES collections(id) ON DELETE SET NULL,
 	contributor_id INT REFERENCES contributors(id) ON DELETE SET NULL,
   contributed_on TIMESTAMPTZ(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
-  country CHAR(2) NOT NULL,
   date DATE NOT NULL,
+  country CHAR(2) NOT NULL,
   gender SMALLINT NOT NULL,
 	age_min SMALLINT NOT NULL DEFAULT 0,
 	age_max SMALLINT NOT NULL DEFAULT 999,

@@ -48,7 +48,7 @@ services:
     volumes:
       - ./initdb.sh:/docker-entrypoint-initdb.d/initdb.sh
       - ./postgresql.conf:/etc/postgresql/postgresql.conf
-      - ../../data/db-data:/datahub
+      - ../../data/db-data:/db-data
     networks:
       - net
     ports:
