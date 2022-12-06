@@ -55,7 +55,7 @@ CREATE TABLE tokens (
 GRANT SELECT ON tokens TO writer;
 GRANT USAGE,SELECT ON SEQUENCE tokens_id_seq TO writer, reader;
 
-INSERT INTO tokens (contributor_id, write) VALUES (1, True),
+INSERT INTO tokens (contributor_id, write) VALUES (1, True)
 "
 
 #---------- data ----------#
