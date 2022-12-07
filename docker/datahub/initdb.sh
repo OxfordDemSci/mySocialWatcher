@@ -67,7 +67,7 @@ CREATE TABLE facebook (
 	collection_id INT REFERENCES collections(id) ON DELETE SET NULL,
 	contributor_id INT REFERENCES contributors(id) ON DELETE SET NULL,
   contributed_on TIMESTAMPTZ(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
-  date DATE NOT NULL,
+  collection_date DATE NOT NULL,
   country CHAR(2) NOT NULL,
   gender SMALLINT NOT NULL,
 	age_min SMALLINT NOT NULL DEFAULT 0,
@@ -81,12 +81,12 @@ CREATE TABLE facebook (
 	all_fields jsonb DEFAULT '{}'::jsonb,
 	targeting jsonb DEFAULT '{}'::jsonb,
 	response jsonb DEFAULT '{}'::jsonb,
-  UNIQUE(country, date, geo_locations, gender, age_min, age_max, dau, targeting, response)
+  UNIQUE(country, collection_date, geo_locations, gender, age_min, age_max, dau, targeting, response)
 ) PARTITION BY LIST (country);
 
 CREATE INDEX contributor_fb_idx ON facebook(contributor_id);
 CREATE INDEX collection_fb_idx ON facebook(collection_id);
-CREATE INDEX date_fb_idx ON facebook(date);
+CREATE INDEX date_fb_idx ON facebook(collection_date);
 CREATE INDEX gender_fb_idx ON facebook(gender);
 CREATE INDEX age_fb_idx ON facebook(age_min, age_max);
 
@@ -108,7 +108,7 @@ CREATE TABLE facebook_invalid (
 	collection_id INT REFERENCES collections(id) ON DELETE SET NULL,
 	contributor_id INT REFERENCES contributors(id) ON DELETE SET NULL,
   contributed_on TIMESTAMPTZ(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
-  date DATE NOT NULL,
+  collection_date DATE NOT NULL,
   country CHAR(2) NOT NULL,
   gender SMALLINT NOT NULL,
 	age_min SMALLINT NOT NULL DEFAULT 0,
@@ -122,7 +122,7 @@ CREATE TABLE facebook_invalid (
 	all_fields jsonb DEFAULT '{}'::jsonb,
 	targeting jsonb DEFAULT '{}'::jsonb,
 	response jsonb DEFAULT '{}'::jsonb,
-  UNIQUE(country, date, geo_locations, gender, age_min, age_max, dau, targeting, response)
+  UNIQUE(country, collection_date, geo_locations, gender, age_min, age_max, dau, targeting, response)
 );
 GRANT SELECT ON facebook_invalid TO reader;
 GRANT SELECT,INSERT ON facebook_invalid TO writer;
@@ -135,7 +135,7 @@ CREATE TABLE instagram (
 	collection_id INT REFERENCES collections(id) ON DELETE SET NULL,
 	contributor_id INT REFERENCES contributors(id) ON DELETE SET NULL,
   contributed_on TIMESTAMPTZ(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
-  date DATE NOT NULL,
+  collection_date DATE NOT NULL,
   country CHAR(2) NOT NULL,
   gender SMALLINT NOT NULL,
 	age_min SMALLINT NOT NULL DEFAULT 0,
@@ -149,11 +149,11 @@ CREATE TABLE instagram (
 	all_fields jsonb DEFAULT '{}'::jsonb,
 	targeting jsonb DEFAULT '{}'::jsonb,
 	response jsonb DEFAULT '{}'::jsonb,
-  UNIQUE(country, date, geo_locations, gender, age_min, age_max, dau, targeting, response)
+  UNIQUE(country, collection_date, geo_locations, gender, age_min, age_max, dau, targeting, response)
 ) PARTITION BY LIST (country);
 CREATE INDEX contributor_ig_idx ON instagram(contributor_id);
 CREATE INDEX collection_ig_idx ON instagram(collection_id);
-CREATE INDEX date_ig_idx ON instagram(date);
+CREATE INDEX date_ig_idx ON instagram(collection_date);
 CREATE INDEX gender_ig_idx ON instagram(gender);
 CREATE INDEX age_ig_idx ON instagram(age_min, age_max);
 
@@ -176,7 +176,7 @@ CREATE TABLE instagram_invalid (
 	collection_id INT REFERENCES collections(id) ON DELETE SET NULL,
 	contributor_id INT REFERENCES contributors(id) ON DELETE SET NULL,
   contributed_on TIMESTAMPTZ(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
-  date DATE NOT NULL,
+  collection_date DATE NOT NULL,
   country CHAR(2) NOT NULL,
   gender SMALLINT NOT NULL,
 	age_min SMALLINT NOT NULL DEFAULT 0,
@@ -190,7 +190,7 @@ CREATE TABLE instagram_invalid (
 	all_fields jsonb DEFAULT '{}'::jsonb,
 	targeting jsonb DEFAULT '{}'::jsonb,
 	response jsonb DEFAULT '{}'::jsonb,
-  UNIQUE(country, date, geo_locations, gender, age_min, age_max, dau, targeting, response)
+  UNIQUE(country, collection_date, geo_locations, gender, age_min, age_max, dau, targeting, response)
 );
 GRANT SELECT ON instagram_invalid TO reader;
 GRANT SELECT,INSERT ON instagram_invalid TO writer;

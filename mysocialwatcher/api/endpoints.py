@@ -46,12 +46,13 @@ def query_fun(args):
     if status == 200:
 
         # list query columns
-        cols = ['id', 'collection_id', 'contributor_id', 'contributed_on', 'country', 'geo_locations',
-                'date', 'timestamp', 'gender', 'age_min', 'age_max',
-                'dau',  'mau', 'mau_lower', 'mau_upper', 'all_fields', 'targeting', 'response']
+        cols = ['collection_id', 'contributor_id', 'contributed_on', 'collection_date', 'timestamp',
+                'country', 'gender', 'age_min', 'age_max',
+                'dau',  'mau', 'mau_lower', 'mau_upper',
+                'geo_locations', 'all_fields', 'targeting', 'response']
 
         # cast dates to text
-        cast_cols = ['contributed_on', 'date']
+        cast_cols = ['contributed_on', 'collection_date']
         for i in range(len(cols)):
             if cols[i] in cast_cols:
                 cols[i] = cols[i] + '::text'
@@ -65,9 +66,9 @@ def query_fun(args):
         for i in set(args.keys()).intersection(['collection_id', 'contributor_id', 'platform', 'country', 'gender', 'age_min', 'age_max']):
             sql +=  i + '=' + str(args.get(i)) + ' AND '
         if 'date_start' in args.keys():
-            sql += "date >= " + str(args.get('date_start')) + " AND "
+            sql += "collection_date >= " + str(args.get('date_start')) + " AND "
         if 'date_end' in args.keys():
-            sql += "date <= " + str(args.get('date_end')) + " AND "
+            sql += "collection_date <= " + str(args.get('date_end')) + " AND "
         sql = sql[:-5] + ';'
 
         # query database
@@ -133,7 +134,7 @@ def write_fun(args):
 
         # reformat timestamp
         dt_obj = datetime.datetime.fromtimestamp(int(args.get('timestamp')))
-        args['date'] = "'" + dt_obj.strftime('%Y-%m-%d') + "'"
+        args['collection_date'] = "'" + dt_obj.strftime('%Y-%m-%d') + "'"
         # args['timestamp_iso'] = "'" + dt_obj.isoformat(sep=" ")[:-3] + "'"
 
         # table name
