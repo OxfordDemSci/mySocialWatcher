@@ -110,7 +110,7 @@ def check_args(args, required=[], required_oneof=[], optional=[]):
                     'dau', 'mau', 'mau_lower', 'mau_upper']
     json_args = ['geo_locations', 'all_fields', 'targeting', 'response']
     boolean_args = ['valid']
-    date_args = ['date_start', 'date_end', 'date']
+    date_args = ['date_start', 'date_end', 'collection_date']
     quote_args = ['country'] + json_args + date_args
 
     platforms_allowed = ['facebook', 'instagram']
