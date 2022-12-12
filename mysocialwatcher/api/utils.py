@@ -2,29 +2,28 @@ import os
 import json
 import datetime
 import pandas as pd
-import warnings
 import sqlalchemy, psycopg2
 from ast import literal_eval
 from dotenv import load_dotenv
 
 load_dotenv()
-postgres_wpass = os.environ.get('POSTGRES_WPASS')
-postgres_host = os.environ.get('POSTGRES_HOST')
-postgres_port = os.environ.get('POSTGRES_PORT')
-postgres_db = os.environ.get('POSTGRES_DB')
+
 
 def timestr():
     return datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc, microsecond=0).isoformat(sep=" ")[:-3]
 
 
-def conn_to_database():
+def conn_to_database(pw=os.environ.get('POSTGRES_WPASS'),
+                     host=os.environ.get('POSTGRES_HOST'),
+                     port=os.environ.get('POSTGRES_PORT'),
+                     db=os.environ.get('POSTGRES_DB')):
 
     conn = sqlalchemy.create_engine('postgresql+psycopg2://' + \
                          'writer:' + \
-                         postgres_wpass + '@' + \
-                         postgres_host + ':' + \
-                         postgres_port + '/' + \
-                         postgres_db)
+                         pw + '@' + \
+                         host + ':' + \
+                         port + '/' + \
+                         db)
 
     return conn
 

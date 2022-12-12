@@ -1,5 +1,4 @@
 import sqlalchemy.exc
-
 from mysocialwatcher.api.utils import *
 
 
@@ -19,9 +18,9 @@ def query_fun(args):
 
     # check arguments
     result = check_args(args,
-                        required=['token', 'platform', 'country'],
+                        required=['token', 'platform'],
                         required_oneof=[],
-                        optional=['valid', 'contributor_id', 'collection', 'date_start', 'date_end',
+                        optional=['valid', 'country', 'contributor_id', 'collection', 'date_start', 'date_end',
                                   'gender', 'age_min', 'age_max'])
     args = result.get('args')
     status = result.get('status')
@@ -177,3 +176,24 @@ def write_fun(args):
 
     # return result
     return {"status": status, "message": message, "timestamp": timestr()}
+
+
+def collections_fun():
+
+    status = 200
+
+    try:
+
+        conn = conn_to_database()
+
+        response = conn.execute('select id, name from collections;').fetchall()
+
+        data = dict(response)
+
+        message = 'OK: Collections successfully queried.'
+
+    except sqlalchemy.exc.SQLAlchemyError as e:
+        status = e.code
+        message = e._message()
+
+    return {'status': status, 'message': message, 'data': data, 'timestamp': timestr()}
