@@ -8,6 +8,9 @@ from dotenv import load_dotenv
 load_dotenv()
 limiter_host = os.environ.get('LIMITER_HOST')
 
+if not limiter_host:
+    limiter_host = 'datahub_limiter'
+
 # define rate limiting
 limiter = Limiter(app,
                   key_func=get_remote_address,
@@ -31,7 +34,7 @@ def home():
 
 @app.route('/social_media_audience/query', methods=['GET'])
 @app.route('/query', methods=['GET'])
-def fb_query():
+def query():
     """API endpoint to select data from the 'social_media_audience' database."""
     args = dict(request.args)
     if len(args) == 0:
@@ -46,7 +49,7 @@ def fb_query():
 @app.route('/social_media_audience/write', methods=['GET'])
 @app.route('/write', methods=['GET'])
 @limiter.exempt()
-def fb_write():
+def write():
     """API endpoint to insert data into the 'social_media_audience' database."""
     args = dict(request.args)
     if len(args) == 0:
@@ -58,8 +61,9 @@ def fb_write():
         return jsonify(result), result.get("status")
 
 
-# @app.route('/social_media_audience/write_geo', methods=['GET'])
-# @app.route('/write_geo', methods=['GET'])
-# def fb_write_geo():
-#     result = endpoints.write_geo_fun(dict(request.args))
-#     return jsonify(result), result.get("status")
+@app.route('/social_media_audience/collections', methods=['GET'])
+@app.route('/collections', methods=['GET'])
+def collections():
+    """API endpoint to query a complete list of collection names."""
+    result = endpoints.collections_fun()
+    return jsonify(result), result.get("status")
