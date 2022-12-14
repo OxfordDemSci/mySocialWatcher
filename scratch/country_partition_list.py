@@ -13,10 +13,10 @@ countries_list = ['AD', 'AE', 'AF', 'AG', 'AI', 'AL', 'AM', 'AN', 'AO', 'AQ', 'A
              'UG', 'UM', 'US', 'UY', 'UZ', 'VA', 'VC', 'VE', 'VG', 'VI', 'VN', 'VU', 'WF', 'WS', 'XK', 'YE', 'YT', 'ZA', 'ZM', 'ZW']
 # ['NU', 'SJ', 'TK']
 
-countries.sort()
+countries_list.sort()
 
 country_str = "("
-for i in range(len(countries)):
-    country_str += f'"{countries[i]}" '
+for i in range(len(countries_list)):
+    country_str += f'"{countries_list[i]}" '
 country_str = country_str[:-1] + ")"
-country_str
+print(country_str)
