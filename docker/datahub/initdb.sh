@@ -30,7 +30,7 @@ CREATE TABLE contributors (
 	name VARCHAR(50) NOT NULL,
 	email VARCHAR(50) NOT NULL,
 	collaborators INTEGER[] NOT NULL DEFAULT '{}',
-	collections INTEGER[] NOT NULL DEFAULT '{}'
+	collections INTEGER[] NOT NULL DEFAULT '{}',
 	UNIQUE(name)
 );
 GRANT SELECT ON contributors TO writer, reader;
