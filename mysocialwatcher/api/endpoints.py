@@ -37,7 +37,7 @@ def query_fun(args):
 
         status = result.get('status')
         if status == 200:
-            args['contributor_id'] = result.get('contributor_id')
+            contributor_id = result.get('contributor_id')
             args.pop('token')
         else:
             message = result.get('message')
@@ -60,17 +60,32 @@ def query_fun(args):
         table = args.get('table')
         args.pop('table')
 
-        # create sql query
-        sql = "SELECT " + ','.join(cols) + " FROM " + table + " WHERE "
-        for i in set(args.keys()).intersection(['collection_id', 'contributor_id', 'platform', 'country', 'gender', 'age_min', 'age_max']):
-            sql +=  i + '=' + str(args.get(i)) + ' AND '
-        if 'date_start' in args.keys():
-            sql += "collection_date >= " + str(args.get('date_start')) + " AND "
-        if 'date_end' in args.keys():
-            sql += "collection_date <= " + str(args.get('date_end')) + " AND "
-        sql = sql[:-5] + ';'
+        # ----  create sql query ---- #
 
-        # query database
+        # select: from table
+        sql = "SELECT " + ",".join(cols) + f" FROM {table} WHERE "
+
+        # where: arguments
+        for i in set(args.keys()).intersection(['country', 'gender', 'age_min', 'age_max']):
+            sql +=  f"{i} = {str(args.get(i))} AND "
+
+        # where: date range
+        if 'date_start' in args.keys():
+            sql += f"collection_date >= {str(args.get('date_start'))} AND "
+        if 'date_end' in args.keys():
+            sql += f"collection_date <= {str(args.get('date_end'))} AND "
+
+        # where: collection_id from collection name
+        if 'collection' in args.keys():
+            sql += f"collection_id = (SELECT id FROM collections WHERE name = {args.get('collection')}) AND "
+
+        # where: access permissions for collaborators' data or entire collections
+        sql += "(" + \
+               f"collection_id IN (SELECT UNNEST(collections) FROM contributors WHERE id={contributor_id}) OR " \
+               f"contributor_id IN (SELECT UNNEST(collaborators) FROM contributors WHERE id={contributor_id})" + \
+               ");"
+
+        #---- query database ----#
         try:
             data = pd.read_sql(sql, conn)
             data = data.to_json()
