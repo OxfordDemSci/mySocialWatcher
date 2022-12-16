@@ -16,6 +16,9 @@ def query_fun(args):
     if 'valid' not in args.keys():
         args['valid'] = True
 
+    # limit response to n rows
+    limit_rows = 100000
+
     # check arguments
     result = check_args(args,
                         required=['token', 'platform'],
@@ -83,13 +86,24 @@ def query_fun(args):
         sql += "(" + \
                f"collection_id IN (SELECT UNNEST(collections) FROM contributors WHERE id={contributor_id}) OR " \
                f"contributor_id IN (SELECT UNNEST(collaborators) FROM contributors WHERE id={contributor_id})" + \
-               ");"
+               ") "
+
+        # limit number of rows returned
+        sql += f"LIMIT {limit_rows};"
 
         #---- query database ----#
         try:
             data = pd.read_sql(sql, conn)
+
+            if len(data) < limit_rows:
+                status = 200
+                message = 'OK: Data successfully selected from database.'
+            else:
+                status = 206
+                message = f'Partial Content: Result truncated to {limit_rows} rows. Revise query to reduce size ' \
+                          f'(e.g. specific country, dates, and/or demographics).'
+
             data = data.to_json()
-            message = 'OK: Data successfully selected from database.'
 
         except Exception as e:
             exc = e.__dict__
