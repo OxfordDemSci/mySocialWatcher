@@ -13,25 +13,35 @@ services:
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
-  ukraine_neighbours1:
-    container_name: ukraine_neighbours1
+  ukraine_neighbours:
+    container_name: ukraine_neighbours
     volumes:
-      - ./ukraine_neighbours1:/app/in
-      - ./../../../data/saffron/ukraine_neighbours1:/app/data
+      - ./ukraine_neighbours:/app/in
+      - ./../../../data/saffron/ukraine_neighbours:/app/data
     build:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
-  ukraine_neighbours2:
-    container_name: ukraine_neighbours2
-    volumes:
-      - ./ukraine_neighbours2:/app/in
-      - ./../../../data/saffron/ukraine_neighbours2:/app/data
-    build:
-      context: ./../../../
-      dockerfile: ./docker/collectors/Dockerfile
-    restart: on-failure
+#  ukraine_neighbours1:
+#    container_name: ukraine_neighbours1
+#    volumes:
+#      - ./ukraine_neighbours1:/app/in
+#      - ./../../../data/saffron/ukraine_neighbours1:/app/data
+#    build:
+#      context: ./../../../
+#      dockerfile: ./docker/collectors/Dockerfile
+#    restart: on-failure
+
+#  ukraine_neighbours2:
+#    container_name: ukraine_neighbours2
+#    volumes:
+#      - ./ukraine_neighbours2:/app/in
+#      - ./../../../data/saffron/ukraine_neighbours2:/app/data
+#    build:
+#      context: ./../../../
+#      dockerfile: ./docker/collectors/Dockerfile
+#    restart: on-failure
 
   ukraine_language:
     container_name: ukraine_language
