@@ -1,7 +1,7 @@
 import gzip
 import pandas as pd
 from pysocialwatcher.json_builder import JSONBuilder, AgeList, Age, Genders, LocationList, Location
-
+from pysocialwatcher import watcherAPI
 
 def master_specs(country, regions=True, cities=False):
     """
