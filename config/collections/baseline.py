@@ -45,7 +45,7 @@ if __name__ == '__main__':
 
 
     countries = ['AF', 'BD', 'BF', 'BR', 'CD', 'CM', 'CO', 'CU', 'EC', 'ET', 'GH', 'GN', 'GT', 'HT', 'IL', 'IQ' ,'IN',
-                 'LY', 'ML', 'MM', 'MZ', 'NE', 'NG', 'NP', 'PK', 'PS', 'SD', 'SL', 'SO', 'SS', 'SY', 'UA', 'VE', 'YE',
+                 'LY', 'ML', 'MM', 'MZ', 'NE', 'NG', 'NP', 'PE', 'PK', 'PS', 'SD', 'SL', 'SO', 'SS', 'SY', 'UA', 'VE', 'YE',
                  'ZA', 'ZM']
     drop_countries = ['UA']
     countries = [i for i in countries if i not in drop_countries]
@@ -71,7 +71,7 @@ if __name__ == '__main__':
             specs["publisher_platforms"] = [platform]
             specs['languages'] = [None]
 
-            file_out = os.path.join(specs_dir, '_'.join([str(i), country, platform]) + '.json')
+            file_out = os.path.join(specs_dir, '_'.join([country, platform]) + '.json')
             with open(file_out, "w") as f:
                 f.write(json.dumps(specs))
 
