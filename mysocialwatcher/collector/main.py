@@ -4,10 +4,7 @@ from pysocialwatcher import watcherAPI, constants
 
 if __name__ == '__main__':
 
-    # specs
-    specs_list = os.listdir(specs_dir)
-    specs_list = [f for f in specs_list if f.endswith('.json')]
-    specs_list.sort()
+    specs_list = get_specs_list()
 
     for specs_filename in specs_list:
         # specs_filename = specs_list[0]
