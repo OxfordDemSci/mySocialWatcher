@@ -103,14 +103,14 @@ if __name__ == '__main__':
     with open(file_out, "w") as f:
         f.write(json.dumps(specs))
 
-    # ---- All languages ['home', 'recent']----#
-
-    specs["publisher_platforms"] = ['facebook']
-    specs['languages'] = [None]
-    for i in range(len(specs.get('geo_locations'))):
-        specs['geo_locations'][i]['location_types'] = ['home', 'recent']
-
-    # write to file
-    file_out = os.path.join(specs_dir, '7_facebook_all_homerecent.json')
-    with open(file_out, "w") as f:
-        f.write(json.dumps(specs))
+    # # ---- All languages ['home', 'recent']----#
+    #
+    # specs["publisher_platforms"] = ['facebook']
+    # specs['languages'] = [None]
+    # for i in range(len(specs.get('geo_locations'))):
+    #     specs['geo_locations'][i]['location_types'] = ['home', 'recent']
+    #
+    # # write to file
+    # file_out = os.path.join(specs_dir, '7_facebook_all_homerecent.json')
+    # with open(file_out, "w") as f:
+    #     f.write(json.dumps(specs))
