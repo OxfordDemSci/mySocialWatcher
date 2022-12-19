@@ -13,53 +13,54 @@ def timestr():
     return datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc, microsecond=0).isoformat(sep=" ")[:-3]
 
 
-def conn_to_database(pw=os.environ.get('POSTGRES_WPASS'),
-                     host=os.environ.get('POSTGRES_HOST'),
-                     port=os.environ.get('POSTGRES_PORT'),
-                     db=os.environ.get('POSTGRES_DB')):
+def db_engine(pw=os.environ.get('POSTGRES_WPASS'),
+              host=os.environ.get('POSTGRES_HOST'),
+              port=os.environ.get('POSTGRES_PORT'),
+              db=os.environ.get('POSTGRES_DB')):
 
-    conn = sqlalchemy.create_engine('postgresql+psycopg2://' + \
-                         'writer:' + \
-                         pw + '@' + \
-                         host + ':' + \
-                         port + '/' + \
-                         db)
+    engine_string = 'postgresql+psycopg2://writer:' + pw + '@' + host + ':' + port + '/' + db
 
-    return conn
+    db = sqlalchemy.create_engine(engine_string, poolclass=sqlalchemy.pool.NullPool)
+
+    return db
 
 
-def validate_token(token, conn, write_access=False):
+def validate_token(token, db, write_access=False):
 
-    sql = "SELECT contributor_id FROM tokens WHERE token='{}';".format(token)
-    if write_access:
-        sql = sql.replace(';', ' and write=True;')
+    with db.connect() as conn:
 
-    df = pd.read_sql(sql, conn)
+        sql = "SELECT contributor_id FROM tokens WHERE token='{}';".format(token)
+        if write_access:
+            sql = sql.replace(';', ' and write=True;')
 
-    result = list(df['contributor_id'])
-    authenticated = len(result) > 0
+        df = pd.read_sql(sql, conn)
 
-    if authenticated:
-        contributor_id = str(result[0])
-        status = 200
-        message = 'OK: Token authenticated successfully.'
-    else:
-        status = 401
-        message = "Unauthorized: Token failed authentication."
-        contributor_id = None
+        result = list(df['contributor_id'])
+        authenticated = len(result) > 0
+
+        if authenticated:
+            contributor_id = str(result[0])
+            status = 200
+            message = 'OK: Token authenticated successfully.'
+        else:
+            status = 401
+            message = "Unauthorized: Token failed authentication."
+            contributor_id = None
 
     return {'status': status, 'message': message, 'contributor_id': contributor_id}
 
 
-def register_collection(collection_name, conn):
+def register_collection(collection_name, db):
 
-    collection_name = collection_name.strip('_')
-    sql = f"SELECT id FROM collections WHERE name = '{collection_name}';"
-    df = pd.read_sql(sql, conn)
+    with db.connect() as conn:
 
-    if len(df['id']) == 0:
-        sql = f"INSERT INTO collections(name) VALUES('{collection_name}') RETURNING id;"
+        collection_name = collection_name.strip('_')
+        sql = f"SELECT id FROM collections WHERE name = '{collection_name}';"
         df = pd.read_sql(sql, conn)
+
+        if len(df['id']) == 0:
+            sql = f"INSERT INTO collections(name) VALUES('{collection_name}') RETURNING id;"
+            df = pd.read_sql(sql, conn)
 
     result = int(df['id'][0])
     return result
