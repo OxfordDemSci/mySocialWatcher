@@ -4,7 +4,8 @@ from pysocialwatcher import watcherAPI, constants
 
 if __name__ == '__main__':
 
-    specs_list = get_specs_list()
+    specs_list = get_specs_list(specs_dir=specs_dir,
+                                data_dir=data_dir)
 
     for specs_filename in specs_list:
         # specs_filename = specs_list[0]

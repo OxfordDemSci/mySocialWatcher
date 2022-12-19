@@ -21,15 +21,16 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 
-def get_specs_list():
+def get_specs_list(specs_dir, data_dir):
 
     specs_list = os.listdir(specs_dir)
     specs_list = [f for f in specs_list if f.endswith('.json')]
     specs_list.sort()
 
     finished_list = os.listdir(os.path.join(data_dir, 'finished'))
+    collecting_list = os.listdir(os.path.join(data_dir, 'collecting'))
 
-    most_recent_specs = {}
+    finished_latest = {}
     for specs in specs_list:
         # specs = specs_list[0]
 
@@ -37,21 +38,20 @@ def get_specs_list():
 
         specs_finished = [i for i in finished_list if specs_name in i]
         specs_finished.sort(reverse=True)
-        if len(specs_finished) > 0:
-            most_recent_specs[specs] = int(specs_finished[0].split(sep='_')[-1].split(sep='.')[0])
 
-    drop_specs = []
-    current_date = int(datetime.datetime.now().strftime('%Y%m%d'))
-    for i in range(len(most_recent_specs)-1):
+        specs_collecting = [i for i in collecting_list if specs_name in i]
 
-        i_date = list(most_recent_specs.values())[i]
-        if i_date == current_date or i_date > list(most_recent_specs.values())[i+1]:
-            drop_specs.append(list(most_recent_specs.keys())[i])
+        if len(specs_collecting) > 0:
+            finished_latest[specs] = -1
+        elif len(specs_finished) == 0:
+            finished_latest[specs] = 0
+        elif len(specs_finished) > 0:
+            finished_latest[specs] = int(specs_finished[0].split(sep='_')[-1].split(sep='.')[0])
 
-    if list(most_recent_specs.values())[-1] == current_date:
-        drop_specs.append(list(most_recent_specs.keys())[-1])
+    # sort by latest finished date
+    finished_latest = dict(sorted(finished_latest.items(), key=lambda kv: (kv[1], kv[0])))
 
-    result = [i for i in specs_list if i not in drop_specs]
+    result = list(finished_latest.keys())
     return result
 
 
