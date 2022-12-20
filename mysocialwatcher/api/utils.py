@@ -111,7 +111,7 @@ def check_args(args, required=[], required_oneof=[], optional=[]):
     json_args = ['geo_locations', 'all_fields', 'targeting', 'response']
     boolean_args = ['valid']
     date_args = ['date_start', 'date_end', 'collection_date']
-    quote_args = ['country', 'collection'] + json_args + date_args
+    quote_args = ['country'] + json_args + date_args
 
     platforms_allowed = ['facebook', 'instagram']
 
