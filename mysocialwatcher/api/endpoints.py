@@ -80,7 +80,7 @@ def query_fun(args):
 
         # where: collection_id from collection name
         if 'collection' in args.keys():
-            sql += f"collection_id = (SELECT id FROM collections WHERE name = {args.get('collection')}) AND "
+            sql += f"collection_id = (SELECT id FROM collections WHERE name = '{args.get('collection')}') AND "
 
         # where: access permissions for collaborators' data or entire collections
         sql += "(" + \
