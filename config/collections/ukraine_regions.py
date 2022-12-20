@@ -50,38 +50,67 @@ if __name__ == '__main__':
         os.remove(os.path.join(specs_dir, f))
 
     # ---- All languages ----#
+
+    # facebook
+    specs["publisher_platforms"] = ['facebook']
     specs['languages'] = [None]
 
-    # write to file
-    file_out = os.path.join(specs_dir, 'specs001.json')
+    file_out = os.path.join(specs_dir, '1_facebook_all.json')
     with open(file_out, "w") as f:
         f.write(json.dumps(specs))
 
+    # instagram
+    specs["publisher_platforms"] = ['instagram']
+    specs['languages'] = [None]
+
+    file_out = os.path.join(specs_dir, '2_instagram_all.json')
+    with open(file_out, "w") as f:
+        f.write(json.dumps(specs))
 
     # ---- Ukrainian language ----#
+
+    # facebook
+    specs["publisher_platforms"] = ['facebook']
     specs['languages'] = [{'name': 'Ukrainian', 'values': [52]}]
 
-    # write to file
-    file_out = os.path.join(specs_dir, 'specs002.json')
+    file_out = os.path.join(specs_dir, '3_facebook_ukrainian.json')
     with open(file_out, "w") as f:
         f.write(json.dumps(specs))
 
+    # instagram
+    specs["publisher_platforms"] = ['instagram']
+    specs['languages'] = [{'name': 'Ukrainian', 'values': [52]}]
+
+    file_out = os.path.join(specs_dir, '4_instagram_ukrainian.json')
+    with open(file_out, "w") as f:
+        f.write(json.dumps(specs))
 
     # ---- Russian language ---- #
+
+    # facebook
+    specs["publisher_platforms"] = ['facebook']
     specs['languages'] = [{'name': 'Russian', 'values': [17]}]
 
-    # write to file
-    file_out = os.path.join(specs_dir, 'specs003.json')
+    file_out = os.path.join(specs_dir, '5_facebook_russian.json')
     with open(file_out, "w") as f:
         f.write(json.dumps(specs))
 
+    # instagram
+    specs["publisher_platforms"] = ['instagram']
+    specs['languages'] = [{'name': 'Russian', 'values': [17]}]
 
-    # ---- All languages ['home', 'recent']----#
-    specs['languages'] = [None]
-    for i in range(len(specs.get('geo_locations'))):
-        specs['geo_locations'][i]['location_types'] = ['home', 'recent']
-
-    # write to file
-    file_out = os.path.join(specs_dir, 'specs004.json')
+    file_out = os.path.join(specs_dir, '6_instagram_russian.json')
     with open(file_out, "w") as f:
         f.write(json.dumps(specs))
+
+    # # ---- All languages ['home', 'recent']----#
+    #
+    # specs["publisher_platforms"] = ['facebook']
+    # specs['languages'] = [None]
+    # for i in range(len(specs.get('geo_locations'))):
+    #     specs['geo_locations'][i]['location_types'] = ['home', 'recent']
+    #
+    # # write to file
+    # file_out = os.path.join(specs_dir, '7_facebook_all_homerecent.json')
+    # with open(file_out, "w") as f:
+    #     f.write(json.dumps(specs))

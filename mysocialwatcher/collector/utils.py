@@ -20,6 +20,41 @@ logging.basicConfig(
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
+
+def get_specs_list(specs_dir, data_dir):
+
+    specs_list = os.listdir(specs_dir)
+    specs_list = [f for f in specs_list if f.endswith('.json')]
+    specs_list.sort()
+
+    finished_list = os.listdir(os.path.join(data_dir, 'finished'))
+    collecting_list = os.listdir(os.path.join(data_dir, 'collecting'))
+
+    finished_latest = {}
+    for specs in specs_list:
+        # specs = specs_list[0]
+
+        specs_name = os.path.splitext(specs)[0]
+
+        specs_finished = [i for i in finished_list if specs_name in i]
+        specs_finished.sort(reverse=True)
+
+        specs_collecting = [i for i in collecting_list if specs_name in i]
+
+        if len(specs_collecting) > 0:
+            finished_latest[specs] = -1
+        elif len(specs_finished) == 0:
+            finished_latest[specs] = 0
+        elif len(specs_finished) > 0:
+            finished_latest[specs] = int(specs_finished[0].split(sep='_')[-1].split(sep='.')[0])
+
+    # sort by latest finished date
+    finished_latest = dict(sorted(finished_latest.items(), key=lambda kv: (kv[1], kv[0])))
+
+    result = list(finished_latest.keys())
+    return result
+
+
 def get_df_names(data_dir, specs_filename):
     # data_dir = 'data/_test/_test'
     # specs_filename = 'specs001.json'

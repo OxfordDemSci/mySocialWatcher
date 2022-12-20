@@ -45,14 +45,20 @@ services:
     container_name: datahub_db
     image: postgis/postgis:14-3.3
     env_file: .env
+    shm_size: '256MB'
+    command: ['postgres', '-c', 'config_file=/datahub/postgresql.conf']
     volumes:
+      - db-data:/datahub/data
       - ./initdb.sh:/docker-entrypoint-initdb.d/initdb.sh
-      - ./postgresql.conf:/etc/postgresql/postgresql.conf
+      - ./postgresql.conf:/datahub/postgresql.conf
     networks:
       - net
     ports:
       - "5432:5432"
     restart: unless-stopped
+
+volumes:
+  db-data:
 
 networks:
   net:

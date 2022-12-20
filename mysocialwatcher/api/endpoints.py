@@ -1,5 +1,4 @@
 import sqlalchemy.exc
-
 from mysocialwatcher.api.utils import *
 
 
@@ -17,11 +16,14 @@ def query_fun(args):
     if 'valid' not in args.keys():
         args['valid'] = True
 
+    # limit response to n rows
+    limit_rows = 100000
+
     # check arguments
     result = check_args(args,
                         required=['token', 'platform'],
                         required_oneof=[],
-                        optional=['valid', 'contributor_id', 'collection', 'country', 'date_start', 'date_end',
+                        optional=['valid', 'country', 'contributor_id', 'collection', 'date_start', 'date_end',
                                   'gender', 'age_min', 'age_max'])
     args = result.get('args')
     status = result.get('status')
@@ -31,14 +33,14 @@ def query_fun(args):
     if status == 200:
 
         # connect to database
-        conn = conn_to_database()
+        db = db_engine()
 
         # validate token
-        result = validate_token(token=args.get('token'), conn=conn)
+        result = validate_token(token=args.get('token'), db=db)
 
         status = result.get('status')
         if status == 200:
-            args['contributor_id'] = result.get('contributor_id')
+            contributor_id = result.get('contributor_id')
             args.pop('token')
         else:
             message = result.get('message')
@@ -61,26 +63,55 @@ def query_fun(args):
         table = args.get('table')
         args.pop('table')
 
-        # create sql query
-        sql = "SELECT " + ','.join(cols) + " FROM " + table + " WHERE "
-        for i in set(args.keys()).intersection(['collection_id', 'contributor_id', 'platform', 'country', 'gender', 'age_min', 'age_max']):
-            sql +=  i + '=' + str(args.get(i)) + ' AND '
-        if 'date_start' in args.keys():
-            sql += "collection_date >= " + str(args.get('date_start')) + " AND "
-        if 'date_end' in args.keys():
-            sql += "collection_date <= " + str(args.get('date_end')) + " AND "
-        sql = sql[:-5] + ';'
+        # ----  create sql query ---- #
 
-        # query database
+        # select: from table
+        sql = "SELECT " + ",".join(cols) + f" FROM {table} WHERE "
+
+        # where: arguments
+        for i in set(args.keys()).intersection(['country', 'gender', 'age_min', 'age_max']):
+            sql +=  f"{i} = {str(args.get(i))} AND "
+
+        # where: date range
+        if 'date_start' in args.keys():
+            sql += f"collection_date >= {str(args.get('date_start'))} AND "
+        if 'date_end' in args.keys():
+            sql += f"collection_date <= {str(args.get('date_end'))} AND "
+
+        # where: collection_id from collection name
+        if 'collection' in args.keys():
+            sql += f"collection_id = (SELECT id FROM collections WHERE name = {args.get('collection')}) AND "
+
+        # where: access permissions for collaborators' data or entire collections
+        sql += "(" + \
+               f"collection_id IN (SELECT UNNEST(collections) FROM contributors WHERE id={contributor_id}) OR " \
+               f"contributor_id IN (SELECT UNNEST(collaborators) FROM contributors WHERE id={contributor_id})" + \
+               ") "
+
+        # limit number of rows returned
+        sql += f"LIMIT {limit_rows};"
+
+        #---- query database ----#
         try:
-            data = pd.read_sql(sql, conn)
+            data = pd.read_sql(sql, db.connect())
+
+            if len(data) < limit_rows:
+                status = 200
+                message = 'OK: Data successfully selected from database.'
+            else:
+                status = 206
+                message = f'Partial Content: Result truncated to {limit_rows} rows. Revise query to reduce size ' \
+                          f'(e.g. specific country, dates, and/or demographics).'
+
             data = data.to_json()
-            message = 'OK: Data successfully selected from database.'
 
         except Exception as e:
             exc = e.__dict__
             status = exc.get('code')
             message = exc.get('orig')
+
+    if db:
+        db.dispose()
 
     # return result
     return {"status": status, "message": message, "timestamp": timestr(), "data": data}
@@ -110,10 +141,10 @@ def write_fun(args):
     if status == 200:
 
         # connect to database
-        conn = conn_to_database()
+        db = db_engine()
 
         # validate token
-        result = validate_token(token=args.get('token'), conn=conn, write_access=True)
+        result = validate_token(token=args.get('token'), db=db, write_access=True)
 
         status = result.get('status')
         if status == 200:
@@ -127,10 +158,15 @@ def write_fun(args):
 
         # collection id
         if 'collection' in args.keys():
-            collection_name = args.pop('collection')
-            collection_id = register_collection(collection_name, conn)
-            if isinstance(collection_id, int):
-                args['collection_id'] = collection_id
+
+            with db.connect() as conn:
+
+                collection_name = args.pop('collection')
+
+                collection_id = register_collection(collection_name, conn)
+
+                if isinstance(collection_id, int):
+                    args['collection_id'] = collection_id
 
         # reformat timestamp
         dt_obj = datetime.datetime.fromtimestamp(int(args.get('timestamp')))
@@ -144,21 +180,46 @@ def write_fun(args):
         sql = "INSERT INTO " + table + "({}) VALUES({});".format(','.join(args.keys()), ','.join([str(i) for i in args.values()]))
 
         # query database
-        try:
-            result = conn.execute(sql)
-            message = 'OK: Data successfully written into database.'
+        with db.connect() as conn:
 
-        except sqlalchemy.exc.SQLAlchemyError as e:
-            # exc = e
-            if isinstance(e, sqlalchemy.exc.IntegrityError) and isinstance(e.orig, psycopg2.errors.UniqueViolation):
-                status = 409
-                message = '(sqlalchemy code: ' + str(e.code) + ') Conflict: Data already in database with UNIQUE constraint. '
-            else:
-                status = e.code
-                message = e._message()
+            try:
+                result = conn.execute(sql)
+                message = 'OK: Data successfully written into database.'
+
+            except sqlalchemy.exc.SQLAlchemyError as e:
+                # exc = e
+                if isinstance(e, sqlalchemy.exc.IntegrityError) and isinstance(e.orig, psycopg2.errors.UniqueViolation):
+                    status = 409
+                    message = '(sqlalchemy code: ' + str(e.code) + ') Conflict: Data already in database with UNIQUE constraint. '
+                else:
+                    status = e.code
+                    message = e._message()
 
         if status == 200 and 'invalid' in table:
             message += " Written with flag 'valid=false' so data will not persist in database."
 
+    if db:
+        db.dispose()
+
     # return result
     return {"status": status, "message": message, "timestamp": timestr()}
+
+
+def collections_fun():
+
+    status = 200
+
+    db = db_engine()
+
+    with db.connect() as conn:
+
+        try:
+            response = conn.execute('select id, name from collections;').fetchall()
+            data = dict(response)
+            message = 'OK: Collections successfully queried.'
+
+        except sqlalchemy.exc.SQLAlchemyError as e:
+            status = e.code
+            message = e._message()
+
+    return {'status': status, 'message': message, 'data': data, 'timestamp': timestr()}

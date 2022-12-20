@@ -1,17 +1,17 @@
 #!/bin/bash
 
-VM="saffron"
-COLLECTIONS=("ukraine_countries" "ukraine_europe" "ukraine_language" "ukraine_neighbours" "ukraine_regions")
+VM="jubal"
+COLLECTIONS=("baseline")
 DIR="/home/ubuntu/mySocialWatcher"
 
 # cron
-sudo cp ${DIR}/docker/collectors/${VM}_crontab /etc/cron.d/
+sudo cp ${DIR}/docker/collectors/${VM}/${VM}_crontab /etc/cron.d/
 
 # config
 cd ${DIR}
 for COLLECTION in ${COLLECTIONS[@]};
 do
-  python3 config/collections/${COLLECTION}.py
+  python3 ${DIR}/config/collections/${COLLECTION}.py
 done
 
 # docker

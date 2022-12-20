@@ -1215,6 +1215,7 @@ src: url(data:application/font-sfnt;base64,AAEAAAARAQAABAAQR0RFRgs+Cz8AAjwQAAAAQ
       endpoints</a></li>
       <li><a href="#endpoint-query" id="toc-endpoint-query">Endpoint:
       query</a></li>
+      <li><a href="#endpoint-collections" id="toc-endpoint-collections">Endpoint: collections</a></li>
       <li><a href="#endpoint-write" id="toc-endpoint-write">Endpoint:
       write</a></li>
       <li><a href="#postgresql" id="toc-postgresql">PostgreSQL</a></li>
@@ -1301,7 +1302,8 @@ values: facebook, instagram</td>
 <td align="left">country</td>
 <td align="left">A single country code using ISO-2 format (see
 <a href="https://www.iban.com/country-codes">https://www.iban.com/country-codes</a>).
-If omitted, all countries will be returned.</td>
+If omitted, all countries will be returned, but please note that this
+may result in longer processing time.</td>
 </tr>
 <tr class="even">
 <td align="left">gender</td>
@@ -1327,11 +1329,16 @@ Default = 999.</td>
 <td align="left">Latest date to include in the query result</td>
 </tr>
 <tr class="odd">
+<td align="left">collection</td>
+<td align="left">The name of a collection from which you would like to
+return data. The names of all collections can be obtained from the <a href="#endpoint-collections">collections endpoint</a>.</td>
+</tr>
+<tr class="even">
 <td align="left">contributor_id</td>
 <td align="left">ID number of contributor whose data you would like to
 return</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">valid</td>
 <td align="left">Return only data marked as valid by contributors?
 Default = true. Acceptable values: true, t, yes, y, on, 1. All other
@@ -1461,6 +1468,59 @@ if(response$status == 200){
   for(name in json_cols){
     data[,name] &lt;- unlist(lapply(data[,name], jsonlite::toJSON))
   }
+}</code></pre>
+</div>
+<div id="endpoint-collections" class="section level2">
+<h2>Endpoint: collections</h2>
+<p>This API endpoint returns a list of all collection names currently in
+the <em>social_media_audience</em> database.</p>
+<p>URL: <code>http://18.135.72.18/api/v1/collections</code></p>
+<p>Arguments syntax:
+<code>http://18.135.72.18/api/v1/collections</code></p>
+<p><strong>API Arguments</strong></p>
+<p><em>Required Arguments</em></p>
+<p>None</p>
+<p><em>Optional Arguments</em></p>
+<p>None</p>
+<p><strong>API Response</strong><br />
+The API will return a json response with four elements:</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Element</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">status</td>
+<td align="left">http status code</td>
+</tr>
+<tr class="even">
+<td align="left">message</td>
+<td align="left">Message describing outcome of operation writing to the
+database</td>
+</tr>
+<tr class="odd">
+<td align="left">timestamp</td>
+<td align="left">Date and time of response</td>
+</tr>
+<tr class="even">
+<td align="left">data</td>
+<td align="left">Data resulting from query in json format</td>
+</tr>
+</tbody>
+</table>
+<p>For example:</p>
+<pre><code>{
+  &quot;message&quot;: &quot;OK: Collections successfully queried from database.&quot;,
+  &quot;status&quot;: &quot;200&quot;,
+  &quot;timestamp&quot;: &quot;2022-01-03 18:30:26+00&quot;,
+  &quot;data&quot;: &#39;{&quot;1&quot;: &quot;collection1&quot;, &quot;2&quot;: &quot;collection2&quot;}&#39;
 }</code></pre>
 </div>
 <div id="endpoint-write" class="section level2">

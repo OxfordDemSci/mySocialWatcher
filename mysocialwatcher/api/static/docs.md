@@ -45,12 +45,13 @@ platform | Name of platform where data were collected. Acceptable values: facebo
 
 Argument | Description 
 |:-- |:----------- 
-country | A single country code using ISO-2 format (see <a href="https://www.iban.com/country-codes">https://www.iban.com/country-codes</a>). If omitted, all countries will be returned.
+country | A single country code using ISO-2 format (see <a href="https://www.iban.com/country-codes">https://www.iban.com/country-codes</a>). If omitted, all countries will be returned, but please note that this may result in longer processing time.
 gender | Gender of the population represented by data. Acceptable values: 0, 1, 2, where 0=all, 1=male, 2=female.
 age_min | Lower bound of age of the audience size reported. Default = 0.
 age_max | Upper bound of age of the audience size reported. Default = 999.
 date_start | Earliest date to include in the query result
 date_end | Latest date to include in the query result
+collection | The name of a collection from which you would like to return data. The names of all collections can be obtained from the [collections endpoint](#endpoint-collections).
 contributor_id | ID number of contributor whose data you would like to return
 valid | Return only data marked as valid by contributors? Default = true. Acceptable values: true, t, yes, y, on, 1. All other values will be treated as: false.
 
@@ -165,6 +166,46 @@ if(response$status == 200){
   for(name in json_cols){
     data[,name] <- unlist(lapply(data[,name], jsonlite::toJSON))
   }
+}
+```
+
+
+## Endpoint: collections
+
+This API endpoint returns a list of all collection names currently in the *social_media_audience* database. 
+
+URL: `http://18.135.72.18/api/v1/collections`  
+
+Arguments syntax: `http://18.135.72.18/api/v1/collections`  
+
+
+**API Arguments**  
+
+*Required Arguments*  
+
+None
+
+*Optional Arguments*  
+
+None
+
+**API Response**  
+The API will return a json response with four elements:
+
+Element | Description 
+|:-- |:----------- 
+status | http status code
+message | Message describing outcome of operation writing to the database
+timestamp | Date and time of response
+data | Data resulting from query in json format
+
+For example:
+```
+{
+  "message": "OK: Collections successfully queried from database.",
+  "status": "200",
+  "timestamp": "2022-01-03 18:30:26+00",
+  "data": '{"1": "collection1", "2": "collection2"}'
 }
 ```
 

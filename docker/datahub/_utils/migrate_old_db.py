@@ -27,6 +27,15 @@ logger = logging.getLogger()
 logger.setLevel(logging.WARNING)
 
 
+def timestamp_str():
+    return '[' + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + '] '
+
+
+def print_progress(i, n):
+    if i in range(0, int(n), int(n/100)):
+        print(timestamp_str() + ' ... row ' + str(i) + ' (' + str(round(i / n * 100)) + '%)')
+
+
 def write_row(row, table, token, collection=None, valid=False):
 
     # prepare API arguments
@@ -35,7 +44,7 @@ def write_row(row, table, token, collection=None, valid=False):
             'valid': valid,
             'platform': table,
             # 'contributed_on': row.get('contributed_on').isoformat(),
-            'country': row.get('country'),
+            # 'country': row.get('country'),
             'timestamp': row.get('timestamp'),
             'gender': row.get('gender'),
             'age_min': row.get('age_min'),
@@ -85,22 +94,29 @@ if __name__ == '__main__':
 
     # Jiani's Facebook collections for DGG
     with engine.connect() as conn:
+        # conn = engine.connect()
 
-        logger.info('Migrating Jiani\'s collections...')
+        logger.info(timestamp_str() + 'Migrating Jiani\'s collections...')
+        print(timestamp_str() + 'Migrating Jiani\'s collections...')
 
-        sql = 'select * from facebook where contributor_id = 4;'
+        sql = 'select * from facebook where contributor_id = 4 order by timestamp desc, country asc;'
         result = conn.execute(sql)
 
         row_idx = 0
         for row in result.mappings():
             row_idx += 1
+            print_progress(row_idx, 4094751)
+
             response = write_row(row,
                                  table='facebook',
                                  collection='dgg_national',
                                  token=jiani_token,
                                  valid=True)
+            # if row_idx > 10:
+            #     break
 
-        logger.info('Finished migrating Jiani\'s collections...')
+        logger.info(timestamp_str() + 'Finished migrating Jiani\'s collections.')
+        print(timestamp_str() + 'Finished migrating Jiani\'s collections.')
 
     # # Ian's Facebook collections for DGG
     # with engine.connect() as conn:
