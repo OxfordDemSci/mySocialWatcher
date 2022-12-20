@@ -27,6 +27,10 @@ Write new data into the database (requires authentication with write-access).
 This API endpoint is for querying data from *social_media_audience* database. 
 You can use it to pull a subset of data directly into R or Python (examples below).  
 
+**Note:** If your query results exceed 100,000 rows, then only the first 100,000 
+will be returned along with a status code of 206 (partial content) rather than a 
+success code (200).
+
 URL: `http://18.135.72.18/api/v1/query`  
 
 Arguments syntax: `http://18.135.72.18/api/v1/query?argument1=value1&argument2=value2`  
@@ -248,11 +252,12 @@ mau_upper | Upper bound of monthly active users
 
 Argument | Description 
 |:-- |:----------- 
-age_min | Lower bound of age of the audience size reported. Default = 0.
-age_max | Upper bound of age of the audence size reported. Default = 999.
-all_fields | All fields of special targeting audience specification. This is a default field returned from pySocialWatcher as a string representation of a Python tuple of tuples.
-targeting | Audience targeting json as submitted to Facebook API. This is a default field returned from pySocialWatcher.
-response | Response from Facebook API. This is a default field returned from pySocialWatcher as a string representation of a Python bytes array.
+collection | (recommended) The name of the collection. This is will help filter results later. The [collections endpoint](#endpoint-collections) provides a list of existing collections names, or a new collection name can be created when writing new data. 
+all_fields | (recommended) All fields of special targeting audience specification. This is a default field returned from pySocialWatcher as a string representation of a Python tuple of tuples.
+targeting | (recommended) Audience targeting json as submitted to Facebook API. This is a default field returned from pySocialWatcher.
+response | (recommended) Response from Facebook API. This is a default field returned from pySocialWatcher as a string representation of a Python bytes array.
+age_min | (default = 0) Lower bound of age of the audience size reported. 
+age_max | (default = 999) Upper bound of age of the audence size reported. 
 
 **API Response**  
 The API will return a json response with three elements:
