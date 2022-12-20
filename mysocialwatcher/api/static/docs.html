@@ -1257,6 +1257,9 @@ write-access).</p>
 <p>This API endpoint is for querying data from
 <em>social_media_audience</em> database. You can use it to pull a subset
 of data directly into R or Python (examples below).</p>
+<p><strong>Note:</strong> If your query results exceed 100,000 rows,
+then only the first 100,000 will be returned along with a status code of
+206 (partial content) rather than a success code (200).</p>
 <p>URL: <code>http://18.135.72.18/api/v1/query</code></p>
 <p>Arguments syntax:
 <code>http://18.135.72.18/api/v1/query?argument1=value1&amp;argument2=value2</code></p>
@@ -1628,31 +1631,39 @@ pySocialWatcher or Facebook Marketing API for more information.</td>
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left">collection</td>
+<td align="left">(recommended) The name of the collection. This is will
+help filter results later. The <a href="#endpoint-collections">collections endpoint</a> provides a list of
+existing collections names, or a new collection name can be created when
+writing new data.</td>
+</tr>
+<tr class="even">
+<td align="left">all_fields</td>
+<td align="left">(recommended) All fields of special targeting audience
+specification. This is a default field returned from pySocialWatcher as
+a string representation of a Python tuple of tuples.</td>
+</tr>
+<tr class="odd">
+<td align="left">targeting</td>
+<td align="left">(recommended) Audience targeting json as submitted to
+Facebook API. This is a default field returned from
+pySocialWatcher.</td>
+</tr>
+<tr class="even">
+<td align="left">response</td>
+<td align="left">(recommended) Response from Facebook API. This is a
+default field returned from pySocialWatcher as a string representation
+of a Python bytes array.</td>
+</tr>
+<tr class="odd">
 <td align="left">age_min</td>
-<td align="left">Lower bound of age of the audience size reported.
-Default = 0.</td>
+<td align="left">(default = 0) Lower bound of age of the audience size
+reported.</td>
 </tr>
 <tr class="even">
 <td align="left">age_max</td>
-<td align="left">Upper bound of age of the audence size reported.
-Default = 999.</td>
-</tr>
-<tr class="odd">
-<td align="left">all_fields</td>
-<td align="left">All fields of special targeting audience specification.
-This is a default field returned from pySocialWatcher as a string
-representation of a Python tuple of tuples.</td>
-</tr>
-<tr class="even">
-<td align="left">targeting</td>
-<td align="left">Audience targeting json as submitted to Facebook API.
-This is a default field returned from pySocialWatcher.</td>
-</tr>
-<tr class="odd">
-<td align="left">response</td>
-<td align="left">Response from Facebook API. This is a default field
-returned from pySocialWatcher as a string representation of a Python
-bytes array.</td>
+<td align="left">(default = 999) Upper bound of age of the audence size
+reported.</td>
 </tr>
 </tbody>
 </table>
