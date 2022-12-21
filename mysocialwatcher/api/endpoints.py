@@ -38,7 +38,7 @@ def query_fun(args):
         db = db_engine()
 
         # validate token
-        result = validate_token(token=args.get('token'), db=db)
+        result = validate_token(token=args.get('token'), conn=db.connect())
 
         status = result.get('status')
         if status == 200:
@@ -95,7 +95,8 @@ def query_fun(args):
 
         #---- query database ----#
         try:
-            data = pd.read_sql(sql, db.connect())
+            data = pd.read_sql(sql=sql,
+                               con=db.connect())
 
             if len(data) < limit_rows:
                 status = 200
@@ -147,7 +148,7 @@ def write_fun(args):
         db = db_engine()
 
         # validate token
-        result = validate_token(token=args.get('token'), db=db, write_access=True)
+        result = validate_token(token=args.get('token'), conn=db.connect(), write_access=True)
 
         status = result.get('status')
         if status == 200:
@@ -162,14 +163,11 @@ def write_fun(args):
         # collection id
         if 'collection' in args.keys():
 
-            with db.connect() as conn:
+            collection_id = register_collection(collection_name=args.pop('collection'),
+                                                conn=db.connect())
 
-                collection_name = args.pop('collection')
-
-                collection_id = register_collection(collection_name, conn)
-
-                if isinstance(collection_id, int):
-                    args['collection_id'] = collection_id
+            if isinstance(collection_id, int):
+                args['collection_id'] = collection_id
 
         # reformat timestamp
         dt_obj = datetime.datetime.fromtimestamp(int(args.get('timestamp')))
@@ -227,7 +225,7 @@ def collections_fun(args):
         db = db_engine()
 
         # validate token
-        result = validate_token(token=args.get('token'), db=db)
+        result = validate_token(token=args.get('token'), conn=db.connect())
 
         message = result.get('message')
         status = result.get('status')
@@ -236,26 +234,23 @@ def collections_fun(args):
 
         contributor_id = result.get('contributor_id')
 
-        with db.connect() as conn:
-            # conn = db.connect()
+        try:
+            sql = f"SELECT id, name FROM collections WHERE id IN (" \
+                  f"SELECT UNNEST(collections) FROM contributors WHERE id in " \
+                  f"(SELECT UNNEST(collaborators) FROM contributors WHERE id = {contributor_id})" \
+                  f");"
 
-            try:
-                sql = f"SELECT id, name FROM collections WHERE id IN (" \
-                      f"SELECT UNNEST(collections) FROM contributors WHERE id in " \
-                      f"(SELECT UNNEST(collaborators) FROM contributors WHERE id = {contributor_id})" \
-                      f");"
+            collections = pd.read_sql(sql=sql, con=db.connect())
 
-                collections = pd.read_sql(sql=sql, con=conn)
+            for i in range(len(collections)):
+                data.append({'collection_name': collections.at[i, 'name'],
+                             'collection_id': int(collections.at[i, 'id'])})
 
-                for i in range(len(collections)):
-                    data.append({'collection_name': collections.at[i, 'name'],
-                                 'collection_id': int(collections.at[i, 'id'])})
+            message = 'OK: Your collections successfully queried.'
 
-                message = 'OK: Your collections successfully queried.'
-
-            except sqlalchemy.exc.SQLAlchemyError as e:
-                status = e.code
-                message = e._message()
+        except sqlalchemy.exc.SQLAlchemyError as e:
+            status = e.code
+            message = e._message()
 
     if db:
         db.dispose()
@@ -291,7 +286,7 @@ def monitor_fun(args):
         db = db_engine()
 
         # validate token
-        result = validate_token(token=args.get('token'), db=db)
+        result = validate_token(token=args.get('token'), conn=db.connect())
 
         message = result.get('message')
         status = result.get('status')
@@ -300,44 +295,42 @@ def monitor_fun(args):
 
         contributor_id = result.get('contributor_id')
 
-        with db.connect() as conn:
-            # conn = db.connect()
+        try:
 
-            try:
+            sql = f"SELECT id, name FROM collections WHERE id IN (" \
+                  f"SELECT UNNEST(collections) FROM contributors WHERE id in " \
+                  f"(SELECT UNNEST(collaborators) FROM contributors WHERE id = {contributor_id})" \
+                  f");"
+            collections = pd.read_sql(sql=sql, con=db.connect())
 
-                sql = f"SELECT id, name FROM collections WHERE id IN (" \
-                      f"SELECT UNNEST(collections) FROM contributors WHERE id in " \
-                      f"(SELECT UNNEST(collaborators) FROM contributors WHERE id = {contributor_id})" \
-                      f");"
-                collections = pd.read_sql(sql=sql, con=conn)
+            for i in range(len(collections)):
 
-                platforms = ['facebook', 'instagram']
-                for i in range(len(collections)):
+                collection_name = collections.at[i, 'name']
+                collection_id = int(collections.at[i, 'id'])
 
-                    collection_name = collections.at[i, 'name']
-                    collection_id = int(collections.at[i, 'id'])
+                data[collection_name] = {'collection_id': collection_id}
 
-                    data[collection_name] = {'collection_id': collection_id}
+                current_date = datetime.date.today()
+                for t in range(args.get('days')):
 
-                    current_date = datetime.date.today()
-                    for t in range(args.get('days')):
+                    date_string = (current_date - datetime.timedelta(days=t)).strftime("%Y-%m-%d")
+                    data[collection_name][date_string] = {}
 
-                        date_string = (current_date - datetime.timedelta(days=t)).strftime("%Y-%m-%d")
-                        data[collection_name][date_string] = {}
+                    for platform in ['facebook', 'instagram']:
 
-                        for platform in platforms:
+                        sql = f"SELECT count(*) FROM {platform} WHERE collection_id = {collections.at[i, 'id']} AND " \
+                              f"collection_date='{date_string}';"
 
-                            sql = f"SELECT count(*) FROM {platform} WHERE collection_id = {collections.at[i, 'id']} AND " \
-                                  f"collection_date='{date_string}';"
-
+                        with db.connect() as conn:
                             response = conn.execute(sql).fetchall()
-                            data[collection_name][date_string][platform] = int(response[0][0])
 
-                message = 'OK: Your collections successfully queried.'
+                        data[collection_name][date_string][platform] = int(response[0][0])
 
-            except sqlalchemy.exc.SQLAlchemyError as e:
-                status = e.code
-                message = e._message()
+            message = 'OK: Your collections successfully queried.'
+
+        except sqlalchemy.exc.SQLAlchemyError as e:
+            status = e.code
+            message = e._message()
 
     if db:
         db.dispose()

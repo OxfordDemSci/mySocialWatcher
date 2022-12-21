@@ -7,6 +7,7 @@ from ast import literal_eval
 from dotenv import load_dotenv
 
 load_dotenv()
+# load_dotenv('docker/datahub/dev.env')
 
 
 def timestr():
@@ -25,42 +26,38 @@ def db_engine(pw=os.environ.get('POSTGRES_WPASS'),
     return db
 
 
-def validate_token(token, db, write_access=False):
+def validate_token(token, conn, write_access=False):
 
-    with db.connect() as conn:
+    sql = "SELECT contributor_id FROM tokens WHERE token='{}';".format(token)
+    if write_access:
+        sql = sql.replace(';', ' and write=True;')
 
-        sql = "SELECT contributor_id FROM tokens WHERE token='{}';".format(token)
-        if write_access:
-            sql = sql.replace(';', ' and write=True;')
+    df = pd.read_sql(sql, conn)
 
-        df = pd.read_sql(sql, conn)
+    result = list(df['contributor_id'])
+    authenticated = len(result) > 0
 
-        result = list(df['contributor_id'])
-        authenticated = len(result) > 0
-
-        if authenticated:
-            contributor_id = str(result[0])
-            status = 200
-            message = 'OK: Token authenticated successfully.'
-        else:
-            status = 401
-            message = "Unauthorized: Token failed authentication."
-            contributor_id = None
+    if authenticated:
+        contributor_id = str(result[0])
+        status = 200
+        message = 'OK: Token authenticated successfully.'
+    else:
+        status = 401
+        message = "Unauthorized: Token failed authentication."
+        contributor_id = None
 
     return {'status': status, 'message': message, 'contributor_id': contributor_id}
 
 
-def register_collection(collection_name, db):
+def register_collection(collection_name, conn):
 
-    with db.connect() as conn:
+    collection_name = collection_name.strip('_')
+    sql = f"SELECT id FROM collections WHERE name = '{collection_name}';"
+    df = pd.read_sql(sql, conn)
 
-        collection_name = collection_name.strip('_')
-        sql = f"SELECT id FROM collections WHERE name = '{collection_name}';"
+    if len(df['id']) == 0:
+        sql = f"INSERT INTO collections(name) VALUES('{collection_name}') RETURNING id;"
         df = pd.read_sql(sql, conn)
-
-        if len(df['id']) == 0:
-            sql = f"INSERT INTO collections(name) VALUES('{collection_name}') RETURNING id;"
-            df = pd.read_sql(sql, conn)
 
     result = int(df['id'][0])
     return result
