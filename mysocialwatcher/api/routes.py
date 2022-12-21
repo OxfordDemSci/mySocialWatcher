@@ -65,8 +65,14 @@ def write():
 @app.route('/collections', methods=['GET'])
 def collections():
     """API endpoint to query a complete list of collection names."""
-    result = endpoints.collections_fun()
-    return jsonify(result), result.get("status")
+    args = dict(request.args)
+    if len(args) == 0:
+        return "<h1>400 Error</h1><p>Bad Request: This API endpoint requires arguments. " \
+               "See <a href='./../'>API documentation</a> for more information.", \
+               400
+    else:
+        result = endpoints.collections_fun(args)
+        return jsonify(result), result.get("status")
 
 
 @app.route('/social_media_audience/monitor_collections', methods=['GET','POST'])
