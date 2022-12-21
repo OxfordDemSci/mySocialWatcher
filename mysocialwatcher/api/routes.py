@@ -69,9 +69,9 @@ def collections():
     return jsonify(result), result.get("status")
 
 
-@app.route('/social_media_audience/monitor', methods=['GET','POST'])
-@app.route('/monitor', methods=['GET'])
-def monitor():
+@app.route('/social_media_audience/monitor_collections', methods=['GET','POST'])
+@app.route('/monitor_collections', methods=['GET'])
+def monitor_collections():
     """API endpoint to monitor collections."""
     args = dict(request.args)
     if len(args) == 0:

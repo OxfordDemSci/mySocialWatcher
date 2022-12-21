@@ -206,36 +206,13 @@ def write_fun(args):
     return {"status": status, "message": message, "timestamp": timestr()}
 
 
-def collections_fun():
-
-    status = 200
-
-    db = db_engine()
-
-    with db.connect() as conn:
-
-        try:
-            response = conn.execute('select id, name from collections;').fetchall()
-            data = dict(response)
-            message = 'OK: Collections successfully queried.'
-
-        except sqlalchemy.exc.SQLAlchemyError as e:
-            status = e.code
-            message = e._message()
-
-    if db:
-        db.dispose()
-
-    return {'status': status, 'message': message, 'data': data, 'timestamp': timestr()}
-
-
-def monitor_fun(args):
+def collections_fun(args):
 
     status = 200
     message = ''
     data = {}
 
-    args = {key: value for key, value in args.items() if key == 'token'}
+    args = {key: value for key, value in args.items() if key in ['token']}
 
     if 'token' not in args.keys():
         status = 400
@@ -260,9 +237,69 @@ def monitor_fun(args):
             # conn = db.connect()
 
             try:
+                sql = f"SELECT id, name FROM collections WHERE id IN (" \
+                      f"SELECT UNNEST(collections) FROM contributors WHERE id in " \
+                      f"(SELECT UNNEST(collaborators) FROM contributors WHERE id = {contributor_id})" \
+                      f");"
+                response = conn.execute(sql).fetchall()
+                data = dict(response)
+                message = 'OK: Your collections successfully queried.'
 
-                sql = f"select id, name from collections where id IN " \
-                      f"(SELECT UNNEST(collections) FROM contributors WHERE id={contributor_id});"
+            except sqlalchemy.exc.SQLAlchemyError as e:
+                status = e.code
+                message = e._message()
+
+    if db:
+        db.dispose()
+
+    return {'status': status, 'message': message, 'data': data, 'timestamp': timestr()}
+
+
+def monitor_fun(args):
+
+    status = 200
+    message = ''
+    data = {}
+
+    args = {key: value for key, value in args.items() if key in ['token']}
+
+    # check args
+    if 'token' not in args.keys():
+        status = 400
+        message = "Bad Request: 'token' argument required."
+
+    if 'days' in args.keys():
+        try:
+            args['days'] = int(float(args.get('days')))
+        except:
+            args['days'] = 7
+    else:
+        args['days'] = 7
+
+    if status == 200:
+
+        # connect to database
+        db = db_engine()
+
+        # validate token
+        result = validate_token(token=args.get('token'), db=db)
+
+        message = result.get('message')
+        status = result.get('status')
+
+    if status == 200:
+
+        contributor_id = result.get('contributor_id')
+
+        with db.connect() as conn:
+            # conn = db.connect()
+
+            try:
+
+                sql = f"SELECT id, name FROM collections WHERE id IN (" \
+                      f"SELECT UNNEST(collections) FROM contributors WHERE id in " \
+                      f"(SELECT UNNEST(collaborators) FROM contributors WHERE id = {contributor_id})" \
+                      f");"
                 collections = pd.read_sql(sql=sql, con=conn)
 
                 for i in range(len(collections)):
@@ -273,20 +310,16 @@ def monitor_fun(args):
                     data[collection_name] = {'id': collection_id}
 
                     current_date = datetime.date.today()
-                    for t in range(8):
+                    for t in range(args.get('days')+1):
 
                         date_string = (current_date - datetime.timedelta(days=t)).strftime("%Y-%m-%d")
                         sql = f"SELECT count(*) FROM facebook WHERE collection_id = {collections.at[i, 'id']} AND " \
-                              f"collection_date='{date_string}' AND " \
-                              f"(" + \
-                              f"collection_id IN (SELECT UNNEST(collections) FROM contributors WHERE id={contributor_id}) OR " \
-                              f"contributor_id IN (SELECT UNNEST(collaborators) FROM contributors WHERE id={contributor_id})" + \
-                              ");"
+                              f"collection_date='{date_string}';"
 
                         response = conn.execute(sql).fetchall()
                         data[collection_name][date_string] = response[0][0]
 
-                message = 'OK: Collections successfully monitored.'
+                message = 'OK: Your collections successfully monitored.'
 
             except sqlalchemy.exc.SQLAlchemyError as e:
                 status = e.code
