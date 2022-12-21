@@ -33,7 +33,7 @@ def home():
 
 
 @app.route('/social_media_audience/query', methods=['GET','POST'])
-@app.route('/query', methods=['GET'])
+@app.route('/query', methods=['GET','POST'])
 def query():
     """API endpoint to select data from the 'social_media_audience' database."""
     args = dict(request.args)
@@ -47,7 +47,7 @@ def query():
 
 
 @app.route('/social_media_audience/write', methods=['GET','POST'])
-@app.route('/write', methods=['GET'])
+@app.route('/write', methods=['GET', 'POST'])
 @limiter.exempt()
 def write():
     """API endpoint to insert data into the 'social_media_audience' database."""
@@ -62,7 +62,7 @@ def write():
 
 
 @app.route('/social_media_audience/collections', methods=['GET','POST'])
-@app.route('/collections', methods=['GET'])
+@app.route('/collections', methods=['GET','POST'])
 def collections():
     """API endpoint to query a complete list of collection names."""
     args = dict(request.args)
@@ -76,7 +76,7 @@ def collections():
 
 
 @app.route('/social_media_audience/monitor_collections', methods=['GET','POST'])
-@app.route('/monitor_collections', methods=['GET'])
+@app.route('/monitor_collections', methods=['GET','POST'])
 def monitor_collections():
     """API endpoint to monitor collections."""
     args = dict(request.args)
