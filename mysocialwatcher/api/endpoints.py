@@ -210,7 +210,7 @@ def collections_fun(args):
 
     status = 200
     message = ''
-    data = {}
+    data = []
 
     args = {key: value for key, value in args.items() if key in ['token']}
 
@@ -241,8 +241,13 @@ def collections_fun(args):
                       f"SELECT UNNEST(collections) FROM contributors WHERE id in " \
                       f"(SELECT UNNEST(collaborators) FROM contributors WHERE id = {contributor_id})" \
                       f");"
-                response = conn.execute(sql).fetchall()
-                data = dict(response)
+
+                collections = pd.read_sql(sql=sql, con=conn)
+
+                for i in range(len(collections)):
+                    data.append({'collection_name': collections.at[i, 'name'],
+                                 'collection_id': int(collections.at[i, 'id'])})
+
                 message = 'OK: Your collections successfully queried.'
 
             except sqlalchemy.exc.SQLAlchemyError as e:
@@ -261,7 +266,7 @@ def monitor_fun(args):
     message = ''
     data = {}
 
-    args = {key: value for key, value in args.items() if key in ['token']}
+    args = {key: value for key, value in args.items() if key in ['token', 'days']}
 
     # check args
     if 'token' not in args.keys():
@@ -306,12 +311,12 @@ def monitor_fun(args):
                 for i in range(len(collections)):
 
                     collection_name = collections.at[i, 'name']
-                    collection_id = collections.at[i, 'id']
+                    collection_id = int(collections.at[i, 'id'])
 
                     data[collection_name] = {'collection_id': collection_id}
 
                     current_date = datetime.date.today()
-                    for t in range(args.get('days')+1):
+                    for t in range(args.get('days')):
 
                         date_string = (current_date - datetime.timedelta(days=t)).strftime("%Y-%m-%d")
                         data[collection_name][date_string] = {}
@@ -322,9 +327,9 @@ def monitor_fun(args):
                                   f"collection_date='{date_string}';"
 
                             response = conn.execute(sql).fetchall()
-                            data[collection_name][date_string][platform] = response[0][0]
+                            data[collection_name][date_string][platform] = int(response[0][0])
 
-                message = 'OK: Your collections successfully monitored.'
+                message = 'OK: Your collections successfully queried.'
 
             except sqlalchemy.exc.SQLAlchemyError as e:
                 status = e.code
