@@ -61,8 +61,8 @@ def write():
         return jsonify(result), result.get("status")
 
 
-@app.route('/social_media_audience/collections', methods=['GET','POST'])
-@app.route('/collections', methods=['GET','POST'])
+@app.route('/social_media_audience/list_collections', methods=['GET','POST'])
+@app.route('/list_collections', methods=['GET','POST'])
 def collections():
     """API endpoint to query a complete list of collection names."""
     args = dict(request.args)
