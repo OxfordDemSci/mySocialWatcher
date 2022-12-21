@@ -1,11 +1,8 @@
 from mysocialwatcher.api.utils import *
 import sys
 load_dotenv('docker/datahub/.env')
+os.environ['POSTGRES_HOST'] = '18.135.72.18'
 
-conn = conn_to_database(pw=os.environ.get('POSTGRES_WPASS'),
-                        host='18.135.72.18',
-                        port=os.environ.get('POSTGRES_PORT'),
-                        db=os.environ.get('POSTGRES_DB'))
 
 def query_test(sql, conn):
 

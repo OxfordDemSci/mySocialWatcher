@@ -30,10 +30,11 @@ def query_fun(args):
     status = result.get('status')
     message = result.get('message')
     data = None
+    db = None
 
     if status == 200:
 
-        # connect to database
+        # database engine
         db = db_engine()
 
         # validate token
@@ -138,10 +139,11 @@ def write_fun(args):
     args = result.get('args')
     status = result.get('status')
     message = result.get('message')
+    db = None
 
     if status == 200:
 
-        # connect to database
+        # database engine
         db = db_engine()
 
         # validate token
@@ -211,6 +213,7 @@ def collections_fun(args):
     status = 200
     message = ''
     data = []
+    db = None
 
     args = {key: value for key, value in args.items() if key in ['token']}
 
@@ -220,7 +223,7 @@ def collections_fun(args):
 
     if status == 200:
 
-        # connect to database
+        # database engine
         db = db_engine()
 
         # validate token
@@ -265,6 +268,7 @@ def monitor_fun(args):
     status = 200
     message = ''
     data = {}
+    db = None
 
     args = {key: value for key, value in args.items() if key in ['token', 'days']}
 
@@ -283,7 +287,7 @@ def monitor_fun(args):
 
     if status == 200:
 
-        # connect to database
+        # database engine
         db = db_engine()
 
         # validate token
