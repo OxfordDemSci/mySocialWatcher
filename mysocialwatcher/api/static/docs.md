@@ -174,20 +174,26 @@ if(response$status == 200){
 ```
 
 
-## Endpoint: collections
+## Endpoint: list_collections
 
-This API endpoint returns a list of all collection names currently in the *social_media_audience* database. 
+This API endpoint returns a list of all collection names that you currently have 
+access to in the *social_media_audience* database. 
 
-URL: `http://18.135.72.18/api/v1/collections`  
+URL: `http://18.135.72.18/api/v1/list_collections`  
 
-Arguments syntax: `http://18.135.72.18/api/v1/collections`  
+Arguments syntax: `http://18.135.72.18/api/v1/list_collections?token=12345`  
+
+**Note:** An API token is required to access this endpoint. Please contact [douglas.leasure@demography.ox.ac.uk](mailto:douglas.leasure@demography.ox.ac.uk) for more information.
 
 
 **API Arguments**  
 
 *Required Arguments*  
 
-None
+Argument | Description
+|:-- |:-----------
+token | API access token (contact [douglas.leasure@demography.ox.ac.uk](mailto:douglas.leasure@demography.ox.ac.uk))
+
 
 *Optional Arguments*  
 
@@ -209,7 +215,55 @@ For example:
   "message": "OK: Collections successfully queried from database.",
   "status": "200",
   "timestamp": "2022-01-03 18:30:26+00",
-  "data": '{"1": "collection1", "2": "collection2"}'
+  "data": '{"0": {"collection_id":1, "collection_name":"my_collection", ...}}'
+}
+```
+
+
+## Endpoint: monitor_collections
+
+This API endpoint returns a count of new data for each of your collections that 
+were written into the database over the past several days. 
+
+URL: `http://18.135.72.18/api/v1/monitor_collections`  
+
+Arguments syntax: `http://18.135.72.18/api/v1/monitor_collections?token=12345&days=7`  
+
+**Note:** An API token is required to access this endpoint. Please contact [douglas.leasure@demography.ox.ac.uk](mailto:douglas.leasure@demography.ox.ac.uk) for more information.
+
+
+**API Arguments**  
+
+*Required Arguments*  
+
+Argument | Description
+|:-- |:-----------
+token | API access token (contact [douglas.leasure@demography.ox.ac.uk](mailto:douglas.leasure@demography.ox.ac.uk))
+
+
+*Optional Arguments*  
+
+Argument | Description
+|:-- |:-----------
+days | (default=7) Number of prior days leading up to today to include with the monitoring summary. 
+
+**API Response**  
+The API will return a json response with four elements:
+
+Element | Description 
+|:-- |:----------- 
+status | http status code
+message | Message describing outcome of operation writing to the database
+timestamp | Date and time of response
+data | Data resulting from query in json format
+
+For example:
+```
+{
+  "message": "OK: Your collections successfully queried.",
+  "status": "200",
+  "timestamp": "2022-01-03 18:30:26+00",
+  "data": '{"migrationuk_tue_men": {"collection_id": 12, "2022-12-21": {"facebook": 0, "instagram": 0}, ...}}'
 }
 ```
 

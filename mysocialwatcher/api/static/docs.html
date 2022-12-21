@@ -1215,7 +1215,10 @@ src: url(data:application/font-sfnt;base64,AAEAAAARAQAABAAQR0RFRgs+Cz8AAjwQAAAAQ
       endpoints</a></li>
       <li><a href="#endpoint-query" id="toc-endpoint-query">Endpoint:
       query</a></li>
-      <li><a href="#endpoint-collections" id="toc-endpoint-collections">Endpoint: collections</a></li>
+      <li><a href="#endpoint-list_collections" id="toc-endpoint-list_collections">Endpoint:
+      list_collections</a></li>
+      <li><a href="#endpoint-monitor_collections" id="toc-endpoint-monitor_collections">Endpoint:
+      monitor_collections</a></li>
       <li><a href="#endpoint-write" id="toc-endpoint-write">Endpoint:
       write</a></li>
       <li><a href="#postgresql" id="toc-postgresql">PostgreSQL</a></li>
@@ -1473,16 +1476,37 @@ if(response$status == 200){
   }
 }</code></pre>
 </div>
-<div id="endpoint-collections" class="section level2">
-<h2>Endpoint: collections</h2>
-<p>This API endpoint returns a list of all collection names currently in
-the <em>social_media_audience</em> database.</p>
-<p>URL: <code>http://18.135.72.18/api/v1/collections</code></p>
+<div id="endpoint-list_collections" class="section level2">
+<h2>Endpoint: list_collections</h2>
+<p>This API endpoint returns a list of all collection names that you
+currently have access to in the <em>social_media_audience</em>
+database.</p>
+<p>URL: <code>http://18.135.72.18/api/v1/list_collections</code></p>
 <p>Arguments syntax:
-<code>http://18.135.72.18/api/v1/collections</code></p>
+<code>http://18.135.72.18/api/v1/list_collections?token=12345</code></p>
+<p><strong>Note:</strong> An API token is required to access this
+endpoint. Please contact <a href="mailto:douglas.leasure@demography.ox.ac.uk">douglas.leasure@demography.ox.ac.uk</a>
+for more information.</p>
 <p><strong>API Arguments</strong></p>
 <p><em>Required Arguments</em></p>
-<p>None</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Argument</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">token</td>
+<td align="left">API access token (contact <a href="mailto:douglas.leasure@demography.ox.ac.uk">douglas.leasure@demography.ox.ac.uk</a>)</td>
+</tr>
+</tbody>
+</table>
 <p><em>Optional Arguments</em></p>
 <p>None</p>
 <p><strong>API Response</strong><br />
@@ -1523,7 +1547,99 @@ database</td>
   &quot;message&quot;: &quot;OK: Collections successfully queried from database.&quot;,
   &quot;status&quot;: &quot;200&quot;,
   &quot;timestamp&quot;: &quot;2022-01-03 18:30:26+00&quot;,
-  &quot;data&quot;: &#39;{&quot;1&quot;: &quot;collection1&quot;, &quot;2&quot;: &quot;collection2&quot;}&#39;
+  &quot;data&quot;: &#39;{&quot;0&quot;: {&quot;collection_id&quot;:1, &quot;collection_name&quot;:&quot;my_collection&quot;, ...}}&#39;
+}</code></pre>
+</div>
+<div id="endpoint-monitor_collections" class="section level2">
+<h2>Endpoint: monitor_collections</h2>
+<p>This API endpoint returns a count of new data for each of your
+collections that were written into the database over the past several
+days.</p>
+<p>URL: <code>http://18.135.72.18/api/v1/monitor_collections</code></p>
+<p>Arguments syntax:
+<code>http://18.135.72.18/api/v1/monitor_collections?token=12345&amp;days=7</code></p>
+<p><strong>Note:</strong> An API token is required to access this
+endpoint. Please contact <a href="mailto:douglas.leasure@demography.ox.ac.uk">douglas.leasure@demography.ox.ac.uk</a>
+for more information.</p>
+<p><strong>API Arguments</strong></p>
+<p><em>Required Arguments</em></p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Argument</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">token</td>
+<td align="left">API access token (contact <a href="mailto:douglas.leasure@demography.ox.ac.uk">douglas.leasure@demography.ox.ac.uk</a>)</td>
+</tr>
+</tbody>
+</table>
+<p><em>Optional Arguments</em></p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Argument</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">days</td>
+<td align="left">(default=7) Number of prior days leading up to today to
+include with the monitoring summary.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>API Response</strong><br />
+The API will return a json response with four elements:</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Element</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">status</td>
+<td align="left">http status code</td>
+</tr>
+<tr class="even">
+<td align="left">message</td>
+<td align="left">Message describing outcome of operation writing to the
+database</td>
+</tr>
+<tr class="odd">
+<td align="left">timestamp</td>
+<td align="left">Date and time of response</td>
+</tr>
+<tr class="even">
+<td align="left">data</td>
+<td align="left">Data resulting from query in json format</td>
+</tr>
+</tbody>
+</table>
+<p>For example:</p>
+<pre><code>{
+  &quot;message&quot;: &quot;OK: Your collections successfully queried.&quot;,
+  &quot;status&quot;: &quot;200&quot;,
+  &quot;timestamp&quot;: &quot;2022-01-03 18:30:26+00&quot;,
+  &quot;data&quot;: &#39;{&quot;migrationuk_tue_men&quot;: {&quot;collection_id&quot;: 12, &quot;2022-12-21&quot;: {&quot;facebook&quot;: 0, &quot;instagram&quot;: 0}, ...}}&#39;
 }</code></pre>
 </div>
 <div id="endpoint-write" class="section level2">
