@@ -32,7 +32,7 @@ def home():
     return current_app.send_static_file('docs.html')
 
 
-@app.route('/social_media_audience/query', methods=['GET'])
+@app.route('/social_media_audience/query', methods=['GET','POST'])
 @app.route('/query', methods=['GET'])
 def query():
     """API endpoint to select data from the 'social_media_audience' database."""
@@ -46,7 +46,7 @@ def query():
         return jsonify(result), result.get("status")
 
 
-@app.route('/social_media_audience/write', methods=['GET'])
+@app.route('/social_media_audience/write', methods=['GET','POST'])
 @app.route('/write', methods=['GET'])
 @limiter.exempt()
 def write():
@@ -61,9 +61,23 @@ def write():
         return jsonify(result), result.get("status")
 
 
-@app.route('/social_media_audience/collections', methods=['GET'])
+@app.route('/social_media_audience/collections', methods=['GET','POST'])
 @app.route('/collections', methods=['GET'])
 def collections():
     """API endpoint to query a complete list of collection names."""
     result = endpoints.collections_fun()
     return jsonify(result), result.get("status")
+
+
+@app.route('/social_media_audience/monitor', methods=['GET','POST'])
+@app.route('/monitor', methods=['GET'])
+def monitor():
+    """API endpoint to monitor collections."""
+    args = dict(request.args)
+    if len(args) == 0:
+        return "<h1>400 Error</h1><p>Bad Request: This API endpoint requires arguments. " \
+               "See <a href='./../'>API documentation</a> for more information.", \
+               400
+    else:
+        result = endpoints.monitor_fun(args)
+        return jsonify(result), result.get("status")
