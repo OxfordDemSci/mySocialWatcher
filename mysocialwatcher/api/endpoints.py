@@ -252,7 +252,7 @@ def collections_fun(args):
     if db:
         db.dispose()
 
-    return {'status': status, 'message': message, 'data': data, 'timestamp': timestr()}
+    return {'status': status, 'message': message, 'timestamp': timestr(), 'data': data}
 
 
 def monitor_fun(args):
@@ -302,22 +302,27 @@ def monitor_fun(args):
                       f");"
                 collections = pd.read_sql(sql=sql, con=conn)
 
+                platforms = ['facebook', 'instagram']
                 for i in range(len(collections)):
 
                     collection_name = collections.at[i, 'name']
                     collection_id = collections.at[i, 'id']
 
-                    data[collection_name] = {'id': collection_id}
+                    data[collection_name] = {'collection_id': collection_id}
 
                     current_date = datetime.date.today()
                     for t in range(args.get('days')+1):
 
                         date_string = (current_date - datetime.timedelta(days=t)).strftime("%Y-%m-%d")
-                        sql = f"SELECT count(*) FROM facebook WHERE collection_id = {collections.at[i, 'id']} AND " \
-                              f"collection_date='{date_string}';"
+                        data[collection_name][date_string] = {}
 
-                        response = conn.execute(sql).fetchall()
-                        data[collection_name][date_string] = response[0][0]
+                        for platform in platforms:
+
+                            sql = f"SELECT count(*) FROM {platform} WHERE collection_id = {collections.at[i, 'id']} AND " \
+                                  f"collection_date='{date_string}';"
+
+                            response = conn.execute(sql).fetchall()
+                            data[collection_name][date_string][platform] = response[0][0]
 
                 message = 'OK: Your collections successfully monitored.'
 
@@ -328,4 +333,4 @@ def monitor_fun(args):
     if db:
         db.dispose()
 
-    return {'timestamp': timestr(), 'status': status, 'message': message, 'data': data}
+    return {'status': status, 'message': message, 'timestamp': timestr(), 'data': data}
