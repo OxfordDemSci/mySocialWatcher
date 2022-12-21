@@ -1,3 +1,4 @@
+import pandas as pd
 import sqlalchemy.exc
 from mysocialwatcher.api.utils import *
 
@@ -205,21 +206,136 @@ def write_fun(args):
     return {"status": status, "message": message, "timestamp": timestr()}
 
 
-def collections_fun():
+def collections_fun(args):
 
     status = 200
+    message = ''
+    data = []
 
-    db = db_engine()
+    args = {key: value for key, value in args.items() if key in ['token']}
 
-    with db.connect() as conn:
+    if 'token' not in args.keys():
+        status = 400
+        message = "Bad Request: 'token' argument required."
 
+    if status == 200:
+
+        # connect to database
+        db = db_engine()
+
+        # validate token
+        result = validate_token(token=args.get('token'), db=db)
+
+        message = result.get('message')
+        status = result.get('status')
+
+    if status == 200:
+
+        contributor_id = result.get('contributor_id')
+
+        with db.connect() as conn:
+            # conn = db.connect()
+
+            try:
+                sql = f"SELECT id, name FROM collections WHERE id IN (" \
+                      f"SELECT UNNEST(collections) FROM contributors WHERE id in " \
+                      f"(SELECT UNNEST(collaborators) FROM contributors WHERE id = {contributor_id})" \
+                      f");"
+
+                collections = pd.read_sql(sql=sql, con=conn)
+
+                for i in range(len(collections)):
+                    data.append({'collection_name': collections.at[i, 'name'],
+                                 'collection_id': int(collections.at[i, 'id'])})
+
+                message = 'OK: Your collections successfully queried.'
+
+            except sqlalchemy.exc.SQLAlchemyError as e:
+                status = e.code
+                message = e._message()
+
+    if db:
+        db.dispose()
+
+    return {'status': status, 'message': message, 'timestamp': timestr(), 'data': data}
+
+
+def monitor_fun(args):
+
+    status = 200
+    message = ''
+    data = {}
+
+    args = {key: value for key, value in args.items() if key in ['token', 'days']}
+
+    # check args
+    if 'token' not in args.keys():
+        status = 400
+        message = "Bad Request: 'token' argument required."
+
+    if 'days' in args.keys():
         try:
-            response = conn.execute('select id, name from collections;').fetchall()
-            data = dict(response)
-            message = 'OK: Collections successfully queried.'
+            args['days'] = int(float(args.get('days')))
+        except:
+            args['days'] = 7
+    else:
+        args['days'] = 7
 
-        except sqlalchemy.exc.SQLAlchemyError as e:
-            status = e.code
-            message = e._message()
+    if status == 200:
 
-    return {'status': status, 'message': message, 'data': data, 'timestamp': timestr()}
+        # connect to database
+        db = db_engine()
+
+        # validate token
+        result = validate_token(token=args.get('token'), db=db)
+
+        message = result.get('message')
+        status = result.get('status')
+
+    if status == 200:
+
+        contributor_id = result.get('contributor_id')
+
+        with db.connect() as conn:
+            # conn = db.connect()
+
+            try:
+
+                sql = f"SELECT id, name FROM collections WHERE id IN (" \
+                      f"SELECT UNNEST(collections) FROM contributors WHERE id in " \
+                      f"(SELECT UNNEST(collaborators) FROM contributors WHERE id = {contributor_id})" \
+                      f");"
+                collections = pd.read_sql(sql=sql, con=conn)
+
+                platforms = ['facebook', 'instagram']
+                for i in range(len(collections)):
+
+                    collection_name = collections.at[i, 'name']
+                    collection_id = int(collections.at[i, 'id'])
+
+                    data[collection_name] = {'collection_id': collection_id}
+
+                    current_date = datetime.date.today()
+                    for t in range(args.get('days')):
+
+                        date_string = (current_date - datetime.timedelta(days=t)).strftime("%Y-%m-%d")
+                        data[collection_name][date_string] = {}
+
+                        for platform in platforms:
+
+                            sql = f"SELECT count(*) FROM {platform} WHERE collection_id = {collections.at[i, 'id']} AND " \
+                                  f"collection_date='{date_string}';"
+
+                            response = conn.execute(sql).fetchall()
+                            data[collection_name][date_string][platform] = int(response[0][0])
+
+                message = 'OK: Your collections successfully queried.'
+
+            except sqlalchemy.exc.SQLAlchemyError as e:
+                status = e.code
+                message = e._message()
+
+    if db:
+        db.dispose()
+
+    return {'status': status, 'message': message, 'timestamp': timestr(), 'data': data}
