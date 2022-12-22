@@ -78,10 +78,10 @@ def handle_send_request_error(response, url, params, tryNumber):
         elif error_json["error"]["code"] == constants.TOO_MANY_CALLS_ERROR or \
                 "There have been too many calls to this ad-account." in error_json["error"]["message"]:
             constants.SLEEP_TIME += 1
-            rest_time = min(1800, max(60, 3600 - (constants.SLEEP_TIME * constants.LIMIT_CALLS_PER_HOUR)))
-            print_warning(f"Too many calls to this ad-account with {str(constants.SLEEP_TIME-1)} second sleep time. "
-                          f"We will rest for {str(round(rest_time/60))} minutes, "
-                          f"and then try again with {str(constants.SLEEP_TIME)} second sleep time.")
+            rest_time = min(1200, max(60, 3600 - (constants.SLEEP_TIME * constants.LIMIT_CALLS_PER_HOUR)))
+            print_warning(f"There were too many calls to this ad-account using a {str(constants.SLEEP_TIME-1)} second "
+                          f"sleep time. We will rest for {str(round(rest_time/60))} minutes, "
+                          f"and then try again with a {str(constants.SLEEP_TIME)} second sleep time.")
             time.sleep(rest_time)
         else:
             logging.error("Could not handle error.")
@@ -119,15 +119,18 @@ def call_request_fb(row, token, account, url):
         'access_token': token,
     }
     payload_str = str(payload)
-    print_warning("\tSending in request: %s" % (payload_str))
+    if constants.VERBOSE:
+        print_warning("\tSending in request: %s" % (payload_str))
     url = url.format(account)
     response = send_request(url, payload)
 
     if "x-business-use-case-usage" in response.headers:
         usage_dict = ast.literal_eval(response.headers["x-business-use-case-usage"])[account][0]
-        print_warning("\tUsage Stats: Call count (%d), cputime (%d), total_time (%d)." % (usage_dict["call_count"],
-                                                                                          usage_dict["total_cputime"],
-                                                                                          usage_dict["total_time"]))
+        if constants.VERBOSE:
+            print_warning("\tUsage Stats: Call count (%d), cputime (%d), total_time (%d)." % (usage_dict["call_count"],
+                                                                                              usage_dict[
+                                                                                                  "total_cputime"],
+                                                                                              usage_dict["total_time"]))
     return response.content
 
 
