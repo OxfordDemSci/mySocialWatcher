@@ -265,12 +265,23 @@ def monitor_fun(args):
     data = {}
     db = None
 
-    args = {key: value for key, value in args.items() if key in ['token', 'days']}
+    args = {key: value for key, value in args.items() if key in ['token', 'days', 'collections']}
 
     # check args
     if 'token' not in args.keys():
         status = 400
         message = "Bad Request: 'token' argument required."
+
+    if 'collections' in args.keys():
+        try:
+            args['collections'] = literal_eval(args.get('collections'))
+        except:
+            status = 400
+            message = "Bad Request: 'collections' argument failed literal evaluation."
+
+        if not isinstance(args.get('collections'), list):
+            status = 400
+            message = "Bad Request: 'collections' argument must be a list (e.g. ['my_collection'])."
 
     if 'days' in args.keys():
         try:
@@ -303,8 +314,12 @@ def monitor_fun(args):
                   f");"
             collections = pd.read_sql(sql=sql, con=db.connect())
 
+            if 'collections' in args.keys():
+                collections = collections[collections['name'].isin(args.get('collections'))]
+                collections.reset_index(drop=True, inplace=True)
+
             for i in range(len(collections)):
-                # i = 2
+                # i = 0
 
                 collection_name = collections.at[i, 'name']
                 collection_id = int(collections.at[i, 'id'])

@@ -245,7 +245,9 @@ token | API access token (contact [douglas.leasure@demography.ox.ac.uk](mailto:d
 
 Argument | Description
 |:-- |:-----------
-days | (default=7) Number of prior days leading up to today to include with the monitoring summary. 
+days | (default=7) Number of prior days leading up to today to include with the monitoring summary.
+collections | List of collections to monitor. Format = ['my_collection1', 'my_collection2']. 
+Use [list_collections endpoint](#endpoint-list_collections) to see collections available to you.
 
 **API Response**  
 The API will return a json response with four elements:
@@ -306,7 +308,7 @@ mau_upper | Upper bound of monthly active users
 
 Argument | Description 
 |:-- |:----------- 
-collection | (recommended) The name of the collection. This is will help filter results later. The [collections endpoint](#endpoint-collections) provides a list of existing collections names, or a new collection name can be created when writing new data. 
+collection | (recommended) The name of the collection. This is will help filter results later. The [list_collections endpoint](#endpoint-list_collections) provides a list of existing collections names, or a new collection name can be created when writing new data. 
 all_fields | (recommended) All fields of special targeting audience specification. This is a default field returned from pySocialWatcher as a string representation of a Python tuple of tuples.
 targeting | (recommended) Audience targeting json as submitted to Facebook API. This is a default field returned from pySocialWatcher.
 response | (recommended) Response from Facebook API. This is a default field returned from pySocialWatcher as a string representation of a Python bytes array.

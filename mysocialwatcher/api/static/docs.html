@@ -1599,6 +1599,12 @@ for more information.</p>
 <td align="left">(default=7) Number of prior days leading up to today to
 include with the monitoring summary.</td>
 </tr>
+<tr class="even">
+<td align="left">collections</td>
+<td align="left">List of collections to monitor. Format =
+[‘my_collection1’, ‘my_collection2’]. Use <a href="#endpoint-list_collections">list_collections endpoint</a> to see
+collections available to you.</td>
+</tr>
 </tbody>
 </table>
 <p><strong>API Response</strong><br />
@@ -1749,9 +1755,9 @@ pySocialWatcher or Facebook Marketing API for more information.</td>
 <tr class="odd">
 <td align="left">collection</td>
 <td align="left">(recommended) The name of the collection. This is will
-help filter results later. The <a href="#endpoint-collections">collections endpoint</a> provides a list of
-existing collections names, or a new collection name can be created when
-writing new data.</td>
+help filter results later. The <a href="#endpoint-list_collections">list_collections endpoint</a> provides
+a list of existing collections names, or a new collection name can be
+created when writing new data.</td>
 </tr>
 <tr class="even">
 <td align="left">all_fields</td>
