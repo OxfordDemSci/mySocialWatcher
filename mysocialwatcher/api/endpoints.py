@@ -304,7 +304,7 @@ def monitor_fun(args):
             collections = pd.read_sql(sql=sql, con=db.connect())
 
             for i in range(len(collections)):
-                # i = 0
+                # i = 2
 
                 collection_name = collections.at[i, 'name']
                 collection_id = int(collections.at[i, 'id'])
@@ -321,18 +321,24 @@ def monitor_fun(args):
                     for platform in ['facebook', 'instagram']:
                         # platform = 'facebook'
 
-                        sql1 = f"SELECT COUNT(*) FROM {platform} WHERE collection_id = {collection_id} AND " \
-                              f"collection_date='{date_string}';"
+                        sql = f"SELECT COUNT(*) AS record_count,  " \
+                              f"MAX(timestamp) AS latest_timestamp, " \
+                              f"MAX(contributed_on) AS latest_contribution " \
+                              f"FROM {platform} " \
+                              f"WHERE collection_id = {collection_id} AND collection_date='{date_string}';"
 
-                        sql2 = f"SELECT MAX(contributed_on) FROM {platform} WHERE collection_id={collection_id} AND " \
-                               f"collection_date='{date_string}';"
+                        response = pd.read_sql(sql=sql, con=db.connect())
 
-                        with db.connect() as conn:
-                            response1 = conn.execute(sql1).fetchall()
-                            response2 = conn.execute(sql2).fetchall()
+                        result = {'record_count': int(response['record_count'])}
+                        if result.get('record_count') > 0:
+                            result['latest_contribution'] = \
+                                response['latest_contribution'][0].strftime('%Y-%m-%d %H:%M:%S')
+                            result['latest_timestamp'] = \
+                                str(datetime.datetime.fromtimestamp(response['latest_timestamp'][0]))
 
-                        data[collection_name][date_string][platform] = {'record_count': int(response1[0][0]),
-                                                                        'latest_record': str(response2[0][0])}
+                        data[collection_name][date_string][platform] = result
+
+                        del response, result
 
             message = 'OK: Your collections successfully queried.'
 
