@@ -7,7 +7,7 @@ from ast import literal_eval
 from dotenv import load_dotenv
 
 load_dotenv()
-load_dotenv('docker/datahub/dev.env')
+#load_dotenv('docker/datahub/dev.env')
 
 
 def timestr():
