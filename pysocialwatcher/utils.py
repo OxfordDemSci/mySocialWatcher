@@ -271,7 +271,8 @@ def get_all_combinations_from_input(input_data_json):
                     to_combine_fields[intra_field_key] = input_data_json[field][intra_field_key]
 
         except KeyError:
-            print_warning("Field not expecified: " + field)
+            if constants.VERBOSE:
+                print_warning("Field not expecified: " + field)
 
     for field in list(to_combine_fields.keys()):
         for index, value in enumerate(to_combine_fields[field]):
@@ -336,7 +337,7 @@ def select_common_fields_in_targeting(targeting, input_combination_dictionary):
         languages = input_combination_dictionary[constants.INPUT_LANGUAGE_FIELD]
         if languages:
             targeting[constants.API_LANGUAGES_FIELD] = languages["values"]
-    else:
+    elif constants.VERBOSE:
         print_warning("No field: " + constants.INPUT_LANGUAGE_FIELD)
 
 

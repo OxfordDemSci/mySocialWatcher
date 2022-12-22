@@ -8,13 +8,14 @@ import xml.etree.ElementTree as ET
 
 class PySocialWatcher:
 
-    def __init__(self, api_version="12.0", sleep_time=12, save_every_x=300, outputname=None):
+    def __init__(self, api_version="12.0", sleep_time=12, save_every_x=300, outputname=None, verbose=True):
 
         constants.REACHESTIMATE_URL = "https://graph.facebook.com/v" + api_version + "/act_{}/delivery_estimate"
         constants.GRAPH_SEARCH_URL = "https://graph.facebook.com/v" + api_version + "/search"
         constants.TARGETING_SEARCH_URL = "https://graph.facebook.com/v" + api_version + "/act_{}/targetingsearch"
         constants.SLEEP_TIME = sleep_time
         constants.SAVE_EVERY = save_every_x
+        constants.VERBOSE = verbose
 
         constants.UNIQUE_TIME_ID = str(time.time()).split(".")[0]
 
@@ -239,13 +240,15 @@ class PySocialWatcher:
 
     @staticmethod
     def build_collection_dataframe(input_data_json, output_dir = ""):
-        print_info("Building Collection Dataframe")
+        if constants.VERBOSE:
+            print_info("Building Collection Dataframe")
         collection_dataframe = build_initial_collection_dataframe()
         collection_queries = []
         input_combinations = get_all_combinations_from_input(input_data_json)
         print_info("Total API Requests:" + str(len(input_combinations)))
         for index,combination in enumerate(input_combinations):
-            print_info("Completed: {0:.2f}".format(100*index/float(len(input_combinations))))
+            if constants.VERBOSE:
+                print_info("Completed: {0:.2f}".format(100*index/float(len(input_combinations))))
             collection_queries.append(generate_collection_request_from_combination(combination, input_data_json))
         dataframe = collection_dataframe.append(collection_queries)
         dataframe = add_timestamp(dataframe)

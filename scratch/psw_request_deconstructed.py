@@ -62,7 +62,8 @@ if __name__ == '__main__':
 
     # instantiate pySocialWatcher
     watcher = watcherAPI(api_version='15.0',
-                         sleep_time=0)
+                         sleep_time=0,
+                         verbose=False)
 
     # load credentials
     watcher.load_credentials_file(credentials_path)

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import time
 SAVE_EMPTY = True
+VERBOSE = False
 MAX_NUMBER_TRY = 10
 REQUESTS_TIMEOUT = 60
 INITIAL_TRY_SLEEP_TIME = 300
