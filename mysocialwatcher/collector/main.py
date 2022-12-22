@@ -39,7 +39,7 @@ if __name__ == '__main__':
 
             # instantiate watcher
             watcher = watcherAPI(api_version='15.0',
-                                 sleep_time=10,
+                                 sleep_time=11,
                                  save_every_x=100,
                                  verbose=False)
 

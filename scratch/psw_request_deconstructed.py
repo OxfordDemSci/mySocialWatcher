@@ -110,13 +110,12 @@ if __name__ == '__main__':
 
         rest_time = min(30 * 60, max(1 * 60, 3600 - (SLEEP_TIME * LIMIT_CALLS_PER_HOUR)))
 
-        print(f"Too many calls to this ad-account with {SLEEP_TIME} second sleep time. "
-              f"We will rest for {round(rest_time/60)} minutes, "
-              f"and then try again with the sleep time increased to {SLEEP_TIME + 1} seconds.")
+        print(f"Too many calls to this ad-account (SLEEP_TIME={SLEEP_TIME}). We will rest for {round(rest_time/60)} minutes "
+              f"and then try again.")
 
         return rest_time
 
-    for i in range(1, 12):
+    for i in range(1, 20):
         rest_time(i)
 
 
