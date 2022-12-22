@@ -61,7 +61,7 @@ services:
     build:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
-    restart: on-failure
+    restart: unless-stopped
 
   ukraine_countries:
     container_name: ukraine_countries
@@ -71,4 +71,4 @@ services:
     build:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
-    restart: on-failure
+    restart: unless-stopped

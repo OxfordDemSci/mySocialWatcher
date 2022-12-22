@@ -52,7 +52,7 @@ if __name__ == '__main__':
     for f in os.listdir(specs_dir):
         os.remove(os.path.join(specs_dir, f))
 
-    specs_template = multicountry_specs(countries=countries, name='ukraine_countries')
+    specs_template = multicountry_specs(countries=countries, name=collection)
     specs_template['name'] = collection
 
     languages = [None,
@@ -60,26 +60,29 @@ if __name__ == '__main__':
                  {'name': 'Russian', 'values': [17]}]
 
     location_types = ['recent',
-                      'home',
-                      'travel_in',
-                      ['home', 'recent']]
+                      'home']
+
+    platforms = ['facebook', 'instagram']
 
     i_count = 0
     for location_type in location_types:
         for language in languages:
+            for platform in platforms:
+                i_count += 1
 
-            i_count += 1
+                specs = specs_template
 
-            specs = specs_template
+                # platform
+                specs["publisher_platforms"] = [platform]
 
-            # language
-            specs['languages'] = [language]
+                # language
+                specs['languages'] = [language]
 
-            # location types
-            for i in range(len(specs['geo_locations'])):
-                specs['geo_locations'][i]['location_types'] = [location_type]
+                # location types
+                for i in range(len(specs['geo_locations'])):
+                    specs['geo_locations'][i]['location_types'] = [location_type]
 
-            # save json
-            file_out = os.path.join(specs_dir, 'specs' + str(i_count).zfill(3) + '.json')
-            with open(file_out, "w") as f:
-                f.write(json.dumps(specs))
+                # save json
+                file_out = os.path.join(specs_dir, 'specs' + str(i_count).zfill(3) + '.json')
+                with open(file_out, "w") as f:
+                    f.write(json.dumps(specs))
