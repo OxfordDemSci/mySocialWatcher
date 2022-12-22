@@ -77,8 +77,12 @@ def handle_send_request_error(response, url, params, tryNumber):
             return get_fake_response()
         elif error_json["error"]["code"] == constants.TOO_MANY_CALLS_ERROR or \
                 "There have been too many calls to this ad-account." in error_json["error"]["message"]:
-            print_warning("Too many call to this ad-account. We will rest for 10 minutes and try again.")
-            time.sleep(600)
+            constants.SLEEP_TIME += 1
+            rest_time = min(1800, max(60, 3600 - (constants.SLEEP_TIME * constants.LIMIT_CALLS_PER_HOUR)))
+            print_warning(f"Too many calls to this ad-account with {str(constants.SLEEP_TIME-1)} second sleep time. "
+                          f"We will rest for {str(round(rest_time/60))} minutes, "
+                          f"and then try again with {str(constants.SLEEP_TIME)} second sleep time.")
+            time.sleep(rest_time)
         else:
             logging.error("Could not handle error.")
             logging.error("Error Code:" + str(error_json["error"]["code"]))

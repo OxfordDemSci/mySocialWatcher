@@ -102,4 +102,26 @@ if __name__ == '__main__':
     with open(os.path.join(data_dir, 'response.pkl'), 'rb') as file:
         response = pickle.load(file)
 
+    # error_json as in pysocialwatcher.utils.handle_send_request_error
     error_json = json.loads(response.text)
+
+    # calculate appropriate rest times
+    def rest_time(SLEEP_TIME=12, LIMIT_CALLS_PER_HOUR=300):
+
+        rest_time = min(30 * 60, max(1 * 60, 3600 - (SLEEP_TIME * LIMIT_CALLS_PER_HOUR)))
+
+        print(f"Too many calls to this ad-account with {SLEEP_TIME} second sleep time. "
+              f"We will rest for {round(rest_time/60)} minutes, "
+              f"and then try again with the sleep time increased to {SLEEP_TIME + 1} seconds.")
+
+        return rest_time
+
+    for i in range(1, 12):
+        rest_time(i)
+
+
+
+
+
+
+
