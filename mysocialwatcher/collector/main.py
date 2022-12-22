@@ -39,8 +39,9 @@ if __name__ == '__main__':
 
             # instantiate watcher
             watcher = watcherAPI(api_version='15.0',
-                                 sleep_time=12,
-                                 save_every_x=100)
+                                 sleep_time=10,
+                                 save_every_x=100,
+                                 verbose=False)
 
             # load credentials
             watcher.load_credentials_file('credentials.csv')

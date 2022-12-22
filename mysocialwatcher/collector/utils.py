@@ -27,8 +27,13 @@ def get_specs_list(specs_dir, data_dir):
     specs_list = [f for f in specs_list if f.endswith('.json')]
     specs_list.sort()
 
-    finished_list = os.listdir(os.path.join(data_dir, 'finished'))
-    collecting_list = os.listdir(os.path.join(data_dir, 'collecting'))
+    finished_list = []
+    if os.path.exists(os.path.join(data_dir, 'finished')):
+        finished_list = os.listdir(os.path.join(data_dir, 'finished'))
+
+    collecting_list = []
+    if os.path.exists(os.path.join(data_dir, 'collecting')):
+        collecting_list = os.listdir(os.path.join(data_dir, 'collecting'))
 
     finished_latest = {}
     for specs in specs_list:
