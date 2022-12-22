@@ -75,6 +75,10 @@ def handle_send_request_error(response, url, params, tryNumber):
             "message"] and constants.INGORE_INVALID_ZIP_CODES:
             print_warning("Invalid Zip Code:" + str(params[constants.TARGETING_SPEC_FIELD]))
             return get_fake_response()
+        elif error_json["error"]["code"] == constants.TOO_MANY_CALLS_ERROR or \
+                "There have been too many calls to this ad-account." in error_json["error"]["message"]:
+            print_warning("Too many call to this ad-account. We will rest for 10 minutes and try again.")
+            time.sleep(600)
         else:
             logging.error("Could not handle error.")
             logging.error("Error Code:" + str(error_json["error"]["code"]))
