@@ -304,6 +304,7 @@ def monitor_fun(args):
             collections = pd.read_sql(sql=sql, con=db.connect())
 
             for i in range(len(collections)):
+                # i = 0
 
                 collection_name = collections.at[i, 'name']
                 collection_id = int(collections.at[i, 'id'])
@@ -312,19 +313,26 @@ def monitor_fun(args):
 
                 current_date = datetime.date.today()
                 for t in range(args.get('days')):
+                    # t = 0
 
                     date_string = (current_date - datetime.timedelta(days=t)).strftime("%Y-%m-%d")
                     data[collection_name][date_string] = {}
 
                     for platform in ['facebook', 'instagram']:
+                        # platform = 'facebook'
 
-                        sql = f"SELECT count(*) FROM {platform} WHERE collection_id = {collections.at[i, 'id']} AND " \
+                        sql1 = f"SELECT COUNT(*) FROM {platform} WHERE collection_id = {collection_id} AND " \
                               f"collection_date='{date_string}';"
 
-                        with db.connect() as conn:
-                            response = conn.execute(sql).fetchall()
+                        sql2 = f"SELECT MAX(contributed_on) FROM {platform} WHERE collection_id={collection_id} AND " \
+                               f"collection_date='{date_string}';"
 
-                        data[collection_name][date_string][platform] = int(response[0][0])
+                        with db.connect() as conn:
+                            response1 = conn.execute(sql1).fetchall()
+                            response2 = conn.execute(sql2).fetchall()
+
+                        data[collection_name][date_string][platform] = {'record_count': int(response1[0][0]),
+                                                                        'latest_record': str(response2[0][0])}
 
             message = 'OK: Your collections successfully queried.'
 
