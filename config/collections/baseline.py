@@ -44,10 +44,10 @@ if __name__ == '__main__':
         os.remove(os.path.join(specs_dir, f))
 
 
-    countries = ['AF', 'BD', 'BF', 'BR', 'CD', 'CM', 'CO', 'CU', 'EC', 'ET', 'GH', 'GN', 'GT', 'HT', 'IL', 'IQ' ,'IN',
+    countries = ['AF', 'BD', 'BF', 'BR', 'CD', 'CM', 'CO', 'CU', 'EC', 'ET', 'GH', 'GN', 'GT', 'HT', 'IL', 'IQ' ,'IN', 'IR',
                  'LY', 'ML', 'MM', 'MZ', 'NE', 'NG', 'NP', 'PE', 'PK', 'PS', 'SD', 'SL', 'SO', 'SS', 'SY', 'UA', 'VE', 'YE',
                  'ZA', 'ZM']
-    drop_countries = ['UA', 'CU']
+    drop_countries = ['UA', 'CU', 'SD']
     countries = [i for i in countries if i not in drop_countries]
 
     platforms = ['facebook', 'instagram']
