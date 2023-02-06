@@ -14,6 +14,7 @@ COPY pysocialwatcher pysocialwatcher
 COPY mysocialwatcher mysocialwatcher
 COPY mysocialwatcher/collector/main.py main.py
 COPY docker/collectors/_utils utils
+COPY docker/cleanup.sh ./utils/cleanup.sh
 
 RUN chmod 0744 ./utils/launch.sh
 RUN chmod 0744 ./utils/cleanup.sh
