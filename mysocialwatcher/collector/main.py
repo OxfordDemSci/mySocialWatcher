@@ -38,7 +38,7 @@ if __name__ == '__main__':
             logger.info('Preparing collection with specification: ' + specs_filepath)
 
             # instantiate watcher
-            watcher = watcherAPI(api_version='15.0',
+            watcher = watcherAPI(api_version='16.0',
                                  sleep_time=11,
                                  save_every_x=100,
                                  verbose=False)
