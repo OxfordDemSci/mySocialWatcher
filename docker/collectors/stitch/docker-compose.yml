@@ -1,0 +1,15 @@
+# docker-compose to deploy multiple collectors
+version: '3.3'
+
+services:
+
+  turkey_earthquake:
+    container_name: turkey_earthquake
+    volumes:
+      - ./turkey_earthquake:/app/in
+      - ./../../../data/stitch/turkey_earthquake:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
