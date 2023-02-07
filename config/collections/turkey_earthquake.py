@@ -59,10 +59,6 @@ if __name__ == '__main__':
             specs = json.load(f)
         specs['name'] = collection
 
-        # location types
-        for i in range(len(specs['geo_locations'])):
-            specs['geo_locations'][i]['location_types'] = ['recent', 'home']
-
         # ---- recent ----#
 
         # facebook
@@ -70,7 +66,11 @@ if __name__ == '__main__':
 
         specs["publisher_platforms"] = ['facebook']
 
-        file_out = os.path.join(specs_dir, str(i_count).zfill(3) + '_' + country + '_facebook.json')
+        # location types
+        for i in range(len(specs['geo_locations'])):
+            specs['geo_locations'][i]['location_types'] = ['recent']
+
+        file_out = os.path.join(specs_dir, str(i_count).zfill(3) + '_' + country + '_facebook_recent.json')
         with open(file_out, "w") as f:
             f.write(json.dumps(specs))
 
@@ -79,7 +79,31 @@ if __name__ == '__main__':
 
         specs["publisher_platforms"] = ['instagram']
 
-        file_out = os.path.join(specs_dir, str(i_count).zfill(3) + '_' + country + '_instagram.json')
+        file_out = os.path.join(specs_dir, str(i_count).zfill(3) + '_' + country + '_instagram_recent.json')
+        with open(file_out, "w") as f:
+            f.write(json.dumps(specs))
+
+        # ---- home ----#
+
+        # facebook
+        i_count += 1
+
+        specs["publisher_platforms"] = ['facebook']
+
+        # location types
+        for i in range(len(specs['geo_locations'])):
+            specs['geo_locations'][i]['location_types'] = ['home']
+
+        file_out = os.path.join(specs_dir, str(i_count).zfill(3) + '_' + country + '_facebook_home.json')
+        with open(file_out, "w") as f:
+            f.write(json.dumps(specs))
+
+        # instagram
+        i_count += 1
+
+        specs["publisher_platforms"] = ['instagram']
+
+        file_out = os.path.join(specs_dir, str(i_count).zfill(3) + '_' + country + '_instagram_home.json')
         with open(file_out, "w") as f:
             f.write(json.dumps(specs))
 
