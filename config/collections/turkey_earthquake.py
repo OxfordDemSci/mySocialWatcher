@@ -36,7 +36,7 @@ if __name__ == '__main__':
     # ---- collection specs ---- #
 
     # countries
-    countries = ['TR', 'SY']
+    countries = ['TR']
 
     # output directory
     specs_dir = os.path.join(out_dir, 'specs')
