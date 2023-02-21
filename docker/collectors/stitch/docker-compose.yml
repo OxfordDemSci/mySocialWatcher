@@ -13,3 +13,13 @@ services:
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
+  turkey_language:
+    container_name: turkey_language
+    volumes:
+      - ./turkey_language:/app/in
+      - ./../../../data/stitch/turkey_language:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
