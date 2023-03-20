@@ -18,6 +18,12 @@ approved credentials for access.
 **./api/v1/query**  
 Returns social media audience estimates for specific locations, dates, and demographic groups.
 
+**./api/v1/list_collections**  
+List all collection names that you have permission to access.
+
+**./api/v1/monitor_collections**  
+Get summary statistics for recent data from your collections.
+
 **./api/v1/write**  
 Write new data into the database (requires authentication with write-access).
 
@@ -55,7 +61,7 @@ age_min | Lower bound of age of the audience size reported. Default = 0.
 age_max | Upper bound of age of the audience size reported. Default = 999.
 date_start | Earliest date to include in the query result
 date_end | Latest date to include in the query result
-collection | The name of a collection from which you would like to return data. The names of all collections can be obtained from the [collections endpoint](#endpoint-collections).
+collection | The name of a collection from which you would like to return data. The names of all collections can be obtained from the [collections endpoint](#endpoint-list_collections).
 contributor_id | ID number of contributor whose data you would like to return
 valid | Return only data marked as valid by contributors? Default = true. Acceptable values: true, t, yes, y, on, 1. All other values will be treated as: false.
 
