@@ -13,6 +13,7 @@ load_dotenv('docker/datahub/_utils/migrate_old_db.env')
 api_url = os.environ.get('api_url')
 jiani_token = os.environ.get('jiani_token')
 ian_token = os.environ.get('ian_token')
+doug_token = os.environ.get('doug_token')
 
 # logging
 log_dir = os.path.join('data', 'datahub_migrate')
@@ -72,6 +73,7 @@ def write_row(row, table, token, collection=None, valid=False):
         del args[i]
 
     # submit api request
+    response = None
     try:
         response = requests.get(url=api_url, params=args)
         response = literal_eval(json.dumps(response.json()))
@@ -90,33 +92,34 @@ def write_row(row, table, token, collection=None, valid=False):
 if __name__ == '__main__':
 
     # database connection
-    engine = sqlalchemy.create_engine('postgresql+psycopg2://reader:pass@localhost:5432/social_media_audience')
+    engine = sqlalchemy.create_engine('postgresql+psycopg2://reader:pass@localhost:5432/social_media_audience',
+                                      poolclass=sqlalchemy.pool.NullPool)
 
-    # Jiani's Facebook collections for DGG
-    with engine.connect() as conn:
-        # conn = engine.connect()
-
-        logger.info(timestamp_str() + 'Migrating Jiani\'s collections...')
-        print(timestamp_str() + 'Migrating Jiani\'s collections...')
-
-        sql = 'select * from facebook where contributor_id = 4 order by timestamp desc, country asc;'
-        result = conn.execute(sql)
-
-        row_idx = 0
-        for row in result.mappings():
-            row_idx += 1
-            print_progress(row_idx, 4094751)
-
-            response = write_row(row,
-                                 table='facebook',
-                                 collection='dgg_national',
-                                 token=jiani_token,
-                                 valid=True)
-            # if row_idx > 10:
-            #     break
-
-        logger.info(timestamp_str() + 'Finished migrating Jiani\'s collections.')
-        print(timestamp_str() + 'Finished migrating Jiani\'s collections.')
+    # # Jiani's Facebook collections for DGG
+    # with engine.connect() as conn:
+    #     # conn = engine.connect()
+    #
+    #     logger.info(timestamp_str() + 'Migrating Jiani\'s collections...')
+    #     print(timestamp_str() + 'Migrating Jiani\'s collections...')
+    #
+    #     sql = 'select * from facebook where contributor_id = 4 order by timestamp desc, country asc;'
+    #     result = conn.execute(sql)
+    #
+    #     row_idx = 0
+    #     for row in result.mappings():
+    #         row_idx += 1
+    #         print_progress(row_idx, 4094751)
+    #
+    #         response = write_row(row,
+    #                              table='facebook',
+    #                              collection='dgg_national',
+    #                              token=jiani_token,
+    #                              valid=True)
+    #         # if row_idx > 10:
+    #         #     break
+    #
+    #     logger.info(timestamp_str() + 'Finished migrating Jiani\'s collections.')
+    #     print(timestamp_str() + 'Finished migrating Jiani\'s collections.')
 
     # # Ian's Facebook collections for DGG
     # with engine.connect() as conn:
@@ -137,3 +140,30 @@ if __name__ == '__main__':
     #                              valid=True)
     #
     #     logger.info('Finished migrating Ian\'s collections.')
+
+    # Ukraine regions
+    with engine.connect() as conn:
+        # conn = engine.connect()
+
+        logger.info(timestamp_str() + 'Migrating Ukraine regional collections...')
+        print(timestamp_str() + 'Migrating Ukraine regional collections...')
+
+        sql = "select * from facebook where contributor_id =1 and country='UA' and geo_locations ->> 'name' = 'regions';"
+        result = conn.execute(sql)
+
+        row_idx = 0
+        for row in result.mappings():
+            row_idx += 1
+            print_progress(row_idx, 1300668)
+
+            response = write_row(row,
+                                 table='facebook',
+                                 collection='ukraine_regions',
+                                 token=doug_token,
+                                 valid=True)
+            # if row_idx > 10:
+            #     break
+
+        logger.info(timestamp_str() + 'Finished migrating Ukraine regions collections.')
+        print(timestamp_str() + 'Finished migrating Ukraine regions collections.')
+
