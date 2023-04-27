@@ -69,7 +69,7 @@ if __name__ == '__main__':
             specs["publisher_platforms"] = [platform]
             specs['languages'] = [None]
 
-            file_out = os.path.join(specs_dir, '_'.join([str(i), country, platform]) + '.json')
+            file_out = os.path.join(specs_dir, '_'.join([str(i).zfill(2), country, platform]) + '.json')
             with open(file_out, "w") as f:
                 f.write(json.dumps(specs))
 
