@@ -3,8 +3,8 @@ import json
 import pandas as pd
 
 # virtual machine and collection names
-vm = 'jubal'
-collection = 'baseline'
+vm = 'stitch'
+collection = 'sudan_conflict'
 
 
 if __name__ == '__main__':
@@ -44,11 +44,8 @@ if __name__ == '__main__':
         os.remove(os.path.join(specs_dir, f))
 
 
-    countries = ['AF', 'BD', 'BF', 'BR', 'CD', 'CM', 'CO', 'CU', 'EC', 'ET', 'GH', 'GN', 'GT', 'HT', 'IL', 'IQ' ,'IN', 'IR',
-                 'LY', 'ML', 'MM', 'MZ', 'NE', 'NG', 'NP', 'PE', 'PK', 'PS', 'SD', 'SL', 'SO', 'SS', 'SY', 'UA', 'VE', 'YE',
-                 'ZA', 'ZM']
-    drop_countries = ['UA', 'CU', 'SD', 'IR', 'SY']
-    drop_countries = drop_countries + ['CD', 'CF', 'DJ', 'EG', 'ER', 'ET', 'LY', 'SD', 'SS', 'TD']  # see collection: sudan_conflict
+    countries = ['SD', 'TD', 'EG', 'CF', 'DJ', 'ER', 'ET', 'LY', 'SS', 'CD']
+    drop_countries = []
     countries = [i for i in countries if i not in drop_countries]
 
     platforms = ['facebook', 'instagram']
@@ -68,11 +65,11 @@ if __name__ == '__main__':
                 specs = json.load(f)
             specs['name'] = collection
 
-            # facebook
+            # customise specs by platform and country
             specs["publisher_platforms"] = [platform]
             specs['languages'] = [None]
 
-            file_out = os.path.join(specs_dir, '_'.join([country, platform]) + '.json')
+            file_out = os.path.join(specs_dir, '_'.join([str(i), country, platform]) + '.json')
             with open(file_out, "w") as f:
                 f.write(json.dumps(specs))
 

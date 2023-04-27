@@ -23,3 +23,12 @@ services:
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
+  sudan_conflict:
+    container_name: sudan_conflict
+    volumes:
+      - ./sudan_conflict:/app/in
+      - ./../../../data/stitch/sudan_conflict:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure

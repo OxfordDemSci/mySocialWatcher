@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VM="stitch"
-COLLECTIONS=("turkey_earthquake")
+COLLECTIONS=("turkey_earthquake", "sudan_conflict")
 DIR="/home/ubuntu/mySocialWatcher"
 
 # cron
