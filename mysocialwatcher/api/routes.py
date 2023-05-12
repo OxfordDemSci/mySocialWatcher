@@ -15,7 +15,7 @@ if not limiter_host:
 limiter = Limiter(app,
                   key_func=get_remote_address,
                   # application_limits=['60/minute', '1000/hour', '10000/day'],
-                  default_limits=['60/minute', '1000/hour', '10000/day'],
+                  default_limits=['60/minute'],  # ['60/minute', '1000/hour', '10000/day'],
                   strategy='fixed-window-elastic-expiry',
                   storage_uri="memcached://" + limiter_host + ":11211",
                   storage_options={}
