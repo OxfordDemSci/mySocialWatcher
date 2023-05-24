@@ -169,7 +169,10 @@ if(response$status == 200){
   
   # non-json cells: unlist
   for(name in names(data)[!names(data) %in% json_cols]){
-    data[,name] <- unlist(data[,name])
+    not_nulls <- which(!unlist(lapply(data[,name], is.null)))
+    res <- rep(NA, length(data[,name]))
+    res[not_nulls] <- unlist(data[,name])
+    data[,name] <- res
   }
   
   # json cells: lists -> json strings

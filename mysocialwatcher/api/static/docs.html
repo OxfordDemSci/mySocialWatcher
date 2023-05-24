@@ -5,8 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="generator" content="pandoc" />
 
-    
-    
+
+
     <title>API Docs</title>
 
         <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
@@ -899,10 +899,10 @@ display: block !important;
 display: none !important;
 }
 #toc ul.nav li ul li ul li ul li {
-display: none !important; 
+display: none !important;
 }
 #toc ul.nav li.active > a {
-border-bottom:solid 1px #c9c9c9 !important; 
+border-bottom:solid 1px #c9c9c9 !important;
 border-right:solid 1px #c9c9c9 !important;
 }
 #toc ul.nav li.active a {
@@ -1110,10 +1110,10 @@ src: url(data:application/font-sfnt;base64,AAEAAAARAQAABAAQR0RFRgs+Cz8AAjwQAAAAQ
 
 });
 </script>
-    
-    
-    
-    
+
+
+
+
     <!-- tabsets -->
     <script>
       $(document).ready(function () {
@@ -1127,9 +1127,9 @@ src: url(data:application/font-sfnt;base64,AAEAAAARAQAABAAQR0RFRgs+Cz8AAjwQAAAAQ
     </script>
 
     <!-- code folding -->
-    
+
     <!-- code download -->
-    
+
     <!-- tabsets dropdown -->
 
     <style type="text/css">
@@ -1142,7 +1142,7 @@ src: url(data:application/font-sfnt;base64,AAEAAAARAQAABAAQR0RFRgs+Cz8AAjwQAAAAQ
 	  border: 1px solid #ddd;
 	  border-radius: 4px;
       }
-      
+
       .tabset-dropdown > .nav-tabs > li.active:before {
 	  content: "";
 	  font-family: 'Glyphicons Halflings';
@@ -1150,12 +1150,12 @@ src: url(data:application/font-sfnt;base64,AAEAAAARAQAABAAQR0RFRgs+Cz8AAjwQAAAAQ
 	  padding: 10px;
 	  border-right: 1px solid #ddd;
       }
-      
+
       .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
 	  content: "";
 	  border: none;
       }
-      
+
       .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
 	  content: "";
 	  font-family: 'Glyphicons Halflings';
@@ -1163,7 +1163,7 @@ src: url(data:application/font-sfnt;base64,AAEAAAARAQAABAAQR0RFRgs+Cz8AAjwQAAAAQ
 	  padding: 10px;
 	  border-right: 1px solid #ddd;
       }
-      
+
       .tabset-dropdown > .nav-tabs > li.active {
 	  display: block;
       }
@@ -1180,33 +1180,33 @@ src: url(data:application/font-sfnt;base64,AAEAAAARAQAABAAQR0RFRgs+Cz8AAjwQAAAAQ
 	  border-radius: 4px;
 	  background-color: transparent;
       }
-      
+
       .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
 	  display: block;
 	  float: none;
       }
-      
+
       .tabset-dropdown > .nav-tabs > li {
 	  display: none;
 	  margin-left: 0 !important;
       }
     </style>
-    
+
 </head>
 
 <body class="preload">
 
-   	
-         <!-- readthedown start -->   
+
+         <!-- readthedown start -->
    <div id="content" data-toggle="wy-nav-shift">
      <nav id="nav-top" role="navigation" aria-label="top navigation">
        <a role="button" href="#" data-toggle="wy-nav-top"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
      </nav>
-         
-   
-        
+
+
+
       <h1 class="title">API Docs</h1>
-      
+
          <!-- readthedown authors -->
    <div id="sidebar">
     <h2><a href="#content">API Docs</a></h2>
@@ -1231,12 +1231,12 @@ src: url(data:application/font-sfnt;base64,AAEAAAARAQAABAAQR0RFRgs+Cz8AAjwQAAAAQ
     <div id="postamble" data-toggle="wy-nav-shift" class="status">
                 </div>
    </div>
-     
 
-   
-      
-   
-<!-- Don't indent these lines or it will mess pre blocks indentation --> 
+
+
+
+
+<!-- Don't indent these lines or it will mess pre blocks indentation -->
 <div id="main">
 <div id="social-media-audience" class="section level1">
 <h1>Social Media Audience</h1>
@@ -1443,7 +1443,7 @@ args &lt;- list(token = &quot;xxxxxxxxx&quot;,
              date_start = &quot;2020-03-11&quot;)
 
 # submit query as GET request
-response &lt;- httr::GET(url = &#39;http://18.135.72.18/&#39;, 
+response &lt;- httr::GET(url = &#39;http://18.135.72.18/&#39;,
                       path = &#39;api/v1/query&#39;,
                       query = args)
 
@@ -1456,27 +1456,31 @@ print(response$message)
 
 # extract data in various formats
 if(response$status == 200){
-  
+
   # json string
   data &lt;- response$data
-  
+
   # json -&gt; list of lists
   data &lt;- jsonlite::fromJSON(data)
-  
+
   # list of lists -&gt; data.frame with cells containing lists
   # note: this is a convenient format for dealing with JSONs for some data.frame cells in R.
   data &lt;- as.data.frame(do.call(cbind, data))
-  
+
   #-- unlist data --#
-  
+
   # identify columns storing json objects
   json_cols &lt;- c(&#39;geo_locations&#39;,&#39;all_fields&#39;,&#39;targeting&#39;,&#39;response&#39;)
-  
+
   # non-json cells: unlist
   for(name in names(data)[!names(data) %in% json_cols]){
     data[,name] &lt;- unlist(data[,name])
+    not_nulls &lt;- which(!unlist(lapply(data[,name], is.null)))
+    res &lt;- rep(NA, length(data[,name]))
+    res[not_nulls] &lt;- unlist(data[,name])
+    data[,name] &lt;- res
   }
-  
+
   # json cells: lists -&gt; json strings
   for(name in json_cols){
     data[,name] &lt;- unlist(lapply(data[,name], jsonlite::toJSON))
@@ -1937,16 +1941,16 @@ basic example <a href="https://www.psycopg.org/docs/usage.html">here</a>).</p>
 </div>
 </div>
 
-   
-   
-            
-      
+
+
+
+
 
   <script>
     $(document).ready(function () {
 
-			
- 		
+
+
 	    });
   </script>
 
@@ -1961,6 +1965,6 @@ basic example <a href="https://www.psycopg.org/docs/usage.html">here</a>).</p>
 	document.getElementsByTagName("head")[0].appendChild(script);
     })();
   </script>
-  
+
 </body>
 </html>
