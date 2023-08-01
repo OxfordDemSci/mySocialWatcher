@@ -9,11 +9,11 @@ current_directory = os.getcwd()
 print("Current working directory:", current_directory)
 
 # virtual machine and collection names
-vm = 'Saffron'
+vm = 'badger'
 collection = 'dgg_subnational'
 
 # Read the content of the JSON file
-with open('ESH_country_part_1.json', 'r') as file:
+with open(os.path.join('config', 'specs', 'examples', 'dgg_masoomali.json'), 'r') as file:
     json_content = file.read()
 
 # Parse the JSON content using json.loads()
@@ -69,6 +69,7 @@ if __name__ == '__main__':
     i = 0
     for country in countries:
         for platform in platforms:
+
             i += 1
 
             specs_file = os.path.join(specs_template_path, country + '_regions.json')
@@ -90,6 +91,11 @@ if __name__ == '__main__':
             specs['ages_ranges'] = eg_json['ages_ranges']
             specs['target_groups'] = eg_json['target_groups']
 
+            # location_types = home
+            for j in range(len(specs.get('geo_locations'))):
+                specs['geo_locations'][j]['location_types'] = ['home']
+
+            # save to json
             file_out = os.path.join(specs_dir, '_'.join([str(i).zfill(2), country, platform]) + '.json')
             with open(file_out, "w") as f:
                 f.write(json.dumps(specs))
