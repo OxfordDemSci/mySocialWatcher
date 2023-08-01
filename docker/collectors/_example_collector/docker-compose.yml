@@ -6,10 +6,10 @@ services:
   example_collection:
     container_name: example_collection
     volumes:
-      - ./../../../data/_example_virtual_machine/_example_collection:/app/data
+      - ./../../../data/_example_collector/_example_collection:/app/data
     build:
       args:
-        collection_dir: "./docker/collectors/_example_virtual_machine/_example_collection"
+        collection_dir: "./docker/collectors/_example_collector/_example_collection"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: unless-stopped
