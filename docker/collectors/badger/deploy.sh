@@ -5,7 +5,7 @@ COLLECTIONS=("dgg_national")
 DIR="/home/ubuntu/mySocialWatcher"
 
 # cron
-sudo cp ${DIR}/docker/collectors/${VM}_crontab /etc/cron.d/
+sudo cp ${DIR}/docker/collectors/${VM}/${VM}_crontab /etc/cron.d/
 
 # config
 cd ${DIR}
