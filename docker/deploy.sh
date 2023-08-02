@@ -2,9 +2,14 @@
 # This script is intended to guide the setup of a new virtual machine.
 # It should be run line-by-line rather than executed all at once.
 
-# update and upgrade software
-sudo apt-get update -y
-sudo apt-get upgrade -y
+# hostname
+sudo hostnamectl set-hostname msw_collectors
+
+# update
+sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get auto-remove -y && sudo reboot now
+
+sudo crontab -e
+# @weekly apt-get update -y && apt-get upgrade -y && apt-get auto-remove -y
 
 #---- docker ----#
 
