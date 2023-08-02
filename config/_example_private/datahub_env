@@ -1,0 +1,9 @@
+PGDATA=/db-data
+POSTGRES_HOST=datahub_db
+POSTGRES_PORT=5432
+POSTGRES_DB=social_media_audience
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=pa5Sw0rd
+POSTGRES_RPASS=pa5Sw0rd
+POSTGRES_WPASS=pa5Sw0rd
+LIMITER_HOST=datahub_limiter
