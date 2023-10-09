@@ -9,7 +9,7 @@ if __name__ == '__main__':
                          verbose=False)
 
     # load credentials
-    watcher.load_credentials_file('docker/collectors/stitch/turkey_language/credentials.csv')
+    watcher.load_credentials_file('docker/collectors/stitch/israeli_conflict/credentials.csv')
 
     # test credentials
     watcher.check_tokens_account_valid()

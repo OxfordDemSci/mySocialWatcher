@@ -3,8 +3,8 @@ import json
 import pandas as pd
 
 # virtual machine and collection names
-vm = 'jubal'
-collection = 'baseline'
+vm = 'stitch'
+collection = 'israeli_conflict'
 
 
 if __name__ == '__main__':
@@ -44,21 +44,20 @@ if __name__ == '__main__':
         os.remove(os.path.join(specs_dir, f))
 
 
-    countries = ['AF', 'BD', 'BF', 'BR', 'CD', 'CM', 'CO', 'CU', 'EC', 'ET', 'GH', 'GN', 'GT', 'HT', 'IL', 'IQ' ,'IN', 'IR',
-                 'LY', 'ML', 'MM', 'MZ', 'NE', 'NG', 'NP', 'PE', 'PK', 'PS', 'SD', 'SL', 'SO', 'SS', 'SY', 'UA', 'VE', 'YE',
-                 'ZA', 'ZM']
-    drop_countries = ['UA', 'CU', 'SD', 'IR', 'SY']
-    drop_countries = drop_countries + ['CD', 'CF', 'DJ', 'EG', 'ER', 'ET', 'LY', 'SD', 'SS', 'TD']  # see collection: sudan_conflict
-    drop_countries = drop_countries + ['IL', 'PS', 'EG', 'JO', 'LB'] # see collection: israeli_conflict
+    countries = ['IL', 'PS', 'EG', 'JO', 'LB', 'SY']
+    drop_countries = []
     countries = [i for i in countries if i not in drop_countries]
 
     platforms = ['facebook', 'instagram']
+    languages = {'hebrew':29, 'arabic':28}
 
     i = 0
     for country in countries:
         for platform in platforms:
             i += 1
 
+
+            # all languages
             specs_file = os.path.join(specs_template_path, country + '_regions.json')
             if not os.path.exists(specs_file):
                 print('Specs template does not exist: ' + specs_file)
@@ -69,11 +68,34 @@ if __name__ == '__main__':
                 specs = json.load(f)
             specs['name'] = collection
 
-            # facebook
+            # customise specs by platform and country
             specs["publisher_platforms"] = [platform]
             specs['languages'] = [None]
 
-            file_out = os.path.join(specs_dir, '_'.join([country, platform]) + '.json')
+            file_out = os.path.join(specs_dir, '_'.join([str(i).zfill(2), country, platform]) + '.json')
             with open(file_out, "w") as f:
                 f.write(json.dumps(specs))
+
+
+            # specific languages
+            for language in languages.keys():
+                i += 1
+
+                specs_file = os.path.join(specs_template_path, country + '_regions.json')
+                if not os.path.exists(specs_file):
+                    print('Specs template does not exist: ' + specs_file)
+                    continue
+
+                # template json
+                with open(specs_file) as f:
+                    specs = json.load(f)
+                specs['name'] = collection
+
+                # customise specs by platform and country
+                specs["publisher_platforms"] = [platform]
+                specs['languages'] = [{'name': language, 'values': [languages[language]]}]
+
+                file_out = os.path.join(specs_dir, '_'.join([str(i).zfill(2), country, platform]) + '.json')
+                with open(file_out, "w") as f:
+                    f.write(json.dumps(specs))
 
