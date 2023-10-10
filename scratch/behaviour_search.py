@@ -9,7 +9,8 @@ if __name__ == '__main__':
                          verbose=False)
 
     # load credentials
-    watcher.load_credentials_file('docker/collectors/stitch/israeli_conflict/credentials.csv')
+    # watcher.load_credentials_file('docker/collectors/stitch/israeli_conflict/credentials.csv')
+    watcher.load_credentials_file('scratch/private_credentials.csv')
 
     # test credentials
     watcher.check_tokens_account_valid()
@@ -17,4 +18,5 @@ if __name__ == '__main__':
     # search behaviours
     watcher.print_search_targeting_from_query_dataframe("Expat Israel")
     watcher.print_search_targeting_from_query_dataframe("Expat Palestine")
+    watcher.print_search_targeting_from_query_dataframe("Lived in Russia")
 
