@@ -929,6 +929,18 @@
                 "or": [
                     6004386044572
                 ]
+            },
+            {
+                "name": "Facebook access (mobile): Apple (iOS) devices",
+                "or": [
+                    6004384041172
+                ]
+            },
+            {
+                "name":  "Facebook access (mobile): all mobile devices",
+                "or": [
+                    6004382299972
+                ]
             }
         ]
     }
