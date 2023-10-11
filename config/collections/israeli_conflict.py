@@ -45,7 +45,7 @@ if __name__ == '__main__':
 
 
     countries = ['IL', 'PS', 'EG', 'JO', 'LB', 'SY']
-    drop_countries = []
+    drop_countries = ['SY']
     countries = [i for i in countries if i not in drop_countries]
 
     platforms = ['facebook', 'instagram']
