@@ -7,7 +7,7 @@ from datetime import datetime
 
 
 # params zone
-spec_cat='region'
+spec_cat = 'region'
 json_file_path,csv_file_path= file_paths(spec_cat)
 
 # situation1: directly send request and store the result (return num should be under 1000)
@@ -103,7 +103,7 @@ def get_city_or_region(params_all,spec_cat,csv_file_path):
         else:
             continue
 
-        df_city.to_csv(csv_file_path)
+        df_city.to_csv(csv_file_path,index=False)
     print(datetime.now())
 
 
