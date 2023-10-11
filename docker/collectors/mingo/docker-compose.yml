@@ -13,13 +13,13 @@ services:
       dockerfile: ./docker/collectors/Dockerfile
     restart: unless-stopped
 
-  venezuelan_exodus2:
-    container_name: venezuelan_exodus2
-    volumes:
-      - ./venezuelan_exodus2:/app/in
-      - ./../../../data/mingo/venezuelan_exodus2:/app/data
-    build:
-      context: ./../../../
-      dockerfile: ./docker/collectors/Dockerfile
-    restart: unless-stopped
+#  venezuelan_exodus2:
+#    container_name: venezuelan_exodus2
+#    volumes:
+#      - ./venezuelan_exodus2:/app/in
+#      - ./../../../data/mingo/venezuelan_exodus2:/app/data
+#    build:
+#      context: ./../../../
+#      dockerfile: ./docker/collectors/Dockerfile
+#    restart: unless-stopped
 

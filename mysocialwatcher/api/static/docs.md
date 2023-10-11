@@ -18,6 +18,12 @@ approved credentials for access.
 **./api/v1/query**  
 Returns social media audience estimates for specific locations, dates, and demographic groups.
 
+**./api/v1/list_collections**  
+List all collection names that you have permission to access.
+
+**./api/v1/monitor_collections**  
+Get summary statistics for recent data from your collections.
+
 **./api/v1/write**  
 Write new data into the database (requires authentication with write-access).
 
@@ -26,6 +32,10 @@ Write new data into the database (requires authentication with write-access).
 
 This API endpoint is for querying data from *social_media_audience* database. 
 You can use it to pull a subset of data directly into R or Python (examples below).  
+
+**Note:** If your query results exceed 100,000 rows, then only the first 100,000 
+will be returned along with a status code of 206 (partial content) rather than a 
+success code (200).
 
 URL: `http://18.135.72.18/api/v1/query`  
 
@@ -45,12 +55,13 @@ platform | Name of platform where data were collected. Acceptable values: facebo
 
 Argument | Description 
 |:-- |:----------- 
-country | A single country code using ISO-2 format (see <a href="https://www.iban.com/country-codes">https://www.iban.com/country-codes</a>). If omitted, all countries will be returned.
+country | A single country code using ISO-2 format (see <a href="https://www.iban.com/country-codes">https://www.iban.com/country-codes</a>). If omitted, all countries will be returned, but please note that this may result in longer processing time.
 gender | Gender of the population represented by data. Acceptable values: 0, 1, 2, where 0=all, 1=male, 2=female.
 age_min | Lower bound of age of the audience size reported. Default = 0.
 age_max | Upper bound of age of the audience size reported. Default = 999.
 date_start | Earliest date to include in the query result
 date_end | Latest date to include in the query result
+collection | The name of a collection from which you would like to return data. The names of all collections can be obtained from the [collections endpoint](#endpoint-list_collections).
 contributor_id | ID number of contributor whose data you would like to return
 valid | Return only data marked as valid by contributors? Default = true. Acceptable values: true, t, yes, y, on, 1. All other values will be treated as: false.
 
@@ -158,13 +169,112 @@ if(response$status == 200){
   
   # non-json cells: unlist
   for(name in names(data)[!names(data) %in% json_cols]){
-    data[,name] <- unlist(data[,name])
+    not_nulls <- which(!unlist(lapply(data[,name], is.null)))
+    res <- rep(NA, length(data[,name]))
+    res[not_nulls] <- unlist(data[,name])
+    data[,name] <- res
   }
   
   # json cells: lists -> json strings
   for(name in json_cols){
     data[,name] <- unlist(lapply(data[,name], jsonlite::toJSON))
   }
+}
+```
+
+
+## Endpoint: list_collections
+
+This API endpoint returns a list of all collection names that you currently have 
+access to in the *social_media_audience* database. 
+
+URL: `http://18.135.72.18/api/v1/list_collections`  
+
+Arguments syntax: `http://18.135.72.18/api/v1/list_collections?token=12345`  
+
+**Note:** An API token is required to access this endpoint. Please contact [douglas.leasure@demography.ox.ac.uk](mailto:douglas.leasure@demography.ox.ac.uk) for more information.
+
+
+**API Arguments**  
+
+*Required Arguments*  
+
+Argument | Description
+|:-- |:-----------
+token | API access token (contact [douglas.leasure@demography.ox.ac.uk](mailto:douglas.leasure@demography.ox.ac.uk))
+
+
+*Optional Arguments*  
+
+None
+
+**API Response**  
+The API will return a json response with four elements:
+
+Element | Description 
+|:-- |:----------- 
+status | http status code
+message | Message describing outcome of operation writing to the database
+timestamp | Date and time of response
+data | Data resulting from query in json format
+
+For example:
+```
+{
+  "message": "OK: Collections successfully queried from database.",
+  "status": "200",
+  "timestamp": "2022-01-03 18:30:26+00",
+  "data": '{"0": {"collection_id":1, "collection_name":"my_collection", ...}}'
+}
+```
+
+
+## Endpoint: monitor_collections
+
+This API endpoint returns a count of new data for each of your collections that 
+were written into the database over the past several days. 
+
+URL: `http://18.135.72.18/api/v1/monitor_collections`  
+
+Arguments syntax: `http://18.135.72.18/api/v1/monitor_collections?token=12345&days=7`  
+
+**Note:** An API token is required to access this endpoint. Please contact [douglas.leasure@demography.ox.ac.uk](mailto:douglas.leasure@demography.ox.ac.uk) for more information.
+
+
+**API Arguments**  
+
+*Required Arguments*  
+
+Argument | Description
+|:-- |:-----------
+token | API access token (contact [douglas.leasure@demography.ox.ac.uk](mailto:douglas.leasure@demography.ox.ac.uk))
+
+
+*Optional Arguments*  
+
+Argument | Description
+|:-- |:-----------
+days | (default=7) Number of prior days leading up to today to include with the monitoring summary.
+collections | List of collections to monitor. Format = ['my_collection1', 'my_collection2']. 
+Use [list_collections endpoint](#endpoint-list_collections) to see collections available to you.
+
+**API Response**  
+The API will return a json response with four elements:
+
+Element | Description 
+|:-- |:----------- 
+status | http status code
+message | Message describing outcome of operation writing to the database
+timestamp | Date and time of response
+data | Data resulting from query in json format
+
+For example:
+```
+{
+  "message": "OK: Your collections successfully queried.",
+  "status": "200",
+  "timestamp": "2022-01-03 18:30:26+00",
+  "data": '{"migrationuk_tue_men": {"collection_id": 12, "2022-12-21": {"facebook": 0, "instagram": 0}, ...}}'
 }
 ```
 
@@ -207,11 +317,12 @@ mau_upper | Upper bound of monthly active users
 
 Argument | Description 
 |:-- |:----------- 
-age_min | Lower bound of age of the audience size reported. Default = 0.
-age_max | Upper bound of age of the audence size reported. Default = 999.
-all_fields | All fields of special targeting audience specification. This is a default field returned from pySocialWatcher as a string representation of a Python tuple of tuples.
-targeting | Audience targeting json as submitted to Facebook API. This is a default field returned from pySocialWatcher.
-response | Response from Facebook API. This is a default field returned from pySocialWatcher as a string representation of a Python bytes array.
+collection | (recommended) The name of the collection. This is will help filter results later. The [list_collections endpoint](#endpoint-list_collections) provides a list of existing collections names, or a new collection name can be created when writing new data. 
+all_fields | (recommended) All fields of special targeting audience specification. This is a default field returned from pySocialWatcher as a string representation of a Python tuple of tuples.
+targeting | (recommended) Audience targeting json as submitted to Facebook API. This is a default field returned from pySocialWatcher.
+response | (recommended) Response from Facebook API. This is a default field returned from pySocialWatcher as a string representation of a Python bytes array.
+age_min | (default = 0) Lower bound of age of the audience size reported. 
+age_max | (default = 999) Upper bound of age of the audence size reported. 
 
 **API Response**  
 The API will return a json response with three elements:

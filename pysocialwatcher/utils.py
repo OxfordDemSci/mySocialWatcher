@@ -75,6 +75,12 @@ def handle_send_request_error(response, url, params, tryNumber):
             "message"] and constants.INGORE_INVALID_ZIP_CODES:
             print_warning("Invalid Zip Code:" + str(params[constants.TARGETING_SPEC_FIELD]))
             return get_fake_response()
+        elif error_json["error"]["code"] == constants.TOO_MANY_CALLS_ERROR or \
+                "There have been too many calls to this ad-account." in error_json["error"]["message"]:
+            rest_time = min(1200, max(60, 3600 - (constants.SLEEP_TIME * constants.LIMIT_CALLS_PER_HOUR)))
+            print_warning(f"There have been too many calls to this ad-account (sleep_time={constants.SLEEP_TIME}). "
+                          f"We will rest for {str(round(rest_time/60))} minutes and then try again.")
+            time.sleep(rest_time)
         else:
             logging.error("Could not handle error.")
             logging.error("Error Code:" + str(error_json["error"]["code"]))
@@ -111,15 +117,18 @@ def call_request_fb(row, token, account, url):
         'access_token': token,
     }
     payload_str = str(payload)
-    print_warning("\tSending in request: %s" % (payload_str))
+    if constants.VERBOSE:
+        print_warning("\tSending in request: %s" % (payload_str))
     url = url.format(account)
     response = send_request(url, payload)
 
     if "x-business-use-case-usage" in response.headers:
         usage_dict = ast.literal_eval(response.headers["x-business-use-case-usage"])[account][0]
-        print_warning("\tUsage Stats: Call count (%d), cputime (%d), total_time (%d)." % (usage_dict["call_count"],
-                                                                                          usage_dict["total_cputime"],
-                                                                                          usage_dict["total_time"]))
+        if constants.VERBOSE:
+            print_warning("\tUsage Stats: Call count (%d), cputime (%d), total_time (%d)." % (usage_dict["call_count"],
+                                                                                              usage_dict[
+                                                                                                  "total_cputime"],
+                                                                                              usage_dict["total_time"]))
     return response.content
 
 
@@ -271,7 +280,8 @@ def get_all_combinations_from_input(input_data_json):
                     to_combine_fields[intra_field_key] = input_data_json[field][intra_field_key]
 
         except KeyError:
-            print_warning("Field not expecified: " + field)
+            if constants.VERBOSE:
+                print_warning("Field not expecified: " + field)
 
     for field in list(to_combine_fields.keys()):
         for index, value in enumerate(to_combine_fields[field]):
@@ -336,7 +346,7 @@ def select_common_fields_in_targeting(targeting, input_combination_dictionary):
         languages = input_combination_dictionary[constants.INPUT_LANGUAGE_FIELD]
         if languages:
             targeting[constants.API_LANGUAGES_FIELD] = languages["values"]
-    else:
+    elif constants.VERBOSE:
         print_warning("No field: " + constants.INPUT_LANGUAGE_FIELD)
 
 

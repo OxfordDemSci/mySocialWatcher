@@ -2,7 +2,6 @@ import os
 import requests
 import json
 import math
-import shutil
 import datetime
 import warnings
 from time import sleep
@@ -10,25 +9,25 @@ import pandas as pd
 from ast import literal_eval
 
 
-def country_from_geo(geo):
-
-    country = []
-
-    if geo['name'] == 'countries':
-        country.append(geo['values'][0])
-
-    elif geo['name'] in ['regions', 'cities']:
-
-        if 'country_code' in geo.get('values')[0].keys():
-            country += [geo.get('values')[i].get('country_code') for i in range(len(geo.get('values')))]
-        elif 'PySocialWatcherReference' in geo.keys():
-            for i in range(len(geo.get('values'))):
-                x = list(filter(lambda i: 'country:' in i, geo.get('pySocialWatcherReference').split('; ')))
-                x = x[0].replace('country:', '')
-                country.append(x)
-                geo['values'][i]['country_code'] = x
-
-    return list(set(country))
+# def country_from_geo(geo):
+#
+#     country = []
+#
+#     if geo['name'] == 'countries':
+#         country.append(geo['values'][0])
+#
+#     elif geo['name'] in ['regions', 'cities']:
+#
+#         if 'country_code' in geo.get('values')[0].keys():
+#             country += [geo.get('values')[i].get('country_code') for i in range(len(geo.get('values')))]
+#         elif 'PySocialWatcherReference' in geo.keys():
+#             for i in range(len(geo.get('values'))):
+#                 x = list(filter(lambda i: 'country:' in i, geo.get('pySocialWatcherReference').split('; ')))
+#                 x = x[0].replace('country:', '')
+#                 country.append(x)
+#                 geo['values'][i]['country_code'] = x
+#
+#     return list(set(country))
 
 
 def psw_to_sql(df, collection_name, token,
@@ -45,7 +44,8 @@ def psw_to_sql(df, collection_name, token,
         platform = literal_eval(row['publisher_platforms'])
 
         if len(platform) > 1:
-            next
+            warnings.warn(f'More than one platform detected at index {index}.')
+            continue
         else:
             platform = platform[0]
 
@@ -66,16 +66,16 @@ def psw_to_sql(df, collection_name, token,
         # ---- prepare: geo_locations ----#
         geo = all_fields['geo_locations']  # literal_eval(row.get('geo_locations'))
 
-        # ---- country ----#
-        country = country_from_geo(geo)
-
-        if len(country) == 1:
-            country = country[0]
-        else:
-            df.loc[index, 'timestamp_api'] = str(datetime.datetime.now())
-            df.loc[index, 'status_api'] = 400
-            df.loc[index, 'message_api'] = 'Bad Request: Could not identify a single country.'
-            next
+        # # ---- country ----#
+        # country = countries_from_geo_locations(geo)
+        #
+        # if len(country) == 1:
+        #     country = country[0]
+        # else:
+        #     df.loc[index, 'timestamp_api'] = str(datetime.datetime.now())
+        #     df.loc[index, 'status_api'] = 400
+        #     df.loc[index, 'message_api'] = 'Bad Request: Could not identify a single country.'
+        #     next
 
         # ---- age ---- #
         ages_ranges = literal_eval(row.get('ages_ranges'))
@@ -91,7 +91,7 @@ def psw_to_sql(df, collection_name, token,
                 'collection': collection_name,
                 'token': token,
                 'platform': platform,
-                'country': country,
+                # 'country': country,
                 'timestamp': row.get('timestamp'),
                 'gender': row.get('genders'),
                 'age_min': age_min,
@@ -164,12 +164,13 @@ def crawler(data_dir, token, url='http://127.0.0.1/api/v1/social_media_audience/
 
     # file list
     file_list = []
-    for (root, dirs, file) in os.walk(data_dir):
-        if crawl_dir not in root:
-            for f in file:
-                full_path = os.path.join(root, f)
-                if "finished/dataframe_collected_finished_" in full_path:
-                    file_list.append(full_path)
+    exclude_dirs = ['crawler', 'db-data']
+    for (root, dirs, file) in os.walk(data_dir, topdown=True):
+        dirs[:] = [d for d in dirs if d not in exclude_dirs]
+        for f in file:
+            full_path = os.path.join(root, f)
+            if "finished/dataframe_collected_finished_" in full_path:
+                file_list.append(full_path)
 
     # ---- finished ---- #
     for file in file_list:

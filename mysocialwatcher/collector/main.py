@@ -4,10 +4,8 @@ from pysocialwatcher import watcherAPI, constants
 
 if __name__ == '__main__':
 
-    # specs
-    specs_list = os.listdir(specs_dir)
-    specs_list = [f for f in specs_list if f.endswith('.json')]
-    specs_list.sort()
+    specs_list = get_specs_list(specs_dir=specs_dir,
+                                data_dir=data_dir)
 
     for specs_filename in specs_list:
         # specs_filename = specs_list[0]
@@ -40,9 +38,10 @@ if __name__ == '__main__':
             logger.info('Preparing collection with specification: ' + specs_filepath)
 
             # instantiate watcher
-            watcher = watcherAPI(api_version='15.0',
-                                 sleep_time=12,
-                                 save_every_x=100)
+            watcher = watcherAPI(api_version='17.0',
+                                 sleep_time=11,
+                                 save_every_x=100,
+                                 verbose=False)
 
             # load credentials
             watcher.load_credentials_file('credentials.csv')

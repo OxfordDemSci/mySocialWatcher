@@ -1,3 +1,5 @@
+countries=("AD" "AE" "AF" "AG" "AI" "AL" "AM" "AN" "AO" "AQ" "AR" "AS" "AT" "AU" "AW" "AZ" "BA" "BB" "BD" "BE" "BF" "BG" "BH" "BI" "BJ" "BL" "BM" "BN" "BO" "BQ" "BR" "BS" "BT" "BW" "BY" "BZ" "CA" "CD" "CF" "CG" "CH" "CI" "CK" "CL" "CM" "CN" "CO" "CR" "CU" "CV" "CW" "CX" "CY" "CZ" "DE" "DJ" "DK" "DM" "DO" "DZ" "EC" "EE" "EG" "EH" "ER" "ES" "ET" "FI" "FJ" "FK" "FM" "FO" "FR" "GA" "GB" "GD" "GE" "GF" "GG" "GH" "GI" "GL" "GM" "GN" "GP" "GQ" "GR" "GS" "GT" "GU" "GW" "GY" "HK" "HN" "HR" "HT" "HU" "ID" "IE" "IL" "IM" "IN" "IO" "IQ" "IR" "IS" "IT" "JE" "JM" "JO" "JP" "KE" "KG" "KH" "KI" "KM" "KN" "KR" "KW" "KY" "KZ" "LA" "LB" "LC" "LI" "LK" "LR" "LS" "LT" "LU" "LV" "LY" "MA" "MC" "MD" "ME" "MF" "MG" "MH" "MK" "ML" "MM" "MN" "MO" "MP" "MQ" "MR" "MS" "MT" "MU" "MV" "MW" "MX" "MY" "MZ" "NA" "NC" "NE" "NF" "NG" "NI" "NL" "NO" "NP" "NR" "NU" "NZ" "OM" "PA" "PE" "PF" "PG" "PH" "PK" "PL" "PM" "PN" "PR" "PS" "PT" "PW" "PY" "QA" "RE" "RO" "RS" "RU" "RW" "SA" "SB" "SC" "SD" "SE" "SG" "SH" "SI" "SJ" "SK" "SL" "SM" "SN" "SO" "SR" "SS" "ST" "SV" "SX" "SY" "SZ" "TC" "TD" "TG" "TH" "TJ" "TK" "TL" "TM" "TN" "TO" "TR" "TT" "TV" "TW" "TZ" "UA" "UG" "UM" "US" "UY" "UZ" "VA" "VC" "VE" "VG" "VI" "VN" "VU" "WF" "WS" "XK" "YE" "YT" "ZA" "ZM" "ZW")
+
 # users
 psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
 "
@@ -27,6 +29,8 @@ CREATE TABLE contributors (
 	created_on DATE NOT NULL DEFAULT CURRENT_DATE,
 	name VARCHAR(50) NOT NULL,
 	email VARCHAR(50) NOT NULL,
+	collaborators INTEGER[] NOT NULL DEFAULT '{}',
+	collections INTEGER[] NOT NULL DEFAULT '{}',
 	UNIQUE(name)
 );
 GRANT SELECT ON contributors TO writer, reader;
@@ -53,10 +57,7 @@ CREATE TABLE tokens (
 GRANT SELECT ON tokens TO writer;
 GRANT USAGE,SELECT ON SEQUENCE tokens_id_seq TO writer, reader;
 
-INSERT INTO tokens (contributor_id, write)
-VALUES
-(1, True),
-(1, False);
+INSERT INTO tokens (contributor_id, write) VALUES (1, True)
 "
 
 #---------- data ----------#
@@ -65,12 +66,11 @@ VALUES
 psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
 "
 CREATE TABLE facebook (
-  id serial PRIMARY KEY,
 	collection_id INT REFERENCES collections(id) ON DELETE SET NULL,
 	contributor_id INT REFERENCES contributors(id) ON DELETE SET NULL,
   contributed_on TIMESTAMPTZ(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
+  collection_date DATE NOT NULL,
   country CHAR(2) NOT NULL,
-  date DATE NOT NULL,
   gender SMALLINT NOT NULL,
 	age_min SMALLINT NOT NULL DEFAULT 0,
 	age_max SMALLINT NOT NULL DEFAULT 999,
@@ -83,30 +83,35 @@ CREATE TABLE facebook (
 	all_fields jsonb DEFAULT '{}'::jsonb,
 	targeting jsonb DEFAULT '{}'::jsonb,
 	response jsonb DEFAULT '{}'::jsonb,
-  UNIQUE(date, geo_locations, gender, age_min, age_max, dau, targeting, response)
-);
+  UNIQUE(country, collection_date, geo_locations, gender, age_min, age_max, dau, targeting, response)
+) PARTITION BY LIST (country);
+
 CREATE INDEX contributor_fb_idx ON facebook(contributor_id);
 CREATE INDEX collection_fb_idx ON facebook(collection_id);
-CREATE INDEX date_fb_idx ON facebook(date);
-CREATE INDEX country_fb_idx ON facebook(country);
+CREATE INDEX date_fb_idx ON facebook(collection_date);
 CREATE INDEX gender_fb_idx ON facebook(gender);
 CREATE INDEX age_fb_idx ON facebook(age_min, age_max);
 
 GRANT SELECT ON facebook TO reader;
 GRANT SELECT,INSERT ON facebook TO writer;
-GRANT USAGE,SELECT ON SEQUENCE facebook_id_seq TO reader, writer;
 "
+
+# create facebook partitions by country
+for idx in "${!countries[@]}"
+do
+  psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
+  "CREATE TABLE facebook_${countries[idx]} PARTITION OF facebook FOR VALUES IN ('${countries[idx]}')"
+done
 
 # facebook (temporary storage of invalid data)
 psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
 "
 CREATE TABLE facebook_invalid (
-  id serial PRIMARY KEY,
 	collection_id INT REFERENCES collections(id) ON DELETE SET NULL,
 	contributor_id INT REFERENCES contributors(id) ON DELETE SET NULL,
   contributed_on TIMESTAMPTZ(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
+  collection_date DATE NOT NULL,
   country CHAR(2) NOT NULL,
-  date DATE NOT NULL,
   gender SMALLINT NOT NULL,
 	age_min SMALLINT NOT NULL DEFAULT 0,
 	age_max SMALLINT NOT NULL DEFAULT 999,
@@ -119,23 +124,21 @@ CREATE TABLE facebook_invalid (
 	all_fields jsonb DEFAULT '{}'::jsonb,
 	targeting jsonb DEFAULT '{}'::jsonb,
 	response jsonb DEFAULT '{}'::jsonb,
-  UNIQUE(date, geo_locations, gender, age_min, age_max, dau, targeting, response)
+  UNIQUE(country, collection_date, geo_locations, gender, age_min, age_max, dau, targeting, response)
 );
 GRANT SELECT ON facebook_invalid TO reader;
 GRANT SELECT,INSERT ON facebook_invalid TO writer;
-GRANT USAGE,SELECT ON SEQUENCE facebook_invalid_id_seq TO reader, writer;
 "
 
 # instagram
 psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
 "
 CREATE TABLE instagram (
-  id serial PRIMARY KEY,
 	collection_id INT REFERENCES collections(id) ON DELETE SET NULL,
 	contributor_id INT REFERENCES contributors(id) ON DELETE SET NULL,
   contributed_on TIMESTAMPTZ(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
+  collection_date DATE NOT NULL,
   country CHAR(2) NOT NULL,
-  date DATE NOT NULL,
   gender SMALLINT NOT NULL,
 	age_min SMALLINT NOT NULL DEFAULT 0,
 	age_max SMALLINT NOT NULL DEFAULT 999,
@@ -148,30 +151,35 @@ CREATE TABLE instagram (
 	all_fields jsonb DEFAULT '{}'::jsonb,
 	targeting jsonb DEFAULT '{}'::jsonb,
 	response jsonb DEFAULT '{}'::jsonb,
-  UNIQUE(date, geo_locations, gender, age_min, age_max, dau, targeting, response)
-);
+  UNIQUE(country, collection_date, geo_locations, gender, age_min, age_max, dau, targeting, response)
+) PARTITION BY LIST (country);
 CREATE INDEX contributor_ig_idx ON instagram(contributor_id);
 CREATE INDEX collection_ig_idx ON instagram(collection_id);
-CREATE INDEX date_ig_idx ON instagram(date);
-CREATE INDEX country_ig_idx ON instagram(country);
+CREATE INDEX date_ig_idx ON instagram(collection_date);
 CREATE INDEX gender_ig_idx ON instagram(gender);
 CREATE INDEX age_ig_idx ON instagram(age_min, age_max);
 
 GRANT SELECT ON instagram TO reader;
 GRANT SELECT,INSERT ON instagram TO writer;
-GRANT USAGE,SELECT ON SEQUENCE instagram_id_seq TO reader, writer;
 "
+
+# create instagram partitions by country
+for idx in "${!countries[@]}"
+do
+  psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
+  "CREATE TABLE instagram_${countries[idx]} PARTITION OF instagram FOR VALUES IN ('${countries[idx]}')"
+done
+
 
 # instagram (temporary storage of invalid data)
 psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
 "
 CREATE TABLE instagram_invalid (
-  id serial PRIMARY KEY,
 	collection_id INT REFERENCES collections(id) ON DELETE SET NULL,
 	contributor_id INT REFERENCES contributors(id) ON DELETE SET NULL,
   contributed_on TIMESTAMPTZ(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
+  collection_date DATE NOT NULL,
   country CHAR(2) NOT NULL,
-  date DATE NOT NULL,
   gender SMALLINT NOT NULL,
 	age_min SMALLINT NOT NULL DEFAULT 0,
 	age_max SMALLINT NOT NULL DEFAULT 999,
@@ -184,9 +192,10 @@ CREATE TABLE instagram_invalid (
 	all_fields jsonb DEFAULT '{}'::jsonb,
 	targeting jsonb DEFAULT '{}'::jsonb,
 	response jsonb DEFAULT '{}'::jsonb,
-  UNIQUE(date, geo_locations, gender, age_min, age_max, dau, targeting, response)
+  UNIQUE(country, collection_date, geo_locations, gender, age_min, age_max, dau, targeting, response)
 );
 GRANT SELECT ON instagram_invalid TO reader;
 GRANT SELECT,INSERT ON instagram_invalid TO writer;
-GRANT USAGE,SELECT ON SEQUENCE instagram_invalid_id_seq TO reader, writer;
 "
+
+unset countries

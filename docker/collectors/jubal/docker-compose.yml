@@ -1,0 +1,14 @@
+# docker-compose to deploy one or multiple collectors (i.e. services)
+version: '3.3'
+
+services:
+
+  baseline:
+    container_name: baseline
+    volumes:
+      - ./baseline:/app/in
+      - ./../../../data/jubal/baseline:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: unless-stopped

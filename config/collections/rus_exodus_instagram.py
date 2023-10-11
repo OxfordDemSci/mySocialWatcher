@@ -81,3 +81,19 @@ if __name__ == '__main__':
             file_out = os.path.join(specs_dir, 'specs' + str(i_count).zfill(3) + '.json')
             with open(file_out, "w") as f:
                 f.write(json.dumps(specs))
+
+            # ---- Russian Expats ---- #
+            i_count += 1
+
+            specs['languages'] = [None]
+            specs['behaviour'] = [
+                {
+                    "or": [6025000815983],
+                    "name": "Lived in Russia (Formerly Expats - Russia)"
+                }
+            ]
+
+            file_out = os.path.join(specs_dir, 'specs' + str(i_count).zfill(3) + '.json')
+            with open(file_out, "w") as f:
+                f.write(json.dumps(specs))
+

@@ -1,0 +1,35 @@
+{   "name": "Fertility Kenya",
+    "publisher_platforms": ["facebook"],
+    "geo_locations": [
+        { "name": "countries", "values":[   "KE"    ], "location_types": ["home"]}, 
+     	{ "name": "regions", "values": [{"key":"1930"}],  "location_types": ["home"],"pySocialWatcherReference": "Central Province"}, 
+     	{ "name": "regions", "values": [{"key":"1931"}],  "location_types": ["home"] ,"pySocialWatcherReference": "Coast Province"}, 
+     	{ "name": "regions", "values": [{"key":"1932"}],  "location_types": ["home"] ,"pySocialWatcherReference": "Eastern Province"}, 
+     	{ "name": "regions", "values": [{"key":"1933"}],  "location_types": ["home"] ,"pySocialWatcherReference": "Nairobi"}, 
+     	{ "name": "regions", "values": [{"key":"1934"}],  "location_types": ["home"] ,"pySocialWatcherReference": "North Eastern Province"}, 
+     	{ "name": "regions", "values": [{"key":"1935"}],  "location_types": ["home"] ,"pySocialWatcherReference": "Nyanza Province"},
+     	{ "name": "regions", "values": [{"key":"1936"}],  "location_types": ["home"] ,"pySocialWatcherReference": "Rift Valley Province"},  
+     	{ "name": "regions", "values": [{"key":"1937"}],  "location_types": ["home"] ,"pySocialWatcherReference": "Western Province"}
+    ],
+    "genders": [0,1,2],
+    "ages_ranges": [
+        {"min":13},
+        {"min":15},
+        {"min":13, "max":14},
+        {"min":14, "max":15},
+        {"min":15, "max":19},
+        {"min":18, "max":19},
+        {"min":20, "max":24},
+        {"min":25, "max":29},
+        {"min":30, "max":34},
+        {"min":35, "max":39},
+        {"min":40, "max":44},
+        {"min":45, "max":49},
+        {"min":50}], 
+    "family_statuses":[
+       null,
+      {"or": [6023005372383], "name": "New parents (0-12 months)"}, 
+      {"or": [6023005458383], "name": "Parents with toddlers (01-02 years)"}, 
+      {"or": [6023005529383], "name": "Parents with preschoolers (03-05 years) "}, 
+      {"or": [6002714398372], "name": "Parents (All)"}]
+}

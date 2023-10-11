@@ -48,49 +48,54 @@ if __name__ == '__main__':
     for f in os.listdir(specs_dir):
         os.remove(os.path.join(specs_dir, f))
 
+    platforms = ['facebook', 'instagram']
     i_count = 0
     for country in countries:
+        for platform in platforms:
 
-        # specs template json
-        country_specs_template_path = os.path.join(specs_template_path, country + '_regions.json')
+            # specs template json
+            country_specs_template_path = os.path.join(specs_template_path, country + '_regions.json')
 
-        # template json
-        with open(country_specs_template_path) as f:
-            specs = json.load(f)
-        specs['name'] = collection
+            # template json
+            with open(country_specs_template_path) as f:
+                specs = json.load(f)
+            specs['name'] = collection
 
-        # 10-year age classes
-        specs['ages_ranges'] = [[13, None], [18, None], [20, None], [60, None], [65, None],
-                                [13, 19], [15, 49], [15, 64], [20, 59], [18, 60],
-                                [20, 29], [30, 39], [40, 49], [50, 59]]
+            # platform
+            specs["publisher_platforms"] = [platform]
 
-        # location types
-        for i in range(len(specs['geo_locations'])):
-            specs['geo_locations'][i]['location_types'] = ['recent', 'home']
+            # 10-year age classes
+            specs['ages_ranges'] = [[13, None], [18, None], [20, None], [60, None], [65, None],
+                                    [13, 19], [15, 49], [15, 64], [20, 59], [18, 60],
+                                    [20, 29], [30, 39], [40, 49], [50, 59]]
 
-        # ---- All languages ----#
-        i_count += 1
+            # location types
+            for i in range(len(specs['geo_locations'])):
+                specs['geo_locations'][i]['location_types'] = ['recent', 'home']
 
-        specs['languages'] = [None]
+            # ---- All languages ----#
+            i_count += 1
 
-        file_out = os.path.join(specs_dir, 'specs' + str(i_count).zfill(3) + '.json')
-        with open(file_out, "w") as f:
-            f.write(json.dumps(specs))
+            specs['languages'] = [None]
 
-        # ---- Ukrainian language ----#
-        i_count += 1
+            file_out = os.path.join(specs_dir, 'specs' + str(i_count).zfill(3) + '.json')
+            with open(file_out, "w") as f:
+                f.write(json.dumps(specs))
 
-        specs['languages'] = [{'name': 'Ukrainian', 'values': [52]}]
+            # ---- Ukrainian language ----#
+            i_count += 1
 
-        file_out = os.path.join(specs_dir, 'specs' + str(i_count).zfill(3) + '.json')
-        with open(file_out, "w") as f:
-            f.write(json.dumps(specs))
+            specs['languages'] = [{'name': 'Ukrainian', 'values': [52]}]
 
-        # ---- Russian language ---- #
-        i_count += 1
+            file_out = os.path.join(specs_dir, 'specs' + str(i_count).zfill(3) + '.json')
+            with open(file_out, "w") as f:
+                f.write(json.dumps(specs))
 
-        specs['languages'] = [{'name': 'Russian', 'values': [17]}]
+            # ---- Russian language ---- #
+            i_count += 1
 
-        file_out = os.path.join(specs_dir, 'specs' + str(i_count).zfill(3) + '.json')
-        with open(file_out, "w") as f:
-            f.write(json.dumps(specs))
+            specs['languages'] = [{'name': 'Russian', 'values': [17]}]
+
+            file_out = os.path.join(specs_dir, 'specs' + str(i_count).zfill(3) + '.json')
+            with open(file_out, "w") as f:
+                f.write(json.dumps(specs))

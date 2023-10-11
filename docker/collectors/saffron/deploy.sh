@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VM="saffron"
-COLLECTIONS=("ukraine_countries" "ukraine_europe" "ukraine_language" "ukraine_neighbours1" "ukraine_neighbours2" "ukraine_regions")
+COLLECTIONS=("ukraine_countries" "ukraine_europe" "ukraine_language" "ukraine_neighbours" "ukraine_regions")
 DIR="/home/ubuntu/mySocialWatcher"
 
 # cron

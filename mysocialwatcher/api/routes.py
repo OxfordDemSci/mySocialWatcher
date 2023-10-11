@@ -8,11 +8,14 @@ from dotenv import load_dotenv
 load_dotenv()
 limiter_host = os.environ.get('LIMITER_HOST')
 
+if not limiter_host:
+    limiter_host = 'datahub_limiter'
+
 # define rate limiting
 limiter = Limiter(app,
                   key_func=get_remote_address,
                   # application_limits=['60/minute', '1000/hour', '10000/day'],
-                  default_limits=['60/minute', '1000/hour', '10000/day'],
+                  default_limits=['60/minute'],  # ['60/minute', '1000/hour', '10000/day'],
                   strategy='fixed-window-elastic-expiry',
                   storage_uri="memcached://" + limiter_host + ":11211",
                   storage_options={}
@@ -29,9 +32,9 @@ def home():
     return current_app.send_static_file('docs.html')
 
 
-@app.route('/social_media_audience/query', methods=['GET'])
-@app.route('/query', methods=['GET'])
-def fb_query():
+@app.route('/social_media_audience/query', methods=['GET','POST'])
+@app.route('/query', methods=['GET','POST'])
+def query():
     """API endpoint to select data from the 'social_media_audience' database."""
     args = dict(request.args)
     if len(args) == 0:
@@ -43,10 +46,10 @@ def fb_query():
         return jsonify(result), result.get("status")
 
 
-@app.route('/social_media_audience/write', methods=['GET'])
-@app.route('/write', methods=['GET'])
+@app.route('/social_media_audience/write', methods=['GET','POST'])
+@app.route('/write', methods=['GET', 'POST'])
 @limiter.exempt()
-def fb_write():
+def write():
     """API endpoint to insert data into the 'social_media_audience' database."""
     args = dict(request.args)
     if len(args) == 0:
@@ -58,8 +61,29 @@ def fb_write():
         return jsonify(result), result.get("status")
 
 
-# @app.route('/social_media_audience/write_geo', methods=['GET'])
-# @app.route('/write_geo', methods=['GET'])
-# def fb_write_geo():
-#     result = endpoints.write_geo_fun(dict(request.args))
-#     return jsonify(result), result.get("status")
+@app.route('/social_media_audience/list_collections', methods=['GET','POST'])
+@app.route('/list_collections', methods=['GET','POST'])
+def collections():
+    """API endpoint to query a complete list of collection names."""
+    args = dict(request.args)
+    if len(args) == 0:
+        return "<h1>400 Error</h1><p>Bad Request: This API endpoint requires arguments. " \
+               "See <a href='./../'>API documentation</a> for more information.", \
+               400
+    else:
+        result = endpoints.collections_fun(args)
+        return jsonify(result), result.get("status")
+
+
+@app.route('/social_media_audience/monitor_collections', methods=['GET','POST'])
+@app.route('/monitor_collections', methods=['GET','POST'])
+def monitor_collections():
+    """API endpoint to monitor collections."""
+    args = dict(request.args)
+    if len(args) == 0:
+        return "<h1>400 Error</h1><p>Bad Request: This API endpoint requires arguments. " \
+               "See <a href='./../'>API documentation</a> for more information.", \
+               400
+    else:
+        result = endpoints.monitor_fun(args)
+        return jsonify(result), result.get("status")

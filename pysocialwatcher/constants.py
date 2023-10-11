@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import time
 SAVE_EMPTY = True
+VERBOSE = False
 MAX_NUMBER_TRY = 10
 REQUESTS_TIMEOUT = 60
 INITIAL_TRY_SLEEP_TIME = 300
@@ -9,10 +10,12 @@ API_UNKOWN_ERROR_CODE_2 = 2
 INVALID_PARAMETER_ERROR = 100
 ZIPCODE_INVALID_SUBCODE_ERROR = None
 FEW_USERS_IN_CUSTOM_LOCATIONS_SUBCODE_ERROR = 1885036
+TOO_MANY_CALLS_ERROR = 80004
+LIMIT_CALLS_PER_HOUR = 300
 NUMBER_OF_REQUESTS_PER_BUCKET = 100
 INGORE_INVALID_ZIP_CODES = True
 MOCK_RESPONSE_FIELD = "mockResponse"
-DEFAULT_DUMB_TARGETING = {'geo_locations': {'regions': [{'key': '3843'}], 'location_types': ['home']}, 'genders': [0], }
+DEFAULT_DUMB_TARGETING = {'geo_locations': {'regions': [{'key': '3843'}], 'location_types': ['home','recent']}, 'genders': [0], }
 TOKENS = []
 INPUT_AGE_RANGE_FIELD = "ages_ranges"
 INPUT_GEOLOCATION_FIELD = "geo_locations"
