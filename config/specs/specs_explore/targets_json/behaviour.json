@@ -1,0 +1,3971 @@
+{
+    "data": [
+        {
+            "id": "6002714895372",
+            "name": "Frequent Travelers",
+            "type": "behaviors",
+            "path": [
+                "Travel",
+                "Frequent Travelers"
+            ],
+            "description": "People whose activities on Facebook suggest they are frequent travelers",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1567752221,
+            "audience_size_upper_bound": 1843676613
+        },
+        {
+            "id": "6002714898572",
+            "name": "Small business owners",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Small business owners"
+            ],
+            "description": "People who list themselves as small business owners or own small business Pages on Facebook",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 40595599,
+            "audience_size_upper_bound": 47740425
+        },
+        {
+            "id": "6002764392172",
+            "name": "Facebook Payments users (90 days)",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Facebook Payments users (90 days)"
+            ],
+            "description": "People who have used Facebook Payments in the past 90 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 642788,
+            "audience_size_upper_bound": 755919
+        },
+        {
+            "id": "6003808923172",
+            "name": "Technology early adopters",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Technology early adopters"
+            ],
+            "description": "People who are likely to adopt new technologies earlier than others",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 80645567,
+            "audience_size_upper_bound": 94839187
+        },
+        {
+            "id": "6003986707172",
+            "name": "Facebook access (OS): Windows 7",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Operating System Used",
+                "Facebook access (OS): Windows 7"
+            ],
+            "description": "People who primarily access Facebook using Windows 7",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 70643,
+            "audience_size_upper_bound": 83077
+        },
+        {
+            "id": "6003966451572",
+            "name": "Facebook access (OS): Mac OS X",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Operating System Used",
+                "Facebook access (OS): Mac OS X"
+            ],
+            "description": "People who primarily access Facebook using Mac OS X",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2397982,
+            "audience_size_upper_bound": 2820028
+        },
+        {
+            "id": "6003966450972",
+            "name": "Facebook access (OS): Windows Vista",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Operating System Used",
+                "Facebook access (OS): Windows Vista"
+            ],
+            "description": "People who primarily access Facebook using Windows Vista",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1367,
+            "audience_size_upper_bound": 1608
+        },
+        {
+            "id": "6003966466972",
+            "name": "Facebook access (OS): Windows XP",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Operating System Used",
+                "Facebook access (OS): Windows XP"
+            ],
+            "description": "People who primarily access Facebook using Windows XP",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 409,
+            "audience_size_upper_bound": 481
+        },
+        {
+            "id": "6004386303972",
+            "name": "Facebook access (mobile): iPhone 4S",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Facebook access (mobile): iPhone 4S"
+            ],
+            "description": "People who primarily access Facebook using an iPhone 4S mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 16454,
+            "audience_size_upper_bound": 19351
+        },
+        {
+            "id": "6004383941372",
+            "name": "Facebook access (mobile): iPhone 4",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Facebook access (mobile): iPhone 4"
+            ],
+            "description": "People who primarily access Facebook using an iPhone 4 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 6626,
+            "audience_size_upper_bound": 7793
+        },
+        {
+            "id": "6004386044572",
+            "name": "Facebook access (mobile): Android devices",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Operating System",
+                "Facebook access (mobile): Android devices"
+            ],
+            "description": "People who primarily access Facebook using any Android mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1670439334,
+            "audience_size_upper_bound": 1964436657
+        },
+        {
+            "id": "6004383149972",
+            "name": "Facebook access (mobile): feature phones",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "Facebook access (mobile): feature phones"
+            ],
+            "description": "People who primarily access Facebook using a feature phone",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4462867,
+            "audience_size_upper_bound": 5248332
+        },
+        {
+            "id": "6004383890572",
+            "name": "Facebook access (mobile): iPod Touch",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Facebook access (mobile): iPod Touch"
+            ],
+            "description": "People who primarily access Facebook using an iPod Touch mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 74811,
+            "audience_size_upper_bound": 87978
+        },
+        {
+            "id": "6004385895772",
+            "name": "Facebook access (mobile): Windows phones",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Operating System",
+                "Facebook access (mobile): Windows phones"
+            ],
+            "description": "People who primarily access Facebook using a Windows mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 16197,
+            "audience_size_upper_bound": 19048
+        },
+        {
+            "id": "6004384041172",
+            "name": "Facebook access (mobile): Apple (iOS) devices",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Operating System",
+                "Facebook access (mobile): Apple (iOS) devices"
+            ],
+            "description": "People who primarily access Facebook using an Apple (iOS) mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 300266388,
+            "audience_size_upper_bound": 353113273
+        },
+        {
+            "id": "6004383806772",
+            "name": "Facebook access (mobile): iPad 3",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Facebook access (mobile): iPad 3"
+            ],
+            "description": "People who primarily access Facebook using an iPad 3 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 118589,
+            "audience_size_upper_bound": 139461
+        },
+        {
+            "id": "6004383808772",
+            "name": "Facebook access (mobile): iPad 2",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Facebook access (mobile): iPad 2"
+            ],
+            "description": "People who primarily access Facebook using an iPad 2 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 189127,
+            "audience_size_upper_bound": 222414
+        },
+        {
+            "id": "6004383767972",
+            "name": "Facebook access (mobile): iPad 1",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Facebook access (mobile): iPad 1"
+            ],
+            "description": "People who primarily access Facebook using an iPad 1 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1553871,
+            "audience_size_upper_bound": 1827353
+        },
+        {
+            "id": "6004386010572",
+            "name": "Facebook access (mobile): Samsung Android mobile devices",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Facebook access (mobile): Samsung Android mobile devices"
+            ],
+            "description": "People who primarily access Facebook using a Samsung Android mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 521231240,
+            "audience_size_upper_bound": 612967939
+        },
+        {
+            "id": "6004385886572",
+            "name": "Facebook access (mobile): HTC Android mobile devices",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Facebook access (mobile): HTC Android mobile devices"
+            ],
+            "description": "People who primarily access Facebook using an HTC Android mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 707153,
+            "audience_size_upper_bound": 831612
+        },
+        {
+            "id": "6004385868372",
+            "name": "Facebook access(mobile): LG Android mobile devices",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Facebook access(mobile): LG Android mobile devices"
+            ],
+            "description": "People who primarily access Facebook using an LG Android mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 11838429,
+            "audience_size_upper_bound": 13921993
+        },
+        {
+            "id": "6004385865172",
+            "name": "Facebook access (mobile): Sony Android mobile devices",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Facebook access (mobile): Sony Android mobile devices"
+            ],
+            "description": "People who primarily access Facebook using a Sony Android mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4233583,
+            "audience_size_upper_bound": 4978694
+        },
+        {
+            "id": "6004382299972",
+            "name": "Facebook access (mobile): all mobile devices",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "Facebook access (mobile): all mobile devices"
+            ],
+            "description": "People who primarily access Facebook using mobile devices",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1918900444,
+            "audience_size_upper_bound": 2256626923
+        },
+        {
+            "id": "6004383049972",
+            "name": "Facebook access (mobile): smartphones and tablets",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "Facebook access (mobile): smartphones and tablets"
+            ],
+            "description": "People who primarily access Facebook using a smartphone or tablet device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1839676158,
+            "audience_size_upper_bound": 2163459162
+        },
+        {
+            "id": "6004385879572",
+            "name": "Facebook access (mobile): Motorola Android mobile devices",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Facebook access (mobile): Motorola Android mobile devices"
+            ],
+            "description": "People who primarily access Facebook using a Motorola Android mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 65826108,
+            "audience_size_upper_bound": 77411504
+        },
+        {
+            "id": "6004854404172",
+            "name": "Facebook access: older devices and OS",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Facebook access: older devices and OS"
+            ],
+            "description": "People who primarily access Facebook on older devices or operating systems before Windows 7, Mac OS X or Windows NT 6.2.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 618412958,
+            "audience_size_upper_bound": 727253639
+        },
+        {
+            "id": "6004883585572",
+            "name": "Facebook access (mobile): iPhone 5",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Facebook access (mobile): iPhone 5"
+            ],
+            "description": "People who primarily access Facebook using an iPhone 5 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 79554,
+            "audience_size_upper_bound": 93556
+        },
+        {
+            "id": "6004948896972",
+            "name": "Facebook Payments users (30 days)",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Facebook Payments users (30 days)"
+            ],
+            "description": "People who have used Facebook Payments in the past 30 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 256243,
+            "audience_size_upper_bound": 301342
+        },
+        {
+            "id": "6006298077772",
+            "name": "Facebook access (OS): Windows 8",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Operating System Used",
+                "Facebook access (OS): Windows 8"
+            ],
+            "description": "People who primarily access Facebook using Facebook using Windows 8",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 21039,
+            "audience_size_upper_bound": 24742
+        },
+        {
+            "id": "6007078565383",
+            "name": "New smartphone and tablet users",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "New smartphone and tablet users"
+            ],
+            "description": "People who are new smartphone or tablet users",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 131815198,
+            "audience_size_upper_bound": 155014674
+        },
+        {
+            "id": "6007481031783",
+            "name": "Owns: Galaxy S III devices",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy S III devices"
+            ],
+            "description": "People who are likely to own a Galaxy S III mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 161798,
+            "audience_size_upper_bound": 190275
+        },
+        {
+            "id": "6007847947183",
+            "name": "Console gamers",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Console gamers"
+            ],
+            "description": "People who have liked Pages related to console gaming or gaming systems",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 49648763,
+            "audience_size_upper_bound": 58386946
+        },
+        {
+            "id": "6008261969983",
+            "name": "Returned from travels 1 week ago",
+            "type": "behaviors",
+            "path": [
+                "Travel",
+                "Returned from travels 1 week ago"
+            ],
+            "description": "People whose activities on Facebook suggest they returned from traveling within the past week",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 145583991,
+            "audience_size_upper_bound": 171206774
+        },
+        {
+            "id": "6008297697383",
+            "name": "Returned from travels 2 weeks ago",
+            "type": "behaviors",
+            "path": [
+                "Travel",
+                "Returned from travels 2 weeks ago"
+            ],
+            "description": "People whose activities on Facebook suggest they returned from traveling within the past 2 weeks",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 185148755,
+            "audience_size_upper_bound": 217734937
+        },
+        {
+            "id": "6008868254383",
+            "name": "Owns: Kindle Fire",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Amazon",
+                "Owns: Kindle Fire"
+            ],
+            "description": "People who are likely to own a Kindle Fire",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4568,
+            "audience_size_upper_bound": 5373
+        },
+        {
+            "id": "6010095777183",
+            "name": "Facebook access (mobile): iPhone 5S",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Facebook access (mobile): iPhone 5S"
+            ],
+            "description": "People who primarily access Facebook using an iPhone 5S mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 553397,
+            "audience_size_upper_bound": 650796
+        },
+        {
+            "id": "6010095794383",
+            "name": "Facebook access (mobile): iPhone 5C",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Facebook access (mobile): iPhone 5C"
+            ],
+            "description": "People who primarily access Facebook using an iPhone 5C mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 32810,
+            "audience_size_upper_bound": 38585
+        },
+        {
+            "id": "6010231666183",
+            "name": "Owns: LG G2 devices",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "LG",
+                "Owns: LG G2 devices"
+            ],
+            "description": "People who are likely to own LG G2 devices",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 10749,
+            "audience_size_upper_bound": 12641
+        },
+        {
+            "id": "6011191254383",
+            "name": "Owns: iPad 4",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Owns: iPad 4"
+            ],
+            "description": "People who are likely to own an iPad 4",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 437363,
+            "audience_size_upper_bound": 514340
+        },
+        {
+            "id": "6011191259183",
+            "name": "Owns: iPad Mini 1",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Owns: iPad Mini 1"
+            ],
+            "description": "People who are likely to own an iPad Mini 1",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 264553,
+            "audience_size_upper_bound": 311115
+        },
+        {
+            "id": "6011244513583",
+            "name": "Owns: iPad Air",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Owns: iPad Air"
+            ],
+            "description": "People who are likely to own an iPad Air",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1127591,
+            "audience_size_upper_bound": 1326048
+        },
+        {
+            "id": "6011244510983",
+            "name": "Owns: iPad Mini 2",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Owns: iPad Mini 2"
+            ],
+            "description": "People who are likely to own an iPad Mini 2",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 623302,
+            "audience_size_upper_bound": 733004
+        },
+        {
+            "id": "6011390261383",
+            "name": "Owns: Huawei",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Owns: Huawei"
+            ],
+            "description": "People who are likely to own a Huawei mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 77139329,
+            "audience_size_upper_bound": 90715852
+        },
+        {
+            "id": "6015852294783",
+            "name": "Owns: Galaxy Y devices",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy Y devices"
+            ],
+            "description": "People who are likely to own a Galaxy Y mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 7560,
+            "audience_size_upper_bound": 8891
+        },
+        {
+            "id": "6013016790183",
+            "name": "Owns: Galaxy S4",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy S4"
+            ],
+            "description": "People who are likely to own a Galaxy S4 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 222819,
+            "audience_size_upper_bound": 262036
+        },
+        {
+            "id": "6013017211983",
+            "name": "Owns: Galaxy S III Mini",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy S III Mini"
+            ],
+            "description": "People who are likely to own a Galaxy S III Mini mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 96020,
+            "audience_size_upper_bound": 112920
+        },
+        {
+            "id": "6013017235183",
+            "name": "Galaxy Note II",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Galaxy Note II"
+            ],
+            "description": "",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 5388,
+            "audience_size_upper_bound": 6337
+        },
+        {
+            "id": "6013017236583",
+            "name": "Owns: Galaxy Grand",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy Grand"
+            ],
+            "description": "People who are likely to own a Galaxy Grand mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 133227,
+            "audience_size_upper_bound": 156675
+        },
+        {
+            "id": "6013017297383",
+            "name": "Curve 9220",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "BlackBerry",
+                "Curve 9220"
+            ],
+            "description": "",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 310,
+            "audience_size_upper_bound": 365
+        },
+        {
+            "id": "6013017308783",
+            "name": "Owns: Galaxy S 4 Mini",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy S 4 Mini"
+            ],
+            "description": "People who are likely to own a Galaxy S 4 Mini mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 50866,
+            "audience_size_upper_bound": 59819
+        },
+        {
+            "id": "6013279353983",
+            "name": "Owns: Galaxy Note 3",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy Note 3"
+            ],
+            "description": "People who are likely to own a Galaxy Note 3 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 397492,
+            "audience_size_upper_bound": 467451
+        },
+        {
+            "id": "6013516370183",
+            "name": "Commuters",
+            "type": "behaviors",
+            "path": [
+                "Travel",
+                "Commuters"
+            ],
+            "description": "People likely commute from their home to their workplace on weekdays",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 312730259,
+            "audience_size_upper_bound": 367770785
+        },
+        {
+            "id": "6014808618583",
+            "name": "Owns: Galaxy S5",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy S5"
+            ],
+            "description": "People who are likely to own a Samsung Galaxy S5 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 553170,
+            "audience_size_upper_bound": 650529
+        },
+        {
+            "id": "6014809400783",
+            "name": "Owns: Nexus 5",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Google",
+                "Owns: Nexus 5"
+            ],
+            "description": "People who are likely to own a Nexus 5 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 250568,
+            "audience_size_upper_bound": 294669
+        },
+        {
+            "id": "6014809859183",
+            "name": "Owns: HTC One",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "HTC",
+                "Owns: HTC One"
+            ],
+            "description": "People who are likely to own an HTC One mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 169741,
+            "audience_size_upper_bound": 199616
+        },
+        {
+            "id": "6015235495383",
+            "name": "Facebook access (network type): WiFi",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "Network Connection",
+                "Facebook access (network type): WiFi"
+            ],
+            "description": "People who primarily access Facebook using a WiFi network",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 942427517,
+            "audience_size_upper_bound": 1108294761
+        },
+        {
+            "id": "6015441244983",
+            "name": "Owns: Galaxy Grand 2",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy Grand 2"
+            ],
+            "description": "People who are likely to own a Samsung Galaxy Grand 2 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 143341,
+            "audience_size_upper_bound": 168570
+        },
+        {
+            "id": "6015547847583",
+            "name": "Facebook access (browser): Firefox",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Internet Browser Used",
+                "Facebook access (browser): Firefox"
+            ],
+            "description": "People who primarily access Facebook using Firefox",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 12966036,
+            "audience_size_upper_bound": 15248059
+        },
+        {
+            "id": "6015547900583",
+            "name": "Facebook access (browser): Chrome",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Internet Browser Used",
+                "Facebook access (browser): Chrome"
+            ],
+            "description": "People who primarily access Facebook using Google Chrome",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 270541248,
+            "audience_size_upper_bound": 318156508
+        },
+        {
+            "id": "6015559470583",
+            "name": "Lives abroad",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lives abroad"
+            ],
+            "description": "People living outside their home country",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 207259639,
+            "audience_size_upper_bound": 243737336
+        },
+        {
+            "id": "6015593608983",
+            "name": "Facebook access (browser): Safari",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Internet Browser Used",
+                "Facebook access (browser): Safari"
+            ],
+            "description": "People who primarily access Facebook using Safari",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 48841188,
+            "audience_size_upper_bound": 57437238
+        },
+        {
+            "id": "6015593652183",
+            "name": "Facebook access (browser): Opera",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Internet Browser Used",
+                "Facebook access (browser): Opera"
+            ],
+            "description": "People who primarily access Facebook using Opera",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 8871017,
+            "audience_size_upper_bound": 10432316
+        },
+        {
+            "id": "6015593776783",
+            "name": "Facebook access (browser): Internet Explorer",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Internet Browser Used",
+                "Facebook access (browser): Internet Explorer"
+            ],
+            "description": "People who primarily access Facebook using Internet Explorer",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 197891,
+            "audience_size_upper_bound": 232720
+        },
+        {
+            "id": "6015683810783",
+            "name": "Facebook Page admins",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Facebook page admins",
+                "Facebook Page admins"
+            ],
+            "description": "People who are an admin of at least 1 Page on Facebook",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 521268343,
+            "audience_size_upper_bound": 613011572
+        },
+        {
+            "id": "6016286626383",
+            "name": "Facebook access (mobile): tablets",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "Facebook access (mobile): tablets"
+            ],
+            "description": "People who primarily access Facebook using a tablet",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1641037474,
+            "audience_size_upper_bound": 1929860070
+        },
+        {
+            "id": "6016916298983",
+            "name": "Lived in India (Formerly Expats - India)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in India (Formerly Expats - India)"
+            ],
+            "description": "People who used to live in India who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 14646371,
+            "audience_size_upper_bound": 17224133
+        },
+        {
+            "id": "6016925328983",
+            "name": "Owns: Galaxy Tab S",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy Tab S"
+            ],
+            "description": "People who are likely to own a Samsung Galaxy Tab S mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 91000,
+            "audience_size_upper_bound": 107016
+        },
+        {
+            "id": "6016925394583",
+            "name": "Owns: Galaxy Tab Pro",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy Tab Pro"
+            ],
+            "description": "People who are likely to own a Samsung Galaxy Tab Pro mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 19843,
+            "audience_size_upper_bound": 23336
+        },
+        {
+            "id": "6016925404783",
+            "name": "Owns: Galaxy Tab 4",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy Tab 4"
+            ],
+            "description": "People who are likely to own a Samsung Galaxy Tab 4 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 443188,
+            "audience_size_upper_bound": 521190
+        },
+        {
+            "id": "6016925643983",
+            "name": "Owns: Galaxy Tab 3",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy Tab 3"
+            ],
+            "description": "People who are likely to own a Galaxy Tab 3 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 648099,
+            "audience_size_upper_bound": 762165
+        },
+        {
+            "id": "6016925657183",
+            "name": "Owns: Galaxy Tab 2",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy Tab 2"
+            ],
+            "description": "People who are likely to own a Galaxy Tab 2 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 107124,
+            "audience_size_upper_bound": 125978
+        },
+        {
+            "id": "6016925667383",
+            "name": "Galaxy Tab",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Galaxy Tab"
+            ],
+            "description": "People who are likely to own a Samsung Galaxy Tab",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 442,
+            "audience_size_upper_bound": 520
+        },
+        {
+            "id": "6016926254583",
+            "name": "Owns: Xperia M",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Sony",
+                "Owns: Xperia M"
+            ],
+            "description": "People who are likely to own a Sony Xperia M mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 6176,
+            "audience_size_upper_bound": 7263
+        },
+        {
+            "id": "6016926310383",
+            "name": "Owns: Xperia SL",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Sony",
+                "Owns: Xperia SL"
+            ],
+            "description": "People who are likely to own a Sony Xperia SLs",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 689,
+            "audience_size_upper_bound": 811
+        },
+        {
+            "id": "6016926471583",
+            "name": "Xperia T",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Sony",
+                "Xperia T"
+            ],
+            "description": "People who are likely to own a Sony Xperia T",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 812,
+            "audience_size_upper_bound": 955
+        },
+        {
+            "id": "6016926528983",
+            "name": "Owns: Xperia Z",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Sony",
+                "Owns: Xperia Z"
+            ],
+            "description": "People who are likely to own a Sony Xperia Z mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 10394,
+            "audience_size_upper_bound": 12224
+        },
+        {
+            "id": "6016926651383",
+            "name": "Owns: Xperia Z Ultra",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Sony",
+                "Owns: Xperia Z Ultra"
+            ],
+            "description": "People who are likely to own a Sony Xperia Z Ultra mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 3283,
+            "audience_size_upper_bound": 3861
+        },
+        {
+            "id": "6017253486583",
+            "name": "Facebook access (network type): 2G",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "Network Connection",
+                "Facebook access (network type): 2G"
+            ],
+            "description": "People who primarily access Facebook using a 2G network",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 7913771,
+            "audience_size_upper_bound": 9306595
+        },
+        {
+            "id": "6017253511583",
+            "name": "Facebook access (network type): 3G",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "Network Connection",
+                "Facebook access (network type): 3G"
+            ],
+            "description": "People who primarily access Facebook using a 3G network",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 105110555,
+            "audience_size_upper_bound": 123610013
+        },
+        {
+            "id": "6017253531383",
+            "name": "Facebook access (network type): 4G",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "Network Connection",
+                "Facebook access (network type): 4G"
+            ],
+            "description": "People who primarily access Facebook using a 4G network",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 846060050,
+            "audience_size_upper_bound": 994966619
+        },
+        {
+            "id": "6017535283383",
+            "name": "Owns: LG G3",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "LG",
+                "Owns: LG G3"
+            ],
+            "description": "People who are likely to own an LG G3 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 50515,
+            "audience_size_upper_bound": 59406
+        },
+        {
+            "id": "6017831560783",
+            "name": "Owns: iPhone 6 Plus",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Owns: iPhone 6 Plus"
+            ],
+            "description": "People who are likely to own an Apple iPhone 6 Plus mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1414108,
+            "audience_size_upper_bound": 1662992
+        },
+        {
+            "id": "6017831572183",
+            "name": "Owns: iPhone 6",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Owns: iPhone 6"
+            ],
+            "description": "People who are likely to own an iPhone 6 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 3113083,
+            "audience_size_upper_bound": 3660986
+        },
+        {
+            "id": "6018413514983",
+            "name": "Anniversary (within 61-90 days)",
+            "type": "behaviors",
+            "path": [
+                "Anniversary",
+                "Anniversary (within 61-90 days)"
+            ],
+            "description": "People with an anniversary in 61-90 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 7216134,
+            "audience_size_upper_bound": 8486174
+        },
+        {
+            "id": "6018796980983",
+            "name": "Lived in Kenya (Formerly Expats - Kenya)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Kenya (Formerly Expats - Kenya)"
+            ],
+            "description": "People who used to live in Kenya who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1137188,
+            "audience_size_upper_bound": 1337334
+        },
+        {
+            "id": "6018797004183",
+            "name": "Lived in Nigeria (Formerly Expats - Nigeria)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Nigeria (Formerly Expats - Nigeria)"
+            ],
+            "description": "People who used to live in Nigeria who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2407789,
+            "audience_size_upper_bound": 2831561
+        },
+        {
+            "id": "6018797036783",
+            "name": "Lived in Cameroon (Formerly Expats - Cameroon)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Cameroon (Formerly Expats - Cameroon)"
+            ],
+            "description": "People who used to live in Cameroon who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 474179,
+            "audience_size_upper_bound": 557635
+        },
+        {
+            "id": "6018797091183",
+            "name": "Lived in Philippines (Formerly Expats - Philippines)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Philippines (Formerly Expats - Philippines)"
+            ],
+            "description": "People who used to live in the Philippines who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 9635453,
+            "audience_size_upper_bound": 11331293
+        },
+        {
+            "id": "6018797127383",
+            "name": "Lived in Cuba (Formerly Expats - Cuba)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Cuba (Formerly Expats - Cuba)"
+            ],
+            "description": "People who used to live in Cuba who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1627126,
+            "audience_size_upper_bound": 1913501
+        },
+        {
+            "id": "6018797165983",
+            "name": "Lived in Ethiopia (Formerly Expats - Ethiopia)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Ethiopia (Formerly Expats - Ethiopia)"
+            ],
+            "description": "People who used to live in Ethiopia who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1095725,
+            "audience_size_upper_bound": 1288573
+        },
+        {
+            "id": "6018797373783",
+            "name": "Lived in Haiti (Formerly Expats - Haiti)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Haiti (Formerly Expats - Haiti)"
+            ],
+            "description": "People who used to live in Haiti who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1442446,
+            "audience_size_upper_bound": 1696317
+        },
+        {
+            "id": "6018995113183",
+            "name": "Owns: iPad Air 2",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Owns: iPad Air 2"
+            ],
+            "description": "People who are likely to own an iPad Air 2 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1694433,
+            "audience_size_upper_bound": 1992654
+        },
+        {
+            "id": "6019221024783",
+            "name": "Played Canvas games (yesterday)",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Canvas Gaming",
+                "Played Canvas games (yesterday)"
+            ],
+            "description": "People who played a Canvas game yesterday",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2063059,
+            "audience_size_upper_bound": 2426158
+        },
+        {
+            "id": "6019221038183",
+            "name": "Played Canvas games (last 7 days)",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Canvas Gaming",
+                "Played Canvas games (last 7 days)"
+            ],
+            "description": "People who played a Canvas game in the last 7 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2580716,
+            "audience_size_upper_bound": 3034923
+        },
+        {
+            "id": "6019221046583",
+            "name": "Played Canvas games (last 14 days)",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Canvas Gaming",
+                "Played Canvas games (last 14 days)"
+            ],
+            "description": "People who played a Canvas game in the last 14 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2580344,
+            "audience_size_upper_bound": 3034485
+        },
+        {
+            "id": "6019098117583",
+            "name": "Owns: iPad Mini 3",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Owns: iPad Mini 3"
+            ],
+            "description": "People who are likely to own an iPad Mini 3 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 128636,
+            "audience_size_upper_bound": 151276
+        },
+        {
+            "id": "6019098214783",
+            "name": "Owns: Galaxy Note 4",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy Note 4"
+            ],
+            "description": "People who are likely to own a Galaxy Note 4 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 278647,
+            "audience_size_upper_bound": 327689
+        },
+        {
+            "id": "6019164544783",
+            "name": "Owns: Karbonn",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Owns: Karbonn"
+            ],
+            "description": "People who are likely to own a Karbonn mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 93464,
+            "audience_size_upper_bound": 109914
+        },
+        {
+            "id": "6019164586183",
+            "name": "Owns: Micromax",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Owns: Micromax"
+            ],
+            "description": "People who are likely to own a Micromax mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 381425,
+            "audience_size_upper_bound": 448556
+        },
+        {
+            "id": "6019164630583",
+            "name": "Owns: Xiaomi",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Owns: Xiaomi"
+            ],
+            "description": "People who are likely to own a Xiaomi mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 237600686,
+            "audience_size_upper_bound": 279418407
+        },
+        {
+            "id": "6019246164583",
+            "name": "Played Canvas games (last 3 days)",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Canvas Gaming",
+                "Played Canvas games (last 3 days)"
+            ],
+            "description": "People who played a Canvas game in the last 3 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2581017,
+            "audience_size_upper_bound": 3035276
+        },
+        {
+            "id": "6019366943583",
+            "name": "Lived in Spain (Formerly Expats - Spain)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Spain (Formerly Expats - Spain)"
+            ],
+            "description": "People who used to live in Spain who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1742301,
+            "audience_size_upper_bound": 2048946
+        },
+        {
+            "id": "6019367014383",
+            "name": "Lived in France (Formerly Expats - France)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in France (Formerly Expats - France)"
+            ],
+            "description": "People who used to live in France who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2470778,
+            "audience_size_upper_bound": 2905635
+        },
+        {
+            "id": "6019367052983",
+            "name": "Lived in Germany (Formerly Expats - Germany)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Germany (Formerly Expats - Germany)"
+            ],
+            "description": "People who used to live in Germany who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1629033,
+            "audience_size_upper_bound": 1915743
+        },
+        {
+            "id": "6019377644783",
+            "name": "Lived in Switzerland (Formerly Expats - Switzerland)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Switzerland (Formerly Expats - Switzerland)"
+            ],
+            "description": "People who used to live in Switzerland who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 316365,
+            "audience_size_upper_bound": 372046
+        },
+        {
+            "id": "6019396649183",
+            "name": "Lived in United States (Formerly Expats - United States)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in United States (Formerly Expats - United States)"
+            ],
+            "description": "People who used to live in the United States who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 18242943,
+            "audience_size_upper_bound": 21453701
+        },
+        {
+            "id": "6019396657183",
+            "name": "Lived in Poland (Formerly Expats - Poland)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Poland (Formerly Expats - Poland)"
+            ],
+            "description": "People who used to live in Poland who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1444585,
+            "audience_size_upper_bound": 1698832
+        },
+        {
+            "id": "6019396654583",
+            "name": "Lived in Italy (Formerly Expats - Italy)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Italy (Formerly Expats - Italy)"
+            ],
+            "description": "People who used to live in Italy who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1816801,
+            "audience_size_upper_bound": 2136558
+        },
+        {
+            "id": "6019396650783",
+            "name": "Lived in Ireland (Formerly Expats - Ireland)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Ireland (Formerly Expats - Ireland)"
+            ],
+            "description": "People who used to live in Ireland who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 296812,
+            "audience_size_upper_bound": 349051
+        },
+        {
+            "id": "6019396638383",
+            "name": "Lived in Hungary (Formerly Expats - Hungary)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Hungary (Formerly Expats - Hungary)"
+            ],
+            "description": "People who used to live in Hungary who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 344799,
+            "audience_size_upper_bound": 405484
+        },
+        {
+            "id": "6019396764183",
+            "name": "Lived in Canada (Formerly Expats - Canada)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Canada (Formerly Expats - Canada)"
+            ],
+            "description": "People who used to live in Canada who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1265920,
+            "audience_size_upper_bound": 1488722
+        },
+        {
+            "id": "6019452369983",
+            "name": "Lived in China (Formerly Expats - China)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in China (Formerly Expats - China)"
+            ],
+            "description": "People who used to live in China who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2184142,
+            "audience_size_upper_bound": 2568551
+        },
+        {
+            "id": "6019520122583",
+            "name": "Lived in Puerto Rico (Formerly Expats - Puerto Rico)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Puerto Rico (Formerly Expats - Puerto Rico)"
+            ],
+            "description": "People who used to live in Puerto Rico who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1162460,
+            "audience_size_upper_bound": 1367053
+        },
+        {
+            "id": "6019564340583",
+            "name": "Lived in Brazil (Formerly Expats - Brazil)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Brazil (Formerly Expats - Brazil)"
+            ],
+            "description": "People who used to live in Brazil who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4085724,
+            "audience_size_upper_bound": 4804812
+        },
+        {
+            "id": "6019564344583",
+            "name": "Lived in Indonesia (Formerly Expats - Indonesia)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Indonesia (Formerly Expats - Indonesia)"
+            ],
+            "description": "People who used to live in Indonesia who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4094639,
+            "audience_size_upper_bound": 4815296
+        },
+        {
+            "id": "6019564383383",
+            "name": "Lived in South Africa (Formerly Expats - South Africa)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in South Africa (Formerly Expats - South Africa)"
+            ],
+            "description": "People who used to live in South Africa who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1276171,
+            "audience_size_upper_bound": 1500778
+        },
+        {
+            "id": "6019673233983",
+            "name": "Lived in Zimbabwe (Formerly Expats - Zimbabwe)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Zimbabwe (Formerly Expats - Zimbabwe)"
+            ],
+            "description": "People who used to live in Zimbabwe who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 984437,
+            "audience_size_upper_bound": 1157699
+        },
+        {
+            "id": "6019673448383",
+            "name": "Lived in Ghana (Formerly Expats - Ghana)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Ghana (Formerly Expats - Ghana)"
+            ],
+            "description": "People who used to live in Ghana who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 764002,
+            "audience_size_upper_bound": 898467
+        },
+        {
+            "id": "6019673501783",
+            "name": "Lived in Uganda (Formerly Expats - Uganda)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Uganda (Formerly Expats - Uganda)"
+            ],
+            "description": "People who used to live in Uganda who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 627993,
+            "audience_size_upper_bound": 738520
+        },
+        {
+            "id": "6019673525983",
+            "name": "Lived in Colombia (Formerly Expats - Colombia)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Colombia (Formerly Expats - Colombia)"
+            ],
+            "description": "People who used to live in Colombia who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2847965,
+            "audience_size_upper_bound": 3349207
+        },
+        {
+            "id": "6019673762183",
+            "name": "Lived in Dominican Republic (Formerly Expats - Dominican Republic)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Dominican Republic (Formerly Expats - Dominican Republic)"
+            ],
+            "description": "People who used to live in the Dominican Republic who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1384233,
+            "audience_size_upper_bound": 1627859
+        },
+        {
+            "id": "6019673777983",
+            "name": "Lived in El Salvador (Formerly Expats - El Salvador)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in El Salvador (Formerly Expats - El Salvador)"
+            ],
+            "description": "People who used to live in El Salvador who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1416914,
+            "audience_size_upper_bound": 1666292
+        },
+        {
+            "id": "6019673808383",
+            "name": "Lived in Guatemala (Formerly Expats - Guatemala)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Guatemala (Formerly Expats - Guatemala)"
+            ],
+            "description": "People who used to live in Guatemala who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1993192,
+            "audience_size_upper_bound": 2343994
+        },
+        {
+            "id": "6020530139383",
+            "name": "Travel & Tourism page admins",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Facebook page admins",
+                "Travel & Tourism page admins"
+            ],
+            "description": "People who are an admin of a Travel & Tourism page on Facebook",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 19193074,
+            "audience_size_upper_bound": 22571056
+        },
+        {
+            "id": "6020530156983",
+            "name": "Sports page admins",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Facebook page admins",
+                "Sports page admins"
+            ],
+            "description": "People who are an admin of a Sports page on Facebook",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 7802143,
+            "audience_size_upper_bound": 9175321
+        },
+        {
+            "id": "6020530250383",
+            "name": "Retail page admins",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Facebook page admins",
+                "Retail page admins"
+            ],
+            "description": "People who are an admin of a Retail page on Facebook",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 10841387,
+            "audience_size_upper_bound": 12749472
+        },
+        {
+            "id": "6020568271383",
+            "name": "Health & Beauty page admins",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Facebook page admins",
+                "Health & Beauty page admins"
+            ],
+            "description": "People who are an admin of a Health & Beauty page on Facebook",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 15217726,
+            "audience_size_upper_bound": 17896046
+        },
+        {
+            "id": "6020530269183",
+            "name": "Food & Restaurant page admins",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Facebook page admins",
+                "Food & Restaurant page admins"
+            ],
+            "description": "People who are an admin of a food & restaurant page on Facebook",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2039576,
+            "audience_size_upper_bound": 2398542
+        },
+        {
+            "id": "6020530280983",
+            "name": "Community & Club page admins",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Facebook page admins",
+                "Community & Club page admins"
+            ],
+            "description": "People who are an admin of a Community & Club page on Facebook",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 16430994,
+            "audience_size_upper_bound": 19322850
+        },
+        {
+            "id": "6020530281783",
+            "name": "Business page admins",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Facebook page admins",
+                "Business page admins"
+            ],
+            "description": "People who are an admin of a Business page on Facebook",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 41237737,
+            "audience_size_upper_bound": 48495579
+        },
+        {
+            "id": "6021354152983",
+            "name": "Lived in UK (Formerly Expats - UK)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in UK (Formerly Expats - UK)"
+            ],
+            "description": "People who used to live in the United Kingdom who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 5050181,
+            "audience_size_upper_bound": 5939013
+        },
+        {
+            "id": "6021354857783",
+            "name": "Lived in Australia (Formerly Expats - Australia)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Australia (Formerly Expats - Australia)"
+            ],
+            "description": "People who used to live in Australia who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1341096,
+            "audience_size_upper_bound": 1577129
+        },
+        {
+            "id": "6021354882783",
+            "name": "Lived in Portugal (Formerly Expats - Portugal)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Portugal (Formerly Expats - Portugal)"
+            ],
+            "description": "People who used to live in Portugal who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1029610,
+            "audience_size_upper_bound": 1210822
+        },
+        {
+            "id": "6022430911783",
+            "name": "Owns: Xperia Z3",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Sony",
+                "Owns: Xperia Z3"
+            ],
+            "description": "People who are likely to own a Sony Xperia Z3",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 8607,
+            "audience_size_upper_bound": 10123
+        },
+        {
+            "id": "6022788483583",
+            "name": "Frequent international travelers",
+            "type": "behaviors",
+            "path": [
+                "Travel",
+                "Frequent international travelers"
+            ],
+            "description": "People who have traveled abroad more than once in the past 6 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 574543845,
+            "audience_size_upper_bound": 675663562
+        },
+        {
+            "id": "6023287351383",
+            "name": "Lived in Estonia (Formerly Expats - Estonia)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Estonia (Formerly Expats - Estonia)"
+            ],
+            "description": "People who used to live in Estonia who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 82718,
+            "audience_size_upper_bound": 97277
+        },
+        {
+            "id": "6023287459983",
+            "name": "Lived in Norway (Formerly Expats - Norway)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Norway (Formerly Expats - Norway)"
+            ],
+            "description": "People who used to live in Norway who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 190596,
+            "audience_size_upper_bound": 224141
+        },
+        {
+            "id": "6023287455983",
+            "name": "Lived in Denmark (Formerly Expats - Denmark)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Denmark (Formerly Expats - Denmark)"
+            ],
+            "description": "People who used to live in Denmark who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 131238,
+            "audience_size_upper_bound": 154337
+        },
+        {
+            "id": "6023287438783",
+            "name": "Lived in Czech Republic (Formerly Expats - Czech Republic)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Czech Republic (Formerly Expats - Czech Republic)"
+            ],
+            "description": "People who used to live in Czech Republic who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 218844,
+            "audience_size_upper_bound": 257361
+        },
+        {
+            "id": "6023287397383",
+            "name": "Lived in Sweden (Formerly Expats - Sweden)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Sweden (Formerly Expats - Sweden)"
+            ],
+            "description": "People who used to live in Sweden who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 281784,
+            "audience_size_upper_bound": 331379
+        },
+        {
+            "id": "6023287393783",
+            "name": "Lived in Netherlands (Formerly Expats - Netherlands)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Netherlands (Formerly Expats - Netherlands)"
+            ],
+            "description": "People who used to live in The Netherlands who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 464619,
+            "audience_size_upper_bound": 546393
+        },
+        {
+            "id": "6023356562783",
+            "name": "Lived in Bangladesh (Formerly Expats - Bangladesh)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Bangladesh (Formerly Expats - Bangladesh)"
+            ],
+            "description": "People who used to live in Bangladesh who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 6116510,
+            "audience_size_upper_bound": 7193016
+        },
+        {
+            "id": "6023356926183",
+            "name": "Lived in Tanzania (Formerly Expats - Tanzania)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Tanzania (Formerly Expats - Tanzania)"
+            ],
+            "description": "People who used to live in Tanzania who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 497428,
+            "audience_size_upper_bound": 584976
+        },
+        {
+            "id": "6023356955383",
+            "name": "Lived in Nepal (Formerly Expats - Nepal)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Nepal (Formerly Expats - Nepal)"
+            ],
+            "description": "People who used to live in Nepal who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 3580801,
+            "audience_size_upper_bound": 4211023
+        },
+        {
+            "id": "6023356956983",
+            "name": "Lived in Jamaica (Formerly Expats - Jamaica)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Jamaica (Formerly Expats - Jamaica)"
+            ],
+            "description": "People who used to live in Jamaica who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 689562,
+            "audience_size_upper_bound": 810925
+        },
+        {
+            "id": "6023356966183",
+            "name": "Lived in Thailand (Formerly Expats - Thailand)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Thailand (Formerly Expats - Thailand)"
+            ],
+            "description": "People who used to live in Thailand who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1857331,
+            "audience_size_upper_bound": 2184222
+        },
+        {
+            "id": "6023356986383",
+            "name": "Lived in Sierra Leone (Formerly Expats - Sierra Leone)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Sierra Leone (Formerly Expats - Sierra Leone)"
+            ],
+            "description": "People who used to live in Sierra Leone who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 210994,
+            "audience_size_upper_bound": 248130
+        },
+        {
+            "id": "6023357000583",
+            "name": "Lived in Senegal (Formerly Expats - Senegal)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Senegal (Formerly Expats - Senegal)"
+            ],
+            "description": "People who used to live in Senegal who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 467488,
+            "audience_size_upper_bound": 549767
+        },
+        {
+            "id": "6023422105983",
+            "name": "Lived in Ivory Coast (Formerly Expats - Ivory Coast)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Ivory Coast (Formerly Expats - Ivory Coast)"
+            ],
+            "description": "People who used to live in C\u00f4te d'Ivoire who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 580143,
+            "audience_size_upper_bound": 682249
+        },
+        {
+            "id": "6023460563383",
+            "name": "Owns: Alcatel",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Owns: Alcatel"
+            ],
+            "description": "People who are likely to own an Alcatel mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4272587,
+            "audience_size_upper_bound": 5024563
+        },
+        {
+            "id": "6023460572383",
+            "name": "Owns: ZTE",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Owns: ZTE"
+            ],
+            "description": "People who are likely to own a ZTE mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 8781174,
+            "audience_size_upper_bound": 10326661
+        },
+        {
+            "id": "6023460579583",
+            "name": "Owns: Tecno",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Owns: Tecno"
+            ],
+            "description": "People who are likely to own a Tecno mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 73229731,
+            "audience_size_upper_bound": 86118164
+        },
+        {
+            "id": "6023460590583",
+            "name": "Owns: Cherry Mobile",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Owns: Cherry Mobile"
+            ],
+            "description": "People who are likely to own a Cherry mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 257437,
+            "audience_size_upper_bound": 302747
+        },
+        {
+            "id": "6023516315983",
+            "name": "Lived in Sri Lanka (Formerly Expats - Sri Lanka)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Sri Lanka (Formerly Expats - Sri Lanka)"
+            ],
+            "description": "People who used to live in Sri Lanka who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1032380,
+            "audience_size_upper_bound": 1214080
+        },
+        {
+            "id": "6023516338783",
+            "name": "Lived in Morocco (Formerly Expats - Morocco)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Morocco (Formerly Expats - Morocco)"
+            ],
+            "description": "People who used to live in Morocco who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2011680,
+            "audience_size_upper_bound": 2365736
+        },
+        {
+            "id": "6023516430783",
+            "name": "Lived in UAE (Formerly Expats - UAE)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in UAE (Formerly Expats - UAE)"
+            ],
+            "description": "People who used to live in the United Arab Emirates who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1677249,
+            "audience_size_upper_bound": 1972445
+        },
+        {
+            "id": "6023516368383",
+            "name": "Lived in New Zealand (Formerly Expats - New Zealand)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in New Zealand (Formerly Expats - New Zealand)"
+            ],
+            "description": "People who used to live in New Zealand who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1176170,
+            "audience_size_upper_bound": 1383176
+        },
+        {
+            "id": "6023516373983",
+            "name": "Lived in Congo DRC (Formerly Expats - Congo DRC)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Congo DRC (Formerly Expats - Congo DRC)"
+            ],
+            "description": "People who used to live in Democratic Republic of the Congo who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2245982,
+            "audience_size_upper_bound": 2641275
+        },
+        {
+            "id": "6023516403783",
+            "name": "Lived in Singapore (Formerly Expats - Singapore)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Singapore (Formerly Expats - Singapore)"
+            ],
+            "description": "People who used to live in Singapore who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 79495,
+            "audience_size_upper_bound": 93487
+        },
+        {
+            "id": "6023620475783",
+            "name": "Lived in United States (Formerly Expats - United States)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in United States (Formerly Expats - United States)"
+            ],
+            "description": "People who used to live in the United States who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 18590312,
+            "audience_size_upper_bound": 21862207
+        },
+        {
+            "id": "6023675997383",
+            "name": "Lived in Austria (Formerly Expats - Austria)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Austria (Formerly Expats - Austria)"
+            ],
+            "description": "People who used to live in Austria who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 160181,
+            "audience_size_upper_bound": 188374
+        },
+        {
+            "id": "6023676002183",
+            "name": "Lived in Cyprus (Formerly Expats - Cyprus)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Cyprus (Formerly Expats - Cyprus)"
+            ],
+            "description": "People who used to live in Cyprus who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 85208,
+            "audience_size_upper_bound": 100205
+        },
+        {
+            "id": "6068209522983",
+            "name": "Lived in Finland (Formerly Expats - Finland)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Finland (Formerly Expats - Finland)"
+            ],
+            "description": "People who used to live in Finland who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 112176,
+            "audience_size_upper_bound": 131920
+        },
+        {
+            "id": "6023676017583",
+            "name": "Lived in Greece (Formerly Expats - Greece)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Greece (Formerly Expats - Greece)"
+            ],
+            "description": "People who used to live in Greece who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 5941,
+            "audience_size_upper_bound": 6987
+        },
+        {
+            "id": "6023676022783",
+            "name": "Lived in Hong Kong (Formerly Expats - Hong Kong)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Hong Kong (Formerly Expats - Hong Kong)"
+            ],
+            "description": "People who used to live in Hong Kong who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 734270,
+            "audience_size_upper_bound": 863502
+        },
+        {
+            "id": "6023676028783",
+            "name": "Lived in Japan (Formerly Expats - Japan)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Japan (Formerly Expats - Japan)"
+            ],
+            "description": "People who used to live in Japan who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1649072,
+            "audience_size_upper_bound": 1939309
+        },
+        {
+            "id": "6068613839383",
+            "name": "Lived in Latvia (Formerly Expats - Latvia)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Latvia (Formerly Expats - Latvia)"
+            ],
+            "description": "People who used to live in Latvia who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 156364,
+            "audience_size_upper_bound": 183885
+        },
+        {
+            "id": "6023676039183",
+            "name": "Lived in Lithuania (Formerly Expats - Lithuania)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Lithuania (Formerly Expats - Lithuania)"
+            ],
+            "description": "People who used to live in Lithuania who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 246919,
+            "audience_size_upper_bound": 290377
+        },
+        {
+            "id": "6023676044383",
+            "name": "Lived in Luxembourg (Formerly Expats - Luxembourg)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Luxembourg (Formerly Expats - Luxembourg)"
+            ],
+            "description": "People who used to live in Luxembourg who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 33147,
+            "audience_size_upper_bound": 38982
+        },
+        {
+            "id": "6023676045583",
+            "name": "Lived in Malta (Formerly Expats - Malta)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Malta (Formerly Expats - Malta)"
+            ],
+            "description": "People who used to live in Malta who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 38588,
+            "audience_size_upper_bound": 45380
+        },
+        {
+            "id": "6023676048183",
+            "name": "Lived in Monaco (Formerly Expats - Monaco)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Monaco (Formerly Expats - Monaco)"
+            ],
+            "description": "People who used to live in Monaco who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 26498,
+            "audience_size_upper_bound": 31162
+        },
+        {
+            "id": "6023676055383",
+            "name": "Lived in Slovakia (Formerly Expats - Slovakia)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Slovakia (Formerly Expats - Slovakia)"
+            ],
+            "description": "People who used to live in Slovakia who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 250369,
+            "audience_size_upper_bound": 294434
+        },
+        {
+            "id": "6023676060183",
+            "name": "Lived in Slovenia (Formerly Expats - Slovenia)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Slovenia (Formerly Expats - Slovenia)"
+            ],
+            "description": "People who used to live in Slovenia who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 60994,
+            "audience_size_upper_bound": 71729
+        },
+        {
+            "id": "6023676072183",
+            "name": "Lived in Mexico (Formerly Expats - Mexico)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Mexico (Formerly Expats - Mexico)"
+            ],
+            "description": "People who used to live in Mexico who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 11352387,
+            "audience_size_upper_bound": 13350408
+        },
+        {
+            "id": "6025000826583",
+            "name": "Lived in Argentina (Formerly Expats - Argentina)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Argentina (Formerly Expats - Argentina)"
+            ],
+            "description": "People who used to live in Argentina who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1332813,
+            "audience_size_upper_bound": 1567389
+        },
+        {
+            "id": "6025000823583",
+            "name": "Lived in Israel (Formerly Expats - Israel)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Israel (Formerly Expats - Israel)"
+            ],
+            "description": "People who used to live in Israel who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 568770,
+            "audience_size_upper_bound": 668874
+        },
+        {
+            "id": "6025000815983",
+            "name": "Lived in Russia (Formerly Expats - Russia)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Russia (Formerly Expats - Russia)"
+            ],
+            "description": "People who used to live in Russia who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1411950,
+            "audience_size_upper_bound": 1660454
+        },
+        {
+            "id": "6025000813183",
+            "name": "Lived in Saudi Arabia (Formerly Expats - Saudi Arabia)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Saudi Arabia (Formerly Expats - Saudi Arabia)"
+            ],
+            "description": "People who used to live in the Kingdom of Saudi Arabia who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1160330,
+            "audience_size_upper_bound": 1364549
+        },
+        {
+            "id": "6025054896983",
+            "name": "Lived in Chile (Formerly Expats - Chile)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Chile (Formerly Expats - Chile)"
+            ],
+            "description": "People who used to live in Chile who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 578753,
+            "audience_size_upper_bound": 680614
+        },
+        {
+            "id": "6025670492783",
+            "name": "Lived in Rwanda (Formerly Expats - Rwanda)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Rwanda (Formerly Expats - Rwanda)"
+            ],
+            "description": "People who used to live in Rwanda who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 138261,
+            "audience_size_upper_bound": 162596
+        },
+        {
+            "id": "6025753961783",
+            "name": "Family of those who live abroad",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Family of those who live abroad"
+            ],
+            "description": "Family of people who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 32318301,
+            "audience_size_upper_bound": 38006323
+        },
+        {
+            "id": "6026404871583",
+            "name": "Lived in Venezuela (Formerly Expats - Venezuela)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Venezuela (Formerly Expats - Venezuela)"
+            ],
+            "description": "People who used to live in Venezuela who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 5068187,
+            "audience_size_upper_bound": 5960188
+        },
+        {
+            "id": "6026660740983",
+            "name": "Owns: Galaxy S6",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy S6"
+            ],
+            "description": "People who are likely to own a Samsung Galaxy S6 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1174500,
+            "audience_size_upper_bound": 1381212
+        },
+        {
+            "id": "6027147160983",
+            "name": "Lived in Malaysia (Formerly Expats - Malaysia)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Malaysia (Formerly Expats - Malaysia)"
+            ],
+            "description": "People who used to live in Malaysia who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1905912,
+            "audience_size_upper_bound": 2241353
+        },
+        {
+            "id": "6027148962983",
+            "name": "Lived in Romania (Formerly Expats - Romania)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Romania (Formerly Expats - Romania)"
+            ],
+            "description": "People who used to live in Romania who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1804046,
+            "audience_size_upper_bound": 2121559
+        },
+        {
+            "id": "6027148973583",
+            "name": "Lived in South Korea (Formerly Expats - South Korea)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in South Korea (Formerly Expats - South Korea)"
+            ],
+            "description": "People who used to live in South Korea who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 3720447,
+            "audience_size_upper_bound": 4375246
+        },
+        {
+            "id": "6027149004983",
+            "name": "Lived in Serbia (Formerly Expats - Serbia)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Serbia (Formerly Expats - Serbia)"
+            ],
+            "description": "People who used to live in Serbia who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 616210,
+            "audience_size_upper_bound": 724663
+        },
+        {
+            "id": "6027149006383",
+            "name": "Lived in Vietnam (Formerly Expats - Vietnam)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Vietnam (Formerly Expats - Vietnam)"
+            ],
+            "description": "People who used to live in Vietnam who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4675949,
+            "audience_size_upper_bound": 5498917
+        },
+        {
+            "id": "6027149008183",
+            "name": "Lived in Peru (Formerly Expats - Peru)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Peru (Formerly Expats - Peru)"
+            ],
+            "description": "People who used to live in Peru who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1761721,
+            "audience_size_upper_bound": 2071784
+        },
+        {
+            "id": "6028974370383",
+            "name": "People who prefer high-value goods in India",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "India",
+                "People who prefer high-value goods in India"
+            ],
+            "description": "Aligned to (A) group, people in India who are predicted to prefer high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 86640832,
+            "audience_size_upper_bound": 101889619
+        },
+        {
+            "id": "6028974351183",
+            "name": "People who prefer mid and high-value goods in India",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "India",
+                "People who prefer mid and high-value goods in India"
+            ],
+            "description": "Aligned to (A+B) group, people in India who are predicted to prefer mid-high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 143623795,
+            "audience_size_upper_bound": 168901583
+        },
+        {
+            "id": "6029587661983",
+            "name": "Facebook access (OS): Windows 10",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Operating System Used",
+                "Facebook access (OS): Windows 10"
+            ],
+            "description": "People who primarily access Facebook using Windows 10",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 75480,
+            "audience_size_upper_bound": 88765
+        },
+        {
+            "id": "6031259562783",
+            "name": "Owns: iPhone 6S",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Owns: iPhone 6S"
+            ],
+            "description": "People who are likely to own an iPhone 6S mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4860829,
+            "audience_size_upper_bound": 5716335
+        },
+        {
+            "id": "6031259590183",
+            "name": "Owns: iPhone 6S Plus",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Owns: iPhone 6S Plus"
+            ],
+            "description": "People who are likely to own an iPhone 6S Plus mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 3738322,
+            "audience_size_upper_bound": 4396267
+        },
+        {
+            "id": "6041891177783",
+            "name": "New Page Admins",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Facebook page admins",
+                "New Page Admins"
+            ],
+            "description": "People who have become Facebook Page admins within the past 2 weeks.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 297570196,
+            "audience_size_upper_bound": 349942551
+        },
+        {
+            "id": "6042330550783",
+            "name": "Owns: Galaxy Note 5",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy Note 5"
+            ],
+            "description": "People who are likely to own a Samsung Galaxy Note 5 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 439721,
+            "audience_size_upper_bound": 517113
+        },
+        {
+            "id": "6043341245183",
+            "name": "Owns: LG V10",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "LG",
+                "Owns: LG V10"
+            ],
+            "description": "People who are likely to own an LG V10 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 16966,
+            "audience_size_upper_bound": 19953
+        },
+        {
+            "id": "6043702804583",
+            "name": "Lived in Belgium (Formerly Expats - Belgium)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Belgium (Formerly Expats - Belgium)"
+            ],
+            "description": "People who used to live in Belgium who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 369522,
+            "audience_size_upper_bound": 434558
+        },
+        {
+            "id": "6043523344783",
+            "name": "Owns: Galaxy S7",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy S7"
+            ],
+            "description": "People who are likely to own a Samsung Galaxy S7  mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1854221,
+            "audience_size_upper_bound": 2180564
+        },
+        {
+            "id": "6043522870783",
+            "name": "Owns: Galaxy S7 Edge",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy S7 Edge"
+            ],
+            "description": "People who are likely to own a Samsung Galaxy S7 Edge mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1841403,
+            "audience_size_upper_bound": 2165490
+        },
+        {
+            "id": "6046095968983",
+            "name": "People who prefer high-value goods in South Africa",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "South Africa",
+                "People who prefer high-value goods in South Africa"
+            ],
+            "description": "Aligned to (8,9,10) LSM group, people in South Africa who are predicted to prefer high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2457134,
+            "audience_size_upper_bound": 2889590
+        },
+        {
+            "id": "6046096047583",
+            "name": "People who prefer mid and high-value goods in South Africa",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "South Africa",
+                "People who prefer mid and high-value goods in South Africa"
+            ],
+            "description": "Aligned to (5,6,7) LSM group, people in South Africa who are predicted to prefer mid-high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4046375,
+            "audience_size_upper_bound": 4758537
+        },
+        {
+            "id": "6046096201583",
+            "name": "People who prefer high-value goods in Brazil",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Brazil",
+                "People who prefer high-value goods in Brazil"
+            ],
+            "description": "Aligned to (A+B) group, people in Brazil who are predicted to prefer high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 12917290,
+            "audience_size_upper_bound": 15190734
+        },
+        {
+            "id": "6054947014783",
+            "name": "Owns: iPhone SE",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Owns: iPhone SE"
+            ],
+            "description": "People who likely to own an iPhone SE mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 10715668,
+            "audience_size_upper_bound": 12601626
+        },
+        {
+            "id": "6047219032183",
+            "name": "Lived in Zambia (Formerly Expats - Zambia)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Zambia (Formerly Expats - Zambia)"
+            ],
+            "description": "People who used to live in Zambia who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 224816,
+            "audience_size_upper_bound": 264384
+        },
+        {
+            "id": "6055133998183",
+            "name": "Facebook access (browser): Microsoft Edge",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Internet Browser Used",
+                "Facebook access (browser): Microsoft Edge"
+            ],
+            "description": "People who primarily access Facebook using Microsoft Edge",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 20286937,
+            "audience_size_upper_bound": 23857438
+        },
+        {
+            "id": "6056265200983",
+            "name": "Owns: Oppo",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Owns: Oppo"
+            ],
+            "description": "People who are likely to own an Oppo mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 185731363,
+            "audience_size_upper_bound": 218420084
+        },
+        {
+            "id": "6056265212183",
+            "name": "Owns: VIVO devices",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Owns: VIVO devices"
+            ],
+            "description": "people who are likely to own VIVO mobile devices",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 166315020,
+            "audience_size_upper_bound": 195586464
+        },
+        {
+            "id": "6058034528983",
+            "name": "Owns: Galaxy Note 7",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy Note 7"
+            ],
+            "description": "People who are likely to own a Samsung Galaxy Note 7  mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2017,
+            "audience_size_upper_bound": 2373
+        },
+        {
+            "id": "6059793664583",
+            "name": "Lived in Honduras (Formerly Expats - Honduras)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Honduras (Formerly Expats - Honduras)"
+            ],
+            "description": "People who used to live in Honduras who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1443765,
+            "audience_size_upper_bound": 1697868
+        },
+        {
+            "id": "6060616578383",
+            "name": "Owns: iPhone 7",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Owns: iPhone 7"
+            ],
+            "description": "People who are likely to own an iPhone 7 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 8291338,
+            "audience_size_upper_bound": 9750614
+        },
+        {
+            "id": "6060616598183",
+            "name": "Owns: iPhone 7 Plus",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Owns: iPhone 7 Plus"
+            ],
+            "description": "People who are likely to own an iPhone 7 Plus mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 9711596,
+            "audience_size_upper_bound": 11420838
+        },
+        {
+            "id": "6061668174383",
+            "name": "Owns: Google Pixel",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Google",
+                "Owns: Google Pixel"
+            ],
+            "description": "People who are likely to own a Google Pixel mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 47704,
+            "audience_size_upper_bound": 56100
+        },
+        {
+            "id": "6063136545383",
+            "name": "Android: 360 degree media supported",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "Android: 360 degree media supported"
+            ],
+            "description": "People whose primary mobile device is Android with support for 360 degree media (photos, videos)",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1184806513,
+            "audience_size_upper_bound": 1393332460
+        },
+        {
+            "id": "6063268655983",
+            "name": "Facebook access (OS): Mac Sierra",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Operating System Used",
+                "Facebook access (OS): Mac Sierra"
+            ],
+            "description": "People who  primarily access Facebook using Mac Sierra",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2447134,
+            "audience_size_upper_bound": 2877830
+        },
+        {
+            "id": "6065048233383",
+            "name": "Android: 360 degree media not supported",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "Android: 360 degree media not supported"
+            ],
+            "description": "People whose primary mobile device is Android without support for 360 degree media (photos, videos)",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 3453161,
+            "audience_size_upper_bound": 4060918
+        },
+        {
+            "id": "6068844014183",
+            "name": "Lived in Lebanon (Formerly Expats - Lebanon)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Lebanon (Formerly Expats - Lebanon)"
+            ],
+            "description": "People who used to live in Lebanon who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 774234,
+            "audience_size_upper_bound": 910500
+        },
+        {
+            "id": "6068843912183",
+            "name": "Lived in Jordan (Formerly Expats - Jordan)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Jordan (Formerly Expats - Jordan)"
+            ],
+            "description": "People who used to live in Jordan who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 789711,
+            "audience_size_upper_bound": 928701
+        },
+        {
+            "id": "6071631541183",
+            "name": "Engaged Shoppers",
+            "type": "behaviors",
+            "path": [
+                "Purchase behavior",
+                "Engaged Shoppers"
+            ],
+            "description": "People who have clicked on the Call-to-Action button \u201cShop Now\u201d in the past week.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 614515423,
+            "audience_size_upper_bound": 722670138
+        },
+        {
+            "id": "6071248932383",
+            "name": "Lived in Algeria (Formerly Expats - Algeria)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Algeria (Formerly Expats - Algeria)"
+            ],
+            "description": "People who used to live in Algeria who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1111003,
+            "audience_size_upper_bound": 1306540
+        },
+        {
+            "id": "6071248894383",
+            "name": "Lived in Nicaragua (Formerly Expats - Nicaragua)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Nicaragua (Formerly Expats - Nicaragua)"
+            ],
+            "description": "People who used to live in Nicaragua who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 865061,
+            "audience_size_upper_bound": 1017312
+        },
+        {
+            "id": "6071248981583",
+            "name": "Lived in Kuwait (Formerly Expats - Kuwait)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Kuwait (Formerly Expats - Kuwait)"
+            ],
+            "description": "People who used to live in Kuwait who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 164052,
+            "audience_size_upper_bound": 192926
+        },
+        {
+            "id": "6071249058983",
+            "name": "Lived in Qatar (Formerly Expats - Qatar)",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Lived in Qatar (Formerly Expats - Qatar)"
+            ],
+            "description": "People who used to live in Qatar who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 123613,
+            "audience_size_upper_bound": 145370
+        },
+        {
+            "id": "6071590219583",
+            "name": "Owns: Gionee",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Owns: Gionee"
+            ],
+            "description": "People who are likely to own a Gionee mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1409437,
+            "audience_size_upper_bound": 1657498
+        },
+        {
+            "id": "6075237200983",
+            "name": "Owns: Galaxy S8",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy S8"
+            ],
+            "description": "People who are likely to own a Galaxy S8 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 3519366,
+            "audience_size_upper_bound": 4138775
+        },
+        {
+            "id": "6075237226583",
+            "name": "Owns: Galaxy S8+",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy S8+"
+            ],
+            "description": "People who are likely to own a Galaxy S8+ mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2190331,
+            "audience_size_upper_bound": 2575830
+        },
+        {
+            "id": "6080562616983",
+            "name": "Soccer fans (high content engagement)",
+            "type": "behaviors",
+            "path": [
+                "Soccer",
+                "Soccer fans (high content engagement)"
+            ],
+            "description": "Interacted with content related to football (US soccer) 5 or more times over the past 90 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 11331017,
+            "audience_size_upper_bound": 13325276
+        },
+        {
+            "id": "6080562614783",
+            "name": "Soccer fans (moderate content engagement)",
+            "type": "behaviors",
+            "path": [
+                "Soccer",
+                "Soccer fans (moderate content engagement)"
+            ],
+            "description": "Interacted with content related to football (US soccer) and sports less than 5 times over the past 90 days.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 103654207,
+            "audience_size_upper_bound": 121897348
+        },
+        {
+            "id": "6082317210583",
+            "name": "People who prefer high-value goods in UAE",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "UAE",
+                "People who prefer high-value goods in UAE"
+            ],
+            "description": "Aligned to (A) group, people in UAE who are predicted to prefer high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 58113,
+            "audience_size_upper_bound": 68342
+        },
+        {
+            "id": "6082317378383",
+            "name": "People who prefer mid and high-value goods in UAE",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "UAE",
+                "People who prefer mid and high-value goods in UAE"
+            ],
+            "description": "Aligned to (A+B) group, people in UAE who are predicted to prefer mid-high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 332269,
+            "audience_size_upper_bound": 390749
+        },
+        {
+            "id": "6082317392983",
+            "name": "People who prefer high-value goods in Kingdom of Saudi Arabia",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Kingdom of Saudi Arabia",
+                "People who prefer high-value goods in Kingdom of Saudi Arabia"
+            ],
+            "description": "Aligned to (A) group, people in Kingdom of Saudi Arabia who are predicted to prefer high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1093643,
+            "audience_size_upper_bound": 1286125
+        },
+        {
+            "id": "6082317405583",
+            "name": "People who prefer mid and high-value goods in Kingdom of Saudi Arabia",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Kingdom of Saudi Arabia",
+                "People who prefer mid and high-value goods in Kingdom of Saudi Arabia"
+            ],
+            "description": "Aligned to (A+B) group, people in Kingdom of Saudi Arabia who are predicted to prefer mid-high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2288883,
+            "audience_size_upper_bound": 2691727
+        },
+        {
+            "id": "6083036245383",
+            "name": "Owns: Galaxy Note 8",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy Note 8"
+            ],
+            "description": "People who are likely to own a Samsung Galaxy Note 8 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2557885,
+            "audience_size_upper_bound": 3008073
+        },
+        {
+            "id": "6085888747383",
+            "name": "People who prefer high-value goods in Mexico",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Mexico",
+                "People who prefer high-value goods in Mexico"
+            ],
+            "description": "Aligned to (AB) group, people in Mexico who are predicted to prefer high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4821553,
+            "audience_size_upper_bound": 5670147
+        },
+        {
+            "id": "6085888777383",
+            "name": "People who prefer mid and high-value goods in Mexico",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Mexico",
+                "People who prefer mid and high-value goods in Mexico"
+            ],
+            "description": "Aligned to (ABC+) group, people in Mexico who are predicted to prefer mid-high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 15199994,
+            "audience_size_upper_bound": 17875193
+        },
+        {
+            "id": "6086568164383",
+            "name": "Marketing API developers (last 90 days)",
+            "type": "behaviors",
+            "path": [
+                "More Categories",
+                "Marketing API developers (last 90 days)"
+            ],
+            "description": "App developers that have used Facebook Marketing API in the last 90 days.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 655,
+            "audience_size_upper_bound": 771
+        },
+        {
+            "id": "6086326043983",
+            "name": "People who prefer high-value goods in Chile",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Chile",
+                "People who prefer high-value goods in Chile"
+            ],
+            "description": "Aligned to (ABC1) group, people in Chile who are predicted to prefer high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 738294,
+            "audience_size_upper_bound": 868234
+        },
+        {
+            "id": "6086326068183",
+            "name": "People who prefer mid and high-value goods in Chile",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Chile",
+                "People who prefer mid and high-value goods in Chile"
+            ],
+            "description": "Aligned to (A+B) group, people in Chile who are predicted to prefer mid-high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2177745,
+            "audience_size_upper_bound": 2561029
+        },
+        {
+            "id": "6086326072983",
+            "name": "People who prefer high-value goods in Argentina",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Argentina",
+                "People who prefer high-value goods in Argentina"
+            ],
+            "description": "Aligned to (ABC1) group, people in Argentina who are predicted to prefer high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 936748,
+            "audience_size_upper_bound": 1101616
+        },
+        {
+            "id": "6086326078383",
+            "name": "People who prefer mid and high-value goods in Argentina",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Argentina",
+                "People who prefer mid and high-value goods in Argentina"
+            ],
+            "description": "Aligned to (ABC1+C2) group, people in Argentina who are predicted to prefer mid-high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 3461835,
+            "audience_size_upper_bound": 4071119
+        },
+        {
+            "id": "6089632523783",
+            "name": "People who prefer high-value goods in Turkey",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Turkey",
+                "People who prefer high-value goods in Turkey"
+            ],
+            "description": "Aligned to (A) SES group, people in Turkey who are predicted to prefer high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1665727,
+            "audience_size_upper_bound": 1958896
+        },
+        {
+            "id": "6089632452783",
+            "name": "People who prefer mid and high-value goods in Turkey",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Turkey",
+                "People who prefer mid and high-value goods in Turkey"
+            ],
+            "description": "Aligned to (A+B) SES group, People in Turkey who are predicted to prefer mid-high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 6885106,
+            "audience_size_upper_bound": 8096885
+        },
+        {
+            "id": "6091658707783",
+            "name": "Uses a mobile device (less than 1 month)",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User/Device Use Time",
+                "Uses a mobile device (less than 1 month)"
+            ],
+            "description": "People who are likely to have used a mobile device for less than 1 month",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 131815898,
+            "audience_size_upper_bound": 155015497
+        },
+        {
+            "id": "6091658708183",
+            "name": "Uses a mobile device (1-3 months)",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User/Device Use Time",
+                "Uses a mobile device (1-3 months)"
+            ],
+            "description": "People who are likely to have used a mobile device for 1-3 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 167506183,
+            "audience_size_upper_bound": 196987272
+        },
+        {
+            "id": "6091658512983",
+            "name": "Uses a mobile device (4-6 months)",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User/Device Use Time",
+                "Uses a mobile device (4-6 months)"
+            ],
+            "description": "People who are likely to have used a mobile device for 4-6 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 175274503,
+            "audience_size_upper_bound": 206122816
+        },
+        {
+            "id": "6091658512183",
+            "name": "Uses a mobile device (7-9 months)",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User/Device Use Time",
+                "Uses a mobile device (7-9 months)"
+            ],
+            "description": "People who are likely to have used a mobile device for 7-9 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 151332701,
+            "audience_size_upper_bound": 177967257
+        },
+        {
+            "id": "6091658540583",
+            "name": "Uses a mobile device (10-12 months)",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User/Device Use Time",
+                "Uses a mobile device (10-12 months)"
+            ],
+            "description": "People who are likely to have used a mobile device for 10-12 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 132806516,
+            "audience_size_upper_bound": 156180463
+        },
+        {
+            "id": "6091658562383",
+            "name": "Uses a mobile device (13-18 months)",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User/Device Use Time",
+                "Uses a mobile device (13-18 months)"
+            ],
+            "description": "People who are likely to have used a mobile device for 13-18 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 222991562,
+            "audience_size_upper_bound": 262238077
+        },
+        {
+            "id": "6091658651583",
+            "name": "Uses a mobile device (19-24 months)",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User/Device Use Time",
+                "Uses a mobile device (19-24 months)"
+            ],
+            "description": "People who are likely to have used a mobile device for 19-24 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 185624279,
+            "audience_size_upper_bound": 218294153
+        },
+        {
+            "id": "6091658683183",
+            "name": "Uses a mobile device (25 months+)",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User/Device Use Time",
+                "Uses a mobile device (25 months+)"
+            ],
+            "description": "People who are likely to have used a mobile device for 25+ months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 558997577,
+            "audience_size_upper_bound": 657381151
+        },
+        {
+            "id": "6092145447383",
+            "name": "People who prefer high-value goods in Indonesia",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Indonesia",
+                "People who prefer high-value goods in Indonesia"
+            ],
+            "description": "Aligned to (Upper I) group, people in Indonesia who are predicted to prefer high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 16484332,
+            "audience_size_upper_bound": 19385575
+        },
+        {
+            "id": "6092512412783",
+            "name": "Facebook access (mobile): iPhone 8",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Facebook access (mobile): iPhone 8"
+            ],
+            "description": "People who are likely to own an iPhone 8 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 6731370,
+            "audience_size_upper_bound": 7916092
+        },
+        {
+            "id": "6092512424583",
+            "name": "Facebook access (mobile): iPhone 8 Plus",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Facebook access (mobile): iPhone 8 Plus"
+            ],
+            "description": "People who are likely to own an iPhone 8 Plus mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 9159975,
+            "audience_size_upper_bound": 10772131
+        },
+        {
+            "id": "6092512462983",
+            "name": "Facebook access (mobile): iPhone X",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Facebook access (mobile): iPhone X"
+            ],
+            "description": "People who are likely to own an iPhone X mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 8243390,
+            "audience_size_upper_bound": 9694227
+        },
+        {
+            "id": "6100052630783",
+            "name": "Interested in Upcoming Events",
+            "type": "behaviors",
+            "path": [
+                "More Categories",
+                "Interested in Upcoming Events"
+            ],
+            "description": "People who have expressed interest in attending an upcoming Facebook event.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 6903816,
+            "audience_size_upper_bound": 8118888
+        },
+        {
+            "id": "6100406737783",
+            "name": "People who prefer high-value goods in Pakistan",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Pakistan",
+                "People who prefer high-value goods in Pakistan"
+            ],
+            "description": "Aligned to (A) SEC group, people in Pakistan who are predicted to prefer high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1417511,
+            "audience_size_upper_bound": 1666994
+        },
+        {
+            "id": "6100407062383",
+            "name": "People who prefer mid and high-value goods in Pakistan",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Pakistan",
+                "People who prefer mid and high-value goods in Pakistan"
+            ],
+            "description": "Aligned to (A+B) SEC group, people in Pakistan who are predicted to prefer mid-high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 7254298,
+            "audience_size_upper_bound": 8531055
+        },
+        {
+            "id": "6100407234583",
+            "name": "People who prefer mid and high-value goods in Malaysia",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Malaysia",
+                "People who prefer mid and high-value goods in Malaysia"
+            ],
+            "description": "Aligned to (AB+C1) SEC group, people in Malaysia who are predicted to prefer mid-high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 6092044,
+            "audience_size_upper_bound": 7164244
+        },
+        {
+            "id": "6100407132383",
+            "name": "People who prefer high-value goods in Malaysia",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Malaysia",
+                "People who prefer high-value goods in Malaysia"
+            ],
+            "description": "Aligned to (AB) SEC group, people in Malaysia who are predicted to prefer high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2317277,
+            "audience_size_upper_bound": 2725118
+        },
+        {
+            "id": "6106223987983",
+            "name": "Owns: Galaxy S9",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy S9"
+            ],
+            "description": "People who are likely to own a Galaxy S9 mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4002274,
+            "audience_size_upper_bound": 4706675
+        },
+        {
+            "id": "6106224431383",
+            "name": "Owns: Galaxy S9+",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Samsung",
+                "Owns: Galaxy S9+"
+            ],
+            "description": "People who are likely to own a Galaxy S9+ mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 3699036,
+            "audience_size_upper_bound": 4350067
+        },
+        {
+            "id": "6106805412383",
+            "name": "Owns: OnePlus",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "Owns: OnePlus"
+            ],
+            "description": "People who are likely to own a OnePlus mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 17840261,
+            "audience_size_upper_bound": 20980148
+        },
+        {
+            "id": "6110446593183",
+            "name": "People  in Indonesia who prefer mid and high-value goods",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Indonesia",
+                "People  in Indonesia who prefer mid and high-value goods"
+            ],
+            "description": "Aligned to (Upper I, Upper II and Middle I) group, people in Indonesia who are predicted to prefer high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 38729711,
+            "audience_size_upper_bound": 45546141
+        },
+        {
+            "id": "6110813675983",
+            "name": "People in Brazil who prefer mid and high-value goods",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Brazil",
+                "People in Brazil who prefer mid and high-value goods"
+            ],
+            "description": "Aligned to (A+B+C) group, people in Brazil who are predicted to prefer mid and high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 31388686,
+            "audience_size_upper_bound": 36913095
+        },
+        {
+            "id": "6110633547383",
+            "name": "People who prefer high-value goods in Philippines",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Philippines",
+                "People who prefer high-value goods in Philippines"
+            ],
+            "description": "Aligned to (A) group, people in Philippines who are predicted to prefer high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 5908428,
+            "audience_size_upper_bound": 6948312
+        },
+        {
+            "id": "6110636171983",
+            "name": "People who prefer mid and high-value goods in Philippines",
+            "type": "behaviors",
+            "path": [
+                "Consumer Classification",
+                "Philippines",
+                "People who prefer mid and high-value goods in Philippines"
+            ],
+            "description": "Aligned to (A+B) group, people in Philippines who are predicted to prefer mid-high-value goods",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 26309109,
+            "audience_size_upper_bound": 30939513
+        },
+        {
+            "id": "6120699687383",
+            "name": "Facebook access (mobile): iPhone XS",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Facebook access (mobile): iPhone XS"
+            ],
+            "description": "People who are likely to own an iPhone XS mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4795695,
+            "audience_size_upper_bound": 5639738
+        },
+        {
+            "id": "6120699721983",
+            "name": "Facebook access (mobile): iPhone XS Max",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Facebook access (mobile): iPhone XS Max"
+            ],
+            "description": "People who are likely to own an iPhone XS Max mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 7155647,
+            "audience_size_upper_bound": 8415041
+        },
+        {
+            "id": "6120699725783",
+            "name": "Facebook access (mobile): iPhone XR",
+            "type": "behaviors",
+            "path": [
+                "Mobile Device User",
+                "All Mobile Devices by Brand",
+                "Apple",
+                "Facebook access (mobile): iPhone XR"
+            ],
+            "description": "People who are likely to own an iPhone XR mobile device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 15644556,
+            "audience_size_upper_bound": 18397998
+        },
+        {
+            "id": "6202657388783",
+            "name": "People who have visited Facebook Gaming",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "People who have visited Facebook Gaming"
+            ],
+            "description": "People who have recently accessed Facebook Gaming to watch videos, view posts, access tournaments or play games.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 14891717,
+            "audience_size_upper_bound": 17512660
+        },
+        {
+            "id": "6203619619383",
+            "name": "Friends of Soccer fans",
+            "type": "behaviors",
+            "path": [
+                "Soccer",
+                "Friends of Soccer fans"
+            ],
+            "description": "Friends of anyone that is a moderately or highly engaged football (US soccer) fan. Excludes people that are already football fans.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1528005306,
+            "audience_size_upper_bound": 1796934241
+        },
+        {
+            "id": "6203619967383",
+            "name": "Friends of those who live abroad",
+            "type": "behaviors",
+            "path": [
+                "Expats",
+                "Friends of those who live abroad"
+            ],
+            "description": "Friends of people who now live abroad",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1680832522,
+            "audience_size_upper_bound": 1976659046
+        },
+        {
+            "id": "6297846662583",
+            "name": "Instagram Business Profile Admins",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Instagram Business Profile Admins"
+            ],
+            "description": "People who are an administrator of an Instagram business profile",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 49545886,
+            "audience_size_upper_bound": 58265963
+        },
+        {
+            "id": "6273196847983",
+            "name": "New Active Business (< 12 months)",
+            "type": "behaviors",
+            "path": [
+                "Digital Activities",
+                "New Active Business (< 12 months)"
+            ],
+            "description": "Admins of engaged businesses that were created in the last 12 months.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 13820289,
+            "audience_size_upper_bound": 16252660
+        },
+        {
+            "id": "6273108079183",
+            "name": "New Active Business (< 6 months)",
+            "type": "behaviors",
+            "path": [
+                "Digital Activities",
+                "New Active Business (< 6 months)"
+            ],
+            "description": "Admins of engaged businesses that were created in the last 6 months.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 8874056,
+            "audience_size_upper_bound": 10435890
+        },
+        {
+            "id": "6273108107383",
+            "name": "New Active Business (< 24 months)",
+            "type": "behaviors",
+            "path": [
+                "Digital Activities",
+                "New Active Business (< 24 months)"
+            ],
+            "description": "Admins of engaged businesses that were created in the last 24 months.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 21912840,
+            "audience_size_upper_bound": 25769500
+        },
+        {
+            "id": "6320095608983",
+            "name": "Recently Detected Devices",
+            "type": "behaviors",
+            "path": [
+                "Behaviors",
+                "Mobile Device User",
+                "All Mobile Devices by Operating System",
+                "Facebook access (mobile)",
+                "Recently Detected Devices"
+            ],
+            "description": "Users who have recently connected to Facebook on a new smartphone device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 661378883,
+            "audience_size_upper_bound": 777781567
+        },
+        {
+            "id": "6320095650783",
+            "name": "Recently Detected Iphone 14 Devices",
+            "type": "behaviors",
+            "path": [
+                "Behaviors",
+                "Mobile Device User",
+                "All Mobile Devices by Operating System",
+                "Facebook access (mobile)",
+                "Recently Detected Iphone 14 Devices"
+            ],
+            "description": "Users who have recently connected to Facebook on an iPhone 14 device",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 15704022,
+            "audience_size_upper_bound": 18467931
+        },
+        {
+            "id": "6378518542983",
+            "name": "All creators",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "All creators"
+            ],
+            "description": "People who are creators on Facebook and Instagram.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 14644108,
+            "audience_size_upper_bound": 17221472
+        },
+        {
+            "id": "6378552460983",
+            "name": "Internet personality creators",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Internet personality creators"
+            ],
+            "description": "People who are internet personality creators on Facebook and Instagram.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 3598839,
+            "audience_size_upper_bound": 4232235
+        },
+        {
+            "id": "6378532690183",
+            "name": "Music creators",
+            "type": "behaviors",
+            "path": [
+                "Digital activitiesTeam",
+                "Music creators"
+            ],
+            "description": "People who are music creators on Facebook and Instagram.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1478438,
+            "audience_size_upper_bound": 1738644
+        },
+        {
+            "id": "6377407066783",
+            "name": "Food and drink creators",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Food and drink creators"
+            ],
+            "description": "People who are food and drink creators on Facebook and Instagram.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 855446,
+            "audience_size_upper_bound": 1006005
+        },
+        {
+            "id": "6377406843183",
+            "name": "Travel and outdoors creators",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Travel and outdoors creators"
+            ],
+            "description": "People who are travel and outdoors creators on Facebook and Instagram.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 491399,
+            "audience_size_upper_bound": 577886
+        },
+        {
+            "id": "6377407134383",
+            "name": "Health and wellness creators",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Health and wellness creators"
+            ],
+            "description": "People who are health and wellness creators on Facebook and Instagram.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 221691,
+            "audience_size_upper_bound": 260709
+        },
+        {
+            "id": "6377178995383",
+            "name": "Shops admins",
+            "type": "behaviors",
+            "path": [
+                "Digital Activities",
+                "Shops admins"
+            ],
+            "description": "People who manage a shop on Facebook or Instagram.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4487755,
+            "audience_size_upper_bound": 5277600
+        },
+        {
+            "id": "6356471865383",
+            "name": "Facebook Lite app users",
+            "type": "behaviors",
+            "path": [
+                "Digital activities",
+                "Facebook Lite app users"
+            ],
+            "description": "People who use the Facebook Lite app.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 273828277,
+            "audience_size_upper_bound": 322022054
+        },
+        {
+            "id": "6240205632783",
+            "name": "People who have recently engaged with Facebook Pages related to news and politics",
+            "type": "behaviors",
+            "path": [],
+            "real_time_cluster": false,
+            "description": "People who recently engaged with content on Facebook Pages that are related to news and politics, such as governments, political organizations, public policy or current events",
+            "audience_size_lower_bound": 0,
+            "audience_size_upper_bound": 0
+        },
+        {
+            "id": "6240205659183",
+            "name": "People who have recently engaged with Facebook Pages related to crime and tragedy",
+            "type": "behaviors",
+            "path": [],
+            "real_time_cluster": false,
+            "description": "People who have recently engaged with content on Facebook Pages that are related to crime and tragedy, such as natural disasters or military conflict",
+            "audience_size_lower_bound": 0,
+            "audience_size_upper_bound": 0
+        },
+        {
+            "id": "6240205649983",
+            "name": "People who have recently engaged with Facebook Pages related to social issues",
+            "type": "behaviors",
+            "path": [],
+            "real_time_cluster": false,
+            "description": "People who have recently engaged with content on Facebook Pages that are related to social issues, such as civil rights, environment policies or education policies",
+            "audience_size_lower_bound": 0,
+            "audience_size_upper_bound": 0
+        }
+    ]
+}
