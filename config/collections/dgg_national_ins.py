@@ -3,7 +3,7 @@ import shutil
 import pandas as pd
 
 # virtual machine and collection
-vm = '' # to be changed
+vm = 'badger' # to be changed
 
 collection = 'dgg_national_ins'
 
