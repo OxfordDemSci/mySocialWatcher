@@ -1,0 +1,14 @@
+# example docker-compose to deploy one or more collections on a virtual machine
+version: '3.3'
+
+services:
+
+  dgg_national_ins:
+    container_name: dgg_national_ins
+    volumes:
+      - ./dgg_national_ins:/app/in
+      - ./../../../data/mal/dgg_national_ins:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
