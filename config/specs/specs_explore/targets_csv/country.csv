@@ -1,0 +1,247 @@
+key,name,type,country_code,supports_region,supports_city
+AD,Andorra,country,AD,True,False
+AE,United Arab Emirates,country,AE,True,True
+AF,Afghanistan,country,AF,True,False
+AG,Antigua,country,AG,True,False
+AI,Anguilla,country,AI,True,False
+AL,Albania,country,AL,True,False
+AM,Armenia,country,AM,True,False
+AN,Netherlands Antilles,country,AN,False,False
+AO,Angola,country,AO,True,False
+AQ,Antarctica,country,AQ,False,False
+AR,Argentina,country,AR,True,True
+AS,American Samoa,country,AS,True,False
+AT,Austria,country,AT,True,True
+AU,Australia,country,AU,True,True
+AW,Aruba,country,AW,False,False
+AX,Aland Islands,country,AX,False,False
+AZ,Azerbaijan,country,AZ,True,False
+BA,Bosnia and Herzegovina,country,BA,False,False
+BB,Barbados,country,BB,True,False
+BD,Bangladesh,country,BD,True,False
+BE,Belgium,country,BE,True,True
+BF,Burkina Faso,country,BF,False,False
+BG,Bulgaria,country,BG,True,True
+BH,Bahrain,country,BH,True,False
+BI,Burundi,country,BI,True,False
+BJ,Benin,country,BJ,True,False
+BL,Saint Barthélemy,country,BL,False,False
+BM,Bermuda,country,BM,True,False
+BN,Brunei,country,BN,True,False
+BO,Bolivia,country,BO,True,True
+BQ,"Bonaire, Sint Eustatius and Saba",country,BQ,False,False
+BR,Brazil,country,BR,True,True
+BS,The Bahamas,country,BS,False,False
+BT,Bhutan,country,BT,True,False
+BV,Bouvet Island,country,BV,False,False
+BW,Botswana,country,BW,True,False
+BY,Belarus,country,BY,True,False
+BZ,Belize,country,BZ,True,False
+CA,Canada,country,CA,True,True
+CC,Cocos (Keeling) Islands,country,CC,False,False
+CD,Democratic Republic of the Congo,country,CD,False,False
+CF,Central African Republic,country,CF,False,False
+CG,Republic of the Congo,country,CG,True,False
+CH,Switzerland,country,CH,True,True
+CI,Côte d'Ivoire,country,CI,True,False
+CK,Cook Islands,country,CK,True,False
+CL,Chile,country,CL,True,True
+CM,Cameroon,country,CM,True,False
+CN,China,country,CN,False,False
+CO,Colombia,country,CO,True,True
+CR,Costa Rica,country,CR,True,True
+CV,Cape Verde,country,CV,True,False
+CW,Curaçao,country,CW,False,False
+CX,Christmas Island,country,CX,False,False
+CY,Cyprus,country,CY,True,False
+CZ,Czech Republic,country,CZ,True,True
+DE,Germany,country,DE,True,True
+DJ,Djibouti,country,DJ,True,False
+DK,Denmark,country,DK,True,True
+DM,Dominica,country,DM,True,False
+DO,Dominican Republic,country,DO,True,True
+DZ,Algeria,country,DZ,True,False
+EC,Ecuador,country,EC,True,True
+EE,Estonia,country,EE,True,False
+EG,Egypt,country,EG,True,True
+EH,Western Sahara,country,EH,False,False
+ER,Eritrea,country,ER,True,False
+ES,Spain,country,ES,True,True
+ET,Ethiopia,country,ET,True,False
+FI,Finland,country,FI,True,True
+FJ,Fiji,country,FJ,True,False
+FK,Falkland Islands,country,FK,False,False
+FM,Federated States of Micronesia,country,FM,False,False
+FO,Faroe Islands,country,FO,True,False
+FR,France,country,FR,True,True
+GA,Gabon,country,GA,True,False
+GB,United Kingdom,country,GB,True,True
+GD,Grenada,country,GD,True,False
+GE,Georgia,country,GE,True,False
+GF,French Guiana,country,GF,False,False
+GG,Guernsey,country,GG,True,False
+GH,Ghana,country,GH,True,False
+GI,Gibraltar,country,GI,False,False
+GL,Greenland,country,GL,True,False
+GM,The Gambia,country,GM,True,False
+GN,Guinea,country,GN,True,False
+GP,Guadeloupe,country,GP,False,False
+GQ,Equatorial Guinea,country,GQ,True,False
+GR,Greece,country,GR,True,True
+GS,South Georgia and the South Sandwich Islands,country,GS,False,False
+GT,Guatemala,country,GT,True,True
+GU,Guam,country,GU,False,False
+GW,Guinea-Bissau,country,GW,True,False
+GY,Guyana,country,GY,True,False
+HK,Hong Kong,country,HK,True,False
+HM,Heard Island and McDonald Islands,country,HM,False,False
+HN,Honduras,country,HN,True,True
+HR,Croatia,country,HR,True,False
+HT,Haiti,country,HT,True,False
+HU,Hungary,country,HU,True,True
+ID,Indonesia,country,ID,True,True
+IE,Ireland,country,IE,True,True
+IL,Israel,country,IL,True,True
+IM,Isle Of Man,country,IM,False,False
+IN,India,country,IN,True,True
+IO,British Indian Ocean Territory,country,IO,False,False
+IQ,Iraq,country,IQ,True,False
+IS,Iceland,country,IS,True,False
+IT,Italy,country,IT,True,True
+JE,Jersey,country,JE,True,False
+JM,Jamaica,country,JM,True,False
+JO,Jordan,country,JO,True,False
+JP,Japan,country,JP,True,True
+KE,Kenya,country,KE,True,False
+KG,Kyrgyzstan,country,KG,True,False
+KH,Cambodia,country,KH,True,False
+KI,Kiribati,country,KI,False,False
+KM,Comoros,country,KM,True,False
+KN,Saint Kitts and Nevis,country,KN,False,False
+KR,South Korea,country,KR,True,True
+KW,Kuwait,country,KW,True,False
+KY,Cayman Islands,country,KY,True,False
+KZ,Kazakhstan,country,KZ,True,False
+LA,Laos,country,LA,True,False
+LB,Lebanon,country,LB,True,False
+LC,St. Lucia,country,LC,False,False
+LI,Liechtenstein,country,LI,True,False
+LK,Sri Lanka,country,LK,True,False
+LR,Liberia,country,LR,True,False
+LS,Lesotho,country,LS,True,False
+LT,Lithuania,country,LT,True,False
+LU,Luxembourg,country,LU,True,False
+LV,Latvia,country,LV,True,False
+LY,Libya,country,LY,True,False
+MA,Morocco,country,MA,True,False
+MC,Monaco,country,MC,True,False
+MD,Moldova,country,MD,True,False
+ME,Montenegro,country,ME,True,False
+MF,Saint Martin,country,MF,False,False
+MG,Madagascar,country,MG,True,False
+MH,Marshall Islands,country,MH,True,False
+MK,Macedonia,country,MK,True,False
+ML,Mali,country,ML,True,False
+MM,Myanmar,country,MM,False,False
+MN,Mongolia,country,MN,True,False
+MO,Macau,country,MO,False,False
+MP,Northern Mariana Islands,country,MP,False,False
+MQ,Martinique,country,MQ,False,False
+MR,Mauritania,country,MR,True,False
+MS,Montserrat,country,MS,False,False
+MT,Malta,country,MT,True,False
+MU,Mauritius,country,MU,True,False
+MV,Maldives,country,MV,True,False
+MW,Malawi,country,MW,True,False
+MX,Mexico,country,MX,True,True
+MY,Malaysia,country,MY,True,True
+MZ,Mozambique,country,MZ,True,False
+NA,Namibia,country,NA,True,False
+NC,New Caledonia,country,NC,True,False
+NE,Niger,country,NE,True,False
+NF,Norfolk Island,country,NF,False,False
+NG,Nigeria,country,NG,True,True
+NI,Nicaragua,country,NI,True,True
+NL,Netherlands,country,NL,True,True
+NO,Norway,country,NO,True,True
+NP,Nepal,country,NP,True,False
+NR,Nauru,country,NR,True,False
+NU,Niue,country,NU,False,False
+NZ,New Zealand,country,NZ,True,True
+OM,Oman,country,OM,True,False
+PA,Panama,country,PA,True,True
+PE,Peru,country,PE,True,True
+PF,French Polynesia,country,PF,True,False
+PG,Papua New Guinea,country,PG,True,False
+PH,Philippines,country,PH,True,True
+PK,Pakistan,country,PK,True,False
+PL,Poland,country,PL,True,True
+PM,Saint Pierre and Miquelon,country,PM,False,False
+PN,Pitcairn,country,PN,False,False
+PR,Puerto Rico,country,PR,True,True
+PS,Palestine,country,PS,False,False
+PT,Portugal,country,PT,True,True
+PW,Palau,country,PW,False,False
+PY,Paraguay,country,PY,True,True
+QA,Qatar,country,QA,True,False
+RE,Réunion,country,RE,False,False
+RO,Romania,country,RO,True,True
+RS,Serbia,country,RS,False,True
+RU,Russia,country,RU,True,True
+RW,Rwanda,country,RW,True,False
+SA,Saudi Arabia,country,SA,True,True
+SB,Solomon Islands,country,SB,True,False
+SC,Seychelles,country,SC,True,False
+SE,Sweden,country,SE,True,True
+SG,Singapore,country,SG,True,False
+SH,Saint Helena,country,SH,True,False
+SI,Slovenia,country,SI,True,False
+SJ,Svalbard and Jan Mayen,country,SJ,False,False
+SK,Slovakia,country,SK,True,False
+SL,Sierra Leone,country,SL,True,False
+SM,San Marino,country,SM,True,False
+SN,Senegal,country,SN,True,False
+SO,Somalia,country,SO,True,False
+SR,Suriname,country,SR,True,False
+SS,South Sudan,country,SS,True,False
+ST,Sao Tome and Principe,country,ST,True,False
+SV,El Salvador,country,SV,True,True
+SX,Sint Maarten,country,SX,False,False
+SZ,Swaziland,country,SZ,True,False
+TC,Turks and Caicos Islands,country,TC,False,False
+TD,Chad,country,TD,True,False
+TF,French Southern Territories,country,TF,False,False
+TG,Togo,country,TG,True,False
+TH,Thailand,country,TH,True,True
+TJ,Tajikistan,country,TJ,True,False
+TK,Tokelau,country,TK,True,False
+TL,Timor-Leste,country,TL,False,False
+TM,Turkmenistan,country,TM,True,False
+TN,Tunisia,country,TN,True,False
+TO,Tonga,country,TO,True,False
+TR,Turkey,country,TR,True,True
+TT,Trinidad and Tobago,country,TT,True,False
+TV,Tuvalu,country,TV,True,False
+TW,Taiwan,country,TW,True,True
+TZ,Tanzania,country,TZ,False,False
+UA,Ukraine,country,UA,True,True
+UG,Uganda,country,UG,True,False
+UM,United States Minor Outlying Islands,country,UM,False,False
+US,United States,country,US,True,True
+UY,Uruguay,country,UY,True,True
+UZ,Uzbekistan,country,UZ,True,False
+VA,Vatican City,country,VA,False,False
+VC,Saint Vincent and the Grenadines,country,VC,False,False
+VE,Venezuela,country,VE,True,True
+VG,British Virgin Islands,country,VG,False,False
+VI,US Virgin Islands,country,VI,False,False
+VN,Vietnam,country,VN,True,True
+VU,Vanuatu,country,VU,True,False
+WF,Wallis and Futuna,country,WF,False,False
+WS,Samoa,country,WS,False,False
+XK,Kosovo,country,XK,False,False
+YE,Yemen,country,YE,True,False
+YT,Mayotte,country,YT,False,False
+ZA,South Africa,country,ZA,True,True
+ZM,Zambia,country,ZM,True,False
+ZW,Zimbabwe,country,ZW,True,False
