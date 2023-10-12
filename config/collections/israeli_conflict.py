@@ -51,6 +51,9 @@ if __name__ == '__main__':
     platforms = ['facebook', 'instagram']
     languages = {'hebrew':29, 'arabic':28}
 
+    ps_cities = pd.read_csv('config/specs/specs_explore/targets_csv/city.csv')
+    ps_cities = ps_cities.loc[ps_cities.country_code == 'PS']
+
     i = 0
     for country in countries:
         for platform in platforms:
