@@ -3,11 +3,11 @@ version: '3.3'
 
 services:
 
-  dgg_national_ins:
-    container_name: dgg_national_ins
+  dgg_subnational:
+    container_name: dgg_subnational
     volumes:
-      - ./dgg_national_ins:/app/in
-      - ./../../../data/mal/dgg_national_ins:/app/data
+      - ./dgg_subnational:/app/in
+      - ./../../../data/badger/dgg_subnational:/app/data
     build:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile

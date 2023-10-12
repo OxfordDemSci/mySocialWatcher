@@ -3,10 +3,9 @@ import shutil
 import pandas as pd
 
 # virtual machine and collection
-vm = 'mal' # to be changed
+vm = 'badger' # to be changed
 
 collection = 'dgg_national_ins'
-
 
 if __name__ == '__main__':
 
