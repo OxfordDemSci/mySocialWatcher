@@ -60,11 +60,8 @@ if __name__ == '__main__':
     platforms = ['facebook', 'instagram']
     languages = {'hebrew':29, 'arabic':28}
 
-    # location types
-    for i in range(len(specs['geo_locations'])):
-        specs['geo_locations'][i]['location_types'] = ['recent']
-
     # cities
+    specs['geo_locations'] = []
     for index, row in ps_cities.iterrows():
         specs['geo_locations'].append({
             "name": "cities",
