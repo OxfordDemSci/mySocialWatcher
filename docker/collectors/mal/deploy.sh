@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VM="mal"
-COLLECTIONS=("dgg_national_ins")
+COLLECTIONS=("dgg_subnational")
 DIR="/home/ubuntu/mySocialWatcher"
 
 # config
