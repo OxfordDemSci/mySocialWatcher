@@ -61,7 +61,6 @@ if __name__ == '__main__':
     languages = {'hebrew':29, 'arabic':28}
 
     # cities
-    specs['geo_locations'] = []
     for index, row in ps_cities.iterrows():
         specs['geo_locations'].append({
             "name": "cities",
@@ -80,6 +79,9 @@ if __name__ == '__main__':
                 "recent"
             ]
         })
+
+    # age groups
+    specs['ages_ranges'].append({'min': 18, 'max': 34})
 
     i = 0
     for platform in platforms:

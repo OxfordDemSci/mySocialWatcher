@@ -6,7 +6,6 @@ import pandas as pd
 vm = 'stitch'
 collection = 'israeli_cities'
 
-
 if __name__ == '__main__':
 
     # ---- paths ---- #
@@ -47,7 +46,7 @@ if __name__ == '__main__':
     cities = pd.read_csv('config/specs/specs_explore/targets_csv/city.csv')
     cities = cities.loc[cities['country_code'].eq('IL')]
 
-    #-- template specs --#
+    # -- template specs --#
     specs_file = os.path.join(specs_template_path, 'IL_regions.json')
     if not os.path.exists(specs_file):
         print('Specs template does not exist: ' + specs_file)
@@ -58,7 +57,7 @@ if __name__ == '__main__':
     specs['name'] = collection
 
     platforms = ['facebook', 'instagram']
-    languages = {'hebrew':29, 'arabic':28}
+    languages = {'hebrew': 29, 'arabic': 28}
 
     # cities
     specs['geo_locations'] = []
@@ -81,18 +80,24 @@ if __name__ == '__main__':
             ]
         })
 
+    # age groups
+    specs['ages_ranges'] = [
+        {'min': 13}, {'min': 18}, {'min': 20}, {'min': 60}, {'min': 65},
+        {'min': 13, 'max': 19}, {'min': 15, 'max': 49}, {'min': 15, 'max': 64}, {'min': 18, 'max': 34},
+        {'min': 20, 'max': 29}, {'min': 30, 'max': 39}, {'min': 40, 'max': 49}, {'min': 50, 'max': 59},
+        {'min': 60, 'max': 64}]
+
     i = 0
     for platform in platforms:
         i += 1
 
-        #-- all languages --#
+        # -- all languages --#
         specs["publisher_platforms"] = [platform]
         specs['languages'] = [None]
 
         file_out = os.path.join(specs_dir, '_'.join([str(i).zfill(2), platform, 'all']) + '.json')
         with open(file_out, "w") as f:
             f.write(json.dumps(specs))
-
 
         # specific languages
         for language in languages.keys():
@@ -105,4 +110,3 @@ if __name__ == '__main__':
             file_out = os.path.join(specs_dir, '_'.join([str(i).zfill(2), platform, language]) + '.json')
             with open(file_out, "w") as f:
                 f.write(json.dumps(specs))
-

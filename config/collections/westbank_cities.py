@@ -83,6 +83,13 @@ if __name__ == '__main__':
             ]
         })
 
+    # age groups
+    specs['ages_ranges'] = [
+        {'min': 13}, {'min': 18}, {'min': 20}, {'min': 60}, {'min': 65},
+        {'min': 13, 'max': 19}, {'min': 15, 'max': 49}, {'min': 15, 'max': 64}, {'min': 18, 'max': 34},
+        {'min': 20, 'max': 29}, {'min': 30, 'max': 39}, {'min': 40, 'max': 49}, {'min': 50, 'max': 59},
+        {'min': 60, 'max': 64}]
+
     i = 0
     for platform in platforms:
         i += 1

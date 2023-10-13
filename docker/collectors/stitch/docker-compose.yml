@@ -21,7 +21,7 @@ services:
     build:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
-    restart: always
+    restart: on-failure
 
   westbank_cities:
     container_name: westbank_cities
