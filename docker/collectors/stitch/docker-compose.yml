@@ -11,7 +11,7 @@ services:
     build:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
-    restart: on-failure
+    restart: always
 
   gaza_cities:
     container_name: gaza_cities
@@ -21,7 +21,27 @@ services:
     build:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
-    restart: on-failure
+    restart: always
+
+  westbank_cities:
+    container_name: westbank_cities
+    volumes:
+      - ./westbank_cities:/app/in
+      - ./../../../data/stitch/westbank_cities:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: always
+
+  israeli_cities:
+    container_name: israeli_cities
+    volumes:
+      - ./israeli_cities:/app/in
+      - ./../../../data/stitch/israeli_cities:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: always
 
 #  turkey_earthquake:
 #    container_name: turkey_earthquake
