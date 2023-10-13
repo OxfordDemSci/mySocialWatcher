@@ -32,3 +32,13 @@ services:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
+
+  israeli_conflict:
+    container_name: israeli_conflict
+    volumes:
+      - ./israeli_conflict:/app/in
+      - ./../../../data/stitch/israeli_conflict:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure

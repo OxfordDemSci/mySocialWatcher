@@ -49,6 +49,7 @@ if __name__ == '__main__':
                  'ZA', 'ZM']
     drop_countries = ['UA', 'CU', 'SD', 'IR', 'SY']
     drop_countries = drop_countries + ['CD', 'CF', 'DJ', 'EG', 'ER', 'ET', 'LY', 'SD', 'SS', 'TD']  # see collection: sudan_conflict
+    drop_countries = drop_countries + ['IL', 'PS', 'EG', 'JO', 'LB'] # see collection: israeli_conflict
     countries = [i for i in countries if i not in drop_countries]
 
     platforms = ['facebook', 'instagram']

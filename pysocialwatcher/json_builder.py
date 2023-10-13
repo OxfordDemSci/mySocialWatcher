@@ -297,6 +297,11 @@ class LanguageList(object):
                       "italian": Language("Italian", [10]),
                       "german": Language("German", [5]),
                       "dutch": Language("Dutch", [14]),
+                      "ukrainian": Language("Ukrainian", [52]),
+                      "russian": Language("Russian", [17]),
+                      "arabic": Language("Arabic", [28]),
+                      "turkish": Language("Turkish", [19]),
+                      "hebrew": Language("Hebrew", [29])
                       }
 
         if lang.lower() not in predefined.keys():

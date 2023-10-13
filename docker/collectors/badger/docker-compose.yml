@@ -13,6 +13,16 @@ services:
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
+  dgg_national_ins:
+    container_name: dgg_national_ins
+    volumes:
+      - ./dgg_national_ins:/app/in
+      - ./../../../data/badger/dgg_national_ins:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
   dgg_subnational:
     container_name: dgg_subnational
     volumes:
@@ -22,3 +32,4 @@ services:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
+
