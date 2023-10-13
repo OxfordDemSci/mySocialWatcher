@@ -1,6 +1,8 @@
 import os
 import logging
 import datetime
+import json
+from pysocialwatcher.utils import get_all_combinations_from_input
 from time import sleep
 
 data_dir = 'data'  # data_dir = 'data/saffron/ukraine_regions'
@@ -97,3 +99,13 @@ def sleep_the_day(start_time):
         if sleep_duration.seconds > 0:
             logger.info('Sleeping until tomorrow (' + str(sleep_duration) + ').')
             sleep(sleep_duration.seconds)
+
+def estimate_run_time(specs_dir, sleep_time=11, n_tokens=1):
+    runtime = 0
+    specs_list = os.listdir(specs_dir)
+    for specs_file in specs_list:
+        with open(os.path.join(specs_dir, specs_file)) as f:
+            specs = json.load(f)
+        runtime += len(get_all_combinations_from_input(specs)) * sleep_time
+    runtime = runtime / n_tokens / 3600
+    return runtime
