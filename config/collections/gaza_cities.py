@@ -62,7 +62,7 @@ if __name__ == '__main__':
 
     # location types
     for i in range(len(specs['geo_locations'])):
-        specs['geo_locations'][i]['location_types'] = ['recent', ['home', 'recent']]
+        specs['geo_locations'][i]['location_types'] = ['recent']
 
     # cities
     for index, row in ps_cities.iterrows():
@@ -80,8 +80,7 @@ if __name__ == '__main__':
                 }
             ],
             "location_types": [
-                "recent",
-                ["home", "recent"]
+                "recent"
             ]
         })
 
