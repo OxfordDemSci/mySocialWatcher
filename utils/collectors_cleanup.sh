@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # command line arguments
 data_dir=$1
 
