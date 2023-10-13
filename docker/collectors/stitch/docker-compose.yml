@@ -3,36 +3,6 @@ version: '3.3'
 
 services:
 
-  turkey_earthquake:
-    container_name: turkey_earthquake
-    volumes:
-      - ./turkey_earthquake:/app/in
-      - ./../../../data/stitch/turkey_earthquake:/app/data
-    build:
-      context: ./../../../
-      dockerfile: ./docker/collectors/Dockerfile
-    restart: on-failure
-
-  turkey_language:
-    container_name: turkey_language
-    volumes:
-      - ./turkey_language:/app/in
-      - ./../../../data/stitch/turkey_language:/app/data
-    build:
-      context: ./../../../
-      dockerfile: ./docker/collectors/Dockerfile
-    restart: on-failure
-
-  sudan_conflict:
-    container_name: sudan_conflict
-    volumes:
-      - ./sudan_conflict:/app/in
-      - ./../../../data/stitch/sudan_conflict:/app/data
-    build:
-      context: ./../../../
-      dockerfile: ./docker/collectors/Dockerfile
-    restart: on-failure
-
   israeli_conflict:
     container_name: israeli_conflict
     volumes:
@@ -42,3 +12,44 @@ services:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
+
+  gaza_cities:
+    container_name: gaza_cities
+    volumes:
+      - ./gaza_cities:/app/in
+      - ./../../../data/stitch/gaza_cities:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
+#  turkey_earthquake:
+#    container_name: turkey_earthquake
+#    volumes:
+#      - ./turkey_earthquake:/app/in
+#      - ./../../../data/stitch/turkey_earthquake:/app/data
+#    build:
+#      context: ./../../../
+#      dockerfile: ./docker/collectors/Dockerfile
+#    restart: on-failure
+
+#  turkey_language:
+#    container_name: turkey_language
+#    volumes:
+#      - ./turkey_language:/app/in
+#      - ./../../../data/stitch/turkey_language:/app/data
+#    build:
+#      context: ./../../../
+#      dockerfile: ./docker/collectors/Dockerfile
+#    restart: on-failure
+
+#  sudan_conflict:
+#    container_name: sudan_conflict
+#    volumes:
+#      - ./sudan_conflict:/app/in
+#      - ./../../../data/stitch/sudan_conflict:/app/data
+#    build:
+#      context: ./../../../
+#      dockerfile: ./docker/collectors/Dockerfile
+#    restart: on-failure
+

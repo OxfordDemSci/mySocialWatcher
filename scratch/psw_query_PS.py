@@ -2,7 +2,7 @@ from pysocialwatcher import watcherAPI, constants
 import json
 import os
 
-credentials_path = './scratch/private_credentials.csv'
+credentials_path = os.path.join('scratch','private_credentials.csv')
 
 countries = ['PS']
 
@@ -15,7 +15,7 @@ watcher.load_credentials_file(credentials_path)
 watcher.check_tokens_account_valid()
 
 # data path
-data_dir = './data/tmp'
+data_dir = os.path.join('data','tmp')
 
 for country in countries:
     # country = countries[0]
