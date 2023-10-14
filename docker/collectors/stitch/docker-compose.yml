@@ -11,7 +11,7 @@ services:
     build:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
-    restart: always
+    restart: on-failure
 
   gaza_cities:
     container_name: gaza_cities

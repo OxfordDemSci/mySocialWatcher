@@ -100,12 +100,11 @@ def sleep_the_day(start_time):
             logger.info('Sleeping until tomorrow (' + str(sleep_duration) + ').')
             sleep(sleep_duration.seconds)
 
-def estimate_run_time(specs_dir, sleep_time=11, n_tokens=1):
+def estimate_run_time(specs_dir, n_tokens=1, units='d', sleep_time=11):
     runtime = 0
     specs_list = os.listdir(specs_dir)
     for specs_file in specs_list:
         with open(os.path.join(specs_dir, specs_file)) as f:
             specs = json.load(f)
-        runtime += len(get_all_combinations_from_input(specs)) * sleep_time
-    runtime = runtime / n_tokens / 3600
-    return runtime
+        runtime += len(get_all_combinations_from_input(specs)) * sleep_time / n_tokens
+    return str(datetime.timedelta(seconds=runtime))
