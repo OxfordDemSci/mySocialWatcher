@@ -45,7 +45,8 @@ if __name__ == '__main__':
     # full city list
     cities = pd.read_csv('config/specs/specs_explore/targets_csv/city.csv')
     cities = cities.loc[cities['country_code'].eq('LB') &
-                        cities['type'].eq('city')]
+                        cities['type'].eq('city') &
+                        cities['region_id'].isin([2061, 4322])]
     cities.drop_duplicates(subset='key', keep=False, inplace=True)
 
     # -- template specs --#
@@ -59,7 +60,7 @@ if __name__ == '__main__':
     specs['name'] = collection
 
     platforms = ['facebook', 'instagram']
-    languages = {'hebrew': 29, 'arabic': 28}
+    languages = {'arabic': 28, 'hebrew': 29}
 
     # cities
     specs['geo_locations'] = []
