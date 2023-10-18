@@ -45,7 +45,9 @@ if __name__ == '__main__':
 
     # full city list
     ps_cities = pd.read_csv('config/specs/specs_explore/targets_csv/city.csv')
-    ps_cities = ps_cities.loc[ps_cities['country_code'].eq('PS') & ps_cities['region'].eq('Gaza Strip')]
+    ps_cities = ps_cities.loc[ps_cities['country_code'].eq('PS') &
+                              ps_cities['type'].eq('city') &
+                              ps_cities['region'].eq('Gaza Strip')]
 
     #-- template specs --#
     specs_file = os.path.join(specs_template_path, 'PS_regions.json')

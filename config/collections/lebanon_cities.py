@@ -4,7 +4,7 @@ import pandas as pd
 
 # virtual machine and collection names
 vm = 'stitch'
-collection = 'israeli_cities'
+collection = 'lebanon_cities'
 
 if __name__ == '__main__':
 
@@ -44,12 +44,12 @@ if __name__ == '__main__':
 
     # full city list
     cities = pd.read_csv('config/specs/specs_explore/targets_csv/city.csv')
-    cities = cities.loc[cities['country_code'].eq('IL') &
+    cities = cities.loc[cities['country_code'].eq('LB') &
                         cities['type'].eq('city')]
     cities.drop_duplicates(subset='key', keep=False, inplace=True)
 
     # -- template specs --#
-    specs_file = os.path.join(specs_template_path, 'IL_regions.json')
+    specs_file = os.path.join(specs_template_path, 'LB_regions.json')
     if not os.path.exists(specs_file):
         print('Specs template does not exist: ' + specs_file)
 
