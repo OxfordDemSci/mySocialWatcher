@@ -43,6 +43,16 @@ services:
       dockerfile: ./docker/collectors/Dockerfile
     restart: always
 
+  lebanon_cities:
+    container_name: lebanon_cities
+    volumes:
+      - ./lebanon_cities:/app/in
+      - ./../../../data/stitch/lebanon_cities:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
 #  turkey_earthquake:
 #    container_name: turkey_earthquake
 #    volumes:
