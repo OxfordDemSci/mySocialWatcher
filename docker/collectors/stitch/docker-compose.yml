@@ -51,7 +51,7 @@ services:
     build:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
-    restart: on-failure
+    restart: always
 
 #  turkey_earthquake:
 #    container_name: turkey_earthquake
