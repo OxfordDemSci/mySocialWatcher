@@ -2,6 +2,8 @@ data
 private*
 venv
 *.env
+**/.DS_Store
+
 
 .Rhistory
 .idea/
