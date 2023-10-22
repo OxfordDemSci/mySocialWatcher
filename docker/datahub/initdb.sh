@@ -1,5 +1,3 @@
-countries=("AD" "AE" "AF" "AG" "AI" "AL" "AM" "AN" "AO" "AQ" "AR" "AS" "AT" "AU" "AW" "AZ" "BA" "BB" "BD" "BE" "BF" "BG" "BH" "BI" "BJ" "BL" "BM" "BN" "BO" "BQ" "BR" "BS" "BT" "BW" "BY" "BZ" "CA" "CD" "CF" "CG" "CH" "CI" "CK" "CL" "CM" "CN" "CO" "CR" "CU" "CV" "CW" "CX" "CY" "CZ" "DE" "DJ" "DK" "DM" "DO" "DZ" "EC" "EE" "EG" "EH" "ER" "ES" "ET" "FI" "FJ" "FK" "FM" "FO" "FR" "GA" "GB" "GD" "GE" "GF" "GG" "GH" "GI" "GL" "GM" "GN" "GP" "GQ" "GR" "GS" "GT" "GU" "GW" "GY" "HK" "HN" "HR" "HT" "HU" "ID" "IE" "IL" "IM" "IN" "IO" "IQ" "IR" "IS" "IT" "JE" "JM" "JO" "JP" "KE" "KG" "KH" "KI" "KM" "KN" "KR" "KW" "KY" "KZ" "LA" "LB" "LC" "LI" "LK" "LR" "LS" "LT" "LU" "LV" "LY" "MA" "MC" "MD" "ME" "MF" "MG" "MH" "MK" "ML" "MM" "MN" "MO" "MP" "MQ" "MR" "MS" "MT" "MU" "MV" "MW" "MX" "MY" "MZ" "NA" "NC" "NE" "NF" "NG" "NI" "NL" "NO" "NP" "NR" "NU" "NZ" "OM" "PA" "PE" "PF" "PG" "PH" "PK" "PL" "PM" "PN" "PR" "PS" "PT" "PW" "PY" "QA" "RE" "RO" "RS" "RU" "RW" "SA" "SB" "SC" "SD" "SE" "SG" "SH" "SI" "SJ" "SK" "SL" "SM" "SN" "SO" "SR" "SS" "ST" "SV" "SX" "SY" "SZ" "TC" "TD" "TG" "TH" "TJ" "TK" "TL" "TM" "TN" "TO" "TR" "TT" "TV" "TW" "TZ" "UA" "UG" "UM" "US" "UY" "UZ" "VA" "VC" "VE" "VG" "VI" "VN" "VU" "WF" "WS" "XK" "YE" "YT" "ZA" "ZM" "ZW")
-
 # users
 psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
 "
@@ -97,6 +95,8 @@ GRANT SELECT,INSERT ON facebook TO writer;
 "
 
 # create facebook partitions by country
+countries=("AD" "AE" "AF" "AG" "AI" "AL" "AM" "AN" "AO" "AQ" "AR" "AS" "AT" "AU" "AW" "AZ" "BA" "BB" "BD" "BE" "BF" "BG" "BH" "BI" "BJ" "BL" "BM" "BN" "BO" "BQ" "BR" "BS" "BT" "BW" "BY" "BZ" "CA" "CD" "CF" "CG" "CH" "CI" "CK" "CL" "CM" "CN" "CO" "CR" "CU" "CV" "CW" "CX" "CY" "CZ" "DE" "DJ" "DK" "DM" "DO" "DZ" "EC" "EE" "EG" "EH" "ER" "ES" "ET" "FI" "FJ" "FK" "FM" "FO" "FR" "GA" "GB" "GD" "GE" "GF" "GG" "GH" "GI" "GL" "GM" "GN" "GP" "GQ" "GR" "GS" "GT" "GU" "GW" "GY" "HK" "HN" "HR" "HT" "HU" "ID" "IE" "IL" "IM" "IN" "IO" "IQ" "IR" "IS" "IT" "JE" "JM" "JO" "JP" "KE" "KG" "KH" "KI" "KM" "KN" "KR" "KW" "KY" "KZ" "LA" "LB" "LC" "LI" "LK" "LR" "LS" "LT" "LU" "LV" "LY" "MA" "MC" "MD" "ME" "MF" "MG" "MH" "MK" "ML" "MM" "MN" "MO" "MP" "MQ" "MR" "MS" "MT" "MU" "MV" "MW" "MX" "MY" "MZ" "NA" "NC" "NE" "NF" "NG" "NI" "NL" "NO" "NP" "NR" "NU" "NZ" "OM" "PA" "PE" "PF" "PG" "PH" "PK" "PL" "PM" "PN" "PR" "PS" "PT" "PW" "PY" "QA" "RE" "RO" "RS" "RU" "RW" "SA" "SB" "SC" "SD" "SE" "SG" "SH" "SI" "SJ" "SK" "SL" "SM" "SN" "SO" "SR" "SS" "ST" "SV" "SX" "SY" "SZ" "TC" "TD" "TG" "TH" "TJ" "TK" "TL" "TM" "TN" "TO" "TR" "TT" "TV" "TW" "TZ" "UA" "UG" "UM" "US" "UY" "UZ" "VA" "VC" "VE" "VG" "VI" "VN" "VU" "WF" "WS" "XK" "YE" "YT" "ZA" "ZM" "ZW")
+
 for idx in "${!countries[@]}"
 do
   psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
@@ -196,58 +196,6 @@ CREATE TABLE instagram_invalid (
 );
 GRANT SELECT ON instagram_invalid TO reader;
 GRANT SELECT,INSERT ON instagram_invalid TO writer;
-"
-
-# view: facebook_clean
-psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
-"
-drop view if exists facebook_clean;
-
-create view facebook_clean as
-select
-	collections.name as collection_name,
-	collection_id,
-	collection_date, timestamp,
-	dau, mau, mau_lower, mau_upper,
-	gender,
-	age_min, age_max,
-	country,
-	geo_locations ->> 'name' as geo_level,
-	(geo_locations -> 'values')[0] ->> 'key' as geo_key,
-	(geo_locations -> 'values')[0] ->> 'name' as geo_name,
-	geo_locations ->> 'location_types' as location_types,
-	all_fields -> 'languages' ->> 'name' as language_name,
-	all_fields -> 'languages' ->> 'values' as language_key
-from facebook
-inner join collections on facebook.collection_id = collections.id;
-
-grant select on facebook_clean to reader, writer;
-"
-
-# view: instagram_clean
-psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
-"
-drop view if exists instagram_clean;
-
-create view instagram_clean as
-select
-	collections.name as collection_name,
-	collection_id,
-	collection_date, timestamp,
-	dau, mau, mau_lower, mau_upper,
-	gender,
-	age_min, age_max,
-	country,
-	geo_locations ->> 'name' as geo_level,
-	(geo_locations -> 'values')[0] ->> 'key' as geo_key,
-	(geo_locations -> 'values')[0] ->> 'name' as geo_name,
-	geo_locations ->> 'location_types' as location_types,
-	all_fields -> 'languages' ->> 'name' as language_name,
-	all_fields -> 'languages' ->> 'values' as language_key
-from instagram
-inner join collections on instagram.collection_id = collections.id;
-
-grant select on instagram_clean to reader, writer;
 "
 
 unset countries
