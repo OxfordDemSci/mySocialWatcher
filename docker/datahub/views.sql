@@ -60,7 +60,19 @@ select
 from
 	facebook_clean
 left join
-	gadm on geo_key = gadm.meta_key;
+	gadm on geo_key = gadm.meta_key
+where
+    geo_level != 'cities'
+union all
+select
+	facebook_clean.*,
+	cities.geometry
+from
+	facebook_clean
+left join
+	cities on geo_key::int = cities.meta_key
+where
+    geo_level = 'cities';
 
 grant select on facebook_geo to reader, writer;
 
@@ -129,7 +141,18 @@ select
 from
 	instagram_clean
 left join
-	gadm on geo_key = gadm.meta_key;
+	gadm on geo_key = gadm.meta_key
+where
+    geo_level != 'cities'
+union all
+select
+	instagram_clean.*,
+	cities.geometry
+from
+	instagram_clean
+left join
+	cities on geo_key::int = cities.meta_key
+where
+    geo_level = 'cities';
 
 grant select on instagram_geo to reader, writer;
-
