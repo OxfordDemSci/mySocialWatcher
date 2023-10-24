@@ -156,3 +156,43 @@ where
     geo_level = 'cities';
 
 grant select on instagram_geo to reader, writer;
+
+
+#---- data overview ----#
+drop view if exists data_overview;
+
+create view data_overview as
+select
+    collection_date,
+    'facebook' as platform,
+    country,
+    location_types,
+    geo_level,
+    language_name,
+    count(distinct(geo_name)) as nb_location,
+    count(distinct(gender)) as nb_gender,
+    count(distinct(concat(age_min, age_max))) as nb_agegroup
+from
+    facebook_clean
+group by
+    collection_date, country, location_types, language_name, geo_level
+
+union
+
+select
+    collection_date,
+    'instagram' as platform,
+    country,
+    location_types,
+    geo_level,
+    language_name,
+    count(distinct(geo_name)) as nb_location,
+    count(distinct(gender)) as nb_gender,
+    count(distinct(concat(age_min, age_max))) as nb_agegroup
+from
+    instagram_clean
+group by
+    collection_date, country, location_types, language_name, geo_level
+order by platform, collection_date, geo_level, location_types, language_name;
+
+grant select on data_overview to reader, writer;
