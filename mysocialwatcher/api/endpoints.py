@@ -1,9 +1,10 @@
 import pandas as pd
+import geopandas as gpd
 import sqlalchemy.exc
 from mysocialwatcher.api.utils import *
 
 
-def query_fun(args):
+def query(args):
     """Process requests to API endpoint '/api/v1/social_media_audience/query' by selecting queried data from a PostgreSQL table.
     Args:
         args (dict): Arguments of GET request passed from request.args
@@ -120,7 +121,171 @@ def query_fun(args):
     return {"status": status, "message": message, "timestamp": timestr(), "data": data}
 
 
-def write_fun(args):
+def query_clean(args):
+    """Process requests to API endpoint '/api/v1/social_media_audience/query_clean' by selecting queried data from a PostgreSQL table.
+    Args:
+        args (dict): Arguments of GET request passed from request.args
+    Examples:
+        - args = {'platform': 'facebook', 'country': 'PS', 'date_start': '2023-10-01', 'add_geometry': True}
+    Returns:
+        dict: http response compatible with json format
+    """
+
+    # default valid = True
+    if 'valid' not in args.keys():
+        args['valid'] = True
+    if 'add_geometry' not in args.keys():
+        args['add_geometry'] = False
+
+    # limit response to n rows
+    limit_rows = 100000
+
+    # check arguments
+    result = check_args(args,
+                        required=['token', 'platform'],
+                        required_oneof=[],
+                        optional=['valid', 'country', 'collection_id', 'collection_name',
+                                  'date_start', 'date_end',
+                                  'gender', 'age_min', 'age_max', 'language_name', 'language_key',
+                                  'geo_level', 'geo_key', 'geo_name', 'location_types', 'add_geometry'])
+    args = result.get('args')
+    status = result.get('status')
+    message = result.get('message')
+    data = None
+    geodata = None
+    db = None
+
+    if status == 200:
+
+        # database engine
+        db = db_engine()
+
+        # validate token
+        result = validate_token(token=args.get('token'), conn=db.connect())
+
+        status = result.get('status')
+        if status == 200:
+            contributor_id = result.get('contributor_id')
+            args.pop('token')
+        else:
+            message = result.get('message')
+
+    if status == 200:
+
+        # list query columns
+        cols = ['collection_name', 'collection_id', 'collection_date', 'timestamp',
+                'dau',  'mau', 'mau_lower', 'mau_upper',
+                'gender', 'age_min', 'age_max',
+                'country', 'geo_level', 'geo_key', 'location_types',
+                'language_name', 'language_key']
+
+        if args.get('add_geometry'):
+            cols.append('geometry')
+
+        # cast dates to text
+        cast_cols = ['contributed_on', 'collection_date']
+        for i in range(len(cols)):
+            if cols[i] in cast_cols:
+                cols[i] = cols[i] + '::text'
+
+        # table name
+        add_geometry = args.pop('add_geometry')
+        if add_geometry:
+            table = args.pop('table') + '_geo'
+        else:
+            table = args.pop('table') + '_clean'
+
+
+        # ----  create sql query ---- #
+
+        # select: from table
+        sql = "SELECT " + ",".join(cols) + f" FROM {table} WHERE "
+
+        # where: arguments
+        where_args = ['country', 'gender', 'age_min', 'age_max',
+                     'collection_name', 'language_name', 'language_key',
+                     'geo_level', 'geo_key', 'geo_name', 'location_types']
+
+        for i in set(args.keys()).intersection(where_args):
+            sql +=  f"{i} = {str(args.get(i))} AND "
+
+        # where: date range
+        if 'date_start' in args.keys():
+            sql += f"collection_date >= {str(args.get('date_start'))} AND "
+        if 'date_end' in args.keys():
+            sql += f"collection_date <= {str(args.get('date_end'))} AND "
+
+        # where: collection_id from collection name
+        if 'collection_id' in args.keys():
+            sql += f"collection_id = (SELECT id FROM collections WHERE name = '{args.get('collection')}') AND "
+
+        # where: access permissions for collaborators' data or entire collections
+        sql += "(" + \
+               f"collection_id IN (SELECT UNNEST(collections) FROM contributors WHERE id={contributor_id}) OR " \
+               f"contributor_id IN (SELECT UNNEST(collaborators) FROM contributors WHERE id={contributor_id})" + \
+               ") "
+
+        # limit number of rows returned
+        sql += f"LIMIT {limit_rows};"
+
+        #---- query database ----#
+        try:
+
+            data = pd.read_sql(sql=sql, con=db.connect())
+
+            if add_geometry:
+                geo_sql = ""
+
+                keys = list(set(data['geo_key'][data['geo_level']=='countries']))
+                keystr = ','.join("'{0}'".format(k) for k in keys)
+                if len(keys) > 0:
+                    geo_sql += (f"select meta_key as geo_key, 'countries' as geo_level, gid_0 as gid, name_0 as name, geometry"
+                                f" from gadm where meta_key in ({keystr})")
+
+                keys = list(set(data['geo_key'][data['geo_level']=='regions']))
+                keystr = ','.join("'{0}'".format(k) for k in keys)
+                if len(keys) > 0:
+                    if len(sql) > 0:
+                        geo_sql += ' union all '
+                    geo_sql += (f"select meta_key::text as geo_key, 'regions' as geo_level, gid_1 as gid, name_1 as name, geometry"
+                                f" from gadm where gadm_level = 1 and meta_key in ({keystr}) union all")
+
+                keys = list(set(data['geo_key'][data['geo_level']=='cities']))
+                keystr = ','.join("'{0}'".format(k) for k in keys)
+                if len(keys) > 0:
+                    if len(sql) > 0:
+                        geo_sql += ' union all '
+                    geo_sql += (f"select meta_key::text as geo_key, 'cities' as geo_level, '' as gid, name, geometry"
+                                f" from cities where meta_key in ({keystr})")
+
+                if len(sql) > 0:
+                    geo_sql += ';'
+                    geodata = gpd.read_postgis(sql=geo_sql, con=db.connect(), geom_col='geometry', crs='EPSG:4326')
+                    geodata = geodata.to_json()
+
+            data = data.to_json()
+
+            if len(data) < limit_rows:
+                status = 200
+                message = 'OK: Data successfully selected from database.'
+            else:
+                status = 206
+                message = f'Partial Content: Result truncated to {limit_rows} rows. Revise query to reduce size ' \
+                          f'(e.g. specific country, dates, and/or demographics).'
+
+        except Exception as e:
+            exc = e.__dict__
+            status = exc.get('code')
+            message = exc.get('orig')
+
+    if db:
+        db.dispose()
+
+    # return result
+    return {"status": status, "message": message, "timestamp": timestr(), "data": data, "geodata": geodata}
+
+
+def write(args):
     """Process requests to API endpoint '/api/v1/social_media_audience/write' by inserting them into a PostgreSQL table.
     Args:
         args (dict): Arguments of GET request passed from request.args
@@ -206,7 +371,7 @@ def write_fun(args):
     return {"status": status, "message": message, "timestamp": timestr()}
 
 
-def collections_fun(args):
+def collections(args):
 
     status = 200
     message = ''
@@ -258,7 +423,7 @@ def collections_fun(args):
     return {'status': status, 'message': message, 'timestamp': timestr(), 'data': data}
 
 
-def monitor_fun(args):
+def monitor(args):
 
     status = 200
     message = ''
@@ -365,3 +530,5 @@ def monitor_fun(args):
         db.dispose()
 
     return {'status': status, 'message': message, 'timestamp': timestr(), 'data': data}
+
+

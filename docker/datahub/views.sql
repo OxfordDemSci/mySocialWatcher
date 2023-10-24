@@ -3,8 +3,9 @@ drop view if exists facebook_clean;
 
 create view facebook_clean as
 select
+	contributor_id,
+    collection_id,
 	collections.name as collection_name,
-	collection_id,
 	collection_date, timestamp,
 	dau, mau, mau_lower, mau_upper,
 	gender,
@@ -26,8 +27,9 @@ where
 union all
 
 select
+	contributor_id,
+    collection_id,
 	collections.name as collection_name,
-	collection_id,
 	collection_date, timestamp,
 	dau, mau, mau_lower, mau_upper,
 	gender,
@@ -84,8 +86,9 @@ drop view if exists instagram_clean;
 
 create view instagram_clean as
 select
+	contributor_id,
+    collection_id,
 	collections.name as collection_name,
-	collection_id,
 	collection_date, timestamp,
 	dau, mau, mau_lower, mau_upper,
 	gender,
@@ -107,8 +110,9 @@ where
 union all
 
 select
+	contributor_id,
+    collection_id,
 	collections.name as collection_name,
-	collection_id,
 	collection_date, timestamp,
 	dau, mau, mau_lower, mau_upper,
 	gender,
@@ -193,6 +197,7 @@ from
     instagram_clean
 group by
     collection_date, country, location_types, language_name, geo_level
-order by platform, collection_date, geo_level, location_types, language_name;
+order by
+    platform, collection_date, geo_level, location_types, language_name;
 
 grant select on data_overview to reader, writer;
