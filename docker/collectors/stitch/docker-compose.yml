@@ -53,6 +53,16 @@ services:
       dockerfile: ./docker/collectors/Dockerfile
     restart: always
 
+  psil_homerecent:
+    container_name: psil_homerecent
+    volumes:
+      - ./psil_homerecent:/app/in
+      - ./../../../data/stitch/psil_homerecent:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: always
+
 #  turkey_earthquake:
 #    container_name: turkey_earthquake
 #    volumes:
