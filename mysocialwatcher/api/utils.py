@@ -7,7 +7,7 @@ from ast import literal_eval
 from dotenv import load_dotenv
 
 load_dotenv()
-#load_dotenv('docker/datahub/dev.env')
+# load_dotenv('docker/datahub/dev.env')
 
 
 def timestr():
@@ -99,16 +99,17 @@ def check_args(args, required=[], required_oneof=[], optional=[]):
         dict: http response compatible with json format along with modified args object
     """
 
-    # argument lists
-    # unlisted arguments: token
+    # argument lists (unlisted arguments: token)
     required_globally = ['valid']
 
-    integer_args = ['contributor_id', 'timestamp', 'geo_id', 'gender', 'age_min', 'age_max',
+    integer_args = ['contributor_id', 'collection_id', 'timestamp', 'geo_id', 'geo_key',
+                    'gender', 'age_min', 'age_max',
                     'dau', 'mau', 'mau_lower', 'mau_upper']
-    json_args = ['geo_locations', 'all_fields', 'targeting', 'response']
-    boolean_args = ['valid']
+    json_args = ['geo_locations', 'all_fields', 'targeting', 'response', 'language_key']
+    boolean_args = ['valid', 'add_geometry']
     date_args = ['date_start', 'date_end', 'collection_date']
-    quote_args = ['country'] + json_args + date_args
+    quote_args = (['country', 'collection_name', 'language_name', 'geo_level'] +
+                  json_args + date_args)
 
     platforms_allowed = ['facebook', 'instagram']
 
