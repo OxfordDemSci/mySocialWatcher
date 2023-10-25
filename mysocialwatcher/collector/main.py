@@ -4,6 +4,10 @@ from pysocialwatcher import watcherAPI, constants
 
 if __name__ == '__main__':
 
+    logger.info(' ')
+    logger.info('--------------------------------------------------')
+    logger.info(logger.handlers[0].baseFilename)
+
     specs_list = get_specs_list(specs_dir=specs_dir,
                                 data_dir=data_dir)
 
@@ -13,19 +17,15 @@ if __name__ == '__main__':
         # ---- prepare to collect data ---- #
         try:
 
-            logger.info(' ')
-            logger.info('--------------------------------------------------')
+            # data directories
+            os.makedirs(data_dir, exist_ok=True)
+            os.makedirs(os.path.join(data_dir, 'skeleton'), exist_ok=True)
+            os.makedirs(os.path.join(data_dir, 'collecting'), exist_ok=True)
+            os.makedirs(os.path.join(data_dir, 'finished'), exist_ok=True)
 
             specs_filepath = os.path.abspath(os.path.join('specs', specs_filename))
             if specs_filepath is None:
                 raise Exception('Error: Specs filepath does not exist.')
-
-            # data directories
-            os.makedirs(data_dir, exist_ok=True)
-            os.makedirs(log_dir, exist_ok=True)
-            os.makedirs(os.path.join(data_dir, 'skeleton'), exist_ok=True)
-            os.makedirs(os.path.join(data_dir, 'collecting'), exist_ok=True)
-            os.makedirs(os.path.join(data_dir, 'finished'), exist_ok=True)
 
             # temporary file locations
             df_names = get_df_names(data_dir=data_dir, specs_filename=specs_filename)
@@ -84,6 +84,3 @@ if __name__ == '__main__':
         del watcher
 
     logger.info('Finished collection.')
-
-    # Sleep until midnight if collection completed in less than 24 hours
-    # sleep_the_day(start_time=collection_start_time)

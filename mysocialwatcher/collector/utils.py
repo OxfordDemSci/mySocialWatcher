@@ -2,25 +2,25 @@ import os
 import logging
 import datetime
 import json
-from pysocialwatcher.utils import get_all_combinations_from_input
 from time import sleep
 
+# directories
 data_dir = 'data'  # data_dir = 'data/saffron/ukraine_regions'
 specs_dir = 'specs'  # specs_dir = 'docker/collectors/saffron/ukraine_regions/specs'
 
-# start time
-collection_start_time = datetime.datetime.now()
-
 # logging
-log_dir = os.path.join(data_dir, 'logs')
-os.makedirs(log_dir, exist_ok=True)
+os.makedirs(os.path.join(data_dir, 'logs'), exist_ok=True)
 logging.basicConfig(
-    filename=os.path.join(log_dir, collection_start_time.strftime('%Y%m%d_%H%M%S') + '.log'),
+    filename=os.path.join(os.path.join(data_dir, 'logs'),
+                          datetime.datetime.now().strftime('%Y%m%d_%H%M%S') + '.log'),
     format='%(asctime)s (%(levelname)s) - %(message)s',
     datefmt='%d-%b-%y %H:%M:%S',
     filemode='a')
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
+
+# need to config logging before importing from pysocialwatcher, else its logger config will take priority
+from pysocialwatcher.utils import get_all_combinations_from_input
 
 
 def get_specs_list(specs_dir, data_dir):
@@ -97,10 +97,9 @@ def sleep_the_day(start_time):
 
         sleep_duration = tomorrow - now
         if sleep_duration.seconds > 0:
-            logger.info('Sleeping until tomorrow (' + str(sleep_duration) + ').')
             sleep(sleep_duration.seconds)
 
-def estimate_run_time(specs_dir, n_tokens=1, units='d', sleep_time=11):
+def estimate_run_time(specs_dir, n_tokens=1, sleep_time=11):
     runtime = 0
     specs_list = os.listdir(specs_dir)
     for specs_file in specs_list:
