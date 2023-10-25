@@ -201,3 +201,41 @@ order by
     platform, collection_date, geo_level, location_types, language_name;
 
 grant select on data_overview to reader, writer;
+
+
+-- geometries
+drop view if exists geometries;
+
+create view geometries as
+select
+    meta_key as geo_key,
+    'countries' as geo_level,
+    gid_0 as gid,
+    name_0 as name,
+    geometry
+from
+    gadm
+where
+    gadm_level = 'countries'
+union all
+select
+    meta_key as geo_key,
+    'regions' as geo_level,
+    gid_1 as gid,
+    name_1 as name,
+    geometry
+from
+    gadm
+where
+    gadm_level = 'regions'
+union all
+select
+    meta_key as geo_key,
+    'cities' as geo_level,
+    null as gid,
+    name,
+    geometry
+from
+    cities;
+
+grant select on geometries to reader, writer;

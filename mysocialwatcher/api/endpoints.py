@@ -179,9 +179,6 @@ def query_clean(args):
                 'country', 'geo_level', 'geo_key', 'location_types',
                 'language_name', 'language_key']
 
-        if args.get('add_geometry'):
-            cols.append('geometry')
-
         # cast dates to text
         cast_cols = ['contributed_on', 'collection_date']
         for i in range(len(cols)):
@@ -189,12 +186,8 @@ def query_clean(args):
                 cols[i] = cols[i] + '::text'
 
         # table name
+        table = args.pop('table') + '_clean'
         add_geometry = args.pop('add_geometry')
-        if add_geometry:
-            table = args.pop('table') + '_geo'
-        else:
-            table = args.pop('table') + '_clean'
-
 
         # ----  create sql query ---- #
 
@@ -234,36 +227,14 @@ def query_clean(args):
             data = pd.read_sql(sql=sql, con=db.connect())
 
             if add_geometry:
-                geo_sql = ""
-
-                keys = list(set(data['geo_key'][data['geo_level']=='countries']))
-                keystr = ','.join("'{0}'".format(k) for k in keys)
+                keys = list(set(data['geo_key']))
+                keys.sort()
+                keystr = ','.join(f"'{k}'" for k in keys)
                 if len(keys) > 0:
-                    geo_sql += (f"select meta_key as geo_key, 'countries' as geo_level, gid_0 as gid, name_0 as name, geometry"
-                                f" from gadm where meta_key in ({keystr})")
+                    geo_sql = (f"select * from geometries where geo_key in ({keystr});")
 
-                keys = list(set(data['geo_key'][data['geo_level']=='regions']))
-                keystr = ','.join("'{0}'".format(k) for k in keys)
-                if len(keys) > 0:
-                    if len(sql) > 0:
-                        geo_sql += ' union all '
-                    geo_sql += (f"select meta_key::text as geo_key, 'regions' as geo_level, gid_1 as gid, name_1 as name, geometry"
-                                f" from gadm where gadm_level = 1 and meta_key in ({keystr}) union all")
-
-                keys = list(set(data['geo_key'][data['geo_level']=='cities']))
-                keystr = ','.join("'{0}'".format(k) for k in keys)
-                if len(keys) > 0:
-                    if len(sql) > 0:
-                        geo_sql += ' union all '
-                    geo_sql += (f"select meta_key::text as geo_key, 'cities' as geo_level, '' as gid, name, geometry"
-                                f" from cities where meta_key in ({keystr})")
-
-                if len(sql) > 0:
-                    geo_sql += ';'
                     geodata = gpd.read_postgis(sql=geo_sql, con=db.connect(), geom_col='geometry', crs='EPSG:4326')
                     geodata = geodata.to_json()
-
-            data = data.to_json()
 
             if len(data) < limit_rows:
                 status = 200
@@ -272,6 +243,8 @@ def query_clean(args):
                 status = 206
                 message = f'Partial Content: Result truncated to {limit_rows} rows. Revise query to reduce size ' \
                           f'(e.g. specific country, dates, and/or demographics).'
+
+            data = data.to_json()
 
         except Exception as e:
             exc = e.__dict__
