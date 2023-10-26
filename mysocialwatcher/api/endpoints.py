@@ -23,7 +23,7 @@ def query(args):
 
     # check arguments
     result = check_args(args,
-                        required=['token', 'platform'],
+                        required=['token', 'platform', 'valid'],
                         required_oneof=[],
                         optional=['valid', 'country', 'contributor_id', 'collection', 'date_start', 'date_end',
                                   'gender', 'age_min', 'age_max'])
@@ -142,7 +142,7 @@ def query_clean(args):
 
     # check arguments
     result = check_args(args,
-                        required=['token', 'platform'],
+                        required=['token', 'platform', 'valid'],
                         required_oneof=[],
                         optional=['valid', 'country', 'collection_id', 'collection_name',
                                   'date_start', 'date_end',
@@ -179,7 +179,7 @@ def query_clean(args):
                 'country', 'geo_level', 'geo_key', 'location_types',
                 'language_name', 'language_key']
 
-        # cast dates to text
+            # cast dates to text
         cast_cols = ['contributed_on', 'collection_date']
         for i in range(len(cols)):
             if cols[i] in cast_cols:
@@ -272,7 +272,7 @@ def write(args):
 
     # check arguments
     result = check_args(args,
-                        required=['token', 'platform', 'timestamp', 'geo_locations', 'gender', 'age_min', 'dau'],
+                        required=['token', 'platform', 'timestamp', 'geo_locations', 'gender', 'age_min', 'dau', 'valid'],
                         required_oneof=['mau', 'mau_lower', 'mau_upper'],
                         optional=['valid', 'country', 'collection', 'age_max', 'all_fields', 'targeting', 'response'])
     args = result.get('args')
@@ -494,6 +494,70 @@ def monitor(args):
                         del response, result
 
             message = 'OK: Your collections successfully queried.'
+
+        except sqlalchemy.exc.SQLAlchemyError as e:
+            status = e.code
+            message = e._message()
+
+    if db:
+        db.dispose()
+
+    return {'status': status, 'message': message, 'timestamp': timestr(), 'data': data}
+
+
+def data_overview(args):
+    """Process requests to API endpoint '/api/v1/social_media_audience/data_overview' by selecting queried data from a
+    PostgreSQL view.
+    Args:
+        args (dict): Arguments of GET request passed from request.args
+    Examples:
+        - args = {'country': 'PS', 'date_start': '2023-10-05'}
+    Returns:
+        dict: http response compatible with json format
+    """
+
+    # limit response to n rows
+    limit_rows = 100000
+
+    # check arguments
+    result = check_args(args,
+                        required=['country'],
+                        required_oneof=['date_start', 'date_end'],
+                        optional=['language_name', 'geo_level', 'location_types'])
+    args = result.get('args')
+    status = result.get('status')
+    message = result.get('message')
+    data = None
+    db = None
+
+    if status == 200:
+
+        # ----  create sql query ---- #
+
+        # select: from table
+        sql = "SELECT * FROM data_overview WHERE "
+
+        # where: arguments
+        where_args = ['country', 'language_name', 'geo_level', 'location_types']
+
+        for i in set(args.keys()).intersection(where_args):
+            sql += f"{i} = {str(args.get(i))} AND "
+
+        # where: date range
+        if 'date_start' in args.keys():
+            sql += f"collection_date >= {str(args.get('date_start'))} AND "
+        if 'date_end' in args.keys():
+            sql += f"collection_date <= {str(args.get('date_end'))}"
+
+        sql = sql.strip(' AND ') + ';'
+
+        try:
+
+            # query database
+            db = db_engine()
+            data = pd.read_sql(sql=sql, con=db.connect())
+            data = data.to_json()
+            message = 'OK: Your data overview was successfully queried.'
 
         except sqlalchemy.exc.SQLAlchemyError as e:
             status = e.code
