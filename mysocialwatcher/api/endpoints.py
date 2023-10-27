@@ -176,7 +176,7 @@ def query_clean(args):
         cols = ['collection_name', 'collection_id', 'collection_date', 'timestamp',
                 'dau',  'mau', 'mau_lower', 'mau_upper',
                 'gender', 'age_min', 'age_max',
-                'country', 'geo_level', 'geo_key', 'location_types',
+                'country', 'geo_level', 'geo_key','geo_name', 'location_types',
                 'language_name', 'language_key']
 
             # cast dates to text
