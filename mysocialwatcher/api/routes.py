@@ -101,3 +101,17 @@ def monitor_collections_route():
     else:
         result = endpoints.monitor(args)
         return jsonify(result), result.get("status")
+
+
+@app.route('/social_media_audience/data_overview', methods=['GET','POST'])
+@app.route('/data_overview', methods=['GET','POST'])
+def data_overview_route():
+    """API endpoint to monitor collections."""
+    args = dict(request.args)
+    if len(args) == 0:
+        return "<h1>400 Error</h1><p>Bad Request: This API endpoint requires arguments. " \
+               "See <a href='./../'>API documentation</a> for more information.", \
+               400
+    else:
+        result = endpoints.data_overview(args)
+        return jsonify(result), result.get("status")

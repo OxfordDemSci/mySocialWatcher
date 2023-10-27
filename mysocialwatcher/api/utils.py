@@ -99,9 +99,14 @@ def check_args(args, required=[], required_oneof=[], optional=[]):
         dict: http response compatible with json format along with modified args object
     """
 
-    # argument lists (unlisted arguments: token)
-    required_globally = ['valid']
+    # arguments always required
+    for i in ['valid']:
+        if not i in required:
+            required.append(i)
+    if not 'valid' in args.keys():
+        args['valid'] = False
 
+    # argument data types
     integer_args = ['contributor_id', 'collection_id', 'timestamp', 'geo_id', 'geo_key',
                     'gender', 'age_min', 'age_max',
                     'dau', 'mau', 'mau_lower', 'mau_upper']
@@ -111,6 +116,7 @@ def check_args(args, required=[], required_oneof=[], optional=[]):
     quote_args = (['country', 'collection_name', 'language_name', 'geo_level'] +
                   json_args + date_args)
 
+    # platforms
     platforms_allowed = ['facebook', 'instagram']
 
     # initialize response
@@ -121,15 +127,13 @@ def check_args(args, required=[], required_oneof=[], optional=[]):
     args = {key: value for key, value in args.items() if key in required + required_oneof + optional}
 
     # run checks
-    for i in required_globally:
-        if not i in required: required.append(i)
     if not all(i in args.keys() for i in required):
         status = 400
         message = "Bad Request: All of these arguments are required {}.".format(required)
     elif len(required_oneof) > 0 and not any(i in args.keys() for i in required_oneof):
         status = 400
         message = "Bad Request: At least one of these arguments are required {}.".format(required_oneof)
-    elif not args.get('platform').lower() in platforms_allowed:
+    elif 'platform' in args.keys() and not args.get('platform').lower() in platforms_allowed:
         status = 400
         message = "Bad Request: 'platform' must be one of {}.".format(platforms_allowed)
     elif 'country' in args.keys() and (not isinstance(args.get('country'), str) or len(args.get('country')) != 2):
@@ -200,16 +204,17 @@ def check_args(args, required=[], required_oneof=[], optional=[]):
     if status == 200:
 
         # strings to boolean
-        for i in boolean_args:
+        for i in set(args.keys()).intersection(boolean_args):
             if not isinstance(args.get(i), bool):
                 args[i] = str(args.get(i)).lower() in ['true', 't', 'yes', 'y', 'on', '1']
 
         # identify table
-        args['table'] = args['platform']
-        if not args['valid']:
-            args['table'] = args['table'] + '_invalid'
+        if 'platform' in args.keys():
+            args['table'] = args['platform']
+            if not args['valid']:
+                args['table'] = args['table'] + '_invalid'
+            args.pop('platform')
         args.pop('valid')
-        args.pop('platform')
 
         # collection name
         if 'collection' in args.keys():

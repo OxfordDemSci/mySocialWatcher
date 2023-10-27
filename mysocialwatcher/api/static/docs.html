@@ -1212,6 +1212,7 @@ margin-left: 0 !important;
       list_collections</a></li>
       <li><a href="#endpoint-monitor_collections" id="toc-endpoint-monitor_collections">Endpoint:
       monitor_collections</a></li>
+      <li><a href="#endpoint-data_overview" id="toc-endpoint-data_overview">Endpoint: data_overview</a></li>
       <li><a href="#endpoint-write" id="toc-endpoint-write">Endpoint:
       write</a></li>
       <li><a href="#postgresql" id="toc-postgresql">PostgreSQL</a></li>
@@ -1395,7 +1396,7 @@ database</td>
 }</code></pre>
 <p><strong>Examples</strong></p>
 <p><em>Query data using a url:</em></p>
-<pre><code>http://18.135.72.18/api/v1/query?platform=facebook&amp;country=GB&amp;gender=0&amp;date_start=2020-03-11</code></pre>
+<pre><code>http://18.135.72.18/api/v1/query?platform=facebook&amp;country=GB&amp;gender=0&amp;date_start=2020-03-11&amp;date_end=2020-03-12</code></pre>
 <p><em>Query data from Python:</em></p>
 <pre><code># import packages
 import requests
@@ -1614,7 +1615,7 @@ values will be treated as: false.</td>
 </tbody>
 </table>
 <p><strong>API Response</strong><br />
-The API will return a json response with four elements:</p>
+The API will return a json response with five elements:</p>
 <table>
 <colgroup>
 <col width="20%" />
@@ -1658,6 +1659,82 @@ locations in data</td>
   &quot;timestamp&quot;: &quot;2022-01-03 18:30:26+00&quot;,
   &quot;data&quot;: &#39;{&quot;id&quot;:{&quot;0&quot;:1362778,&quot;1&quot;:1362779,&quot;2&quot;:1362780,&quot;3&quot;:1362781, ... }&#39;,
   &quot;geodata&quot;: &#39;{&quot;type&quot;: &quot;FeatureCollection&quot;, &quot;features&quot;: [{&quot;id&quot;: &quot;0&quot;, ... }&#39;
+}</code></pre>
+<p><strong>Examples</strong></p>
+<p><em>Query data using a url:</em></p>
+<pre><code>http://18.135.72.18/api/v1/query_clean?platform=facebook&amp;country=GB&amp;gender=0&amp;date_start=2020-03-11&amp;date_end=2020-03-12</code></pre>
+<p><em>Query data from Python:</em></p>
+<pre><code># import packages
+import requests
+import pandas as pd
+
+# query arguments
+args = {
+  &quot;token&quot;: &quot;xxxxxxxxx&quot;,
+  &quot;platform&quot;: &quot;facebook&quot;,
+  &quot;country&quot;: &quot;GB&quot;,
+  &quot;gender&quot;: &quot;0&quot;,
+  &quot;date_start&quot;: &quot;2020-03-11&quot;
+  }
+
+# submit query as GET request
+response = requests.get(url=&#39;http://18.135.72.18/api/v1/query_clean&#39;, params=args)
+
+# format response as dictionary
+response = response.json()
+
+# check status
+print(response.get(&#39;status&#39;))
+print(response.get(&#39;message&#39;))
+
+# extract data as pandas dataframe
+if response.get(&#39;status&#39;) == 200:
+  data = pd.DataFrame(json.loads(response.get(&#39;data&#39;)))</code></pre>
+<p><strong>Query data from R:</strong></p>
+<pre><code># import packages
+library(&#39;httr&#39;)
+library(&#39;jsonlite&#39;)
+options(scipen = 999)
+
+# query arguments
+args &lt;- list(token = &quot;xxxxxxxxx&quot;,
+             platform = &quot;facebook&quot;,
+             country = &quot;GB&quot;,
+             gender = 0,
+             date_start = &quot;2020-03-11&quot;)
+
+# submit query as GET request
+response &lt;- httr::GET(url = &#39;http://18.135.72.18/&#39;, 
+                      path = &#39;api/v1/query_clean&#39;,
+                      query = args)
+
+# format response as list
+response &lt;- jsonlite::fromJSON(httr::content(response, as=&#39;text&#39;))
+
+# check status
+print(response$status)
+print(response$message)
+
+# extract data in various formats
+if(response$status == 200){
+  
+  # json string
+  data &lt;- response$data
+  
+  # json -&gt; list of lists
+  data &lt;- jsonlite::fromJSON(data)
+  
+  # list of lists -&gt; data.frame with cells containing lists
+  # note: this is a convenient format for dealing with JSONs for some data.frame cells in R.
+  data &lt;- as.data.frame(do.call(cbind, data))
+  
+  # unlist data
+  for(name in names(data)){
+    not_nulls &lt;- which(!unlist(lapply(data[,name], is.null)))
+    res &lt;- rep(NA, length(data[,name]))
+    res[not_nulls] &lt;- unlist(data[,name])
+    data[,name] &lt;- res
+  }
 }</code></pre>
 </div>
 <div id="endpoint-list_collections" class="section level2">
@@ -1741,7 +1818,7 @@ collections that were written into the database over the past several
 days.</p>
 <p>URL: <code>http://18.135.72.18/api/v1/monitor_collections</code></p>
 <p>Arguments syntax:
-<code>http://18.135.72.18/api/v1/monitor_collections?token=12345&amp;days=7</code></p>
+<code>http://18.135.72.18/api/v1/monitor_collections?token=12345&amp;days=3</code></p>
 <p><strong>Note:</strong> An API token is required to access this
 endpoint. Please contact <a href="mailto:douglas.leasure@demography.ox.ac.uk">douglas.leasure@demography.ox.ac.uk</a>
 for more information.</p>
@@ -1831,6 +1908,125 @@ database</td>
   &quot;status&quot;: &quot;200&quot;,
   &quot;timestamp&quot;: &quot;2022-01-03 18:30:26+00&quot;,
   &quot;data&quot;: &#39;{&quot;migrationuk_tue_men&quot;: {&quot;collection_id&quot;: 12, &quot;2022-12-21&quot;: {&quot;facebook&quot;: 0, &quot;instagram&quot;: 0}, ...}}&#39;
+}</code></pre>
+</div>
+<div id="endpoint-data_overview" class="section level2">
+<h2>Endpoint: data_overview</h2>
+<p>This API endpoint returns an overview of all data in the database for
+a selected country.</p>
+<p>URL: <code>http://18.135.72.18/api/v1/data_overview</code></p>
+<p>Arguments syntax:
+<code>http://18.135.72.18/api/v1/data_overview?country=PS&amp;date_start=2023-10-07&amp;date_end=2023-10-20</code></p>
+<p><strong>API Arguments</strong></p>
+<p><em>Required Arguments</em></p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Argument</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">country</td>
+<td align="left">A single country code using ISO-2 format (see
+<a href="https://www.iban.com/country-codes">https://www.iban.com/country-codes</a>).</td>
+</tr>
+</tbody>
+</table>
+<p><em>Require at least one of these arguments</em></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Argument</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">date_start</td>
+<td align="left">Daily active users</td>
+</tr>
+<tr class="even">
+<td align="left">date_end</td>
+<td align="left">Monthly active user</td>
+</tr>
+</tbody>
+</table>
+<p><em>Optional Arguments</em></p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Argument</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">language_name</td>
+<td align="left">Return results that used the specified language name
+(from Meta) as a targeting parameter.</td>
+</tr>
+<tr class="even">
+<td align="left">geo_level</td>
+<td align="left">Geographic level. Acceptable values: ‘countries’,
+‘regions’, ‘cities’</td>
+</tr>
+<tr class="odd">
+<td align="left">location_types</td>
+<td align="left">Location types (from Meta). Acceptable values:
+‘[“home”]’, ‘[“recent”]’, ‘[“travel_in”]’, ‘[“home”, “recent”]’, or
+other combinations/orders.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>API Response</strong><br />
+The API will return a json response with four elements:</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Element</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">status</td>
+<td align="left">http status code</td>
+</tr>
+<tr class="even">
+<td align="left">message</td>
+<td align="left">Message describing outcome of operation writing to the
+database</td>
+</tr>
+<tr class="odd">
+<td align="left">timestamp</td>
+<td align="left">Date and time of response</td>
+</tr>
+<tr class="even">
+<td align="left">data</td>
+<td align="left">Data resulting from query in json format</td>
+</tr>
+</tbody>
+</table>
+<p>For example:</p>
+<pre><code>{
+  &quot;message&quot;: &quot;OK: Your collections successfully queried.&quot;,
+  &quot;status&quot;: &quot;200&quot;,
+  &quot;timestamp&quot;: &quot;2022-01-03 18:30:26+00&quot;,
+  &quot;data&quot;: &quot;{\&quot;collection_date\&quot;:{\&quot;0\&quot;:1696636800000,\&quot;1\&quot;:...}
 }</code></pre>
 </div>
 <div id="endpoint-write" class="section level2">

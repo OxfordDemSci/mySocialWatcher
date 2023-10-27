@@ -173,11 +173,15 @@ select
     location_types,
     geo_level,
     language_name,
-    count(distinct(geo_name)) as nb_location,
     count(distinct(gender)) as nb_gender,
-    count(distinct(concat(age_min, age_max))) as nb_agegroup
+    count(distinct(concat(age_min, age_max))) as nb_agegroup,
+    case
+        when count(distinct(geo_name)) =0 then 1
+        else count(distinct(geo_name))
+      end as nb_location,
+      count(distinct(geometry)) as nb_geometry
 from
-    facebook_clean
+    facebook_geo
 group by
     collection_date, country, location_types, language_name, geo_level
 
@@ -190,11 +194,15 @@ select
     location_types,
     geo_level,
     language_name,
-    count(distinct(geo_name)) as nb_location,
     count(distinct(gender)) as nb_gender,
-    count(distinct(concat(age_min, age_max))) as nb_agegroup
+    count(distinct(concat(age_min, age_max))) as nb_agegroup,
+    case
+        when count(distinct(geo_name)) =0 then 1
+        else count(distinct(geo_name))
+      end as nb_location,
+      count(distinct(geometry)) as nb_geometry
 from
-    instagram_clean
+    instagram_geo
 group by
     collection_date, country, location_types, language_name, geo_level
 order by
