@@ -113,7 +113,7 @@ def check_args(args, required=[], required_oneof=[], optional=[]):
     json_args = ['geo_locations', 'all_fields', 'targeting', 'response', 'language_key']
     boolean_args = ['valid', 'add_geometry']
     date_args = ['date_start', 'date_end', 'collection_date']
-    quote_args = (['country', 'collection_name', 'language_name', 'geo_level'] +
+    quote_args = (['country', 'collection_name', 'language_name', 'geo_level', 'location_types'] +
                   json_args + date_args)
 
     # platforms
