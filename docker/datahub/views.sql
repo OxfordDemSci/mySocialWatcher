@@ -1,5 +1,5 @@
 -- view: facebook_clean --
-drop view if exists facebook_clean;
+drop view if exists facebook_clean cascade;
 
 create view facebook_clean as
 select
@@ -15,8 +15,14 @@ select
 	trim(both '"' from (geo_locations -> 'values')[0]::text) as geo_key,
 	(geo_locations -> 'values')[0] ->> 'name' as geo_name,
 	geo_locations ->> 'location_types' as location_types,
-	all_fields -> 'languages' ->> 'name' as language_name,
-	all_fields -> 'languages' ->> 'values' as language_key
+	case
+        when all_fields -> 'languages' ->> 'name' is null then 'all'
+        else all_fields -> 'languages' ->> 'name'
+        end as language_name,
+	case
+	    when all_fields -> 'languages' ->> 'values' is null then '[]'
+	    else all_fields -> 'languages' ->> 'values'
+	    end as language_key
 from
  	facebook
 inner join
@@ -39,8 +45,14 @@ select
 	(geo_locations -> 'values')[0] ->> 'key'::text as geo_key,
 	(geo_locations -> 'values')[0] ->> 'name' as geo_name,
 	geo_locations ->> 'location_types' as location_types,
-	all_fields -> 'languages' ->> 'name' as language_name,
-	all_fields -> 'languages' ->> 'values' as language_key
+	case
+        when all_fields -> 'languages' ->> 'name' is null then 'all'
+        else all_fields -> 'languages' ->> 'name'
+        end as language_name,
+	case
+	    when all_fields -> 'languages' ->> 'values' is null then '[]'
+	    else all_fields -> 'languages' ->> 'values'
+	    end as language_key
 from
  	facebook
 inner join
@@ -52,7 +64,7 @@ grant select on facebook_clean to reader, writer;
 
 
 -- view: facebook with geometries --
-drop view if exists facebook_geo;
+drop view if exists facebook_geo cascade;
 
 create view
 	facebook_geo as
@@ -82,7 +94,7 @@ grant select on facebook_geo to reader, writer;
 
 
 -- view: instagram_clean --
-drop view if exists instagram_clean;
+drop view if exists instagram_clean cascade;
 
 create view instagram_clean as
 select
@@ -98,8 +110,14 @@ select
 	trim(both '"' from (geo_locations -> 'values')[0]::text) as geo_key,
 	(geo_locations -> 'values')[0] ->> 'name' as geo_name,
 	geo_locations ->> 'location_types' as location_types,
-	all_fields -> 'languages' ->> 'name' as language_name,
-	all_fields -> 'languages' ->> 'values' as language_key
+	case
+        when all_fields -> 'languages' ->> 'name' is null then 'all'
+        else all_fields -> 'languages' ->> 'name'
+        end as language_name,
+	case
+	    when all_fields -> 'languages' ->> 'values' is null then '[]'
+	    else all_fields -> 'languages' ->> 'values'
+	    end as language_key
 from
  	instagram
 left join
@@ -122,8 +140,14 @@ select
 	(geo_locations -> 'values')[0] ->> 'key'::text as geo_key,
 	(geo_locations -> 'values')[0] ->> 'name' as geo_name,
 	geo_locations ->> 'location_types' as location_types,
-	all_fields -> 'languages' ->> 'name' as language_name,
-	all_fields -> 'languages' ->> 'values' as language_key
+	case
+        when all_fields -> 'languages' ->> 'name' is null then 'all'
+        else all_fields -> 'languages' ->> 'name'
+        end as language_name,
+	case
+	    when all_fields -> 'languages' ->> 'values' is null then '[]'
+	    else all_fields -> 'languages' ->> 'values'
+	    end as language_key
 from
  	instagram
 left join
@@ -135,7 +159,7 @@ grant select on instagram_clean to reader, writer;
 
 
 -- view: instagram with geometries --
-drop view if exists instagram_geo;
+drop view if exists instagram_geo cascade;
 
 create view
 	instagram_geo as
@@ -163,7 +187,7 @@ grant select on instagram_geo to reader, writer;
 
 
 -- data overview --
-drop view if exists data_overview;
+drop view if exists data_overview cascade;
 
 create view data_overview as
 select
@@ -178,8 +202,8 @@ select
     case
         when count(distinct(geo_name)) =0 then 1
         else count(distinct(geo_name))
-      end as nb_location,
-      count(distinct(geometry)) as nb_geometry
+      	end as nb_location,
+    count(distinct(geometry)) as nb_geometry
 from
     facebook_geo
 group by
@@ -224,10 +248,12 @@ select
 from
     gadm
 where
-    gadm_level = 'countries'
+    gadm_level = 0
+
 union all
+
 select
-    meta_key as geo_key,
+    meta_key::text as geo_key,
     'regions' as geo_level,
     gid_1 as gid,
     name_1 as name,
@@ -235,10 +261,12 @@ select
 from
     gadm
 where
-    gadm_level = 'regions'
+    gadm_level = 1
+
 union all
+
 select
-    meta_key as geo_key,
+    meta_key::text as geo_key,
     'cities' as geo_level,
     null as gid,
     name,
