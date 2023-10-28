@@ -1,4 +1,4 @@
--- view: facebook_clean
+-- view: facebook_clean --
 drop view if exists facebook_clean;
 
 create view facebook_clean as
@@ -51,7 +51,7 @@ where
 grant select on facebook_clean to reader, writer;
 
 
--- view: facebook with geometries
+-- view: facebook with geometries --
 drop view if exists facebook_geo;
 
 create view
@@ -81,7 +81,7 @@ grant select on facebook_geo to reader, writer;
 
 
 
--- view: instagram_clean
+-- view: instagram_clean --
 drop view if exists instagram_clean;
 
 create view instagram_clean as
@@ -134,7 +134,7 @@ where
 grant select on instagram_clean to reader, writer;
 
 
--- view: instagram with geometries
+-- view: instagram with geometries --
 drop view if exists instagram_geo;
 
 create view
@@ -162,7 +162,7 @@ where
 grant select on instagram_geo to reader, writer;
 
 
-#---- data overview ----#
+-- data overview --
 drop view if exists data_overview;
 
 create view data_overview as
@@ -211,7 +211,7 @@ order by
 grant select on data_overview to reader, writer;
 
 
--- geometries
+-- geometries --
 drop view if exists geometries;
 
 create view geometries as
