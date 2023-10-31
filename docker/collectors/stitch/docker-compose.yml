@@ -23,6 +23,16 @@ services:
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
+  gaza_cities_homerecent:
+    container_name: gaza_cities_homerecent
+    volumes:
+      - ./gaza_cities_homerecent:/app/in
+      - ./../../../data/stitch/gaza_cities_homerecent:/app/data
+    build:
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
   westbank_cities:
     container_name: westbank_cities
     volumes:
