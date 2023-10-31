@@ -72,7 +72,7 @@ if __name__ == '__main__':
 
         # location types
         for i in range(len(specs['geo_locations'])):
-            specs['geo_locations'][i]['location_types'] = ['home', 'recent']
+            specs['geo_locations'][i]['location_types'] = None
 
         # age groups
         specs['ages_ranges'] = [
@@ -142,9 +142,6 @@ if __name__ == '__main__':
     #                 "radius": 0
     #             }
     #         ],
-    #         "location_types": [
-    #             "recent"
-    #         ]
     #     })
     #
     # # age groups
@@ -212,9 +209,6 @@ if __name__ == '__main__':
                     "distance_unit": "kilometer",
                     "radius": 0
                 }
-            ],
-            "location_types": [
-                "recent"
             ]
         })
 
@@ -285,9 +279,6 @@ if __name__ == '__main__':
                     "distance_unit": "kilometer",
                     "radius": 0
                 }
-            ],
-            "location_types": [
-                "recent"
             ]
         })
 
