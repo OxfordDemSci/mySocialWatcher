@@ -76,9 +76,6 @@ if __name__ == '__main__':
                     "distance_unit": "kilometer",
                     "radius": 0
                 }
-            ],
-            "location_types": [
-                "home", "recent"
             ]
         })
 
