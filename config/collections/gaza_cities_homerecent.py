@@ -59,8 +59,9 @@ if __name__ == '__main__':
         specs = json.load(f)
     specs['name'] = collection
 
-    platforms = ['facebook', 'instagram']
-    languages = {'hebrew':29, 'arabic':28}
+    # location types
+    for i in range(len(specs['geo_locations'])):
+        specs['geo_locations'][i]['location_types'] = None
 
     # cities
     for index, row in ps_cities.iterrows():
@@ -81,6 +82,9 @@ if __name__ == '__main__':
 
     # age groups
     specs['ages_ranges'].append({'min': 18, 'max': 34})
+
+    platforms = ['facebook', 'instagram']
+    languages = {'hebrew': 29, 'arabic': 28}
 
     i = 0
     for platform in platforms:
