@@ -108,71 +108,71 @@ if __name__ == '__main__':
 
     #---- gaza cities ----#
 
-    # full city list
-    ps_cities = pd.read_csv('config/specs/specs_explore/targets_csv/city.csv')
-    ps_cities = ps_cities.loc[ps_cities['country_code'].eq('PS') &
-                              ps_cities['type'].eq('city') &
-                              ps_cities['region'].eq('Gaza Strip')]
-
-    #-- template specs --#
-    specs_file = os.path.join(specs_template_path, 'PS_regions.json')
-    if not os.path.exists(specs_file):
-        print('Specs template does not exist: ' + specs_file)
-
-    # template json
-    with open(specs_file) as f:
-        specs = json.load(f)
-    specs['name'] = collection
-
-    platforms = ['facebook', 'instagram']
-    languages = {'hebrew':29, 'arabic':28}
-
-    # cities
-    for index, row in ps_cities.iterrows():
-        specs['geo_locations'].append({
-            "name": "cities",
-            "values": [
-                {
-                    "key": row['key'],
-                    "region": row['region'],
-                    "region_id": row['region_id'],
-                    "country_code": row['country_code'],
-                    "name": row['name'],
-                    "distance_unit": "kilometer",
-                    "radius": 0
-                }
-            ],
-            "location_types": [
-                "recent"
-            ]
-        })
-
-    # age groups
-    specs['ages_ranges'].append({'min': 18, 'max': 34})
-
-    for platform in platforms:
-        specs_count += 1
-
-        #-- all languages --#
-        specs["publisher_platforms"] = [platform]
-        specs['languages'] = [None]
-
-        file_out = os.path.join(specs_dir, '_'.join([str(specs_count).zfill(2), 'gaza_cities', platform]) + '.json')
-        with open(file_out, "w") as f:
-            f.write(json.dumps(specs))
-
-
-        # specific languages
-        for language in languages.keys():
-            specs_count += 1
-
-            # customise specs by platform and country
-            specs["publisher_platforms"] = [platform]
-            specs['languages'] = [{'name': language, 'values': [languages[language]]}]
-
-            file_out = os.path.join(specs_dir, '_'.join([str(specs_count).zfill(2), 'gaza_cities', platform, language]) + '.json')
-            with open(file_out, "w") as f:
-                f.write(json.dumps(specs))
+    # # full city list
+    # ps_cities = pd.read_csv('config/specs/specs_explore/targets_csv/city.csv')
+    # ps_cities = ps_cities.loc[ps_cities['country_code'].eq('PS') &
+    #                           ps_cities['type'].eq('city') &
+    #                           ps_cities['region'].eq('Gaza Strip')]
+    #
+    # #-- template specs --#
+    # specs_file = os.path.join(specs_template_path, 'PS_regions.json')
+    # if not os.path.exists(specs_file):
+    #     print('Specs template does not exist: ' + specs_file)
+    #
+    # # template json
+    # with open(specs_file) as f:
+    #     specs = json.load(f)
+    # specs['name'] = collection
+    #
+    # platforms = ['facebook', 'instagram']
+    # languages = {'hebrew':29, 'arabic':28}
+    #
+    # # cities
+    # for index, row in ps_cities.iterrows():
+    #     specs['geo_locations'].append({
+    #         "name": "cities",
+    #         "values": [
+    #             {
+    #                 "key": row['key'],
+    #                 "region": row['region'],
+    #                 "region_id": row['region_id'],
+    #                 "country_code": row['country_code'],
+    #                 "name": row['name'],
+    #                 "distance_unit": "kilometer",
+    #                 "radius": 0
+    #             }
+    #         ],
+    #         "location_types": [
+    #             "recent"
+    #         ]
+    #     })
+    #
+    # # age groups
+    # specs['ages_ranges'].append({'min': 18, 'max': 34})
+    #
+    # for platform in platforms:
+    #     specs_count += 1
+    #
+    #     #-- all languages --#
+    #     specs["publisher_platforms"] = [platform]
+    #     specs['languages'] = [None]
+    #
+    #     file_out = os.path.join(specs_dir, '_'.join([str(specs_count).zfill(2), 'gaza_cities', platform]) + '.json')
+    #     with open(file_out, "w") as f:
+    #         f.write(json.dumps(specs))
+    #
+    #
+    #     # specific languages
+    #     for language in languages.keys():
+    #         specs_count += 1
+    #
+    #         # customise specs by platform and country
+    #         specs["publisher_platforms"] = [platform]
+    #         specs['languages'] = [{'name': language, 'values': [languages[language]]}]
+    #
+    #         file_out = os.path.join(specs_dir, '_'.join([str(specs_count).zfill(2), 'gaza_cities', platform, language]) + '.json')
+    #         with open(file_out, "w") as f:
+    #             f.write(json.dumps(specs))
 
 
     #---- lebanon cities ----#
