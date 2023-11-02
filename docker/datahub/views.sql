@@ -14,7 +14,10 @@ select
 	geo_locations ->> 'name' as geo_level,
 	trim(both '"' from (geo_locations -> 'values')[0]::text) as geo_key,
 	(geo_locations -> 'values')[0] ->> 'name' as geo_name,
-	geo_locations ->> 'location_types' as location_types,
+	case
+	when geo_locations ->> 'location_types' is null then '["home", "recent"]'
+	else geo_locations ->> 'location_types' 
+	as location_types,
 	case
         when all_fields -> 'languages' ->> 'name' is null then 'all'
         else all_fields -> 'languages' ->> 'name'
@@ -44,7 +47,10 @@ select
 	geo_locations ->> 'name' as geo_level,
 	(geo_locations -> 'values')[0] ->> 'key'::text as geo_key,
 	(geo_locations -> 'values')[0] ->> 'name' as geo_name,
-	geo_locations ->> 'location_types' as location_types,
+	case
+	when geo_locations ->> 'location_types' is null then '["home", "recent"]'
+	else geo_locations ->> 'location_types' 
+	as location_types,
 	case
         when all_fields -> 'languages' ->> 'name' is null then 'all'
         else all_fields -> 'languages' ->> 'name'
@@ -109,7 +115,10 @@ select
 	geo_locations ->> 'name' as geo_level,
 	trim(both '"' from (geo_locations -> 'values')[0]::text) as geo_key,
 	(geo_locations -> 'values')[0] ->> 'name' as geo_name,
-	geo_locations ->> 'location_types' as location_types,
+	case
+	when geo_locations ->> 'location_types' is null then '["home", "recent"]'
+	else geo_locations ->> 'location_types' 
+	as location_types,
 	case
         when all_fields -> 'languages' ->> 'name' is null then 'all'
         else all_fields -> 'languages' ->> 'name'
@@ -139,7 +148,10 @@ select
 	geo_locations ->> 'name' as geo_level,
 	(geo_locations -> 'values')[0] ->> 'key'::text as geo_key,
 	(geo_locations -> 'values')[0] ->> 'name' as geo_name,
-	geo_locations ->> 'location_types' as location_types,
+	case
+	when geo_locations ->> 'location_types' is null then '["home", "recent"]'
+	else geo_locations ->> 'location_types' 
+	as location_types,
 	case
         when all_fields -> 'languages' ->> 'name' is null then 'all'
         else all_fields -> 'languages' ->> 'name'
