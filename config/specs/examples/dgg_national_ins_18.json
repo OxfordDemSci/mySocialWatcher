@@ -1,7 +1,7 @@
 {
-    "name": "all countries",
+    "name": "instagram all countries_all",
     "publisher_platforms": [
-        "facebook"
+        "instagram"
     ],
     "geo_locations": [
         {
@@ -2225,29 +2225,8 @@
         }
     ],
     "genders": [
+        0,
         1,
         2
-    ],
-    "behavior": {
-        "access_device": [
-            {
-                "name": "Android",
-                "or": [
-                    6004386044572
-                ]
-            },
-            {
-                "name": "Facebook access (mobile): Apple (iOS) devices",
-                "or": [
-                    6004384041172
-                ]
-            },
-            {
-                "name": "Facebook access (mobile): all mobile devices",
-                "or": [
-                    6004382299972
-                ]
-            }
-        ]
-    }
+    ]
 }
