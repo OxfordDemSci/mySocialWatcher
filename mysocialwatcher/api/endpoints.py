@@ -173,7 +173,7 @@ def query_clean(args):
     if status == 200:
 
         # list query columns
-        cols = ['collection_name', 'collection_id', 'collection_date', 'timestamp',
+        cols = ['collection_name', 'collection_id', 'contributor_id', 'collection_date', 'timestamp',
                 'dau',  'mau', 'mau_lower', 'mau_upper',
                 'gender', 'age_min', 'age_max',
                 'country', 'geo_level', 'geo_key','geo_name', 'location_types',
@@ -196,7 +196,7 @@ def query_clean(args):
 
         # where: arguments
         where_args = ['country', 'gender', 'age_min', 'age_max',
-                     'collection_name', 'language_name', 'language_key',
+                     'collection_name', 'collection_id', 'language_name', 'language_key',
                      'geo_level', 'geo_key', 'geo_name', 'location_types']
 
         for i in set(args.keys()).intersection(where_args):
@@ -207,10 +207,6 @@ def query_clean(args):
             sql += f"collection_date >= {str(args.get('date_start'))} AND "
         if 'date_end' in args.keys():
             sql += f"collection_date <= {str(args.get('date_end'))} AND "
-
-        # where: collection_id from collection name
-        if 'collection_id' in args.keys():
-            sql += f"collection_id = (SELECT id FROM collections WHERE name = '{args.get('collection')}') AND "
 
         # where: access permissions for collaborators' data or entire collections
         sql += "(" + \
