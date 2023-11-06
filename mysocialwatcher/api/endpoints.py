@@ -534,8 +534,18 @@ def data_overview(args):
 
         # ----  create sql query ---- #
 
+        # list query columns
+        cols = ['collection_date', 'platform', 'country', 'location_types', 'geo_level', 'language_name',
+                'nb_gender', 'nb_agegroup', 'nb_location', 'nb_geometry']
+
+            # cast dates to text
+        cast_cols = ['collection_date']
+        for i in range(len(cols)):
+            if cols[i] in cast_cols:
+                cols[i] = cols[i] + '::text'
+
         # select: from table
-        sql = "SELECT * FROM data_overview WHERE "
+        sql = "SELECT " + ",".join(cols) + " FROM data_overview WHERE "
 
         # where: arguments
         where_args = ['country', 'language_name', 'geo_level', 'location_types']
