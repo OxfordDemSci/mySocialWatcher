@@ -7,7 +7,6 @@ vm = 'badger' # to be changed
 
 collection = 'dgg_national_ins'
 
-
 if __name__ == '__main__':
 
     # ---- paths ---- #

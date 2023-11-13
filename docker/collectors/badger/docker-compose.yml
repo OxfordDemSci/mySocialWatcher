@@ -23,13 +23,14 @@ services:
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
-  dgg_subnational:
-    container_name: dgg_subnational
+  dgg_national_home_recent:
+    container_name: dgg_national_home_recent
     volumes:
-      - ./dgg_subnational:/app/in
-      - ./../../../data/badger/dgg_subnational:/app/data
+      - ./dgg_national_home_recent:/app/in
+      - ./../../../data/badger/dgg_national_home_recent:/app/data
     build:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
+
 

@@ -16,7 +16,10 @@ approved credentials for access.
 ## Overview of all endpoints
 
 **./api/v1/query**  
-Returns social media audience estimates for specific locations, dates, and demographic groups.
+Returns social media audience estimates in raw data format (i.e. from pySocialWatcher) for specific locations, dates, and demographic groups.
+
+**./api/v1/query_clean**  
+Returns social media audience estimates in a cleaned format for specific locations, dates, and demographic groups.
 
 **./api/v1/list_collections**  
 List all collection names that you have permission to access.
@@ -89,7 +92,7 @@ For example:
 
 *Query data using a url:*  
 ```
-http://18.135.72.18/api/v1/query?platform=facebook&country=GB&gender=0&date_start=2020-03-11
+http://18.135.72.18/api/v1/query?platform=facebook&country=GB&gender=0&date_start=2020-03-11&date_end=2020-03-12
 ```
 
 *Query data from Python:*  
@@ -183,6 +186,160 @@ if(response$status == 200){
 ```
 
 
+## Endpoint: query_clean
+
+This API endpoint is for querying data from *social_media_audience* database. 
+It returns a cleaned version of the raw data, and you can optionally add spatial 
+geometries to the result. 
+
+**Note:** If your query results exceed 100,000 rows, then only the first 100,000 
+will be returned along with a status code of 206 (partial content) rather than a 
+success code (200).
+
+URL: `http://18.135.72.18/api/v1/query_clean`  
+
+Arguments syntax: `http://18.135.72.18/api/v1/query_clean?argument1=value1&argument2=value2`  
+
+
+**API Arguments**  
+
+*Required Arguments*  
+
+Argument | Description
+|:-- |:-----------
+token | API token for read access (contact [douglas.leasure@demography.ox.ac.uk](mailto:douglas.leasure@demography.ox.ac.uk))
+platform | Name of platform where data were collected. Acceptable values: facebook, instagram
+
+*Optional Arguments*  
+
+Argument | Description 
+|:-- |:----------- 
+add_geometry | Attach geometries to the result as a geojson? Default = False. Acceptable values = True, False.
+country | A single country code using ISO-2 format (see <a href="https://www.iban.com/country-codes">https://www.iban.com/country-codes</a>). If omitted, all countries will be returned, but please note that this may result in longer processing time.
+gender | Gender of the population represented by data. Acceptable values: 0, 1, 2, where 0=all, 1=male, 2=female.
+age_min | Lower bound of age of the audience size reported. Default = 0.
+age_max | Upper bound of age of the audience size reported. Default = 999.
+date_start | Earliest date to include in the query result
+date_end | Latest date to include in the query result
+language_name | Return results that used the specified language name (from Meta) as a targeting parameter.
+language_key | Return results that used the specified language key (from Meta) as a targeting parameter.
+geo_level | Geographic level. Acceptable values: 'countries', 'regions', 'cities'
+geo_key | Geographic key (from Meta) for locations to return.
+geo_name | Name of geographies (from Meta) to return.
+location_types | Location types (from Meta). Acceptable values: '["home"]', '["recent"]', '["travel_in"]', '["home", "recent"]', or other combinations/orders. 
+collection | The name of a collection from which you would like to return data. The names of all collections can be obtained from the [collections endpoint](#endpoint-list_collections).
+contributor_id | ID number of contributor whose data you would like to return
+valid | Return only data marked as valid by contributors? Default = true. Acceptable values: true, t, yes, y, on, 1. All other values will be treated as: false.
+
+**API Response**  
+The API will return a json response with five elements:
+
+Element | Description 
+|:-- |:----------- 
+status | http status code
+message | Message describing outcome of operation writing to the database
+timestamp | Date and time of response
+data | Data resulting from query in json format
+geodata | Geojson with spatial geometries corresponding to the locations in data
+
+For example:
+```
+{
+  "message": "OK: Data successfully selected from database.",
+  "status": "200",
+  "timestamp": "2022-01-03 18:30:26+00",
+  "data": '{"id":{"0":1362778,"1":1362779,"2":1362780,"3":1362781, ... }',
+  "geodata": '{"type": "FeatureCollection", "features": [{"id": "0", ... }'
+}
+```
+
+**Examples**
+
+*Query data using a url:*  
+```
+http://18.135.72.18/api/v1/query_clean?platform=facebook&country=GB&gender=0&date_start=2020-03-11&date_end=2020-03-12
+```
+
+*Query data from Python:*  
+```
+# import packages
+import requests
+import pandas as pd
+
+# query arguments
+args = {
+  "token": "xxxxxxxxx",
+  "platform": "facebook",
+  "country": "GB",
+  "gender": "0",
+  "date_start": "2020-03-11"
+  }
+
+# submit query as GET request
+response = requests.get(url='http://18.135.72.18/api/v1/query_clean', params=args)
+
+# format response as dictionary
+response = response.json()
+
+# check status
+print(response.get('status'))
+print(response.get('message'))
+
+# extract data as pandas dataframe
+if response.get('status') == 200:
+  data = pd.DataFrame(json.loads(response.get('data')))
+```
+
+**Query data from R:**  
+
+```
+# import packages
+library('httr')
+library('jsonlite')
+options(scipen = 999)
+
+# query arguments
+args <- list(token = "xxxxxxxxx",
+             platform = "facebook",
+             country = "GB",
+             gender = 0,
+             date_start = "2020-03-11")
+
+# submit query as GET request
+response <- httr::GET(url = 'http://18.135.72.18/', 
+                      path = 'api/v1/query_clean',
+                      query = args)
+
+# format response as list
+response <- jsonlite::fromJSON(httr::content(response, as='text'))
+
+# check status
+print(response$status)
+print(response$message)
+
+# extract data in various formats
+if(response$status == 200){
+  
+  # json string
+  data <- response$data
+  
+  # json -> list of lists
+  data <- jsonlite::fromJSON(data)
+  
+  # list of lists -> data.frame with cells containing lists
+  # note: this is a convenient format for dealing with JSONs for some data.frame cells in R.
+  data <- as.data.frame(do.call(cbind, data))
+  
+  # unlist data
+  for(name in names(data)){
+    not_nulls <- which(!unlist(lapply(data[,name], is.null)))
+    res <- rep(NA, length(data[,name]))
+    res[not_nulls] <- unlist(data[,name])
+    data[,name] <- res
+  }
+}
+```
+
 ## Endpoint: list_collections
 
 This API endpoint returns a list of all collection names that you currently have 
@@ -236,7 +393,7 @@ were written into the database over the past several days.
 
 URL: `http://18.135.72.18/api/v1/monitor_collections`  
 
-Arguments syntax: `http://18.135.72.18/api/v1/monitor_collections?token=12345&days=7`  
+Arguments syntax: `http://18.135.72.18/api/v1/monitor_collections?token=12345&days=3`  
 
 **Note:** An API token is required to access this endpoint. Please contact [douglas.leasure@demography.ox.ac.uk](mailto:douglas.leasure@demography.ox.ac.uk) for more information.
 
@@ -275,6 +432,61 @@ For example:
   "status": "200",
   "timestamp": "2022-01-03 18:30:26+00",
   "data": '{"migrationuk_tue_men": {"collection_id": 12, "2022-12-21": {"facebook": 0, "instagram": 0}, ...}}'
+}
+```
+
+
+## Endpoint: data_overview
+
+This API endpoint returns an overview of all data in the database for a selected country. 
+
+URL: `http://18.135.72.18/api/v1/data_overview`  
+
+Arguments syntax: `http://18.135.72.18/api/v1/data_overview?country=PS&date_start=2023-10-07&date_end=2023-10-20`  
+
+
+**API Arguments**  
+
+*Required Arguments*  
+
+Argument | Description
+|:-- |:-----------
+country | A single country code using ISO-2 format (see <a href="https://www.iban.com/country-codes">https://www.iban.com/country-codes</a>).
+
+
+*Require at least one of these arguments*  
+
+Argument | Description 
+|:-- |:----------- 
+date_start | Daily active users
+date_end | Monthly active user
+
+
+*Optional Arguments*  
+
+Argument | Description
+|:-- |:-----------
+language_name | Return results that used the specified language name (from Meta) as a targeting parameter.
+geo_level | Geographic level. Acceptable values: 'countries', 'regions', 'cities'
+location_types | Location types (from Meta). Acceptable values: '["home"]', '["recent"]', '["travel_in"]', '["home", "recent"]', or other combinations/orders. 
+
+**API Response**  
+The API will return a json response with four elements:
+
+Element | Description 
+|:-- |:----------- 
+status | http status code
+message | Message describing outcome of operation writing to the database
+timestamp | Date and time of response
+data | Data resulting from query in json format
+
+For example:
+```
+{
+  "message": "OK: Your collections successfully queried.",
+  "status": "200",
+  "timestamp": "2022-01-03 18:30:26+00",
+  "data": "{\"collection_date\":{\"0\":1696636800000,\"1\":...}
 }
 ```
 

@@ -1,8 +1,10 @@
 # syntax=docker/dockerfile:1
-FROM python:slim-buster
+FROM python:3.10-slim-buster
 
 # install packages
 RUN apt-get update
+RUN apt-get -y install libpq-dev gcc
+RUN pip install psycopg2-binary
 
 # install python packages
 WORKDIR /app
@@ -14,7 +16,7 @@ COPY pysocialwatcher pysocialwatcher
 COPY mysocialwatcher mysocialwatcher
 COPY mysocialwatcher/collector/main.py main.py
 COPY docker/collectors/_utils utils
-COPY docker/cleanup.sh ./utils/cleanup.sh
+COPY utils/collectors_cleanup.sh ./utils/cleanup.sh
 
 RUN chmod 0744 ./utils/launch.sh
 RUN chmod 0744 ./utils/cleanup.sh
