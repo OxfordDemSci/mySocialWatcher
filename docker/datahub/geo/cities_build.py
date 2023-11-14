@@ -23,6 +23,7 @@ if __name__=='__main__':
 
     # load city data
     city_key = pd.read_csv(os.path.join('docker','datahub','geo','data','meta_cities.csv'))
+    city_key = city_key.drop_duplicates(subset=['meta_key'])
 
     # cities to geodataframe
     gdf = gpd.GeoDataFrame(city_key,
@@ -33,11 +34,8 @@ if __name__=='__main__':
 
     with engine.connect() as conn:
 
-        # write cities table into database
-        gdf.to_postgis(name='cities', con=conn, if_exists='replace')
-
-        # create index on meta_key
-        conn.execute("CREATE INDEX idx_cities_meta_key ON cities (meta_key);")
+        # add unique constraint to cities table
+        conn.execute("CREATE UNIQUE INDEX idx_cities_meta_key ON cities (meta_key);")
 
         # set table permissions
         conn.execute("GRANT SELECT ON cities TO reader, writer;"
