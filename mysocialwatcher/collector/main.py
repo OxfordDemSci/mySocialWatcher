@@ -8,6 +8,8 @@ if __name__ == '__main__':
     logger.info('--------------------------------------------------')
     logger.info(logger.handlers[0].baseFilename)
 
+    logger.info('Sleep time: ' + sleep_time)
+
     specs_list = get_specs_list(specs_dir=specs_dir,
                                 data_dir=data_dir)
 
@@ -39,7 +41,7 @@ if __name__ == '__main__':
 
             # instantiate watcher
             watcher = watcherAPI(api_version='17.0',
-                                 sleep_time=11,
+                                 sleep_time=int(sleep_time),
                                  save_every_x=100,
                                  verbose=False)
 

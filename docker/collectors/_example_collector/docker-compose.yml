@@ -6,9 +6,11 @@ services:
   example_collection:
     container_name: example_collection
     volumes:
+      - ./_example_collection:/app/in
       - ./../../../data/_example_collector/_example_collection:/app/data
     build:
       args:
+        sleep_time: 12
         collection_dir: "./docker/collectors/_example_collector/_example_collection"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile

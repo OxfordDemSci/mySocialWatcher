@@ -3,10 +3,17 @@ import logging
 import datetime
 import json
 from time import sleep
+from dotenv import load_dotenv
+load_dotenv()
 
 # directories
 data_dir = 'data'  # data_dir = 'data/saffron/ukraine_regions'
 specs_dir = 'specs'  # specs_dir = 'docker/collectors/saffron/ukraine_regions/specs'
+
+# sleep time
+sleep_time = 11
+if os.getenv('sleep_time') is not None:
+    sleep_time = os.getenv('sleep_time')
 
 # logging
 os.makedirs(os.path.join(data_dir, 'logs'), exist_ok=True)
@@ -98,6 +105,7 @@ def sleep_the_day(start_time):
         sleep_duration = tomorrow - now
         if sleep_duration.seconds > 0:
             sleep(sleep_duration.seconds)
+
 
 def estimate_run_time(specs_dir, n_tokens=1, sleep_time=11):
     runtime = 0
