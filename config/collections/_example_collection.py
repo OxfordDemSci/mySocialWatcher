@@ -6,7 +6,7 @@ import pandas as pd
 # ---- settings ---- #
 
 # virtual machine name
-vm = '_example_virtual_machine'
+vm = '_example_collector'
 
 # collection name
 collection = '_example_collection'

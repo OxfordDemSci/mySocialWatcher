@@ -22,9 +22,13 @@ RUN chmod 0744 ./utils/launch.sh
 RUN chmod 0744 ./utils/cleanup.sh
 
 # collection config
-RUN ln -s in/.env .env
 RUN ln -s in/credentials.csv credentials.csv
 RUN ln -s in/specs specs
+#RUN ln -s in/.env .env
+
+# define sleep time
+ARG sleep_time
+RUN if [$sleep_time = '']; then echo sleep_time=11 >> .env; else echo sleep_time=$sleep_time >> .env; fi
 
 # commmand
 ENTRYPOINT ["/bin/sh", "-c"]
