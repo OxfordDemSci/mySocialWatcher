@@ -9,6 +9,8 @@ services:
       - ./dgg_national:/app/in
       - ./../../../data/badger/dgg_national:/app/data
     build:
+      args:
+        sleep_time: 0
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
@@ -19,6 +21,8 @@ services:
       - ./dgg_national_ins:/app/in
       - ./../../../data/badger/dgg_national_ins:/app/data
     build:
+      args:
+        sleep_time: 0
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
@@ -29,6 +33,8 @@ services:
       - ./dgg_national_home_recent:/app/in
       - ./../../../data/badger/dgg_national_home_recent:/app/data
     build:
+      args:
+        sleep_time: 0
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
