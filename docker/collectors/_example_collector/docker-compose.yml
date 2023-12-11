@@ -11,6 +11,8 @@ services:
     build:
       args:
         sleep_time: 12
+        email_notification_enable: True
+        email_receiver: valler4044@gamil.com
         collection_dir: "./docker/collectors/_example_collector/_example_collection"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile

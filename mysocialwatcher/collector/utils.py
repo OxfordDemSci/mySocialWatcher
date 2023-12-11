@@ -4,6 +4,7 @@ import datetime
 import json
 from time import sleep
 from dotenv import load_dotenv
+from email_notification import sendmail
 load_dotenv()
 
 # directories
@@ -14,6 +15,15 @@ specs_dir = 'specs'  # specs_dir = 'docker/collectors/saffron/ukraine_regions/sp
 sleep_time = 11
 if os.getenv('sleep_time') is not None:
     sleep_time = os.getenv('sleep_time')
+
+
+# email notification
+email_notification_enable = False
+if os.getenv('email_notification_enable') is not None:
+    email_notification_enable = True if os.getenv('email_notification_enable')=='True' else False
+
+if email_notification_enable:
+    email_receiver = os.getenv('email_receiver')
 
 # logging
 os.makedirs(os.path.join(data_dir, 'logs'), exist_ok=True)

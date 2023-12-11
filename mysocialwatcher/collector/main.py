@@ -55,7 +55,8 @@ if __name__ == '__main__':
 
         except:
             logger.error('An error occurred while preparing to collect data.', exc_info=True)
-
+            if email_notification_enable:
+                sendmail(subject=specs_filepath,contents='An error occurred while preparing to collect data',receiver=email_receiver)
         # ---- continue a previous collection ---- #
         continue_previous_collection = df_names.get('continue_previous_collection')
         if continue_previous_collection:
@@ -69,6 +70,8 @@ if __name__ == '__main__':
             except:
                 logger.warning('An error occurred while continuing a previous collection.', exc_info=True)
                 continue_previous_collection = False
+                if email_notification_enable:
+                    sendmail(subject=specs_filepath, contents='An error occurred while continuing a previous collection.', receiver=email_receiver)
 
         # ---- start a new collection ---- #
         if not continue_previous_collection:
@@ -83,6 +86,9 @@ if __name__ == '__main__':
                 logger.error('An error occurred while collecting new data.', exc_info=True)
 
         logger.info('Finished collection: ' + df_names.get('collecting'))
+        if email_notification_enable:
+            sendmail(subject=specs_filepath, contents='Finished collection', receiver=email_receiver)
+
         del watcher
 
     logger.info('Finished collection.')

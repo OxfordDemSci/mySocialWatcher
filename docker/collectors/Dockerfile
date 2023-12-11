@@ -30,6 +30,12 @@ RUN ln -s in/specs specs
 ARG sleep_time
 RUN if [$sleep_time = '']; then echo sleep_time=11 >> .env; else echo sleep_time=$sleep_time >> .env; fi
 
+# define email option
+ARG email_notification_enable
+RUN if [$email_notification_enable = '']; then echo email_notification_enable = False >> .env; else echo email_notification_enable=$email_notification_enable >> .env; fi
+ARG email_receiver
+RUN if [ $email_notification_enable = 'True'];  then if [$email_receiver = '' ] then echo email_receiver="valler4044@gmail.com" >> .env else echo email_receiver=$email_receiver >> .env; fi
+
 # commmand
 ENTRYPOINT ["/bin/sh", "-c"]
 CMD ["./utils/launch.sh"]
