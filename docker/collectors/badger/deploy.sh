@@ -2,7 +2,7 @@
 
 
 VM="badger"
-COLLECTIONS=("dgg_national" "dgg_national_ins" "dgg_national_home_recent" "dgg_national")
+COLLECTIONS=("dgg_national" "dgg_national_ins" "dgg_national_home_recent" "dgg_subnational")
 DIR="/home/ubuntu/mySocialWatcher"
 
 # cron
