@@ -1,0 +1,199 @@
+{
+  "name": "CIV_country_and_gadm1_part_1",
+  "publisher_platforms": [
+    "facebook"
+  ],
+  "geo_locations": [
+    {
+      "name": "countries",
+      "values": [
+        "CI"
+      ],
+      "pySocialWatcherReference": "key:CI; name:CotedIvoire;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "4482"
+        }
+      ],
+      "pySocialWatcherReference": "key:4482; name:Savanes;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "4496"
+        }
+      ],
+      "pySocialWatcherReference": "key:4496; name:Yamoussoukro;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "4497"
+        }
+      ],
+      "pySocialWatcherReference": "key:4497; name:Denguele;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "4500"
+        }
+      ],
+      "pySocialWatcherReference": "key:4500; name:Bas-Sassandra;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "4501"
+        }
+      ],
+      "pySocialWatcherReference": "key:4501; name:Vallee du Bandama;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "4503"
+        }
+      ],
+      "pySocialWatcherReference": "key:4503; name:Zanzan;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "5061"
+        }
+      ],
+      "pySocialWatcherReference": "key:5061; name:Abidjan;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "5062"
+        }
+      ],
+      "pySocialWatcherReference": "key:5062; name:Comoe District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "5063"
+        }
+      ],
+      "pySocialWatcherReference": "key:5063; name:Lacs District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "5064"
+        }
+      ],
+      "pySocialWatcherReference": "key:5064; name:Montagnes District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "5065"
+        }
+      ],
+      "pySocialWatcherReference": "key:5065; name:Goh-Djiboua District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "5070"
+        }
+      ],
+      "pySocialWatcherReference": "key:5070; name:Woroba District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "5071"
+        }
+      ],
+      "pySocialWatcherReference": "key:5071; name:Lagunes District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "5072"
+        }
+      ],
+      "pySocialWatcherReference": "key:5072; name:Sassandra-Marahoue District;",
+      "location_types": [
+        "home"
+      ]
+    }
+  ],
+  "genders": [
+    0,
+    1,
+    2
+  ],
+  "ages_ranges": [
+    {
+      "min": 13
+    },
+    {
+      "min": 18
+    }
+  ]
+}

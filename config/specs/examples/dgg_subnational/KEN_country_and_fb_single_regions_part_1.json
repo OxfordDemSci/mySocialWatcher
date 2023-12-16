@@ -1,0 +1,127 @@
+{
+  "name": "KEN_country_and_fb_single_regions_part_1",
+  "publisher_platforms": [
+    "facebook"
+  ],
+  "geo_locations": [
+    {
+      "name": "countries",
+      "values": [
+        "KE"
+      ],
+      "pySocialWatcherReference": "key:KE; name:Kenya;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1931"
+        }
+      ],
+      "pySocialWatcherReference": "key:1931; name:Coast Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1934"
+        }
+      ],
+      "pySocialWatcherReference": "key:1934; name:North Eastern Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1930"
+        }
+      ],
+      "pySocialWatcherReference": "key:1930; name:Central Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1932"
+        }
+      ],
+      "pySocialWatcherReference": "key:1932; name:Eastern Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1936"
+        }
+      ],
+      "pySocialWatcherReference": "key:1936; name:Rift Valley Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1937"
+        }
+      ],
+      "pySocialWatcherReference": "key:1937; name:Western Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1933"
+        }
+      ],
+      "pySocialWatcherReference": "key:1933; name:Nairobi;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1935"
+        }
+      ],
+      "pySocialWatcherReference": "key:1935; name:Nyanza Province;",
+      "location_types": [
+        "home"
+      ]
+    }
+  ],
+  "genders": [
+    0,
+    1,
+    2
+  ],
+  "ages_ranges": [
+    {
+      "min": 13
+    },
+    {
+      "min": 18
+    }
+  ]
+}

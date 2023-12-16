@@ -1,0 +1,139 @@
+{
+  "name": "MUS_country_and_fb_single_regions_part_1",
+  "publisher_platforms": [
+    "facebook"
+  ],
+  "geo_locations": [
+    {
+      "name": "countries",
+      "values": [
+        "MU"
+      ],
+      "pySocialWatcherReference": "key:MU; name:Mauritius;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2452"
+        }
+      ],
+      "pySocialWatcherReference": "key:2452; name:Plaines Wilhems District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2451"
+        }
+      ],
+      "pySocialWatcherReference": "key:2451; name:Pamplemousses District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2449"
+        }
+      ],
+      "pySocialWatcherReference": "key:2449; name:Grand Port District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2450"
+        }
+      ],
+      "pySocialWatcherReference": "key:2450; name:Moka District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2454"
+        }
+      ],
+      "pySocialWatcherReference": "key:2454; name:Rivi\u00e8re du Rempart District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2453"
+        }
+      ],
+      "pySocialWatcherReference": "key:2453; name:Port Louis District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2447"
+        }
+      ],
+      "pySocialWatcherReference": "key:2447; name:Rivi\u00e8re Noire District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2455"
+        }
+      ],
+      "pySocialWatcherReference": "key:2455; name:Savanne District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2448"
+        }
+      ],
+      "pySocialWatcherReference": "key:2448; name:Flacq District;",
+      "location_types": [
+        "home"
+      ]
+    }
+  ],
+  "genders": [
+    0,
+    1,
+    2
+  ],
+  "ages_ranges": [
+    {
+      "min": 13
+    },
+    {
+      "min": 18
+    }
+  ]
+}
