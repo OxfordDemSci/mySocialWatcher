@@ -16,6 +16,7 @@ if __name__ == '__main__':
 
     # paths
     master_credentials_path = os.path.join('config', '_example_private', 'credentials_master.csv')
+    yagmail_path = os.path.join('config', '_example_private', 'yagmail.csv')
     specs_template_path = os.path.join('config', 'specs', 'templates')
     out_dir = os.path.join('docker', 'collectors', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
@@ -24,6 +25,7 @@ if __name__ == '__main__':
 
     # path for output credentials.csv
     credentials_path = os.path.join(out_dir, 'credentials.csv')
+
 
     # load master credentials
     master_credentials = pd.read_csv(master_credentials_path)
@@ -61,3 +63,7 @@ if __name__ == '__main__':
     file_out = os.path.join(specs_dir, 'specs001.json')
     with open(file_out, "w") as f:
         f.write(json.dumps(specs))
+
+    # ---- transfer yagmail specs ---- #
+    if os.path.exists(yagmail_path):
+        shutil.copy2(yagmail_path,os.path.join(out_dir,'yagmail.csv'))

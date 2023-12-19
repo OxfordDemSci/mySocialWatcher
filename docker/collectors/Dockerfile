@@ -33,6 +33,9 @@ RUN if [$sleep_time = '']; then echo sleep_time=11 >> .env; else echo sleep_time
 # define email option
 ARG email_notification_enable
 RUN if [$email_notification_enable = '']; then echo email_notification_enable = False >> .env; else echo email_notification_enable=$email_notification_enable >> .env; fi
+
+RUN if [$email_notification_enable = 'True']; then ln -s in/yagmail.csv yagmail.csv; fi #copy the yagmail.csv to the collector
+
 ARG email_receiver
 RUN if [ $email_notification_enable = 'True'];  then if [$email_receiver = '' ] then echo email_receiver="valler4044@gmail.com" >> .env else echo email_receiver=$email_receiver >> .env; fi
 
