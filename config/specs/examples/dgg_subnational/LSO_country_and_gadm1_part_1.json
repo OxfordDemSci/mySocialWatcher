@@ -1,0 +1,151 @@
+{
+  "name": "LSO_country_and_gadm1_part_1",
+  "publisher_platforms": [
+    "facebook"
+  ],
+  "geo_locations": [
+    {
+      "name": "countries",
+      "values": [
+        "LS"
+      ],
+      "pySocialWatcherReference": "key:LS; name:Lesotho;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2119"
+        }
+      ],
+      "pySocialWatcherReference": "key:2119; name:Berea District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2120"
+        }
+      ],
+      "pySocialWatcherReference": "key:2120; name:Butha-Buthe District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2121"
+        }
+      ],
+      "pySocialWatcherReference": "key:2121; name:Leribe District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2122"
+        }
+      ],
+      "pySocialWatcherReference": "key:2122; name:Mafeteng District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2123"
+        }
+      ],
+      "pySocialWatcherReference": "key:2123; name:Maseru District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2124"
+        }
+      ],
+      "pySocialWatcherReference": "key:2124; name:Mohale's Hoek District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2125"
+        }
+      ],
+      "pySocialWatcherReference": "key:2125; name:Mokhotlong District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2126"
+        }
+      ],
+      "pySocialWatcherReference": "key:2126; name:Qacha's Nek District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2127"
+        }
+      ],
+      "pySocialWatcherReference": "key:2127; name:Quthing District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2128"
+        }
+      ],
+      "pySocialWatcherReference": "key:2128; name:Thaba-Tseka District;",
+      "location_types": [
+        "home"
+      ]
+    }
+  ],
+  "genders": [
+    0,
+    1,
+    2
+  ],
+  "ages_ranges": [
+    {
+      "min": 13
+    },
+    {
+      "min": 18
+    }
+  ]
+}

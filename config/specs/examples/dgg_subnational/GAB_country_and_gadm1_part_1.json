@@ -1,0 +1,139 @@
+{
+  "name": "GAB_country_and_gadm1_part_1",
+  "publisher_platforms": [
+    "facebook"
+  ],
+  "geo_locations": [
+    {
+      "name": "countries",
+      "values": [
+        "GA"
+      ],
+      "pySocialWatcherReference": "key:GA; name:Gabon;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1090"
+        }
+      ],
+      "pySocialWatcherReference": "key:1090; name:Estuaire Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1091"
+        }
+      ],
+      "pySocialWatcherReference": "key:1091; name:Haut-Ogooue Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1092"
+        }
+      ],
+      "pySocialWatcherReference": "key:1092; name:Moyen-Ogooue Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1093"
+        }
+      ],
+      "pySocialWatcherReference": "key:1093; name:Ngounie Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1094"
+        }
+      ],
+      "pySocialWatcherReference": "key:1094; name:Nyanga Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1095"
+        }
+      ],
+      "pySocialWatcherReference": "key:1095; name:Ogooue-Ivindo Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1096"
+        }
+      ],
+      "pySocialWatcherReference": "key:1096; name:Ogooue-Lolo Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1097"
+        }
+      ],
+      "pySocialWatcherReference": "key:1097; name:Ogooue-Maritime Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1098"
+        }
+      ],
+      "pySocialWatcherReference": "key:1098; name:Woleu-Ntem Province;",
+      "location_types": [
+        "home"
+      ]
+    }
+  ],
+  "genders": [
+    0,
+    1,
+    2
+  ],
+  "ages_ranges": [
+    {
+      "min": 13
+    },
+    {
+      "min": 18
+    }
+  ]
+}
