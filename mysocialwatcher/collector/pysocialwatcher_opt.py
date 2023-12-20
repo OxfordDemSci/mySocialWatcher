@@ -27,7 +27,7 @@ import itertools
 import pandas as pd
 import time
 from numpy import isnan
-import params
+import mysocialwatcher.collector.params
 import copy
 
 # -------------------------------------------------------------------------

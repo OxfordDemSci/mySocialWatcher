@@ -1,6 +1,6 @@
 from mysocialwatcher.collector.utils import *
 from pysocialwatcher import watcherAPI, constants
-from pysocialwatcher_opt import pysocialwatcher_opt
+from mysocialwatcher.collector import pysocialwatcher_opt
 
 
 if __name__ == '__main__':
