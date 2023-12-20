@@ -1,0 +1,79 @@
+{
+  "name": "SLE_country_and_gadm1_part_1",
+  "publisher_platforms": [
+    "facebook"
+  ],
+  "geo_locations": [
+    {
+      "name": "countries",
+      "values": [
+        "SL"
+      ],
+      "pySocialWatcherReference": "key:SL; name:SierraLeone;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "3429"
+        }
+      ],
+      "pySocialWatcherReference": "key:3429; name:Eastern Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "3430"
+        }
+      ],
+      "pySocialWatcherReference": "key:3430; name:Northern Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "3431"
+        }
+      ],
+      "pySocialWatcherReference": "key:3431; name:Southern Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "3432"
+        }
+      ],
+      "pySocialWatcherReference": "key:3432; name:Western Area;",
+      "location_types": [
+        "home"
+      ]
+    }
+  ],
+  "genders": [
+    0,
+    1,
+    2
+  ],
+  "ages_ranges": [
+    {
+      "min": 13
+    },
+    {
+      "min": 18
+    }
+  ]
+}

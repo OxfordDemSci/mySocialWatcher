@@ -11,6 +11,7 @@ services:
     build:
       args:
         sleep_time: 12
+        pysocialwatcher_opt: False
         collection_dir: "./docker/collectors/_example_collector/_example_collection"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile

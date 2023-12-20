@@ -1,0 +1,31 @@
+{
+  "name": "COD_country_part_1",
+  "publisher_platforms": [
+    "facebook"
+  ],
+  "geo_locations": [
+    {
+      "name": "countries",
+      "values": [
+        "CD"
+      ],
+      "pySocialWatcherReference": "key:CD; name:DemocraticRepublicoftheCongo;",
+      "location_types": [
+        "home"
+      ]
+    }
+  ],
+  "genders": [
+    0,
+    1,
+    2
+  ],
+  "ages_ranges": [
+    {
+      "min": 13
+    },
+    {
+      "min": 18
+    }
+  ]
+}

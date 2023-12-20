@@ -1,5 +1,6 @@
 from mysocialwatcher.collector.utils import *
 from pysocialwatcher import watcherAPI, constants
+from pysocialwatcher_opt import pysocialwatcher_opt
 
 
 if __name__ == '__main__':
@@ -9,6 +10,8 @@ if __name__ == '__main__':
     logger.info(logger.handlers[0].baseFilename)
 
     logger.info('Sleep time: ' + sleep_time)
+    logger.info('pysocialwatcher_opt: ' + pysocialwatcher_opt)
+
 
     specs_list = get_specs_list(specs_dir=specs_dir,
                                 data_dir=data_dir)
@@ -39,11 +42,17 @@ if __name__ == '__main__':
             # start log
             logger.info('Preparing collection with specification: ' + specs_filepath)
 
-            # instantiate watcher
-            watcher = watcherAPI(api_version='17.0',
-                                 sleep_time=int(sleep_time),
-                                 save_every_x=100,
-                                 verbose=False)
+            # instantiate watcher, depending on whether argument pysocialwatcher_opt is true
+            if pysocialwatcher_opt:
+                watcher = pysocialwatcher_opt(api_version='17.0',
+                                              sleep_time=int(sleep_time),
+                                              save_every_x=100,
+                                              verbose=False)
+            else:
+                watcher = watcherAPI(api_version='17.0',
+                                     sleep_time=int(sleep_time),
+                                     save_every_x=100,
+                                     verbose=False)
 
             # load credentials
             watcher.load_credentials_file('credentials.csv')
