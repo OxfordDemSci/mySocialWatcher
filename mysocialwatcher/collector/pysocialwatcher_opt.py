@@ -451,8 +451,7 @@ class pysocialwatcher_opt(watcherAPI):
             watcherAPI.expand_input_if_requested(json_spec)
             watcherAPI.check_input_integrity(json_spec)
             part_collection_dataframe = watcherAPI.build_collection_dataframe(json_spec, output_dir = output_dir)
-            collection_dataframe = collection_dataframe.append(part_collection_dataframe,
-                                                               ignore_index = True)
+            collection_dataframe = pd.concat([collection_dataframe, part_collection_dataframe], ignore_index=True)
 
         return collection_dataframe
 
