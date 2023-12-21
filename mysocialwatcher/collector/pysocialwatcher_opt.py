@@ -469,7 +469,7 @@ class pysocialwatcher_opt(watcherAPI):
         while data_collection_incomplete:
             try:
                 ntries = ntries + 1
-                collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = "")
+                collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = output_dir)
                 data_collection_incomplete = False
             except Exception as err:
                 if ntries < params.MAX_TRY_ON_FAILED_QUERIES:
@@ -515,7 +515,7 @@ class pysocialwatcher_opt(watcherAPI):
             while data_collection_incomplete:
                 try:
                     ntries = ntries + 1
-                    collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = "")
+                    collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = output_dir)
                     data_collection_incomplete = False
                 except Exception as err:
                     if ntries < params.MAX_TRY_ON_FAILED_QUERIES:
