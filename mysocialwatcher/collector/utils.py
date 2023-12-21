@@ -16,9 +16,9 @@ if os.getenv('sleep_time') is not None:
     sleep_time = os.getenv('sleep_time')
 
 # pysocialwatcher_opt
-pysocialwatcher_opt = False
-if os.getenv('pysocialwatcher_opt') is not None:
-    pysocialwatcher_opt = os.getenv('pysocialwatcher_opt')
+pysocialwatcher_opt_flag = False
+if os.getenv('pysocialwatcher_opt_flag') is not None:
+    pysocialwatcher_opt_flag = os.getenv('pysocialwatcher_opt_flag')
 
 # logging
 os.makedirs(os.path.join(data_dir, 'logs'), exist_ok=True)

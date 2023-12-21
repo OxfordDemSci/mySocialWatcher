@@ -10,7 +10,7 @@ if __name__ == '__main__':
     logger.info(logger.handlers[0].baseFilename)
 
     logger.info('Sleep time: ' + sleep_time)
-    logger.info('pysocialwatcher_opt: ' + pysocialwatcher_opt)
+    logger.info('pysocialwatcher_opt: ' + pysocialwatcher_opt_flag)
 
 
     specs_list = get_specs_list(specs_dir=specs_dir,
@@ -43,7 +43,7 @@ if __name__ == '__main__':
             logger.info('Preparing collection with specification: ' + specs_filepath)
 
             # instantiate watcher, depending on whether argument pysocialwatcher_opt is true
-            if pysocialwatcher_opt:
+            if pysocialwatcher_opt_flag:
                 watcher = pysocialwatcher_opt(api_version='17.0',
                                               sleep_time=int(sleep_time),
                                               save_every_x=100,

@@ -47,7 +47,7 @@ services:
       - ./../../../data/badger/dgg_subnational:/app/data
     build:
       args:
-        pysocialwatcher_opt: "true"
+        pysocialwatcher_opt_flag: "true"
         sleep_time: 0
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
