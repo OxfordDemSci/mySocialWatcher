@@ -258,7 +258,8 @@ class pysocialwatcher_opt(watcherAPI):
 
 
         # perform data collection on Facebook for chosen subset of queries
-        collection_dataframe = watcherAPI.perform_collection_data_on_facebook(collection_dataframe, output_dir, remove_tmp_files=False)
+        collection_dataframe = watcherAPI.perform_collection_data_on_facebook(collection_dataframe, output_dir,
+                                                                              remove_tmp_files=False)
 
         # Prune the query set to exclude sparse queries
         curr_non_sparse_qset = set()
@@ -305,7 +306,7 @@ class pysocialwatcher_opt(watcherAPI):
         print("__ of which, queries deduced to be sparse: %d" % total_sparse_queries_deduced)
 
     @staticmethod
-    def perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = ""):
+    def perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir=""):
         df_num_queries = len(collection_dataframe.index)
         total_API_calls_made = 0
         total_API_calls_made_with_sparse_queries = 0
@@ -344,7 +345,7 @@ class pysocialwatcher_opt(watcherAPI):
             # collect data from FB and determine non-sparse queries
             collection_dataframe, curr_non_sparse_qset, num_API_calls = \
                 pysocialwatcher_opt.get_facebook_data_for_chosen_queries(curr_candid_qset, query_indices,
-                                                                         collection_dataframe)
+                                                                         collection_dataframe, output_dir)
             curr_sparse_qset = curr_sparse_qset.union(curr_candid_qset - curr_non_sparse_qset)
             total_API_calls_made_with_sparse_queries += len(curr_candid_qset - curr_non_sparse_qset)
             total_API_calls_made += num_API_calls
@@ -366,7 +367,8 @@ class pysocialwatcher_opt(watcherAPI):
             total_sparse_queries_deduced += len(curr_sparse_qset)
 
             collection_dataframe, curr_non_sparse_qset, num_API_calls = \
-                pysocialwatcher_opt.get_facebook_data_for_chosen_queries(set(), query_indices, collection_dataframe)
+                pysocialwatcher_opt.get_facebook_data_for_chosen_queries(set(), query_indices, collection_dataframe,
+                                                                         output_dir)
 
         if params.VERBOSE:
             pysocialwatcher_opt.print_completed_collection_report(df_num_queries, total_API_calls_made,
