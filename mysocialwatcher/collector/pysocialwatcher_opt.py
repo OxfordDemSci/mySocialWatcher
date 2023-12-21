@@ -245,7 +245,7 @@ class pysocialwatcher_opt(watcherAPI):
         return candid_qset
 
     @staticmethod
-    def get_facebook_data_for_chosen_queries(curr_candid_qset,query_indices,collection_dataframe):
+    def get_facebook_data_for_chosen_queries(curr_candid_qset,query_indices,collection_dataframe, output_dir):
         # find queries in collection dataframe and indicate for which to collect data
         num_API_calls = 0
         for query in curr_candid_qset:
@@ -258,7 +258,7 @@ class pysocialwatcher_opt(watcherAPI):
 
 
         # perform data collection on Facebook for chosen subset of queries
-        collection_dataframe = watcherAPI.perform_collection_data_on_facebook(collection_dataframe, output_dir = "", remove_tmp_files=False)
+        collection_dataframe = watcherAPI.perform_collection_data_on_facebook(collection_dataframe, output_dir, remove_tmp_files=False)
 
         # Prune the query set to exclude sparse queries
         curr_non_sparse_qset = set()

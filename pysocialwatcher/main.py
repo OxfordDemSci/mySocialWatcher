@@ -259,7 +259,7 @@ class PySocialWatcher:
         return dataframe
 
     @staticmethod
-    def perform_collection_data_on_facebook(collection_dataframe, output_dir = "", remove_tmp_files=False):
+    def perform_collection_data_on_facebook(collection_dataframe, output_dir="", remove_tmp_files=False):
         # Call each requests builded
         processed_rows_after_saved = 0
         dataframe_with_uncompleted_requests = collection_dataframe[pd.isnull(collection_dataframe["response"])]
