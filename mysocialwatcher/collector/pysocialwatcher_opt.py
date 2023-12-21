@@ -258,7 +258,7 @@ class pysocialwatcher_opt(watcherAPI):
 
 
         # perform data collection on Facebook for chosen subset of queries
-        collection_dataframe = watcherAPI.perform_collection_data_on_facebook(collection_dataframe)
+        collection_dataframe = watcherAPI.perform_collection_data_on_facebook(collection_dataframe, output_dir = output_dir, remove_tmp_files=False)
 
         # Prune the query set to exclude sparse queries
         curr_non_sparse_qset = set()
