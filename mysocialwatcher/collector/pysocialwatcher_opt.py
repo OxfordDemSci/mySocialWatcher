@@ -427,7 +427,7 @@ class pysocialwatcher_opt(watcherAPI):
         return collection_dataframe
 
     @staticmethod
-    def process_input_json_file(json_input_file_path):
+    def process_input_json_file(json_input_file_path, output_dir = ""):
 
         import os
         print(os.getcwd())
@@ -450,7 +450,7 @@ class pysocialwatcher_opt(watcherAPI):
         for json_spec in json_collections_list:
             watcherAPI.expand_input_if_requested(json_spec)
             watcherAPI.check_input_integrity(json_spec)
-            part_collection_dataframe = watcherAPI.build_collection_dataframe(json_spec, output_dir = "")
+            part_collection_dataframe = watcherAPI.build_collection_dataframe(json_spec, output_dir = output_dir)
             collection_dataframe = collection_dataframe.append(part_collection_dataframe,
                                                                ignore_index = True)
 
