@@ -31,8 +31,8 @@ ARG sleep_time
 RUN if [$sleep_time = '']; then echo sleep_time=11 >> .env; else echo sleep_time=$sleep_time >> .env; fi
 
 # define pysocialwatcher_opt
-ARG pysocialwatcher_opt
-RUN if [pysocialwatcher_opt_flag = '']; then echo pysocialwatcher_opt_flag=False >> .env; else echo pysocialwatcher_opt_flag=$pysocialwatcher_opt_flag >> .env; fi
+ARG pysocialwatcher_opt_flag
+RUN if [$pysocialwatcher_opt_flag = '']; then echo pysocialwatcher_opt_flag=False >> .env; else echo pysocialwatcher_opt_flag=$pysocialwatcher_opt_flag >> .env; fi
 
 # commmand
 ENTRYPOINT ["/bin/sh", "-c"]
