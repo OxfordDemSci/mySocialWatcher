@@ -460,7 +460,7 @@ class pysocialwatcher_opt(watcherAPI):
         pySocialWatcher's data collection function modified to call the optimized data collection algorithm
     """
     @staticmethod
-    def run_data_collection(json_input_file_path, output_dir = ""):
+    def run_data_collection(json_input_file_path, output_dir = "", remove_tmp_files = False):
         # create collection dataframe
         collection_dataframe = pysocialwatcher_opt.process_input_json_file(json_input_file_path)
 
