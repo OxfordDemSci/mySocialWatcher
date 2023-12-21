@@ -305,7 +305,7 @@ class pysocialwatcher_opt(watcherAPI):
         print("__ of which, queries deduced to be sparse: %d" % total_sparse_queries_deduced)
 
     @staticmethod
-    def perform_collection_data_on_facebook_with_optimization(collection_dataframe):
+    def perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = ""):
         df_num_queries = len(collection_dataframe.index)
         total_API_calls_made = 0
         total_API_calls_made_with_sparse_queries = 0
@@ -402,7 +402,7 @@ class pysocialwatcher_opt(watcherAPI):
                 try:
                     ntries = ntries + 1
                     collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(
-                        collection_dataframe)
+                        collection_dataframe, output_dir = "")
                     data_collection_incomplete = False
                 except Exception as err:
                     if ntries < params.MAX_TRY_ON_FAILED_QUERIES:
@@ -470,7 +470,7 @@ class pysocialwatcher_opt(watcherAPI):
         while data_collection_incomplete:
             try:
                 ntries = ntries + 1
-                collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(collection_dataframe)
+                collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = "")
                 data_collection_incomplete = False
             except Exception as err:
                 if ntries < params.MAX_TRY_ON_FAILED_QUERIES:
@@ -516,8 +516,7 @@ class pysocialwatcher_opt(watcherAPI):
             while data_collection_incomplete:
                 try:
                     ntries = ntries + 1
-                    collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(
-                        collection_dataframe)
+                    collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = "")
                     data_collection_incomplete = False
                 except Exception as err:
                     if ntries < params.MAX_TRY_ON_FAILED_QUERIES:
