@@ -7,8 +7,8 @@ Description: Parameter values for the pySocialWatcher optimization module.
 SPARSE_QUERY_SIZE = 1000 # size of FB's sparse queries
 VERBOSE = True  # should additional info about data collection be provided
 
-MAX_TRY_ON_FAILED_QUERIES = 5 # max number of tries when the API give errors
-SLEEP_TIME_AFTER_API_ERROR = 5 # time in seconds to wait after the API gives an error before retrying
+MAX_TRY_ON_FAILED_QUERIES = 1 # max number of tries when the API give errors
+SLEEP_TIME_AFTER_API_ERROR = 1 # time in seconds to wait after the API gives an error before retrying
 
 ALL_GENDERS_VALUE = 0 # API parameter value for all genders 
 
