@@ -258,7 +258,7 @@ class pysocialwatcher_opt(watcherAPI):
 
 
         # perform data collection on Facebook for chosen subset of queries
-        collection_dataframe = watcherAPI.perform_collection_data_on_facebook(collection_dataframe, output_dir = output_dir, remove_tmp_files=False)
+        collection_dataframe = watcherAPI.perform_collection_data_on_facebook(collection_dataframe, output_dir = "", remove_tmp_files=False)
 
         # Prune the query set to exclude sparse queries
         curr_non_sparse_qset = set()
@@ -305,7 +305,7 @@ class pysocialwatcher_opt(watcherAPI):
         print("__ of which, queries deduced to be sparse: %d" % total_sparse_queries_deduced)
 
     @staticmethod
-    def perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = output_dir):
+    def perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = ""):
         df_num_queries = len(collection_dataframe.index)
         total_API_calls_made = 0
         total_API_calls_made_with_sparse_queries = 0
@@ -402,7 +402,7 @@ class pysocialwatcher_opt(watcherAPI):
                 try:
                     ntries = ntries + 1
                     collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(
-                        collection_dataframe, output_dir = output_dir)
+                        collection_dataframe, output_dir = "")
                     data_collection_incomplete = False
                 except Exception as err:
                     if ntries < params.MAX_TRY_ON_FAILED_QUERIES:
@@ -427,7 +427,7 @@ class pysocialwatcher_opt(watcherAPI):
         return collection_dataframe
 
     @staticmethod
-    def process_input_json_file(json_input_file_path, output_dir = output_dir):
+    def process_input_json_file(json_input_file_path, output_dir = ""):
 
         import os
         print(os.getcwd())
@@ -450,7 +450,7 @@ class pysocialwatcher_opt(watcherAPI):
         for json_spec in json_collections_list:
             watcherAPI.expand_input_if_requested(json_spec)
             watcherAPI.check_input_integrity(json_spec)
-            part_collection_dataframe = watcherAPI.build_collection_dataframe(json_spec, output_dir = output_dir)
+            part_collection_dataframe = watcherAPI.build_collection_dataframe(json_spec, output_dir = "")
             collection_dataframe = pd.concat([collection_dataframe, part_collection_dataframe], ignore_index=True)
 
         return collection_dataframe
@@ -459,9 +459,9 @@ class pysocialwatcher_opt(watcherAPI):
         pySocialWatcher's data collection function modified to call the optimized data collection algorithm
     """
     @staticmethod
-    def run_data_collection(json_input_file_path, output_dir = output_dir, remove_tmp_files = False):
+    def run_data_collection(json_input_file_path, output_dir = "", remove_tmp_files = False):
         # create collection dataframe
-        collection_dataframe = pysocialwatcher_opt.process_input_json_file(json_input_file_path, output_dir = output_dir)
+        collection_dataframe = pysocialwatcher_opt.process_input_json_file(json_input_file_path, output_dir = "")
 
         # Run data collection
         data_collection_incomplete = True
@@ -469,7 +469,7 @@ class pysocialwatcher_opt(watcherAPI):
         while data_collection_incomplete:
             try:
                 ntries = ntries + 1
-                collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = output_dir)
+                collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = "")
                 data_collection_incomplete = False
             except Exception as err:
                 if ntries < params.MAX_TRY_ON_FAILED_QUERIES:
@@ -501,7 +501,7 @@ class pysocialwatcher_opt(watcherAPI):
         pySocialWatcher's data collection function modified to call the optimized data collection algorithm
     """
     @staticmethod
-    def load_data_and_continue_collection(input_file_path, output_dir = output_dir):
+    def load_data_and_continue_collection(input_file_path, output_dir = ""):
         collection_dataframe = load_dataframe_from_file(input_file_path)
 
         idx = collection_dataframe[constants.RESPONSE_FIELD] == params.PLACE_HOLDER_DATA_RESPONSE_CONTENT
@@ -515,7 +515,7 @@ class pysocialwatcher_opt(watcherAPI):
             while data_collection_incomplete:
                 try:
                     ntries = ntries + 1
-                    collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = output_dir)
+                    collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = "")
                     data_collection_incomplete = False
                 except Exception as err:
                     if ntries < params.MAX_TRY_ON_FAILED_QUERIES:

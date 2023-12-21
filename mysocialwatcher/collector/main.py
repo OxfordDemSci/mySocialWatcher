@@ -49,7 +49,6 @@ if __name__ == '__main__':
             if pysocialwatcher_opt_flag:
                 watcher = pysocialwatcher_opt(api_version='17.0',
                                               sleep_time=int(sleep_time),
-                                              output_dir=output_dir,
                                               save_every_x=100)
             else:
                 watcher = watcherAPI(api_version='17.0',
