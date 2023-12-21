@@ -462,7 +462,7 @@ class pysocialwatcher_opt(watcherAPI):
     @staticmethod
     def run_data_collection(json_input_file_path, output_dir = "", remove_tmp_files = False):
         # create collection dataframe
-        collection_dataframe = pysocialwatcher_opt.process_input_json_file(json_input_file_path)
+        collection_dataframe = pysocialwatcher_opt.process_input_json_file(json_input_file_path, output_dir = output_dir)
 
         # Run data collection
         data_collection_incomplete = True
