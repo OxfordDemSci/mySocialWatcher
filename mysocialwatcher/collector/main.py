@@ -3,7 +3,6 @@ from pysocialwatcher import watcherAPI, constants
 from mysocialwatcher.collector.pysocialwatcher_opt import pysocialwatcher_opt
 from mysocialwatcher.collector import betterestimatesauto as bestims
 
-
 if __name__ == '__main__':
 
     logger.info(' ')
@@ -98,9 +97,12 @@ if __name__ == '__main__':
                 logger.error('An error occurred while collecting new data.', exc_info=True)
 
         if betterestimates_flag:
-            logger.info('Running better estimates ' + df_names.get('collecting'))
-            input_file_path = constants.DATAFRAME_AFTER_COLLECTION_FILE_NAME
-        totalAPIcalls = bestims.estimate_sparse_queries(input_file_path, cacheFolder=mainwd)
+            try:
+                logger.info('Running better estimates ' + df_names.get('collecting'))
+                input_file_path = constants.DATAFRAME_AFTER_COLLECTION_FILE_NAME
+                totalAPIcalls = bestims.estimate_sparse_queries(input_file_path, cacheFolder=mainwd)
+            except:
+                logger.error('An error occurred while performing betterestimates.', exc_info=True)
 
 
         logger.info('Finished collection: ' + df_names.get('collecting'))
