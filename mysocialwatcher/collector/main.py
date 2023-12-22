@@ -1,8 +1,7 @@
 from mysocialwatcher.collector.utils import *
 from pysocialwatcher import watcherAPI, constants
 from mysocialwatcher.collector.pysocialwatcher_opt import pysocialwatcher_opt
-from mysocialwatcher.collector.betterestimatesauto import BetterEstimatesAuto as bestims
-
+from mysocialwatcher.collector import betterestimatesauto as bestims
 
 
 if __name__ == '__main__':
