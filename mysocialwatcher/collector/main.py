@@ -100,6 +100,7 @@ if __name__ == '__main__':
             try:
                 logger.info('Running better estimates ' + df_names.get('collecting'))
                 input_file_path = constants.DATAFRAME_AFTER_COLLECTION_FILE_NAME
+                mainwd=os.getcwd()
                 totalAPIcalls = bestims.estimate_sparse_queries(input_file_path, cacheFolder=mainwd)
             except:
                 logger.error('An error occurred while performing betterestimates.', exc_info=True)
