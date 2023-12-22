@@ -327,10 +327,6 @@ def estimate_sparse_queries(infile, credentials_file=None, usingCache=True, cach
     constants_DATAFRAME_SKELETON_FILE_NAME = constants.DATAFRAME_SKELETON_FILE_NAME
     constants_DATAFRAME_TEMPORARY_COLLECTION_FILE_NAME = constants.DATAFRAME_TEMPORARY_COLLECTION_FILE_NAME
     constants_DATAFRAME_AFTER_COLLECTION_FILE_NAME = constants.DATAFRAME_AFTER_COLLECTION_FILE_NAME
-    
-    constants.DATAFRAME_SKELETON_FILE_NAME = "dataframe_skeleton_be.csv"
-    constants.DATAFRAME_TEMPORARY_COLLECTION_FILE_NAME = "dataframe_collecting_be.csv"
-    constants.DATAFRAME_AFTER_COLLECTION_FILE_NAME = "dataframe_collected_finished_be.csv"
 
     #result = None
     result_lower = None
@@ -526,19 +522,19 @@ def estimate_sparse_queries(infile, credentials_file=None, usingCache=True, cach
         estimates_upper = df1000_add_country[constants.MAU_UPPER_AUDIENCE_FIELD] - df1000_in_country[constants.MAU_UPPER_AUDIENCE_FIELD]
         estimates_upper.loc[~valid] = None
         estimates_upper.name = country
-        
+
         estimates_lower = df1000_add_country[constants.MAU_LOWER_AUDIENCE_FIELD] - df1000_in_country[constants.MAU_LOWER_AUDIENCE_FIELD]
         estimates_lower.loc[~valid] = None
         estimates_lower.name = country
-        
+
         list_estimates_upper.append(estimates_upper)
         list_estimates_lower.append(estimates_lower)
-        
+
         print("Finished collection for %s. Saving partial results." % (country))
         # Save the results given the current list of estimates
         #result = save_partial_results(df, list_estimates, infile + "_" + country + "_")
         result_lower, result_upper = save_partial_results(df, list_estimates_lower, list_estimates_upper, infile)
-        
+
         # For the next country, we need to change our policy to tackle None's instead of 1000's
         TACKLE_NAN = True
 
@@ -565,7 +561,7 @@ def estimate_sparse_queries(infile, credentials_file=None, usingCache=True, cach
     valid_lower = valid_lower.any(axis=1)
     valid_upper = pd.DataFrame(valid_estimate_upper).T
     valid_upper = valid_upper.any(axis=1)
-    
+
     if result_lower is None:
         print("ERROR LOWER: could not run for the selected countries.")
         return totalAPIcalls
@@ -584,7 +580,7 @@ def estimate_sparse_queries(infile, credentials_file=None, usingCache=True, cach
 
     still_can_get_better_estimates_lower = df[constants.MAU_LOWER_AUDIENCE_FIELD].isnull().sum()
     still_can_get_better_estimates_upper = df[constants.MAU_UPPER_AUDIENCE_FIELD].isnull().sum()
-    
+
     print("Found better estimates to %d lower and %d upper queries." % (df[df[constants.MAU_LOWER_AUDIENCE_FIELD] < 1000].shape[0], df[df[constants.MAU_UPPER_AUDIENCE_FIELD] < 1000].shape[0]))
     print("Still missing to find better estimates to %d (%.3f) lower and %d (%.3f) upper queries..." % (still_can_get_better_estimates_lower, \
                                                                                 1. * (still_can_get_better_estimates_lower/df.shape[0]), \
