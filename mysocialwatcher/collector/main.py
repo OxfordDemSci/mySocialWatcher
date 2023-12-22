@@ -98,8 +98,8 @@ if __name__ == '__main__':
 
         if betterestimates_flag:
             try:
-                logger.info('Running better estimates ' + df_names.get('collecting'))
-                input_file_path = data_dir + df_names.get('finished')
+                logger.info('Running better estimates ' + df_names.get('finished'))
+                input_file_path = os.path.join(data_dir, df_names.get('finished'))
                 mainwd=os.getcwd()
                 totalAPIcalls = bestims.estimate_sparse_queries(input_file_path, cacheFolder=mainwd)
             except:
