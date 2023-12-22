@@ -21,7 +21,7 @@ Updates:
 
 # import libraries
 from pysocialwatcher import watcherAPI
-from pysocialwatcher.utils import load_dataframe_from_file
+from pysocialwatcher.utils import load_dataframe_from_file, remove_temporary_dataframes
 from pysocialwatcher import constants
 import itertools
 import pandas as pd
@@ -461,7 +461,7 @@ class pysocialwatcher_opt(watcherAPI):
         pySocialWatcher's data collection function modified to call the optimized data collection algorithm
     """
     @staticmethod
-    def run_data_collection(json_input_file_path, output_dir = "", remove_tmp_files = False):
+    def run_data_collection(json_input_file_path, output_dir="", remove_tmp_files=False):
         # create collection dataframe
         collection_dataframe = pysocialwatcher_opt.process_input_json_file(json_input_file_path, output_dir)
 
@@ -471,7 +471,7 @@ class pysocialwatcher_opt(watcherAPI):
         while data_collection_incomplete:
             try:
                 ntries = ntries + 1
-                collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = output_dir)
+                collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = output_dir, remove_tmp_files=False)
                 data_collection_incomplete = False
             except Exception as err:
                 if ntries < params.MAX_TRY_ON_FAILED_QUERIES:
@@ -496,6 +496,9 @@ class pysocialwatcher_opt(watcherAPI):
             if (sum(idx) > 0):
                 print("Some queries are not estimate ready:" + str(sum(idx)))
                 print("Re-run data collection later!")
+
+        if remove_tmp_files:
+            remove_temporary_dataframes(output_dir)
 
         return collection_dataframe
 
