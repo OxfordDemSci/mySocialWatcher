@@ -1,7 +1,7 @@
 from mysocialwatcher.collector.utils import *
 from pysocialwatcher import watcherAPI, constants
 from mysocialwatcher.collector.pysocialwatcher_opt import pysocialwatcher_opt
-from mysocialwatcher.collector.betterestimatesauto import *
+from mysocialwatcher.collector.betterestimatesauto import BetterEstimatesAuto as bestims
 
 
 
@@ -13,6 +13,8 @@ if __name__ == '__main__':
 
     logger.info('Sleep time: ' + sleep_time)
     logger.info('pysocialwatcher_opt: ' + pysocialwatcher_opt_flag)
+    logger.info('betterestimates: ' + betterestimates_flag)
+
 
     # set pysocialwatcher_opt_flag to boolean
     pysocialwatcher_opt_flag = (pysocialwatcher_opt_flag.lower() == 'true')
