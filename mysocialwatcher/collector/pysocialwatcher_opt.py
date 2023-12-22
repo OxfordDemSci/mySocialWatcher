@@ -307,7 +307,7 @@ class pysocialwatcher_opt(watcherAPI):
 
     @staticmethod
     def perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir="",
-                                                              remove_tmp_files=False):
+                                                              remove_tmp_files):
         df_num_queries = len(collection_dataframe.index)
         total_API_calls_made = 0
         total_API_calls_made_with_sparse_queries = 0
@@ -408,7 +408,7 @@ class pysocialwatcher_opt(watcherAPI):
                 try:
                     ntries = ntries + 1
                     collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(
-                        collection_dataframe, output_dir = "")
+                        collection_dataframe, output_dir = "", remove_tmp_files)
                     data_collection_incomplete = False
                 except Exception as err:
                     if ntries < params.MAX_TRY_ON_FAILED_QUERIES:
@@ -465,7 +465,7 @@ class pysocialwatcher_opt(watcherAPI):
         pySocialWatcher's data collection function modified to call the optimized data collection algorithm
     """
     @staticmethod
-    def run_data_collection(json_input_file_path, output_dir="", remove_tmp_files=False):
+    def run_data_collection(json_input_file_path, output_dir="", remove_tmp_files):
         # create collection dataframe
         collection_dataframe = pysocialwatcher_opt.process_input_json_file(json_input_file_path, output_dir)
 
@@ -475,7 +475,7 @@ class pysocialwatcher_opt(watcherAPI):
         while data_collection_incomplete:
             try:
                 ntries = ntries + 1
-                collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = output_dir, remove_tmp_files=False)
+                collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = output_dir, remove_tmp_files)
                 data_collection_incomplete = False
             except Exception as err:
                 if ntries < params.MAX_TRY_ON_FAILED_QUERIES:
