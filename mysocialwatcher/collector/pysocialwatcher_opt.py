@@ -306,7 +306,8 @@ class pysocialwatcher_opt(watcherAPI):
         print("__ of which, queries deduced to be sparse: %d" % total_sparse_queries_deduced)
 
     @staticmethod
-    def perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir=""):
+    def perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir="",
+                                                              remove_tmp_files=False):
         df_num_queries = len(collection_dataframe.index)
         total_API_calls_made = 0
         total_API_calls_made_with_sparse_queries = 0
@@ -374,6 +375,9 @@ class pysocialwatcher_opt(watcherAPI):
             pysocialwatcher_opt.print_completed_collection_report(df_num_queries, total_API_calls_made,
                                                                   total_API_calls_made_with_sparse_queries,
                                                                   total_sparse_queries_deduced)
+
+        if remove_tmp_files:
+            remove_temporary_dataframes(output_dir)
 
         return collection_dataframe
 
@@ -496,9 +500,6 @@ class pysocialwatcher_opt(watcherAPI):
             if (sum(idx) > 0):
                 print("Some queries are not estimate ready:" + str(sum(idx)))
                 print("Re-run data collection later!")
-
-        if remove_tmp_files:
-            remove_temporary_dataframes(output_dir)
 
         return collection_dataframe
 
