@@ -34,6 +34,10 @@ RUN if [$sleep_time = '']; then echo sleep_time=11 >> .env; else echo sleep_time
 ARG pysocialwatcher_opt_flag
 RUN if [ "$pysocialwatcher_opt_flag" = '' ]; then echo pysocialwatcher_opt_flag=False >> .env; else echo pysocialwatcher_opt_flag=$pysocialwatcher_opt_flag >> .env; fi
 
+# define pysocialwatcher_opt
+ARG betterestimates_flag
+RUN if [ "$betterestimates_flag" = '' ]; then echo betterestimates_flag=False >> .env; else echo betterestimates_flag=$betterestimates_flag >> .env; fi
+
 # commmand
 ENTRYPOINT ["/bin/sh", "-c"]
 CMD ["./utils/launch.sh"]

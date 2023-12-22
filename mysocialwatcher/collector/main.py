@@ -1,6 +1,7 @@
 from mysocialwatcher.collector.utils import *
 from pysocialwatcher import watcherAPI, constants
 from mysocialwatcher.collector.pysocialwatcher_opt import pysocialwatcher_opt
+from mysocialwatcher.collector.betterestimatesauto import *
 
 
 
@@ -15,6 +16,8 @@ if __name__ == '__main__':
 
     # set pysocialwatcher_opt_flag to boolean
     pysocialwatcher_opt_flag = (pysocialwatcher_opt_flag.lower() == 'true')
+    betterestimates_flag = (betterestimates_flag.lower() == 'true')
+
 
     specs_list = get_specs_list(specs_dir=specs_dir,
                                 data_dir=data_dir)
@@ -92,6 +95,12 @@ if __name__ == '__main__':
                     remove_tmp_files=True)
             except:
                 logger.error('An error occurred while collecting new data.', exc_info=True)
+
+        if betterestimates_flag:
+            logger.info('Running better estimates ' + df_names.get('collecting'))
+            input_file_path = constants.DATAFRAME_AFTER_COLLECTION_FILE_NAME
+        totalAPIcalls = bestims.estimate_sparse_queries(input_file_path, cacheFolder=mainwd)
+
 
         logger.info('Finished collection: ' + df_names.get('collecting'))
         del watcher
