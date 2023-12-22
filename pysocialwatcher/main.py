@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ET
 
 class PySocialWatcher:
 
-    def __init__(self, api_version="12.0", sleep_time=12, save_every_x=300, outputname=None, verbose=True):
+    def __init__(self, api_version="17.0", sleep_time=12, save_every_x=300, outputname=None, verbose=True):
 
         constants.REACHESTIMATE_URL = "https://graph.facebook.com/v" + api_version + "/act_{}/delivery_estimate"
         constants.GRAPH_SEARCH_URL = "https://graph.facebook.com/v" + api_version + "/search"
