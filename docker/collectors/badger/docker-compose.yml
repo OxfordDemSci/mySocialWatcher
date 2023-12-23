@@ -72,7 +72,7 @@ services:
   dgg_subnational_device:
     container_name: dgg_subnational_device
     volumes:
-      - ./dgg_subnational_education:/app/in
+      - ./dgg_subnational_device:/app/in
       - ./../../../data/badger/dgg_subnational_device:/app/data
     build:
       args:
