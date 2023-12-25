@@ -76,6 +76,8 @@ services:
       - ./../../../data/badger/dgg_subnational_device:/app/data
     build:
       args:
+        pysocialwatcher_opt_flag: "true"
+        betterestimates_flag: "true"
         sleep_time: 0
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
