@@ -7393,19 +7393,19 @@
         "access_device": [
             {
                 "name": "iOS",
-                "values": [
+                "or": [
                     6004384041172
                 ]
             },
             {
                 "name": "Wifi",
-                "values": [
+                "or": [
                     6015235495383
                 ]
             },
             {
                 "name": "4G_Network",
-                "values": [
+                "or": [
                     6017253531383
                 ]
             }
