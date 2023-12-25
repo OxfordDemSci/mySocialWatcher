@@ -1,0 +1,67 @@
+{
+  "name": "SSD_country_and_fb_single_regions_part_1",
+  "publisher_platforms": [
+    "facebook"
+  ],
+  "geo_locations": [
+    {
+      "name": "countries",
+      "values": [
+        "SS"
+      ],
+      "pySocialWatcherReference": "key:SS; name:SouthSudan;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "3248"
+        }
+      ],
+      "pySocialWatcherReference": "key:3248; name:Bahr el Ghazal;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "4938"
+        }
+      ],
+      "pySocialWatcherReference": "key:4938; name:Equatoria;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "4965"
+        }
+      ],
+      "pySocialWatcherReference": "key:4965; name:Greater Upper Nile;",
+      "location_types": [
+        "home"
+      ]
+    }
+  ],
+  "genders": [
+    0,
+    1,
+    2
+  ],
+  "ages_ranges": [
+    {
+      "min": 13
+    },
+    {
+      "min": 18
+    }
+  ]
+}

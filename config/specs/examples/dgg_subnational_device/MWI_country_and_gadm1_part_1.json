@@ -1,0 +1,367 @@
+{
+  "name": "MWI_country_and_gadm1_part_1",
+  "publisher_platforms": [
+    "facebook"
+  ],
+  "geo_locations": [
+    {
+      "name": "countries",
+      "values": [
+        "MW"
+      ],
+      "pySocialWatcherReference": "key:MW; name:Malawi;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2480"
+        }
+      ],
+      "pySocialWatcherReference": "key:2480; name:Chitipa District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2490"
+        }
+      ],
+      "pySocialWatcherReference": "key:2490; name:Ntcheu District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2498"
+        }
+      ],
+      "pySocialWatcherReference": "key:2498; name:Blantyre District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2504"
+        }
+      ],
+      "pySocialWatcherReference": "key:2504; name:Phalombe District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2483"
+        }
+      ],
+      "pySocialWatcherReference": "key:2483; name:Dowa District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "4591"
+        }
+      ],
+      "pySocialWatcherReference": "key:4591; name:Likoma District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2499"
+        }
+      ],
+      "pySocialWatcherReference": "key:2499; name:Mwanza District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2484"
+        }
+      ],
+      "pySocialWatcherReference": "key:2484; name:Karonga District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2500"
+        }
+      ],
+      "pySocialWatcherReference": "key:2500; name:Balaka District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2487"
+        }
+      ],
+      "pySocialWatcherReference": "key:2487; name:Mangochi District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2496"
+        }
+      ],
+      "pySocialWatcherReference": "key:2496; name:Salima District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2491"
+        }
+      ],
+      "pySocialWatcherReference": "key:2491; name:Nkhata Bay District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2485"
+        }
+      ],
+      "pySocialWatcherReference": "key:2485; name:Kasungu District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "4592"
+        }
+      ],
+      "pySocialWatcherReference": "key:4592; name:Neno District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2492"
+        }
+      ],
+      "pySocialWatcherReference": "key:2492; name:Nkhotakota District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2482"
+        }
+      ],
+      "pySocialWatcherReference": "key:2482; name:Dedza District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2489"
+        }
+      ],
+      "pySocialWatcherReference": "key:2489; name:Mzimba District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2494"
+        }
+      ],
+      "pySocialWatcherReference": "key:2494; name:Ntchisi District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2493"
+        }
+      ],
+      "pySocialWatcherReference": "key:2493; name:Nsanje District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2502"
+        }
+      ],
+      "pySocialWatcherReference": "key:2502; name:Machinga District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2481"
+        }
+      ],
+      "pySocialWatcherReference": "key:2481; name:Thyolo District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2488"
+        }
+      ],
+      "pySocialWatcherReference": "key:2488; name:Mchinji District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2497"
+        }
+      ],
+      "pySocialWatcherReference": "key:2497; name:Zomba District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2486"
+        }
+      ],
+      "pySocialWatcherReference": "key:2486; name:Lilongwe District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2479"
+        }
+      ],
+      "pySocialWatcherReference": "key:2479; name:Chiradzulu District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2503"
+        }
+      ],
+      "pySocialWatcherReference": "key:2503; name:Mulanje District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2478"
+        }
+      ],
+      "pySocialWatcherReference": "key:2478; name:Chikwawa District;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "2495"
+        }
+      ],
+      "pySocialWatcherReference": "key:2495; name:Rumphi District;",
+      "location_types": [
+        "home"
+      ]
+    }
+  ],
+  "genders": [
+    0,
+    1,
+    2
+  ],
+  "ages_ranges": [
+    {
+      "min": 13
+    },
+    {
+      "min": 18
+    }
+  ]
+}
