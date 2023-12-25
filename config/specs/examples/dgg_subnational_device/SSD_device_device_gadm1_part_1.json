@@ -2406,22 +2406,16 @@
     "behavior": {
         "access_device": [
             {
-                "or": [
-                    6004384041172
-                ],
-                "name": "iOS"
+                "name": "iOS",
+                "value": 6004384041172
             },
             {
-                "or": [
-                    6015235495383
-                ],
-                "name": "Wifi"
+                "name": "Wifi",
+                "value": 6015235495383
             },
             {
-                "or": [
-                    6017253531383
-                ],
-                "name": "4G_Network"
+                "name": "4G_Network",
+                "value": 6017253531383
             }
         ]
     }
