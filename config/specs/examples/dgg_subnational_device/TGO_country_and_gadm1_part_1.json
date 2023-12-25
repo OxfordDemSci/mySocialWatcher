@@ -1,91 +1,110 @@
 {
-  "name": "TGO_country_and_gadm1_part_1",
-  "publisher_platforms": [
-    "facebook"
-  ],
-  "geo_locations": [
-    {
-      "name": "countries",
-      "values": [
-        "TG"
-      ],
-      "pySocialWatcherReference": "key:TG; name:Togo;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+    "name": "TGO_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
         {
-          "key": "4929"
-        }
-      ],
-      "pySocialWatcherReference": "key:4929; name:Centrale Region;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "countries",
+            "values": [
+                "TG"
+            ],
+            "pySocialWatcherReference": "key:TG; name:Togo;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4930"
-        }
-      ],
-      "pySocialWatcherReference": "key:4930; name:Kara Region;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4929"
+                }
+            ],
+            "pySocialWatcherReference": "key:4929; name:Centrale Region;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4931"
-        }
-      ],
-      "pySocialWatcherReference": "key:4931; name:Maritime Region;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4930"
+                }
+            ],
+            "pySocialWatcherReference": "key:4930; name:Kara Region;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4934"
-        }
-      ],
-      "pySocialWatcherReference": "key:4934; name:Plateaux Region;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4931"
+                }
+            ],
+            "pySocialWatcherReference": "key:4931; name:Maritime Region;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4939"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4934"
+                }
+            ],
+            "pySocialWatcherReference": "key:4934; name:Plateaux Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4939"
+                }
+            ],
+            "pySocialWatcherReference": "key:4939; name:Savanes Region;",
+            "location_types": [
+                "home"
+            ]
         }
-      ],
-      "pySocialWatcherReference": "key:4939; name:Savanes Region;",
-      "location_types": [
-        "home"
-      ]
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
     }
-  ],
-  "genders": [
-    0,
-    1,
-    2
-  ],
-  "ages_ranges": [
-    {
-      "min": 13
-    },
-    {
-      "min": 18
-    }
-  ]
 }

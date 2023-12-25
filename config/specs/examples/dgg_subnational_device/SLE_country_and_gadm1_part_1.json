@@ -1,79 +1,98 @@
 {
-  "name": "SLE_country_and_gadm1_part_1",
-  "publisher_platforms": [
-    "facebook"
-  ],
-  "geo_locations": [
-    {
-      "name": "countries",
-      "values": [
-        "SL"
-      ],
-      "pySocialWatcherReference": "key:SL; name:SierraLeone;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+    "name": "SLE_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
         {
-          "key": "3429"
-        }
-      ],
-      "pySocialWatcherReference": "key:3429; name:Eastern Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "countries",
+            "values": [
+                "SL"
+            ],
+            "pySocialWatcherReference": "key:SL; name:SierraLeone;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "3430"
-        }
-      ],
-      "pySocialWatcherReference": "key:3430; name:Northern Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3429"
+                }
+            ],
+            "pySocialWatcherReference": "key:3429; name:Eastern Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "3431"
-        }
-      ],
-      "pySocialWatcherReference": "key:3431; name:Southern Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3430"
+                }
+            ],
+            "pySocialWatcherReference": "key:3430; name:Northern Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "3432"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3431"
+                }
+            ],
+            "pySocialWatcherReference": "key:3431; name:Southern Province;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3432"
+                }
+            ],
+            "pySocialWatcherReference": "key:3432; name:Western Area;",
+            "location_types": [
+                "home"
+            ]
         }
-      ],
-      "pySocialWatcherReference": "key:3432; name:Western Area;",
-      "location_types": [
-        "home"
-      ]
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
     }
-  ],
-  "genders": [
-    0,
-    1,
-    2
-  ],
-  "ages_ranges": [
-    {
-      "min": 13
-    },
-    {
-      "min": 18
-    }
-  ]
 }

@@ -1,175 +1,194 @@
 {
-  "name": "BEN_country_and_gadm1_part_1",
-  "publisher_platforms": [
-    "facebook"
-  ],
-  "geo_locations": [
-    {
-      "name": "countries",
-      "values": [
-        "BJ"
-      ],
-      "pySocialWatcherReference": "key:BJ; name:Benin;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+    "name": "BEN_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
         {
-          "key": "4527"
-        }
-      ],
-      "pySocialWatcherReference": "key:4527; name:Littoral Department;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "countries",
+            "values": [
+                "BJ"
+            ],
+            "pySocialWatcherReference": "key:BJ; name:Benin;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4525"
-        }
-      ],
-      "pySocialWatcherReference": "key:4525; name:Kouffo Department;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4527"
+                }
+            ],
+            "pySocialWatcherReference": "key:4527; name:Littoral Department;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "401"
-        }
-      ],
-      "pySocialWatcherReference": "key:401; name:Atlantique Department;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4525"
+                }
+            ],
+            "pySocialWatcherReference": "key:4525; name:Kouffo Department;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "400"
-        }
-      ],
-      "pySocialWatcherReference": "key:400; name:Atakora Department;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "401"
+                }
+            ],
+            "pySocialWatcherReference": "key:401; name:Atlantique Department;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4526"
-        }
-      ],
-      "pySocialWatcherReference": "key:4526; name:Donga Department;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "400"
+                }
+            ],
+            "pySocialWatcherReference": "key:400; name:Atakora Department;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4523"
-        }
-      ],
-      "pySocialWatcherReference": "key:4523; name:Alibori Department;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4526"
+                }
+            ],
+            "pySocialWatcherReference": "key:4526; name:Donga Department;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4524"
-        }
-      ],
-      "pySocialWatcherReference": "key:4524; name:Collines Department;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4523"
+                }
+            ],
+            "pySocialWatcherReference": "key:4523; name:Alibori Department;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4528"
-        }
-      ],
-      "pySocialWatcherReference": "key:4528; name:Plateau Department;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4524"
+                }
+            ],
+            "pySocialWatcherReference": "key:4524; name:Collines Department;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "403"
-        }
-      ],
-      "pySocialWatcherReference": "key:403; name:Mono Department;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4528"
+                }
+            ],
+            "pySocialWatcherReference": "key:4528; name:Plateau Department;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "402"
-        }
-      ],
-      "pySocialWatcherReference": "key:402; name:Borgou Department;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "403"
+                }
+            ],
+            "pySocialWatcherReference": "key:403; name:Mono Department;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4529"
-        }
-      ],
-      "pySocialWatcherReference": "key:4529; name:Zou Department;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "402"
+                }
+            ],
+            "pySocialWatcherReference": "key:402; name:Borgou Department;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "404"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4529"
+                }
+            ],
+            "pySocialWatcherReference": "key:4529; name:Zou Department;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "404"
+                }
+            ],
+            "pySocialWatcherReference": "key:404; name:Ou\u00e9m\u00e9 Department;",
+            "location_types": [
+                "home"
+            ]
         }
-      ],
-      "pySocialWatcherReference": "key:404; name:Ou\u00e9m\u00e9 Department;",
-      "location_types": [
-        "home"
-      ]
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
     }
-  ],
-  "genders": [
-    0,
-    1,
-    2
-  ],
-  "ages_ranges": [
-    {
-      "min": 13
-    },
-    {
-      "min": 18
-    }
-  ]
 }

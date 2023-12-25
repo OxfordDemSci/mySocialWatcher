@@ -1,415 +1,434 @@
 {
-  "name": "MDG_country_and_gadm1_part_1",
-  "publisher_platforms": [
-    "facebook"
-  ],
-  "geo_locations": [
-    {
-      "name": "countries",
-      "values": [
-        "MG"
-      ],
-      "pySocialWatcherReference": "key:MG; name:Madagascar;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+    "name": "MDG_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
         {
-          "key": "4572"
-        }
-      ],
-      "pySocialWatcherReference": "key:4572; name:Bongolava;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4583"
-        }
-      ],
-      "pySocialWatcherReference": "key:4583; name:Itasy Region;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4571"
-        }
-      ],
-      "pySocialWatcherReference": "key:4571; name:Vakinankaratra;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4577"
-        }
-      ],
-      "pySocialWatcherReference": "key:4577; name:Analamanga;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4572"
+            "name": "countries",
+            "values": [
+                "MG"
+            ],
+            "pySocialWatcherReference": "key:MG; name:Madagascar;",
+            "location_types": [
+                "home"
+            ]
         },
         {
-          "key": "4583"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4572"
+                }
+            ],
+            "pySocialWatcherReference": "key:4572; name:Bongolava;",
+            "location_types": [
+                "home"
+            ]
         },
         {
-          "key": "4571"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4583"
+                }
+            ],
+            "pySocialWatcherReference": "key:4583; name:Itasy Region;",
+            "location_types": [
+                "home"
+            ]
         },
         {
-          "key": "4577"
-        }
-      ],
-      "pySocialWatcherReference": "key:4572-4583-4571-4577; name:Bongolava-Itasy Region-Vakinankaratra-Analamanga;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4565"
-        }
-      ],
-      "pySocialWatcherReference": "key:4565; name:Diana Region;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4584"
-        }
-      ],
-      "pySocialWatcherReference": "key:4584; name:Sava Region;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4565"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4571"
+                }
+            ],
+            "pySocialWatcherReference": "key:4571; name:Vakinankaratra;",
+            "location_types": [
+                "home"
+            ]
         },
         {
-          "key": "4584"
-        }
-      ],
-      "pySocialWatcherReference": "key:4565-4584; name:Diana Region-Sava Region;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4573"
-        }
-      ],
-      "pySocialWatcherReference": "key:4573; name:Atsimo-Atsinanana;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4581"
-        }
-      ],
-      "pySocialWatcherReference": "key:4581; name:Amoron'i Mania;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4600"
-        }
-      ],
-      "pySocialWatcherReference": "key:4600; name:Ihorombe;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4582"
-        }
-      ],
-      "pySocialWatcherReference": "key:4582; name:Haute Matsiatra;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4586"
-        }
-      ],
-      "pySocialWatcherReference": "key:4586; name:Vatovavy-Fitovinany;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4573"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4577"
+                }
+            ],
+            "pySocialWatcherReference": "key:4577; name:Analamanga;",
+            "location_types": [
+                "home"
+            ]
         },
         {
-          "key": "4581"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4572"
+                },
+                {
+                    "key": "4583"
+                },
+                {
+                    "key": "4571"
+                },
+                {
+                    "key": "4577"
+                }
+            ],
+            "pySocialWatcherReference": "key:4572-4583-4571-4577; name:Bongolava-Itasy Region-Vakinankaratra-Analamanga;",
+            "location_types": [
+                "home"
+            ]
         },
         {
-          "key": "4600"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4565"
+                }
+            ],
+            "pySocialWatcherReference": "key:4565; name:Diana Region;",
+            "location_types": [
+                "home"
+            ]
         },
         {
-          "key": "4582"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4584"
+                }
+            ],
+            "pySocialWatcherReference": "key:4584; name:Sava Region;",
+            "location_types": [
+                "home"
+            ]
         },
         {
-          "key": "4586"
-        }
-      ],
-      "pySocialWatcherReference": "key:4573-4581-4600-4582-4586; name:Atsimo-Atsinanana-Amoron'i Mania-Ihorombe-Haute Matsiatra-Vatovavy-Fitovinany;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4585"
-        }
-      ],
-      "pySocialWatcherReference": "key:4585; name:Sofia Region;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4598"
-        }
-      ],
-      "pySocialWatcherReference": "key:4598; name:Boeny;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4578"
-        }
-      ],
-      "pySocialWatcherReference": "key:4578; name:Melaky;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4599"
-        }
-      ],
-      "pySocialWatcherReference": "key:4599; name:Betsiboka;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4585"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4565"
+                },
+                {
+                    "key": "4584"
+                }
+            ],
+            "pySocialWatcherReference": "key:4565-4584; name:Diana Region-Sava Region;",
+            "location_types": [
+                "home"
+            ]
         },
         {
-          "key": "4598"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4573"
+                }
+            ],
+            "pySocialWatcherReference": "key:4573; name:Atsimo-Atsinanana;",
+            "location_types": [
+                "home"
+            ]
         },
         {
-          "key": "4578"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4581"
+                }
+            ],
+            "pySocialWatcherReference": "key:4581; name:Amoron'i Mania;",
+            "location_types": [
+                "home"
+            ]
         },
         {
-          "key": "4599"
-        }
-      ],
-      "pySocialWatcherReference": "key:4585-4598-4578-4599; name:Sofia Region-Boeny-Melaky-Betsiboka;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4580"
-        }
-      ],
-      "pySocialWatcherReference": "key:4580; name:Analanjirofo;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4579"
-        }
-      ],
-      "pySocialWatcherReference": "key:4579; name:Alaotra-Mangoro;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "2253"
-        }
-      ],
-      "pySocialWatcherReference": "key:2253; name:Atsinanana;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4580"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4600"
+                }
+            ],
+            "pySocialWatcherReference": "key:4600; name:Ihorombe;",
+            "location_types": [
+                "home"
+            ]
         },
         {
-          "key": "4579"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4582"
+                }
+            ],
+            "pySocialWatcherReference": "key:4582; name:Haute Matsiatra;",
+            "location_types": [
+                "home"
+            ]
         },
         {
-          "key": "2253"
-        }
-      ],
-      "pySocialWatcherReference": "key:4580-4579-2253; name:Analanjirofo-Alaotra-Mangoro-Atsinanana;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4590"
-        }
-      ],
-      "pySocialWatcherReference": "key:4590; name:Anosy Region;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4588"
-        }
-      ],
-      "pySocialWatcherReference": "key:4588; name:Menabe;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "2257"
-        }
-      ],
-      "pySocialWatcherReference": "key:2257; name:Atsimo-Andrefana;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4587"
-        }
-      ],
-      "pySocialWatcherReference": "key:4587; name:Androy;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
-        {
-          "key": "4590"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4586"
+                }
+            ],
+            "pySocialWatcherReference": "key:4586; name:Vatovavy-Fitovinany;",
+            "location_types": [
+                "home"
+            ]
         },
         {
-          "key": "4588"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4573"
+                },
+                {
+                    "key": "4581"
+                },
+                {
+                    "key": "4600"
+                },
+                {
+                    "key": "4582"
+                },
+                {
+                    "key": "4586"
+                }
+            ],
+            "pySocialWatcherReference": "key:4573-4581-4600-4582-4586; name:Atsimo-Atsinanana-Amoron'i Mania-Ihorombe-Haute Matsiatra-Vatovavy-Fitovinany;",
+            "location_types": [
+                "home"
+            ]
         },
         {
-          "key": "2257"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4585"
+                }
+            ],
+            "pySocialWatcherReference": "key:4585; name:Sofia Region;",
+            "location_types": [
+                "home"
+            ]
         },
         {
-          "key": "4587"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4598"
+                }
+            ],
+            "pySocialWatcherReference": "key:4598; name:Boeny;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4578"
+                }
+            ],
+            "pySocialWatcherReference": "key:4578; name:Melaky;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4599"
+                }
+            ],
+            "pySocialWatcherReference": "key:4599; name:Betsiboka;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4585"
+                },
+                {
+                    "key": "4598"
+                },
+                {
+                    "key": "4578"
+                },
+                {
+                    "key": "4599"
+                }
+            ],
+            "pySocialWatcherReference": "key:4585-4598-4578-4599; name:Sofia Region-Boeny-Melaky-Betsiboka;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4580"
+                }
+            ],
+            "pySocialWatcherReference": "key:4580; name:Analanjirofo;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4579"
+                }
+            ],
+            "pySocialWatcherReference": "key:4579; name:Alaotra-Mangoro;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2253"
+                }
+            ],
+            "pySocialWatcherReference": "key:2253; name:Atsinanana;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4580"
+                },
+                {
+                    "key": "4579"
+                },
+                {
+                    "key": "2253"
+                }
+            ],
+            "pySocialWatcherReference": "key:4580-4579-2253; name:Analanjirofo-Alaotra-Mangoro-Atsinanana;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4590"
+                }
+            ],
+            "pySocialWatcherReference": "key:4590; name:Anosy Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4588"
+                }
+            ],
+            "pySocialWatcherReference": "key:4588; name:Menabe;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2257"
+                }
+            ],
+            "pySocialWatcherReference": "key:2257; name:Atsimo-Andrefana;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4587"
+                }
+            ],
+            "pySocialWatcherReference": "key:4587; name:Androy;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4590"
+                },
+                {
+                    "key": "4588"
+                },
+                {
+                    "key": "2257"
+                },
+                {
+                    "key": "4587"
+                }
+            ],
+            "pySocialWatcherReference": "key:4590-4588-2257-4587; name:Anosy Region-Menabe-Atsimo-Andrefana-Androy;",
+            "location_types": [
+                "home"
+            ]
         }
-      ],
-      "pySocialWatcherReference": "key:4590-4588-2257-4587; name:Anosy Region-Menabe-Atsimo-Andrefana-Androy;",
-      "location_types": [
-        "home"
-      ]
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
     }
-  ],
-  "genders": [
-    0,
-    1,
-    2
-  ],
-  "ages_ranges": [
-    {
-      "min": 13
-    },
-    {
-      "min": 18
-    }
-  ]
 }

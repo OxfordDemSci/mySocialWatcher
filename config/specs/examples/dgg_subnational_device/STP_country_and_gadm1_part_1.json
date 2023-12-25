@@ -1,55 +1,74 @@
 {
-  "name": "STP_country_and_gadm1_part_1",
-  "publisher_platforms": [
-    "facebook"
-  ],
-  "geo_locations": [
-    {
-      "name": "countries",
-      "values": [
-        "ST"
-      ],
-      "pySocialWatcherReference": "key:ST; name:SaoTomeandPrincipe;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+    "name": "STP_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
         {
-          "key": "3478"
-        }
-      ],
-      "pySocialWatcherReference": "key:3478; name:Principe;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "countries",
+            "values": [
+                "ST"
+            ],
+            "pySocialWatcherReference": "key:ST; name:SaoTomeandPrincipe;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "3479"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3478"
+                }
+            ],
+            "pySocialWatcherReference": "key:3478; name:Principe;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3479"
+                }
+            ],
+            "pySocialWatcherReference": "key:3479; name:Sao Tome Island;",
+            "location_types": [
+                "home"
+            ]
         }
-      ],
-      "pySocialWatcherReference": "key:3479; name:Sao Tome Island;",
-      "location_types": [
-        "home"
-      ]
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
     }
-  ],
-  "genders": [
-    0,
-    1,
-    2
-  ],
-  "ages_ranges": [
-    {
-      "min": 13
-    },
-    {
-      "min": 18
-    }
-  ]
 }

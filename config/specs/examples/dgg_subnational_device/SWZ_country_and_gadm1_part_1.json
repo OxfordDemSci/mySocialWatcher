@@ -1,79 +1,98 @@
 {
-  "name": "SWZ_country_and_gadm1_part_1",
-  "publisher_platforms": [
-    "facebook"
-  ],
-  "geo_locations": [
-    {
-      "name": "countries",
-      "values": [
-        "SZ"
-      ],
-      "pySocialWatcherReference": "key:SZ; name:Eswatini;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+    "name": "SWZ_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
         {
-          "key": "3508"
-        }
-      ],
-      "pySocialWatcherReference": "key:3508; name:Hhohho Region;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "countries",
+            "values": [
+                "SZ"
+            ],
+            "pySocialWatcherReference": "key:SZ; name:Eswatini;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "3509"
-        }
-      ],
-      "pySocialWatcherReference": "key:3509; name:Lubombo Region;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3508"
+                }
+            ],
+            "pySocialWatcherReference": "key:3508; name:Hhohho Region;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "3510"
-        }
-      ],
-      "pySocialWatcherReference": "key:3510; name:Manzini Region;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3509"
+                }
+            ],
+            "pySocialWatcherReference": "key:3509; name:Lubombo Region;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "3511"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3510"
+                }
+            ],
+            "pySocialWatcherReference": "key:3510; name:Manzini Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3511"
+                }
+            ],
+            "pySocialWatcherReference": "key:3511; name:Shiselweni Region;",
+            "location_types": [
+                "home"
+            ]
         }
-      ],
-      "pySocialWatcherReference": "key:3511; name:Shiselweni Region;",
-      "location_types": [
-        "home"
-      ]
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
     }
-  ],
-  "genders": [
-    0,
-    1,
-    2
-  ],
-  "ages_ranges": [
-    {
-      "min": 13
-    },
-    {
-      "min": 18
-    }
-  ]
 }

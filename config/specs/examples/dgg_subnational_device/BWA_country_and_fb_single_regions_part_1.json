@@ -1,139 +1,158 @@
 {
-  "name": "BWA_country_and_fb_single_regions_part_1",
-  "publisher_platforms": [
-    "facebook"
-  ],
-  "geo_locations": [
-    {
-      "name": "countries",
-      "values": [
-        "BW"
-      ],
-      "pySocialWatcherReference": "key:BW; name:Botswana;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+    "name": "BWA_country_and_fb_single_regions_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
         {
-          "key": "511"
-        }
-      ],
-      "pySocialWatcherReference": "key:511; name:North-East District;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "countries",
+            "values": [
+                "BW"
+            ],
+            "pySocialWatcherReference": "key:BW; name:Botswana;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "509"
-        }
-      ],
-      "pySocialWatcherReference": "key:509; name:Kweneng District;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "511"
+                }
+            ],
+            "pySocialWatcherReference": "key:511; name:North-East District;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4552"
-        }
-      ],
-      "pySocialWatcherReference": "key:4552; name:North-West District;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "509"
+                }
+            ],
+            "pySocialWatcherReference": "key:509; name:Kweneng District;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "508"
-        }
-      ],
-      "pySocialWatcherReference": "key:508; name:Kgatleng District;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4552"
+                }
+            ],
+            "pySocialWatcherReference": "key:4552; name:North-West District;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "507"
-        }
-      ],
-      "pySocialWatcherReference": "key:507; name:Kgalagadi District;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "508"
+                }
+            ],
+            "pySocialWatcherReference": "key:508; name:Kgatleng District;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "506"
-        }
-      ],
-      "pySocialWatcherReference": "key:506; name:Ghanzi District;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "507"
+                }
+            ],
+            "pySocialWatcherReference": "key:507; name:Kgalagadi District;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "512"
-        }
-      ],
-      "pySocialWatcherReference": "key:512; name:South-East District;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "506"
+                }
+            ],
+            "pySocialWatcherReference": "key:506; name:Ghanzi District;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "504"
-        }
-      ],
-      "pySocialWatcherReference": "key:504; name:Central District;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "512"
+                }
+            ],
+            "pySocialWatcherReference": "key:512; name:South-East District;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "513"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "504"
+                }
+            ],
+            "pySocialWatcherReference": "key:504; name:Central District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "513"
+                }
+            ],
+            "pySocialWatcherReference": "key:513; name:Southern District;",
+            "location_types": [
+                "home"
+            ]
         }
-      ],
-      "pySocialWatcherReference": "key:513; name:Southern District;",
-      "location_types": [
-        "home"
-      ]
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
     }
-  ],
-  "genders": [
-    0,
-    1,
-    2
-  ],
-  "ages_ranges": [
-    {
-      "min": 13
-    },
-    {
-      "min": 18
-    }
-  ]
 }

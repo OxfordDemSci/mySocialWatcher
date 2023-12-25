@@ -1,211 +1,230 @@
 {
-  "name": "MAR_country_and_gadm1_part_1",
-  "publisher_platforms": [
-    "facebook"
-  ],
-  "geo_locations": [
-    {
-      "name": "countries",
-      "values": [
-        "MA"
-      ],
-      "pySocialWatcherReference": "key:MA; name:Morocco;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+    "name": "MAR_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
         {
-          "key": "4390"
-        }
-      ],
-      "pySocialWatcherReference": "key:4390; name:Chaouia-Ouardigha;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "countries",
+            "values": [
+                "MA"
+            ],
+            "pySocialWatcherReference": "key:MA; name:Morocco;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4392"
-        }
-      ],
-      "pySocialWatcherReference": "key:4392; name:Doukkala-Abda;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4390"
+                }
+            ],
+            "pySocialWatcherReference": "key:4390; name:Chaouia-Ouardigha;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2212"
-        }
-      ],
-      "pySocialWatcherReference": "key:2212; name:Fes-Boulemane;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4392"
+                }
+            ],
+            "pySocialWatcherReference": "key:4392; name:Doukkala-Abda;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4389"
-        }
-      ],
-      "pySocialWatcherReference": "key:4389; name:Gharb-Chrarda-Beni Hssen;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2212"
+                }
+            ],
+            "pySocialWatcherReference": "key:2212; name:Fes-Boulemane;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2218"
-        }
-      ],
-      "pySocialWatcherReference": "key:2218; name:Marrakesh-Tensift-El Haouz;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4389"
+                }
+            ],
+            "pySocialWatcherReference": "key:4389; name:Gharb-Chrarda-Beni Hssen;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2219"
-        }
-      ],
-      "pySocialWatcherReference": "key:2219; name:Meknes-Tafilalet;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2218"
+                }
+            ],
+            "pySocialWatcherReference": "key:2218; name:Marrakesh-Tensift-El Haouz;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2223"
-        }
-      ],
-      "pySocialWatcherReference": "key:2223; name:Rabat-Sale-Zemmour-Zaer;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2219"
+                }
+            ],
+            "pySocialWatcherReference": "key:2219; name:Meknes-Tafilalet;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4388"
-        }
-      ],
-      "pySocialWatcherReference": "key:4388; name:Souss-Massa-Draa;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2223"
+                }
+            ],
+            "pySocialWatcherReference": "key:2223; name:Rabat-Sale-Zemmour-Zaer;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4393"
-        }
-      ],
-      "pySocialWatcherReference": "key:4393; name:Tadla-Azilal;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4388"
+                }
+            ],
+            "pySocialWatcherReference": "key:4388; name:Souss-Massa-Draa;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2226"
-        }
-      ],
-      "pySocialWatcherReference": "key:2226; name:Tangier-Tetouan;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4393"
+                }
+            ],
+            "pySocialWatcherReference": "key:4393; name:Tadla-Azilal;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2228"
-        }
-      ],
-      "pySocialWatcherReference": "key:2228; name:Taza-Al Hoceima-Taounate;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2226"
+                }
+            ],
+            "pySocialWatcherReference": "key:2226; name:Tangier-Tetouan;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2206"
-        }
-      ],
-      "pySocialWatcherReference": "key:2206; name:Grand Casablanca;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2228"
+                }
+            ],
+            "pySocialWatcherReference": "key:2228; name:Taza-Al Hoceima-Taounate;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2232"
-        }
-      ],
-      "pySocialWatcherReference": "key:2232; name:Laayoune-Boujdour-Sakia El Hamra;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2206"
+                }
+            ],
+            "pySocialWatcherReference": "key:2206; name:Grand Casablanca;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2230"
-        }
-      ],
-      "pySocialWatcherReference": "key:2230; name:Guelmim-Es Semara;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2232"
+                }
+            ],
+            "pySocialWatcherReference": "key:2232; name:Laayoune-Boujdour-Sakia El Hamra;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4391"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2230"
+                }
+            ],
+            "pySocialWatcherReference": "key:2230; name:Guelmim-Es Semara;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4391"
+                }
+            ],
+            "pySocialWatcherReference": "key:4391; name:Oriental;",
+            "location_types": [
+                "home"
+            ]
         }
-      ],
-      "pySocialWatcherReference": "key:4391; name:Oriental;",
-      "location_types": [
-        "home"
-      ]
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
     }
-  ],
-  "genders": [
-    0,
-    1,
-    2
-  ],
-  "ages_ranges": [
-    {
-      "min": 13
-    },
-    {
-      "min": 18
-    }
-  ]
 }
