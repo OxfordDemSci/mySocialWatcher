@@ -76,21 +76,9 @@
     "behavior": {
         "access_device": [
             {
-                "name": "iOS",
-                "or": [
-                    6004384041172
-                ]
-            },
-            {
                 "name": "Wifi",
                 "or": [
                     6015235495383
-                ]
-            },
-            {
-                "name": "4G_Network",
-                "or": [
-                    6017253531383
                 ]
             }
         ]
