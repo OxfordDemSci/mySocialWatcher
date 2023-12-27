@@ -1,177 +1,148 @@
 {
-  "name": "GNQ_country_and_gadm1_part_1",
-  "publisher_platforms": [
-    "facebook"
-  ],
-  "geo_locations": [
-    {
-      "name": "countries",
-      "values": [
-        "GQ"
-      ],
-      "pySocialWatcherReference": "key:GQ; name:EquatorialGuinea;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+    "name": "GNQ_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
         {
-          "key": "1474"
-        }
-      ],
-      "pySocialWatcherReference": "key:1474; name:Annobon Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "countries",
+            "values": [
+                "GQ"
+            ],
+            "pySocialWatcherReference": "key:GQ; name:EquatorialGuinea;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "1475"
-        }
-      ],
-      "pySocialWatcherReference": "key:1475; name:Bioko Norte Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1474"
+                }
+            ],
+            "pySocialWatcherReference": "key:1474; name:Annobon Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "1476"
-        }
-      ],
-      "pySocialWatcherReference": "key:1476; name:Bioko Sur Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1475"
+                }
+            ],
+            "pySocialWatcherReference": "key:1475; name:Bioko Norte Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "1477"
-        }
-      ],
-      "pySocialWatcherReference": "key:1477; name:Centro Sur Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1476"
+                }
+            ],
+            "pySocialWatcherReference": "key:1476; name:Bioko Sur Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "1478"
-        }
-      ],
-      "pySocialWatcherReference": "key:1478; name:Kie-Ntem Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1477"
+                }
+            ],
+            "pySocialWatcherReference": "key:1477; name:Centro Sur Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "1479"
-        }
-      ],
-      "pySocialWatcherReference": "key:1479; name:Litoral Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1478"
+                }
+            ],
+            "pySocialWatcherReference": "key:1478; name:Kie-Ntem Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "1480"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1479"
+                }
+            ],
+            "pySocialWatcherReference": "key:1479; name:Litoral Province;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1480"
+                }
+            ],
+            "pySocialWatcherReference": "key:1480; name:Wele-Nzas Province;",
+            "location_types": [
+                "home"
+            ]
         }
-      ],
-      "pySocialWatcherReference": "key:1480; name:Wele-Nzas Province;",
-      "location_types": [
-        "home"
-      ]
-    }
-  ],
-  "genders": [
-    0,
-    1,
-    2
-  ],
-  "ages_ranges": [
-    {
-      "min": 13
-    },
-    {
-      "min": 15
-    },
-    {
-      "min": 18
-    },
-    {
-      "min": 15,
-      "max": 24
-    },
-    {
-      "min": 25,
-      "max": 59
-    },
-    {
-      "min": 60
-    },
-    {
-      "min": 15,
-      "max": 49
-    },
-    {
-      "min": 18,
-      "max": 24
-    },
-    {
-      "min": 18,
-      "max": 49
-    }
-  ],
-  "scholarities": [
-    null,
-    {
-      "name": "unknown_unspecified",
-      "or": [
-        12
-      ]
-    },
-    {
-      "name": "No_high_school_degree",
-      "or": [
+    ],
+    "genders": [
+        0,
         1,
-        13
-      ]
-    },
-    {
-      "name": "High_school_degree_but_not_more",
-      "or": [
-        2,
-        4,
-        5,
-        6
-      ]
-    },
-    {
-      "name": "More_than_high_school_degree",
-      "or": [
-        3,
-        7,
-        8,
-        9,
-        10,
-        11
-      ]
-    }
-  ]
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "scholarities": [
+        null,
+        {
+            "name": "unknown_unspecified",
+            "or": [
+                12
+            ]
+        },
+        {
+            "name": "No_high_school_degree",
+            "or": [
+                1,
+                13
+            ]
+        },
+        {
+            "name": "High_school_degree_but_not_more",
+            "or": [
+                2,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "name": "More_than_high_school_degree",
+            "or": [
+                3,
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        }
+    ]
 }

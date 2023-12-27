@@ -1,297 +1,268 @@
 {
-  "name": "BDI_country_and_gadm1_part_1",
-  "publisher_platforms": [
-    "facebook"
-  ],
-  "geo_locations": [
-    {
-      "name": "countries",
-      "values": [
-        "BI"
-      ],
-      "pySocialWatcherReference": "key:BI; name:Burundi;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+    "name": "BDI_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
         {
-          "key": "396"
-        }
-      ],
-      "pySocialWatcherReference": "key:396; name:Rutana Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "countries",
+            "values": [
+                "BI"
+            ],
+            "pySocialWatcherReference": "key:BI; name:Burundi;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "393"
-        }
-      ],
-      "pySocialWatcherReference": "key:393; name:Makamba Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "396"
+                }
+            ],
+            "pySocialWatcherReference": "key:396; name:Rutana Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4841"
-        }
-      ],
-      "pySocialWatcherReference": "key:4841; name:Bujumbura Rural Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "393"
+                }
+            ],
+            "pySocialWatcherReference": "key:393; name:Makamba Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "384"
-        }
-      ],
-      "pySocialWatcherReference": "key:384; name:Bujumbura;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4841"
+                }
+            ],
+            "pySocialWatcherReference": "key:4841; name:Bujumbura Rural Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4845"
-        }
-      ],
-      "pySocialWatcherReference": "key:4845; name:Mwaro Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "384"
+                }
+            ],
+            "pySocialWatcherReference": "key:384; name:Bujumbura;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "394"
-        }
-      ],
-      "pySocialWatcherReference": "key:394; name:Muyinga Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4845"
+                }
+            ],
+            "pySocialWatcherReference": "key:4845; name:Mwaro Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "391"
-        }
-      ],
-      "pySocialWatcherReference": "key:391; name:Kayanza Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "394"
+                }
+            ],
+            "pySocialWatcherReference": "key:394; name:Muyinga Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "392"
-        }
-      ],
-      "pySocialWatcherReference": "key:392; name:Kirundo Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "391"
+                }
+            ],
+            "pySocialWatcherReference": "key:391; name:Kayanza Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "386"
-        }
-      ],
-      "pySocialWatcherReference": "key:386; name:Bururi Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "392"
+                }
+            ],
+            "pySocialWatcherReference": "key:392; name:Kirundo Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "388"
-        }
-      ],
-      "pySocialWatcherReference": "key:388; name:Cibitoke Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "386"
+                }
+            ],
+            "pySocialWatcherReference": "key:386; name:Bururi Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "389"
-        }
-      ],
-      "pySocialWatcherReference": "key:389; name:Gitega Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "388"
+                }
+            ],
+            "pySocialWatcherReference": "key:388; name:Cibitoke Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "385"
-        }
-      ],
-      "pySocialWatcherReference": "key:385; name:Bubanza Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "389"
+                }
+            ],
+            "pySocialWatcherReference": "key:389; name:Gitega Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4844"
-        }
-      ],
-      "pySocialWatcherReference": "key:4844; name:Muramvya Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "385"
+                }
+            ],
+            "pySocialWatcherReference": "key:385; name:Bubanza Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "395"
-        }
-      ],
-      "pySocialWatcherReference": "key:395; name:Ngozi Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4844"
+                }
+            ],
+            "pySocialWatcherReference": "key:4844; name:Muramvya Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "390"
-        }
-      ],
-      "pySocialWatcherReference": "key:390; name:Karuzi Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "395"
+                }
+            ],
+            "pySocialWatcherReference": "key:395; name:Ngozi Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "397"
-        }
-      ],
-      "pySocialWatcherReference": "key:397; name:Ruyigi Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "390"
+                }
+            ],
+            "pySocialWatcherReference": "key:390; name:Karuzi Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "387"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "397"
+                }
+            ],
+            "pySocialWatcherReference": "key:397; name:Ruyigi Province;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "387"
+                }
+            ],
+            "pySocialWatcherReference": "key:387; name:Cankuzo Province;",
+            "location_types": [
+                "home"
+            ]
         }
-      ],
-      "pySocialWatcherReference": "key:387; name:Cankuzo Province;",
-      "location_types": [
-        "home"
-      ]
-    }
-  ],
-  "genders": [
-    0,
-    1,
-    2
-  ],
-  "ages_ranges": [
-    {
-      "min": 13
-    },
-    {
-      "min": 15
-    },
-    {
-      "min": 18
-    },
-    {
-      "min": 15,
-      "max": 24
-    },
-    {
-      "min": 25,
-      "max": 59
-    },
-    {
-      "min": 60
-    },
-    {
-      "min": 15,
-      "max": 49
-    },
-    {
-      "min": 18,
-      "max": 24
-    },
-    {
-      "min": 18,
-      "max": 49
-    }
-  ],
-  "scholarities": [
-    null,
-    {
-      "name": "unknown_unspecified",
-      "or": [
-        12
-      ]
-    },
-    {
-      "name": "No_high_school_degree",
-      "or": [
+    ],
+    "genders": [
+        0,
         1,
-        13
-      ]
-    },
-    {
-      "name": "High_school_degree_but_not_more",
-      "or": [
-        2,
-        4,
-        5,
-        6
-      ]
-    },
-    {
-      "name": "More_than_high_school_degree",
-      "or": [
-        3,
-        7,
-        8,
-        9,
-        10,
-        11
-      ]
-    }
-  ]
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "scholarities": [
+        null,
+        {
+            "name": "unknown_unspecified",
+            "or": [
+                12
+            ]
+        },
+        {
+            "name": "No_high_school_degree",
+            "or": [
+                1,
+                13
+            ]
+        },
+        {
+            "name": "High_school_degree_but_not_more",
+            "or": [
+                2,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "name": "More_than_high_school_degree",
+            "or": [
+                3,
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        }
+    ]
 }

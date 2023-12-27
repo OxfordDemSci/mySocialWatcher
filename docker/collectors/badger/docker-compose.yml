@@ -40,11 +40,11 @@ services:
     restart: on-failure
 
 
-  dgg_subnational:
-    container_name: dgg_subnational
+  dgg_subnational_age:
+    container_name: dgg_subnational_age
     volumes:
       - ./dgg_subnational:/app/in
-      - ./../../../data/badger/dgg_subnational:/app/data
+      - ./../../../data/badger/dgg_subnational_age:/app/data
     build:
       args:
         pysocialwatcher_opt_flag: "true"

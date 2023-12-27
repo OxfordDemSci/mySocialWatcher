@@ -1,273 +1,244 @@
 {
-  "name": "LBR_country_and_gadm1_part_1",
-  "publisher_platforms": [
-    "facebook"
-  ],
-  "geo_locations": [
-    {
-      "name": "countries",
-      "values": [
-        "LR"
-      ],
-      "pySocialWatcherReference": "key:LR; name:Liberia;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+    "name": "LBR_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
         {
-          "key": "2109"
-        }
-      ],
-      "pySocialWatcherReference": "key:2109; name:Bong County;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "countries",
+            "values": [
+                "LR"
+            ],
+            "pySocialWatcherReference": "key:LR; name:Liberia;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2110"
-        }
-      ],
-      "pySocialWatcherReference": "key:2110; name:Grand Gedeh County;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2109"
+                }
+            ],
+            "pySocialWatcherReference": "key:2109; name:Bong County;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2111"
-        }
-      ],
-      "pySocialWatcherReference": "key:2111; name:Grand Cape Mount County;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2110"
+                }
+            ],
+            "pySocialWatcherReference": "key:2110; name:Grand Gedeh County;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2112"
-        }
-      ],
-      "pySocialWatcherReference": "key:2112; name:Lofa County;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2111"
+                }
+            ],
+            "pySocialWatcherReference": "key:2111; name:Grand Cape Mount County;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2115"
-        }
-      ],
-      "pySocialWatcherReference": "key:2115; name:Nimba County;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2112"
+                }
+            ],
+            "pySocialWatcherReference": "key:2112; name:Lofa County;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2116"
-        }
-      ],
-      "pySocialWatcherReference": "key:2116; name:Sinoe County;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2115"
+                }
+            ],
+            "pySocialWatcherReference": "key:2115; name:Nimba County;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2117"
-        }
-      ],
-      "pySocialWatcherReference": "key:2117; name:Grand Bassa County;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2116"
+                }
+            ],
+            "pySocialWatcherReference": "key:2116; name:Sinoe County;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2118"
-        }
-      ],
-      "pySocialWatcherReference": "key:2118; name:Montserrado County;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2117"
+                }
+            ],
+            "pySocialWatcherReference": "key:2117; name:Grand Bassa County;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4856"
-        }
-      ],
-      "pySocialWatcherReference": "key:4856; name:Bomi County;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2118"
+                }
+            ],
+            "pySocialWatcherReference": "key:2118; name:Montserrado County;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4859"
-        }
-      ],
-      "pySocialWatcherReference": "key:4859; name:Grand Kru County;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4856"
+                }
+            ],
+            "pySocialWatcherReference": "key:4856; name:Bomi County;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4860"
-        }
-      ],
-      "pySocialWatcherReference": "key:4860; name:Rivercess County;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4859"
+                }
+            ],
+            "pySocialWatcherReference": "key:4859; name:Grand Kru County;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4861"
-        }
-      ],
-      "pySocialWatcherReference": "key:4861; name:Maryland County;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4860"
+                }
+            ],
+            "pySocialWatcherReference": "key:4860; name:Rivercess County;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4863"
-        }
-      ],
-      "pySocialWatcherReference": "key:4863; name:River Gee County;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4861"
+                }
+            ],
+            "pySocialWatcherReference": "key:4861; name:Maryland County;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4864"
-        }
-      ],
-      "pySocialWatcherReference": "key:4864; name:Margibi County;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4863"
+                }
+            ],
+            "pySocialWatcherReference": "key:4863; name:River Gee County;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4866"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4864"
+                }
+            ],
+            "pySocialWatcherReference": "key:4864; name:Margibi County;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4866"
+                }
+            ],
+            "pySocialWatcherReference": "key:4866; name:Gbarpolu County;",
+            "location_types": [
+                "home"
+            ]
         }
-      ],
-      "pySocialWatcherReference": "key:4866; name:Gbarpolu County;",
-      "location_types": [
-        "home"
-      ]
-    }
-  ],
-  "genders": [
-    0,
-    1,
-    2
-  ],
-  "ages_ranges": [
-    {
-      "min": 13
-    },
-    {
-      "min": 15
-    },
-    {
-      "min": 18
-    },
-    {
-      "min": 15,
-      "max": 24
-    },
-    {
-      "min": 25,
-      "max": 59
-    },
-    {
-      "min": 60
-    },
-    {
-      "min": 15,
-      "max": 49
-    },
-    {
-      "min": 18,
-      "max": 24
-    },
-    {
-      "min": 18,
-      "max": 49
-    }
-  ],
-  "scholarities": [
-    null,
-    {
-      "name": "unknown_unspecified",
-      "or": [
-        12
-      ]
-    },
-    {
-      "name": "No_high_school_degree",
-      "or": [
+    ],
+    "genders": [
+        0,
         1,
-        13
-      ]
-    },
-    {
-      "name": "High_school_degree_but_not_more",
-      "or": [
-        2,
-        4,
-        5,
-        6
-      ]
-    },
-    {
-      "name": "More_than_high_school_degree",
-      "or": [
-        3,
-        7,
-        8,
-        9,
-        10,
-        11
-      ]
-    }
-  ]
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "scholarities": [
+        null,
+        {
+            "name": "unknown_unspecified",
+            "or": [
+                12
+            ]
+        },
+        {
+            "name": "No_high_school_degree",
+            "or": [
+                1,
+                13
+            ]
+        },
+        {
+            "name": "High_school_degree_but_not_more",
+            "or": [
+                2,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "name": "More_than_high_school_degree",
+            "or": [
+                3,
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        }
+    ]
 }
