@@ -43,7 +43,7 @@ services:
   dgg_subnational_age:
     container_name: dgg_subnational_age
     volumes:
-      - ./dgg_subnational:/app/in
+      - ./dgg_subnational_age:/app/in
       - ./../../../data/badger/dgg_subnational_age:/app/data
     build:
       args:
