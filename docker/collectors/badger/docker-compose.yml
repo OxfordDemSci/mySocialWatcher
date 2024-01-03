@@ -39,6 +39,19 @@ services:
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
+  dgg_national_opt:
+    container_name: dgg_national_opt
+    volumes:
+      - ./dgg_national_opt:/app/in
+      - ./../../../data/badger/dgg_national_opt:/app/data
+    build:
+      args:
+        sleep_time: 0
+        pysocialwatcher_opt_flag: "true"
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
 
   dgg_subnational_age:
     container_name: dgg_subnational_age
