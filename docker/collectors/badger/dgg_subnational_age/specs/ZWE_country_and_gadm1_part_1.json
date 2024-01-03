@@ -1,151 +1,177 @@
 {
-  "name": "ZWE_country_and_gadm1_part_1",
-  "publisher_platforms": [
-    "facebook"
-  ],
-  "geo_locations": [
-    {
-      "name": "countries",
-      "values": [
-        "ZW"
-      ],
-      "pySocialWatcherReference": "key:ZW; name:Zimbabwe;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+    "name": "ZWE_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
         {
-          "key": "4072"
-        }
-      ],
-      "pySocialWatcherReference": "key:4072; name:Mashonaland East Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "countries",
+            "values": [
+                "ZW"
+            ],
+            "pySocialWatcherReference": "key:ZW; name:Zimbabwe;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4074"
-        }
-      ],
-      "pySocialWatcherReference": "key:4074; name:Matabeleland North Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4072"
+                }
+            ],
+            "pySocialWatcherReference": "key:4072; name:Mashonaland East Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4075"
-        }
-      ],
-      "pySocialWatcherReference": "key:4075; name:Matabeleland South Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4074"
+                }
+            ],
+            "pySocialWatcherReference": "key:4074; name:Matabeleland North Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4071"
-        }
-      ],
-      "pySocialWatcherReference": "key:4071; name:Mashonaland Central Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4075"
+                }
+            ],
+            "pySocialWatcherReference": "key:4075; name:Matabeleland South Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4719"
-        }
-      ],
-      "pySocialWatcherReference": "key:4719; name:Mashonaland West Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4071"
+                }
+            ],
+            "pySocialWatcherReference": "key:4071; name:Mashonaland Central Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4720"
-        }
-      ],
-      "pySocialWatcherReference": "key:4720; name:Midlands Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4719"
+                }
+            ],
+            "pySocialWatcherReference": "key:4719; name:Mashonaland West Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4716"
-        }
-      ],
-      "pySocialWatcherReference": "key:4716; name:Manicaland Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4720"
+                }
+            ],
+            "pySocialWatcherReference": "key:4720; name:Midlands Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4698"
-        }
-      ],
-      "pySocialWatcherReference": "key:4698; name:Harare Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4716"
+                }
+            ],
+            "pySocialWatcherReference": "key:4716; name:Manicaland Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4717"
-        }
-      ],
-      "pySocialWatcherReference": "key:4717; name:Bulawayo;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4698"
+                }
+            ],
+            "pySocialWatcherReference": "key:4698; name:Harare Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4076"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4717"
+                }
+            ],
+            "pySocialWatcherReference": "key:4717; name:Bulawayo;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4076"
+                }
+            ],
+            "pySocialWatcherReference": "key:4076; name:Masvingo Province;",
+            "location_types": [
+                "home"
+            ]
         }
-      ],
-      "pySocialWatcherReference": "key:4076; name:Masvingo Province;",
-      "location_types": [
-        "home"
-      ]
-    }
-  ],
-  "genders": [
-    0,
-    1,
-    2
-  ],
-  "ages_ranges": [
-    {
-      "min": 13
-    },
-    {
-      "min": 18
-    }
-  ]
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
 }

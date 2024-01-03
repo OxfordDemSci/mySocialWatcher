@@ -1,127 +1,153 @@
 {
-  "name": "NER_country_and_gadm1_part_1",
-  "publisher_platforms": [
-    "facebook"
-  ],
-  "geo_locations": [
-    {
-      "name": "countries",
-      "values": [
-        "NE"
-      ],
-      "pySocialWatcherReference": "key:NE; name:Niger;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+    "name": "NER_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
         {
-          "key": "2600"
-        }
-      ],
-      "pySocialWatcherReference": "key:2600; name:Agadez Region;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "countries",
+            "values": [
+                "NE"
+            ],
+            "pySocialWatcherReference": "key:NE; name:Niger;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2601"
-        }
-      ],
-      "pySocialWatcherReference": "key:2601; name:Diffa Region;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2600"
+                }
+            ],
+            "pySocialWatcherReference": "key:2600; name:Agadez Region;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2602"
-        }
-      ],
-      "pySocialWatcherReference": "key:2602; name:Dosso Region;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2601"
+                }
+            ],
+            "pySocialWatcherReference": "key:2601; name:Diffa Region;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2603"
-        }
-      ],
-      "pySocialWatcherReference": "key:2603; name:Maradi Region;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2602"
+                }
+            ],
+            "pySocialWatcherReference": "key:2602; name:Dosso Region;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2604"
-        }
-      ],
-      "pySocialWatcherReference": "key:2604; name:Niamey;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2603"
+                }
+            ],
+            "pySocialWatcherReference": "key:2603; name:Maradi Region;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2605"
-        }
-      ],
-      "pySocialWatcherReference": "key:2605; name:Tahoua Region;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2604"
+                }
+            ],
+            "pySocialWatcherReference": "key:2604; name:Niamey;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2606"
-        }
-      ],
-      "pySocialWatcherReference": "key:2606; name:Zinder Region;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2605"
+                }
+            ],
+            "pySocialWatcherReference": "key:2605; name:Tahoua Region;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4889"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2606"
+                }
+            ],
+            "pySocialWatcherReference": "key:2606; name:Zinder Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4889"
+                }
+            ],
+            "pySocialWatcherReference": "key:4889; name:Tillaberi Region;",
+            "location_types": [
+                "home"
+            ]
         }
-      ],
-      "pySocialWatcherReference": "key:4889; name:Tillaberi Region;",
-      "location_types": [
-        "home"
-      ]
-    }
-  ],
-  "genders": [
-    0,
-    1,
-    2
-  ],
-  "ages_ranges": [
-    {
-      "min": 13
-    },
-    {
-      "min": 18
-    }
-  ]
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
 }

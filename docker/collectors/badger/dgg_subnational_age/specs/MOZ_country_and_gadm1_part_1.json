@@ -1,163 +1,189 @@
 {
-  "name": "MOZ_country_and_gadm1_part_1",
-  "publisher_platforms": [
-    "facebook"
-  ],
-  "geo_locations": [
-    {
-      "name": "countries",
-      "values": [
-        "MZ"
-      ],
-      "pySocialWatcherReference": "key:MZ; name:Mozambique;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+    "name": "MOZ_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
         {
-          "key": "2552"
-        }
-      ],
-      "pySocialWatcherReference": "key:2552; name:Cabo Delgado Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "countries",
+            "values": [
+                "MZ"
+            ],
+            "pySocialWatcherReference": "key:MZ; name:Mozambique;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2553"
-        }
-      ],
-      "pySocialWatcherReference": "key:2553; name:Gaza Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2552"
+                }
+            ],
+            "pySocialWatcherReference": "key:2552; name:Cabo Delgado Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2554"
-        }
-      ],
-      "pySocialWatcherReference": "key:2554; name:Inhambane Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2553"
+                }
+            ],
+            "pySocialWatcherReference": "key:2553; name:Gaza Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2555"
-        }
-      ],
-      "pySocialWatcherReference": "key:2555; name:Maputo Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2554"
+                }
+            ],
+            "pySocialWatcherReference": "key:2554; name:Inhambane Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2556"
-        }
-      ],
-      "pySocialWatcherReference": "key:2556; name:Sofala Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2555"
+                }
+            ],
+            "pySocialWatcherReference": "key:2555; name:Maputo Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2557"
-        }
-      ],
-      "pySocialWatcherReference": "key:2557; name:Nampula Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2556"
+                }
+            ],
+            "pySocialWatcherReference": "key:2556; name:Sofala Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2558"
-        }
-      ],
-      "pySocialWatcherReference": "key:2558; name:Niassa Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2557"
+                }
+            ],
+            "pySocialWatcherReference": "key:2557; name:Nampula Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2559"
-        }
-      ],
-      "pySocialWatcherReference": "key:2559; name:Tete Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2558"
+                }
+            ],
+            "pySocialWatcherReference": "key:2558; name:Niassa Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2560"
-        }
-      ],
-      "pySocialWatcherReference": "key:2560; name:Zambezia Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2559"
+                }
+            ],
+            "pySocialWatcherReference": "key:2559; name:Tete Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "2561"
-        }
-      ],
-      "pySocialWatcherReference": "key:2561; name:Manica Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2560"
+                }
+            ],
+            "pySocialWatcherReference": "key:2560; name:Zambezia Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "4679"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2561"
+                }
+            ],
+            "pySocialWatcherReference": "key:2561; name:Manica Province;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4679"
+                }
+            ],
+            "pySocialWatcherReference": "key:4679; name:Maputo;",
+            "location_types": [
+                "home"
+            ]
         }
-      ],
-      "pySocialWatcherReference": "key:4679; name:Maputo;",
-      "location_types": [
-        "home"
-      ]
-    }
-  ],
-  "genders": [
-    0,
-    1,
-    2
-  ],
-  "ages_ranges": [
-    {
-      "min": 13
-    },
-    {
-      "min": 18
-    }
-  ]
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
 }

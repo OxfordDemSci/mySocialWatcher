@@ -1,607 +1,633 @@
 {
-  "name": "DZA_country_and_gadm1_part_1",
-  "publisher_platforms": [
-    "facebook"
-  ],
-  "geo_locations": [
-    {
-      "name": "countries",
-      "values": [
-        "DZ"
-      ],
-      "pySocialWatcherReference": "key:DZ; name:Algeria;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+    "name": "DZA_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
         {
-          "key": "4517"
-        }
-      ],
-      "pySocialWatcherReference": "key:4517; name:El Taref Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "countries",
+            "values": [
+                "DZ"
+            ],
+            "pySocialWatcherReference": "key:DZ; name:Algeria;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "900"
-        }
-      ],
-      "pySocialWatcherReference": "key:900; name:Algiers Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4517"
+                }
+            ],
+            "pySocialWatcherReference": "key:4517; name:El Taref Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "901"
-        }
-      ],
-      "pySocialWatcherReference": "key:901; name:Batna Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "900"
+                }
+            ],
+            "pySocialWatcherReference": "key:900; name:Algiers Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "902"
-        }
-      ],
-      "pySocialWatcherReference": "key:902; name:Constantine Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "901"
+                }
+            ],
+            "pySocialWatcherReference": "key:901; name:Batna Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "903"
-        }
-      ],
-      "pySocialWatcherReference": "key:903; name:Medea Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "902"
+                }
+            ],
+            "pySocialWatcherReference": "key:902; name:Constantine Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "904"
-        }
-      ],
-      "pySocialWatcherReference": "key:904; name:Mostaganem Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "903"
+                }
+            ],
+            "pySocialWatcherReference": "key:903; name:Medea Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "905"
-        }
-      ],
-      "pySocialWatcherReference": "key:905; name:Oran Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "904"
+                }
+            ],
+            "pySocialWatcherReference": "key:904; name:Mostaganem Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "906"
-        }
-      ],
-      "pySocialWatcherReference": "key:906; name:Saida Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "905"
+                }
+            ],
+            "pySocialWatcherReference": "key:905; name:Oran Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "907"
-        }
-      ],
-      "pySocialWatcherReference": "key:907; name:Setif Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "906"
+                }
+            ],
+            "pySocialWatcherReference": "key:906; name:Saida Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "908"
-        }
-      ],
-      "pySocialWatcherReference": "key:908; name:Tiaret Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "907"
+                }
+            ],
+            "pySocialWatcherReference": "key:907; name:Setif Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "909"
-        }
-      ],
-      "pySocialWatcherReference": "key:909; name:Tizi Ouzou Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "908"
+                }
+            ],
+            "pySocialWatcherReference": "key:908; name:Tiaret Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "910"
-        }
-      ],
-      "pySocialWatcherReference": "key:910; name:Tlemcen Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "909"
+                }
+            ],
+            "pySocialWatcherReference": "key:909; name:Tizi Ouzou Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "911"
-        }
-      ],
-      "pySocialWatcherReference": "key:911; name:Bejaia Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "910"
+                }
+            ],
+            "pySocialWatcherReference": "key:910; name:Tlemcen Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "912"
-        }
-      ],
-      "pySocialWatcherReference": "key:912; name:Biskra Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "911"
+                }
+            ],
+            "pySocialWatcherReference": "key:911; name:Bejaia Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "913"
-        }
-      ],
-      "pySocialWatcherReference": "key:913; name:Blida Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "912"
+                }
+            ],
+            "pySocialWatcherReference": "key:912; name:Biskra Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "914"
-        }
-      ],
-      "pySocialWatcherReference": "key:914; name:Bouira Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "913"
+                }
+            ],
+            "pySocialWatcherReference": "key:913; name:Blida Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "915"
-        }
-      ],
-      "pySocialWatcherReference": "key:915; name:Djelfa Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "914"
+                }
+            ],
+            "pySocialWatcherReference": "key:914; name:Bouira Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "916"
-        }
-      ],
-      "pySocialWatcherReference": "key:916; name:Guelma Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "915"
+                }
+            ],
+            "pySocialWatcherReference": "key:915; name:Djelfa Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "917"
-        }
-      ],
-      "pySocialWatcherReference": "key:917; name:Jijel Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "916"
+                }
+            ],
+            "pySocialWatcherReference": "key:916; name:Guelma Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "918"
-        }
-      ],
-      "pySocialWatcherReference": "key:918; name:Laghouat Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "917"
+                }
+            ],
+            "pySocialWatcherReference": "key:917; name:Jijel Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "919"
-        }
-      ],
-      "pySocialWatcherReference": "key:919; name:Mascara Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "918"
+                }
+            ],
+            "pySocialWatcherReference": "key:918; name:Laghouat Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "920"
-        }
-      ],
-      "pySocialWatcherReference": "key:920; name:M'Sila Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "919"
+                }
+            ],
+            "pySocialWatcherReference": "key:919; name:Mascara Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "921"
-        }
-      ],
-      "pySocialWatcherReference": "key:921; name:Oum El Bouaghi Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "920"
+                }
+            ],
+            "pySocialWatcherReference": "key:920; name:M'Sila Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "922"
-        }
-      ],
-      "pySocialWatcherReference": "key:922; name:Sidi Bel Abbes Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "921"
+                }
+            ],
+            "pySocialWatcherReference": "key:921; name:Oum El Bouaghi Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "923"
-        }
-      ],
-      "pySocialWatcherReference": "key:923; name:Skikda Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "922"
+                }
+            ],
+            "pySocialWatcherReference": "key:922; name:Sidi Bel Abbes Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "924"
-        }
-      ],
-      "pySocialWatcherReference": "key:924; name:Tebessa Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "923"
+                }
+            ],
+            "pySocialWatcherReference": "key:923; name:Skikda Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "925"
-        }
-      ],
-      "pySocialWatcherReference": "key:925; name:Adrar Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "924"
+                }
+            ],
+            "pySocialWatcherReference": "key:924; name:Tebessa Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "926"
-        }
-      ],
-      "pySocialWatcherReference": "key:926; name:Ain Defla Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "925"
+                }
+            ],
+            "pySocialWatcherReference": "key:925; name:Adrar Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "927"
-        }
-      ],
-      "pySocialWatcherReference": "key:927; name:Ain Temouchent Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "926"
+                }
+            ],
+            "pySocialWatcherReference": "key:926; name:Ain Defla Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "928"
-        }
-      ],
-      "pySocialWatcherReference": "key:928; name:Annaba Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "927"
+                }
+            ],
+            "pySocialWatcherReference": "key:927; name:Ain Temouchent Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "929"
-        }
-      ],
-      "pySocialWatcherReference": "key:929; name:Bechar Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "928"
+                }
+            ],
+            "pySocialWatcherReference": "key:928; name:Annaba Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "930"
-        }
-      ],
-      "pySocialWatcherReference": "key:930; name:Bordj Bou Arreridj Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "929"
+                }
+            ],
+            "pySocialWatcherReference": "key:929; name:Bechar Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "931"
-        }
-      ],
-      "pySocialWatcherReference": "key:931; name:Boumerdes Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "930"
+                }
+            ],
+            "pySocialWatcherReference": "key:930; name:Bordj Bou Arreridj Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "932"
-        }
-      ],
-      "pySocialWatcherReference": "key:932; name:Chlef Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "931"
+                }
+            ],
+            "pySocialWatcherReference": "key:931; name:Boumerdes Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "933"
-        }
-      ],
-      "pySocialWatcherReference": "key:933; name:El Bayadh Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "932"
+                }
+            ],
+            "pySocialWatcherReference": "key:932; name:Chlef Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "934"
-        }
-      ],
-      "pySocialWatcherReference": "key:934; name:El Oued Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "933"
+                }
+            ],
+            "pySocialWatcherReference": "key:933; name:El Bayadh Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "936"
-        }
-      ],
-      "pySocialWatcherReference": "key:936; name:Ghardaia Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "934"
+                }
+            ],
+            "pySocialWatcherReference": "key:934; name:El Oued Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "937"
-        }
-      ],
-      "pySocialWatcherReference": "key:937; name:Illizi Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "936"
+                }
+            ],
+            "pySocialWatcherReference": "key:936; name:Ghardaia Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "938"
-        }
-      ],
-      "pySocialWatcherReference": "key:938; name:Khenchela Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "937"
+                }
+            ],
+            "pySocialWatcherReference": "key:937; name:Illizi Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "939"
-        }
-      ],
-      "pySocialWatcherReference": "key:939; name:Mila Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "938"
+                }
+            ],
+            "pySocialWatcherReference": "key:938; name:Khenchela Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "940"
-        }
-      ],
-      "pySocialWatcherReference": "key:940; name:Naama Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "939"
+                }
+            ],
+            "pySocialWatcherReference": "key:939; name:Mila Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "941"
-        }
-      ],
-      "pySocialWatcherReference": "key:941; name:Ouargla Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "940"
+                }
+            ],
+            "pySocialWatcherReference": "key:940; name:Naama Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "942"
-        }
-      ],
-      "pySocialWatcherReference": "key:942; name:Relizane Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "941"
+                }
+            ],
+            "pySocialWatcherReference": "key:941; name:Ouargla Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "943"
-        }
-      ],
-      "pySocialWatcherReference": "key:943; name:Souk Ahras Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "942"
+                }
+            ],
+            "pySocialWatcherReference": "key:942; name:Relizane Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "944"
-        }
-      ],
-      "pySocialWatcherReference": "key:944; name:Tamanrasset Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "943"
+                }
+            ],
+            "pySocialWatcherReference": "key:943; name:Souk Ahras Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "945"
-        }
-      ],
-      "pySocialWatcherReference": "key:945; name:Tindouf Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "944"
+                }
+            ],
+            "pySocialWatcherReference": "key:944; name:Tamanrasset Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "946"
-        }
-      ],
-      "pySocialWatcherReference": "key:946; name:Tipaza Province;",
-      "location_types": [
-        "home"
-      ]
-    },
-    {
-      "name": "regions",
-      "values": [
+            "name": "regions",
+            "values": [
+                {
+                    "key": "945"
+                }
+            ],
+            "pySocialWatcherReference": "key:945; name:Tindouf Province;",
+            "location_types": [
+                "home"
+            ]
+        },
         {
-          "key": "947"
+            "name": "regions",
+            "values": [
+                {
+                    "key": "946"
+                }
+            ],
+            "pySocialWatcherReference": "key:946; name:Tipaza Province;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "947"
+                }
+            ],
+            "pySocialWatcherReference": "key:947; name:Tissemsilt Province;",
+            "location_types": [
+                "home"
+            ]
         }
-      ],
-      "pySocialWatcherReference": "key:947; name:Tissemsilt Province;",
-      "location_types": [
-        "home"
-      ]
-    }
-  ],
-  "genders": [
-    0,
-    1,
-    2
-  ],
-  "ages_ranges": [
-    {
-      "min": 13
-    },
-    {
-      "min": 18
-    }
-  ]
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
 }
