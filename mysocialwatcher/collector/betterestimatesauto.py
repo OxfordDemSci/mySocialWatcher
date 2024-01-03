@@ -17,8 +17,8 @@ requests.packages.urllib3.disable_warnings()
 ## Parameters
 # Should we stop re-issuing a query once we found a better estimate for it?
 single_estimation = True
-max_try = 2 # how many times to keep trying if we fail midway ## change to 2
-time_wait = 0 # waits 5 minutes between tries
+max_try = 5 # how many times to keep trying if we fail midway
+time_wait = 10 # waits 5 minutes between tries
 
 #infile = sys.argv[1]
 #credentials_file = sys.argv[2]
@@ -43,7 +43,6 @@ countries_to_try = ["AD", "AE", "AF", "AG", "AI", "AL", "AM", "AR", "AS", "AT",
                     "TC", "TH", "TJ", "TL", "TM", "TO", "TR", "TT", "TV", "TW",
                     "UA", "US", "UY", "UZ", "VC", "VE", "VG", "VI", "VN", "VU",
                     "WF", "WS", "XK", "YE", "YT"]
-
 
 ##
 constants.SLEEP_TIME = 0
