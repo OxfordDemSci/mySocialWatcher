@@ -18,7 +18,7 @@ requests.packages.urllib3.disable_warnings()
 # Should we stop re-issuing a query once we found a better estimate for it?
 single_estimation = True
 max_try = 5 # how many times to keep trying if we fail midway
-time_wait = 10 # waits 5 minutes between tries
+time_wait = 0 # waits 5 minutes between tries
 
 #infile = sys.argv[1]
 #credentials_file = sys.argv[2]
