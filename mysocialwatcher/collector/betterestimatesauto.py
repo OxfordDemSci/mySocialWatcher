@@ -132,10 +132,10 @@ def save_partial_results(df, list_estimates_lower, list_estimates_upper, infile)
 
     # Extract the base of the file name without the .csv extension
     # This assumes that the file name ends with '.csv' before '.gz'
-    base_name = infile.replace('.csv', '')
+    base_name = infile.replace('.csv.gz', '')
 
     # Construct the new filename by adding '.betterestimate.csv.gz' to the base name
-    savefile = f"{base_name}.betterestimate.csv.gz"
+    savefile = f"{base_name}_betterestimate.csv.gz"
 
     # Save the DataFrame to CSV with gzip compression
     df.to_csv(savefile, compression='gzip', index=False)
