@@ -130,11 +130,11 @@ def save_partial_results(df, list_estimates_lower, list_estimates_upper, infile)
     df.loc[result_lower.index, constants.MAU_LOWER_AUDIENCE_FIELD] = result_lower
     df.loc[result_upper.index, constants.MAU_UPPER_AUDIENCE_FIELD] = result_upper
 
-    # Split the infile name and extension
-    base_name, file_extension = os.path.splitext(infile)
+    # Split the infile name from its extension assuming it ends in '.csv'
+    base_name = infile.rsplit('.', 1)[0]
 
-    # Construct the new filename using the base name and your new extension
-    savefile = f"{base_name}.betterestimate{file_extension}"
+    # Construct the new filename using the base name and new extension
+    savefile = f"{base_name}.betterestimate.csv"
 
     # Save the DataFrame to CSV with gzip compression
     df.to_csv(savefile, compression='gzip', index=False)
