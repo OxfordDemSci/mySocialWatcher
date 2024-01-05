@@ -129,9 +129,15 @@ def save_partial_results(df, list_estimates_lower, list_estimates_upper, infile)
     # These are the queries that we can safely replace in the input dataset
     df.loc[result_lower.index, constants.MAU_LOWER_AUDIENCE_FIELD] = result_lower
     df.loc[result_upper.index, constants.MAU_UPPER_AUDIENCE_FIELD] = result_upper
-    
-    savefile = "%s.betterestimate" % (infile)
-    df.to_csv(savefile + ".gz", compression='gzip', index=False)
+
+    # Split the infile name and extension
+    base_name, file_extension = os.path.splitext(infile)
+
+    # Construct the new filename using the base name and your new extension
+    savefile = f"{base_name}.betterestimate{file_extension}"
+
+    # Save the DataFrame to CSV with gzip compression
+    df.to_csv(savefile + '.gz', compression='gzip', index=False)
 
     found_better_estimate_lower = (result_lower < 1000).sum()
     still_can_get_better_estimates_lower = df[constants.MAU_LOWER_AUDIENCE_FIELD].isnull().sum()
