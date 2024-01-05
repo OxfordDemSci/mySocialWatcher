@@ -313,7 +313,9 @@ def estimate_sparse_queries(infile, credentials_file=None, usingCache=True, cach
         df = pd.read_csv(partial_file)
     else:
         df = pd.read_csv(infile)
-    
+
+    # Clean up byte string
+    df['response'] = df['response'].str.replace("^b\'|\'$", "", regex=True)
     # if there are no sparse queries don't run anything
     if df[constants.MAU_UPPER_AUDIENCE_FIELD].isnull().sum() == 0:
         queries_need_better_estimate = df[(df[constants.MAU_UPPER_AUDIENCE_FIELD] == 1000)].shape[0]
