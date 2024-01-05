@@ -23,6 +23,9 @@ PLACE_HOLDER_DATA_RESPONSE_CONTENT = r'{"data":[{"daily_outcomes_curve":' \
                                      r',"estimate_mau_upper_bound":' + str(PLACE_HOLDER_NUMERIC) + \
                                      r',"estimate_ready":false}]}'
 
+PLACE_HOLDER_DATA_RESPONSE_CONTENT = PLACE_HOLDER_DATA_RESPONSE_CONTENT.encode('utf-8')
+
+
 DEDUCED_DATA_RESPONSE_CONTENT_ESTIM_READY = r'{"data":[{"daily_outcomes_curve":' \
                                             r'[{"spend":0,"reach":0,"impressions":0,"actions":0}],' \
                                             r'"estimate_dau":' + str(PLACE_HOLDER_NUMERIC) + \
@@ -30,6 +33,9 @@ DEDUCED_DATA_RESPONSE_CONTENT_ESTIM_READY = r'{"data":[{"daily_outcomes_curve":'
                                             r',"estimate_mau_lower_bound":' + str(PLACE_HOLDER_NUMERIC) + \
                                             r',"estimate_mau_upper_bound":' + str(SPARSE_QUERY_SIZE) + \
                                             r',"estimate_ready":true}]}'
+
+DEDUCED_DATA_RESPONSE_CONTENT_ESTIM_READY = DEDUCED_DATA_RESPONSE_CONTENT_ESTIM_READY.encode('utf-8')
+
 DEDUCED_DATA_RESPONSE_CONTENT_NOT_ESTIM_READY = r'{"data":[{"daily_outcomes_curve":' \
                                                 r'[{"spend":0,"reach":0,"impressions":0,"actions":0}],' \
                                                 r'"estimate_dau":' + str(PLACE_HOLDER_NUMERIC) + \
@@ -37,3 +43,6 @@ DEDUCED_DATA_RESPONSE_CONTENT_NOT_ESTIM_READY = r'{"data":[{"daily_outcomes_curv
                                                 r',"estimate_mau_lower_bound":' + str(PLACE_HOLDER_NUMERIC) + \
                                                 r',"estimate_mau_upper_bound":' + str(SPARSE_QUERY_SIZE) + \
                                                 r',"estimate_ready":false}]}'
+
+DEDUCED_DATA_RESPONSE_CONTENT_NOT_ESTIM_READY = DEDUCED_DATA_RESPONSE_CONTENT_NOT_ESTIM_READY.encode('utf-8')
+
