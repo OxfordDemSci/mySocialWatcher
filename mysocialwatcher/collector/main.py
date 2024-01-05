@@ -6,8 +6,6 @@ if __name__ == '__main__':
 
     logger.info(' ')
     logger.info('--------------------------------------------------')
-    logger.info(logger.handlers[0].baseFilename)
-
     logger.info('Sleep time: ' + sleep_time)
 
     specs_list = get_specs_list(specs_dir=specs_dir,
@@ -57,6 +55,7 @@ if __name__ == '__main__':
             logger.error('An error occurred while preparing to collect data.', exc_info=True)
             if email_notification_enable:
                 sendmail(subject=specs_filepath,contents='An error occurred while preparing to collect data',receiver=email_receiver)
+
         # ---- continue a previous collection ---- #
         continue_previous_collection = df_names.get('continue_previous_collection')
         if continue_previous_collection:
@@ -84,6 +83,8 @@ if __name__ == '__main__':
                     remove_tmp_files=True)
             except:
                 logger.error('An error occurred while collecting new data.', exc_info=True)
+                if email_notification_enable:
+                    sendmail(subject=specs_filepath, contents='An error occurred while collecting new data.', receiver=email_receiver)
 
         logger.info('Finished collection: ' + df_names.get('collecting'))
         if email_notification_enable:

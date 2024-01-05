@@ -5,7 +5,6 @@ from pathlib import Path
 
 def sendmail(subject,contents,receiver):
 
-    current_path = Path.cwd()
     with open("yagmail.csv") as f:
         credentials = f.read().replace("\n", "").split(",")
     usrname = credentials[0]
@@ -17,7 +16,7 @@ def sendmail(subject,contents,receiver):
     message = MIMEMultipart()
     message['From'] = usrname
     message['To'] = to
-    message['Subject'] = "mySocialWatcher Notification:"+subject+current_path
+    message['Subject'] = "mySocialWatcher Notification:"+subject
 
     message.attach(MIMEText(contents, 'plain'))
 

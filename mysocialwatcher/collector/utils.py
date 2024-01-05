@@ -4,7 +4,12 @@ import datetime
 import json
 from time import sleep
 from dotenv import load_dotenv
-from email_notification import sendmail
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from pathlib import Path
+
+
 load_dotenv()
 
 # directories
@@ -23,7 +28,7 @@ if os.getenv('email_notification_enable') is not None:
     email_notification_enable = True if os.getenv('email_notification_enable')=='True' else False
 
 if email_notification_enable:
-    email_receiver = os.getenv('email_receiver')
+        email_receiver = os.getenv('email_receiver') if os.getenv('email_receiver') is not None else 'scro3937@ox.ac.uk'
 
 # logging
 os.makedirs(os.path.join(data_dir, 'logs'), exist_ok=True)
@@ -125,3 +130,32 @@ def estimate_run_time(specs_dir, n_tokens=1, sleep_time=11):
             specs = json.load(f)
         runtime += len(get_all_combinations_from_input(specs)) * sleep_time / n_tokens
     return str(datetime.timedelta(seconds=runtime))
+
+
+def sendmail(subject,contents,receiver):
+
+    with open("yagmail.csv") as f:
+        credentials = f.read().replace("\n", "").split(",")
+    usrname = credentials[0]
+    pswd = credentials[1]
+    to = receiver
+
+
+    # Create the email message
+    message = MIMEMultipart()
+    message['From'] = usrname
+    message['To'] = to
+    message['Subject'] = "mySocialWatcher Notification:"+subject
+
+    message.attach(MIMEText(contents, 'plain'))
+
+    # Connect to the SMTP server
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()
+    server.login(usrname, pswd)
+
+    # Send the email
+    server.sendmail(usrname, to, message.as_string())
+
+    # Close the server connection
+    server.quit()
