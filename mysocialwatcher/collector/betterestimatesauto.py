@@ -137,7 +137,7 @@ def save_partial_results(df, list_estimates_lower, list_estimates_upper, infile)
     savefile = f"{base_name}.betterestimate{file_extension}"
 
     # Save the DataFrame to CSV with gzip compression
-    df.to_csv(savefile + '.gz', compression='gzip', index=False)
+    df.to_csv(savefile, compression='gzip', index=False)
 
     found_better_estimate_lower = (result_lower < 1000).sum()
     still_can_get_better_estimates_lower = df[constants.MAU_LOWER_AUDIENCE_FIELD].isnull().sum()
