@@ -60,7 +60,7 @@ def get_specs_list(specs_dir, data_dir):
 
         specs_name = os.path.splitext(specs)[0]
 
-        specs_finished = [i for i in finished_list if specs_name in i]
+        specs_finished = [i for i in finished_list if specs_name in i and 'betterestimate' not in i]
         specs_finished.sort(reverse=True)
 
         specs_collecting = [i for i in collecting_list if specs_name in i]
