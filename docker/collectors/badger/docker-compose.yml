@@ -96,4 +96,32 @@ services:
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
+  dgg_subnational_age_device:
+    container_name: dgg_subnational_age_device
+    volumes:
+      - ./dgg_subnational_age_device:/app/in
+      - ./../../../data/badger/dgg_subnational_age_device:/app/data
+    build:
+      args:
+        pysocialwatcher_opt_flag: "true"
+        betterestimates_flag: "true"
+        sleep_time: 0
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
+  dgg_subnational_age_education:
+    container_name: dgg_subnational_age_education
+    volumes:
+      - ./dgg_subnational_age_education:/app/in
+      - ./../../../data/badger/dgg_subnational_age_education:/app/data
+    build:
+      args:
+        pysocialwatcher_opt_flag: "true"
+        betterestimates_flag: "true"
+        sleep_time: 0
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
 
