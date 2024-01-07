@@ -5,7 +5,7 @@ import pandas as pd
 
 # virtual machine and collection names
 vm = 'badger'
-collection = 'dgg_subnational_age'
+collection = 'dgg_subnational_age_device'
 
 
 if __name__ == '__main__':
