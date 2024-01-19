@@ -54,7 +54,7 @@ if __name__ == '__main__':
         except:
             logger.error('An error occurred while preparing to collect data.', exc_info=True)
             if email_notification_enable:
-                sendmail(subject=specs_filepath,contents='An error occurred while preparing to collect data',receiver=email_receiver)
+                sendmail(subject=specs_filename,contents='An error occurred while preparing to collect data',receiver=email_receiver)
 
         # ---- continue a previous collection ---- #
         continue_previous_collection = df_names.get('continue_previous_collection')
@@ -70,7 +70,7 @@ if __name__ == '__main__':
                 logger.warning('An error occurred while continuing a previous collection.', exc_info=True)
                 continue_previous_collection = False
                 if email_notification_enable:
-                    sendmail(subject=specs_filepath, contents='An error occurred while continuing a previous collection.', receiver=email_receiver)
+                    sendmail(subject=specs_filename, contents='An error occurred while continuing a previous collection.', receiver=email_receiver)
 
         # ---- start a new collection ---- #
         if not continue_previous_collection:
@@ -78,17 +78,17 @@ if __name__ == '__main__':
                 logger.info('Beginning a new collection: ' + df_names.get('collecting'))
 
                 df = watcher.run_data_collection(
-                    json_input_file_path=specs_filepath,
+                    json_input_file_path=specs_filename,
                     output_dir=data_dir + '/',
                     remove_tmp_files=True)
             except:
                 logger.error('An error occurred while collecting new data.', exc_info=True)
                 if email_notification_enable:
-                    sendmail(subject=specs_filepath, contents='An error occurred while collecting new data.', receiver=email_receiver)
+                    sendmail(subject=specs_filename, contents='An error occurred while collecting new data.', receiver=email_receiver)
 
         logger.info('Finished collection: ' + df_names.get('collecting'))
         if email_notification_enable:
-            sendmail(subject=specs_filepath, contents='Finished collection', receiver=email_receiver)
+            sendmail(subject=specs_filename, contents='Finished collection', receiver=email_receiver)
 
         del watcher
 
