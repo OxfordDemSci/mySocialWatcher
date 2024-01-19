@@ -22,6 +22,7 @@ if os.getenv('sleep_time') is not None:
     sleep_time = os.getenv('sleep_time')
 
 
+
 # email notification
 email_notification_enable = False
 if os.getenv('email_notification_enable') is not None:
@@ -29,6 +30,17 @@ if os.getenv('email_notification_enable') is not None:
 
 if email_notification_enable:
         email_receiver = os.getenv('email_receiver') if os.getenv('email_receiver') is not None else 'scro3937@ox.ac.uk'
+
+# pysocialwatcher_opt
+pysocialwatcher_opt_flag = False
+if os.getenv('pysocialwatcher_opt_flag') is not None:
+    pysocialwatcher_opt_flag = os.getenv('pysocialwatcher_opt_flag')
+
+# betterestimates_flag
+betterestimates_flag = False
+if os.getenv('betterestimates_flag') is not None:
+    betterestimates_flag = os.getenv('betterestimates_flag')
+
 
 # logging
 os.makedirs(os.path.join(data_dir, 'logs'), exist_ok=True)
@@ -65,7 +77,7 @@ def get_specs_list(specs_dir, data_dir):
 
         specs_name = os.path.splitext(specs)[0]
 
-        specs_finished = [i for i in finished_list if specs_name in i]
+        specs_finished = [i for i in finished_list if specs_name in i and 'betterestimate' not in i]
         specs_finished.sort(reverse=True)
 
         specs_collecting = [i for i in collecting_list if specs_name in i]

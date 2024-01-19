@@ -1,0 +1,232 @@
+{
+    "name": "SEN_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "SN"
+            ],
+            "pySocialWatcherReference": "key:SN; name:Senegal;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3445"
+                }
+            ],
+            "pySocialWatcherReference": "key:3445; name:Tambacounda Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4721"
+                }
+            ],
+            "pySocialWatcherReference": "key:4721; name:Kaffrine Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3449"
+                }
+            ],
+            "pySocialWatcherReference": "key:3449; name:Kaolack Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3443"
+                }
+            ],
+            "pySocialWatcherReference": "key:3443; name:Diourbel Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4723"
+                }
+            ],
+            "pySocialWatcherReference": "key:4723; name:S\u00e9dhiou Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3447"
+                }
+            ],
+            "pySocialWatcherReference": "key:3447; name:Louga Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3446"
+                }
+            ],
+            "pySocialWatcherReference": "key:3446; name:Thi\u00e8s Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4715"
+                }
+            ],
+            "pySocialWatcherReference": "key:4715; name:Matam Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3450"
+                }
+            ],
+            "pySocialWatcherReference": "key:3450; name:Kolda Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3451"
+                }
+            ],
+            "pySocialWatcherReference": "key:3451; name:Ziguinchor Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3448"
+                }
+            ],
+            "pySocialWatcherReference": "key:3448; name:Fatick Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4722"
+                }
+            ],
+            "pySocialWatcherReference": "key:4722; name:K\u00e9dougou Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3444"
+                }
+            ],
+            "pySocialWatcherReference": "key:3444; name:Saint-Louis Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3442"
+                }
+            ],
+            "pySocialWatcherReference": "key:3442; name:Dakar Region;",
+            "location_types": [
+                "home"
+            ]
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "scholarities": [
+        null,
+        {
+            "name": "unknown_unspecified",
+            "or": [
+                12
+            ]
+        },
+        {
+            "name": "No_high_school_degree",
+            "or": [
+                1,
+                13
+            ]
+        },
+        {
+            "name": "High_school_degree_but_not_more",
+            "or": [
+                2,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "name": "More_than_high_school_degree",
+            "or": [
+                3,
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        }
+    ]
+}

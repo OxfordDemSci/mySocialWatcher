@@ -1,0 +1,165 @@
+{
+    "name": "MLI_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "ML"
+            ],
+            "pySocialWatcherReference": "key:ML; name:Mali;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2382"
+                }
+            ],
+            "pySocialWatcherReference": "key:2382; name:Bamako;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2389"
+                }
+            ],
+            "pySocialWatcherReference": "key:2389; name:Gao Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2390"
+                }
+            ],
+            "pySocialWatcherReference": "key:2390; name:Kidal Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2386"
+                }
+            ],
+            "pySocialWatcherReference": "key:2386; name:Sikasso Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2383"
+                }
+            ],
+            "pySocialWatcherReference": "key:2383; name:Kayes Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2385"
+                }
+            ],
+            "pySocialWatcherReference": "key:2385; name:S\u00e9gou Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2384"
+                }
+            ],
+            "pySocialWatcherReference": "key:2384; name:Mopti Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2388"
+                }
+            ],
+            "pySocialWatcherReference": "key:2388; name:Tombouctou Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2387"
+                }
+            ],
+            "pySocialWatcherReference": "key:2387; name:Koulikoro Region;",
+            "location_types": [
+                "home"
+            ]
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

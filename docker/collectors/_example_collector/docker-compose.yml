@@ -13,6 +13,8 @@ services:
         sleep_time: 12
         email_notification_enable: True
         email_receiver: valler4044@gmail.com
+        pysocialwatcher_opt_flag: "false"
+        betterestimates: "false"
         collection_dir: "./docker/collectors/_example_collector/_example_collection"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile

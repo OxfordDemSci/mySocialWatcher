@@ -1,0 +1,146 @@
+{
+    "name": "SHN_country_and_fb_single_regions_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "SH"
+            ],
+            "pySocialWatcherReference": "key:SH; name:SaintHelena;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4921"
+                }
+            ],
+            "pySocialWatcherReference": "key:4921; name:Sandy Bay;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4966"
+                }
+            ],
+            "pySocialWatcherReference": "key:4966; name:Jamestown;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4967"
+                }
+            ],
+            "pySocialWatcherReference": "key:4967; name:Longwood;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4956"
+                }
+            ],
+            "pySocialWatcherReference": "key:4956; name:Saint Paul's;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4955"
+                }
+            ],
+            "pySocialWatcherReference": "key:4955; name:Half Tree Hollow;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4926"
+                }
+            ],
+            "pySocialWatcherReference": "key:4926; name:Levelwood;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4953"
+                }
+            ],
+            "pySocialWatcherReference": "key:4953; name:Blue Hill;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4943"
+                }
+            ],
+            "pySocialWatcherReference": "key:4943; name:Alarm Forest;",
+            "location_types": [
+                "home"
+            ]
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

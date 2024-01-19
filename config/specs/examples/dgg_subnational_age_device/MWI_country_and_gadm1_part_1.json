@@ -1,0 +1,496 @@
+{
+    "name": "MWI_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "MW"
+            ],
+            "pySocialWatcherReference": "key:MW; name:Malawi;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2480"
+                }
+            ],
+            "pySocialWatcherReference": "key:2480; name:Chitipa District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2490"
+                }
+            ],
+            "pySocialWatcherReference": "key:2490; name:Ntcheu District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2498"
+                }
+            ],
+            "pySocialWatcherReference": "key:2498; name:Blantyre District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2504"
+                }
+            ],
+            "pySocialWatcherReference": "key:2504; name:Phalombe District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2483"
+                }
+            ],
+            "pySocialWatcherReference": "key:2483; name:Dowa District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4591"
+                }
+            ],
+            "pySocialWatcherReference": "key:4591; name:Likoma District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2499"
+                }
+            ],
+            "pySocialWatcherReference": "key:2499; name:Mwanza District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2484"
+                }
+            ],
+            "pySocialWatcherReference": "key:2484; name:Karonga District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2500"
+                }
+            ],
+            "pySocialWatcherReference": "key:2500; name:Balaka District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2487"
+                }
+            ],
+            "pySocialWatcherReference": "key:2487; name:Mangochi District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2496"
+                }
+            ],
+            "pySocialWatcherReference": "key:2496; name:Salima District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2491"
+                }
+            ],
+            "pySocialWatcherReference": "key:2491; name:Nkhata Bay District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2485"
+                }
+            ],
+            "pySocialWatcherReference": "key:2485; name:Kasungu District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4592"
+                }
+            ],
+            "pySocialWatcherReference": "key:4592; name:Neno District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2492"
+                }
+            ],
+            "pySocialWatcherReference": "key:2492; name:Nkhotakota District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2482"
+                }
+            ],
+            "pySocialWatcherReference": "key:2482; name:Dedza District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2489"
+                }
+            ],
+            "pySocialWatcherReference": "key:2489; name:Mzimba District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2494"
+                }
+            ],
+            "pySocialWatcherReference": "key:2494; name:Ntchisi District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2493"
+                }
+            ],
+            "pySocialWatcherReference": "key:2493; name:Nsanje District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2502"
+                }
+            ],
+            "pySocialWatcherReference": "key:2502; name:Machinga District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2481"
+                }
+            ],
+            "pySocialWatcherReference": "key:2481; name:Thyolo District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2488"
+                }
+            ],
+            "pySocialWatcherReference": "key:2488; name:Mchinji District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2497"
+                }
+            ],
+            "pySocialWatcherReference": "key:2497; name:Zomba District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2486"
+                }
+            ],
+            "pySocialWatcherReference": "key:2486; name:Lilongwe District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2479"
+                }
+            ],
+            "pySocialWatcherReference": "key:2479; name:Chiradzulu District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2503"
+                }
+            ],
+            "pySocialWatcherReference": "key:2503; name:Mulanje District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2478"
+                }
+            ],
+            "pySocialWatcherReference": "key:2478; name:Chikwawa District;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2495"
+                }
+            ],
+            "pySocialWatcherReference": "key:2495; name:Rumphi District;",
+            "location_types": [
+                "home"
+            ]
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6004386044572
+                ],
+                "name": "Android"
+            },
+            {
+                "not": [
+                    6004384041172,
+                    6004386044572
+                ],
+                "name": "Not_iOS_or_Android_OS"
+            },
+            {
+                "or": [
+                    6075237200983,
+                    6075237226583,
+                    6106223987983,
+                    6106224431383,
+                    6092512462983,
+                    6092512424583,
+                    6092512412783
+                ],
+                "name": "High_end_galaxy_phone_S8_S8p_S9_S9p_High_end_apple_iphone_X_8_and_8p"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253486583
+                ],
+                "name": "2G_Network"
+            },
+            {
+                "or": [
+                    6017253511583
+                ],
+                "name": "3G_Network"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            },
+            {
+                "not": [
+                    6015235495383,
+                    6017253486583,
+                    6017253511583,
+                    6017253531383
+                ],
+                "name": "Not_2G_3G_4G_or_WiFi_network"
+            },
+            {
+                "or": [
+                    6091658707783,
+                    6091658708183
+                ],
+                "name": "Uses_a_mobile_device_0_to_3_months"
+            },
+            {
+                "or": [
+                    6091658512983,
+                    6091658512183,
+                    6091658540583,
+                    6091658562383,
+                    6091658651583
+                ],
+                "name": "Uses_a_mobile_device_4_to_24_months"
+            },
+            {
+                "or": [
+                    6091658683183
+                ],
+                "name": "Uses_a_mobile_device_25_months_plus"
+            },
+            {
+                "or": [
+                    6002714898572
+                ],
+                "name": "Small_business_owners"
+            },
+            {
+                "not": [
+                    6002714898572
+                ],
+                "name": "Not_Small_business_owners"
+            }
+        ]
+    }
+}
