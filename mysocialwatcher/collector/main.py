@@ -10,7 +10,7 @@ if __name__ == '__main__':
     logger.info('Sleep time: ' + sleep_time)
     logger.info('pysocialwatcher_opt: ' + pysocialwatcher_opt_flag)
     logger.info('betterestimates: ' + betterestimates_flag)
-    logger.info('email_notification: ' + email_notification_enable)
+    logger.info('email_notification: ' + str(email_notification_enable))
 
     # set pysocialwatcher_opt_flag to boolean
     pysocialwatcher_opt_flag = (pysocialwatcher_opt_flag.lower() == 'true')
