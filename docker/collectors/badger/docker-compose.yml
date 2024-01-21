@@ -11,6 +11,8 @@ services:
     build:
       args:
         sleep_time: 0
+        email_notification: "True"
+        email_receiver: "valler4044@gmail.com"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure

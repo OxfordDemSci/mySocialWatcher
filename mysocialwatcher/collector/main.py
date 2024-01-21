@@ -10,7 +10,7 @@ if __name__ == '__main__':
     logger.info('Sleep time: ' + sleep_time)
     logger.info('pysocialwatcher_opt: ' + pysocialwatcher_opt_flag)
     logger.info('betterestimates: ' + betterestimates_flag)
-
+    logger.info('email_notification: ' + email_notification_enable)
 
     # set pysocialwatcher_opt_flag to boolean
     pysocialwatcher_opt_flag = (pysocialwatcher_opt_flag.lower() == 'true')
@@ -92,7 +92,7 @@ if __name__ == '__main__':
                 logger.info('Beginning a new collection: ' + df_names.get('collecting'))
 
                 df = watcher.run_data_collection(
-                    json_input_file_path=specs_filename,
+                    json_input_file_path=specs_filepath,
                     output_dir=data_dir + '/',
                     remove_tmp_files=True)
             except:
@@ -117,3 +117,5 @@ if __name__ == '__main__':
         del watcher
 
     logger.info('Finished collection.')
+    if email_notification_enable:
+        sendmail(subject=specs_filename, contents='Finished collection', receiver=email_receiver)
