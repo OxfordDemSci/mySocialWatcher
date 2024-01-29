@@ -157,7 +157,7 @@ def sendmail(subject,contents,receiver):
     usrname = credentials[0]
     pswd = credentials[1]
 
-
+    if not isinstance(email_receiver, list): receiver = list(email_receiver)
     for to in receiver:
         # Create the email message
         message = MIMEMultipart()
