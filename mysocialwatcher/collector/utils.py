@@ -32,10 +32,8 @@ if os.getenv('email_notification_enable') is not None:
 if email_notification_enable:
     if os.getenv('email_receiver') is not None:
         email_receiver = os.getenv('email_receiver')
-        receiver = os.getenv('email_receiver')
     else:
-        email_receiver = 'scro3937@ox.ac.uk'
-        receiver = os.getenv('email_receiver')
+        email_receiver = 'valler4044@gmail.com'  # backup email add
 
 # pysocialwatcher_opt
 pysocialwatcher_opt_flag = False
