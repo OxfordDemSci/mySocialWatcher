@@ -13,6 +13,7 @@ if __name__ == '__main__':
     logger.info('email_notification: ' + str(email_notification_enable))
     if email_notification_enable:
         logger.info('email_receiver: ' + str(email_receiver))
+        logger.info('receiver: ' + str(receiver))
 
     # set pysocialwatcher_opt_flag to boolean
     pysocialwatcher_opt_flag = (pysocialwatcher_opt_flag.lower() == 'true')

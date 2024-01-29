@@ -14,6 +14,7 @@ if __name__ == '__main__':
     specs_template_path = os.path.join('config', 'specs', 'examples')
     out_dir = os.path.join('docker', 'collectors', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
+    yagmail_path = os.path.join('config', 'private', 'yagmail.csv')
 
     # ---- credentials ---- #
 
@@ -46,3 +47,7 @@ if __name__ == '__main__':
     specs = ['dgg_national_home_recent.json', 'dgg_national_18_home_recent.json', 'dgg_national_android_home_recent.json']
     for spec in specs:
         shutil.copy(os.path.join(specs_template_path, spec), os.path.join(specs_dir, spec))
+
+    # ---- yagmail credential ---- #
+    if os.path.exists(yagmail_path):
+        shutil.copy2(yagmail_path, os.path.join(out_dir, 'yagmail.csv'))
