@@ -38,7 +38,7 @@ RUN if [$email_notification_enable = '']; then echo email_notification_enable = 
 RUN if [ "$email_notification_enable" = "True" ]; then ln -s in/yagmail.csv yagmail.csv; fi
 
 ARG email_receiver
-RUN if [ "$email_notification_enable" = "True"]; then if [ $email_receiver = '' ]; then echo email_receiver= "valler4044@gmail.com" >> .env; else echo email_receiver=$email_receiver >> .env ; fi; fi
+RUN if [ "$email_notification_enable" = "True"]; then if [ $email_receiver = '' ]; then echo email_receiver= "valler4044@gmail.com" >> .env; else echo email_receiver="$email_receiver" >> .env ; fi; fi
 
 # define pysocialwatcher_opt
 ARG pysocialwatcher_opt_flag
