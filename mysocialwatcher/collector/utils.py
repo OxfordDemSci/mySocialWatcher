@@ -31,9 +31,11 @@ if os.getenv('email_notification_enable') is not None:
 
 if email_notification_enable:
     if os.getenv('email_receiver') is not None:
-        email_receiver = os.getenv('email_receiver')
+        email_receiver = os.getenv('email_receiver').split(',')
     else:
-        email_receiver = 'valler4044@gmail.com'  # backup email add
+        email_receiver = 'valler4044@gmail.com'.split(',')  # backup email add
+
+    if not isinstance(email_receiver, list): receiver = list(email_receiver)
 
 # pysocialwatcher_opt
 pysocialwatcher_opt_flag = False
@@ -154,24 +156,24 @@ def sendmail(subject,contents,receiver):
         credentials = f.read().replace("\n", "").split(",")
     usrname = credentials[0]
     pswd = credentials[1]
-    to = receiver
 
 
-    # Create the email message
-    message = MIMEMultipart()
-    message['From'] = usrname
-    message['To'] = to
-    message['Subject'] = "mySocialWatcher Notification:"+subject
+    for to in receiver:
+        # Create the email message
+        message = MIMEMultipart()
+        message['From'] = usrname
+        message['To'] = to
+        message['Subject'] = "mySocialWatcher Notification:"+subject
 
-    message.attach(MIMEText(contents, 'plain'))
+        message.attach(MIMEText(contents, 'plain'))
 
-    # Connect to the SMTP server
-    server = smtplib.SMTP('smtp.gmail.com', 587)
-    server.starttls()
-    server.login(usrname, pswd)
+        # Connect to the SMTP server
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login(usrname, pswd)
 
-    # Send the email
-    server.sendmail(usrname, to, message.as_string())
+        # Send the email
+        server.sendmail(usrname, to, message.as_string())
 
-    # Close the server connection
-    server.quit()
+        # Close the server connection
+        server.quit()

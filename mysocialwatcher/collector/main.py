@@ -121,5 +121,5 @@ if __name__ == '__main__':
         del watcher
 
     logger.info('Finished collection.')
-    if (email_notification_enable) & ('scro' in email_receiver):
-        sendmail(subject=specs_filename, contents='Finished collection', receiver=email_receiver)
+    if (email_notification_enable) & ('scro' in email_receiver[0]):
+        sendmail(subject=specs_filename, contents='Finished collection', receiver=email_receiver[0])
