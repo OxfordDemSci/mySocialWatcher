@@ -11,6 +11,7 @@ if __name__ == '__main__':
     logger.info('pysocialwatcher_opt: ' + pysocialwatcher_opt_flag)
     logger.info('betterestimates: ' + betterestimates_flag)
     logger.info('email_notification: ' + str(email_notification_enable))
+    logger.info('email_receiver: ' + str(email_receiver))
 
     # set pysocialwatcher_opt_flag to boolean
     pysocialwatcher_opt_flag = (pysocialwatcher_opt_flag.lower() == 'true')
@@ -108,11 +109,13 @@ if __name__ == '__main__':
                 totalAPIcalls = bestims.estimate_sparse_queries(input_file_path, cacheFolder=mainwd)
             except:
                 logger.error('An error occurred while performing betterestimates.', exc_info=True)
+                if email_notification_enable:
+                    sendmail(subject=specs_filename, contents='An error occurred while performing betterestimates.', receiver=email_receiver)
 
 
         logger.info('Finished collection: ' + df_names.get('collecting'))
-        if email_notification_enable:
-            sendmail(subject=specs_filename, contents='Finished collection', receiver=email_receiver)
+        #if email_notification_enable:
+        #    sendmail(subject=specs_filename, contents='Finished collection', receiver=email_receiver)
 
         del watcher
 
