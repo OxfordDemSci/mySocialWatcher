@@ -31,20 +31,6 @@ services:
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
-  dgg_national_home_recent:
-    container_name: dgg_national_home_recent
-    volumes:
-      - ./dgg_national_home_recent:/app/in
-      - ./../../../data/badger/dgg_national_home_recent:/app/data
-    build:
-      args:
-        sleep_time: 0
-        email_notification_enable: "True"
-        email_receiver: "scro3937@ox.ac.uk,casey.breen@demography.ox.ac.uk"
-      context: ./../../../
-      dockerfile: ./docker/collectors/Dockerfile
-    restart: on-failure
-
 
   dgg_subnational_age:
     container_name: dgg_subnational_age
