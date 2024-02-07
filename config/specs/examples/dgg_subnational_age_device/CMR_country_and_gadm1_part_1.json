@@ -1,0 +1,280 @@
+{
+    "name": "CMR_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "CM"
+            ],
+            "pySocialWatcherReference": "key:CM; name:Cameroon;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "680"
+                }
+            ],
+            "pySocialWatcherReference": "key:680; name:Adamawa Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "677"
+                }
+            ],
+            "pySocialWatcherReference": "key:677; name:Northwest Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "675"
+                }
+            ],
+            "pySocialWatcherReference": "key:675; name:East Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "684"
+                }
+            ],
+            "pySocialWatcherReference": "key:684; name:South Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "676"
+                }
+            ],
+            "pySocialWatcherReference": "key:676; name:Littoral Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "682"
+                }
+            ],
+            "pySocialWatcherReference": "key:682; name:Far North Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "683"
+                }
+            ],
+            "pySocialWatcherReference": "key:683; name:North Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "679"
+                }
+            ],
+            "pySocialWatcherReference": "key:679; name:Southwest Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "681"
+                }
+            ],
+            "pySocialWatcherReference": "key:681; name:Centre Region;",
+            "location_types": [
+                "home"
+            ]
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "678"
+                }
+            ],
+            "pySocialWatcherReference": "key:678; name:West Region;",
+            "location_types": [
+                "home"
+            ]
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6004386044572
+                ],
+                "name": "Android"
+            },
+            {
+                "not": [
+                    6004384041172,
+                    6004386044572
+                ],
+                "name": "Not_iOS_or_Android_OS"
+            },
+            {
+                "or": [
+                    6075237200983,
+                    6075237226583,
+                    6106223987983,
+                    6106224431383,
+                    6092512462983,
+                    6092512424583,
+                    6092512412783
+                ],
+                "name": "High_end_galaxy_phone_S8_S8p_S9_S9p_High_end_apple_iphone_X_8_and_8p"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253486583
+                ],
+                "name": "2G_Network"
+            },
+            {
+                "or": [
+                    6017253511583
+                ],
+                "name": "3G_Network"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            },
+            {
+                "not": [
+                    6015235495383,
+                    6017253486583,
+                    6017253511583,
+                    6017253531383
+                ],
+                "name": "Not_2G_3G_4G_or_WiFi_network"
+            },
+            {
+                "or": [
+                    6091658707783,
+                    6091658708183
+                ],
+                "name": "Uses_a_mobile_device_0_to_3_months"
+            },
+            {
+                "or": [
+                    6091658512983,
+                    6091658512183,
+                    6091658540583,
+                    6091658562383,
+                    6091658651583
+                ],
+                "name": "Uses_a_mobile_device_4_to_24_months"
+            },
+            {
+                "or": [
+                    6091658683183
+                ],
+                "name": "Uses_a_mobile_device_25_months_plus"
+            },
+            {
+                "or": [
+                    6002714898572
+                ],
+                "name": "Small_business_owners"
+            },
+            {
+                "not": [
+                    6002714898572
+                ],
+                "name": "Not_Small_business_owners"
+            }
+        ]
+    }
+}
