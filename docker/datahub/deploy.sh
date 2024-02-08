@@ -9,7 +9,7 @@ cp ~/mySocialWatcher/config/private/datahub.env ~/mySocialWatcher/docker/datahub
 sudo service docker stop
 
 echo '{' >> /etc/docker/daemon.json
-echo '  "data-root": "/disk512/docker' >> /etc/docker/daemon.json
+echo '  "data-root": "/disk/docker' >> /etc/docker/daemon.json
 echo '}' >> /etc/docker/daemon.json
 
 sudo service docker start

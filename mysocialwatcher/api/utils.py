@@ -107,13 +107,13 @@ def check_args(args, required=[], required_oneof=[], optional=[]):
         args['valid'] = False
 
     # argument data types
-    integer_args = ['contributor_id', 'collection_id', 'timestamp', 'geo_id', 'geo_key',
+    integer_args = ['contributor_id', 'collection_id', 'timestamp', 'geo_id',
                     'gender', 'age_min', 'age_max',
                     'dau', 'mau', 'mau_lower', 'mau_upper']
     json_args = ['geo_locations', 'all_fields', 'targeting', 'response', 'language_key']
     boolean_args = ['valid', 'add_geometry']
     date_args = ['date_start', 'date_end', 'collection_date']
-    quote_args = (['country', 'collection_name', 'language_name', 'geo_level', 'location_types'] +
+    quote_args = (['country', 'collection_name', 'language_name', 'geo_level', 'geo_key', 'location_types'] +
                   json_args + date_args)
 
     # platforms
