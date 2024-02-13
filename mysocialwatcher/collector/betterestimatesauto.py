@@ -130,6 +130,32 @@ def save_partial_results(df, list_estimates_lower, list_estimates_upper, infile)
     df.loc[result_lower.index, constants.MAU_LOWER_AUDIENCE_FIELD] = result_lower
     df.loc[result_upper.index, constants.MAU_UPPER_AUDIENCE_FIELD] = result_upper
 
+    # Function to append ('better_estimates', True) to a row of tuples
+    def append_better_estimates(row):
+        try:
+            # Convert the string representation of the tuple to an actual tuple
+            eval_row = ast.literal_eval(row)
+            # Ensure eval_row is a tuple before proceeding
+            if isinstance(eval_row, tuple):
+                # Check if ('better_estimates', True) already exists in the tuple
+                if ('better_estimates', True) not in eval_row:
+                    # Append ('better_estimates', True) to the tuple if it doesn't already exist
+                    updated_row = eval_row + (('better_estimates', True),)
+                    # Convert the updated tuple back to a string if necessary
+                    return str(updated_row)
+                else:
+                    # If ('better_estimates', True) already exists, return the original row
+                    return row
+            else:
+                return row  # Return the original row if conversion fails or it's not a tuple
+        except (ValueError, SyntaxError) as e:
+            # Handle potential errors from ast.literal_eval
+            print(f"Error evaluating row: {e}")
+            return row
+
+    # Apply the append_better_estimates function to add '('better_estimates', True)' to all rows for the 'all_fields' column
+    df['all_fields'] = df['all_fields'].apply(lambda x: append_better_estimates(x))
+
     # Extract the base of the file name without the .csv extension
     # This assumes that the file name ends with '.csv' before '.gz'
     base_name = infile.replace('.csv.gz', '')
@@ -397,8 +423,12 @@ def estimate_sparse_queries(infile, credentials_file=None, usingCache=True, cach
             print("Checking API calls in the cache system...")
             # Only keep the rows that we have never explored
             print("Before checking cache: %d queries could have been made." % (df1000["exploring"].sum()))
+
             df1000.loc[df1000[constants.ALLFIELDS_FIELD].apply(
-                lambda x: is_query_invald_for_country(cacheDict, ast.literal_eval(x), country)), "exploring"] = False
+                lambda x: is_query_invald_for_country(cacheDict, ast.literal_eval(x) if isinstance(x, str) else x,
+                                                      country)
+            ), "exploring"] = False
+
             print("After checking cache: %d queries will be made." % (df1000["exploring"].sum()))
             print("Computing Queries...")
         
@@ -559,7 +589,10 @@ def estimate_sparse_queries(infile, credentials_file=None, usingCache=True, cach
             (df1000_in_country[constants.MAU_UPPER_AUDIENCE_FIELD] < 10000)
             bad_queries = df1000_in_country[~v_in_country]
             bad_queries[constants.ALLFIELDS_FIELD].drop_duplicates().apply(
-                lambda x: append_to_cache(cacheDict, ast.literal_eval(x), country))
+                lambda x: append_to_cache(cacheDict, ast.literal_eval(x) if isinstance(x, str) else x, country)
+            )
+            save_cache(cacheDict, cacheFolder, cacheFileName)
+
             save_cache(cacheDict, cacheFolder, cacheFileName)
 
         # save the in-country data frame for later inspection
