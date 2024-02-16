@@ -1,0 +1,258 @@
+{
+    "name": "BJ_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "BJ"
+            ],
+            "pySocialWatcherReference": {
+                "key": "BJ",
+                "name": "Benin"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4527",
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4527",
+                "name": "Littoral Department"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4525",
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4525",
+                "name": "Kouffo Department"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "401",
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "401",
+                "name": "Atlantique Department"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "400",
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "400",
+                "name": "Atakora Department"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4526",
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4526",
+                "name": "Donga Department"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4523",
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4523",
+                "name": "Alibori Department"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4524",
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4524",
+                "name": "Collines Department"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4528",
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4528",
+                "name": "Plateau Department"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "403",
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "403",
+                "name": "Mono Department"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "402",
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "402",
+                "name": "Borgou Department"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4529",
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4529",
+                "name": "Zou Department"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "404",
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "404",
+                "name": "Ouémé Department"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}
