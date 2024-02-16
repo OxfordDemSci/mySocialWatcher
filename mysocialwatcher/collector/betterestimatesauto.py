@@ -119,7 +119,7 @@ def check_overlap(row, country="BR"):
     return False
 
 
-def save_partial_results(df, list_estimates_lower, list_estimates_upper, infile):
+def save_partial_results(df, list_estimates_lower, list_estimates_upper, infile, df1000_add_country, df1000_in_country, country):
     res_lower = pd.DataFrame(list_estimates_lower).T
     result_lower = res_lower.mean(axis=1)
     
@@ -130,6 +130,33 @@ def save_partial_results(df, list_estimates_lower, list_estimates_upper, infile)
     df.loc[result_lower.index, constants.MAU_LOWER_AUDIENCE_FIELD] = result_lower
     df.loc[result_upper.index, constants.MAU_UPPER_AUDIENCE_FIELD] = result_upper
 
+    # Function to append ('better_estimates', True) to a row of tuples
+    def append_better_estimates(row):
+        try:
+            # Convert the string representation of the tuple to an actual tuple
+            eval_row = ast.literal_eval(row)
+            # Ensure eval_row is a tuple before proceeding
+            if isinstance(eval_row, tuple):
+                # Check if ('better_estimates', True) already exists in the tuple
+                if ('better_estimates', "true") not in eval_row:
+                    # Append ('better_estimates', True) to the tuple if it doesn't already exist
+                    updated_row = eval_row + (('better_estimates', "true"))
+                    # Convert the updated tuple back to a string if necessary
+                    return str(updated_row)
+                else:
+                    # If ('better_estimates', 1) already exists, return the original row
+                    return row
+            else:
+                return row  # Return the original row if conversion fails or it's not a tuple
+        except (ValueError, SyntaxError) as e:
+            # Handle potential errors from ast.literal_eval
+            print(f"Error evaluating row: {e}")
+            return row
+
+    # Apply the append_better_estimates function to add '('better_estimates', True)' to all rows for the 'all_fields' column
+    df['all_fields'] = df['all_fields'].apply(lambda x: append_better_estimates(x))
+
+
     # Extract the base of the file name without the .csv extension
     # This assumes that the file name ends with '.csv' before '.gz'
     base_name = infile.replace('.csv.gz', '')
@@ -137,13 +164,67 @@ def save_partial_results(df, list_estimates_lower, list_estimates_upper, infile)
     # Construct the new filename by adding '.betterestimate.csv.gz' to the base name
     savefile = f"{base_name}_betterestimate.csv.gz"
 
-    # Save the DataFrame to CSV with gzip compression
-    df.to_csv(savefile, compression='gzip', index=False)
-
     found_better_estimate_lower = (result_lower < 1000).sum()
     still_can_get_better_estimates_lower = df[constants.MAU_LOWER_AUDIENCE_FIELD].isnull().sum()
     found_better_estimate_upper = (result_upper < 1000).sum()
     still_can_get_better_estimates_upper = df[constants.MAU_UPPER_AUDIENCE_FIELD].isnull().sum()
+
+    # Check conditions to determine if the process should be marked as complete
+    if (country == countries_to_try[-1]) or (
+            still_can_get_better_estimates_lower + still_can_get_better_estimates_upper == 0):
+        # Mark as complete if it's the last country and no better estimates are pending
+        betterestimates_complete = True
+    else:
+        # Explicitly mark as not complete if above conditions are not met
+        betterestimates_complete = False
+
+    if betterestimates_complete:
+        # df1000_add_country and df1000_in_country have a common 'row_id' column
+        # Merge df1000_add_country and df1000_in_country
+        merged_df = pd.merge(df1000_add_country[['row_id', 'targeting', 'response']],
+                             df1000_in_country[['row_id', 'targeting', 'response']],
+                             on='row_id', how='outer', suffixes=('_add', '_in'))
+
+        # We have to do decode of byte strings and parse JSON for 'response_add' and 'response_in'
+        def decode_and_parse_json(byte_or_str):
+            if isinstance(byte_or_str, bytes):
+                return json.loads(byte_or_str.decode('utf-8'))  # Decode and parse JSON
+            elif pd.notnull(byte_or_str):
+                return json.loads(byte_or_str)  # Assume it's already a string and parse JSON
+            return None  # Handle NaN and None
+
+        # Apply the decoding and parsing function to the response columns
+        merged_df['response_add'] = merged_df['response_add'].apply(decode_and_parse_json)
+        merged_df['response_in'] = merged_df['response_in'].apply(decode_and_parse_json)
+
+        # Create 'target_combined' by concatenating 'targeting_add' and 'targeting_in' where both are available
+        merged_df['target_combined'] = merged_df.apply(lambda row: [row['targeting_add'], row['targeting_in']]
+        if pd.notnull(row['targeting_add']) and pd.notnull(row['targeting_in'])
+        else row['targeting_add'] if pd.notnull(row['targeting_add'])
+        else row['targeting_in'], axis=1)
+
+        # Create 'response_combined' by concatenating 'targeting_add' and 'targeting_in' where both are available
+        merged_df['response_combined'] = merged_df.apply(lambda row: [row['response_add'], row['response_in']]
+        if pd.notnull(row['response_add']) and pd.notnull(row['response_in'])
+        else row['response_add'] if pd.notnull(row['response_add'])
+        else row['response_in'], axis=1)
+
+        # Ensure no list wrapping around NaN values
+        merged_df['response_combined'] = merged_df['response_combined'].apply(
+            lambda x: x if isinstance(x, list) else [x])
+        merged_df['target_combined'] = merged_df['target_combined'].apply(lambda x: x if isinstance(x, list) else [x])
+
+        #  Update 'df' with 'target_combined' based on 'row_id'
+        for idx, row in merged_df.iterrows():
+            query_id = row['row_id']
+            # Update 'df' with 'target_combined' where 'row_id' matches
+            df.loc[df['row_id'] == query_id, 'targeting'] = json.dumps(
+                row['target_combined'])  # Assuming you want JSON string format
+            df.loc[df['row_id'] == query_id, 'response'] = json.dumps(
+                row['response_combined'])  # Assuming you want JSON string format
+
+    # Save the DataFrame to CSV with gzip compression
+    df.to_csv(savefile, compression='gzip', index=False)
 
     print("Saved better estimates for %d lower and %d upper queries in file '%s'..." % (found_better_estimate_lower, found_better_estimate_upper, savefile + ".gz"))
     print("Still missing to find better estimatives to %d (%.3f) lower and %d (%.3f) upper queries..." % (
@@ -318,8 +399,10 @@ def estimate_sparse_queries(infile, credentials_file=None, usingCache=True, cach
         print("Found partially completed betterestimation from a previous round. Will continue from that.")
         print(partial_file)
         df = pd.read_csv(partial_file)
+        df.rename(columns={'Unnamed: 0': 'row_id'}, inplace=True)
     else:
         df = pd.read_csv(infile)
+        df.rename(columns={'Unnamed: 0': 'row_id'}, inplace=True)
 
     # Clean up byte string
     df['response'] = df['response'].str.replace("^b\'|\'$", "", regex=True)
@@ -368,7 +451,7 @@ def estimate_sparse_queries(infile, credentials_file=None, usingCache=True, cach
     # df["targeting"] = df["targeting"].apply(lambda x: x))
     totalAPIcalls = 0
     for country in countries_to_try:
-        print ("USING COUNTRY: ", country)
+        print("USING COUNTRY: ", country)
         print("Starting Time:" + str(datetime.datetime.now()))
         
         if TACKLE_NAN:
@@ -397,8 +480,12 @@ def estimate_sparse_queries(infile, credentials_file=None, usingCache=True, cach
             print("Checking API calls in the cache system...")
             # Only keep the rows that we have never explored
             print("Before checking cache: %d queries could have been made." % (df1000["exploring"].sum()))
+
             df1000.loc[df1000[constants.ALLFIELDS_FIELD].apply(
-                lambda x: is_query_invald_for_country(cacheDict, ast.literal_eval(x), country)), "exploring"] = False
+                lambda x: is_query_invald_for_country(cacheDict, ast.literal_eval(x) if isinstance(x, str) else x,
+                                                      country)
+            ), "exploring"] = False
+
             print("After checking cache: %d queries will be made." % (df1000["exploring"].sum()))
             print("Computing Queries...")
         
@@ -458,8 +545,7 @@ def estimate_sparse_queries(infile, credentials_file=None, usingCache=True, cach
                 print("Failed to collect data for this country...")
                 print("Carrying on with the next country")
                 continue
-            
-            
+
             # fill in the values for the duplicate queries
             for idx, row in df1000_in_country.iterrows():
                 exploring = df1000_in_country.loc[idx, "exploring"]
@@ -543,10 +629,11 @@ def estimate_sparse_queries(infile, credentials_file=None, usingCache=True, cach
         list_estimates_upper.append(estimates_upper)
         list_estimates_lower.append(estimates_lower)
 
+
         print("Finished collection for %s. Saving partial results." % (country))
         # Save the results given the current list of estimates
         #result = save_partial_results(df, list_estimates, infile + "_" + country + "_")
-        result_lower, result_upper = save_partial_results(df, list_estimates_lower, list_estimates_upper, infile)
+        result_lower, result_upper = save_partial_results(df, list_estimates_lower, list_estimates_upper, infile, df1000_add_country, df1000_in_country, country)
 
         # For the next country, we need to change our policy to tackle None's instead of 1000's
         TACKLE_NAN = True
@@ -559,7 +646,10 @@ def estimate_sparse_queries(infile, credentials_file=None, usingCache=True, cach
             (df1000_in_country[constants.MAU_UPPER_AUDIENCE_FIELD] < 10000)
             bad_queries = df1000_in_country[~v_in_country]
             bad_queries[constants.ALLFIELDS_FIELD].drop_duplicates().apply(
-                lambda x: append_to_cache(cacheDict, ast.literal_eval(x), country))
+                lambda x: append_to_cache(cacheDict, ast.literal_eval(x) if isinstance(x, str) else x, country)
+            )
+            save_cache(cacheDict, cacheFolder, cacheFileName)
+
             save_cache(cacheDict, cacheFolder, cacheFileName)
 
         # save the in-country data frame for later inspection

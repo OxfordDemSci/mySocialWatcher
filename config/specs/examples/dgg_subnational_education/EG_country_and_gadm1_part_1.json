@@ -1,0 +1,527 @@
+{
+    "name": "EG_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "EG"
+            ],
+            "pySocialWatcherReference": {
+                "key": "EG",
+                "name": "Egypt"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1000",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1000",
+                "name": "Minya Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1001",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1001",
+                "name": "Cairo Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1002",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1002",
+                "name": "Qalyubia Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1003",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1003",
+                "name": "New Valley Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1004",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1004",
+                "name": "Al Sharqia Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1005",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1005",
+                "name": "Suez Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1006",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1006",
+                "name": "Aswan Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1007",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1007",
+                "name": "Asyut Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1008",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1008",
+                "name": "Beni Suef Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1009",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1009",
+                "name": "Port Said Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1010",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1010",
+                "name": "Damietta Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1011",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1011",
+                "name": "Kafr el-Sheikh Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1012",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1012",
+                "name": "Matrouh Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1013",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1013",
+                "name": "Qena Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1014",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1014",
+                "name": "Sohag Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1015",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1015",
+                "name": "South Sinai Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1016",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1016",
+                "name": "North Sinai Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4194",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4194",
+                "name": "Luxor Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "991",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "991",
+                "name": "Dakahlia Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "992",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "992",
+                "name": "Red Sea Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "993",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "993",
+                "name": "Beheira Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "994",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "994",
+                "name": "Faiyum Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "995",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "995",
+                "name": "Gharbia Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "996",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "996",
+                "name": "Alexandria Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "997",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "997",
+                "name": "Ismailia Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "998",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "998",
+                "name": "Giza Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "999",
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "999",
+                "name": "Monufia Governorate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "EG"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "scholarities": [
+        null,
+        {
+            "name": "unknown_unspecified",
+            "or": [
+                12
+            ]
+        },
+        {
+            "name": "No_high_school_degree",
+            "or": [
+                1,
+                13
+            ]
+        },
+        {
+            "name": "High_school_degree_but_not_more",
+            "or": [
+                2,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "name": "More_than_high_school_degree",
+            "or": [
+                3,
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        }
+    ]
+}
