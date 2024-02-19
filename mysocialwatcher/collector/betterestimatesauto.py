@@ -43,7 +43,6 @@ countries_to_try = ["AD", "AE", "AF", "AG", "AI", "AL", "AM", "AR", "AS", "AT",
                     "TC", "TH", "TJ", "TL", "TM", "TO", "TR", "TT", "TV", "TW",
                     "UA", "US", "UY", "UZ", "VC", "VE", "VG", "VI", "VN", "VU",
                     "WF", "WS", "XK", "YE", "YT"]
-
 ##
 constants.SLEEP_TIME = 0
 constants.SAVE_EVERY = 1000
@@ -138,9 +137,9 @@ def save_partial_results(df, list_estimates_lower, list_estimates_upper, infile,
             # Ensure eval_row is a tuple before proceeding
             if isinstance(eval_row, tuple):
                 # Check if ('better_estimates', True) already exists in the tuple
-                if ('better_estimates', "true") not in eval_row:
+                if ('better_estimates', True) not in eval_row:
                     # Append ('better_estimates', True) to the tuple if it doesn't already exist
-                    updated_row = eval_row + (('better_estimates', "true"))
+                    updated_row = eval_row + (('better_estimates', True),)
                     # Convert the updated tuple back to a string if necessary
                     return str(updated_row)
                 else:
@@ -178,50 +177,59 @@ def save_partial_results(df, list_estimates_lower, list_estimates_upper, infile,
         # Explicitly mark as not complete if above conditions are not met
         betterestimates_complete = False
 
+    # df1000_add_country and df1000_in_country have a common 'row_id' column
+    # Merge df1000_add_country and df1000_in_country
+    merged_df = pd.merge(df1000_add_country[['row_id', 'targeting', 'response']],
+                         df1000_in_country[['row_id', 'targeting', 'response']],
+                         on='row_id', how='outer', suffixes=('_add', '_in'))
+
+    # We have to do decode of byte strings and parse JSON for 'response_add' and 'response_in'
+    def decode_and_parse_json(byte_or_str):
+        if isinstance(byte_or_str, bytes):
+            return json.loads(byte_or_str.decode('utf-8'))  # Decode and parse JSON
+        elif pd.notnull(byte_or_str):
+            return json.loads(byte_or_str)  # Assume it's already a string and parse JSON
+        return None  # Handle NaN and None
+
+    # Apply the decoding and parsing function to the response columns
+    merged_df['response_add'] = merged_df['response_add'].apply(decode_and_parse_json)
+    merged_df['response_in'] = merged_df['response_in'].apply(decode_and_parse_json)
+
+    # Create 'target_combined' by concatenating 'targeting_add' and 'targeting_in' where both are available
+    merged_df['target_combined'] = merged_df.apply(lambda row: [row['targeting_add'], row['targeting_in']]
+    if pd.notnull(row['targeting_add']) and pd.notnull(row['targeting_in'])
+    else row['targeting_add'] if pd.notnull(row['targeting_add'])
+    else row['targeting_in'], axis=1)
+
+    # Create 'response_combined' by concatenating 'targeting_add' and 'targeting_in' where both are available
+    merged_df['response_combined'] = merged_df.apply(lambda row: [row['response_add'], row['response_in']]
+    if pd.notnull(row['response_add']) and pd.notnull(row['response_in'])
+    else row['response_add'] if pd.notnull(row['response_add'])
+    else row['response_in'], axis=1)
+
+    # Ensure no list wrapping around NaN values
+    merged_df['response_combined'] = merged_df['response_combined'].apply(
+        lambda x: x if isinstance(x, list) else [x])
+    merged_df['target_combined'] = merged_df['target_combined'].apply(lambda x: x if isinstance(x, list) else [x])
+
+    for idx, row in merged_df.iterrows():
+        query_id = row['row_id']
+        # Update 'df' with 'target_combined' and 'response_combined' where 'row_id' matches
+        # Convert to JSON string format only if 'target_combined' and 'response_combined' are not null
+        if pd.notnull(row['target_combined']).any():
+            df.loc[df['row_id'] == query_id, 'targeting_placeholder'] = json.dumps(row['target_combined'])
+        if pd.notnull(row['response_combined']).any():
+            df.loc[df['row_id'] == query_id, 'response_placeholder'] = json.dumps(row['response_combined'])
+
     if betterestimates_complete:
-        # df1000_add_country and df1000_in_country have a common 'row_id' column
-        # Merge df1000_add_country and df1000_in_country
-        merged_df = pd.merge(df1000_add_country[['row_id', 'targeting', 'response']],
-                             df1000_in_country[['row_id', 'targeting', 'response']],
-                             on='row_id', how='outer', suffixes=('_add', '_in'))
+        # Update 'targeting' and 'response' only if the placeholder columns have values
+        df['targeting'] = df.apply(
+            lambda x: x['targeting_placeholder'] if pd.notnull(x['targeting_placeholder']) else x['targeting'], axis=1)
+        df['response'] = df.apply(
+            lambda x: x['response_placeholder'] if pd.notnull(x['response_placeholder']) else x['response'], axis=1)
 
-        # We have to do decode of byte strings and parse JSON for 'response_add' and 'response_in'
-        def decode_and_parse_json(byte_or_str):
-            if isinstance(byte_or_str, bytes):
-                return json.loads(byte_or_str.decode('utf-8'))  # Decode and parse JSON
-            elif pd.notnull(byte_or_str):
-                return json.loads(byte_or_str)  # Assume it's already a string and parse JSON
-            return None  # Handle NaN and None
-
-        # Apply the decoding and parsing function to the response columns
-        merged_df['response_add'] = merged_df['response_add'].apply(decode_and_parse_json)
-        merged_df['response_in'] = merged_df['response_in'].apply(decode_and_parse_json)
-
-        # Create 'target_combined' by concatenating 'targeting_add' and 'targeting_in' where both are available
-        merged_df['target_combined'] = merged_df.apply(lambda row: [row['targeting_add'], row['targeting_in']]
-        if pd.notnull(row['targeting_add']) and pd.notnull(row['targeting_in'])
-        else row['targeting_add'] if pd.notnull(row['targeting_add'])
-        else row['targeting_in'], axis=1)
-
-        # Create 'response_combined' by concatenating 'targeting_add' and 'targeting_in' where both are available
-        merged_df['response_combined'] = merged_df.apply(lambda row: [row['response_add'], row['response_in']]
-        if pd.notnull(row['response_add']) and pd.notnull(row['response_in'])
-        else row['response_add'] if pd.notnull(row['response_add'])
-        else row['response_in'], axis=1)
-
-        # Ensure no list wrapping around NaN values
-        merged_df['response_combined'] = merged_df['response_combined'].apply(
-            lambda x: x if isinstance(x, list) else [x])
-        merged_df['target_combined'] = merged_df['target_combined'].apply(lambda x: x if isinstance(x, list) else [x])
-
-        #  Update 'df' with 'target_combined' based on 'row_id'
-        for idx, row in merged_df.iterrows():
-            query_id = row['row_id']
-            # Update 'df' with 'target_combined' where 'row_id' matches
-            df.loc[df['row_id'] == query_id, 'targeting'] = json.dumps(
-                row['target_combined'])  # Assuming you want JSON string format
-            df.loc[df['row_id'] == query_id, 'response'] = json.dumps(
-                row['response_combined'])  # Assuming you want JSON string format
+        # Drop the placeholder columns
+        df.drop(['targeting_placeholder', 'response_placeholder'], axis=1, inplace=True)
 
     # Save the DataFrame to CSV with gzip compression
     df.to_csv(savefile, compression='gzip', index=False)
