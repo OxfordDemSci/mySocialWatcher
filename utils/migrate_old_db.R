@@ -112,3 +112,22 @@ DBI::dbDisconnect(con_new)
 
 
 
+# vkontakte ---------------------------------------------------------------
+vkontakte_new <- tbl(con_new, 'vkontakte') 
+
+vkontakte_old <- tbl(con_old, 'vkontakte') |>
+  mutate(collection_date= as.Date(timestamp_iso),
+         collection_id = 37) |> 
+  select(colnames(vkontakte_new), -contributed_on) |> 
+  rename(contributor_id_old = contributor_id)  |> 
+  collect() |> 
+  left_join(
+    contributors |> 
+      select(contributor_id, contributor_id_old),
+    by='contributor_id_old'
+  ) |> 
+  select(-contributor_id_old)
+
+rows_insert(tbl(con_writer, 'vkontakte'), vkontakte_old , conflict='ignore',
+            by =c('country', 'collection_date', 'geo_locations', 'gender', 'age_min', 'age_max', 'dau', 'targeting', 'response'),
+            in_place = T, copy=T)
