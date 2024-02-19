@@ -49,10 +49,10 @@ test_new_df <- tbl(con_new, 'facebook') |>
 
 
 # write through sql 
-plan(multisession, workers=5)
+plan(multisession, workers=6)
 
-writing_log <- future_lapply(185:nrow(combination), function(combination_idx){
-  #combination_idx =99
+writing_log <- future_lapply(1:nrow(combination), function(combination_idx){
+  #combination_idx =1
   con_old <- DBI::dbConnect(RPostgres::Postgres(),
                             dbname = database,
                             host = host_old,
@@ -84,7 +84,7 @@ writing_log <- future_lapply(185:nrow(combination), function(combination_idx){
     ) |> 
     select(-contributor_id_old)
   
-  rows_insert(tbl(con_writer, 'facebook'), old_df, conflict='ignore',
+  rows_insert(tbl(con_writer, 'facebook'), old_df , conflict='ignore',
               by =c('country', 'collection_date', 'geo_locations', 'gender', 'age_min', 'age_max', 'dau', 'targeting', 'response'),
               in_place = T, copy=T)
   
