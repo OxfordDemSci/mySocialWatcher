@@ -198,4 +198,56 @@ GRANT SELECT ON instagram_invalid TO reader;
 GRANT SELECT,INSERT ON instagram_invalid TO writer;
 "
 
+
+# vkontakte
+psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
+"
+CREATE TABLE vkontakte (
+	collection_id INT REFERENCES collections(id) ON DELETE SET NULL,
+	contributor_id INT REFERENCES contributors(id) ON DELETE SET NULL,
+  contributed_on TIMESTAMPTZ(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
+  collection_date DATE NOT NULL,
+  country CHAR(2) NOT NULL,
+  gender SMALLINT NOT NULL,
+	age_min SMALLINT NOT NULL DEFAULT 0,
+	age_max SMALLINT NOT NULL DEFAULT 999,
+	dau INT NOT NULL,
+	timestamp BIGINT NOT NULL,
+  geo_locations jsonb NOT NULL,
+  UNIQUE(country, collection_date, geo_locations, gender, age_min, age_max, dau)
+);
+CREATE INDEX contributor_vk_idx ON vkontakte(contributor_id);
+CREATE INDEX collection_vk_idx ON vkontakte(collection_id);
+CREATE INDEX date_vk_idx ON vkontakte(collection_date);
+CREATE INDEX gender_vk_idx ON vkontakte(gender);
+CREATE INDEX age_vk_idx ON vkontakte(age_min, age_max);
+
+GRANT SELECT ON vkontakte TO reader;
+GRANT SELECT,INSERT ON vkontakte TO writer;
+"
+
+
+# vkontakte (temporary storage of invalid data)
+psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
+"
+CREATE TABLE vkontakte_invalid (
+	collection_id INT REFERENCES collections(id) ON DELETE SET NULL,
+	contributor_id INT REFERENCES contributors(id) ON DELETE SET NULL,
+  contributed_on TIMESTAMPTZ(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
+  collection_date DATE NOT NULL,
+  country CHAR(2) NOT NULL,
+  gender SMALLINT NOT NULL,
+	age_min SMALLINT NOT NULL DEFAULT 0,
+	age_max SMALLINT NOT NULL DEFAULT 999,
+	dau INT NOT NULL,
+	timestamp BIGINT NOT NULL,
+  geo_locations jsonb NOT NULL,
+  UNIQUE(country, collection_date, geo_locations, gender, age_min, age_max, dau)
+);
+GRANT SELECT ON vkontakte_invalid TO reader;
+GRANT SELECT,INSERT ON vkontakte_invalid TO writer;
+"
+
+
+# cleanup
 unset countries

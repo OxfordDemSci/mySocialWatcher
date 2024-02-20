@@ -3,21 +3,15 @@ private*
 venv
 *.env
 **/.DS_Store
-
-
 .Rhistory
 .idea/
 # Compiled python modules.
 *.pyc
-
 # Setuptools distribution folder.
 /dist/
-
 # Python egg metadata, regenerated from source files by setuptools.
 /*.egg-info
-
 scratch/.coverage
-
 tokens.csv
 credentials.csv
 build
@@ -46,3 +40,5 @@ tests/*.csv
 /pysocialwatcher/input_examples/small_sp_subregions.json
 /pysocialwatcher/input_examples/soccer_gcc_example.json
 /pysocialwatcher/input_examples/newyork_expats.json
+.Rproj.user
+mySocialWatcher.Rproj
