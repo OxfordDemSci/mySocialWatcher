@@ -3,6 +3,7 @@ import sys
 import os
 import ast
 import json
+import numpy as np
 from pysocialwatcher import watcherAPI
 from pysocialwatcher import constants
 
@@ -183,17 +184,26 @@ def save_partial_results(df, list_estimates_lower, list_estimates_upper, infile,
                          df1000_in_country[['row_id', 'targeting', 'response']],
                          on='row_id', how='outer', suffixes=('_add', '_in'))
 
-    # We have to do decode of byte strings and parse JSON for 'response_add' and 'response_in'
-    def decode_and_parse_json(byte_or_str):
-        if isinstance(byte_or_str, bytes):
-            return json.loads(byte_or_str.decode('utf-8'))  # Decode and parse JSON
-        elif pd.notnull(byte_or_str):
-            return json.loads(byte_or_str)  # Assume it's already a string and parse JSON
-        return None  # Handle NaN and None
+    # Example function to handle bytes, decode, and parse JSON
+    def decode_and_parse(item):
+        if isinstance(item, bytes):
+            # Decode bytes to string
+            decoded_str = item.decode('utf-8')
+            # Parse JSON string to Python dict
+            return json.loads(decoded_str)
+        elif isinstance(item, str):
+            # Directly parse string to Python dict
+            return json.loads(item)
+        elif isinstance(item, (dict, list)):
+            # Item is already a dict or list, return as is
+            return item
+        # Return None or raise an error if the item is of an unexpected type
+        return None
 
-    # Apply the decoding and parsing function to the response columns
-    merged_df['response_add'] = merged_df['response_add'].apply(decode_and_parse_json)
-    merged_df['response_in'] = merged_df['response_in'].apply(decode_and_parse_json)
+    # Assuming 'merged_df' is your DataFrame
+    # Apply the function to the 'response_add' and 'response_in' columns
+    merged_df['response_add'] = merged_df['response_add'].apply(decode_and_parse)
+    merged_df['response_in'] = merged_df['response_in'].apply(decode_and_parse)
 
     # Create 'target_combined' by concatenating 'targeting_add' and 'targeting_in' where both are available
     merged_df['target_combined'] = merged_df.apply(lambda row: [row['targeting_add'], row['targeting_in']]
@@ -212,21 +222,35 @@ def save_partial_results(df, list_estimates_lower, list_estimates_upper, infile,
         lambda x: x if isinstance(x, list) else [x])
     merged_df['target_combined'] = merged_df['target_combined'].apply(lambda x: x if isinstance(x, list) else [x])
 
+    # Ensure 'targeting_placeholder' column exists
+    if 'targeting_placeholder' not in df.columns:
+        df['targeting_placeholder'] = None  # This initializes the column with None values
+
+    # Ensure 'response_placeholder' column exists
+    if 'response_placeholder' not in df.columns:
+        df['response_placeholder'] = None  # This initializes the column with None values
+
     for idx, row in merged_df.iterrows():
         query_id = row['row_id']
-        # Update 'df' with 'target_combined' and 'response_combined' where 'row_id' matches
-        # Convert to JSON string format only if 'target_combined' and 'response_combined' are not null
-        if pd.notnull(row['target_combined']).any():
-            df.loc[df['row_id'] == query_id, 'targeting_placeholder'] = json.dumps(row['target_combined'])
-        if pd.notnull(row['response_combined']).any():
-            df.loc[df['row_id'] == query_id, 'response_placeholder'] = json.dumps(row['response_combined'])
+
+        # Identify the index in 'df' that matches 'query_id'
+        target_index = df[df['row_id'] == query_id].index
+
+        # Ensure there is exactly one matching index before assignment
+        if len(target_index) == 1:
+            if pd.notnull(row['target_combined']).any():
+                # Use .iat for scalar assignment when we know there's exactly one target
+                df.at[target_index[0], 'targeting_placeholder'] = row['target_combined']
+            if pd.notnull(row['response_combined']).any():
+                df.at[target_index[0], 'response_placeholder'] = row['response_combined']
+        else:
+            print(f"Multiple or no rows found for query_id {query_id}. Check the uniqueness of 'row_id'.")
 
     if betterestimates_complete:
         # Update 'targeting' and 'response' only if the placeholder columns have values
-        df['targeting'] = df.apply(
-            lambda x: x['targeting_placeholder'] if pd.notnull(x['targeting_placeholder']) else x['targeting'], axis=1)
-        df['response'] = df.apply(
-            lambda x: x['response_placeholder'] if pd.notnull(x['response_placeholder']) else x['response'], axis=1)
+        # Check if the placeholders are not null and update 'targeting' and 'response' accordingly
+        df['targeting'] = np.where(pd.notnull(df['targeting_placeholder']), df['targeting_placeholder'], df['targeting'])
+        df['response'] = np.where(pd.notnull(df['response_placeholder']), df['response_placeholder'], df['response'])
 
         # Drop the placeholder columns
         df.drop(['targeting_placeholder', 'response_placeholder'], axis=1, inplace=True)
