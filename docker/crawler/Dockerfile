@@ -8,7 +8,7 @@ RUN pip install psycopg2-binary
 
 # install python packages
 WORKDIR /app
-COPY requirements.txt requirements.txt
+COPY docker/crawler/requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 # install mysocialwatcher
