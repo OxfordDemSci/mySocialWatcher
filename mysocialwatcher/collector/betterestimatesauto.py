@@ -130,32 +130,6 @@ def save_partial_results(df, list_estimates_lower, list_estimates_upper, infile,
     df.loc[result_lower.index, constants.MAU_LOWER_AUDIENCE_FIELD] = result_lower
     df.loc[result_upper.index, constants.MAU_UPPER_AUDIENCE_FIELD] = result_upper
 
-    # Function to append ('better_estimates', True) to a row of tuples
-    def append_better_estimates(row):
-        try:
-            # Convert the string representation of the tuple to an actual tuple
-            eval_row = ast.literal_eval(row)
-            # Ensure eval_row is a tuple before proceeding
-            if isinstance(eval_row, tuple):
-                # Check if ('better_estimates', True) already exists in the tuple
-                if ('better_estimates', True) not in eval_row:
-                    # Append ('better_estimates', True) to the tuple if it doesn't already exist
-                    updated_row = eval_row + (('better_estimates', True),)
-                    # Convert the updated tuple back to a string if necessary
-                    return str(updated_row)
-                else:
-                    # If ('better_estimates', 1) already exists, return the original row
-                    return row
-            else:
-                return row  # Return the original row if conversion fails or it's not a tuple
-        except (ValueError, SyntaxError) as e:
-            # Handle potential errors from ast.literal_eval
-            print(f"Error evaluating row: {e}")
-            return row
-
-    # Apply the append_better_estimates function to add '('better_estimates', True)' to all rows for the 'all_fields' column
-    df['all_fields'] = df['all_fields'].apply(lambda x: append_better_estimates(x))
-
 
     # Extract the base of the file name without the .csv extension
     # This assumes that the file name ends with '.csv' before '.gz'
@@ -230,11 +204,38 @@ def save_partial_results(df, list_estimates_lower, list_estimates_upper, infile,
     if 'response_placeholder' not in df.columns:
         df['response_placeholder'] = None  # This initializes the column with None values
 
+        # Function to append ('better_estimates', True) to a row of tuples
+
+    def append_better_estimates(row):
+        try:
+            # Convert the string representation of the tuple to an actual tuple
+            eval_row = ast.literal_eval(row)
+            # Ensure eval_row is a tuple before proceeding
+            if isinstance(eval_row, tuple):
+                # Check if ('better_estimates', True) already exists in the tuple
+                if ('better_estimates', True) not in eval_row:
+                    # Append ('better_estimates', True) to the tuple if it doesn't already exist
+                    updated_row = eval_row + (('better_estimates', True),)
+                    # Convert the updated tuple back to a string if necessary
+                    return str(updated_row)
+                else:
+                    # If ('better_estimates', 1) already exists, return the original row
+                    return row
+            else:
+                return row  # Return the original row if conversion fails or it's not a tuple
+        except (ValueError, SyntaxError) as e:
+            # Handle potential errors from ast.literal_eval
+            print(f"Error evaluating row: {e}")
+            return row
+
     for idx, row in merged_df.iterrows():
         query_id = row['row_id']
 
         # Identify the index in 'df' that matches 'query_id'
         target_index = df[df['row_id'] == query_id].index
+
+        # Apply the append_better_estimates function to add '('better_estimates', True)' to all rows for the 'all_fields' column
+        df.loc[target_index, 'all_fields'] = df.loc[target_index, 'all_fields'].apply(append_better_estimates)
 
         # Ensure there is exactly one matching index before assignment
         if len(target_index) == 1:
@@ -245,6 +246,8 @@ def save_partial_results(df, list_estimates_lower, list_estimates_upper, infile,
                 df.at[target_index[0], 'response_placeholder'] = row['response_combined']
         else:
             print(f"Multiple or no rows found for query_id {query_id}. Check the uniqueness of 'row_id'.")
+
+
 
     if betterestimates_complete:
         # Update 'targeting' and 'response' only if the placeholder columns have values
