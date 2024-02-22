@@ -72,9 +72,15 @@ def countries_from_geo_locations(geo_locations):
         result = []
 
         if 'pySocialWatcherReference' in geo_locations.keys():
-            x = list(filter(lambda k: 'country:' in k,
-                            geo_locations.get('pySocialWatcherReference').split('; ')))
-            result += list(set([item.split(':')[1] for item in x]))
+            # psw_ref = 'country:GB; b:2'
+            # psw_ref = {'country':'UA', 'b':'2'}
+            psw_ref = geo_locations.get('pySocialWatcherReference')
+            if isinstance(psw_ref, str):
+                psw_ref = psw_ref.split('; ')
+                x = list(filter(lambda k: 'country:' in k, psw_ref))
+                result += list(set([item.split(':')[1] for item in x]))
+            if isinstance(psw_ref, dict):
+                result += [psw_ref.get('country')]
 
         for value in geo_locations.get('values'):
             country_keys = [k for k in value.keys()
@@ -193,13 +199,21 @@ def check_args(args, required=[], required_oneof=[], optional=[]):
     # check estimate_ready
     if status == 200 and 'response' in args.keys():
 
-        if args.get('response')[:2] == "b\'":
-            response = json.loads(literal_eval(args.get('response')).decode('utf-8'))
-        else:
+        ## check estimate ready
+        try:
             response = json.loads(args.get('response'))
+            if isinstance(response, dict):
+                if not response.get('data')[0].get('estimate_ready'):
+                    args['valid'] = False
+            elif isinstance(response, list):
+                if not all([i.get('data')[0].get('estimate_ready') for i in response]):
+                    args['valid'] = False
+            else:
+                raise Exception
+        except:
+            status = 400
+            message = 'Bad request: Could not verify "estimate ready" from "response" field.'
 
-        if not response.get('data')[0].get('estimate_ready'):
-            args['valid'] = False
 
     if status == 200:
 
