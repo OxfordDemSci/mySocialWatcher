@@ -120,6 +120,7 @@ def psw_to_sql(df, collection_name, token,
         # submit api request
         try:
             response = requests.get(url=url, params=args)
+            # response = requests.post(url=url, data=args)
             response = literal_eval(json.dumps(response.json()))
 
             df.loc[index, 'timestamp_api'] = response.get('timestamp')
