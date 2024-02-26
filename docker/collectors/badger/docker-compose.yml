@@ -9,6 +9,10 @@ services:
       - ./dgg_national:/app/in
       - ./../../../data/badger/dgg_national:/app/data
     build:
+      args:
+        sleep_time: 0
+        email_notification_enable: "True"
+        email_receiver: "scro3937@ox.ac.uk,casey.breen@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
@@ -19,16 +23,91 @@ services:
       - ./dgg_national_ins:/app/in
       - ./../../../data/badger/dgg_national_ins:/app/data
     build:
+      args:
+        sleep_time: 0
+        email_notification_enable: "True"
+        email_receiver: "scro3937@ox.ac.uk,casey.breen@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
-  dgg_national_home_recent:
-    container_name: dgg_national_home_recent
+  dgg_subnational_age:
+    container_name: dgg_subnational_age
     volumes:
-      - ./dgg_national_home_recent:/app/in
-      - ./../../../data/badger/dgg_national_home_recent:/app/data
+      - ./dgg_subnational_age:/app/in
+      - ./../../../data/badger/dgg_subnational_age:/app/data
     build:
+      args:
+        pysocialwatcher_opt_flag: "true"
+        betterestimates_flag: "true"
+        email_notification_enable: "True"
+        email_receiver: "casey.breen@demography.ox.ac.uk"
+        sleep_time: 0
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
+
+  dgg_subnational_education:
+    container_name: dgg_subnational_education
+    volumes:
+      - ./dgg_subnational_education:/app/in
+      - ./../../../data/badger/dgg_subnational_education:/app/data
+    build:
+      args:
+        pysocialwatcher_opt_flag: "true"
+        betterestimates_flag: "true"
+        sleep_time: 0
+        email_notification_enable: "True"
+        email_receiver: "casey.breen@demography.ox.ac.uk"
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
+  dgg_subnational_device:
+    container_name: dgg_subnational_device
+    volumes:
+      - ./dgg_subnational_device:/app/in
+      - ./../../../data/badger/dgg_subnational_device:/app/data
+    build:
+      args:
+        pysocialwatcher_opt_flag: "true"
+        betterestimates_flag: "true"
+        sleep_time: 0
+        email_notification_enable: "True"
+        email_receiver: "casey.breen@demography.ox.ac.uk"
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
+  dgg_subnational_age_device:
+    container_name: dgg_subnational_age_device
+    volumes:
+      - ./dgg_subnational_age_device:/app/in
+      - ./../../../data/badger/dgg_subnational_age_device:/app/data
+    build:
+      args:
+        pysocialwatcher_opt_flag: "true"
+        betterestimates_flag: "true"
+        email_notification_enable: "True"
+        email_receiver: "casey.breen@demography.ox.ac.uk"
+        sleep_time: 0
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
+  dgg_subnational_age_education:
+    container_name: dgg_subnational_age_education
+    volumes:
+      - ./dgg_subnational_age_education:/app/in
+      - ./../../../data/badger/dgg_subnational_age_education:/app/data
+    build:
+      args:
+        pysocialwatcher_opt_flag: "true"
+        betterestimates_flag: "true"
+        email_notification_enable: "True"
+        email_receiver: "casey.breen@demography.ox.ac.uk"
+        sleep_time: 0
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure

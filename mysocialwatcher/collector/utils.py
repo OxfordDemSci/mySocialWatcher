@@ -3,10 +3,50 @@ import logging
 import datetime
 import json
 from time import sleep
+from dotenv import load_dotenv
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from pathlib import Path
+
+
+load_dotenv()
 
 # directories
 data_dir = 'data'  # data_dir = 'data/saffron/ukraine_regions'
 specs_dir = 'specs'  # specs_dir = 'docker/collectors/saffron/ukraine_regions/specs'
+
+# sleep time
+sleep_time = 11
+if os.getenv('sleep_time') is not None:
+    sleep_time = os.getenv('sleep_time')
+
+
+
+# email notification
+email_notification_enable = False
+if os.getenv('email_notification_enable') is not None:
+    email_notification_enable = True if os.getenv('email_notification_enable')=='True' else False
+
+
+if email_notification_enable:
+    if os.getenv('email_receiver') is not None:
+        email_receiver = os.getenv('email_receiver').split(',')
+    else:
+        email_receiver = 'valler4044@gmail.com'.split(',')  # backup email add
+
+    if not isinstance(email_receiver, list): receiver = list(email_receiver)
+
+# pysocialwatcher_opt
+pysocialwatcher_opt_flag = False
+if os.getenv('pysocialwatcher_opt_flag') is not None:
+    pysocialwatcher_opt_flag = os.getenv('pysocialwatcher_opt_flag')
+
+# betterestimates_flag
+betterestimates_flag = False
+if os.getenv('betterestimates_flag') is not None:
+    betterestimates_flag = os.getenv('betterestimates_flag')
+
 
 # logging
 os.makedirs(os.path.join(data_dir, 'logs'), exist_ok=True)
@@ -43,7 +83,7 @@ def get_specs_list(specs_dir, data_dir):
 
         specs_name = os.path.splitext(specs)[0]
 
-        specs_finished = [i for i in finished_list if specs_name in i]
+        specs_finished = [i for i in finished_list if specs_name in i and 'betterestimate' not in i]
         specs_finished.sort(reverse=True)
 
         specs_collecting = [i for i in collecting_list if specs_name in i]
@@ -99,6 +139,7 @@ def sleep_the_day(start_time):
         if sleep_duration.seconds > 0:
             sleep(sleep_duration.seconds)
 
+
 def estimate_run_time(specs_dir, n_tokens=1, sleep_time=11):
     runtime = 0
     specs_list = os.listdir(specs_dir)
@@ -107,3 +148,32 @@ def estimate_run_time(specs_dir, n_tokens=1, sleep_time=11):
             specs = json.load(f)
         runtime += len(get_all_combinations_from_input(specs)) * sleep_time / n_tokens
     return str(datetime.timedelta(seconds=runtime))
+
+
+def sendmail(subject,contents,receiver):
+
+    with open("yagmail.csv") as f:
+        credentials = f.read().replace("\n", "").split(",")
+    usrname = credentials[0]
+    pswd = credentials[1]
+
+    if not isinstance(receiver, list): receiver = [receiver]
+    for to in receiver:
+        # Create the email message
+        message = MIMEMultipart()
+        message['From'] = usrname
+        message['To'] = to
+        message['Subject'] = "mySocialWatcher Notification:"+subject
+
+        message.attach(MIMEText(contents, 'plain'))
+
+        # Connect to the SMTP server
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login(usrname, pswd)
+
+        # Send the email
+        server.sendmail(usrname, to, message.as_string())
+
+        # Close the server connection
+        server.quit()

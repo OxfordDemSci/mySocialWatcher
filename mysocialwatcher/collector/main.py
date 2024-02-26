@@ -1,12 +1,23 @@
 from mysocialwatcher.collector.utils import *
 from pysocialwatcher import watcherAPI, constants
-
+from mysocialwatcher.collector.pysocialwatcher_opt import pysocialwatcher_opt
+from mysocialwatcher.collector import betterestimatesauto as bestims
 
 if __name__ == '__main__':
 
     logger.info(' ')
     logger.info('--------------------------------------------------')
-    logger.info(logger.handlers[0].baseFilename)
+    logger.info('Sleep time: ' + sleep_time)
+    logger.info('pysocialwatcher_opt: ' + pysocialwatcher_opt_flag)
+    logger.info('betterestimates: ' + betterestimates_flag)
+    logger.info('email_notification: ' + str(email_notification_enable))
+    if email_notification_enable:
+        logger.info('email_receiver: ' + str(email_receiver))
+
+    # set pysocialwatcher_opt_flag to boolean
+    pysocialwatcher_opt_flag = (pysocialwatcher_opt_flag.lower() == 'true')
+    betterestimates_flag = (betterestimates_flag.lower() == 'true')
+
 
     specs_list = get_specs_list(specs_dir=specs_dir,
                                 data_dir=data_dir)
@@ -37,11 +48,16 @@ if __name__ == '__main__':
             # start log
             logger.info('Preparing collection with specification: ' + specs_filepath)
 
-            # instantiate watcher
-            watcher = watcherAPI(api_version='17.0',
-                                 sleep_time=11,
-                                 save_every_x=100,
-                                 verbose=False)
+            # instantiate watcher, depending on whether argument pysocialwatcher_opt is true
+            if pysocialwatcher_opt_flag:
+                watcher = pysocialwatcher_opt(api_version='17.0',
+                                              sleep_time=int(sleep_time),
+                                              save_every_x=100)
+            else:
+                watcher = watcherAPI(api_version='17.0',
+                                     sleep_time=int(sleep_time),
+                                     save_every_x=100,
+                                     verbose=False)
 
             # load credentials
             watcher.load_credentials_file('credentials.csv')
@@ -53,6 +69,8 @@ if __name__ == '__main__':
 
         except:
             logger.error('An error occurred while preparing to collect data.', exc_info=True)
+            if email_notification_enable:
+                sendmail(subject=specs_filename,contents='An error occurred while preparing to collect data',receiver=email_receiver)
 
         # ---- continue a previous collection ---- #
         continue_previous_collection = df_names.get('continue_previous_collection')
@@ -67,6 +85,8 @@ if __name__ == '__main__':
             except:
                 logger.warning('An error occurred while continuing a previous collection.', exc_info=True)
                 continue_previous_collection = False
+                if email_notification_enable:
+                    sendmail(subject=specs_filename, contents='An error occurred while continuing a previous collection.', receiver=email_receiver)
 
         # ---- start a new collection ---- #
         if not continue_previous_collection:
@@ -79,8 +99,27 @@ if __name__ == '__main__':
                     remove_tmp_files=True)
             except:
                 logger.error('An error occurred while collecting new data.', exc_info=True)
+                if email_notification_enable:
+                    sendmail(subject=specs_filename, contents='An error occurred while collecting new data.', receiver=email_receiver)
+
+        if betterestimates_flag:
+            try:
+                logger.info('Running better estimates ' + df_names.get('finished'))
+                input_file_path = os.path.join(data_dir, df_names.get('finished'))
+                mainwd=os.getcwd()
+                totalAPIcalls = bestims.estimate_sparse_queries(input_file_path, cacheFolder=mainwd)
+            except:
+                logger.error('An error occurred while performing betterestimates.', exc_info=True)
+                if email_notification_enable:
+                    sendmail(subject=specs_filename, contents='An error occurred while performing betterestimates.', receiver=email_receiver)
+
 
         logger.info('Finished collection: ' + df_names.get('collecting'))
+        #if email_notification_enable:
+        #    sendmail(subject=specs_filename, contents='Finished collection', receiver=email_receiver)
+
         del watcher
 
     logger.info('Finished collection.')
+    if (email_notification_enable) & ('scro' in email_receiver[0]):
+        sendmail(subject=specs_filename, contents='Finished collection', receiver=email_receiver[0])
