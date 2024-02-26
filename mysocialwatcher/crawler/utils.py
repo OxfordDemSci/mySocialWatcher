@@ -56,12 +56,13 @@ def psw_to_sql(df, collection_name, token,
         targeting = literal_eval(row.get('targeting'))
 
         # ---- response ----#
-        if row.get('response')[:2] == "b\'":
-            response_bytes = literal_eval(row.get('response'))
-        else:
-            response_bytes = bytes(row.get('response'), encoding='utf-8')
-
-        response = json.loads(response_bytes.decode('utf-8'))
+        response = row.get('response')
+        if response[0] == "{":
+            response = json.loads(row.get('response'))
+        elif response[0] == '[':
+            response = literal_eval(row.get('response'))
+        elif response[:2] == "b\'":
+            response = json.loads(literal_eval(row.get('response')).decode('utf-8'))
 
         # ---- prepare: geo_locations ----#
         geo = all_fields['geo_locations']  # literal_eval(row.get('geo_locations'))
@@ -119,6 +120,7 @@ def psw_to_sql(df, collection_name, token,
         # submit api request
         try:
             response = requests.get(url=url, params=args)
+            # response = requests.post(url=url, data=args)
             response = literal_eval(json.dumps(response.json()))
 
             df.loc[index, 'timestamp_api'] = response.get('timestamp')

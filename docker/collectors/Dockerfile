@@ -3,12 +3,10 @@ FROM python:3.10-slim-buster
 
 # install packages
 RUN apt-get update
-RUN apt-get -y install libpq-dev gcc
-RUN pip install psycopg2-binary
 
 # install python packages
 WORKDIR /app
-COPY requirements.txt requirements.txt
+COPY docker/collectors/requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 # install pysocialwatcher and mysocialwatcher
@@ -38,7 +36,7 @@ RUN if [$email_notification_enable = '']; then echo email_notification_enable = 
 RUN if [ "$email_notification_enable" = "True" ]; then ln -s in/yagmail.csv yagmail.csv; fi
 
 ARG email_receiver
-RUN if [ "$email_receiver" = '' ]; then echo email_receiver= "valler4044@gmail.com" >> .env; else echo email_receiver="$email_receiver" >> .env ; fi
+RUN if [ "$email_receiver" = '' ]; then echo email_receiver="mysocialwatcher@gmail.com" >> .env; else echo email_receiver="$email_receiver" >> .env ; fi
 
 # define pysocialwatcher_opt
 ARG pysocialwatcher_opt_flag
