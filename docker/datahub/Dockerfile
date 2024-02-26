@@ -1,3 +1,4 @@
+# Dockerfile used by the datahub_api
 FROM python:3.10-slim-buster
 
 WORKDIR /app
@@ -6,7 +7,7 @@ RUN apt-get update -y
 RUN apt-get -y install libpq-dev gcc
 RUN pip install psycopg2-binary
 
-COPY requirements.txt requirements.txt
+COPY docker/datahub/requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
 COPY mysocialwatcher mysocialwatcher

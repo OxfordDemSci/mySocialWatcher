@@ -1,0 +1,184 @@
+{
+    "name": "DJ_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "DJ"
+            ],
+            "pySocialWatcherReference": {
+                "key": "DJ",
+                "name": "Djibouti"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4846",
+                    "country_code": "DJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4846",
+                "name": "Ali Sabieh Region"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "841",
+                    "country_code": "DJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "841",
+                "name": "Dikhil Region"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "842",
+                    "country_code": "DJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "842",
+                "name": "Djibouti"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4847",
+                    "country_code": "DJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4847",
+                "name": "Arta Region"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "842",
+                    "country_code": "DJ"
+                },
+                {
+                    "key": "4847",
+                    "country_code": "DJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "842-4847",
+                "name": "Djibouti-Arta Region"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "843",
+                    "country_code": "DJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "843",
+                "name": "Obock Region"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "844",
+                    "country_code": "DJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "844",
+                "name": "Tadjourah Region"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DJ"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

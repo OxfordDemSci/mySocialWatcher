@@ -1,0 +1,165 @@
+{
+  "name": "GMB_country_and_gadm1_part_1",
+  "publisher_platforms": [
+    "facebook"
+  ],
+  "geo_locations": [
+    {
+      "name": "countries",
+      "values": [
+        "GM"
+      ],
+      "pySocialWatcherReference": "key:GM; name:Gambia;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1434"
+        }
+      ],
+      "pySocialWatcherReference": "key:1434; name:Banjul;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1435"
+        }
+      ],
+      "pySocialWatcherReference": "key:1435; name:Lower River Division;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1437"
+        }
+      ],
+      "pySocialWatcherReference": "key:1437; name:Upper River Division;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1438"
+        }
+      ],
+      "pySocialWatcherReference": "key:1438; name:West Coast Division;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "1439"
+        }
+      ],
+      "pySocialWatcherReference": "key:1439; name:North Bank Division;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "4865"
+        }
+      ],
+      "pySocialWatcherReference": "key:4865; name:Central River Division;",
+      "location_types": [
+        "home"
+      ]
+    }
+  ],
+  "genders": [
+    0,
+    1,
+    2
+  ],
+  "ages_ranges": [
+    {
+      "min": 13
+    },
+    {
+      "min": 15
+    },
+    {
+      "min": 18
+    },
+    {
+      "min": 15,
+      "max": 24
+    },
+    {
+      "min": 25,
+      "max": 59
+    },
+    {
+      "min": 60
+    },
+    {
+      "min": 15,
+      "max": 49
+    },
+    {
+      "min": 18,
+      "max": 24
+    },
+    {
+      "min": 18,
+      "max": 49
+    }
+  ],
+  "scholarities": [
+    null,
+    {
+      "name": "unknown_unspecified",
+      "or": [
+        12
+      ]
+    },
+    {
+      "name": "No_high_school_degree",
+      "or": [
+        1,
+        13
+      ]
+    },
+    {
+      "name": "High_school_degree_but_not_more",
+      "or": [
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "More_than_high_school_degree",
+      "or": [
+        3,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  ]
+}

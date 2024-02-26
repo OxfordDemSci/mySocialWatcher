@@ -1,0 +1,207 @@
+{
+    "name": "ML_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "ML"
+            ],
+            "pySocialWatcherReference": {
+                "key": "ML",
+                "name": "Mali"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ML"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2382",
+                    "country_code": "ML"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2382",
+                "name": "Bamako"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ML"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2389",
+                    "country_code": "ML"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2389",
+                "name": "Gao Region"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ML"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2390",
+                    "country_code": "ML"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2390",
+                "name": "Kidal Region"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ML"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2386",
+                    "country_code": "ML"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2386",
+                "name": "Sikasso Region"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ML"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2383",
+                    "country_code": "ML"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2383",
+                "name": "Kayes Region"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ML"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2385",
+                    "country_code": "ML"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2385",
+                "name": "Ségou Region"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ML"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2384",
+                    "country_code": "ML"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2384",
+                "name": "Mopti Region"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ML"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2388",
+                    "country_code": "ML"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2388",
+                "name": "Tombouctou Region"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ML"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2387",
+                    "country_code": "ML"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2387",
+                "name": "Koulikoro Region"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ML"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

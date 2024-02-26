@@ -1,0 +1,309 @@
+{
+  "name": "AGO_country_and_gadm1_part_1",
+  "publisher_platforms": [
+    "facebook"
+  ],
+  "geo_locations": [
+    {
+      "name": "countries",
+      "values": [
+        "AO"
+      ],
+      "pySocialWatcherReference": "key:AO; name:Angola;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "88"
+        }
+      ],
+      "pySocialWatcherReference": "key:88; name:Hu\u00edla Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "87"
+        }
+      ],
+      "pySocialWatcherReference": "key:87; name:Huambo Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "90"
+        }
+      ],
+      "pySocialWatcherReference": "key:90; name:Moxico Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "89"
+        }
+      ],
+      "pySocialWatcherReference": "key:89; name:Malanje Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "81"
+        }
+      ],
+      "pySocialWatcherReference": "key:81; name:Bi\u00e9 Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "82"
+        }
+      ],
+      "pySocialWatcherReference": "key:82; name:Cabinda Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "4515"
+        }
+      ],
+      "pySocialWatcherReference": "key:4515; name:Namibe Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "95"
+        }
+      ],
+      "pySocialWatcherReference": "key:95; name:Bengo Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "93"
+        }
+      ],
+      "pySocialWatcherReference": "key:93; name:Lunda Norte Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "4514"
+        }
+      ],
+      "pySocialWatcherReference": "key:4514; name:Luanda Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "91"
+        }
+      ],
+      "pySocialWatcherReference": "key:91; name:U\u00edge Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "85"
+        }
+      ],
+      "pySocialWatcherReference": "key:85; name:Cuanza Sul Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "94"
+        }
+      ],
+      "pySocialWatcherReference": "key:94; name:Lunda Sul Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "80"
+        }
+      ],
+      "pySocialWatcherReference": "key:80; name:Benguela Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "83"
+        }
+      ],
+      "pySocialWatcherReference": "key:83; name:Cuando Cubango Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "84"
+        }
+      ],
+      "pySocialWatcherReference": "key:84; name:Cuanza Norte Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "86"
+        }
+      ],
+      "pySocialWatcherReference": "key:86; name:Cunene Province;",
+      "location_types": [
+        "home"
+      ]
+    },
+    {
+      "name": "regions",
+      "values": [
+        {
+          "key": "92"
+        }
+      ],
+      "pySocialWatcherReference": "key:92; name:Zaire Province;",
+      "location_types": [
+        "home"
+      ]
+    }
+  ],
+  "genders": [
+    0,
+    1,
+    2
+  ],
+  "ages_ranges": [
+    {
+      "min": 13
+    },
+    {
+      "min": 15
+    },
+    {
+      "min": 18
+    },
+    {
+      "min": 15,
+      "max": 24
+    },
+    {
+      "min": 25,
+      "max": 59
+    },
+    {
+      "min": 60
+    },
+    {
+      "min": 15,
+      "max": 49
+    },
+    {
+      "min": 18,
+      "max": 24
+    },
+    {
+      "min": 18,
+      "max": 49
+    }
+  ],
+  "scholarities": [
+    null,
+    {
+      "name": "unknown_unspecified",
+      "or": [
+        12
+      ]
+    },
+    {
+      "name": "No_high_school_degree",
+      "or": [
+        1,
+        13
+      ]
+    },
+    {
+      "name": "High_school_degree_but_not_more",
+      "or": [
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "More_than_high_school_degree",
+      "or": [
+        3,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  ]
+}
