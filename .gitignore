@@ -3,6 +3,7 @@ private*
 venv
 *.env
 **/.DS_Store
+**/yagmail.csv
 .Rhistory
 .idea/
 # Compiled python modules.
