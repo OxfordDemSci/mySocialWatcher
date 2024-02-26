@@ -1,6 +1,8 @@
 import os
 import json
 import pandas as pd
+import shutil
+
 
 # virtual machine and collection names
 vm = 'jubal'
@@ -14,6 +16,7 @@ if __name__ == '__main__':
     specs_template_path = os.path.join('config', 'specs', 'templates')
     out_dir = os.path.join('docker', 'collectors', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
+    yagmail_path = os.path.join('config', 'private', 'yagmail.csv')
 
     # ---- credentials ---- #
 
@@ -27,11 +30,19 @@ if __name__ == '__main__':
     credentials = master_credentials.loc[(master_credentials.vm == vm) &
                                          (master_credentials.collection == collection)]
 
+    # convert app to int
+    credentials = credentials.copy()
+    credentials['app'] = credentials['app'].astype(int)
+
     # save to csv
     credentials.to_csv(credentials_path,
                        columns=['token', 'app'],
                        header=False,
                        index=False)
+
+    # ---- yagmail credential ---- #
+    if os.path.exists(yagmail_path):
+        shutil.copy2(yagmail_path, os.path.join(out_dir, 'yagmail.csv'))
 
     # ---- collection specs ---- #
 
@@ -43,13 +54,21 @@ if __name__ == '__main__':
     for f in os.listdir(specs_dir):
         os.remove(os.path.join(specs_dir, f))
 
+    # select country list
+    # countries = ['AF', 'BD', 'BF', 'BR', 'CD', 'CM', 'CO', 'CU', 'EC', 'ET', 'GH', 'GN', 'GT', 'HT', 'IL', 'IQ' ,'IN', 'IR',
+    #              'LY', 'ML', 'MM', 'MZ', 'NE', 'NG', 'NP', 'PE', 'PK', 'PS', 'SD', 'SL', 'SO', 'SS', 'SY', 'UA', 'VE', 'YE',
+    #              'ZA', 'ZM']
 
-    countries = ['AF', 'BD', 'BF', 'BR', 'CD', 'CM', 'CO', 'CU', 'EC', 'ET', 'GH', 'GN', 'GT', 'HT', 'IL', 'IQ' ,'IN', 'IR',
-                 'LY', 'ML', 'MM', 'MZ', 'NE', 'NG', 'NP', 'PE', 'PK', 'PS', 'SD', 'SL', 'SO', 'SS', 'SY', 'UA', 'VE', 'YE',
-                 'ZA', 'ZM']
-    drop_countries = ['UA', 'CU', 'SD', 'IR', 'SY']
-    drop_countries = drop_countries + ['CD', 'CF', 'DJ', 'EG', 'ER', 'ET', 'LY', 'SD', 'SS', 'TD']  # see collection: sudan_conflict
-    drop_countries = drop_countries + ['IL', 'PS', 'EG', 'JO', 'LB'] # see collection: israeli_conflict
+    # all countries with template specs
+    countries = list(set([i.split('_')[0] for i in os.listdir(specs_template_path) if i.endswith('.json')]))
+    countries.sort()
+
+    # # drop countries from other collections
+    # drop_countries = drop_countries + ['CD', 'CF', 'DJ', 'EG', 'ER', 'ET', 'LY', 'SD', 'SS', 'TD']  # see collection: sudan_conflict
+    # drop_countries = drop_countries + ['IL', 'PS', 'EG', 'JO', 'LB'] # see collection: israeli_conflict
+
+    # drop countries that will return errors
+    drop_countries = ['CU', 'SD', 'IR', 'SY']
     countries = [i for i in countries if i not in drop_countries]
 
     platforms = ['facebook', 'instagram']
@@ -69,9 +88,36 @@ if __name__ == '__main__':
                 specs = json.load(f)
             specs['name'] = collection
 
-            # facebook
+            # platform
             specs["publisher_platforms"] = [platform]
+
+            # all languages
             specs['languages'] = [None]
+
+            # age groups
+            specs['ages_ranges'] = [{"min": 13},
+                                    {"min": 18},
+                                    {"min": 20},
+                                    {"min": 60},
+                                    {"min": 65},
+                                    {"min": 13, "max": 19},
+                                    {"min": 15, "max": 49},
+                                    {"min": 15, "max": 64},
+                                    {"min": 20, "max": 59},
+                                    {"min": 20, "max": 29},
+                                    {"min": 30, "max": 39},
+                                    {"min": 40, "max": 49},
+                                    {"min": 50, "max": 59},
+                                    {"min": 15, "max": 19},
+                                    {"min": 20, "max": 24},
+                                    {"min": 25, "max": 29},
+                                    {"min": 30, "max": 34},
+                                    {"min": 35, "max": 39},
+                                    {"min": 40, "max": 44},
+                                    {"min": 45, "max": 49},
+                                    {"min": 50, "max": 54},
+                                    {"min": 55, "max": 59},
+                                    {"min": 60, "max": 64}]
 
             file_out = os.path.join(specs_dir, '_'.join([country, platform]) + '.json')
             with open(file_out, "w") as f:

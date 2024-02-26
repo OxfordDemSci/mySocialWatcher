@@ -9,6 +9,10 @@ services:
       - ./baseline:/app/in
       - ./../../../data/jubal/baseline:/app/data
     build:
+      args:
+        sleep_time: 0
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: unless-stopped
