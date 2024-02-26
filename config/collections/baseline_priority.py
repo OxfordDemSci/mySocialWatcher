@@ -6,7 +6,7 @@ import shutil
 
 # virtual machine and collection names
 vm = 'jubal'
-collection = 'baseline'
+collection = 'baseline_priority'
 
 
 if __name__ == '__main__':
@@ -54,29 +54,18 @@ if __name__ == '__main__':
     for f in os.listdir(specs_dir):
         os.remove(os.path.join(specs_dir, f))
 
-    # select country list
-    # countries = ['AF', 'BD', 'BF', 'BR', 'CD', 'CM', 'CO', 'CU', 'EC', 'ET', 'GH', 'GN', 'GT', 'HT', 'IL', 'IQ' ,'IN', 'IR',
-    #              'LY', 'ML', 'MM', 'MZ', 'NE', 'NG', 'NP', 'PE', 'PK', 'PS', 'SD', 'SL', 'SO', 'SS', 'SY', 'UA', 'VE', 'YE',
-    #              'ZA', 'ZM']
-
-    # all countries with template specs
-    countries = list(set([i.split('_')[0] for i in os.listdir(specs_template_path) if i.endswith('.json')]))
+    # priority country list
+    countries = ['AF', 'BD', 'BF', 'BR', 'CD', 'CF', 'CM', 'CO', 'CU', 'DJ', 'EC', 'EG', 'ER', 'ET', 'GH', 'GN', 'GT',
+                 'HT', 'IL', 'IQ' ,'IN', 'IR', 'JO', 'LB', 'LY', 'ML', 'MM', 'MZ', 'NE', 'NG', 'NP', 'PE', 'PK', 'PS',
+                 'SD', 'SL', 'SO', 'SS', 'SY', 'TD', 'UA', 'VE', 'YE', 'ZA', 'ZM']
     countries.sort()
 
-    # drop countries from other collections
-    drop_countries = []
+    # # drop countries from other collections
     # drop_countries = drop_countries + ['CD', 'CF', 'DJ', 'EG', 'ER', 'ET', 'LY', 'SD', 'SS', 'TD']  # see collection: sudan_conflict
     # drop_countries = drop_countries + ['IL', 'PS', 'EG', 'JO', 'LB'] # see collection: israeli_conflict
 
-    # drop countries from baseline_priority collection
-    drop_countries = drop_countries + ['AF', 'BD', 'BF', 'BR', 'CD', 'CF', 'CM', 'CO', 'CU', 'DJ', 'EC', 'EG', 'ER', 'ET', 'GH', 'GN', 'GT',
-                 'HT', 'IL', 'IQ' ,'IN', 'IR', 'JO', 'LB', 'LY', 'ML', 'MM', 'MZ', 'NE', 'NG', 'NP', 'PE', 'PK', 'PS',
-                 'SD', 'SL', 'SO', 'SS', 'SY', 'RD', 'UA', 'VE', 'YE', 'ZA', 'ZM']
-
-
     # drop countries that will return errors
-    drop_countries = drop_countries + ['CU', 'SD', 'IR', 'SY']
-
+    drop_countries = ['CU', 'SD', 'IR', 'SY']
     countries = [i for i in countries if i not in drop_countries]
 
     platforms = ['facebook', 'instagram']
