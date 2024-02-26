@@ -78,20 +78,32 @@ def countries_from_geo_locations(geo_locations):
             if isinstance(psw_ref, str):
                 psw_ref = psw_ref.split('; ')
                 x = list(filter(lambda k: 'country:' in k, psw_ref))
+                x = x + list(filter(lambda k: 'country_code:' in k, psw_ref))
                 result += list(set([item.split(':')[1] for item in x]))
-            if isinstance(psw_ref, dict):
+            if isinstance(psw_ref, dict) and 'country' in psw_ref.keys():
                 result += [psw_ref.get('country')]
+            if isinstance(psw_ref, dict) and 'country_code' in psw_ref.keys():
+                result += [psw_ref.get('country_code')]
 
+        country_keys = []
         for value in geo_locations.get('values'):
             country_keys = [k for k in value.keys()
                             if 'country' in k and
                             isinstance(value.get(k), str) and
                             len(value.get(k)) == 2]
-
             for country_key in list(set(country_keys)):
                 result.append(value.get(country_key))
 
-    return list(set(result))
+        country_keys = []
+        country_keys = [k for k in geo_locations.keys()
+                        if 'country' in k and
+                        isinstance(geo_locations.get(k), str) and
+                        len(geo_locations.get(k)) == 2]
+        for country_key in list(set(country_keys)):
+            result.append(geo_locations.get(country_key))
+
+    result = list(set([i for i in result if i is not None]))
+    return result
 
 
 def check_args(args, required=[], required_oneof=[], optional=[]):
