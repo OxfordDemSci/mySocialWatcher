@@ -1,4 +1,5 @@
 import os
+import json
 from flask import request, current_app, jsonify
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -65,7 +66,10 @@ def query_clean_route():
 @limiter.exempt()
 def write_route():
     """API endpoint to insert data into the 'social_media_audience' database."""
-    args = dict(request.args)
+    if request.method == 'GET':
+        args = dict(request.args)
+    elif request.method == 'POST':
+        args = dict(request.form)
     if len(args) == 0:
         return "<h1>400 Error</h1><p>Bad Request: This API endpoint requires arguments. " \
                "See <a href='./../'>API documentation</a> for more information.", \

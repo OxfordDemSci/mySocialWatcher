@@ -32,7 +32,7 @@ from ast import literal_eval
 
 def psw_to_sql(df, collection_name, token,
                valid=False,
-               url='http://127.0.0.1/api/v1/social_media_audience/write'):
+               url='http://127.0.0.1/api/v1/write'):
     """Submit pysocialwatcher csv to /api/v1/fb/write"""
 
     for index in range(len(df)):
@@ -118,17 +118,23 @@ def psw_to_sql(df, collection_name, token,
             del args[i]
 
         # submit api request
+        http_response = ''
         try:
-            response = requests.get(url=url, params=args)
-            # response = requests.post(url=url, data=args)
-            response = literal_eval(json.dumps(response.json()))
+            # response = requests.get(url=url, params=args)
+            http_response = requests.post(url=url, data=args)
+            http_response_dict = json.loads(json.dumps(http_response.json()))
 
-            df.loc[index, 'timestamp_api'] = response.get('timestamp')
-            df.loc[index, 'status_api'] = int(response.get('status'))
-            df.loc[index, 'message_api'] = response.get('message')
+            df.loc[index, 'timestamp_api'] = http_response_dict.get('timestamp')
+            df.loc[index, 'status_api'] = int(http_response_dict.get('status'))
+            df.loc[index, 'message_api'] = http_response_dict.get('message')
 
         except Exception as e:
-            message = 'EXCEPTION: "' + str(e) + '";\n HTTP RESPONSE: "' + response.text + '"'
+            if isinstance(http_response, requests.models.Response):
+                http_response_text = http_response.text
+            else:
+                http_response_text = str(http_response)
+
+            message = 'EXCEPTION: "' + str(e) + '";\n HTTP RESPONSE: "' + http_response_text + '"'
             warnings.warn(message)
             df.loc[index, 'timestamp_api'] = str(datetime.datetime.now())
             df.loc[index, 'status_api'] = 500
@@ -155,7 +161,7 @@ def governor(func, hours=1):
     return wrapper
 
 
-def crawler(data_dir, token, url='http://127.0.0.1/api/v1/social_media_audience/write'):
+def crawler(data_dir, token, url='http://127.0.0.1/api/v1/write'):
     # crawl_dir = 'data/_test'
 
     print('-----------------------------')

@@ -16,7 +16,7 @@ df = pd.read_csv(file)
 # ---- SIMULATION ----#
 
 # select problem row
-index = 10
+index = 15 # 31
 row = df.iloc[index]
 
 # -- CRAWLER --#
@@ -94,12 +94,14 @@ for i in drop:
 
 # submit API request
 url='http://127.0.0.1/api/v1/write'
-response = requests.get(url=url, params=args)
-response = literal_eval(json.dumps(response.json()))
+# response = requests.get(url=url, params=args)
 
-df.loc[index, 'timestamp_api'] = response.get('timestamp')
-df.loc[index, 'status_api'] = int(response.get('status'))
-df.loc[index, 'message_api'] = response.get('message')
+http_response = requests.post(url=url, data=args)
+http_response_dict = json.loads(json.dumps(http_response.json()))
+
+df.loc[index, 'timestamp_api'] = http_response_dict.get('timestamp')
+df.loc[index, 'status_api'] = int(http_response_dict.get('status'))
+df.loc[index, 'message_api'] = http_response_dict.get('message')
 
 # ---- API ---- #
 
