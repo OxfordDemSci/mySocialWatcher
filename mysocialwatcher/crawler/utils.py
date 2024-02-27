@@ -128,10 +128,11 @@ def psw_to_sql(df, collection_name, token,
             df.loc[index, 'message_api'] = response.get('message')
 
         except Exception as e:
-            warnings.warn(str(e))
+            message = 'EXCEPTION: "' + str(e) + '";\n HTTP RESPONSE: "' + response.text + '"'
+            warnings.warn(message)
             df.loc[index, 'timestamp_api'] = str(datetime.datetime.now())
             df.loc[index, 'status_api'] = 500
-            df.loc[index, 'message_api'] = str(e)
+            df.loc[index, 'message_api'] = message
 
     # return result
     return df[['timestamp_api', 'status_api', 'message_api']]
