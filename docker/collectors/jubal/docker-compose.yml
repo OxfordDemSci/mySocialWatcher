@@ -15,7 +15,7 @@ services:
         email_receiver: "douglas.leasure@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
-    restart: unless-stopped
+    restart: on-failure
 
   baseline_priority:
     container_name: baseline_priority
@@ -29,4 +29,4 @@ services:
         email_receiver: "douglas.leasure@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
-    restart: unless-stopped
+    restart: on-failure
