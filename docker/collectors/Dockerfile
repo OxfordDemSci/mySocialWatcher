@@ -35,8 +35,11 @@ RUN if [$email_notification_enable = '']; then echo email_notification_enable = 
 #copy the yagmail.csv to the collector
 RUN if [ "$email_notification_enable" = "True" ]; then ln -s in/yagmail.csv yagmail.csv; fi
 
-ARG email_receiver
-RUN if [ "$email_receiver" = '' ]; then echo email_receiver="mysocialwatcher@gmail.com" >> .env; else echo email_receiver="$email_receiver" >> .env ; fi
+ARG email_receiver_error
+RUN if [ "$email_receiver_error" = '' ]; then echo email_receiver_error="mysocialwatcher@gmail.com" >> .env; else echo email_receiver_error="$email_receiver_error" >> .env ; fi
+
+ARG email_receiver_finish
+RUN if [ "$email_receiver_finish" = '' ]; then echo email_receiver_finish= 'opt-out' >> .env; else echo email_receiver_finish="$email_receiver_finish" >> .env ; fi
 
 # define pysocialwatcher_opt
 ARG pysocialwatcher_opt_flag

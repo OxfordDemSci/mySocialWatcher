@@ -25,17 +25,22 @@ if os.getenv('sleep_time') is not None:
 
 # email notification
 email_notification_enable = False
+email_notification_finish_enable =False
 if os.getenv('email_notification_enable') is not None:
     email_notification_enable = True if os.getenv('email_notification_enable')=='True' else False
 
 
 if email_notification_enable:
-    if os.getenv('email_receiver') is not None:
-        email_receiver = os.getenv('email_receiver').split(',')
+    # email address to receive error information
+    if os.getenv('email_receiver_error') is not None:
+        email_receiver_error = os.getenv('email_receiver_error').split(',')
     else:
-        email_receiver = 'valler4044@gmail.com'.split(',')  # backup email add
+        email_receiver_error = 'mysocialwatcher@gmail.com'.split(',')  # backup email add
 
-    if not isinstance(email_receiver, list): receiver = list(email_receiver)
+    # email address to receive finishing information
+    if (os.getenv('email_receiver_finish') is not None) & (os.getenv('email_receiver_finish') != 'opt-out'):
+        email_notification_finish_enable = True
+        email_receiver_finish = os.getenv('email_receiver_finish').split(',')
 
 # pysocialwatcher_opt
 pysocialwatcher_opt_flag = False

@@ -12,7 +12,8 @@ services:
       args:
         sleep_time: 0
         email_notification_enable: "True"
-        email_receiver: "scro3937@ox.ac.uk,casey.breen@demography.ox.ac.uk"
+        email_receiver_error: "scro3937@ox.ac.uk,casey.breen@demography.ox.ac.uk"
+        email_receiver_finish: "scro3937@ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
@@ -26,7 +27,8 @@ services:
       args:
         sleep_time: 0
         email_notification_enable: "True"
-        email_receiver: "scro3937@ox.ac.uk,casey.breen@demography.ox.ac.uk"
+        email_receiver_error: "scro3937@ox.ac.uk,casey.breen@demography.ox.ac.uk"
+        email_receiver_finish: "scro3937@ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
@@ -41,7 +43,7 @@ services:
         pysocialwatcher_opt_flag: "true"
         betterestimates_flag: "true"
         email_notification_enable: "True"
-        email_receiver: "casey.breen@demography.ox.ac.uk"
+        email_receiver_error: "casey.breen@demography.ox.ac.uk"
         sleep_time: 0
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
@@ -59,7 +61,7 @@ services:
         betterestimates_flag: "true"
         sleep_time: 0
         email_notification_enable: "True"
-        email_receiver: "casey.breen@demography.ox.ac.uk"
+        email_receiver_error: "casey.breen@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
@@ -75,7 +77,7 @@ services:
         betterestimates_flag: "true"
         sleep_time: 0
         email_notification_enable: "True"
-        email_receiver: "casey.breen@demography.ox.ac.uk"
+        email_receiver_error: "casey.breen@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
@@ -90,7 +92,7 @@ services:
         pysocialwatcher_opt_flag: "true"
         betterestimates_flag: "true"
         email_notification_enable: "True"
-        email_receiver: "casey.breen@demography.ox.ac.uk"
+        email_receiver_error: "casey.breen@demography.ox.ac.uk"
         sleep_time: 0
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
@@ -106,7 +108,7 @@ services:
         pysocialwatcher_opt_flag: "true"
         betterestimates_flag: "true"
         email_notification_enable: "True"
-        email_receiver: "casey.breen@demography.ox.ac.uk"
+        email_receiver_error: "casey.breen@demography.ox.ac.uk"
         sleep_time: 0
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile

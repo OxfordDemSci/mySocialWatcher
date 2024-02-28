@@ -12,7 +12,7 @@ if __name__ == '__main__':
     logger.info('betterestimates: ' + betterestimates_flag)
     logger.info('email_notification: ' + str(email_notification_enable))
     if email_notification_enable:
-        logger.info('email_receiver: ' + str(email_receiver))
+        logger.info('email_receiver: ' + str(email_receiver_error))
 
     # set pysocialwatcher_opt_flag to boolean
     pysocialwatcher_opt_flag = (pysocialwatcher_opt_flag.lower() == 'true')
@@ -70,7 +70,7 @@ if __name__ == '__main__':
         except:
             logger.error('An error occurred while preparing to collect data.', exc_info=True)
             if email_notification_enable:
-                sendmail(subject=specs_filename,contents='An error occurred while preparing to collect data',receiver=email_receiver)
+                sendmail(subject=specs_filename,contents='An error occurred while preparing to collect data',receiver=email_receiver_error)
 
         # ---- continue a previous collection ---- #
         continue_previous_collection = df_names.get('continue_previous_collection')
@@ -86,7 +86,7 @@ if __name__ == '__main__':
                 logger.warning('An error occurred while continuing a previous collection.', exc_info=True)
                 continue_previous_collection = False
                 if email_notification_enable:
-                    sendmail(subject=specs_filename, contents='An error occurred while continuing a previous collection.', receiver=email_receiver)
+                    sendmail(subject=specs_filename, contents='An error occurred while continuing a previous collection.', receiver=email_receiver_error)
 
         # ---- start a new collection ---- #
         if not continue_previous_collection:
@@ -100,7 +100,7 @@ if __name__ == '__main__':
             except:
                 logger.error('An error occurred while collecting new data.', exc_info=True)
                 if email_notification_enable:
-                    sendmail(subject=specs_filename, contents='An error occurred while collecting new data.', receiver=email_receiver)
+                    sendmail(subject=specs_filename, contents='An error occurred while collecting new data.', receiver=email_receiver_error)
 
         if betterestimates_flag:
             try:
@@ -111,7 +111,7 @@ if __name__ == '__main__':
             except:
                 logger.error('An error occurred while performing betterestimates.', exc_info=True)
                 if email_notification_enable:
-                    sendmail(subject=specs_filename, contents='An error occurred while performing betterestimates.', receiver=email_receiver)
+                    sendmail(subject=specs_filename, contents='An error occurred while performing betterestimates.', receiver=email_receiver_error)
 
 
         logger.info('Finished collection: ' + df_names.get('collecting'))
@@ -121,5 +121,5 @@ if __name__ == '__main__':
         del watcher
 
     logger.info('Finished collection.')
-    if (email_notification_enable) & ('scro' in email_receiver[0]):
-        sendmail(subject=specs_filename, contents='Finished collection', receiver=email_receiver[0])
+    if (email_notification_enable) & (email_notification_finish_enable):
+        sendmail(subject=specs_filename, contents='Finished collection', receiver=email_receiver_finish)
