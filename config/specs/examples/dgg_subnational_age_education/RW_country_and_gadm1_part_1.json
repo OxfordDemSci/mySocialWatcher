@@ -1,0 +1,182 @@
+{
+    "name": "RW_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "RW"
+            ],
+            "pySocialWatcherReference": {
+                "key": "RW",
+                "name": "Rwanda"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "RW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3197",
+                    "country_code": "RW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3197",
+                "name": "Kigali"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "RW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4854",
+                    "country_code": "RW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4854",
+                "name": "Southern Province"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "RW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4855",
+                    "country_code": "RW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4855",
+                "name": "Western Province"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "RW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4857",
+                    "country_code": "RW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4857",
+                "name": "Northern Province"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "RW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4862",
+                    "country_code": "RW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4862",
+                "name": "Eastern Province"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "RW"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ],
+    "scholarities": [
+        null,
+        {
+            "name": "unknown_unspecified",
+            "or": [
+                12
+            ]
+        },
+        {
+            "name": "No_high_school_degree",
+            "or": [
+                1,
+                13
+            ]
+        },
+        {
+            "name": "High_school_degree_but_not_more",
+            "or": [
+                2,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "name": "More_than_high_school_degree",
+            "or": [
+                3,
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        }
+    ]
+}

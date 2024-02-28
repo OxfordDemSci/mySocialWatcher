@@ -3,6 +3,7 @@ private*
 venv
 *.env
 **/.DS_Store
+**/yagmail.csv
 .Rhistory
 .idea/
 # Compiled python modules.
@@ -42,3 +43,6 @@ tests/*.csv
 /pysocialwatcher/input_examples/newyork_expats.json
 .Rproj.user
 mySocialWatcher.Rproj
+config/specs/examples/test.py
+config/specs/specs_explore/fb_gadm_match/gadm_fb_crosswalk.py
+
