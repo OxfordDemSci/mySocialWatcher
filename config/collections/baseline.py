@@ -75,7 +75,7 @@ if __name__ == '__main__':
 
 
     # drop countries that will return errors
-    drop_countries = drop_countries + ['CU', 'SD', 'IR', 'SY']
+    drop_countries = drop_countries + ['CU', 'SD', 'IR', 'SY', 'RU']
 
     countries = [i for i in countries if i not in drop_countries]
 
