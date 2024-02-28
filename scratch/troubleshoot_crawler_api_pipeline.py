@@ -108,15 +108,15 @@ for index in range(df.shape[0]):
 
     # submit API request
     url='http://127.0.0.1/api/v1/write'
-    # url='http://127.0.0.1:8000/write'
     # response = requests.get(url=url, params=args)
 
     # prepare data
     for arg in args.keys():
         if isinstance(args.get(arg), numpy.int64):
             args[arg] = int(args.get(arg))
-    data_bytes = json.dumps(args).encode('utf-8')
-    data_json = json.dumps(args)
+
+    # data_bytes = json.dumps(args).encode('utf-8')
+    # data_json = json.dumps(args)
 
     #-- headers --#
     # headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'}

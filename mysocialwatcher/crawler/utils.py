@@ -2,6 +2,7 @@ import os
 import requests
 import json
 import math
+import numpy
 import datetime
 import warnings
 from time import sleep
@@ -117,11 +118,23 @@ def psw_to_sql(df, collection_name, token,
         for i in drop:
             del args[i]
 
+        # convert numpy.int64 to int
+        for arg in args.keys():
+            if isinstance(args.get(arg), numpy.int64):
+                args[arg] = int(args.get(arg))
+
         # submit api request
         http_response = ''
         try:
-            # response = requests.get(url=url, params=args)
-            http_response = requests.post(url=url, data=args)
+            # http_response = requests.get(url=url, params=args)
+            # http_response = requests.post(url=url, data=args)
+
+            s = requests.Session()
+
+            request = requests.Request('POST', url, json=args)
+            request_prep = request.prepare()
+            http_response = s.send(request_prep)
+
             http_response_dict = json.loads(json.dumps(http_response.json()))
 
             df.loc[index, 'timestamp_api'] = http_response_dict.get('timestamp')
