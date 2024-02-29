@@ -1,0 +1,139 @@
+{
+    "name": "RW_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "RW"
+            ],
+            "pySocialWatcherReference": {
+                "key": "RW",
+                "name": "Rwanda"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "RW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3197",
+                    "country_code": "RW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3197",
+                "name": "Kigali"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "RW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4854",
+                    "country_code": "RW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4854",
+                "name": "Southern Province"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "RW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4855",
+                    "country_code": "RW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4855",
+                "name": "Western Province"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "RW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4857",
+                    "country_code": "RW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4857",
+                "name": "Northern Province"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "RW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4862",
+                    "country_code": "RW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4862",
+                "name": "Eastern Province"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "RW"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

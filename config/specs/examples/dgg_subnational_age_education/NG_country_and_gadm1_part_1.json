@@ -1,0 +1,726 @@
+{
+    "name": "NG_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "NG"
+            ],
+            "pySocialWatcherReference": {
+                "key": "NG",
+                "name": "Nigeria"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2624",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2624",
+                "name": "Edo State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2608",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2608",
+                "name": "Federal Capital Territory"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2617",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2617",
+                "name": "Imo State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2636",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2636",
+                "name": "Rivers State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2621",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2621",
+                "name": "Oyo State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2643",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2643",
+                "name": "Zamfara State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2634",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2634",
+                "name": "Ondo State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2612",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2612",
+                "name": "Kaduna State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2609",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2609",
+                "name": "Ogun State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2623",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2623",
+                "name": "Delta State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2640",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2640",
+                "name": "Ekiti State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2626",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2626",
+                "name": "Kebbi State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2614",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2614",
+                "name": "Anambra State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2622",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2622",
+                "name": "Adamawa State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2618",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2618",
+                "name": "Kano State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2642",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2642",
+                "name": "Nasarawa State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2619",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2619",
+                "name": "Kwara State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2628",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2628",
+                "name": "Osun State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2607",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2607",
+                "name": "Lagos State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2627",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2627",
+                "name": "Kogi State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2632",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2632",
+                "name": "Bauchi State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2635",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2635",
+                "name": "Plateau State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2637",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2637",
+                "name": "Sokoto State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2629",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2629",
+                "name": "Taraba State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2639",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2639",
+                "name": "Ebonyi State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2638",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2638",
+                "name": "Bayelsa State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2616",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2616",
+                "name": "Borno State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2610",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2610",
+                "name": "Akwa Ibom State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2633",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2633",
+                "name": "Enugu State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2641",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2641",
+                "name": "Gombe State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2630",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2630",
+                "name": "Yobe State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2615",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2615",
+                "name": "Benué State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2611",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2611",
+                "name": "Cross River State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2631",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2631",
+                "name": "Abia State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2620",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2620",
+                "name": "Niger State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2613",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2613",
+                "name": "Katsina State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2625",
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2625",
+                "name": "Jigawa State"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ],
+    "scholarities": [
+        null,
+        {
+            "name": "unknown_unspecified",
+            "or": [
+                12
+            ]
+        },
+        {
+            "name": "No_high_school_degree",
+            "or": [
+                1,
+                13
+            ]
+        },
+        {
+            "name": "High_school_degree_but_not_more",
+            "or": [
+                2,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "name": "More_than_high_school_degree",
+            "or": [
+                3,
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        }
+    ]
+}

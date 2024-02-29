@@ -1,0 +1,309 @@
+{
+    "name": "MA_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "MA"
+            ],
+            "pySocialWatcherReference": {
+                "key": "MA",
+                "name": "Morocco"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4390",
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4390",
+                "name": "Chaouia-Ouardigha"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4392",
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4392",
+                "name": "Doukkala-Abda"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2212",
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2212",
+                "name": "Fes-Boulemane"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4389",
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4389",
+                "name": "Gharb-Chrarda-Beni Hssen"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2218",
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2218",
+                "name": "Marrakesh-Tensift-El Haouz"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2219",
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2219",
+                "name": "Meknes-Tafilalet"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2223",
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2223",
+                "name": "Rabat-Sale-Zemmour-Zaer"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4388",
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4388",
+                "name": "Souss-Massa-Draa"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4393",
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4393",
+                "name": "Tadla-Azilal"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2226",
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2226",
+                "name": "Tangier-Tetouan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2228",
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2228",
+                "name": "Taza-Al Hoceima-Taounate"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2206",
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2206",
+                "name": "Grand Casablanca"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2232",
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2232",
+                "name": "Laayoune-Boujdour-Sakia El Hamra"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2230",
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2230",
+                "name": "Guelmim-Es Semara"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4391",
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4391",
+                "name": "Oriental"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MA"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

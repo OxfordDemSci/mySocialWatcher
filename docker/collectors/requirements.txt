@@ -1,0 +1,13 @@
+numpy>=1.23.4
+pandas<2.0.0  # pandas==1.5.1  # pandas>=2.0.0 deprecated dataframe.append() method which is incompatible with pySocialWatcher
+python-dotenv>=0.21.0
+codecov>=2.0.5
+coverage>=4.2
+cython>=0.27.3
+pytest_cov>=2.4.0
+requests>=2.20.0
+setuptools>=28.2.0
+tabulate>=0.8.7
+coloredlogs>=14.0
+
+
