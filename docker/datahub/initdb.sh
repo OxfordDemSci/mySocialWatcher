@@ -11,7 +11,7 @@ psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
 CREATE TABLE collections (
 	id serial PRIMARY KEY,
 	created_on DATE NOT NULL DEFAULT CURRENT_DATE,
-	name VARCHAR (25) NOT NULL,
+	name VARCHAR (50) NOT NULL,
 	UNIQUE(name)
 );
 GRANT SELECT ON collections TO writer, reader;
