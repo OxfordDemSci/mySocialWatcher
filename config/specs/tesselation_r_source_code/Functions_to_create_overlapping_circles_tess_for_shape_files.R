@@ -3,9 +3,9 @@
 # for targeting
 
 
-#require(rgdal)
-#require(rgeos)
-#require(maptools)
+# require(rgdal)
+# require(rgeos)
+# require(maptools)
 require(geosphere)
 require(raster)
 require(cleangeo)
@@ -682,10 +682,14 @@ determine_invalid_custom_locs_from_known_invalids <- function(known_invalids_cus
   known_invalids_custom_geos_plan <- spTransform(known_invalids_custom_geos, CRS(planar_proj))
   locs_geos_to_validate_plan <- spTransform(locs_geos_to_validate, CRS(planar_proj))
   
-  invalid_geos_merged <- unionSpatialPolygons(known_invalids_custom_geos,rep(1,nrow(known_invalids_custom_geos)))
-  invalid_geos_merged_plan <- unionSpatialPolygons(known_invalids_custom_geos_plan,rep(1,nrow(known_invalids_custom_geos_plan)))
-  invalid_geos_merged_plan <- SpatialPolygonsDataFrame(invalid_geos_merged_plan, data.frame(id = 1))
+  # invalid_geos_merged <- maptools::unionSpatialPolygons(known_invalids_custom_geos,rep(1,nrow(known_invalids_custom_geos)))
+  # invalid_geos_merged_plan <- maptools::unionSpatialPolygons(known_invalids_custom_geos_plan,rep(1,nrow(known_invalids_custom_geos_plan)))
   
+  invalid_geos_merged <- sf::st_union(sf::st_as_sf(known_invalids_custom_geos))
+  invalid_geos_merged_plan <- sf::st_union(sf::st_as_sf(known_invalids_custom_geos_plan))
+
+  invalid_geos_merged_plan <- SpatialPolygonsDataFrame(invalid_geos_merged_plan, data.frame(id = 1))
+
   # determine intersections of the locations of interest with the known invalid locations
   geo_intr <- gIntersection(invalid_geos_merged_plan, locs_geos_to_validate_plan, byid = TRUE)
   if (is.null(geo_intr)) { # no intersection with previously known invalid locations
