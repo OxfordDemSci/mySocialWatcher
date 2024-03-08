@@ -1,0 +1,17 @@
+# docker-compose to deploy multiple collectors
+version: '3.3'
+
+services:
+
+  crawler:
+    container_name: crawler
+    network_mode: host
+    volumes:
+      #- ./../../data:/app/data
+      - /home/doug/ndph/DemSci/projects/2023_WHO_Ukraine_Population/data/meta_collections/venezuela_qcri:/app/data
+      - .env:/app/.env
+    build:
+      context: ./../../
+      dockerfile: ./docker/crawler/Dockerfile
+    restart: on-failure
+
