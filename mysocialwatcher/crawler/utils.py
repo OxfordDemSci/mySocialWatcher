@@ -41,7 +41,7 @@ def psw_to_sql(df, collection_name, token,
         row = df.iloc[index]
 
         # ---- platform ---- #
-        platform = literal_eval(row['publisher_platforms'])
+        platform = literal_eval(row['publisher_platforms'].replace('""""','"').replace('"""','"').replace('""','"'))
 
         if len(platform) > 1:
             warnings.warn(f'More than one platform detected at index {index}.')
@@ -56,13 +56,13 @@ def psw_to_sql(df, collection_name, token,
         targeting = literal_eval(row.get('targeting'))
 
         # ---- response ----#
-        response = row.get('response')
+        response = row.get('response').replace('""""','"').replace('"""','"').replace('""','"')
         if response[0] == "{":
-            response = json.loads(row.get('response'))
+            response = json.loads(response)
         elif response[0] == '[':
-            response = literal_eval(row.get('response'))
+            response = literal_eval(response)
         elif response[:2] == "b\'":
-            response = json.loads(literal_eval(row.get('response')).decode('utf-8'))
+            response = json.loads(literal_eval(response).decode('utf-8'))
 
         # ---- prepare: geo_locations ----#
         geo = all_fields['geo_locations']  # literal_eval(row.get('geo_locations'))
