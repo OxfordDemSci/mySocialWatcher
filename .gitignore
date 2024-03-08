@@ -2,6 +2,7 @@ data
 private*
 venv
 *.env
+**/wd
 **/.DS_Store
 **/yagmail.csv
 .Rhistory
