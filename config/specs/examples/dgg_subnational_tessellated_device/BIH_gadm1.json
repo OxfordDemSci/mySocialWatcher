@@ -1,0 +1,928 @@
+{
+    "name": "BIH",
+    "geo_locations": [
+        {
+            "name": "tessellation_BIH.1_1",
+            "values": [
+                {
+                    "latitude": 44.7986557709091,
+                    "longitude": 18.5662887270807,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.7758313972727,
+                    "longitude": 18.5771095965684,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.7986557709091,
+                    "longitude": 18.6023570556211,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8214801445455,
+                    "longitude": 18.5771095965684,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.7530070236364,
+                    "longitude": 18.6384253841615,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.7758313972727,
+                    "longitude": 18.6131779251087,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.7986557709091,
+                    "longitude": 18.6384253841615,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8214801445455,
+                    "longitude": 18.6131779251087,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8443045181818,
+                    "longitude": 18.6384253841615,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.7758313972727,
+                    "longitude": 18.6492462536491,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.7986557709091,
+                    "longitude": 18.6744937127018,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8214801445455,
+                    "longitude": 18.6492462536491,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8443045181818,
+                    "longitude": 18.6744937127018,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8671288918182,
+                    "longitude": 18.6492462536491,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8899532654546,
+                    "longitude": 18.6744937127018,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.7758313972727,
+                    "longitude": 18.6853145821894,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.7986557709091,
+                    "longitude": 18.7105620412422,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8214801445455,
+                    "longitude": 18.6853145821894,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8443045181818,
+                    "longitude": 18.7105620412422,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8671288918182,
+                    "longitude": 18.6853145821894,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8899532654546,
+                    "longitude": 18.7105620412422,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.9127776390909,
+                    "longitude": 18.6853145821894,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.9356020127273,
+                    "longitude": 18.7105620412422,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.7986557709091,
+                    "longitude": 18.7466303697826,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8214801445455,
+                    "longitude": 18.7213829107298,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8443045181818,
+                    "longitude": 18.7466303697826,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8671288918182,
+                    "longitude": 18.7213829107298,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8899532654546,
+                    "longitude": 18.7466303697826,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.9127776390909,
+                    "longitude": 18.7213829107298,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.7986557709091,
+                    "longitude": 18.7826986983229,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8214801445455,
+                    "longitude": 18.7574512392702,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8443045181818,
+                    "longitude": 18.7826986983229,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8671288918182,
+                    "longitude": 18.7574512392702,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8214801445455,
+                    "longitude": 18.7935195678105,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8443045181818,
+                    "longitude": 18.8187670268633,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8671288918182,
+                    "longitude": 18.7935195678105,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8214801445455,
+                    "longitude": 18.8295878963509,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8443045181818,
+                    "longitude": 18.8548353554037,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.7986557709091,
+                    "longitude": 18.890903683944,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8214801445455,
+                    "longitude": 18.8656562248913,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8443045181818,
+                    "longitude": 18.890903683944,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8214801445455,
+                    "longitude": 18.9017245534316,
+                    "radius": 2,
+                    "distance_unit": "kilometer"
+                }
+            ],
+            "location_types": [
+                "home"
+            ],
+            "pySocialWatcherReference": {
+                "geo_id": "BIH.1_1",
+                " coverType": "interior_cover",
+                " expanded": "FALSE"
+            },
+            "country_code": "BA"
+        },
+        {
+            "name": "tessellation_BIH.2_1",
+            "values": [
+                {
+                    "latitude": 45.1084186505,
+                    "longitude": 15.9157451561494,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8452907515,
+                    "longitude": 16.1041038422988,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.976854701,
+                    "longitude": 15.9700412888797,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.5821628525,
+                    "longitude": 16.2924625284481,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.713726802,
+                    "longitude": 16.1583999750291,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.713726802,
+                    "longitude": 16.3467586611784,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.0559070545,
+                    "longitude": 16.6691799007469,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.187471004,
+                    "longitude": 16.5351173473278,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.713726802,
+                    "longitude": 16.5351173473278,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.0559070545,
+                    "longitude": 16.8575385868963,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.7927791555,
+                    "longitude": 17.0458972730456,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.924343105,
+                    "longitude": 16.9118347196266,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.7927791555,
+                    "longitude": 17.234255959195,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.924343105,
+                    "longitude": 17.1001934057759,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.5296512565,
+                    "longitude": 17.4226146453444,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.661215206,
+                    "longitude": 17.2885520919253,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.7927791555,
+                    "longitude": 17.4226146453444,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.924343105,
+                    "longitude": 17.2885520919253,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.0559070545,
+                    "longitude": 17.4226146453444,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.2665233575,
+                    "longitude": 17.6109733314938,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.398087307,
+                    "longitude": 17.4769107780747,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.5296512565,
+                    "longitude": 17.6109733314938,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.661215206,
+                    "longitude": 17.4769107780747,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.7927791555,
+                    "longitude": 17.6109733314938,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.924343105,
+                    "longitude": 17.4769107780747,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.0559070545,
+                    "longitude": 17.6109733314938,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.187471004,
+                    "longitude": 17.4769107780747,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.2665233575,
+                    "longitude": 17.7993320176431,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.398087307,
+                    "longitude": 17.6652694642241,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.5296512565,
+                    "longitude": 17.7993320176431,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.661215206,
+                    "longitude": 17.6652694642241,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.7927791555,
+                    "longitude": 17.7993320176431,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.924343105,
+                    "longitude": 17.6652694642241,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.0559070545,
+                    "longitude": 17.7993320176431,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.187471004,
+                    "longitude": 17.6652694642241,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.661215206,
+                    "longitude": 17.8536281503734,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.7927791555,
+                    "longitude": 17.9876907037925,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.924343105,
+                    "longitude": 17.8536281503734,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.0559070545,
+                    "longitude": 17.9876907037925,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.187471004,
+                    "longitude": 17.8536281503734,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.3190349535,
+                    "longitude": 17.9876907037925,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.661215206,
+                    "longitude": 18.0419868365228,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.7927791555,
+                    "longitude": 18.1760493899419,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.924343105,
+                    "longitude": 18.0419868365228,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.0559070545,
+                    "longitude": 18.1760493899419,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.187471004,
+                    "longitude": 18.0419868365228,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.3190349535,
+                    "longitude": 18.1760493899419,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.661215206,
+                    "longitude": 18.2303455226722,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.924343105,
+                    "longitude": 18.2303455226722,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.0559070545,
+                    "longitude": 18.3644080760913,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.187471004,
+                    "longitude": 18.2303455226722,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.3190349535,
+                    "longitude": 18.3644080760913,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.450598903,
+                    "longitude": 18.2303455226722,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.187471004,
+                    "longitude": 18.4187042088216,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.3190349535,
+                    "longitude": 18.5527667622407,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.450598903,
+                    "longitude": 18.4187042088216,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.5821628525,
+                    "longitude": 18.5527667622407,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.450598903,
+                    "longitude": 18.6070628949709,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                }
+            ],
+            "location_types": [
+                "home"
+            ],
+            "pySocialWatcherReference": {
+                "geo_id": "BIH.2_1",
+                " coverType": "interior_cover",
+                " expanded": "FALSE"
+            },
+            "country_code": "BA"
+        },
+        {
+            "name": "tessellation_BIH.3_1",
+            "values": [
+                {
+                    "latitude": 45.0166455214286,
+                    "longitude": 16.569491831841,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 45.0166455214286,
+                    "longitude": 16.7643835077615,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.7586099528571,
+                    "longitude": 16.959275183682,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 45.0166455214286,
+                    "longitude": 16.959275183682,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.3715566,
+                    "longitude": 17.0201966233578,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.6295921685714,
+                    "longitude": 17.0201966233578,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.7586099528571,
+                    "longitude": 17.1541668596024,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8876277371429,
+                    "longitude": 17.0201966233578,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 45.0166455214286,
+                    "longitude": 17.1541668596024,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.6295921685714,
+                    "longitude": 17.2150882992783,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.7586099528571,
+                    "longitude": 17.3490585355229,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8876277371429,
+                    "longitude": 17.2150882992783,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 45.0166455214286,
+                    "longitude": 17.3490585355229,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.5005743842857,
+                    "longitude": 17.5439502114434,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.6295921685714,
+                    "longitude": 17.4099799751988,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.7586099528571,
+                    "longitude": 17.5439502114434,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8876277371429,
+                    "longitude": 17.4099799751988,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.6295921685714,
+                    "longitude": 17.6048716511193,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.7586099528571,
+                    "longitude": 17.7388418873639,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8876277371429,
+                    "longitude": 17.6048716511193,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8876277371429,
+                    "longitude": 17.7997633270398,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 42.9523609728571,
+                    "longitude": 18.1286252392049,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.2103965414286,
+                    "longitude": 18.1286252392049,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.8876277371429,
+                    "longitude": 17.9946550029602,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 42.9523609728571,
+                    "longitude": 18.3235169151254,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.0813787571429,
+                    "longitude": 18.1895466788807,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.2103965414286,
+                    "longitude": 18.3235169151254,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.3394143257143,
+                    "longitude": 18.1895466788807,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.0813787571429,
+                    "longitude": 18.3844383548012,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.2103965414286,
+                    "longitude": 18.5184085910459,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.3394143257143,
+                    "longitude": 18.3844383548012,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.46843211,
+                    "longitude": 18.5184085910459,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.3394143257143,
+                    "longitude": 18.5793300307217,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.46843211,
+                    "longitude": 18.7133002669663,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.9845032471429,
+                    "longitude": 18.7133002669663,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.9845032471429,
+                    "longitude": 18.9081919428868,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.1135210314286,
+                    "longitude": 18.9691133825627,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.7586099528571,
+                    "longitude": 19.1030836188073,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.7264676785714,
+                    "longitude": 19.2979752947278,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 43.8554854628571,
+                    "longitude": 19.1640050584832,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 44.1135210314286,
+                    "longitude": 19.1640050584832,
+                    "radius": 11,
+                    "distance_unit": "kilometer"
+                }
+            ],
+            "location_types": [
+                "home"
+            ],
+            "pySocialWatcherReference": {
+                "geo_id": "BIH.3_1",
+                " coverType": "interior_cover",
+                " expanded": "FALSE"
+            },
+            "country_code": "BA"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}
