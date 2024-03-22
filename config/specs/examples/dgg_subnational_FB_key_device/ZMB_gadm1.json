@@ -1,0 +1,210 @@
+{
+    "name": "ZMB",
+    "geo_locations": [
+        {
+            "name": "fb_key_ZMB.1_1",
+            "values": [
+                {
+                    "key": 4061.0,
+                    "country_code": "ZM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4061.0,
+                "name": "Central"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZM"
+        },
+        {
+            "name": "fb_key_ZMB.2_1",
+            "values": [
+                {
+                    "key": 4067.0,
+                    "country_code": "ZM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4067.0,
+                "name": "Copperbelt"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZM"
+        },
+        {
+            "name": "fb_key_ZMB.3_1",
+            "values": [
+                {
+                    "key": 4062.0,
+                    "country_code": "ZM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4062.0,
+                "name": "Eastern"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZM"
+        },
+        {
+            "name": "fb_key_ZMB.4_1",
+            "values": [
+                {
+                    "key": 4063.0,
+                    "country_code": "ZM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4063.0,
+                "name": "Luapula"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZM"
+        },
+        {
+            "name": "fb_key_ZMB.5_1",
+            "values": [
+                {
+                    "key": 4068.0,
+                    "country_code": "ZM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4068.0,
+                "name": "Lusaka"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZM"
+        },
+        {
+            "name": "fb_key_ZMB.6_1",
+            "values": [
+                {
+                    "key": 4725.0,
+                    "country_code": "ZM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4725.0,
+                "name": "Muchinga"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZM"
+        },
+        {
+            "name": "fb_key_ZMB.7_1",
+            "values": [
+                {
+                    "key": 4065.0,
+                    "country_code": "ZM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4065.0,
+                "name": "North-Western"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZM"
+        },
+        {
+            "name": "fb_key_ZMB.8_1",
+            "values": [
+                {
+                    "key": 4064.0,
+                    "country_code": "ZM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4064.0,
+                "name": "Northern"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZM"
+        },
+        {
+            "name": "fb_key_ZMB.9_1",
+            "values": [
+                {
+                    "key": 4066.0,
+                    "country_code": "ZM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4066.0,
+                "name": "Southern"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZM"
+        },
+        {
+            "name": "fb_key_ZMB.10_1",
+            "values": [
+                {
+                    "key": 4060.0,
+                    "country_code": "ZM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4060.0,
+                "name": "Western"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZM"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

@@ -1,0 +1,125 @@
+{
+    "name": "LBN",
+    "geo_locations": [
+        {
+            "name": "fb_key_LBN.3_1",
+            "values": [
+                {
+                    "key": 2059.0,
+                    "country_code": "LB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2059.0,
+                "name": "Beirut"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "LB"
+        },
+        {
+            "name": "fb_key_LBN.5_1",
+            "values": [
+                {
+                    "key": 2060.0,
+                    "country_code": "LB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2060.0,
+                "name": "Mount Lebanon"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "LB"
+        },
+        {
+            "name": "fb_key_LBN.6_1",
+            "values": [
+                {
+                    "key": 4322.0,
+                    "country_code": "LB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4322.0,
+                "name": "Nabatiyeh"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "LB"
+        },
+        {
+            "name": "fb_key_LBN.7_1",
+            "values": [
+                {
+                    "key": 2058.0,
+                    "country_code": "LB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2058.0,
+                "name": "North"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "LB"
+        },
+        {
+            "name": "fb_key_LBN.8_1",
+            "values": [
+                {
+                    "key": 2061.0,
+                    "country_code": "LB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2061.0,
+                "name": "South"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "LB"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

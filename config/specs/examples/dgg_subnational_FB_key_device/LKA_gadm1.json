@@ -1,0 +1,57 @@
+{
+    "name": "LKA",
+    "geo_locations": [
+        {
+            "name": "fb_key_LKA.18_1",
+            "values": [
+                {
+                    "key": 4442.0,
+                    "country_code": "LK"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4442.0,
+                "name": "Moneragala"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "LK"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

@@ -1,0 +1,125 @@
+{
+    "name": "KEN",
+    "geo_locations": [
+        {
+            "name": "fb_key_KEN.25_1",
+            "values": [
+                {
+                    "key": 1933.0,
+                    "country_code": "KE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1933.0,
+                "name": "Marsabit"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "KE"
+        },
+        {
+            "name": "fb_key_KEN.30_1",
+            "values": [
+                {
+                    "key": 1933.0,
+                    "country_code": "KE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1933.0,
+                "name": "Nairobi"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "KE"
+        },
+        {
+            "name": "fb_key_KEN.33_1",
+            "values": [
+                {
+                    "key": 1933.0,
+                    "country_code": "KE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1933.0,
+                "name": "Narok"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "KE"
+        },
+        {
+            "name": "fb_key_KEN.34_1",
+            "values": [
+                {
+                    "key": 1933.0,
+                    "country_code": "KE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1933.0,
+                "name": "Nyamira"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "KE"
+        },
+        {
+            "name": "fb_key_KEN.47_1",
+            "values": [
+                {
+                    "key": 1937.0,
+                    "country_code": "KE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1937.0,
+                "name": "West Pokot"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "KE"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

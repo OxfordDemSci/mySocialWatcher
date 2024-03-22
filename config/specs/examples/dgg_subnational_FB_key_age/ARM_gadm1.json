@@ -1,0 +1,234 @@
+{
+    "name": "ARM",
+    "geo_locations": [
+        {
+            "name": "fb_key_ARM.1_1",
+            "values": [
+                {
+                    "key": 69.0,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 69.0,
+                "name": "Aragatsotn"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "fb_key_ARM.2_1",
+            "values": [
+                {
+                    "key": 70.0,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 70.0,
+                "name": "Ararat"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "fb_key_ARM.3_1",
+            "values": [
+                {
+                    "key": 71.0,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 71.0,
+                "name": "Armavir"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "fb_key_ARM.4_1",
+            "values": [
+                {
+                    "key": 79.0,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 79.0,
+                "name": "Erevan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "fb_key_ARM.5_1",
+            "values": [
+                {
+                    "key": 72.0,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 72.0,
+                "name": "Gegharkunik"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "fb_key_ARM.6_1",
+            "values": [
+                {
+                    "key": 73.0,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 73.0,
+                "name": "Kotayk"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "fb_key_ARM.7_1",
+            "values": [
+                {
+                    "key": 74.0,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 74.0,
+                "name": "Lori"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "fb_key_ARM.8_1",
+            "values": [
+                {
+                    "key": 75.0,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 75.0,
+                "name": "Shirak"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "fb_key_ARM.9_1",
+            "values": [
+                {
+                    "key": 76.0,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 76.0,
+                "name": "Syunik"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "fb_key_ARM.10_1",
+            "values": [
+                {
+                    "key": 77.0,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 77.0,
+                "name": "Tavush"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "fb_key_ARM.11_1",
+            "values": [
+                {
+                    "key": 78.0,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 78.0,
+                "name": "Vayots Dzor"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

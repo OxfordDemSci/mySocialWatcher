@@ -1,0 +1,217 @@
+{
+    "name": "HTI",
+    "geo_locations": [
+        {
+            "name": "fb_key_HTI.1_1",
+            "values": [
+                {
+                    "key": 1614.0,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1614.0,
+                "name": "Centre"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "HT"
+        },
+        {
+            "name": "fb_key_HTI.2_1",
+            "values": [
+                {
+                    "key": 1615.0,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1615.0,
+                "name": "Grand'Anse"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "HT"
+        },
+        {
+            "name": "fb_key_HTI.3_1",
+            "values": [
+                {
+                    "key": 1613.0,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1613.0,
+                "name": "L'Artibonite"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "HT"
+        },
+        {
+            "name": "fb_key_HTI.4_1",
+            "values": [
+                {
+                    "key": 4564.0,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4564.0,
+                "name": "Nippes"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "HT"
+        },
+        {
+            "name": "fb_key_HTI.7_1",
+            "values": [
+                {
+                    "key": 1617.0,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1617.0,
+                "name": "Nord"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "HT"
+        },
+        {
+            "name": "fb_key_HTI.5_1",
+            "values": [
+                {
+                    "key": 1617.0,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1617.0,
+                "name": "Nord-Est"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "HT"
+        },
+        {
+            "name": "fb_key_HTI.6_1",
+            "values": [
+                {
+                    "key": 1612.0,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1612.0,
+                "name": "Nord-Ouest"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "HT"
+        },
+        {
+            "name": "fb_key_HTI.8_1",
+            "values": [
+                {
+                    "key": 1612.0,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1612.0,
+                "name": "Ouest"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "HT"
+        },
+        {
+            "name": "fb_key_HTI.10_1",
+            "values": [
+                {
+                    "key": 1620.0,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1620.0,
+                "name": "Sud"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "HT"
+        },
+        {
+            "name": "fb_key_HTI.9_1",
+            "values": [
+                {
+                    "key": 1620.0,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1620.0,
+                "name": "Sud-Est"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "HT"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

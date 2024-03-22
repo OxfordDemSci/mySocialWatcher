@@ -1,0 +1,251 @@
+{
+    "name": "UZB",
+    "geo_locations": [
+        {
+            "name": "fb_key_UZB.1_1",
+            "values": [
+                {
+                    "key": 3913.0,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3913.0,
+                "name": "Andijon"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "UZ"
+        },
+        {
+            "name": "fb_key_UZB.3_1",
+            "values": [
+                {
+                    "key": 3915.0,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3915.0,
+                "name": "Farg'ona"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "UZ"
+        },
+        {
+            "name": "fb_key_UZB.8_1",
+            "values": [
+                {
+                    "key": 3918.0,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3918.0,
+                "name": "Namangan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "UZ"
+        },
+        {
+            "name": "fb_key_UZB.9_1",
+            "values": [
+                {
+                    "key": 3919.0,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3919.0,
+                "name": "Navoiy"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "UZ"
+        },
+        {
+            "name": "fb_key_UZB.5_1",
+            "values": [
+                {
+                    "key": 3921.0,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3921.0,
+                "name": "Qaraqalpaqstan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "UZ"
+        },
+        {
+            "name": "fb_key_UZB.6_1",
+            "values": [
+                {
+                    "key": 3920.0,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3920.0,
+                "name": "Qashqadaryo"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "UZ"
+        },
+        {
+            "name": "fb_key_UZB.10_1",
+            "values": [
+                {
+                    "key": 3922.0,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3922.0,
+                "name": "Samarqand'"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "UZ"
+        },
+        {
+            "name": "fb_key_UZB.11_1",
+            "values": [
+                {
+                    "key": 4727.0,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4727.0,
+                "name": "Sirdaryo"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "UZ"
+        },
+        {
+            "name": "fb_key_UZB.12_1",
+            "values": [
+                {
+                    "key": 3924.0,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3924.0,
+                "name": "Surxondaryo"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "UZ"
+        },
+        {
+            "name": "fb_key_UZB.14_1",
+            "values": [
+                {
+                    "key": 3926.0,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3926.0,
+                "name": "Toshkent"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "UZ"
+        },
+        {
+            "name": "fb_key_UZB.13_1",
+            "values": [
+                {
+                    "key": 3926.0,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3926.0,
+                "name": "Toshkent Shahri"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "UZ"
+        },
+        {
+            "name": "fb_key_UZB.7_1",
+            "values": [
+                {
+                    "key": 3917.0,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3917.0,
+                "name": "Xorazm"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "UZ"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

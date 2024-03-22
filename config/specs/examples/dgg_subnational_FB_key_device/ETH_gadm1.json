@@ -1,0 +1,210 @@
+{
+    "name": "ETH",
+    "geo_locations": [
+        {
+            "name": "fb_key_ETH.1_1",
+            "values": [
+                {
+                    "key": 1037.0,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1037.0,
+                "name": "Addis Abeba"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ET"
+        },
+        {
+            "name": "fb_key_ETH.2_1",
+            "values": [
+                {
+                    "key": 1041.0,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1041.0,
+                "name": "Afar"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ET"
+        },
+        {
+            "name": "fb_key_ETH.3_1",
+            "values": [
+                {
+                    "key": 1034.0,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1034.0,
+                "name": "Amhara"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ET"
+        },
+        {
+            "name": "fb_key_ETH.4_1",
+            "values": [
+                {
+                    "key": 1040.0,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1040.0,
+                "name": "Benshangul-Gumaz"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ET"
+        },
+        {
+            "name": "fb_key_ETH.6_1",
+            "values": [
+                {
+                    "key": 1036.0,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1036.0,
+                "name": "Gambela Peoples"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ET"
+        },
+        {
+            "name": "fb_key_ETH.7_1",
+            "values": [
+                {
+                    "key": 4545.0,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4545.0,
+                "name": "Harari People"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ET"
+        },
+        {
+            "name": "fb_key_ETH.8_1",
+            "values": [
+                {
+                    "key": 4548.0,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4548.0,
+                "name": "Oromia"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ET"
+        },
+        {
+            "name": "fb_key_ETH.9_1",
+            "values": [
+                {
+                    "key": 1035.0,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1035.0,
+                "name": "Somali"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ET"
+        },
+        {
+            "name": "fb_key_ETH.10_1",
+            "values": [
+                {
+                    "key": 1038.0,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1038.0,
+                "name": "Southern Nations, Nationalities"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ET"
+        },
+        {
+            "name": "fb_key_ETH.11_1",
+            "values": [
+                {
+                    "key": 1039.0,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1039.0,
+                "name": "Tigray"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ET"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

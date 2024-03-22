@@ -1,0 +1,149 @@
+{
+    "name": "VUT",
+    "geo_locations": [
+        {
+            "name": "fb_key_VUT.1_1",
+            "values": [
+                {
+                    "key": 4920.0,
+                    "country_code": "VU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4920.0,
+                "name": "Malampa"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "VU"
+        },
+        {
+            "name": "fb_key_VUT.2_1",
+            "values": [
+                {
+                    "key": 4922.0,
+                    "country_code": "VU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4922.0,
+                "name": "Penama"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "VU"
+        },
+        {
+            "name": "fb_key_VUT.3_1",
+            "values": [
+                {
+                    "key": 4923.0,
+                    "country_code": "VU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4923.0,
+                "name": "Sanma"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "VU"
+        },
+        {
+            "name": "fb_key_VUT.4_1",
+            "values": [
+                {
+                    "key": 4925.0,
+                    "country_code": "VU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4925.0,
+                "name": "Shefa"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "VU"
+        },
+        {
+            "name": "fb_key_VUT.5_1",
+            "values": [
+                {
+                    "key": 4021.0,
+                    "country_code": "VU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4021.0,
+                "name": "Tafea"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "VU"
+        },
+        {
+            "name": "fb_key_VUT.6_1",
+            "values": [
+                {
+                    "key": 4924.0,
+                    "country_code": "VU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4924.0,
+                "name": "Torba"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "VU"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

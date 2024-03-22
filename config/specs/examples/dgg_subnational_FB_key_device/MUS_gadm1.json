@@ -1,0 +1,176 @@
+{
+    "name": "MUS",
+    "geo_locations": [
+        {
+            "name": "fb_key_MUS.3_1",
+            "values": [
+                {
+                    "key": 2448.0,
+                    "country_code": "MU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2448.0,
+                "name": "Flacq"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MU"
+        },
+        {
+            "name": "fb_key_MUS.4_1",
+            "values": [
+                {
+                    "key": 2449.0,
+                    "country_code": "MU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2449.0,
+                "name": "Grand Port"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MU"
+        },
+        {
+            "name": "fb_key_MUS.5_1",
+            "values": [
+                {
+                    "key": 2450.0,
+                    "country_code": "MU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2450.0,
+                "name": "Moka"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MU"
+        },
+        {
+            "name": "fb_key_MUS.6_1",
+            "values": [
+                {
+                    "key": 2451.0,
+                    "country_code": "MU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2451.0,
+                "name": "Pamplemousses"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MU"
+        },
+        {
+            "name": "fb_key_MUS.7_1",
+            "values": [
+                {
+                    "key": 2452.0,
+                    "country_code": "MU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2452.0,
+                "name": "Plaines Wilhems"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MU"
+        },
+        {
+            "name": "fb_key_MUS.8_1",
+            "values": [
+                {
+                    "key": 2453.0,
+                    "country_code": "MU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2453.0,
+                "name": "Port Louis"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MU"
+        },
+        {
+            "name": "fb_key_MUS.9_1",
+            "values": [
+                {
+                    "key": 2454.0,
+                    "country_code": "MU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2454.0,
+                "name": "Rivi\u00e8re du Rempart"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MU"
+        },
+        {
+            "name": "fb_key_MUS.12_1",
+            "values": [
+                {
+                    "key": 2455.0,
+                    "country_code": "MU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2455.0,
+                "name": "Savanne"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MU"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

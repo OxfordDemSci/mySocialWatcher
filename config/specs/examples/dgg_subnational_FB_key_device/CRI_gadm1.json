@@ -1,0 +1,159 @@
+{
+    "name": "CRI",
+    "geo_locations": [
+        {
+            "name": "fb_key_CRI.1_1",
+            "values": [
+                {
+                    "key": 752.0,
+                    "country_code": "CR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 752.0,
+                "name": "Alajuela"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "CR"
+        },
+        {
+            "name": "fb_key_CRI.2_1",
+            "values": [
+                {
+                    "key": 753.0,
+                    "country_code": "CR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 753.0,
+                "name": "Cartago"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "CR"
+        },
+        {
+            "name": "fb_key_CRI.3_1",
+            "values": [
+                {
+                    "key": 754.0,
+                    "country_code": "CR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 754.0,
+                "name": "Guanacaste"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "CR"
+        },
+        {
+            "name": "fb_key_CRI.4_1",
+            "values": [
+                {
+                    "key": 755.0,
+                    "country_code": "CR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 755.0,
+                "name": "Heredia"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "CR"
+        },
+        {
+            "name": "fb_key_CRI.5_1",
+            "values": [
+                {
+                    "key": 756.0,
+                    "country_code": "CR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 756.0,
+                "name": "Lim\u00f3n"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "CR"
+        },
+        {
+            "name": "fb_key_CRI.6_1",
+            "values": [
+                {
+                    "key": 757.0,
+                    "country_code": "CR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 757.0,
+                "name": "Puntarenas"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "CR"
+        },
+        {
+            "name": "fb_key_CRI.7_1",
+            "values": [
+                {
+                    "key": 758.0,
+                    "country_code": "CR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 758.0,
+                "name": "San Jos\u00e9"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "CR"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

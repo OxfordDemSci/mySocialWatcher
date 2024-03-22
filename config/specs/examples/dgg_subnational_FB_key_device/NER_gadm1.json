@@ -1,0 +1,176 @@
+{
+    "name": "NER",
+    "geo_locations": [
+        {
+            "name": "fb_key_NER.1_1",
+            "values": [
+                {
+                    "key": 2600.0,
+                    "country_code": "NE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2600.0,
+                "name": "Agadez"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NE"
+        },
+        {
+            "name": "fb_key_NER.2_1",
+            "values": [
+                {
+                    "key": 2601.0,
+                    "country_code": "NE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2601.0,
+                "name": "Diffa"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NE"
+        },
+        {
+            "name": "fb_key_NER.3_1",
+            "values": [
+                {
+                    "key": 2602.0,
+                    "country_code": "NE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2602.0,
+                "name": "Dosso"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NE"
+        },
+        {
+            "name": "fb_key_NER.4_1",
+            "values": [
+                {
+                    "key": 2603.0,
+                    "country_code": "NE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2603.0,
+                "name": "Maradi"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NE"
+        },
+        {
+            "name": "fb_key_NER.5_1",
+            "values": [
+                {
+                    "key": 2604.0,
+                    "country_code": "NE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2604.0,
+                "name": "Niamey"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NE"
+        },
+        {
+            "name": "fb_key_NER.6_1",
+            "values": [
+                {
+                    "key": 2605.0,
+                    "country_code": "NE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2605.0,
+                "name": "Tahoua"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NE"
+        },
+        {
+            "name": "fb_key_NER.7_1",
+            "values": [
+                {
+                    "key": 4889.0,
+                    "country_code": "NE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4889.0,
+                "name": "Tillab\u00e9ry"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NE"
+        },
+        {
+            "name": "fb_key_NER.8_1",
+            "values": [
+                {
+                    "key": 2606.0,
+                    "country_code": "NE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2606.0,
+                "name": "Zinder"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NE"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

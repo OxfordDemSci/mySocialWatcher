@@ -1,0 +1,210 @@
+{
+    "name": "SLB",
+    "geo_locations": [
+        {
+            "name": "fb_key_SLB.1_1",
+            "values": [
+                {
+                    "key": 4890.0,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4890.0,
+                "name": "Central"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "SB"
+        },
+        {
+            "name": "fb_key_SLB.2_1",
+            "values": [
+                {
+                    "key": 4892.0,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4892.0,
+                "name": "Choiseul"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "SB"
+        },
+        {
+            "name": "fb_key_SLB.3_1",
+            "values": [
+                {
+                    "key": 4893.0,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4893.0,
+                "name": "Guadalcanal"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "SB"
+        },
+        {
+            "name": "fb_key_SLB.4_1",
+            "values": [
+                {
+                    "key": 4903.0,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4903.0,
+                "name": "Honiara"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "SB"
+        },
+        {
+            "name": "fb_key_SLB.5_1",
+            "values": [
+                {
+                    "key": 4894.0,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4894.0,
+                "name": "Isabel"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "SB"
+        },
+        {
+            "name": "fb_key_SLB.6_1",
+            "values": [
+                {
+                    "key": 3218.0,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3218.0,
+                "name": "Makira Ulawa"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "SB"
+        },
+        {
+            "name": "fb_key_SLB.7_1",
+            "values": [
+                {
+                    "key": 4895.0,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4895.0,
+                "name": "Malaita"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "SB"
+        },
+        {
+            "name": "fb_key_SLB.8_1",
+            "values": [
+                {
+                    "key": 4896.0,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4896.0,
+                "name": "Rennell and Bellona"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "SB"
+        },
+        {
+            "name": "fb_key_SLB.9_1",
+            "values": [
+                {
+                    "key": 4898.0,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4898.0,
+                "name": "Temotu"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "SB"
+        },
+        {
+            "name": "fb_key_SLB.10_1",
+            "values": [
+                {
+                    "key": 4897.0,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4897.0,
+                "name": "Western"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "SB"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

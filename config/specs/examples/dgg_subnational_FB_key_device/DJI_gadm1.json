@@ -1,0 +1,142 @@
+{
+    "name": "DJI",
+    "geo_locations": [
+        {
+            "name": "fb_key_DJI.1_2",
+            "values": [
+                {
+                    "key": 4846.0,
+                    "country_code": "DJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4846.0,
+                "name": "Ali Sabieh"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DJ"
+        },
+        {
+            "name": "fb_key_DJI.6_1",
+            "values": [
+                {
+                    "key": 4847.0,
+                    "country_code": "DJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4847.0,
+                "name": "Arta"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DJ"
+        },
+        {
+            "name": "fb_key_DJI.2_1",
+            "values": [
+                {
+                    "key": 841.0,
+                    "country_code": "DJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 841.0,
+                "name": "Dikhil"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DJ"
+        },
+        {
+            "name": "fb_key_DJI.3_1",
+            "values": [
+                {
+                    "key": 842.0,
+                    "country_code": "DJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 842.0,
+                "name": "Djiboutii"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DJ"
+        },
+        {
+            "name": "fb_key_DJI.4_1",
+            "values": [
+                {
+                    "key": 843.0,
+                    "country_code": "DJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 843.0,
+                "name": "Obock"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DJ"
+        },
+        {
+            "name": "fb_key_DJI.5_1",
+            "values": [
+                {
+                    "key": 844.0,
+                    "country_code": "DJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 844.0,
+                "name": "Tadjoura"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DJ"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

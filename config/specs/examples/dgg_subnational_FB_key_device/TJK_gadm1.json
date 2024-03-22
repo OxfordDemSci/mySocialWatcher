@@ -1,0 +1,108 @@
+{
+    "name": "TJK",
+    "geo_locations": [
+        {
+            "name": "fb_key_TJK.5_1",
+            "values": [
+                {
+                    "key": 4936.0,
+                    "country_code": "TJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4936.0,
+                "name": "Districts of Republican Subordin"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "TJ"
+        },
+        {
+            "name": "fb_key_TJK.2_1",
+            "values": [
+                {
+                    "key": 3621.0,
+                    "country_code": "TJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3621.0,
+                "name": "Gorno-Badakhshan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "TJ"
+        },
+        {
+            "name": "fb_key_TJK.3_1",
+            "values": [
+                {
+                    "key": 3622.0,
+                    "country_code": "TJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3622.0,
+                "name": "Khatlon"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "TJ"
+        },
+        {
+            "name": "fb_key_TJK.4_1",
+            "values": [
+                {
+                    "key": 3623.0,
+                    "country_code": "TJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3623.0,
+                "name": "Sughd"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "TJ"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

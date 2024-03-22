@@ -1,0 +1,108 @@
+{
+    "name": "ERI",
+    "geo_locations": [
+        {
+            "name": "fb_key_ERI.6_1",
+            "values": [
+                {
+                    "key": 4900.0,
+                    "country_code": "ER"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4900.0,
+                "name": "Anseba"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ER"
+        },
+        {
+            "name": "fb_key_ERI.5_1",
+            "values": [
+                {
+                    "key": 4902.0,
+                    "country_code": "ER"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4902.0,
+                "name": "Debub"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ER"
+        },
+        {
+            "name": "fb_key_ERI.4_1",
+            "values": [
+                {
+                    "key": 4901.0,
+                    "country_code": "ER"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4901.0,
+                "name": "Gash Barka"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ER"
+        },
+        {
+            "name": "fb_key_ERI.1_1",
+            "values": [
+                {
+                    "key": 4899.0,
+                    "country_code": "ER"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4899.0,
+                "name": "Maekel"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ER"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

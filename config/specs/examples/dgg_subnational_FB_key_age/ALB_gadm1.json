@@ -1,0 +1,251 @@
+{
+    "name": "ALB",
+    "geo_locations": [
+        {
+            "name": "fb_key_ALB.1_1",
+            "values": [
+                {
+                    "key": 57.0,
+                    "country_code": "AL"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 57.0,
+                "name": "Berat"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AL"
+        },
+        {
+            "name": "fb_key_ALB.2_1",
+            "values": [
+                {
+                    "key": 58.0,
+                    "country_code": "AL"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 58.0,
+                "name": "Dib\u00ebr"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AL"
+        },
+        {
+            "name": "fb_key_ALB.3_1",
+            "values": [
+                {
+                    "key": 59.0,
+                    "country_code": "AL"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 59.0,
+                "name": "Durr\u00ebs"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AL"
+        },
+        {
+            "name": "fb_key_ALB.4_1",
+            "values": [
+                {
+                    "key": 60.0,
+                    "country_code": "AL"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 60.0,
+                "name": "Elbasan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AL"
+        },
+        {
+            "name": "fb_key_ALB.5_1",
+            "values": [
+                {
+                    "key": 61.0,
+                    "country_code": "AL"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 61.0,
+                "name": "Fier"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AL"
+        },
+        {
+            "name": "fb_key_ALB.6_1",
+            "values": [
+                {
+                    "key": 62.0,
+                    "country_code": "AL"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 62.0,
+                "name": "Gjirokast\u00ebr"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AL"
+        },
+        {
+            "name": "fb_key_ALB.7_1",
+            "values": [
+                {
+                    "key": 63.0,
+                    "country_code": "AL"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 63.0,
+                "name": "Kor\u00e7\u00eb"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AL"
+        },
+        {
+            "name": "fb_key_ALB.8_1",
+            "values": [
+                {
+                    "key": 64.0,
+                    "country_code": "AL"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 64.0,
+                "name": "Kuk\u00ebs"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AL"
+        },
+        {
+            "name": "fb_key_ALB.9_1",
+            "values": [
+                {
+                    "key": 65.0,
+                    "country_code": "AL"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 65.0,
+                "name": "Lezh\u00eb"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AL"
+        },
+        {
+            "name": "fb_key_ALB.10_1",
+            "values": [
+                {
+                    "key": 66.0,
+                    "country_code": "AL"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 66.0,
+                "name": "Shkod\u00ebr"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AL"
+        },
+        {
+            "name": "fb_key_ALB.11_1",
+            "values": [
+                {
+                    "key": 67.0,
+                    "country_code": "AL"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 67.0,
+                "name": "Tiran\u00eb"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AL"
+        },
+        {
+            "name": "fb_key_ALB.12_1",
+            "values": [
+                {
+                    "key": 68.0,
+                    "country_code": "AL"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 68.0,
+                "name": "Vlor\u00eb"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AL"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

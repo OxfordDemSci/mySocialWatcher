@@ -1,0 +1,210 @@
+{
+    "name": "DMA",
+    "geo_locations": [
+        {
+            "name": "fb_key_DMA.1_1",
+            "values": [
+                {
+                    "key": 860.0,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 860.0,
+                "name": "Saint Andrew"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DM"
+        },
+        {
+            "name": "fb_key_DMA.2_1",
+            "values": [
+                {
+                    "key": 861.0,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 861.0,
+                "name": "Saint David"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DM"
+        },
+        {
+            "name": "fb_key_DMA.3_1",
+            "values": [
+                {
+                    "key": 862.0,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 862.0,
+                "name": "Saint George"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DM"
+        },
+        {
+            "name": "fb_key_DMA.4_1",
+            "values": [
+                {
+                    "key": 863.0,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 863.0,
+                "name": "Saint John"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DM"
+        },
+        {
+            "name": "fb_key_DMA.5_1",
+            "values": [
+                {
+                    "key": 864.0,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 864.0,
+                "name": "Saint Joseph"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DM"
+        },
+        {
+            "name": "fb_key_DMA.6_1",
+            "values": [
+                {
+                    "key": 865.0,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 865.0,
+                "name": "Saint Luke"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DM"
+        },
+        {
+            "name": "fb_key_DMA.7_1",
+            "values": [
+                {
+                    "key": 866.0,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 866.0,
+                "name": "Saint Mark"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DM"
+        },
+        {
+            "name": "fb_key_DMA.8_1",
+            "values": [
+                {
+                    "key": 867.0,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 867.0,
+                "name": "Saint Patrick"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DM"
+        },
+        {
+            "name": "fb_key_DMA.9_1",
+            "values": [
+                {
+                    "key": 868.0,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 868.0,
+                "name": "Saint Paul"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DM"
+        },
+        {
+            "name": "fb_key_DMA.10_1",
+            "values": [
+                {
+                    "key": 869.0,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 869.0,
+                "name": "Saint Peter"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "DM"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

@@ -1,0 +1,159 @@
+{
+    "name": "GNQ",
+    "geo_locations": [
+        {
+            "name": "fb_key_GNQ.1_1",
+            "values": [
+                {
+                    "key": 1474.0,
+                    "country_code": "GQ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1474.0,
+                "name": "Annob\u00f3n"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GQ"
+        },
+        {
+            "name": "fb_key_GNQ.2_1",
+            "values": [
+                {
+                    "key": 1475.0,
+                    "country_code": "GQ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1475.0,
+                "name": "Bioko Norte"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GQ"
+        },
+        {
+            "name": "fb_key_GNQ.3_1",
+            "values": [
+                {
+                    "key": 1476.0,
+                    "country_code": "GQ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1476.0,
+                "name": "Bioko Sur"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GQ"
+        },
+        {
+            "name": "fb_key_GNQ.4_1",
+            "values": [
+                {
+                    "key": 1477.0,
+                    "country_code": "GQ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1477.0,
+                "name": "Centro Sur"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GQ"
+        },
+        {
+            "name": "fb_key_GNQ.5_1",
+            "values": [
+                {
+                    "key": 1478.0,
+                    "country_code": "GQ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1478.0,
+                "name": "Ki\u00e9-Ntem"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GQ"
+        },
+        {
+            "name": "fb_key_GNQ.6_1",
+            "values": [
+                {
+                    "key": 1479.0,
+                    "country_code": "GQ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1479.0,
+                "name": "Litoral"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GQ"
+        },
+        {
+            "name": "fb_key_GNQ.7_1",
+            "values": [
+                {
+                    "key": 1480.0,
+                    "country_code": "GQ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1480.0,
+                "name": "Wele-Nzas"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GQ"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

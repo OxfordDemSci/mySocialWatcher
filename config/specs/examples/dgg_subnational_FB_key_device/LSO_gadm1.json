@@ -1,0 +1,210 @@
+{
+    "name": "LSO",
+    "geo_locations": [
+        {
+            "name": "fb_key_LSO.1_1",
+            "values": [
+                {
+                    "key": 2119.0,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2119.0,
+                "name": "Berea"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "LS"
+        },
+        {
+            "name": "fb_key_LSO.2_1",
+            "values": [
+                {
+                    "key": 2120.0,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2120.0,
+                "name": "Butha-Buthe"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "LS"
+        },
+        {
+            "name": "fb_key_LSO.3_1",
+            "values": [
+                {
+                    "key": 2121.0,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2121.0,
+                "name": "Leribe"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "LS"
+        },
+        {
+            "name": "fb_key_LSO.4_1",
+            "values": [
+                {
+                    "key": 2122.0,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2122.0,
+                "name": "Mafeteng"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "LS"
+        },
+        {
+            "name": "fb_key_LSO.5_1",
+            "values": [
+                {
+                    "key": 2123.0,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2123.0,
+                "name": "Maseru"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "LS"
+        },
+        {
+            "name": "fb_key_LSO.6_1",
+            "values": [
+                {
+                    "key": 2124.0,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2124.0,
+                "name": "Mohale's Hoek"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "LS"
+        },
+        {
+            "name": "fb_key_LSO.7_1",
+            "values": [
+                {
+                    "key": 2125.0,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2125.0,
+                "name": "Mokhotlong"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "LS"
+        },
+        {
+            "name": "fb_key_LSO.8_1",
+            "values": [
+                {
+                    "key": 2126.0,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2126.0,
+                "name": "Qacha's Nek"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "LS"
+        },
+        {
+            "name": "fb_key_LSO.9_1",
+            "values": [
+                {
+                    "key": 2127.0,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2127.0,
+                "name": "Quthing"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "LS"
+        },
+        {
+            "name": "fb_key_LSO.10_1",
+            "values": [
+                {
+                    "key": 2128.0,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2128.0,
+                "name": "Thaba-Tseka"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "LS"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

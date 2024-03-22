@@ -1,0 +1,261 @@
+{
+    "name": "MRT",
+    "geo_locations": [
+        {
+            "name": "fb_key_MRT.1_1",
+            "values": [
+                {
+                    "key": 2438.0,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2438.0,
+                "name": "Adrar"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "fb_key_MRT.2_1",
+            "values": [
+                {
+                    "key": 2434.0,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2434.0,
+                "name": "Assaba"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "fb_key_MRT.3_1",
+            "values": [
+                {
+                    "key": 2436.0,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2436.0,
+                "name": "Brakna"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "fb_key_MRT.4_1",
+            "values": [
+                {
+                    "key": 2439.0,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2439.0,
+                "name": "Dakhlet Nouadhibou"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "fb_key_MRT.5_1",
+            "values": [
+                {
+                    "key": 2435.0,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2435.0,
+                "name": "Gorgol"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "fb_key_MRT.6_1",
+            "values": [
+                {
+                    "key": 2441.0,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2441.0,
+                "name": "Guidimaka"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "fb_key_MRT.7_1",
+            "values": [
+                {
+                    "key": 2432.0,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2432.0,
+                "name": "Hodh ech Chargui"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "fb_key_MRT.8_1",
+            "values": [
+                {
+                    "key": 2433.0,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2433.0,
+                "name": "Hodh el Gharbi"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "fb_key_MRT.9_1",
+            "values": [
+                {
+                    "key": 2443.0,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2443.0,
+                "name": "Inchiri"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "fb_key_MRT.10_1",
+            "values": [
+                {
+                    "key": 4682.0,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4682.0,
+                "name": "Nouakchott"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "fb_key_MRT.11_1",
+            "values": [
+                {
+                    "key": 2440.0,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2440.0,
+                "name": "Tagant"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "fb_key_MRT.12_1",
+            "values": [
+                {
+                    "key": 2442.0,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2442.0,
+                "name": "Tiris Zemmour"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "fb_key_MRT.13_1",
+            "values": [
+                {
+                    "key": 2437.0,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2437.0,
+                "name": "Trarza"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

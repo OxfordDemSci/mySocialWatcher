@@ -1,0 +1,251 @@
+{
+    "name": "COG",
+    "geo_locations": [
+        {
+            "name": "fb_key_COG.1_1",
+            "values": [
+                {
+                    "key": 569.0,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 569.0,
+                "name": "Bouenza"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "CG"
+        },
+        {
+            "name": "fb_key_COG.2_1",
+            "values": [
+                {
+                    "key": 578.0,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 578.0,
+                "name": "Brazzaville"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "CG"
+        },
+        {
+            "name": "fb_key_COG.4_1",
+            "values": [
+                {
+                    "key": 4818.0,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4818.0,
+                "name": "Cuvette"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "CG"
+        },
+        {
+            "name": "fb_key_COG.3_1",
+            "values": [
+                {
+                    "key": 4818.0,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4818.0,
+                "name": "Cuvette-Ouest"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "CG"
+        },
+        {
+            "name": "fb_key_COG.5_1",
+            "values": [
+                {
+                    "key": 571.0,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 571.0,
+                "name": "Kouilou"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "CG"
+        },
+        {
+            "name": "fb_key_COG.6_1",
+            "values": [
+                {
+                    "key": 572.0,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 572.0,
+                "name": "L\u00e9koumou"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "CG"
+        },
+        {
+            "name": "fb_key_COG.7_1",
+            "values": [
+                {
+                    "key": 573.0,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 573.0,
+                "name": "Likouala"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "CG"
+        },
+        {
+            "name": "fb_key_COG.8_1",
+            "values": [
+                {
+                    "key": 574.0,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 574.0,
+                "name": "Niari"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "CG"
+        },
+        {
+            "name": "fb_key_COG.9_1",
+            "values": [
+                {
+                    "key": 575.0,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 575.0,
+                "name": "Plateaux"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "CG"
+        },
+        {
+            "name": "fb_key_COG.10_1",
+            "values": [
+                {
+                    "key": 4819.0,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4819.0,
+                "name": "Pointe Noire"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "CG"
+        },
+        {
+            "name": "fb_key_COG.11_1",
+            "values": [
+                {
+                    "key": 577.0,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 577.0,
+                "name": "Pool"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "CG"
+        },
+        {
+            "name": "fb_key_COG.12_1",
+            "values": [
+                {
+                    "key": 576.0,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 576.0,
+                "name": "Sangha"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "CG"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

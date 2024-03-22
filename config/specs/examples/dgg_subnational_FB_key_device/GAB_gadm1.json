@@ -1,0 +1,193 @@
+{
+    "name": "GAB",
+    "geo_locations": [
+        {
+            "name": "fb_key_GAB.1_1",
+            "values": [
+                {
+                    "key": 1090.0,
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1090.0,
+                "name": "Estuaire"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GA"
+        },
+        {
+            "name": "fb_key_GAB.2_1",
+            "values": [
+                {
+                    "key": 1091.0,
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1091.0,
+                "name": "Haut-Ogoou\u00e9"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GA"
+        },
+        {
+            "name": "fb_key_GAB.3_1",
+            "values": [
+                {
+                    "key": 1092.0,
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1092.0,
+                "name": "Moyen-Ogoou\u00e9"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GA"
+        },
+        {
+            "name": "fb_key_GAB.4_1",
+            "values": [
+                {
+                    "key": 1093.0,
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1093.0,
+                "name": "Ngouni\u00e9"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GA"
+        },
+        {
+            "name": "fb_key_GAB.5_1",
+            "values": [
+                {
+                    "key": 1094.0,
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1094.0,
+                "name": "Nyanga"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GA"
+        },
+        {
+            "name": "fb_key_GAB.6_1",
+            "values": [
+                {
+                    "key": 1095.0,
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1095.0,
+                "name": "Ogoou\u00e9-Ivindo"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GA"
+        },
+        {
+            "name": "fb_key_GAB.7_1",
+            "values": [
+                {
+                    "key": 1096.0,
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1096.0,
+                "name": "Ogoou\u00e9-Lolo"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GA"
+        },
+        {
+            "name": "fb_key_GAB.8_1",
+            "values": [
+                {
+                    "key": 1097.0,
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1097.0,
+                "name": "Ogoou\u00e9-Maritime"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GA"
+        },
+        {
+            "name": "fb_key_GAB.9_1",
+            "values": [
+                {
+                    "key": 1098.0,
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1098.0,
+                "name": "Wouleu-Ntem"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GA"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

@@ -1,0 +1,142 @@
+{
+    "name": "PAK",
+    "geo_locations": [
+        {
+            "name": "fb_key_PAK.2_1",
+            "values": [
+                {
+                    "key": 2937.0,
+                    "country_code": "PK"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2937.0,
+                "name": "Balochistan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "PK"
+        },
+        {
+            "name": "fb_key_PAK.3_1",
+            "values": [
+                {
+                    "key": 2936.0,
+                    "country_code": "PK"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2936.0,
+                "name": "Federally Administered Tribal Ar"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "PK"
+        },
+        {
+            "name": "fb_key_PAK.4_1",
+            "values": [
+                {
+                    "key": 2943.0,
+                    "country_code": "PK"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2943.0,
+                "name": "Islamabad"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "PK"
+        },
+        {
+            "name": "fb_key_PAK.5_1",
+            "values": [
+                {
+                    "key": 2938.0,
+                    "country_code": "PK"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2938.0,
+                "name": "Khyber-Pakhtunkhwa"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "PK"
+        },
+        {
+            "name": "fb_key_PAK.7_1",
+            "values": [
+                {
+                    "key": 2939.0,
+                    "country_code": "PK"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2939.0,
+                "name": "Punjab"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "PK"
+        },
+        {
+            "name": "fb_key_PAK.8_1",
+            "values": [
+                {
+                    "key": 2940.0,
+                    "country_code": "PK"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2940.0,
+                "name": "Sindh"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "PK"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

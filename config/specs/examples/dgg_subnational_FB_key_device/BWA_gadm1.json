@@ -1,0 +1,193 @@
+{
+    "name": "BWA",
+    "geo_locations": [
+        {
+            "name": "fb_key_BWA.1_1",
+            "values": [
+                {
+                    "key": 504.0,
+                    "country_code": "BW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 504.0,
+                "name": "Central"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BW"
+        },
+        {
+            "name": "fb_key_BWA.5_1",
+            "values": [
+                {
+                    "key": 506.0,
+                    "country_code": "BW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 506.0,
+                "name": "Ghanzi"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BW"
+        },
+        {
+            "name": "fb_key_BWA.7_1",
+            "values": [
+                {
+                    "key": 507.0,
+                    "country_code": "BW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 507.0,
+                "name": "Kgalagadi"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BW"
+        },
+        {
+            "name": "fb_key_BWA.8_1",
+            "values": [
+                {
+                    "key": 508.0,
+                    "country_code": "BW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 508.0,
+                "name": "Kgatleng"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BW"
+        },
+        {
+            "name": "fb_key_BWA.9_1",
+            "values": [
+                {
+                    "key": 509.0,
+                    "country_code": "BW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 509.0,
+                "name": "Kweneng"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BW"
+        },
+        {
+            "name": "fb_key_BWA.11_1",
+            "values": [
+                {
+                    "key": 511.0,
+                    "country_code": "BW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 511.0,
+                "name": "North-East"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BW"
+        },
+        {
+            "name": "fb_key_BWA.12_1",
+            "values": [
+                {
+                    "key": 4552.0,
+                    "country_code": "BW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4552.0,
+                "name": "North-West"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BW"
+        },
+        {
+            "name": "fb_key_BWA.14_1",
+            "values": [
+                {
+                    "key": 512.0,
+                    "country_code": "BW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 512.0,
+                "name": "South-East"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BW"
+        },
+        {
+            "name": "fb_key_BWA.15_1",
+            "values": [
+                {
+                    "key": 513.0,
+                    "country_code": "BW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 513.0,
+                "name": "Southern"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BW"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

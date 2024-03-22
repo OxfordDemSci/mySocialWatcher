@@ -1,0 +1,244 @@
+{
+    "name": "GEO",
+    "geo_locations": [
+        {
+            "name": "fb_key_GEO.1_1",
+            "values": [
+                {
+                    "key": 1358.0,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1358.0,
+                "name": "Abkhazia"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "fb_key_GEO.2_1",
+            "values": [
+                {
+                    "key": 1360.0,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1360.0,
+                "name": "Ajaria"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "fb_key_GEO.3_1",
+            "values": [
+                {
+                    "key": 4395.0,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4395.0,
+                "name": "Guria"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "fb_key_GEO.4_1",
+            "values": [
+                {
+                    "key": 4379.0,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4379.0,
+                "name": "Imereti"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "fb_key_GEO.5_1",
+            "values": [
+                {
+                    "key": 4385.0,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4385.0,
+                "name": "Kakheti"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "fb_key_GEO.6_1",
+            "values": [
+                {
+                    "key": 4384.0,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4384.0,
+                "name": "Kvemo Kartli"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "fb_key_GEO.7_1",
+            "values": [
+                {
+                    "key": 4383.0,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4383.0,
+                "name": "Mtskheta-Mtianeti"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "fb_key_GEO.8_1",
+            "values": [
+                {
+                    "key": 4381.0,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4381.0,
+                "name": "Racha-Lechkhumi-Kvemo Svaneti"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "fb_key_GEO.9_1",
+            "values": [
+                {
+                    "key": 4378.0,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4378.0,
+                "name": "Samegrelo-Zemo Svaneti"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "fb_key_GEO.10_1",
+            "values": [
+                {
+                    "key": 4380.0,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4380.0,
+                "name": "Samtskhe-Javakheti"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "fb_key_GEO.11_1",
+            "values": [
+                {
+                    "key": 4382.0,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4382.0,
+                "name": "Shida Kartli"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "fb_key_GEO.12_1",
+            "values": [
+                {
+                    "key": 4386.0,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4386.0,
+                "name": "Tbilisi"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

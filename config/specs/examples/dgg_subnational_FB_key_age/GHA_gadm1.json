@@ -1,0 +1,268 @@
+{
+    "name": "GHA",
+    "geo_locations": [
+        {
+            "name": "fb_key_GHA1_2",
+            "values": [
+                {
+                    "key": 1423.0,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1423.0,
+                "name": "Ahafo"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GH"
+        },
+        {
+            "name": "fb_key_GHA2_2",
+            "values": [
+                {
+                    "key": 1422.0,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1422.0,
+                "name": "Ashanti"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GH"
+        },
+        {
+            "name": "fb_key_GHA4_2",
+            "values": [
+                {
+                    "key": 1429.0,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1429.0,
+                "name": "Bono East"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GH"
+        },
+        {
+            "name": "fb_key_GHA5_2",
+            "values": [
+                {
+                    "key": 1424.0,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1424.0,
+                "name": "Central"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GH"
+        },
+        {
+            "name": "fb_key_GHA6_2",
+            "values": [
+                {
+                    "key": 1425.0,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1425.0,
+                "name": "Eastern"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GH"
+        },
+        {
+            "name": "fb_key_GHA7_2",
+            "values": [
+                {
+                    "key": 1421.0,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1421.0,
+                "name": "Greater Accra"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GH"
+        },
+        {
+            "name": "fb_key_GHA8_2",
+            "values": [
+                {
+                    "key": 1429.0,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1429.0,
+                "name": "North East"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GH"
+        },
+        {
+            "name": "fb_key_GHA9_2",
+            "values": [
+                {
+                    "key": 1426.0,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1426.0,
+                "name": "Northern"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GH"
+        },
+        {
+            "name": "fb_key_GHA12_2",
+            "values": [
+                {
+                    "key": 1429.0,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1429.0,
+                "name": "Upper East"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GH"
+        },
+        {
+            "name": "fb_key_GHA13_2",
+            "values": [
+                {
+                    "key": 1430.0,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1430.0,
+                "name": "Upper West"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GH"
+        },
+        {
+            "name": "fb_key_GHA14_2",
+            "values": [
+                {
+                    "key": 1427.0,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1427.0,
+                "name": "Volta"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GH"
+        },
+        {
+            "name": "fb_key_GHA15_2",
+            "values": [
+                {
+                    "key": 1428.0,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1428.0,
+                "name": "Western"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GH"
+        },
+        {
+            "name": "fb_key_GHA16_2",
+            "values": [
+                {
+                    "key": 1428.0,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1428.0,
+                "name": "Western North"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GH"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}
