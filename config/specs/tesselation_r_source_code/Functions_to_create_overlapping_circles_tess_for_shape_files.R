@@ -348,7 +348,7 @@ determine_invalid_custom_locations <- function(geo_custom_list) {
 # returns a vector with the pysocialwatcher geo queries field
 # for each location.
 # 
-get_pysw_geo_queries_from_locations_list <- function(geo_custom_list, invalid_locs) {
+get_pysw_geo_queries_from_locations_list <- function(geo_custom_list, invalid_locs, location_type='recent') {
   geo_covers_df <- export_list_of_custom_locations(geo_custom_list, invalid_locs)
   
   all_geo_queries <- c()
@@ -364,8 +364,9 @@ get_pysw_geo_queries_from_locations_list <- function(geo_custom_list, invalid_lo
                             ',"distance_unit": "kilometer"}',sep="", collapse = ", ")
 
       geo_query <- paste('{"name":"custom_locations", "values":[',custom_query,'],',
-                         '"location_types": ["home"], "pySocialWatcherReference": "geo_id:',
-                         geoid,'; coverType:',coverType,'; expanded:',expanded,'"}',sep="")
+                         '"location_types": ["',location_type,'"], "pySocialWatcherReference": {"geo_id": "',
+                         geoid,'" , "coverType": "',coverType,'" , "expanded": "',expanded,'"},',
+                         '"country_code": "', strsplit(names(geo_custom_list)[[1]], '.', fixed = T)[[1]][1],'"}',sep="")
       all_geo_queries <- c(all_geo_queries, geo_query)
     }
   }
@@ -389,6 +390,7 @@ export_list_of_custom_locations <- function(geo_custom_list, invalid_locs) {
   nlocs <- length(geo_custom_list)
   all_df <- NULL
   for (i in 1:nlocs) {
+    # i = 1
     cat("# Exporting for geo shape",i,"of",nlocs,rep(" ",10),"\r")
     locname <- names(geo_custom_list)[i]
     
@@ -478,7 +480,7 @@ report_coverage_stats <- function(geo_shape_file, idcol,
   all_df <- NULL
   for (i in 1:nlocs) {
     cat("# Computing statistics for geo shape",i,"of",nlocs,rep(" ",10),"\r")
-    locname <- geo_shape_file@data[i,idcol]
+    locname <- geo_shape_file[idcol][[1]][i]
     region_geo <- spTransform(geo_shape_file[i,], CRS(planar_proj))
     
     for (coverType in names(geo_custom_list[[i]]$custom_locations_list)) {
@@ -869,7 +871,7 @@ expand_coverage_for_sparse_locations <- function(geo_shape_file, idcol,
   
   for (i in 1:nlocs) {
     cat("# Processing geo shape",i,"of",nlocs,rep(" ",10),"\r")
-    locname <- geo_shape_file@data[i,idcol]
+    locname <- geo_shape_file[idcol][[1]][i]
     region_geo <- geo_shape_file[i,]
     
     ## first get FB mau estimates for all locations
@@ -974,20 +976,13 @@ generate_list_of_custom_locations_for_shape_files <-
     cat("# Shape file has",nrow(reg_geo),"polygons.\n")
     
     for (i in 1:nrow(reg_geo)) {
-      cat("# Processing row num:",i,"polygon id:",reg_geo@data[i,idcol],rep(" ",15),"\n")
+      # i = 1
+      cat("# Processing row num:",i,"polygon id:",reg_geo[idcol][[1]][i],rep(" ",15),"\n")
       
       # prepare the geo file
       loc_geo <- reg_geo[i,]
-      loc_id <- reg_geo@data[i,idcol]
+      loc_id <- reg_geo[idcol][[1]][i]
       res_list[[loc_id]] <- list()
-      
-      # Skip if any errors in geo shape file
-      report <- clgeo_CollectionReport(loc_geo)
-      if (!report$valid) {
-        cat("+ Skipping polygon due to geo error; see error details below:\n")
-        print(clgeo_SummaryReport(report))
-        next
-      }
       
       # Infers the limits of the square enclosing the geographic location
       lat_min <- extent(loc_geo)@ymin
@@ -1105,7 +1100,7 @@ generate_list_of_custom_locations_for_shape_files <-
       res_list[[loc_id]][["final_radius_used"]] <- radius
       
       ## get list of circles for the shape
-      N_tess_circles <- nrow(pts_buff_all@data)
+      N_tess_circles <- nrow(pts_buff_all)
       
       # the Outside tesselation
       res_list[[loc_id]][["custom_locations_list"]] <- list()
@@ -1117,10 +1112,10 @@ generate_list_of_custom_locations_for_shape_files <-
         if (!Icover[j]) { next } # skip unnecessary locations
         cat("Compiling list of circles:",j,"of",N_tess_circles,rep(" ",15),"\r")
         
-        loci <- list(lat = pts_buff_all@data$lat[j], 
-                     long = pts_buff_all@data$long[j], 
+        loci <- list(lat = pts_buff_all$lat[j], 
+                     long = pts_buff_all$long[j], 
                      radius = radius,
-                     ptid = pts_buff_all@data$ptid[j])
+                     ptid = pts_buff_all$ptid[j])
         
         for (cgl in names(Isubs)) {
           cover_geos_list[[cgl]] #<- geo_intr$geo2_data_id[Isubs[[cgl]]]
@@ -1177,7 +1172,7 @@ get_custom_locations_list_for_different_cutoffs <- function(reg_geo, idcol, zone
   planar_proj <- paste("+proj=utm +zone=",zone," ellps=WGS84",sep="")
   
   for (locname in names(geo_custom_list)) { 
-    Iloc <- reg_geo@data[,idcol] == locname
+    Iloc <- reg_geo[,idcol] == locname
     pts_buff_all <- geo_custom_list[[locname]]$Tesselated_points_with_buffers
     radius <- geo_custom_list[[locname]]$final_radius_used
     
@@ -1199,7 +1194,7 @@ get_custom_locations_list_for_different_cutoffs <- function(reg_geo, idcol, zone
     Icover <- is.element(pts_buff_all$ptid, cover_geos_list$exterior_cover)
       
     ## get list of circles for the shape
-    N_tess_circles <- nrow(pts_buff_all@data)
+    N_tess_circles <- nrow(pts_buff_all)
     
     # the Outside tesselation
     for (cgl in names(Isubs)) {
@@ -1210,10 +1205,10 @@ get_custom_locations_list_for_different_cutoffs <- function(reg_geo, idcol, zone
       if (!Icover[j]) { next } # skip unnecessary locations
       cat("Compiling list of circles:",j,"of",N_tess_circles,rep(" ",15),"\r")
       
-      loci <- list(lat = pts_buff_all@data$lat[j], 
-                   long = pts_buff_all@data$long[j], 
+      loci <- list(lat = pts_buff_all$lat[j], 
+                   long = pts_buff_all$long[j], 
                    radius = radius,
-                   ptid = pts_buff_all@data$ptid[j])
+                   ptid = pts_buff_all$ptid[j])
       
       for (cgl in names(Isubs)) {
         if (is.element(pts_buff_all$ptid[j], cover_geos_list[[cgl]])) {
