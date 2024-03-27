@@ -2,14 +2,23 @@ import json
 
 from mysocialwatcher.collector import specs
 
-ukr_tess_specs = specs.master_specs(country='ukraine_tesselation',
-                                    regions=False,
-                                    platform='facebook',
-                                    location_type='recent',
-                                    custom_tesselation='K:/DemSci/projects/2023_WHO_Ukraine_Population/data/tmp/gadm2_tessellation/wd/UKR/out/loc_queries/UKR_loc_queries_for_cover_by_custom_locations_GADM2_regions.txt',
-                                    cities=False
-                                    )
+for platform in ['facebook', 'instagram']:
+    # platform= 'facebook'
+    for cover_type in ['interior', 'exterior']:
+        # cover_type = 'interior'
+        ukr_tess_specs = specs.master_specs(country='ukraine_admin2_tesselation_'+cover_type,
+                                            custom_tesselation='K:/DemSci/projects/2023_WHO_Ukraine_Population/data/tmp/gadm2_tessellation/wd/UKR/out/loc_queries/UKR_loc_queries_for_cover_by_custom_locations_GADM2_regions_'+ cover_type+'.txt',
+                                            platform=platform,
+                                            location_type='recent',
+                                            regions=False,
+                                            cities=False
+                                            )
+        if platform == 'facebook':
+            idx = '1'
+        else:
+            idx = '2'
 
-out_file = open("C:/Users/edithd/Documents/mySocialWatcher/docker/collectors/saffron/ukraine_tesselation/specs/1_facebook_all_admin2.json", "w")
-json.dump(ukr_tess_specs['specs'], out_file)
-out_file.close()
+        out_file = open("C:/Users/edithd/Documents/mySocialWatcher/docker/collectors/saffron/ukraine_admin2_tesselation_"+cover_type+"/specs/"+idx+'_'+platform+"_all_admin2_"+cover_type+".json", "w")
+        json.dump(ukr_tess_specs['specs'], out_file)
+        out_file.close()
+
