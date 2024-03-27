@@ -240,10 +240,12 @@ get_fb_mau_estimates_for_custom_covers <- function(geo_custom_list, invalid_locs
   nlocs <- length(names(geo_custom_list))
   all_df <- NULL
   for (i in 1:nlocs) {
+    #i=1
     cat("# Getting fb estimate for geo shape",i,"of",nlocs,rep(" ",10),"\r")
     locname <- names(geo_custom_list)[i]
     
     for (coverType in names(geo_custom_list[[i]]$custom_locations_list)) {
+      # coverType ='exterior_cover'
       valid_locs <- setdiff(names(geo_custom_list[[locname]]$custom_locations_list[[coverType]]),
                             names(invalid_locs[[locname]]))
       Ivalid <- as.numeric(gsub("part_([0-9]*)","\\1", valid_locs))
@@ -256,6 +258,7 @@ get_fb_mau_estimates_for_custom_covers <- function(geo_custom_list, invalid_locs
         fbquery_val <- get_fb_estimate_for_list_of_custom_locs(locs_list = geo_custom_list[[locname]]$custom_locations_list[[coverType]][valid_locs])
         locs_df$fb_mau <- fbquery_val$data$estimate_mau_upper_bound 
         locs_df$estimate_ready <- fbquery_val$data$estimate_ready
+        locs_df$error_message <- fbquery_val$error$message
       }
       all_df <- dplyr::bind_rows(all_df, locs_df)
     }
@@ -1365,15 +1368,14 @@ show_custom_location_covers_on_map <- function(regions_geos, geos_covers, invali
       ids = unlist(lapply(1:length(loc_geos), function(i) paste(locname, i, sep = "")))
       cover =  unlist(replicate(length(loc_geos),names(geos_covers[[locname]]$custom_locations_list[coverType]),simplify = FALSE))
       
-    }
-    else{
+    } else{
       ids = locname
       cover = names(geos_covers[[locname]]$custom_locations_list[coverType])
     }
     
 
       
-    loc_geos <- SpatialPolygonsDataFrame(loc_geos, data.frame(id = ids, cover = cover))
+    loc_geos <- SpatialPolygonsDataFrame(loc_geos, data.frame(id = ids, cover = cover, geo_id=locname))
     loc_geos <- spTransform(loc_geos, SHAPE_TESS_PARAMS$wgs84)
     # loc_geos <- st_as_sf(loc_geos)
     
@@ -1388,9 +1390,6 @@ show_custom_location_covers_on_map <- function(regions_geos, geos_covers, invali
     }
     
   }
-  
-  
-
   
   # create a raster map indicating how often a given location is covered
   lat_long_to_dist <- get_lat_long_degree_to_dist_from_object_extent(custom_polys)
