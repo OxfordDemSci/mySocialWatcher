@@ -1,5 +1,3 @@
-## Approximate GADM 2 locations with FB custom locations
-##
 
 options(scipen=999)
 
@@ -10,7 +8,6 @@ library(tmap)
 library(geodata)
 
 # working directory
-#setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 setwd('K:/DemSci/projects/2023_WHO_Ukraine_Population/data/tmp/gadm2_tessellation')
 
 # define paths
@@ -70,7 +67,7 @@ log_file <- paste0(results_folder_path,'/logs/Processing_GADM_',gadm_level,'_reg
 ## Run the custom location generation
 
 # create the folders to save the results into
-for (folder in c(gadm_folder, queries_folder, coverage_stats_folder,
+for (folder in c(gadm_folder, queries_folder,
                  output_folder, maps_folder)) {
   if (!dir.exists(folder)) {
     dir.create(folder, recursive=T, showWarnings=F)
@@ -83,35 +80,24 @@ cntry_iso3 <- cntries_df$iso3[1]
 
 cat("### Processing country:",cntry_iso3,"\n")
 
-## read in the GADM 2 shape file
-cat("__*__ Reading in GADM adm 2 shape files:\n")
+## read in the COD-PS shape file
+cat("__*__ Reading in COD-PS adm 2 shape files:\n")
 
-geo_adm2 <- geodata::gadm(country=cntry_iso3, 
-                          level=gadm_level, 
-                          path=gadm_folder)%>% 
-  st_as_sf() %>% 
-  filter(GID_2!='?')
+geo_adm2 <- st_read(paste0(gadm_folder, '/cod-ab/UKR_AdminBoundaries_EM.gdb'), layer='ukr_admbnda_adm2_sspe_20230201_EM') 
+geo_adm2 <- geo_adm2 |> rmapshaper::ms_simplify(keep = 0.04)
 
-
-## Check if locations need clean up
-report <- clgeo_CollectionReport(geo_adm2)
-if (sum(report$valid) != nrow(geo_adm2)) {
-  cat("+ Detected geo error for",sum(!report$valid),"polygons\n")
-  cat("+ Attempting to clean up issue with geos:\n")
-  
-  # clean up any issues with the geo
-  geo_adm2 <- clgeo_Clean(geo_adm2)
-  
-  report.clean <- clgeo_CollectionReport(geo_adm2)
-  cat(clgeo_SummaryReport(report.clean))
-}
 
 ## Cover with custom locations for FB targeting
-res_list <- generate_list_of_custom_locations_for_shape_files(reg_geo = geo_adm2,
-                                                              idcol = paste0("GID_",gadm_level), 
+res_list <- generate_list_of_custom_locations_for_shape_files(reg_geo = as(geo_adm2, 'Spatial'),
+                                                              idcol = 'admin2Pcode', 
                                                               zone = cntries_df$zone[1],
                                                               loc_area_cutoffs = c())
 
+
+# remove belarus overlap in exterior for pcode UA1806
+part_issue <- c( 70, 98, 111,112)
+
+res_list$UA1806$custom_locations_list$exterior_cover[c(paste0('part_',part_issue))] <- NULL
 
 nlocs <- length(res_list)
 
@@ -122,7 +108,7 @@ for (loc in names(invalid_list)) {
   invalid_list[[loc]] <- list()
 }
 
-#
+
 
 # viz
 
@@ -158,8 +144,8 @@ get_pysw <- function(geo_covers_df, cover_type ,location_type='recent', expanded
     
     geo_query <- paste('{"name":"custom_locations", "values":[',custom_query,'],',
                        '"location_types": ["',location_type,'"], "pySocialWatcherReference": {"geo_id": "',
-                       geoid,'" , "coverType": "',cover_type,'" , "expanded": "',expanded_type,'"},',
-                       '"country_code": "', strsplit(names(res_list)[[1]], '.', fixed = T)[[1]][1],'"}',sep="")
+                       geoid,'" ,"geo_source": "COD-PS", "coverType": "',cover_type,'" , "expanded": "',expanded_type,'"},',
+                       '"country_code": "UKR"}',sep="")
     all_geo_queries <- c(all_geo_queries, geo_query)
     
   }
@@ -174,9 +160,9 @@ geo_queries_ext <- get_pysw(res_df, cover_type = 'exterior_cover')
 fb <- get_fb_mau_estimates_for_custom_covers(res_list, invalid_list)
 
 plot_fb <- function(mapviz, fb_df=fb){
+  # mapviz=mapviz_ext
   fb_gis <- st_as_sf(mapviz[['custom_locs_geo']]) %>% 
-    rename(coverType=cover,
-           geo_id=id) %>% 
+    rename(coverType=cover) %>% 
     left_join(fb_df)
   
   fb_map <- tm_shape(fb_gis)+
@@ -191,7 +177,7 @@ fb_map_ext <- plot_fb(mapviz_ext)
 write(geo_queries_int, paste(queries_folder,"/",cntry_iso3,paste0("_loc_queries_for_cover_by_custom_locations_GADM",gadm_level,"_regions_interior.txt"),sep=""))
 write(geo_queries_ext, paste(queries_folder,"/",cntry_iso3,paste0("_loc_queries_for_cover_by_custom_locations_GADM",gadm_level,"_regions_exterior.txt"),sep=""))
 
-save(res_list,  mapviz,
+save(res_list,  
      file = paste(output_folder,"/",cntry_iso3,"_custom_locations_coverage_data.RData",sep=""))
 
 # save map viz
