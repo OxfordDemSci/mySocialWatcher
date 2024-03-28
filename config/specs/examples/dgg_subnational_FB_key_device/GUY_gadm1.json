@@ -1,0 +1,210 @@
+{
+    "name": "GUY",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1563,
+                    "country_code": "GY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1563,
+                "name": "Barima-Waini"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1564,
+                    "country_code": "GY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1564,
+                "name": "Cuyuni-Mazaruni"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1565,
+                    "country_code": "GY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1565,
+                "name": "Demerara-Mahaica"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1566,
+                    "country_code": "GY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1566,
+                "name": "East Berbice-Corentyne"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1567,
+                    "country_code": "GY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1567,
+                "name": "Essequibo Islands-West Demerara"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1568,
+                    "country_code": "GY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1568,
+                "name": "Mahaica-Berbice"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1569,
+                    "country_code": "GY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1569,
+                "name": "Pomeroon-Supenaam"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1570,
+                    "country_code": "GY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1570,
+                "name": "Potaro-Siparuni"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1571,
+                    "country_code": "GY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1571,
+                "name": "Upper Demerara-Berbice"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1572,
+                    "country_code": "GY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1572,
+                "name": "Upper Takutu-Upper Essequibo"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GY"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}
