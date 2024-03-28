@@ -29,6 +29,10 @@ if __name__ == '__main__':
     credentials = master_credentials.loc[(master_credentials.vm == vm) &
                                          (master_credentials.collection == collection)]
 
+    # convert app to int
+    credentials = credentials.copy()
+    credentials['app'] = credentials['app'].astype(int)
+
     # save to csv
     credentials.to_csv(credentials_path,
                        columns=['token', 'app'],
