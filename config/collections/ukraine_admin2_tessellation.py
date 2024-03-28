@@ -2,6 +2,7 @@ import os
 import json
 import shutil
 import pandas as pd
+import numpy as np
 
 # virtual machine and collection names
 vm = 'saffron'
@@ -31,7 +32,7 @@ if __name__ == '__main__':
 
     # convert app to int
     credentials = credentials.copy()
-    credentials['app'] = credentials['app'].astype(int)
+    credentials['app'] = credentials['app'].astype(np.int64)
 
     # save to csv
     credentials.to_csv(credentials_path,
