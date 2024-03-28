@@ -46,7 +46,7 @@ services:
   ukraine_admin2_tessellation:
     container_name: ukraine_admin2_tessellation
     volumes:
-      - ./ukraine_admin2_tesselation:/app/in
+      - ./ukraine_admin2_tessellation:/app/in
       - ./../../../data/saffron/ukraine_admin2_tessellation:/app/data
     build:
       args:
