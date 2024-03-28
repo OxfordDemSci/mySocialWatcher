@@ -5,14 +5,14 @@ import pandas as pd
 
 # virtual machine and collection names
 vm = 'saffron'
-collection = 'ukraine_admin2_tesselation_interior'
+collection = 'ukraine_admin2_tesselation'
 
 
 if __name__ == '__main__':
 
     # ---- paths ---- #
     master_credentials_path = os.path.join('config', 'private', 'credentials_master.csv')
-    specs_template_path = os.path.join('config', 'specs', 'examples', 'ukraine_admin2_tesselation_interior')
+    specs_template_path = os.path.join('config', 'specs', 'examples', 'ukraine_admin2_tesselation')
     out_dir = os.path.join('docker', 'collectors', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
     yagmail_path = os.path.join('config', 'private', 'yagmail.csv')
@@ -28,6 +28,10 @@ if __name__ == '__main__':
     # filter vm and collection
     credentials = master_credentials.loc[(master_credentials.vm == vm) &
                                          (master_credentials.collection == collection)]
+
+    # convert app to int
+    credentials = credentials.copy()
+    credentials['app'] = credentials['app'].astype(int)
 
     # save to csv
     credentials.to_csv(credentials_path,

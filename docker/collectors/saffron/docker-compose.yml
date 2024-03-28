@@ -43,12 +43,16 @@ services:
       dockerfile: ./docker/collectors/Dockerfile
     restart: unless-stopped
 
-  ukraine_admin2_tesselation_interior:
-    container_name: ukraine_admin2_tesselation_interior
+  ukraine_admin2_tesselation:
+    container_name: ukraine_admin2_tesselation
     volumes:
-      - ./ukraine_admin2_tesselation_interior:/app/in
-      - ./../../../data/saffron/ukraine_admin2_tesselation_interior:/app/data
+      - ./ukraine_admin2_tesselation:/app/in
+      - ./../../../data/saffron/ukraine_admin2_tesselation:/app/data
     build:
+      args:
+        sleep_time: 0
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure

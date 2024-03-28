@@ -6,7 +6,7 @@ for platform in ['facebook', 'instagram']:
     # platform= 'facebook'
     for cover_type in ['interior']:
         # cover_type = 'interior'
-        ukr_tess_specs = specs.master_specs(country='ukraine_admin2_tesselation_' + cover_type,
+        ukr_tess_specs = specs.master_specs(country='ukraine_admin2_tesselation',
                                             custom_tesselation='K:/DemSci/projects/2023_WHO_Ukraine_Population/data/tmp/gadm2_tessellation/wd/UKR/out/loc_queries/UKR_loc_queries_for_cover_by_custom_locations_GADM2_regions_' + cover_type + '.txt',
                                             platform=platform,
                                             location_type='recent',
