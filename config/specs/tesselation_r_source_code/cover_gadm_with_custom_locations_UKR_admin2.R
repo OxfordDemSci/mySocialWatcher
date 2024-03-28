@@ -95,7 +95,7 @@ res_list <- generate_list_of_custom_locations_for_shape_files(reg_geo = as(geo_a
 
 
 # remove belarus overlap in exterior for pcode UA1806
-part_issue <- c( 70, 98, 111,112)
+part_issue <- c(70, 98, 111,112)
 
 res_list$UA1806$custom_locations_list$exterior_cover[c(paste0('part_',part_issue))] <- NULL
 
@@ -124,9 +124,31 @@ mapviz_int <- show_custom_location_covers_on_map(regions_geos = geo_adm2,
                                                  zone = cntries_df$zone,
                                                  covers_to_show = rep('interior_cover',length(res_list)))
 
-# pysw query
+# test facebook queries
 
+fb <- get_fb_mau_estimates_for_custom_covers(res_list, invalid_list)
+
+plot_fb <- function(mapviz, fb_df=fb){
+  # mapviz=mapviz_ext
+  fb_gis <- st_as_sf(mapviz[['custom_locs_geo']]) %>% 
+    rename(coverType=cover) %>% 
+    left_join(fb_df)
+  
+  fb_map <- tm_shape(fb_gis)+
+    tm_fill(col='fb_mau', style = 'quantile')
+  return(fb_map)
+}
+
+fb_map_int <- plot_fb(mapviz_int)
+fb_map_ext <- plot_fb(mapviz_ext)
+
+# pysw query
 res_df <- export_list_of_custom_locations(res_list, invalid_list)
+
+res_df <- res_df |> 
+  left_join(fb) |> 
+  filter(!grepl('Your ad includes or excludes locations that are currently restricted', error_message))
+
 
 get_pysw <- function(geo_covers_df, cover_type ,location_type='recent', expanded_type=expanded){
   geo_covers_df <- geo_covers_df %>% 
@@ -155,23 +177,7 @@ get_pysw <- function(geo_covers_df, cover_type ,location_type='recent', expanded
 geo_queries_int <- get_pysw(res_df, cover_type = 'interior_cover')
 geo_queries_ext <- get_pysw(res_df, cover_type = 'exterior_cover')
 
-# test facebook queries
 
-fb <- get_fb_mau_estimates_for_custom_covers(res_list, invalid_list)
-
-plot_fb <- function(mapviz, fb_df=fb){
-  # mapviz=mapviz_ext
-  fb_gis <- st_as_sf(mapviz[['custom_locs_geo']]) %>% 
-    rename(coverType=cover) %>% 
-    left_join(fb_df)
-  
-  fb_map <- tm_shape(fb_gis)+
-    tm_fill(col='fb_mau', style = 'quantile')
-  return(fb_map)
-}
-
-fb_map_int <- plot_fb(mapviz_int)
-fb_map_ext <- plot_fb(mapviz_ext)
 
 ## save the results
 write(geo_queries_int, paste(queries_folder,"/",cntry_iso3,paste0("_loc_queries_for_cover_by_custom_locations_GADM",gadm_level,"_regions_interior.txt"),sep=""))
