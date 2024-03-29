@@ -4,7 +4,7 @@ from mysocialwatcher.collector import specs
 
 for platform in ['facebook', 'instagram']:
     # platform= 'facebook'
-        ukr_tess_specs = master_specs(country='ukraine_admin2_tessellation',
+        ukr_tess_specs = specs.master_specs(country='ukraine_admin2_tessellation',
                                             custom_tesselation='K:/DemSci/projects/2023_WHO_Ukraine_Population/data/tmp/gadm2_tessellation/wd/UKR/out/loc_queries/UKR_loc_queries_for_cover_by_custom_locations_GADM2_regions_interior.txt',
                                             platform=platform,
                                             location_type='recent',

@@ -167,7 +167,7 @@ get_pysw <- function(geo_covers_df, cover_type ,location_type='recent', expanded
     geo_query <- paste('{"name":"custom_locations", "values":[',custom_query,'],',
                        '"location_types": ["',location_type,'"], "pySocialWatcherReference": {"geo_id": "',
                        geoid,'" ,"geo_source": "COD-PS", "coverType": "',cover_type,'" , "expanded": "',expanded_type,'"},',
-                       '"country_code": "UKR"}',sep="")
+                       '"country_code": "UA"}',sep="")
     all_geo_queries <- c(all_geo_queries, geo_query)
     
   }
