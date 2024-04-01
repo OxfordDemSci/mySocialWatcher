@@ -99,8 +99,6 @@ part_issue <- c(70, 98, 111,112)
 
 res_list$UA1806$custom_locations_list$exterior_cover[c(paste0('part_',part_issue))] <- NULL
 
-nlocs <- length(res_list)
-
 # Skip the extension step in case of invalid areas
 
 invalid_list <- res_list
