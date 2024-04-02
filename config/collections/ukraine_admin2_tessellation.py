@@ -2,17 +2,18 @@ import os
 import json
 import shutil
 import pandas as pd
+import numpy as np
 
 # virtual machine and collection names
 vm = 'saffron'
-collection = 'ukraine_admin2_tesselation'
+collection = 'ukraine_admin2_tessellation'
 
 
 if __name__ == '__main__':
 
     # ---- paths ---- #
     master_credentials_path = os.path.join('config', 'private', 'credentials_master.csv')
-    specs_template_path = os.path.join('config', 'specs', 'examples', 'ukraine_admin2_tesselation')
+    specs_template_path = os.path.join('config', 'specs', 'examples', 'ukraine_admin2_tessellation')
     out_dir = os.path.join('docker', 'collectors', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
     yagmail_path = os.path.join('config', 'private', 'yagmail.csv')
@@ -31,7 +32,7 @@ if __name__ == '__main__':
 
     # convert app to int
     credentials = credentials.copy()
-    credentials['app'] = credentials['app'].astype(int)
+    credentials['app'] = credentials['app'].astype(np.int64)
 
     # save to csv
     credentials.to_csv(credentials_path,
