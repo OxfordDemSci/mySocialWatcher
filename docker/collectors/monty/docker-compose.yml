@@ -16,4 +16,3 @@ services:
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
-
