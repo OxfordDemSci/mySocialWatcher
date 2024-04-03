@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 
 # virtual machine and collection names
-vm = 'saffron'
+vm = 'monty'
 collection = 'ukraine_admin2_tessellation'
 
 
