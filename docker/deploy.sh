@@ -9,7 +9,11 @@ sudo hostnamectl set-hostname msw_collectors
 sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get auto-remove -y && sudo reboot now
 
 sudo crontab -e
-# @weekly apt-get update -y && apt-get upgrade -y && apt-get auto-remove -y
+
+#@reboot chmod a+rw /var/run/docker.sock
+#0 23 * * * apt-get update -y && apt-get upgrade -y && chmod a+rw /var/run/docker.sock && apt-get autoremove -y
+#30 23 1 * * reboot now
+#@daily /home/ubuntu/mySocialWatcher/utils/collectors_cleanup.sh /home/ubuntu/mySocialWatcher/data
 
 #---- docker ----#
 

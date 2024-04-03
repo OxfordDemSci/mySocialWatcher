@@ -2,6 +2,7 @@ import os
 import requests
 import json
 import math
+import numpy
 import datetime
 import warnings
 from time import sleep
@@ -32,7 +33,7 @@ from ast import literal_eval
 
 def psw_to_sql(df, collection_name, token,
                valid=False,
-               url='http://127.0.0.1/api/v1/social_media_audience/write'):
+               url='http://127.0.0.1/api/v1/write'):
     """Submit pysocialwatcher csv to /api/v1/fb/write"""
 
     for index in range(len(df)):
@@ -62,6 +63,8 @@ def psw_to_sql(df, collection_name, token,
         elif response[0] == '[':
             response = literal_eval(row.get('response'))
         elif response[:2] == "b\'":
+            response = json.loads(literal_eval(row.get('response')).decode('utf-8'))
+        elif response[:2] == "b'":
             response = json.loads(literal_eval(row.get('response')).decode('utf-8'))
 
         # ---- prepare: geo_locations ----#
@@ -117,21 +120,40 @@ def psw_to_sql(df, collection_name, token,
         for i in drop:
             del args[i]
 
-        # submit api request
-        try:
-            response = requests.get(url=url, params=args)
-            # response = requests.post(url=url, data=args)
-            response = literal_eval(json.dumps(response.json()))
+        # convert numpy.int64 to int
+        for arg in args.keys():
+            if isinstance(args.get(arg), numpy.int64):
+                args[arg] = int(args.get(arg))
 
-            df.loc[index, 'timestamp_api'] = response.get('timestamp')
-            df.loc[index, 'status_api'] = int(response.get('status'))
-            df.loc[index, 'message_api'] = response.get('message')
+        # submit api request
+        http_response = ''
+        try:
+            # http_response = requests.get(url=url, params=args)
+            # http_response = requests.post(url=url, data=args)
+
+            s = requests.Session()
+
+            request = requests.Request('POST', url, json=args)
+            request_prep = request.prepare()
+            http_response = s.send(request_prep)
+
+            http_response_dict = json.loads(json.dumps(http_response.json()))
+
+            df.loc[index, 'timestamp_api'] = http_response_dict.get('timestamp')
+            df.loc[index, 'status_api'] = int(http_response_dict.get('status'))
+            df.loc[index, 'message_api'] = http_response_dict.get('message')
 
         except Exception as e:
-            warnings.warn(str(e))
+            if isinstance(http_response, requests.models.Response):
+                http_response_text = http_response.text
+            else:
+                http_response_text = str(http_response)
+
+            message = 'EXCEPTION: "' + str(e) + '";/n HTTP RESPONSE: "' + http_response_text + '"'
+            warnings.warn(message)
             df.loc[index, 'timestamp_api'] = str(datetime.datetime.now())
             df.loc[index, 'status_api'] = 500
-            df.loc[index, 'message_api'] = str(e)
+            df.loc[index, 'message_api'] = message
 
     # return result
     return df[['timestamp_api', 'status_api', 'message_api']]
@@ -154,7 +176,7 @@ def governor(func, hours=1):
     return wrapper
 
 
-def crawler(data_dir, token, url='http://127.0.0.1/api/v1/social_media_audience/write'):
+def crawler(data_dir, token, url='http://127.0.0.1/api/v1/write'):
     # crawl_dir = 'data/_test'
 
     print('-----------------------------')
@@ -177,7 +199,7 @@ def crawler(data_dir, token, url='http://127.0.0.1/api/v1/social_media_audience/
     # ---- finished ---- #
     for file in file_list:
         # file = file_list[0]
-        # file = './data/_test/_test/finished/dataframe_collected_finished_specs001_20221106.csv'
+        # file = 'C:/Users/edithd/Documents/mySocialWatcher/data/saffron/ukraine_admin2_tessellation/finished/dataframe_collected_finished_1_facebook_all_admin2_20240328.csv'
 
         out_path = file.replace(data_dir, crawl_dir).replace('.csv.gz', '_log.csv.gz')
         os.makedirs(os.path.dirname(out_path), exist_ok=True)
