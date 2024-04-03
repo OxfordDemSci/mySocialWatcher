@@ -62,7 +62,7 @@ def psw_to_sql(df, collection_name, token,
             response = json.loads(row.get('response'))
         elif response[0] == '[':
             response = literal_eval(row.get('response'))
-        elif response[:2] == "b/'":
+        elif response[:2] == "b\'":
             response = json.loads(literal_eval(row.get('response')).decode('utf-8'))
         elif response[:2] == "b'":
             response = json.loads(literal_eval(row.get('response')).decode('utf-8'))
