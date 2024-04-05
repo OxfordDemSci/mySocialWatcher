@@ -26,24 +26,12 @@ time_wait = 0 # waits 5 minutes between tries
 
 #countries_to_try = ["US","CA"]
 
-countries_to_try = ["AD", "AE", "AF", "AG", "AI", "AL", "AM", "AR", "AS", "AT",
-                    "AU", "AW", "AZ", "BA", "BB", "BD", "BE", "BG", "BH", "BL",
-                    "BM", "BN", "BO", "BQ", "BR", "BS", "BT", "BY", "BZ", "CA",
-                    "CH", "CK", "CL", "CN", "CO", "CR", "CW", "CY", "CZ", "DE",
-                    "DK", "DM", "DO", "EC", "EE", "ES", "FI", "FJ", "FK", "FM",
-                    "FO", "FR", "GB", "GD", "GE", "GF", "GG", "GI", "GL", "GP",
-                    "GR", "GT", "GU", "GY", "HK", "HN", "HR", "HT", "HU", "ID",
-                    "IE", "IL", "IM", "IN", "IQ", "IS", "IT", "JE", "JM", "JO",
-                    "JP", "KG", "KH", "KI", "KN", "KR", "KW", "KY", "KZ", "LA",
-                    "LB", "LC", "LI", "LK", "LT", "LU", "LV", "MC", "MD", "ME",
-                    "MF", "MH", "MK", "MM", "MN", "MO", "MP", "MQ", "MS", "MT",
-                    "MV", "MX", "MY", "NC", "NI", "NL", "NO", "NP", "NR", "NZ",
-                    "OM", "PA", "PE", "PF", "PG", "PH", "PK", "PL", "PM", "PR",
-                    "PS", "PT", "PW", "PY", "QA", "RE", "RO", "RS", "SA", "SB",
-                    "SE", "SG", "SH", "SI", "SJ", "SK", "SM", "SR", "SV", "SX",
-                    "TC", "TH", "TJ", "TL", "TM", "TO", "TR", "TT", "TV", "TW",
-                    "UA", "US", "UY", "UZ", "VC", "VE", "VG", "VI", "VN", "VU",
-                    "WF", "WS", "XK", "YE", "YT"]
+countries_to_try = ['AD', 'AE', 'AG', 'AI', 'AS', 'AT', 'AU', 'AW', 'BB', 'BE', 'BH', 'BL', 'BM', 'BN', 'BQ', 'BS', 'CA', 'CH',
+                    'CK', 'CL', 'CN', 'CW', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FJ', 'FK', 'FO', 'FR', 'GB', 'GF', 'GG',
+                    'GI', 'GL', 'GP', 'GR', 'GU', 'HK', 'HR', 'HU', 'IE', 'IL', 'IM', 'IS', 'IT', 'JE', 'JP', 'KI', 'KN', 'KR',
+                    'KW', 'KY', 'LI', 'LT', 'LU', 'LV', 'MC', 'MF', 'MH', 'MO', 'MP', 'MQ', 'MS', 'MT', 'MV', 'NC', 'NL', 'NO',
+                    'NR', 'NZ', 'OM', 'PA', 'PF', 'PG', 'PL', 'PM', 'PR', 'PT', 'QA', 'RE', 'RO', 'SA', 'SE', 'SG', 'SH', 'SI',
+                    'SJ', 'SK', 'SM', 'SX', 'TC', 'TT', 'TW', 'US', 'UY', 'VG', 'VI', 'WF', 'XK', 'YT']
 ##
 constants.SLEEP_TIME = 0
 constants.SAVE_EVERY = 1000
