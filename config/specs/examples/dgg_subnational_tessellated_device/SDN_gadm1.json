@@ -1,0 +1,254 @@
+{
+    "name": "SDN",
+    "geo_locations": [
+        {
+            "name": "custom_locations",
+            "values": [
+                {
+                    "latitude": 14.9067579529802,
+                    "longitude": 36.7003428362255,
+                    "radius": 20,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 15.13807512652,
+                    "longitude": 36.781910713178,
+                    "radius": 20,
+                    "distance_unit": "kilometer"
+                }
+            ],
+            "location_types": [
+                "home"
+            ],
+            "pySocialWatcherReference": {
+                "geo_id": "SDN.2_1",
+                " coverType": "exterior_cover",
+                " expanded": "TRUE"
+            },
+            "country_code": "SD"
+        },
+        {
+            "name": "custom_locations",
+            "values": [
+                {
+                    "latitude": 10.4832266528017,
+                    "longitude": 34.4368882101842,
+                    "radius": 15,
+                    "distance_unit": "kilometer"
+                }
+            ],
+            "location_types": [
+                "home"
+            ],
+            "pySocialWatcherReference": {
+                "geo_id": "SDN.3_1",
+                " coverType": "exterior_cover",
+                " expanded": "TRUE"
+            },
+            "country_code": "SD"
+        },
+        {
+            "name": "custom_locations",
+            "values": [
+                {
+                    "latitude": 22.2250824,
+                    "longitude": 31.4063271831685,
+                    "radius": 37,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 22.2250824,
+                    "longitude": 31.8991217287968,
+                    "radius": 37,
+                    "distance_unit": "kilometer"
+                }
+            ],
+            "location_types": [
+                "home"
+            ],
+            "pySocialWatcherReference": {
+                "geo_id": "SDN.10_1",
+                " coverType": "exterior_cover",
+                " expanded": "FALSE"
+            },
+            "country_code": "SD"
+        },
+        {
+            "name": "custom_locations",
+            "values": [
+                {
+                    "latitude": 10.6499276970926,
+                    "longitude": 22.6854691425552,
+                    "radius": 21,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 10.1376880856984,
+                    "longitude": 22.9628122783007,
+                    "radius": 21,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 10.3938078913955,
+                    "longitude": 22.7721602195239,
+                    "radius": 21,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 10.6499276970926,
+                    "longitude": 22.9628122783007,
+                    "radius": 21,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 10.3938078913955,
+                    "longitude": 23.0495033552694,
+                    "radius": 21,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 8.60096925151566,
+                    "longitude": 24.0721848212828,
+                    "radius": 21,
+                    "distance_unit": "kilometer"
+                }
+            ],
+            "location_types": [
+                "home"
+            ],
+            "pySocialWatcherReference": {
+                "geo_id": "SDN.14_1",
+                " coverType": "exterior_cover",
+                " expanded": "TRUE"
+            },
+            "country_code": "SD"
+        },
+        {
+            "name": "custom_locations",
+            "values": [
+                {
+                    "latitude": 12.63313953125,
+                    "longitude": 21.8389492,
+                    "radius": 10,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 12.87870224375,
+                    "longitude": 21.8389492,
+                    "radius": 10,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 12.63313953125,
+                    "longitude": 21.9674156709481,
+                    "radius": 10,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 13.0014836,
+                    "longitude": 21.8755839147854,
+                    "radius": 10,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 13.12426495625,
+                    "longitude": 21.9674156709481,
+                    "radius": 10,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 12.63313953125,
+                    "longitude": 22.0958821418962,
+                    "radius": 10,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 13.61539038125,
+                    "longitude": 22.0958821418962,
+                    "radius": 10,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 13.7381717375,
+                    "longitude": 22.0040503857335,
+                    "radius": 10,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 13.86095309375,
+                    "longitude": 22.0958821418962,
+                    "radius": 10,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 12.63313953125,
+                    "longitude": 22.2243486128443,
+                    "radius": 10,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 13.2470463125,
+                    "longitude": 22.1325168566816,
+                    "radius": 10,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 13.36982766875,
+                    "longitude": 22.2243486128443,
+                    "radius": 10,
+                    "distance_unit": "kilometer"
+                },
+                {
+                    "latitude": 13.492609025,
+                    "longitude": 22.1325168566816,
+                    "radius": 10,
+                    "distance_unit": "kilometer"
+                }
+            ],
+            "location_types": [
+                "home"
+            ],
+            "pySocialWatcherReference": {
+                "geo_id": "SDN.16_1",
+                " coverType": "exterior_cover",
+                " expanded": "FALSE"
+            },
+            "country_code": "SD"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}
