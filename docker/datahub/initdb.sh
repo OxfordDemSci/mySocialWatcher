@@ -11,7 +11,7 @@ psql -U $POSTGRES_USER -d $POSTGRES_DB -c \
 CREATE TABLE collections (
 	id serial PRIMARY KEY,
 	created_on DATE NOT NULL DEFAULT CURRENT_DATE,
-	name VARCHAR (25) NOT NULL,
+	name VARCHAR (50) NOT NULL,
 	UNIQUE(name)
 );
 GRANT SELECT ON collections TO writer, reader;
@@ -83,7 +83,7 @@ CREATE TABLE facebook (
 	response jsonb DEFAULT '{}'::jsonb
 ) PARTITION BY LIST (country);
 
-create unique index unique_facebook_idx
+create unique index unique_fb_idx
     on facebook (country, collection_date, gender, age_min, age_max, dau,
     md5(geo_locations::text),
 	md5(targeting::text),
@@ -92,6 +92,7 @@ create unique index unique_facebook_idx
 CREATE INDEX contributor_fb_idx ON facebook(contributor_id);
 CREATE INDEX collection_fb_idx ON facebook(collection_id);
 CREATE INDEX date_fb_idx ON facebook(collection_date);
+CREATE INDEX contributed_on_fb_idx ON facebook(contributed_on);
 CREATE INDEX gender_fb_idx ON facebook(gender);
 CREATE INDEX age_fb_idx ON facebook(age_min, age_max);
 
@@ -130,7 +131,7 @@ CREATE TABLE facebook_invalid (
 	targeting jsonb DEFAULT '{}'::jsonb,
 	response jsonb DEFAULT '{}'::jsonb
 );
-create unique index unique_facebook_invalid_idx
+create unique index unique_fb_invalid_idx
     on facebook_invalid (country, collection_date, gender, age_min, age_max, dau,
     md5(geo_locations::text),
 	md5(targeting::text),
@@ -162,7 +163,7 @@ CREATE TABLE instagram (
 	targeting jsonb DEFAULT '{}'::jsonb,
 	response jsonb DEFAULT '{}'::jsonb
 ) PARTITION BY LIST (country);
-create unique index unique_instagram_idx
+create unique index unique_ig_idx
     on instagram (country, collection_date, gender, age_min, age_max, dau,
     md5(geo_locations::text),
 	md5(targeting::text),
@@ -170,6 +171,7 @@ create unique index unique_instagram_idx
 CREATE INDEX contributor_ig_idx ON instagram(contributor_id);
 CREATE INDEX collection_ig_idx ON instagram(collection_id);
 CREATE INDEX date_ig_idx ON instagram(collection_date);
+CREATE INDEX contributed_on_ig_idx ON instagram(contributed_on);
 CREATE INDEX gender_ig_idx ON instagram(gender);
 CREATE INDEX age_ig_idx ON instagram(age_min, age_max);
 
@@ -207,11 +209,12 @@ CREATE TABLE instagram_invalid (
 	targeting jsonb DEFAULT '{}'::jsonb,
 	response jsonb DEFAULT '{}'::jsonb
 );
-create unique index unique_instagram_invalid_idx
+create unique index unique_ig_invalid_idx
     on instagram_invalid (country, collection_date, gender, age_min, age_max, dau,
     md5(geo_locations::text),
 	md5(targeting::text),
 	md5(response::text));
+
 GRANT SELECT ON instagram_invalid TO reader;
 GRANT SELECT,INSERT ON instagram_invalid TO writer;
 "
@@ -233,12 +236,13 @@ CREATE TABLE vkontakte (
 	timestamp BIGINT NOT NULL,
   geo_locations jsonb NOT NULL
 );
-create unique index unique_vkontakte_idx
+create unique index unique_vk_idx
     on vkontakte (country, collection_date, gender, age_min, age_max, dau,
     md5(geo_locations::text));
 CREATE INDEX contributor_vk_idx ON vkontakte(contributor_id);
 CREATE INDEX collection_vk_idx ON vkontakte(collection_id);
 CREATE INDEX date_vk_idx ON vkontakte(collection_date);
+CREATE INDEX contributed_on_vk_idx ON vkontakte(contributed_on);
 CREATE INDEX gender_vk_idx ON vkontakte(gender);
 CREATE INDEX age_vk_idx ON vkontakte(age_min, age_max);
 
@@ -263,7 +267,7 @@ CREATE TABLE vkontakte_invalid (
 	timestamp BIGINT NOT NULL,
   geo_locations jsonb NOT NULL
 );
-create unique index unique_vkontakte_invalid_idx
+create unique index unique_vk_invalid_idx
     on vkontakte_invalid (country, collection_date, gender, age_min, age_max, dau,
     md5(geo_locations::text));
 GRANT SELECT ON vkontakte_invalid TO reader;
