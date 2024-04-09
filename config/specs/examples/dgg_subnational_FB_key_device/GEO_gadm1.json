@@ -1,0 +1,244 @@
+{
+    "name": "GEO",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1358,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1358,
+                "name": "Abkhazia"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1360,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1360,
+                "name": "Ajaria"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4395,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4395,
+                "name": "Guria"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4379,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4379,
+                "name": "Imereti"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4385,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4385,
+                "name": "Kakheti"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4384,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4384,
+                "name": "Kvemo Kartli"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4383,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4383,
+                "name": "Mtskheta-Mtianeti"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4381,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4381,
+                "name": "Racha-Lechkhumi-Kvemo Svaneti"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4378,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4378,
+                "name": "Samegrelo-Zemo Svaneti"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4380,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4380,
+                "name": "Samtskhe-Javakheti"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4382,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4382,
+                "name": "Shida Kartli"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4386,
+                    "country_code": "GE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4386,
+                "name": "Tbilisi"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GE"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}
