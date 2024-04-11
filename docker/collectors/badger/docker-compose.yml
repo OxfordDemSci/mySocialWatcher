@@ -112,4 +112,69 @@ services:
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
+  dgg_subnational_tessellated_age:
+      container_name: dgg_subnational_tessellated_age
+      volumes:
+        - ./dgg_subnational_tessellated_age:/app/in
+        - ./../../../data/badger/dgg_subnational_tessellated_age:/app/data
+      build:
+        args:
+          pysocialwatcher_opt_flag: "true"
+          betterestimates_flag: "true"
+          email_notification_enable: "True"
+          email_receiver: "casey.breen@demography.ox.ac.uk"
+          sleep_time: 0
+        context: ./../../../
+        dockerfile: ./docker/collectors/Dockerfile
+      restart: on-failure
+
+  dgg_subnational_tessellated_device:
+        container_name: dgg_subnational_tessellated_device
+        volumes:
+          - ./dgg_subnational_tessellated_device:/app/in
+          - ./../../../data/badger/dgg_subnational_tessellated_device:/app/data
+        build:
+          args:
+            pysocialwatcher_opt_flag: "true"
+            betterestimates_flag: "true"
+            email_notification_enable: "True"
+            email_receiver: "casey.breen@demography.ox.ac.uk"
+            sleep_time: 0
+          context: ./../../../
+          dockerfile: ./docker/collectors/Dockerfile
+        restart: on-failure
+
+
+  dgg_subnational_fb_key_device:
+    container_name: dgg_subnational_fb_key_device
+    volumes:
+      - ./dgg_subnational_FB_key_device:/app/in
+      - ./../../../data/badger/dgg_subnational_FB_key_device:/app/data
+    build:
+      args:
+        pysocialwatcher_opt_flag: "true"
+        betterestimates_flag: "true"
+        email_notification_enable: "True"
+        email_receiver: "casey.breen@demography.ox.ac.uk"
+        sleep_time: 0
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
+  dgg_subnational_fb_key_age:
+    container_name: dgg_subnational_fb_key_age
+    volumes:
+      - ./dgg_subnational_FB_key_age:/app/in
+      - ./../../../data/badger/dgg_subnational_FB_key_age:/app/data
+    build:
+      args:
+        pysocialwatcher_opt_flag: "true"
+        betterestimates_flag: "true"
+        email_notification_enable: "True"
+        email_receiver: "casey.breen@demography.ox.ac.uk"
+        sleep_time: 0
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
 
