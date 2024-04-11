@@ -1,0 +1,268 @@
+{
+    "name": "MRT",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2438,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2438,
+                "name": "Adrar"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2434,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2434,
+                "name": "Assaba"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2436,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2436,
+                "name": "Brakna"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2439,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2439,
+                "name": "Dakhlet Nouadhibou"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2435,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2435,
+                "name": "Gorgol"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2441,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2441,
+                "name": "Guidimaka"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2432,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2432,
+                "name": "Hodh ech Chargui"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2433,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2433,
+                "name": "Hodh el Gharbi"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2443,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2443,
+                "name": "Inchiri"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4682,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4682,
+                "name": "Nouakchott"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2440,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2440,
+                "name": "Tagant"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2442,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2442,
+                "name": "Tiris Zemmour"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2437,
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2437,
+                "name": "Trarza"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MR"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

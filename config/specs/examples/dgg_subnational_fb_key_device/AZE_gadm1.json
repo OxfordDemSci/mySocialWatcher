@@ -1,0 +1,193 @@
+{
+    "name": "AZE",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 138,
+                    "country_code": "AZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 138,
+                "name": "Absheron"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 202,
+                    "country_code": "AZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 202,
+                "name": "Aran"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 144,
+                    "country_code": "AZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 144,
+                "name": "Daglig-Shirvan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 157,
+                    "country_code": "AZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 157,
+                "name": "Ganja-Qazakh"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 163,
+                    "country_code": "AZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 163,
+                "name": "Kalbajar-Lachin"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 166,
+                    "country_code": "AZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 166,
+                "name": "Lankaran"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 172,
+                    "country_code": "AZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 172,
+                "name": "Nakhchivan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 197,
+                    "country_code": "AZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 197,
+                "name": "Quba-Khachmaz"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 207,
+                    "country_code": "AZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 207,
+                "name": "Shaki-Zaqatala"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AZ"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

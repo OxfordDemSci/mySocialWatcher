@@ -1,0 +1,159 @@
+{
+    "name": "BLR",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 514,
+                    "country_code": "BY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 514,
+                "name": "Brest"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 515,
+                    "country_code": "BY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 515,
+                "name": "Gomel"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 516,
+                    "country_code": "BY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 516,
+                "name": "Grodno"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 517,
+                    "country_code": "BY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 517,
+                "name": "Minsk"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 517,
+                    "country_code": "BY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 517,
+                "name": "Minsk"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 519,
+                    "country_code": "BY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 519,
+                "name": "Mogilev"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 520,
+                    "country_code": "BY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 520,
+                "name": "Vitebsk"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BY"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}
