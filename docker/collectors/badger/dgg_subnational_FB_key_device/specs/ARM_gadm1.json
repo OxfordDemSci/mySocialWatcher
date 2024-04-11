@@ -1,0 +1,227 @@
+{
+    "name": "ARM",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 69,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 69,
+                "name": "Aragatsotn"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 70,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 70,
+                "name": "Ararat"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 71,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 71,
+                "name": "Armavir"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 79,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 79,
+                "name": "Erevan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 72,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 72,
+                "name": "Gegharkunik"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 73,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 73,
+                "name": "Kotayk"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 74,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 74,
+                "name": "Lori"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 75,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 75,
+                "name": "Shirak"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 76,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 76,
+                "name": "Syunik"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 77,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 77,
+                "name": "Tavush"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 78,
+                    "country_code": "AM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 78,
+                "name": "Vayots Dzor"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AM"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

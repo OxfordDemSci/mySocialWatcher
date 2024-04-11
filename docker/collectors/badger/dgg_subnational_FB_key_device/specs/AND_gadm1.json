@@ -1,0 +1,125 @@
+{
+    "name": "AND",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 6,
+                    "country_code": "AD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 6,
+                "name": "Andorra la Vella"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 7,
+                    "country_code": "AD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 7,
+                "name": "Escaldes-Engordany"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3,
+                    "country_code": "AD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3,
+                "name": "La Massana"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4,
+                    "country_code": "AD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4,
+                "name": "Ordino"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 5,
+                    "country_code": "AD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 5,
+                "name": "Sant Juli\u00e0 de L\u00f2ria"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AD"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}
