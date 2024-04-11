@@ -1,0 +1,57 @@
+{
+    "name": "RWA",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3197,
+                    "country_code": "RW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3197,
+                "name": "Umujyi wa Kigali"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "RW"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

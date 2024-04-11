@@ -1,0 +1,159 @@
+{
+    "name": "GRD",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4569,
+                    "country_code": "GD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4569,
+                "name": "Carriacou"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1351,
+                    "country_code": "GD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1351,
+                "name": "Saint Andrew"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1352,
+                    "country_code": "GD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1352,
+                "name": "Saint David"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1353,
+                    "country_code": "GD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1353,
+                "name": "Saint George"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1354,
+                    "country_code": "GD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1354,
+                "name": "Saint John"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1355,
+                    "country_code": "GD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1355,
+                "name": "Saint Mark"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1356,
+                    "country_code": "GD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1356,
+                "name": "Saint Patrick"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "GD"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

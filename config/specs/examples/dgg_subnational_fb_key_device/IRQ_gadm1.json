@@ -1,0 +1,227 @@
+{
+    "name": "IRQ",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1758,
+                    "country_code": "IQ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1758,
+                "name": "Al-Anbar"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "IQ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1760,
+                    "country_code": "IQ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1760,
+                "name": "Al-Muthannia"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "IQ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1761,
+                    "country_code": "IQ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1761,
+                "name": "Al-Qadisiyah"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "IQ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1774,
+                    "country_code": "IQ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1774,
+                "name": "An-Najaf"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "IQ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1762,
+                    "country_code": "IQ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1762,
+                "name": "As-Sulaymaniyah"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "IQ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1764,
+                    "country_code": "IQ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1764,
+                "name": "Baghdad"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "IQ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1766,
+                    "country_code": "IQ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1766,
+                "name": "Dhi-Qar"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "IQ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1767,
+                    "country_code": "IQ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1767,
+                "name": "Diyala"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "IQ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1769,
+                    "country_code": "IQ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1769,
+                "name": "Karbala'"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "IQ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1771,
+                    "country_code": "IQ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1771,
+                "name": "Maysan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "IQ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1773,
+                    "country_code": "IQ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1773,
+                "name": "Wasit"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "IQ"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

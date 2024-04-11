@@ -1,0 +1,244 @@
+{
+    "name": "KAZ",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2027,
+                    "country_code": "KZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2027,
+                "name": "Almaty"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "KZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2029,
+                    "country_code": "KZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2029,
+                "name": "Aqmola"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "KZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2032,
+                    "country_code": "KZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2032,
+                "name": "Atyrau"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "KZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2041,
+                    "country_code": "KZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2041,
+                "name": "East Kazakhstan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "KZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2035,
+                    "country_code": "KZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2035,
+                "name": "Mangghystau"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "KZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2042,
+                    "country_code": "KZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2042,
+                "name": "North Kazakhstan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "KZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2037,
+                    "country_code": "KZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2037,
+                "name": "Pavlodar"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "KZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2038,
+                    "country_code": "KZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2038,
+                "name": "Qaraghandy"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "KZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2039,
+                    "country_code": "KZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2039,
+                "name": "Qostanay"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "KZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2040,
+                    "country_code": "KZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2040,
+                "name": "Qyzylorda"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "KZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2036,
+                    "country_code": "KZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2036,
+                "name": "South Kazakhstan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "KZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2033,
+                    "country_code": "KZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2033,
+                "name": "West Kazakhstan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "KZ"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}
