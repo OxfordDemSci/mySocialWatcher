@@ -148,8 +148,8 @@ services:
   dgg_subnational_fb_key_device:
     container_name: dgg_subnational_fb_key_device
     volumes:
-      - ./dgg_subnational_FB_key_device:/app/in
-      - ./../../../data/badger/dgg_subnational_FB_key_device:/app/data
+      - ./dgg_subnational_fb_key_device:/app/in
+      - ./../../../data/badger/dgg_subnational_fb_key_device:/app/data
     build:
       args:
         pysocialwatcher_opt_flag: "true"
@@ -164,8 +164,8 @@ services:
   dgg_subnational_fb_key_age:
     container_name: dgg_subnational_fb_key_age
     volumes:
-      - ./dgg_subnational_FB_key_age:/app/in
-      - ./../../../data/badger/dgg_subnational_FB_key_age:/app/data
+      - ./dgg_subnational_fb_key_age:/app/in
+      - ./../../../data/badger/dgg_subnational_fb_key_age:/app/data
     build:
       args:
         pysocialwatcher_opt_flag: "true"
