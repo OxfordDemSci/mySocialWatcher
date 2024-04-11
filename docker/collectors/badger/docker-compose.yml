@@ -128,11 +128,10 @@ services:
         dockerfile: ./docker/collectors/Dockerfile
       restart: on-failure
 
-
   dgg_subnational_tessellated_device:
         container_name: dgg_subnational_tessellated_device
         volumes:
-          - ./dgg_subnational_tessellated_age:/app/in
+          - ./dgg_subnational_tessellated_device:/app/in
           - ./../../../data/badger/dgg_subnational_tessellated_device:/app/data
         build:
           args:
@@ -146,10 +145,10 @@ services:
         restart: on-failure
 
 
-  dgg_subnational_FB_key_device:
-    container_name: dgg_subnational_FB_key_device
+  dgg_subnational_fb_key_device:
+    container_name: dgg_subnational_fb_key_device
     volumes:
-      - ./dgg_subnational_tessellated_age:/app/in
+      - ./dgg_subnational_FB_key_device:/app/in
       - ./../../../data/badger/dgg_subnational_FB_key_device:/app/data
     build:
       args:
@@ -162,10 +161,10 @@ services:
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
-  dgg_subnational_FB_key_age:
-    container_name: dgg_subnational_FB_key_age
+  dgg_subnational_fb_key_age:
+    container_name: dgg_subnational_fb_key_age
     volumes:
-      - ./dgg_subnational_tessellated_age:/app/in
+      - ./dgg_subnational_FB_key_age:/app/in
       - ./../../../data/badger/dgg_subnational_FB_key_age:/app/data
     build:
       args:

@@ -5,14 +5,14 @@ import pandas as pd
 
 # virtual machine and collection names
 vm = 'badger'
-collection = 'dgg_subnational_FB_key_age'
+collection = 'dgg_subnational_fb_key_age'
 
 
 if __name__ == '__main__':
 
     # ---- paths ---- #
     master_credentials_path = os.path.join('config', 'private', 'credentials_master.csv')
-    specs_template_path = os.path.join('config', 'specs', 'examples', 'dgg_subnational_FB_key_age') ## update to dgg_subnational
+    specs_template_path = os.path.join('config', 'specs', 'examples', 'dgg_subnational_fb_key_age') ## update to dgg_subnational
     out_dir = os.path.join('docker', 'collectors', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
     yagmail_path = os.path.join('config', 'private', 'yagmail.csv')
