@@ -149,7 +149,7 @@ def psw_to_sql(df, collection_name, token,
             else:
                 http_response_text = str(http_response)
 
-            message = 'EXCEPTION: "' + str(e) + '";\n HTTP RESPONSE: "' + http_response_text + '"'
+            message = 'EXCEPTION: "' + str(e) + '";/n HTTP RESPONSE: "' + http_response_text + '"'
             warnings.warn(message)
             df.loc[index, 'timestamp_api'] = str(datetime.datetime.now())
             df.loc[index, 'status_api'] = 500
@@ -199,7 +199,7 @@ def crawler(data_dir, token, url='http://127.0.0.1/api/v1/write'):
     # ---- finished ---- #
     for file in file_list:
         # file = file_list[0]
-        # file = './data/_test/_test/finished/dataframe_collected_finished_specs001_20221106.csv'
+        # file = 'C:/Users/edithd/Documents/mySocialWatcher/data/saffron/ukraine_admin2_tessellation/finished/dataframe_collected_finished_1_facebook_all_admin2_20240328.csv'
 
         out_path = file.replace(data_dir, crawl_dir).replace('.csv.gz', '_log.csv.gz')
         os.makedirs(os.path.dirname(out_path), exist_ok=True)
