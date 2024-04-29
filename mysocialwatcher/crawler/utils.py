@@ -42,7 +42,7 @@ def psw_to_sql(df, collection_name, token,
         row = df.iloc[index]
 
         # ---- platform ---- #
-        platform = literal_eval(row['publisher_platforms'].replace('""""','"').replace('"""','"').replace('""','"'))
+        platform = literal_eval(row['publisher_platforms'])
 
         if len(platform) > 1:
             warnings.warn(f'More than one platform detected at index {index}.')
@@ -57,13 +57,15 @@ def psw_to_sql(df, collection_name, token,
         targeting = literal_eval(row.get('targeting'))
 
         # ---- response ----#
-        response = row.get('response').replace('""""','"').replace('"""','"').replace('""','"')
+        response = row.get('response')
         if response[0] == "{":
-            response = json.loads(response)
+            response = json.loads(row.get('response'))
         elif response[0] == '[':
-            response = literal_eval(response)
+            response = literal_eval(row.get('response'))
         elif response[:2] == "b\'":
-            response = json.loads(literal_eval(response).decode('utf-8'))
+            response = json.loads(literal_eval(row.get('response')).decode('utf-8'))
+        elif response[:2] == "b'":
+            response = json.loads(literal_eval(row.get('response')).decode('utf-8'))
 
         # ---- prepare: geo_locations ----#
         geo = all_fields['geo_locations']  # literal_eval(row.get('geo_locations'))
@@ -201,13 +203,21 @@ def crawler(data_dir, token, url='http://127.0.0.1/api/v1/write'):
 
         out_path = file.replace(data_dir, crawl_dir).replace('.csv.gz', '_log.csv.gz')
         os.makedirs(os.path.dirname(out_path), exist_ok=True)
+        temp_path = out_path.replace('log.csv.gz', 'temp.txt')
 
-        if not os.path.exists(out_path):
-
+        if not os.path.exists(out_path) and not os.path.exists(temp_path):
             print('[' + str(datetime.datetime.now()) + '] ' + file)
+
+            # create temp file for parallel processing
+            f = open(temp_path, "w")
+            f.write(
+            'processing'
+            )
+            f.close()
 
             # load data
             df = pd.read_csv(file)
+
             collection_name = file.split('/')[-3].lstrip('_')
 
             # write collection to SQL via API
@@ -221,4 +231,8 @@ def crawler(data_dir, token, url='http://127.0.0.1/api/v1/write'):
             # save API responses
             response.to_csv(out_path)
 
-    print('[' + str(datetime.datetime.now()) + '] Crawler finished.')
+            # remove temp file
+            os.remove(temp_path)
+
+
+print('[' + str(datetime.datetime.now()) + '] Crawler finished.')
