@@ -1,0 +1,625 @@
+{
+    "name": "AFG",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 15,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 15,
+                "name": "Badakhshan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 16,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 16,
+                "name": "Badghis"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 17,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 17,
+                "name": "Baghlan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 41,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 41,
+                "name": "Balkh"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 18,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 18,
+                "name": "Bamyan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4519,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4519,
+                "name": "Daykundi"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 19,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 19,
+                "name": "Farah"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 20,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 20,
+                "name": "Faryab"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 21,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 21,
+                "name": "Ghazni"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 22,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 22,
+                "name": "Ghor"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 23,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 23,
+                "name": "Hilmand"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 24,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 24,
+                "name": "Hirat"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 42,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 42,
+                "name": "Jawzjan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 25,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 25,
+                "name": "Kabul"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 35,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 35,
+                "name": "Kandahar"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 26,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 26,
+                "name": "Kapisa"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 48,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 48,
+                "name": "Khost"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 27,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 27,
+                "name": "Kunar"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 36,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 36,
+                "name": "Kunduz"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 46,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 46,
+                "name": "Laghman"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 29,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 29,
+                "name": "Logar"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 30,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 30,
+                "name": "Nangarhar"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 31,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 31,
+                "name": "Nimroz"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 49,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 49,
+                "name": "Nuristan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 40,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 40,
+                "name": "Paktika"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 33,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 33,
+                "name": "Paktya"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4520,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4520,
+                "name": "Panjshir"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 34,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 34,
+                "name": "Parwan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 43,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 43,
+                "name": "Samangan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 44,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 44,
+                "name": "Sari Pul"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 37,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 37,
+                "name": "Takhar"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 32,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 32,
+                "name": "Uruzgan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 38,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 38,
+                "name": "Wardak"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 39,
+                    "country_code": "AF"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 39,
+                "name": "Zabul"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AF"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

@@ -1,0 +1,251 @@
+{
+    "name": "BEN",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4523,
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4523,
+                "name": "Alibori"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 400,
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 400,
+                "name": "Atakora"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 401,
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 401,
+                "name": "Atlantique"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 402,
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 402,
+                "name": "Borgou"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4524,
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4524,
+                "name": "Collines"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4526,
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4526,
+                "name": "Donga"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4525,
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4525,
+                "name": "Kouffo"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4527,
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4527,
+                "name": "Littoral"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 403,
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 403,
+                "name": "Mono"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 404,
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 404,
+                "name": "Ou\u00e9m\u00e9"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4528,
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4528,
+                "name": "Plateau"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4529,
+                    "country_code": "BJ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4529,
+                "name": "Zou"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "BJ"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}
