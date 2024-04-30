@@ -211,7 +211,7 @@ def crawler(data_dir, token, url='http://127.0.0.1/api/v1/write'):
             # create temp file for parallel processing
             f = open(temp_path, "w")
             f.write(
-            'processing'
+            '[' + str(datetime.datetime.now()) + '] Processing...'
             )
             f.close()
 
