@@ -82,15 +82,13 @@ cat("### Processing country:",cntry_iso3,"\n")
 ## read in the Gaza municipality shape file
 cat("__*__ Reading in Gaza municipality boundaries:\n")
 
-geo_adm2 <- st_read(file.path(gadm_folder, 'gazastrip_municipalboundaries', 'GazaStrip_MunicipalBoundaries.shp')) 
+geo_adm2 <- st_read(file.path(gadm_folder, 'GazaStrip_MunicipalBoundaries_BaselinePop_Clean.gpkg')) 
 geo_adm2 <- geo_adm2 |> rmapshaper::ms_simplify(keep = 0.04)
 
-geo_adm2$id <- geo_adm2$NAME
-geo_adm2$id[is.na(geo_adm2$id)] <- paste0('municipality', geo_adm2$OBJECTID[is.na(geo_adm2$id)])
 
 ## Cover with custom locations for FB targeting
 res_list <- generate_list_of_custom_locations_for_shape_files(reg_geo = as(geo_adm2, 'Spatial'),
-                                                              idcol = 'id', 
+                                                              idcol = 'ADM3_EN', 
                                                               zone = cntries_df$zone[1],
                                                               loc_area_cutoffs = c())
 
@@ -123,6 +121,21 @@ mapviz_int <- show_custom_location_covers_on_map(regions_geos = geo_adm2,
                                                  invalid_locs = invalid_list, 
                                                  zone = cntries_df$zone,
                                                  covers_to_show = rep('interior_cover',length(res_list)))
+
+# save circles? ##############################
+custom_circles_ext <- show_custom_circles_covers_on_map(regions_geos = geo_adm2,
+                                                        geos_covers = res_list,
+                                                        invalid_locs = invalid_list,
+                                                        zone = cntries_df$zone,
+                                                        covers_to_show = rep('exterior_cover',length(res_list)))
+custom_circles_ext <- custom_circles_ext$custom_locs_geo |>
+  left_join(fb |>
+              filter(coverType=='exterior_cover') |>
+              rename(id=geo_id))
+
+st_write(custom_circles_ext, file.path('GAZA', 'out', 'gaza_municipality_custom_circles.gpkg'))
+
+
 
 # test facebook queries
 

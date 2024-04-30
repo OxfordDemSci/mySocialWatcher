@@ -1416,3 +1416,39 @@ show_custom_location_covers_on_map <- function(regions_geos, geos_covers, invali
               map_viz = map_viz))
 }
 
+
+
+show_custom_circles_covers_on_map <- function(regions_geos, geos_covers, invalid_locs, zone, covers_to_show = NA) {
+  planar_proj <- paste("+proj=utm +zone=",zone," ellps=WGS84",sep="")
+  # Aggregate the individual custom locations covers to polygons
+  custom_polys <- NULL # Initialize an empty sfc to store polygons
+  ngeos <- length(geos_covers)
+  for (j in 1:ngeos) {
+    # j=1
+    locname <- names(geos_covers)[j]
+    cat("* Processing location:",locname,";",j,"of",ngeos,"\r")
+    coverType <- ifelse(!is.na(covers_to_show[j]), covers_to_show[j], 1)
+    valid_locs <- setdiff(names(geos_covers[[locname]]$custom_locations_list[[coverType]]),
+                          names(invalid_locs[[locname]]))
+    Ivalid <- as.numeric(gsub("part_([0-9]*)","\\1",valid_locs))
+    all_locs <- names(geos_covers[[locname]]$custom_locations_list[[coverType]])
+    Iall_locs <-as.numeric(gsub("part_([0-9]*)","\\1",all_locs))
+    if (length(Ivalid) == 0) { next }
+    loc_geos_sf <- st_transform(st_as_sf(geos_covers[[locname]]$Tesselated_points_with_buffers[Ivalid,]), crs = planar_proj)
+    loc_geos_sf$id <- locname
+    loc_geos_sf <- st_transform(loc_geos_sf, SHAPE_TESS_PARAMS$wgs84)
+    if (is.null(custom_polys) || length(custom_polys) == 0) {
+      custom_polys <- loc_geos_sf
+    } else {
+      custom_polys <- rbind(custom_polys, loc_geos_sf)
+    }
+  }
+  # create a map object
+  map_viz <- tm_shape(regions_geos, name = "Regions") +
+    tm_fill(col = "grey",alpha = 0.2) +
+    tm_borders(col = "red", lwd = 2) +
+    tm_shape(custom_polys, name = "custom locations covering") +
+    tm_fill(col = "id", alpha = 0.9)
+  return(list(custom_locs_geo = custom_polys,
+              map_viz = map_viz))
+}
