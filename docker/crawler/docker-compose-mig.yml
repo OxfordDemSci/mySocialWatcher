@@ -1,0 +1,16 @@
+# docker-compose to deploy multiple collectors
+version: '3.3'
+
+services:
+
+  crawler:
+    container_name: crawler
+    network_mode: host
+    volumes:
+      - /run/user/1002/gvfs/smb-share:server=ndph.ox.ac.uk,share=k/DemSci/projects/2023_WHO_Ukraine_Population/data/meta_collections/global_migration_qcri_test:/app/data
+      - .env:/app/.env
+    build:
+      context: ./../../
+      dockerfile: ./docker/crawler/Dockerfile
+    restart: on-failure
+

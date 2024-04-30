@@ -1,0 +1,18 @@
+# docker-compose to deploy multiple collectors
+version: '3.3'
+
+services:
+
+  crawler:
+    network_mode: host
+    volumes:
+      - ./../../data:/app/data
+      - .env:/app/.env
+    build:
+      context: ./../../
+      dockerfile: ./docker/crawler/Dockerfile
+    restart: on-failure
+    deploy:
+      mode: replicated
+      replicas: 2
+

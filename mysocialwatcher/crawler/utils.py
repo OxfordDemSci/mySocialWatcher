@@ -203,13 +203,21 @@ def crawler(data_dir, token, url='http://127.0.0.1/api/v1/write'):
 
         out_path = file.replace(data_dir, crawl_dir).replace('.csv.gz', '_log.csv.gz')
         os.makedirs(os.path.dirname(out_path), exist_ok=True)
+        temp_path = out_path.replace('log.csv.gz', 'temp.txt')
 
-        if not os.path.exists(out_path):
-
+        if not os.path.exists(out_path) and not os.path.exists(temp_path):
             print('[' + str(datetime.datetime.now()) + '] ' + file)
+
+            # create temp file for parallel processing
+            f = open(temp_path, "w")
+            f.write(
+            'processing'
+            )
+            f.close()
 
             # load data
             df = pd.read_csv(file)
+
             collection_name = file.split('/')[-3].lstrip('_')
 
             # write collection to SQL via API
@@ -223,4 +231,8 @@ def crawler(data_dir, token, url='http://127.0.0.1/api/v1/write'):
             # save API responses
             response.to_csv(out_path)
 
-    print('[' + str(datetime.datetime.now()) + '] Crawler finished.')
+            # remove temp file
+            os.remove(temp_path)
+
+
+print('[' + str(datetime.datetime.now()) + '] Crawler finished.')
