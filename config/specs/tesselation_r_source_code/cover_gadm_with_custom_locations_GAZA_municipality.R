@@ -122,21 +122,6 @@ mapviz_int <- show_custom_location_covers_on_map(regions_geos = geo_adm2,
                                                  zone = cntries_df$zone,
                                                  covers_to_show = rep('interior_cover',length(res_list)))
 
-# save circles? ##############################
-custom_circles_ext <- show_custom_circles_covers_on_map(regions_geos = geo_adm2,
-                                                        geos_covers = res_list,
-                                                        invalid_locs = invalid_list,
-                                                        zone = cntries_df$zone,
-                                                        covers_to_show = rep('exterior_cover',length(res_list)))
-custom_circles_ext <- custom_circles_ext$custom_locs_geo |>
-  left_join(fb |>
-              filter(coverType=='exterior_cover') |>
-              rename(id=geo_id))
-
-st_write(custom_circles_ext, file.path('GAZA', 'out', 'gaza_municipality_custom_circles.gpkg'))
-
-
-
 # test facebook queries
 
 fb <- get_fb_mau_estimates_for_custom_covers(res_list, invalid_list)
@@ -155,57 +140,44 @@ plot_fb <- function(mapviz, fb_df=fb){
 fb_map_int <- plot_fb(mapviz_int)
 fb_map_ext <- plot_fb(mapviz_ext)
 
-# pysw query
-res_df <- export_list_of_custom_locations(res_list, invalid_list)
+# save circles? ##############################
+custom_circles_ext <- show_custom_circles_covers_on_map(regions_geos = geo_adm2,
+                                                        geos_covers = res_list,
+                                                        invalid_locs = invalid_list,
+                                                        zone = cntries_df$zone,
+                                                        covers_to_show = rep('exterior_cover',length(res_list)))
+custom_circles_ext <- custom_circles_ext$custom_locs_geo |>
+  left_join(fb |>
+              filter(coverType=='exterior_cover') |>
+              rename(id=geo_id))
 
-res_df <- res_df |> 
-  left_join(fb) |> 
-  filter(!grepl('Your ad includes or excludes locations that are currently restricted', error_message))
-
-
-get_pysw <- function(geo_covers_df, cover_type ,location_type='recent', expanded_type=expanded){
-  geo_covers_df <- geo_covers_df %>% 
-    filter(coverType==cover_type)
-  
-  all_geo_queries <- c()
-  for (geoid in levels(as.factor(geo_covers_df$geo_id))) {
-    # geoid =  "UKR.1.1_1"
-    Isub <- geo_covers_df$geo_id == geoid
-    # should we limite the number of significant digits in the lat/long ????????????????????????????????????????????
-    custom_query <- paste('{"latitude":',geo_covers_df$lat[Isub],
-                          ', "longitude":',geo_covers_df$long[Isub],
-                          ',"radius":',geo_covers_df$radius[Isub],
-                          ',"distance_unit": "kilometer"}',sep="", collapse = ", ")
-    
-    geo_query <- paste('{"name":"custom_locations", "values":[',custom_query,'],',
-                       '"location_types": ["',location_type,'"], "pySocialWatcherReference": {"geo_id": "',
-                       geoid,'" ,"geo_source": "COD-PS", "coverType": "',cover_type,'" , "expanded": "',expanded_type,'"},',
-                       '"country_code": "UA"}',sep="")
-    all_geo_queries <- c(all_geo_queries, geo_query)
-    
-  }
-  return(all_geo_queries)
-}
-
-geo_queries_int <- get_pysw(res_df, cover_type = 'interior_cover')
-geo_queries_ext <- get_pysw(res_df, cover_type = 'exterior_cover')
+st_write(custom_circles_ext, file.path('GAZA', 'out', 'gaza_municipality_custom_circles.gpkg'))
 
 
 
-## save the results
-write(geo_queries_int, paste(queries_folder,"/",cntry_iso3,paste0("_loc_queries_for_cover_by_custom_locations_GADM",gadm_level,"_regions_interior.txt"),sep=""))
-write(geo_queries_ext, paste(queries_folder,"/",cntry_iso3,paste0("_loc_queries_for_cover_by_custom_locations_GADM",gadm_level,"_regions_exterior.txt"),sep=""))
+## 
+new_custom_circles_ext <- st_read('gaza_municipality_custom_circles.gpkg')
 
-save(res_list,  
-     file = paste(output_folder,"/",cntry_iso3,"_custom_locations_coverage_data.RData",sep=""))
+# add lat/long of centroids (with error when calculating centroid from WGS84)
+centroids <- sf::st_centroid(new_custom_circles_ext)
 
-# save map viz
-tmap_save(mapviz_ext$map_viz,paste(maps_folder,"/",cntry_iso3,"_GADM",gadm_level,"_custom_locations_coverage_map_exterior.html",sep=""),
-          selfcontained = FALSE)
-tmap_save(mapviz_int$map_viz,paste(maps_folder,"/",cntry_iso3,"_GADM",gadm_level,"_custom_locations_coverage_map_interior.html",sep=""),
-          selfcontained = FALSE)
-tmap_save(fb_map_ext,paste(maps_folder,"/",cntry_iso3,"_GADM",gadm_level,"_custom_locations_fb_map_exterior.png",sep=""))
-tmap_save(fb_map_int,paste(maps_folder,"/",cntry_iso3,"_GADM",gadm_level,"_custom_locations_fb_map_interior.png",sep=""))
+new_custom_circles_ext$lat <- sf::st_coordinates(centroids)[,'Y']
+new_custom_circles_ext$long <- sf::st_coordinates(centroids)[,'X']
+new_custom_circles_ext$radius <- 1
 
-tmap_mode("view")
-geo_queries_ext <- get_pysw(res_df, cover_type = 'exterior_cover')
+
+new_custom_circles_ext <- new_custom_circles_ext |> 
+  st_drop_geometry() |> 
+  mutate(geo_id=id) |> 
+  select(geo_id, lat, long, ptid, coverType, radius)
+
+geo_queries_ext <- get_mysw_geo_queries(new_custom_circles_ext, cover_type = 'exterior_cover',
+                                        location_type='recent', expanded_type=expanded,
+                                        country_code='PS', geo_source='HDX')
+
+
+write(geo_queries_ext, paste0("PS_loc_queries_for_cover_by_custom_locations_municipalities_exterior.txt"))
+
+
+
+
