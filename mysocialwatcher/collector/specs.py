@@ -67,7 +67,7 @@ def master_specs(country, regions=True, cities=False, custom_tesselation = '', l
 
     if custom_tesselation != '':
         specs['geo_locations'] = []
-        with open(custom_tesselation, "r", encoding='utf-8') as f:
+        with open(custom_tesselation, "r") as f:
             for line in f:
                 specs['geo_locations'].append(json.loads(line))
 
