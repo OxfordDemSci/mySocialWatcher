@@ -9,6 +9,10 @@ services:
       - ./israeli_conflict:/app/in
       - ./../../../data/stitch/israeli_conflict:/app/data
     build:
+      args:
+        sleep_time: 11
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
@@ -19,6 +23,66 @@ services:
       - ./gaza_cities:/app/in
       - ./../../../data/stitch/gaza_cities:/app/data
     build:
+      args:
+        sleep_time: 11
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
+  gaza_municipalities:
+    container_name: gaza_municipalities
+    volumes:
+      - ./gaza_municipalities:/app/in
+      - ./../../../data/stitch/gaza_municipalities:/app/data
+    build:
+      args:
+        sleep_time: 0
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
+  gaza_governorates:
+    container_name: gaza_governorates
+    volumes:
+      - ./gaza_governorates:/app/in
+      - ./../../../data/stitch/gaza_governorates:/app/data
+    build:
+      args:
+        sleep_time: 0
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
+  gaza_municipalities_homerecent:
+    container_name: gaza_municipalities_homerecent
+    volumes:
+      - ./gaza_municipalities_homerecent:/app/in
+      - ./../../../data/stitch/gaza_municipalities_homerecent:/app/data
+    build:
+      args:
+        sleep_time: 0
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
+  gaza_governorates_homerecent:
+    container_name: gaza_governorates_homerecent
+    volumes:
+      - ./gaza_governorates_homerecent:/app/in
+      - ./../../../data/stitch/gaza_governorates_homerecent:/app/data
+    build:
+      args:
+        sleep_time: 0
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
@@ -29,6 +93,10 @@ services:
       - ./gaza_cities_homerecent:/app/in
       - ./../../../data/stitch/gaza_cities_homerecent:/app/data
     build:
+      args:
+        sleep_time: 11
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
@@ -39,6 +107,10 @@ services:
       - ./westbank_cities:/app/in
       - ./../../../data/stitch/westbank_cities:/app/data
     build:
+      args:
+        sleep_time: 11
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: always
@@ -49,6 +121,10 @@ services:
       - ./israeli_cities:/app/in
       - ./../../../data/stitch/israeli_cities:/app/data
     build:
+      args:
+        sleep_time: 11
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: always
@@ -59,6 +135,10 @@ services:
       - ./lebanon_cities:/app/in
       - ./../../../data/stitch/lebanon_cities:/app/data
     build:
+      args:
+        sleep_time: 11
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: always

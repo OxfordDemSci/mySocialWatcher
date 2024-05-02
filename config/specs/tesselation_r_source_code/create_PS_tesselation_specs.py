@@ -2,9 +2,9 @@ import json
 import os
 from mysocialwatcher.collector import specs
 
-collection_name = 'gaza_municipality_tessellation'
-geo_level = 'municipalities'
-custom_tessellation_file ='./config/specs/tesselation_r_source_code/PS_loc_queries_for_cover_by_custom_locations_municipalities_exterior.txt'
+collection_name = 'gaza_governorates'
+geo_level = 'governorates'
+custom_tessellation_file =os.path.join('config', 'specs', 'tesselation_r_source_code', 'wd', 'GAZA', 'out', 'PS_loc_queries_for_cover_by_custom_locations_governorates.txt')
 for platform in ['facebook', 'instagram']:
     # platform= 'facebook'
         tess_specs = specs.master_specs(country=collection_name,
@@ -19,7 +19,7 @@ for platform in ['facebook', 'instagram']:
         else:
             idx = '2'
 
-        outdir = "./config/specs/examples/" + collection_name
+        outdir = os.path.join('config', 'specs', 'examples', collection_name)
 
         if not os.path.exists(outdir):
             os.makedirs(outdir)
