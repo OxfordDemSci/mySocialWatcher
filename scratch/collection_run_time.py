@@ -1,5 +1,7 @@
 from mysocialwatcher.collector.utils import estimate_run_time
 
+estimate_run_time(specs_dir='./docker/collectors/stitch/gaza_municipalities/specs', n_tokens=1, sleep_time=2)
+
 estimate_run_time(specs_dir='./docker/collectors/stitch/israeli_conflict/specs', n_tokens=2)
 
 estimate_run_time(specs_dir='./docker/collectors/stitch/israeli_cities/specs', n_tokens=4)
