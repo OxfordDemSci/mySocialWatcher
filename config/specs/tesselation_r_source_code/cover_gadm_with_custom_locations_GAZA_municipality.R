@@ -140,7 +140,7 @@ plot_fb <- function(mapviz, fb_df=fb){
 fb_map_int <- plot_fb(mapviz_int)
 fb_map_ext <- plot_fb(mapviz_ext)
 
-# save circles? ##############################
+# save circles
 custom_circles_ext <- show_custom_circles_covers_on_map(regions_geos = geo_adm2,
                                                         geos_covers = res_list,
                                                         invalid_locs = invalid_list,
@@ -155,8 +155,8 @@ st_write(custom_circles_ext, file.path('GAZA', 'out', 'gaza_municipality_custom_
 
 
 
-## 
-new_custom_circles_ext <- st_read('gaza_municipality_custom_circles.gpkg')
+# load manually edited circles 
+new_custom_circles_ext <- st_read(file.path('GAZA', 'out', 'gaza_governorates_custom_circles_final.gpkg'))
 
 # add lat/long of centroids (with error when calculating centroid from WGS84)
 centroids <- sf::st_centroid(new_custom_circles_ext)
@@ -165,18 +165,21 @@ new_custom_circles_ext$lat <- sf::st_coordinates(centroids)[,'Y']
 new_custom_circles_ext$long <- sf::st_coordinates(centroids)[,'X']
 new_custom_circles_ext$radius <- 1
 
+# identify coverType as "manual" to reflect manual editing
+new_custom_circles_ext$coverType <- 'manual'
 
+# remove unneeded columns
 new_custom_circles_ext <- new_custom_circles_ext |> 
   st_drop_geometry() |> 
   mutate(geo_id=id) |> 
   select(geo_id, lat, long, ptid, coverType, radius)
 
-geo_queries_ext <- get_mysw_geo_queries(new_custom_circles_ext, cover_type = 'exterior_cover',
+# get geo_locations as a text file
+geo_queries_ext <- get_mysw_geo_queries(new_custom_circles_ext, cover_type = 'manual',
                                         location_type='recent', expanded_type=expanded,
-                                        country_code='PS', geo_source='HDX')
+                                        country_code='PS', geo_source='HDX_OCHA')
 
-
-write(geo_queries_ext, paste0("PS_loc_queries_for_cover_by_custom_locations_municipalities_exterior.txt"))
+write(geo_queries_ext, file.path("GAZA", "out", "PS_loc_queries_for_cover_by_custom_locations_governorates.txt"))
 
 
 
