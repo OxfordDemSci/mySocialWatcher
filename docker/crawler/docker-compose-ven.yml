@@ -15,5 +15,5 @@ services:
     restart: on-failure
     deploy:
       mode: replicated
-      replicas: 4
+      replicas: 20
 
