@@ -2,9 +2,9 @@ import json
 import os
 from mysocialwatcher.collector import specs
 
-collection_name = 'gaza_governorates'
-geo_level = 'governorates'
-custom_tessellation_file =os.path.join('config', 'specs', 'tesselation_r_source_code', 'wd', 'GAZA', 'out', 'PS_loc_queries_for_cover_by_custom_locations_governorates.txt')
+collection_name = 'gaza_municipalities'
+geo_level = 'municipalities'
+custom_tessellation_file =os.path.join('config', 'specs', 'tesselation_r_source_code', 'wd', 'GAZA', 'out', 'PS_loc_queries_for_cover_by_custom_locations_municipalities.txt')
 for platform in ['facebook', 'instagram']:
     # platform= 'facebook'
         tess_specs = specs.master_specs(country=collection_name,

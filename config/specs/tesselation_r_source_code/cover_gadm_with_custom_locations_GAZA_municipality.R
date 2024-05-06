@@ -156,7 +156,7 @@ st_write(custom_circles_ext, file.path('GAZA', 'out', 'gaza_municipality_custom_
 
 
 # load manually edited circles 
-new_custom_circles_ext <- st_read(file.path('GAZA', 'out', 'gaza_governorates_custom_circles_final.gpkg'))
+new_custom_circles_ext <- st_read(file.path('GAZA', 'out', 'gaza_municipality_custom_circles_final.gpkg'))
 
 # add lat/long of centroids (with error when calculating centroid from WGS84)
 centroids <- sf::st_centroid(new_custom_circles_ext)
@@ -179,7 +179,7 @@ geo_queries_ext <- get_mysw_geo_queries(new_custom_circles_ext, cover_type = 'ma
                                         location_type='recent', expanded_type=expanded,
                                         country_code='PS', geo_source='HDX_OCHA')
 
-write(geo_queries_ext, file.path("GAZA", "out", "PS_loc_queries_for_cover_by_custom_locations_governorates.txt"))
+write(geo_queries_ext, file.path("GAZA", "out", "PS_loc_queries_for_cover_by_custom_locations_municipalities.txt"))
 
 
 
