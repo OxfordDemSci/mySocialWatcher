@@ -1,21 +1,8 @@
 #!/bin/bash
 
 # command line arguments
-server=$1
+local_folder=$1
+remote_folder=$1
 
-# sub-folders to copy
-folders=("config" "docker" "utils" "mysocialwatcher" "pysocialwatcher")
-
-for folder in ${folders[@]};
-do
-  scp -r ./$folder $server:~/mySocialWatcher/
-done
-
-# files to copy
-files=("README.md" "requirements.txt")
-
-for file in ${files[@]};
-do
-  scp ./$file $server:~/mySocialWatcher/
-done
-
+# rsync folder
+rsync -rvhe ssh --exclude-from='./utils/repo_to_server_exclude.txt' $local_folder $remote_folder
