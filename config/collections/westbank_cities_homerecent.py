@@ -1,10 +1,11 @@
 import os
 import json
 import pandas as pd
+import numpy as np
 
 # virtual machine and collection names
 vm = 'stitch'
-collection = 'gaza_cities_homerecent'
+collection = 'westbank_cities_homerecent'
 
 
 if __name__ == '__main__':
@@ -27,6 +28,10 @@ if __name__ == '__main__':
     credentials = master_credentials.loc[(master_credentials.vm == vm) &
                                          (master_credentials.collection == collection)]
 
+    # convert app to int
+    credentials = credentials.copy()
+    credentials['app'] = credentials['app'].astype(np.int64)
+
     # save to csv
     credentials.to_csv(credentials_path,
                        columns=['token', 'app'],
@@ -46,8 +51,8 @@ if __name__ == '__main__':
     # full city list
     ps_cities = pd.read_csv('config/specs/specs_explore/targets_csv/city.csv')
     ps_cities = ps_cities.loc[ps_cities['country_code'].eq('PS') &
-                              ps_cities['type'].eq('city') &
-                              ps_cities['region'].eq('Gaza Strip')]
+                              ps_cities['region'].eq('West Bank') &
+                              ps_cities['type'].eq('city')]
 
     #-- template specs --#
     specs_file = os.path.join(specs_template_path, 'PS_regions.json')
@@ -59,11 +64,11 @@ if __name__ == '__main__':
         specs = json.load(f)
     specs['name'] = collection
 
-    # location types
-    for i in range(len(specs['geo_locations'])):
-        specs['geo_locations'][i]['location_types'] = None
+    platforms = ['facebook', 'instagram']
+    languages = {'hebrew':29, 'arabic':28}
 
     # cities
+    specs['geo_locations'] = []
     for index, row in ps_cities.iterrows():
         specs['geo_locations'].append({
             "name": "cities",
@@ -84,15 +89,9 @@ if __name__ == '__main__':
     specs['ages_ranges'] = [
         {'min': 13}, {'min': 18}, {'min': 20}, {'min': 50}, {'min': 60}, {'min': 65},
         {'min': 13, 'max': 19}, {'min': 15, 'max': 49}, {'min': 15, 'max': 64}, {'min': 18, 'max': 34},
-        {'min': 20, 'max': 59}, {'min': 20, 'max': 49}, {'min': 20, 'max': 29},
-        {'min': 30, 'max': 39}, {'min': 40, 'max': 49}, {'min': 50, 'max': 59},
-        {'min': 15, 'max': 19}, {'min': 20, 'max': 24}, {'min': 25, 'max': 29}, {'min': 30, 'max': 34},
-        {'min': 35, 'max': 39}, {'min': 40, 'max': 44}, {'min': 45, 'max': 49}, {'min': 50, 'max': 54},
-        {'min': 55, 'max': 59}, {'min': 60, 'max': 64}
-    ]
-
-    platforms = ['facebook', 'instagram']
-    languages = {'hebrew': 29, 'arabic': 28}
+        {'min': 20, 'max': 59}, {'min': 20, 'max': 49},
+        {'min': 20, 'max': 29}, {'min': 30, 'max': 39}, {'min': 40, 'max': 49}, {'min': 50, 'max': 59},
+        {'min': 60, 'max': 64}]
 
     i = 0
     for platform in platforms:

@@ -1,11 +1,11 @@
 import os
 import json
 import pandas as pd
+import numpy as np
 
 # virtual machine and collection names
 vm = 'stitch'
-collection = 'gaza_cities_homerecent'
-
+collection = 'israeli_cities_homerecent'
 
 if __name__ == '__main__':
 
@@ -27,6 +27,10 @@ if __name__ == '__main__':
     credentials = master_credentials.loc[(master_credentials.vm == vm) &
                                          (master_credentials.collection == collection)]
 
+    # convert app to int
+    credentials = credentials.copy()
+    credentials['app'] = credentials['app'].astype(np.int64)
+
     # save to csv
     credentials.to_csv(credentials_path,
                        columns=['token', 'app'],
@@ -44,13 +48,13 @@ if __name__ == '__main__':
         os.remove(os.path.join(specs_dir, f))
 
     # full city list
-    ps_cities = pd.read_csv('config/specs/specs_explore/targets_csv/city.csv')
-    ps_cities = ps_cities.loc[ps_cities['country_code'].eq('PS') &
-                              ps_cities['type'].eq('city') &
-                              ps_cities['region'].eq('Gaza Strip')]
+    cities = pd.read_csv('config/specs/specs_explore/targets_csv/city.csv')
+    cities = cities.loc[cities['country_code'].eq('IL') &
+                        cities['type'].eq('city')]
+    cities.drop_duplicates(subset='key', keep=False, inplace=True)
 
-    #-- template specs --#
-    specs_file = os.path.join(specs_template_path, 'PS_regions.json')
+    # -- template specs --#
+    specs_file = os.path.join(specs_template_path, 'IL_regions.json')
     if not os.path.exists(specs_file):
         print('Specs template does not exist: ' + specs_file)
 
@@ -59,12 +63,12 @@ if __name__ == '__main__':
         specs = json.load(f)
     specs['name'] = collection
 
-    # location types
-    for i in range(len(specs['geo_locations'])):
-        specs['geo_locations'][i]['location_types'] = None
+    platforms = ['facebook', 'instagram']
+    languages = {'hebrew': 29, 'arabic': 28}
 
     # cities
-    for index, row in ps_cities.iterrows():
+    specs['geo_locations'] = []
+    for index, row in cities.iterrows():
         specs['geo_locations'].append({
             "name": "cities",
             "values": [
@@ -84,28 +88,21 @@ if __name__ == '__main__':
     specs['ages_ranges'] = [
         {'min': 13}, {'min': 18}, {'min': 20}, {'min': 50}, {'min': 60}, {'min': 65},
         {'min': 13, 'max': 19}, {'min': 15, 'max': 49}, {'min': 15, 'max': 64}, {'min': 18, 'max': 34},
-        {'min': 20, 'max': 59}, {'min': 20, 'max': 49}, {'min': 20, 'max': 29},
-        {'min': 30, 'max': 39}, {'min': 40, 'max': 49}, {'min': 50, 'max': 59},
-        {'min': 15, 'max': 19}, {'min': 20, 'max': 24}, {'min': 25, 'max': 29}, {'min': 30, 'max': 34},
-        {'min': 35, 'max': 39}, {'min': 40, 'max': 44}, {'min': 45, 'max': 49}, {'min': 50, 'max': 54},
-        {'min': 55, 'max': 59}, {'min': 60, 'max': 64}
-    ]
-
-    platforms = ['facebook', 'instagram']
-    languages = {'hebrew': 29, 'arabic': 28}
+        {'min': 20, 'max': 59}, {'min': 20, 'max': 49},
+        {'min': 20, 'max': 29}, {'min': 30, 'max': 39}, {'min': 40, 'max': 49}, {'min': 50, 'max': 59},
+        {'min': 60, 'max': 64}]
 
     i = 0
     for platform in platforms:
         i += 1
 
-        #-- all languages --#
+        # -- all languages --#
         specs["publisher_platforms"] = [platform]
         specs['languages'] = [None]
 
         file_out = os.path.join(specs_dir, '_'.join([str(i).zfill(2), platform, 'all']) + '.json')
         with open(file_out, "w") as f:
             f.write(json.dumps(specs))
-
 
         # specific languages
         for language in languages.keys():
@@ -118,4 +115,3 @@ if __name__ == '__main__':
             file_out = os.path.join(specs_dir, '_'.join([str(i).zfill(2), platform, language]) + '.json')
             with open(file_out, "w") as f:
                 f.write(json.dumps(specs))
-
