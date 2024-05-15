@@ -1,6 +1,7 @@
 import os
 import json
 import pandas as pd
+import shutil
 import numpy as np
 
 # virtual machine and collection names
@@ -15,6 +16,7 @@ if __name__ == '__main__':
     specs_template_path = os.path.join('config', 'specs', 'templates')
     out_dir = os.path.join('docker', 'collectors', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
+    yagmail_path = os.path.join('config', 'private', 'yagmail.csv')
 
     # ---- credentials ---- #
 
@@ -37,6 +39,10 @@ if __name__ == '__main__':
                        columns=['token', 'app'],
                        header=False,
                        index=False)
+
+    # ---- yagmail credential ---- #
+    if os.path.exists(yagmail_path):
+        shutil.copy2(yagmail_path, os.path.join(out_dir, 'yagmail.csv'))
 
     # ---- collection specs ---- #
 

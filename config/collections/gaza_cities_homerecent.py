@@ -1,6 +1,8 @@
 import os
 import json
+import shutil
 import pandas as pd
+import numpy as np
 
 # virtual machine and collection names
 vm = 'stitch'
@@ -14,6 +16,7 @@ if __name__ == '__main__':
     specs_template_path = os.path.join('config', 'specs', 'templates')
     out_dir = os.path.join('docker', 'collectors', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
+    yagmail_path = os.path.join('config', 'private', 'yagmail.csv')
 
     # ---- credentials ---- #
 
@@ -27,11 +30,19 @@ if __name__ == '__main__':
     credentials = master_credentials.loc[(master_credentials.vm == vm) &
                                          (master_credentials.collection == collection)]
 
+    # convert app to int
+    credentials = credentials.copy()
+    credentials['app'] = credentials['app'].astype(np.int64)
+
     # save to csv
     credentials.to_csv(credentials_path,
                        columns=['token', 'app'],
                        header=False,
                        index=False)
+
+    # ---- yagmail credential ---- #
+    if os.path.exists(yagmail_path):
+        shutil.copy2(yagmail_path, os.path.join(out_dir, 'yagmail.csv'))
 
     # ---- collection specs ---- #
 

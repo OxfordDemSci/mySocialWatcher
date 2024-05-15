@@ -40,6 +40,10 @@ if __name__ == '__main__':
                        header=False,
                        index=False)
 
+    # ---- yagmail credential ---- #
+    if os.path.exists(yagmail_path):
+        shutil.copy2(yagmail_path, os.path.join(out_dir, 'yagmail.csv'))
+
     # ---- collection specs ---- #
 
     # output directory
@@ -54,6 +58,3 @@ if __name__ == '__main__':
     for spec in specs:
         shutil.copy(os.path.join(specs_template_path, spec), os.path.join(specs_dir, spec))
 
-    # ---- yagmail credential ---- #
-    if os.path.exists(yagmail_path):
-        shutil.copy2(yagmail_path, os.path.join(out_dir, 'yagmail.csv'))
