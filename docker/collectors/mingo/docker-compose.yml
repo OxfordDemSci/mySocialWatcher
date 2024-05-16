@@ -6,6 +6,10 @@ services:
       - ./venezuelan_exodus1:/app/in
       - ./../../../data/mingo/venezuelan_exodus1:/app/data
     build:
+      args:
+        sleep_time: 11
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: unless-stopped
@@ -16,6 +20,10 @@ services:
       - ./venezuelan_exodus2:/app/in
       - ./../../../data/mingo/venezuelan_exodus2:/app/data
     build:
+      args:
+        sleep_time: 11
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: unless-stopped
