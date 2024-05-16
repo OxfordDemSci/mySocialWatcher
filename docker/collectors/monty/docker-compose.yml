@@ -7,7 +7,7 @@ services:
       - ./../../../data/monty/ukraine_admin2_tessellation_homerecent:/app/data
     build:
       args:
-        sleep_time: 0
+        sleep_time: 1
         email_notification_enable: "True"
         email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
       context: ./../../../
