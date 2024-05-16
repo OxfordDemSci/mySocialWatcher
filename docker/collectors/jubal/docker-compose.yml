@@ -7,7 +7,7 @@ services:
       - ./../../../data/jubal/baseline_homerecent:/app/data
     build:
       args:
-        sleep_time: 0
+        sleep_time: 2
         email_notification_enable: "True"
         email_receiver: "douglas.leasure@demography.ox.ac.uk"
       context: ./../../../
@@ -21,7 +21,7 @@ services:
       - ./../../../data/jubal/baseline_priority_homerecent:/app/data
     build:
       args:
-        sleep_time: 0
+        sleep_time: 2
         email_notification_enable: "True"
         email_receiver: "douglas.leasure@demography.ox.ac.uk"
       context: ./../../../
