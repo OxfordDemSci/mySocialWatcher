@@ -72,7 +72,7 @@ if __name__ == '__main__':
 
     # location types
     for i in range(len(specs['geo_locations'])):
-        specs['geo_locations'][i]['location_types'] = None
+        del specs['geo_locations'][i]['location_types']
 
     # cities
     for index, row in ps_cities.iterrows():

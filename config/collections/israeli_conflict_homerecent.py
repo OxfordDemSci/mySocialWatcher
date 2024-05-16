@@ -84,7 +84,7 @@ if __name__ == '__main__':
 
             # location types
             for i in range(len(specs['geo_locations'])):
-                specs['geo_locations'][i]['location_types'] = None
+                del specs['geo_locations'][i]['location_types']
 
             # age groups
             specs['ages_ranges'] = [
@@ -116,6 +116,10 @@ if __name__ == '__main__':
                 with open(specs_file) as f:
                     specs = json.load(f)
                 specs['name'] = collection
+
+                # location types
+                for i in range(len(specs['geo_locations'])):
+                    del specs['geo_locations'][i]['location_types']
 
                 # age groups
                 specs['ages_ranges'] = [
