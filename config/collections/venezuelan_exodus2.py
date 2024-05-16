@@ -4,6 +4,7 @@ import copy
 import json
 import shutil
 import pandas as pd
+import numpy as np
 
 # virtual machine and collection
 vm = 'mingo'
@@ -31,6 +32,10 @@ if __name__ == '__main__':
     credentials = master_credentials.loc[(master_credentials.vm == vm) &
                                          (master_credentials.collection == collection)]
 
+    # convert app to int
+    credentials = credentials.copy()
+    credentials['app'] = credentials['app'].astype(np.int64)
+
     # save to csv
     credentials.to_csv(credentials_path,
                        columns=['token', 'app'],
@@ -50,6 +55,11 @@ if __name__ == '__main__':
     # load template json
     with open(specs_template_path) as f:
         specs_template = json.load(f)
+
+    # location types
+    for i in range(len(specs_template['geo_locations'])):
+        if 'location_types' in specs_template['geo_locations'][i].keys():
+            del specs_template['geo_locations'][i]['location_types']
 
     # modify template json
     # (no modification shown here other than defining the name of the collection)
