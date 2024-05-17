@@ -97,7 +97,7 @@ if __name__ == '__main__':
             i_count += 1
 
             specs['languages'] = [None]
-            specs['behaviour'] = [
+            specs['behavior'] = [
                 {
                     "or": [6025000815983],
                     "name": "Lived in Russia (Formerly Expats - Russia)"
