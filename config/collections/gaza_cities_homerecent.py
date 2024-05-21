@@ -1,6 +1,8 @@
 import os
 import json
+import shutil
 import pandas as pd
+import numpy as np
 
 # virtual machine and collection names
 vm = 'stitch'
@@ -14,6 +16,7 @@ if __name__ == '__main__':
     specs_template_path = os.path.join('config', 'specs', 'templates')
     out_dir = os.path.join('docker', 'collectors', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
+    yagmail_path = os.path.join('config', 'private', 'yagmail.csv')
 
     # ---- credentials ---- #
 
@@ -27,11 +30,19 @@ if __name__ == '__main__':
     credentials = master_credentials.loc[(master_credentials.vm == vm) &
                                          (master_credentials.collection == collection)]
 
+    # convert app to int
+    credentials = credentials.copy()
+    credentials['app'] = credentials['app'].astype(np.int64)
+
     # save to csv
     credentials.to_csv(credentials_path,
                        columns=['token', 'app'],
                        header=False,
                        index=False)
+
+    # ---- yagmail credential ---- #
+    if os.path.exists(yagmail_path):
+        shutil.copy2(yagmail_path, os.path.join(out_dir, 'yagmail.csv'))
 
     # ---- collection specs ---- #
 
@@ -61,7 +72,7 @@ if __name__ == '__main__':
 
     # location types
     for i in range(len(specs['geo_locations'])):
-        specs['geo_locations'][i]['location_types'] = None
+        del specs['geo_locations'][i]['location_types']
 
     # cities
     for index, row in ps_cities.iterrows():
@@ -81,7 +92,15 @@ if __name__ == '__main__':
         })
 
     # age groups
-    specs['ages_ranges'].append({'min': 18, 'max': 34})
+    specs['ages_ranges'] = [
+        {'min': 13}, {'min': 18}, {'min': 20}, {'min': 50}, {'min': 60}, {'min': 65},
+        {'min': 13, 'max': 19}, {'min': 15, 'max': 49}, {'min': 15, 'max': 64}, {'min': 18, 'max': 34},
+        {'min': 20, 'max': 59}, {'min': 20, 'max': 49}, {'min': 20, 'max': 29},
+        {'min': 30, 'max': 39}, {'min': 40, 'max': 49}, {'min': 50, 'max': 59},
+        {'min': 15, 'max': 19}, {'min': 20, 'max': 24}, {'min': 25, 'max': 29}, {'min': 30, 'max': 34},
+        {'min': 35, 'max': 39}, {'min': 40, 'max': 44}, {'min': 45, 'max': 49}, {'min': 50, 'max': 54},
+        {'min': 55, 'max': 59}, {'min': 60, 'max': 64}
+    ]
 
     platforms = ['facebook', 'instagram']
     languages = {'hebrew': 29, 'arabic': 28}

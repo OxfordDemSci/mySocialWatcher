@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VM="jubal"
-COLLECTIONS=("baseline")
+COLLECTIONS=("baseline_homerecent" "baseline_priority_homerecent")
 DIR="/home/ubuntu/mySocialWatcher"
 
 # cron
@@ -16,7 +16,7 @@ done
 
 # docker
 cd ${DIR}/docker/collectors/${VM}
-docker-compose up --build --no-start
+docker compose up --build --no-start
 
 unset VM
 unset COLLECTIONS
