@@ -1,0 +1,4 @@
+id,name,type,path,description,real_time_cluster,audience_size_lower_bound,audience_size_upper_bound
+6107813079183,Household income: top 5% of ZIP codes (US),income,['Household income: top 5% of ZIP codes (US)'],People who live in the top 5% of US ZIP codes by average household income based on publicly available information,False,10078165,11851923
+6107813551783,Household income: top 10% of ZIP codes (US),income,['Household income: top 10% of ZIP codes (US)'],People who live in the top 10% of US ZIP codes by average household income based on publicly available information,False,20991258,24685720
+6107813553183,Household income: top 10%-25% of ZIP codes (US),income,['Household income: top 10%-25% of ZIP codes (US)'],People who live in the top 10%-25% of US ZIP codes by average household income based on publicly available information.,False,26534352,31204398

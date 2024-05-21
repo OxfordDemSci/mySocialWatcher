@@ -1,0 +1,40 @@
+{
+    "data": [
+        {
+            "id": "6107813079183",
+            "name": "Household income: top 5% of ZIP codes (US)",
+            "type": "income",
+            "path": [
+                "Household income: top 5% of ZIP codes (US)"
+            ],
+            "description": "People who live in the top 5% of US ZIP codes by average household income based on publicly available information",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 10078165,
+            "audience_size_upper_bound": 11851923
+        },
+        {
+            "id": "6107813551783",
+            "name": "Household income: top 10% of ZIP codes (US)",
+            "type": "income",
+            "path": [
+                "Household income: top 10% of ZIP codes (US)"
+            ],
+            "description": "People who live in the top 10% of US ZIP codes by average household income based on publicly available information",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 20991258,
+            "audience_size_upper_bound": 24685720
+        },
+        {
+            "id": "6107813553183",
+            "name": "Household income: top 10%-25% of ZIP codes (US)",
+            "type": "income",
+            "path": [
+                "Household income: top 10%-25% of ZIP codes (US)"
+            ],
+            "description": "People who live in the top 10%-25% of US ZIP codes by average household income based on publicly available information.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 26534352,
+            "audience_size_upper_bound": 31204398
+        }
+    ]
+}
