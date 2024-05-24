@@ -1,0 +1,217 @@
+{
+    "name": "MOZ",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2552,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2552,
+                "name": "Cabo Delgado"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2553,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2553,
+                "name": "Gaza"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2554,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2554,
+                "name": "Inhambane"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2561,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2561,
+                "name": "Manica"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4679,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4679,
+                "name": "Maputo"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4679,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4679,
+                "name": "Maputo City"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2557,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2557,
+                "name": "Nampula"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2556,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2556,
+                "name": "Sofala"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2559,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2559,
+                "name": "Tete"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2560,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2560,
+                "name": "Zambezia"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "MZ"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}
