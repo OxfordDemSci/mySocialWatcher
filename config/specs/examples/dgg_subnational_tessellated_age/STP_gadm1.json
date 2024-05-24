@@ -233,13 +233,10 @@
                     "distance_unit": "kilometer"
                 }
             ],
-            "location_types": [
-                "home"
-            ],
             "pySocialWatcherReference": {
                 "geo_id": "STP.1_1",
-                " coverType": "interior_cover",
-                " expanded": "FALSE"
+                "coverType": "interior_cover",
+                "expanded": "FALSE"
             },
             "country_code": "ST"
         },
@@ -744,9 +741,6 @@
                     "radius": 2,
                     "distance_unit": "kilometer"
                 }
-            ],
-            "location_types": [
-                "home"
             ],
             "pySocialWatcherReference": {
                 "geo_id": "STP.2_1",
