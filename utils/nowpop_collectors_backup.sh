@@ -2,7 +2,7 @@
 
 # define variables
 server=nowpop_collectors
-base_dir=~/ndph/J/backup/${server}
+base_dir=/home/doug/ndph/DemSci/data/db-backup/${server}
 past_backups=($(ls ${base_dir}))
 current_date=$(date +"%Y%m%d")
 last_backup=${past_backups[-1]}
