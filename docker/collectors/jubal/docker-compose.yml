@@ -1,30 +1,27 @@
-# docker-compose to deploy one or multiple collectors (i.e. services)
-version: '3.3'
-
 services:
 
-  baseline:
-    container_name: baseline
+  baseline_homerecent:
+    container_name: baseline_homerecent
     volumes:
-      - ./baseline:/app/in
-      - ./../../../data/jubal/baseline:/app/data
+      - ./baseline_homerecent:/app/in
+      - ./../../../data/jubal/baseline_homerecent:/app/data
     build:
       args:
-        sleep_time: 0
+        sleep_time: 2
         email_notification_enable: "True"
         email_receiver: "douglas.leasure@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
-  baseline_priority:
-    container_name: baseline_priority
+  baseline_priority_homerecent:
+    container_name: baseline_priority_homerecent
     volumes:
-      - ./baseline_priority:/app/in
-      - ./../../../data/jubal/baseline_priority:/app/data
+      - ./baseline_priority_homerecent:/app/in
+      - ./../../../data/jubal/baseline_priority_homerecent:/app/data
     build:
       args:
-        sleep_time: 0
+        sleep_time: 2
         email_notification_enable: "True"
         email_receiver: "douglas.leasure@demography.ox.ac.uk"
       context: ./../../../

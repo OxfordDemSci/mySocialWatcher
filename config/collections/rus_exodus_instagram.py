@@ -2,6 +2,7 @@ import os
 import shutil
 import json
 import pandas as pd
+import numpy as np
 
 # virtual machine and collection
 vm = 'niska'
@@ -15,6 +16,11 @@ if __name__ == '__main__':
     specs_template_path = os.path.join('config', 'specs', 'templates')
     out_dir = os.path.join('docker', 'collectors', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
+    yagmail_path = os.path.join('config', 'private', 'yagmail.csv')
+
+    # ---- yagmail credential ---- #
+    if os.path.exists(yagmail_path):
+        shutil.copy2(yagmail_path, os.path.join(out_dir, 'yagmail.csv'))
 
     # ---- credentials ---- #
 
@@ -24,6 +30,10 @@ if __name__ == '__main__':
     # filter vm and collection
     credentials = master_credentials.loc[(master_credentials.vm == vm) &
                                          (master_credentials.collection == collection)]
+
+    # convert app to int
+    credentials = credentials.copy()
+    credentials['app'] = credentials['app'].astype(np.int64)
 
     # save to csv
     credentials.to_csv(os.path.join(out_dir, 'credentials.csv'),
@@ -59,7 +69,8 @@ if __name__ == '__main__':
 
             # location types
             for i in range(len(specs['geo_locations'])):
-                specs['geo_locations'][i]['location_types'] = ['recent', 'home']
+                if 'location_types' in specs['geo_locations'][i].keys():
+                    del specs['geo_locations'][i]['location_types']
 
             # platform
             specs["publisher_platforms"] = [platform]
@@ -86,7 +97,7 @@ if __name__ == '__main__':
             i_count += 1
 
             specs['languages'] = [None]
-            specs['behaviour'] = [
+            specs['behavior'] = [
                 {
                     "or": [6025000815983],
                     "name": "Lived in Russia (Formerly Expats - Russia)"

@@ -1,0 +1,88 @@
+{
+    "data": [
+        {
+            "id": "6002714398372",
+            "name": "Parents (All)",
+            "type": "family_statuses",
+            "path": [
+                "Parents (All)"
+            ],
+            "description": "People who are likely to be parents",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 248357808,
+            "audience_size_upper_bound": 292068783
+        },
+        {
+            "id": "6023005372383",
+            "name": "Parents (up to 12 months)",
+            "type": "family_statuses",
+            "path": [
+                "Parents (up to 12 months)"
+            ],
+            "description": "People who are likely to be parents with children aged up to 12 months.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4371114,
+            "audience_size_upper_bound": 5140431
+        },
+        {
+            "id": "6023005458383",
+            "name": "Parents with toddlers (01-02 years)",
+            "type": "family_statuses",
+            "path": [
+                "Parents with toddlers (01-02 years)"
+            ],
+            "description": "People who are likely to be parents with toddlers",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2791870,
+            "audience_size_upper_bound": 3283240
+        },
+        {
+            "id": "6023005529383",
+            "name": "Parents with preschoolers (03-05 years)",
+            "type": "family_statuses",
+            "path": [
+                "Parents with preschoolers (03-05 years)"
+            ],
+            "description": "People who are likely to be parents with preschoolers",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4548094,
+            "audience_size_upper_bound": 5348559
+        },
+        {
+            "id": "6023005570783",
+            "name": "Parents with early school-age children (06-08 years)",
+            "type": "family_statuses",
+            "path": [
+                "Parents with early school-age children (06-08 years)"
+            ],
+            "description": "People who are likely to be parents with early school-age children",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 7223893,
+            "audience_size_upper_bound": 8495299
+        },
+        {
+            "id": "6023005681983",
+            "name": "Parents with teenagers (13-17 years)",
+            "type": "family_statuses",
+            "path": [
+                "Parents with teenagers (13-17 years)"
+            ],
+            "description": "People who are likely to be parents with teenagers",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 20892870,
+            "audience_size_upper_bound": 24570016
+        },
+        {
+            "id": "6023080302983",
+            "name": "Parents with preteens (09-12 years)",
+            "type": "family_statuses",
+            "path": [
+                "Parents with preteens (09-12 years)"
+            ],
+            "description": "People who are likely to be parents with preteens",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 9272630,
+            "audience_size_upper_bound": 10904613
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+id,name,type,path,description,real_time_cluster,audience_size_lower_bound,audience_size_upper_bound
+6002714398172,Newlywed (1 year),life_events,['Newlywed (1 year)'],People who have been married for less than 1 year,False,14187285,16684248
+6002714398772,Newly-engaged (6 months),life_events,['Newly-engaged (6 months)'],People who have been engaged for less than 6 months,False,2484843,2922176
+6002737124172,Upcoming birthday,life_events,"['Birthday', 'Upcoming birthday']",People who are going to have their birthday within one week,True,43978229,51718398
+6003054185372,Recently moved,life_events,['Recently moved'],People who have updated their profile with a new current city in the last 6 months,False,728102,856249
+6003053984972,Long-distance relationship,life_events,['Long-distance relationship'],People who are in a long-distance relationship,False,8675754,10202687
+6003053860372,Away from hometown,life_events,['Away from hometown'],People who are away from their hometowns,False,133035116,156449297
+6003053857372,Away from family,life_events,['Away from family'],People who are away from their family,False,132990029,156396275
+6003050226972,Newlywed (6 months),life_events,['Newlywed (6 months)'],People who have been married for less than 6 months,False,7733695,9094826
+6003050210972,Newly engaged (1 year),life_events,['Newly engaged (1 year)'],People who have been engaged for less than 1 year,False,4033234,4743084
+6005232221572,New relationship,life_events,['New relationship'],People who have updated their profile with a new relationship in the last 6 months,False,2037931,2396608
+6005149512172,New job,life_events,['New job'],People who have updated their profile with a new job position in the last 6 months,False,115497,135825
+6012631862383,Newly engaged (3 months),life_events,['Newly engaged (3 months)'],People who have been engaged for less than 3 months,False,1411437,1659850
+6013133420583,Newlywed (3 months),life_events,['Newlywed (3 months)'],People who have been married for less than 3 months,False,4287172,5041715
+6017476616183,Anniversary within 30 days,life_events,"['Anniversary', 'Anniversary within 30 days']","People with a relationship anniversary (marriage, domestic partnership, etc.) occurring within the next 30 days",False,5335784,6274883
+6018399723983,Anniversary within 31-60 Days,life_events,"['Anniversary', 'Anniversary within 31-60 Days']","People with a relationship anniversary (marriage, domestic partnership, etc.) occurring within the next 31- 60 days",False,7465059,8778910
+6048267235783,Birthday in January,life_events,"['Birthday', 'Birthday Month', 'Birthday in January']",People who have a birthday in January,False,223427448,262750679
+6049083267183,Birthday in February,life_events,"['Birthday', 'Birthday Month', 'Birthday in February']",People who have a birthday in February,False,151323742,177956721
+6048026294583,Birthday in March,life_events,"['Birthday', 'Birthday Month', 'Birthday in March']",People who have a birthday in March,False,159266588,187297508
+6048026275783,Birthday in April,life_events,"['Birthday', 'Birthday Month', 'Birthday in April']",People who have a birthday in April,False,157996392,185803757
+6048026061783,Birthday in May,life_events,"['Birthday', 'Birthday Month', 'Birthday in May']",People who have a birthday in May,False,166803063,196160403
+6048026229983,Birthday in June,life_events,"['Birthday', 'Birthday Month', 'Birthday in June']",People who have a birthday in June,False,148077970,174139693
+6048808449583,Birthday in July,life_events,"['Birthday', 'Birthday Month', 'Birthday in July']",People who have a birthday in July,False,150584101,177086903
+6048810966183,Birthday in August,life_events,"['Birthday', 'Birthday Month', 'Birthday in August']",People with a birthday in August,False,154477861,181665965
+6048810961183,Birthday in September,life_events,"['Birthday', 'Birthday Month', 'Birthday in September']",People with a birthday in September,False,143319839,168544131
+6048810950583,Birthday in October,life_events,"['Birthday', 'Birthday Month', 'Birthday in October']",People with a birthday in October,False,150927063,177490227
+6048810938183,Birthday in November,life_events,"['Birthday', 'Birthday Month', 'Birthday in November']",People with a birthday in November,False,138850704,163288428
+6048810914583,Birthday in December,life_events,"['Birthday', 'Birthday Month', 'Birthday in December']",People with a birthday in December,False,177845822,209146687
+6203619820983,Friends of Recently Moved,life_events,"['Friends of', 'Friends of Recently Moved']",Friends of people who have moved in the past 30 days,False,998831088,1174625360
+6203620854183,Friends of people with birthdays in a month,life_events,"['Friends of', 'Friends of people with birthdays in a month']",Friends of people with a birthday in 7-30 days,False,1963655743,2309259154
+6203621025983,Friends of Women with a Birthday in 7-30 days,life_events,"['Friends of', 'Friends of Women with a Birthday in 7-30 days']",Friends of Women with a Birthday in 7-30 days,False,1753627332,2062265743
+6203621119983,Friends of Men with a Birthday in 7-30 days,life_events,"['Friends of', 'Friends of Men with a Birthday in 7-30 days']",Friends of Men with a Birthday in 7-30 days,False,1840766595,2164741516
+6203621218383,Friends of people with birthdays in a week,life_events,"['Friends of', 'Friends of people with birthdays in a week']",Friends of people with a birthday in 0-7 days,False,1775472775,2087955984
+6203621325983,Friends of Women with a Birthday in 0-7 days,life_events,"['Friends of', 'Friends of Women with a Birthday in 0-7 days']",Friends of Women with a Birthday in 0-7 days,False,1448446517,1703373104
+6203621472783,Friends of Men with a Birthday in 0-7 days,life_events,"['Friends of', 'Friends of Men with a Birthday in 0-7 days']",Friends of Men with a Birthday in 0-7 days,False,1573595821,1850548686
