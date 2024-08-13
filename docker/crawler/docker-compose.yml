@@ -1,6 +1,3 @@
-# docker-compose to deploy multiple collectors
-version: '3.3'
-
 services:
 
   crawler:
@@ -13,4 +10,3 @@ services:
       context: ./../../
       dockerfile: ./docker/crawler/Dockerfile
     restart: on-failure
-
