@@ -127,3 +127,19 @@ interest = interest['data']
 interest.keys()
 general = pd.DataFrame.from_dict(interest['general_interest']['list_result'])
 general.to_csv('./config/specs/specs_explore/tiktok_interest_list.csv')
+
+# carrier
+url = 'https://business-api.tiktok.com/open_api/v1.3/tool/carrier/'
+
+headers = {
+    'Access-Token': access_token
+}
+
+params = {
+    'advertiser_id': '7381489555305775105'
+}
+
+carreer = requests.get(url, headers=headers, params=params)
+carreer = carreer.json()['data']
+carreer = pd.DataFrame.from_dict(carreer['countries']['carriers'])
+carreer.to_csv('./config/specs/specs_explore/tiktok_mnos.csv')
