@@ -3,7 +3,7 @@ import json
 import os
 
 import requests
-import pandas
+import pandas as pd
 from six import string_types
 from six.moves.urllib.parse import urlencode, urlunparse  # noqa
 from dotenv import load_dotenv
@@ -108,3 +108,22 @@ params = {
 
 response = requests.get(url, headers=headers, params=params)
 region = response.json()
+
+# interest
+url = 'https://business-api.tiktok.com/open_api/v1.3/targeting/search/'
+
+headers = {
+    'Access-Token': access_token,
+    'Content-Type': 'application/json'
+}
+params = {
+    'advertiser_id': '7381489555305775105',
+    "targeting_type": "INTEREST_AND_BEHAVIOR"
+}
+
+interest = requests.get(url, headers=headers, params=params)
+interest = interest.json()
+interest = interest['data']
+interest.keys()
+general = pd.DataFrame.from_dict(interest['general_interest']['list_result'])
+general.to_csv('./config/specs/specs_explore/tiktok_interest_list.csv')
