@@ -29,7 +29,7 @@ time_wait = 0 # waits 5 minutes between tries
 countries_to_try = ['AD', 'AE', 'AG', 'AI', 'AS', 'AT', 'AU', 'AW', 'BB', 'BE', 'BH', 'BL', 'BM', 'BN', 'BQ', 'BS', 'CA', 'CH',
                     'CK', 'CL', 'CN', 'CW', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FJ', 'FK', 'FO', 'FR', 'GB', 'GG',
                     'GI', 'GL', 'GP', 'GR', 'GU', 'HK', 'HR', 'HU', 'IE', 'IL', 'IM', 'IS', 'IT', 'JE', 'JP', 'KI', 'KN', 'KR',
-                    'KW', 'KY', 'LI', 'LT', 'LU', 'LV', 'MC', 'MF', 'MH', 'MO', 'MP', 'MQ', 'MS', 'MT', 'MV', 'NC', 'NL', 'NO',
+                    'KW', 'KY', 'LI', 'LT', 'LU', 'LV', 'MC', 'MF', 'MH', 'MO', 'MQ', 'MS', 'MT', 'MV', 'NC', 'NL', 'NO',
                     'NR', 'NZ', 'OM', 'PA', 'PF', 'PG', 'PL', 'PM', 'PR', 'PT', 'QA', 'RE', 'RO', 'SA', 'SE', 'SG', 'SH', 'SI',
                     'SJ', 'SK', 'SM', 'SX', 'TC', 'TT', 'TW', 'US', 'UY', 'VG', 'VI', 'WF', 'XK', 'YT']
 ##
