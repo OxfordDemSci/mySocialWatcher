@@ -170,9 +170,9 @@ new_custom_circles_ext$coverType <- 'manual'
 
 # remove unneeded columns
 new_custom_circles_ext <- new_custom_circles_ext |> 
-  st_drop_geometry() |> 
-  mutate(geo_id=id) |> 
-  select(geo_id, lat, long, ptid, coverType, radius)
+  sf::st_drop_geometry() |> 
+  dplyr::mutate(geo_id=id) |> 
+  dplyr::select(geo_id, lat, long, ptid, coverType, radius)
 
 # get geo_locations as a text file
 geo_queries_ext <- get_mysw_geo_queries(new_custom_circles_ext, cover_type = 'manual',
