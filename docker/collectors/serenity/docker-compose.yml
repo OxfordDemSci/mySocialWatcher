@@ -1,0 +1,16 @@
+services:
+
+  global_migration:
+    container_name: global_migration
+    volumes:
+      - ./global_migration:/app/in
+      - ./../../../data/serenity/global_migration:/app/data
+    build:
+      args:
+          sleep_time: 11
+          email_notification_enable: "True"
+          email_receiver: "douglas.leasure@demography.ox.ac.uk,daniel.valdenegro@demography.ox.ac.uk"
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: unless-stopped
+
