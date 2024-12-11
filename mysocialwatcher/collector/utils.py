@@ -60,7 +60,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 # need to config logging before importing from pysocialwatcher, else its logger config will take priority
-# from pysocialwatcher.utils import get_all_combinations_from_input
+from pysocialwatcher.utils import get_all_combinations_from_input
 
 
 def get_specs_list(specs_dir, data_dir):
@@ -140,15 +140,14 @@ def sleep_the_day(start_time):
             sleep(sleep_duration.seconds)
 
 
-# def estimate_run_time(specs_dir, n_tokens=1, sleep_time=11):
-    
-#     runtime = 0
-#     specs_list = os.listdir(specs_dir)
-#     for specs_file in specs_list:
-#         with open(os.path.join(specs_dir, specs_file)) as f:
-#             specs = json.load(f)
-#         runtime += len(get_all_combinations_from_input(specs)) * sleep_time / n_tokens
-#     return str(datetime.timedelta(seconds=runtime))
+def estimate_run_time(specs_dir, n_tokens=1, sleep_time=11):
+    runtime = 0
+    specs_list = os.listdir(specs_dir)
+    for specs_file in specs_list:
+        with open(os.path.join(specs_dir, specs_file)) as f:
+            specs = json.load(f)
+        runtime += len(get_all_combinations_from_input(specs)) * sleep_time / n_tokens
+    return str(datetime.timedelta(seconds=runtime))
 
 
 def sendmail(subject,contents,receiver):
