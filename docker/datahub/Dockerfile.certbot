@@ -1,0 +1,14 @@
+FROM certbot/certbot
+
+# Create necessary directories
+RUN mkdir -p /var/www/certbot \
+    && mkdir -p /etc/letsencrypt/live \
+    && mkdir -p /etc/letsencrypt/archive
+
+# Copy the renewal script into the container
+COPY renew.sh /renew.sh
+
+# Make the renewal script executable
+RUN chmod +x /renew.sh
+
+CMD ["/bin/sh", "-c", "trap exit TERM; while :; do sleep 1d; done"]
