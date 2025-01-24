@@ -1,0 +1,484 @@
+{
+    "data": [
+        {
+            "id": "6009003307783",
+            "name": "Business and Finance",
+            "type": "industries",
+            "path": [
+                "Business and Finance"
+            ],
+            "description": "People with roles in business and finance. Examples include: accountant, accounting manager, auditor, sales manager, financial advisor, chief financial officer, dealer, agent, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 6133391,
+            "audience_size_upper_bound": 7212868
+        },
+        {
+            "id": "6008888954983",
+            "name": "Administrative Services",
+            "type": "industries",
+            "path": [
+                "Administrative Services"
+            ],
+            "description": "People with roles in administration. Examples include: secretary, administrative assistant, office manager, office assistant, apartment locator, personal assistant, branch manager, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 14449116,
+            "audience_size_upper_bound": 16992161
+        },
+        {
+            "id": "6008888998983",
+            "name": "Education and Libraries",
+            "type": "industries",
+            "path": [
+                "Education and Libraries"
+            ],
+            "description": "People with roles in education or libraries. Examples include: educator, instructor, teacher, professor, lecturer, research assistant, tutor, librarian, principal, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 8583042,
+            "audience_size_upper_bound": 10093658
+        },
+        {
+            "id": "6009003311983",
+            "name": "Management",
+            "type": "industries",
+            "path": [
+                "Management"
+            ],
+            "description": "People with roles in management. Examples include: manager, supervisor, director, president, chairman, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 13940586,
+            "audience_size_upper_bound": 16394130
+        },
+        {
+            "id": "6008888980183",
+            "name": "Sales",
+            "type": "industries",
+            "path": [
+                "Sales"
+            ],
+            "description": "People with roles in sales. Examples include: sales assistant, retail manager, realtor, consultant, customer service representative, cashier, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 11231557,
+            "audience_size_upper_bound": 13208312
+        },
+        {
+            "id": "6008888961983",
+            "name": "IT and Technical Services",
+            "type": "industries",
+            "path": [
+                "IT and Technical Services"
+            ],
+            "description": "People with roles in IT and technical services. Examples include: IT technician, web developer, IT consultant, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 5216207,
+            "audience_size_upper_bound": 6134260
+        },
+        {
+            "id": "6008888972183",
+            "name": "Legal Services",
+            "type": "industries",
+            "path": [
+                "Legal Services"
+            ],
+            "description": "People with roles in legal services. Examples include: lawyer, corporate counsel, partner, paralegal, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 761772,
+            "audience_size_upper_bound": 895844
+        },
+        {
+            "id": "6012901802383",
+            "name": "Arts, Entertainment, Sports and Media",
+            "type": "industries",
+            "path": [
+                "Arts, Entertainment, Sports and Media"
+            ],
+            "description": "People with roles in arts, entertainment, sports and media. Examples include: photographer, artist, actor, actress, singer, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 7864176,
+            "audience_size_upper_bound": 9248272
+        },
+        {
+            "id": "6012903140583",
+            "name": "Production",
+            "type": "industries",
+            "path": [
+                "Production"
+            ],
+            "description": "People with roles in production. Examples include: miner, blacksmith, lumberjack, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 8969360,
+            "audience_size_upper_bound": 10547968
+        },
+        {
+            "id": "6012903320983",
+            "name": "Transportation and Moving",
+            "type": "industries",
+            "path": [
+                "Transportation and Moving"
+            ],
+            "description": "People with roles in transportation and moving. Examples include: Driver, operator, sea captain, flight attendant, pilot, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4952281,
+            "audience_size_upper_bound": 5823883
+        },
+        {
+            "id": "6012903126783",
+            "name": "Architecture and Engineering",
+            "type": "industries",
+            "path": [
+                "Architecture and Engineering"
+            ],
+            "description": "People with roles in architecture and engineering. Examples include: software engineer, technician, electrician, machinist, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 5039111,
+            "audience_size_upper_bound": 5925995
+        },
+        {
+            "id": "6012903127583",
+            "name": "Food and Restaurants",
+            "type": "industries",
+            "path": [
+                "Food and Restaurants"
+            ],
+            "description": "People with roles in food and restaurants. Examples include: cashier, server, waiter, waitress, chef, barista, line cook, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 3392679,
+            "audience_size_upper_bound": 3989791
+        },
+        {
+            "id": "6012903128783",
+            "name": "Construction and Extraction",
+            "type": "industries",
+            "path": [
+                "Construction and Extraction"
+            ],
+            "description": "People with roles in construction and extraction. Examples include: service technician, electrician, brick layer, mechanic, machine operator, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 3278595,
+            "audience_size_upper_bound": 3855628
+        },
+        {
+            "id": "6012903159383",
+            "name": "Healthcare and Medical Services",
+            "type": "industries",
+            "path": [
+                "Healthcare and Medical Services"
+            ],
+            "description": "People with roles in healthcare and medical services. Examples include: physician, dentist, cardiologist, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 8022044,
+            "audience_size_upper_bound": 9433924
+        },
+        {
+            "id": "6012903160983",
+            "name": "Installation and Repair Services",
+            "type": "industries",
+            "path": [
+                "Installation and Repair Services"
+            ],
+            "description": "People with roles in installation and repair services. Examples include: technician, operator, mechanic, welder, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 5189473,
+            "audience_size_upper_bound": 6102821
+        },
+        {
+            "id": "6012903167183",
+            "name": "Life, Physical and Social Sciences",
+            "type": "industries",
+            "path": [
+                "Life, Physical and Social Sciences"
+            ],
+            "description": "People with roles in life, physical and social sciences. Examples include: professor, chemist, psychologist, geologist, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 3934185,
+            "audience_size_upper_bound": 4626602
+        },
+        {
+            "id": "6012903167783",
+            "name": "Computation and Mathematics",
+            "type": "industries",
+            "path": [
+                "Computation and Mathematics"
+            ],
+            "description": "People with roles in computation and mathematics. Examples include: computer scientist, analyst, mathematician, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 5213395,
+            "audience_size_upper_bound": 6130953
+        },
+        {
+            "id": "6012903168383",
+            "name": "Community and Social Services",
+            "type": "industries",
+            "path": [
+                "Community and Social Services"
+            ],
+            "description": "People with roles in community and social services. Examples include: minister, social worker, counselor, politician, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 6531914,
+            "audience_size_upper_bound": 7681532
+        },
+        {
+            "id": "6012903299783",
+            "name": "Protective Services",
+            "type": "industries",
+            "path": [
+                "Protective Services"
+            ],
+            "description": "People with roles in protective services. Examples include: security guard, sergeant, life guard, police officer, firefighter, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2241011,
+            "audience_size_upper_bound": 2635430
+        },
+        {
+            "id": "6012903299983",
+            "name": "Farming, Fishing and Forestry",
+            "type": "industries",
+            "path": [
+                "Farming, Fishing and Forestry"
+            ],
+            "description": "People with roles in farming, fishing and forestry. Examples include: farmer, rider, crew member, handyman, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 3196074,
+            "audience_size_upper_bound": 3758584
+        },
+        {
+            "id": "6012903317583",
+            "name": "Cleaning and Maintenance Services",
+            "type": "industries",
+            "path": [
+                "Cleaning and Maintenance Services"
+            ],
+            "description": "People with roles in cleaning and maintenance. Examples include: janitor, housekeeper, gardener, handyman, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2137357,
+            "audience_size_upper_bound": 2513533
+        },
+        {
+            "id": "6012903320383",
+            "name": "Military (Global)",
+            "type": "industries",
+            "path": [
+                "Military (Global)"
+            ],
+            "description": "People with active roles in the military",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 792323,
+            "audience_size_upper_bound": 931773
+        },
+        {
+            "id": "6016671857383",
+            "name": "Veterans (US)",
+            "type": "industries",
+            "path": [
+                "Veterans (US)"
+            ],
+            "description": "People who were previously employed by the US military",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1135574,
+            "audience_size_upper_bound": 1335436
+        },
+        {
+            "id": "6019621029983",
+            "name": "Government Employees (Global)",
+            "type": "industries",
+            "path": [
+                "Government Employees (Global)"
+            ],
+            "description": "People with roles in the government",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 667475,
+            "audience_size_upper_bound": 784951
+        },
+        {
+            "id": "6075565069783",
+            "name": "Large business-to-business enterprise employees (500+ employees)",
+            "type": "industries",
+            "path": [
+                "Large business-to-business enterprise employees (500+ employees)"
+            ],
+            "description": "A proxy for people who work in B2B companies with 501 or more employees, based on the number of users regularly logging in from the same IP location.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 99697236,
+            "audience_size_upper_bound": 117243950
+        },
+        {
+            "id": "6080792228383",
+            "name": "Medium business-to-business enterprise employees (200 - 500 employees)",
+            "type": "industries",
+            "path": [
+                "Medium business-to-business enterprise employees (200 - 500 employees)"
+            ],
+            "description": "A proxy for people who work in B2B companies with 200-500 employees, based on the number of users regularly logging in from the same IP location.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 35852835,
+            "audience_size_upper_bound": 42162934
+        },
+        {
+            "id": "6080792282783",
+            "name": "Small business-to-business enterprise employees (10-200 employees)",
+            "type": "industries",
+            "path": [
+                "Small business-to-business enterprise employees (10-200 employees)"
+            ],
+            "description": "A proxy for people who work in B2B companies with 10-199 employees, based on the number of users regularly logging in from the same IP location.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 92030762,
+            "audience_size_upper_bound": 108228177
+        },
+        {
+            "id": "6262428231783",
+            "name": "Business Decision Makers",
+            "type": "industries",
+            "path": [
+                "Business Decision Makers"
+            ],
+            "description": "Business decision is a B2B audience segment that targets ads to people who are business decision makers in engineering/IT, operations, HR, strategy or marketing, based on their job titles.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 36039,
+            "audience_size_upper_bound": 42383
+        },
+        {
+            "id": "6262428248783",
+            "name": "IT Decision Makers",
+            "type": "industries",
+            "path": [
+                "IT Decision Makers"
+            ],
+            "description": "IT decision makers is A b2b audience segment that target ads to people who are IT decision makers based on their job titles.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 9858,
+            "audience_size_upper_bound": 11594
+        },
+        {
+            "id": "6262428209783",
+            "name": "Business decision maker titles and interests",
+            "type": "industries",
+            "path": [
+                "Business decision maker titles and interests"
+            ],
+            "description": "Business decision maker titles and interests is a b2b audience segment that targets ads to people who are business decision makers based on their job titles and interests.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 36020,
+            "audience_size_upper_bound": 42360
+        },
+        {
+            "id": "6377169550583",
+            "name": "Company size: 1-10 employees",
+            "type": "industries",
+            "path": [
+                "Company size: 1-10 employees"
+            ],
+            "description": "People who work for companies with 1 to 10 employees.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 576034,
+            "audience_size_upper_bound": 677417
+        },
+        {
+            "id": "6377134779583",
+            "name": "Company size: 11-100 employees",
+            "type": "industries",
+            "path": [
+                "Company size: 11-100 employees"
+            ],
+            "description": "People who work for companies with 11 to 100 employees.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 959763,
+            "audience_size_upper_bound": 1128682
+        },
+        {
+            "id": "6377169297783",
+            "name": "Company size: 101-500 employees",
+            "type": "industries",
+            "path": [
+                "Company size: 101-500 employees"
+            ],
+            "description": "People who work for companies with 101 to 500 employees.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 553088,
+            "audience_size_upper_bound": 650432
+        },
+        {
+            "id": "6377408290383",
+            "name": "Company size: more than 500 employees",
+            "type": "industries",
+            "path": [
+                "Company size: more than 500 employees"
+            ],
+            "description": "People who work for companies with more than 500 employees.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 641077,
+            "audience_size_upper_bound": 753907
+        },
+        {
+            "id": "6377168992983",
+            "name": "Company revenue: $1M to $10M",
+            "type": "industries",
+            "path": [
+                "Company revenue: $1M to $10M"
+            ],
+            "description": "People who work for companies with revenue of $1M to $10M.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 608989,
+            "audience_size_upper_bound": 716172
+        },
+        {
+            "id": "6377169088983",
+            "name": "Company revenue: less than $1M",
+            "type": "industries",
+            "path": [
+                "Company revenue: less than $1M"
+            ],
+            "description": "People who work for companies with revenue of less than $1M.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 307508,
+            "audience_size_upper_bound": 361630
+        },
+        {
+            "id": "6377408081983",
+            "name": "Company revenue: more than $10M",
+            "type": "industries",
+            "path": [
+                "Company revenue: more than $10M"
+            ],
+            "description": "People who work for companies with revenue of more than $10M.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 745281,
+            "audience_size_upper_bound": 876451
+        },
+        {
+            "id": "6377408028783",
+            "name": "Companies founded between 2000 and 2009",
+            "type": "industries",
+            "path": [
+                "Companies founded between 2000 and 2009"
+            ],
+            "description": "People who work for companies founded between 2000 and 2009.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 656407,
+            "audience_size_upper_bound": 771935
+        },
+        {
+            "id": "6377168689383",
+            "name": "Companies founded between 2010 and now",
+            "type": "industries",
+            "path": [
+                "Companies founded between 2010 and now"
+            ],
+            "description": "People who work for companies founded between 2010 and now.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 928104,
+            "audience_size_upper_bound": 1091451
+        },
+        {
+            "id": "6377134922183",
+            "name": "Companies founded before 2000",
+            "type": "industries",
+            "path": [
+                "Companies founded before 2000"
+            ],
+            "description": "People who work for companies founded before 2000.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 955293,
+            "audience_size_upper_bound": 1123425
+        }
+    ]
+}

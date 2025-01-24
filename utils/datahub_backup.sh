@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # backup directory
-base_dir=~/ndph/J/backup/psw_datahub
+base_dir=/home/doug/ndph/DemSci/data/db-backup/psw_datahub
 past_backups=($(ls ${base_dir}))
 current_date=$(date +"%Y%m%d")
 backup_dir=${base_dir}/${current_date}

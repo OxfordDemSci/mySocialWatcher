@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VM="mingo"
-COLLECTIONS=("rus_exodus_facebook" "rus_exodus_instagram")
+COLLECTIONS=("venezuelan_exodus1" "venezuelan_exodus2")
 DIR="/home/ubuntu/mySocialWatcher"
 
 # cron
@@ -16,7 +16,7 @@ done
 
 # docker
 cd ${DIR}/docker/collectors/${VM}
-docker-compose up --build --no-start
+docker compose up --build --no-start
 
 unset VM
 unset COLLECTIONS

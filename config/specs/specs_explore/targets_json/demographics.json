@@ -1,0 +1,1058 @@
+{
+    "data": [
+        {
+            "id": "6002714398172",
+            "name": "Newlywed (1 year)",
+            "type": "life_events",
+            "path": [
+                "Newlywed (1 year)"
+            ],
+            "description": "People who have been married for less than 1 year",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 14187285,
+            "audience_size_upper_bound": 16684248
+        },
+        {
+            "id": "6002714398372",
+            "name": "Parents (All)",
+            "type": "family_statuses",
+            "path": [
+                "Parents (All)"
+            ],
+            "description": "People who are likely to be parents",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 248357808,
+            "audience_size_upper_bound": 292068783
+        },
+        {
+            "id": "6002737124172",
+            "name": "Upcoming birthday",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Upcoming birthday"
+            ],
+            "description": "People who are going to have their birthday within one week",
+            "real_time_cluster": true,
+            "audience_size_lower_bound": 43978229,
+            "audience_size_upper_bound": 51718398
+        },
+        {
+            "id": "6003054185372",
+            "name": "Recently moved",
+            "type": "life_events",
+            "path": [
+                "Recently moved"
+            ],
+            "description": "People who have updated their profile with a new current city in the last 6 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 728102,
+            "audience_size_upper_bound": 856249
+        },
+        {
+            "id": "6003053984972",
+            "name": "Long-distance relationship",
+            "type": "life_events",
+            "path": [
+                "Long-distance relationship"
+            ],
+            "description": "People who are in a long-distance relationship",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 8675754,
+            "audience_size_upper_bound": 10202687
+        },
+        {
+            "id": "6003053860372",
+            "name": "Away from hometown",
+            "type": "life_events",
+            "path": [
+                "Away from hometown"
+            ],
+            "description": "People who are away from their hometowns",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 133035116,
+            "audience_size_upper_bound": 156449297
+        },
+        {
+            "id": "6003053857372",
+            "name": "Away from family",
+            "type": "life_events",
+            "path": [
+                "Away from family"
+            ],
+            "description": "People who are away from their family",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 132990029,
+            "audience_size_upper_bound": 156396275
+        },
+        {
+            "id": "6003050226972",
+            "name": "Newlywed (6 months)",
+            "type": "life_events",
+            "path": [
+                "Newlywed (6 months)"
+            ],
+            "description": "People who have been married for less than 6 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 7733695,
+            "audience_size_upper_bound": 9094826
+        },
+        {
+            "id": "6003050210972",
+            "name": "Newly engaged (1 year)",
+            "type": "life_events",
+            "path": [
+                "Newly engaged (1 year)"
+            ],
+            "description": "People who have been engaged for less than 1 year",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4033234,
+            "audience_size_upper_bound": 4743084
+        },
+        {
+            "id": "6005232221572",
+            "name": "New relationship",
+            "type": "life_events",
+            "path": [
+                "New relationship"
+            ],
+            "description": "People who have updated their profile with a new relationship in the last 6 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2037931,
+            "audience_size_upper_bound": 2396608
+        },
+        {
+            "id": "6005149512172",
+            "name": "New job",
+            "type": "life_events",
+            "path": [
+                "New job"
+            ],
+            "description": "People who have updated their profile with a new job position in the last 6 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 115497,
+            "audience_size_upper_bound": 135825
+        },
+        {
+            "id": "6009003307783",
+            "name": "Business and Finance",
+            "type": "industries",
+            "path": [
+                "Business and Finance"
+            ],
+            "description": "People with roles in business and finance. Examples include: accountant, accounting manager, auditor, sales manager, financial advisor, chief financial officer, dealer, agent, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 6133391,
+            "audience_size_upper_bound": 7212868
+        },
+        {
+            "id": "6008888954983",
+            "name": "Administrative Services",
+            "type": "industries",
+            "path": [
+                "Administrative Services"
+            ],
+            "description": "People with roles in administration. Examples include: secretary, administrative assistant, office manager, office assistant, apartment locator, personal assistant, branch manager, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 14449116,
+            "audience_size_upper_bound": 16992161
+        },
+        {
+            "id": "6008888998983",
+            "name": "Education and Libraries",
+            "type": "industries",
+            "path": [
+                "Education and Libraries"
+            ],
+            "description": "People with roles in education or libraries. Examples include: educator, instructor, teacher, professor, lecturer, research assistant, tutor, librarian, principal, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 8583042,
+            "audience_size_upper_bound": 10093658
+        },
+        {
+            "id": "6009003311983",
+            "name": "Management",
+            "type": "industries",
+            "path": [
+                "Management"
+            ],
+            "description": "People with roles in management. Examples include: manager, supervisor, director, president, chairman, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 13940586,
+            "audience_size_upper_bound": 16394130
+        },
+        {
+            "id": "6008888980183",
+            "name": "Sales",
+            "type": "industries",
+            "path": [
+                "Sales"
+            ],
+            "description": "People with roles in sales. Examples include: sales assistant, retail manager, realtor, consultant, customer service representative, cashier, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 11231557,
+            "audience_size_upper_bound": 13208312
+        },
+        {
+            "id": "6008888961983",
+            "name": "IT and Technical Services",
+            "type": "industries",
+            "path": [
+                "IT and Technical Services"
+            ],
+            "description": "People with roles in IT and technical services. Examples include: IT technician, web developer, IT consultant, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 5216207,
+            "audience_size_upper_bound": 6134260
+        },
+        {
+            "id": "6008888972183",
+            "name": "Legal Services",
+            "type": "industries",
+            "path": [
+                "Legal Services"
+            ],
+            "description": "People with roles in legal services. Examples include: lawyer, corporate counsel, partner, paralegal, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 761772,
+            "audience_size_upper_bound": 895844
+        },
+        {
+            "id": "6012631862383",
+            "name": "Newly engaged (3 months)",
+            "type": "life_events",
+            "path": [
+                "Newly engaged (3 months)"
+            ],
+            "description": "People who have been engaged for less than 3 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1411437,
+            "audience_size_upper_bound": 1659850
+        },
+        {
+            "id": "6012901802383",
+            "name": "Arts, Entertainment, Sports and Media",
+            "type": "industries",
+            "path": [
+                "Arts, Entertainment, Sports and Media"
+            ],
+            "description": "People with roles in arts, entertainment, sports and media. Examples include: photographer, artist, actor, actress, singer, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 7864176,
+            "audience_size_upper_bound": 9248272
+        },
+        {
+            "id": "6012903140583",
+            "name": "Production",
+            "type": "industries",
+            "path": [
+                "Production"
+            ],
+            "description": "People with roles in production. Examples include: miner, blacksmith, lumberjack, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 8969360,
+            "audience_size_upper_bound": 10547968
+        },
+        {
+            "id": "6012903320983",
+            "name": "Transportation and Moving",
+            "type": "industries",
+            "path": [
+                "Transportation and Moving"
+            ],
+            "description": "People with roles in transportation and moving. Examples include: Driver, operator, sea captain, flight attendant, pilot, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4952281,
+            "audience_size_upper_bound": 5823883
+        },
+        {
+            "id": "6012903126783",
+            "name": "Architecture and Engineering",
+            "type": "industries",
+            "path": [
+                "Architecture and Engineering"
+            ],
+            "description": "People with roles in architecture and engineering. Examples include: software engineer, technician, electrician, machinist, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 5039111,
+            "audience_size_upper_bound": 5925995
+        },
+        {
+            "id": "6012903127583",
+            "name": "Food and Restaurants",
+            "type": "industries",
+            "path": [
+                "Food and Restaurants"
+            ],
+            "description": "People with roles in food and restaurants. Examples include: cashier, server, waiter, waitress, chef, barista, line cook, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 3392679,
+            "audience_size_upper_bound": 3989791
+        },
+        {
+            "id": "6012903128783",
+            "name": "Construction and Extraction",
+            "type": "industries",
+            "path": [
+                "Construction and Extraction"
+            ],
+            "description": "People with roles in construction and extraction. Examples include: service technician, electrician, brick layer, mechanic, machine operator, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 3278595,
+            "audience_size_upper_bound": 3855628
+        },
+        {
+            "id": "6012903159383",
+            "name": "Healthcare and Medical Services",
+            "type": "industries",
+            "path": [
+                "Healthcare and Medical Services"
+            ],
+            "description": "People with roles in healthcare and medical services. Examples include: physician, dentist, cardiologist, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 8022044,
+            "audience_size_upper_bound": 9433924
+        },
+        {
+            "id": "6012903160983",
+            "name": "Installation and Repair Services",
+            "type": "industries",
+            "path": [
+                "Installation and Repair Services"
+            ],
+            "description": "People with roles in installation and repair services. Examples include: technician, operator, mechanic, welder, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 5189473,
+            "audience_size_upper_bound": 6102821
+        },
+        {
+            "id": "6012903167183",
+            "name": "Life, Physical and Social Sciences",
+            "type": "industries",
+            "path": [
+                "Life, Physical and Social Sciences"
+            ],
+            "description": "People with roles in life, physical and social sciences. Examples include: professor, chemist, psychologist, geologist, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 3934185,
+            "audience_size_upper_bound": 4626602
+        },
+        {
+            "id": "6012903167783",
+            "name": "Computation and Mathematics",
+            "type": "industries",
+            "path": [
+                "Computation and Mathematics"
+            ],
+            "description": "People with roles in computation and mathematics. Examples include: computer scientist, analyst, mathematician, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 5213395,
+            "audience_size_upper_bound": 6130953
+        },
+        {
+            "id": "6012903168383",
+            "name": "Community and Social Services",
+            "type": "industries",
+            "path": [
+                "Community and Social Services"
+            ],
+            "description": "People with roles in community and social services. Examples include: minister, social worker, counselor, politician, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 6531914,
+            "audience_size_upper_bound": 7681532
+        },
+        {
+            "id": "6012903299783",
+            "name": "Protective Services",
+            "type": "industries",
+            "path": [
+                "Protective Services"
+            ],
+            "description": "People with roles in protective services. Examples include: security guard, sergeant, life guard, police officer, firefighter, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2241011,
+            "audience_size_upper_bound": 2635430
+        },
+        {
+            "id": "6012903299983",
+            "name": "Farming, Fishing and Forestry",
+            "type": "industries",
+            "path": [
+                "Farming, Fishing and Forestry"
+            ],
+            "description": "People with roles in farming, fishing and forestry. Examples include: farmer, rider, crew member, handyman, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 3196074,
+            "audience_size_upper_bound": 3758584
+        },
+        {
+            "id": "6012903317583",
+            "name": "Cleaning and Maintenance Services",
+            "type": "industries",
+            "path": [
+                "Cleaning and Maintenance Services"
+            ],
+            "description": "People with roles in cleaning and maintenance. Examples include: janitor, housekeeper, gardener, handyman, etc.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2137357,
+            "audience_size_upper_bound": 2513533
+        },
+        {
+            "id": "6012903320383",
+            "name": "Military (Global)",
+            "type": "industries",
+            "path": [
+                "Military (Global)"
+            ],
+            "description": "People with active roles in the military",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 792323,
+            "audience_size_upper_bound": 931773
+        },
+        {
+            "id": "6013133420583",
+            "name": "Newlywed (3 months)",
+            "type": "life_events",
+            "path": [
+                "Newlywed (3 months)"
+            ],
+            "description": "People who have been married for less than 3 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4287172,
+            "audience_size_upper_bound": 5041715
+        },
+        {
+            "id": "6016671857383",
+            "name": "Veterans (US)",
+            "type": "industries",
+            "path": [
+                "Veterans (US)"
+            ],
+            "description": "People who were previously employed by the US military",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1135574,
+            "audience_size_upper_bound": 1335436
+        },
+        {
+            "id": "6017476616183",
+            "name": "Anniversary within 30 days",
+            "type": "life_events",
+            "path": [
+                "Anniversary",
+                "Anniversary within 30 days"
+            ],
+            "description": "People with a relationship anniversary (marriage, domestic partnership, etc.) occurring within the next 30 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 5335784,
+            "audience_size_upper_bound": 6274883
+        },
+        {
+            "id": "6018399723983",
+            "name": "Anniversary within 31-60 Days",
+            "type": "life_events",
+            "path": [
+                "Anniversary",
+                "Anniversary within 31-60 Days"
+            ],
+            "description": "People with a relationship anniversary (marriage, domestic partnership, etc.) occurring within the next 31- 60 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 7465059,
+            "audience_size_upper_bound": 8778910
+        },
+        {
+            "id": "6019621029983",
+            "name": "Government Employees (Global)",
+            "type": "industries",
+            "path": [
+                "Government Employees (Global)"
+            ],
+            "description": "People with roles in the government",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 667475,
+            "audience_size_upper_bound": 784951
+        },
+        {
+            "id": "6023005372383",
+            "name": "Parents (up to 12 months)",
+            "type": "family_statuses",
+            "path": [
+                "Parents (up to 12 months)"
+            ],
+            "description": "People who are likely to be parents with children aged up to 12 months.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4371114,
+            "audience_size_upper_bound": 5140431
+        },
+        {
+            "id": "6023005458383",
+            "name": "Parents with toddlers (01-02 years)",
+            "type": "family_statuses",
+            "path": [
+                "Parents with toddlers (01-02 years)"
+            ],
+            "description": "People who are likely to be parents with toddlers",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2791870,
+            "audience_size_upper_bound": 3283240
+        },
+        {
+            "id": "6023005529383",
+            "name": "Parents with preschoolers (03-05 years)",
+            "type": "family_statuses",
+            "path": [
+                "Parents with preschoolers (03-05 years)"
+            ],
+            "description": "People who are likely to be parents with preschoolers",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4548094,
+            "audience_size_upper_bound": 5348559
+        },
+        {
+            "id": "6023005570783",
+            "name": "Parents with early school-age children (06-08 years)",
+            "type": "family_statuses",
+            "path": [
+                "Parents with early school-age children (06-08 years)"
+            ],
+            "description": "People who are likely to be parents with early school-age children",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 7223893,
+            "audience_size_upper_bound": 8495299
+        },
+        {
+            "id": "6023005681983",
+            "name": "Parents with teenagers (13-17 years)",
+            "type": "family_statuses",
+            "path": [
+                "Parents with teenagers (13-17 years)"
+            ],
+            "description": "People who are likely to be parents with teenagers",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 20892870,
+            "audience_size_upper_bound": 24570016
+        },
+        {
+            "id": "6023005718983",
+            "name": "Parents with adult children (18-26 years)",
+            "type": "family_statuses",
+            "path": [
+                "Parents with adult children (18-26 years)"
+            ],
+            "description": "People who are likely to be parents with adult children",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 56550756,
+            "audience_size_upper_bound": 66503690
+        },
+        {
+            "id": "6023080302983",
+            "name": "Parents with preteens (09-12 years)",
+            "type": "family_statuses",
+            "path": [
+                "Parents with preteens (09-12 years)"
+            ],
+            "description": "People who are likely to be parents with preteens",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 9272630,
+            "audience_size_upper_bound": 10904613
+        },
+        {
+            "id": "6048267235783",
+            "name": "Birthday in January",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in January"
+            ],
+            "description": "People who have a birthday in January",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 223427448,
+            "audience_size_upper_bound": 262750679
+        },
+        {
+            "id": "6049083267183",
+            "name": "Birthday in February",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in February"
+            ],
+            "description": "People who have a birthday in February",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 151323742,
+            "audience_size_upper_bound": 177956721
+        },
+        {
+            "id": "6048026294583",
+            "name": "Birthday in March",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in March"
+            ],
+            "description": "People who have a birthday in March",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 159266588,
+            "audience_size_upper_bound": 187297508
+        },
+        {
+            "id": "6048026275783",
+            "name": "Birthday in April",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in April"
+            ],
+            "description": "People who have a birthday in April",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 157996392,
+            "audience_size_upper_bound": 185803757
+        },
+        {
+            "id": "6048026061783",
+            "name": "Birthday in May",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in May"
+            ],
+            "description": "People who have a birthday in May",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 166803063,
+            "audience_size_upper_bound": 196160403
+        },
+        {
+            "id": "6048026229983",
+            "name": "Birthday in June",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in June"
+            ],
+            "description": "People who have a birthday in June",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 148077970,
+            "audience_size_upper_bound": 174139693
+        },
+        {
+            "id": "6048808449583",
+            "name": "Birthday in July",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in July"
+            ],
+            "description": "People who have a birthday in July",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 150584101,
+            "audience_size_upper_bound": 177086903
+        },
+        {
+            "id": "6048810966183",
+            "name": "Birthday in August",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in August"
+            ],
+            "description": "People with a birthday in August",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 154477861,
+            "audience_size_upper_bound": 181665965
+        },
+        {
+            "id": "6048810961183",
+            "name": "Birthday in September",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in September"
+            ],
+            "description": "People with a birthday in September",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 143319839,
+            "audience_size_upper_bound": 168544131
+        },
+        {
+            "id": "6048810950583",
+            "name": "Birthday in October",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in October"
+            ],
+            "description": "People with a birthday in October",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 150927063,
+            "audience_size_upper_bound": 177490227
+        },
+        {
+            "id": "6048810938183",
+            "name": "Birthday in November",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in November"
+            ],
+            "description": "People with a birthday in November",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 138850704,
+            "audience_size_upper_bound": 163288428
+        },
+        {
+            "id": "6048810914583",
+            "name": "Birthday in December",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in December"
+            ],
+            "description": "People with a birthday in December",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 177845822,
+            "audience_size_upper_bound": 209146687
+        },
+        {
+            "id": "6075565069783",
+            "name": "Large business-to-business enterprise employees (500+ employees)",
+            "type": "industries",
+            "path": [
+                "Large business-to-business enterprise employees (500+ employees)"
+            ],
+            "description": "A proxy for people who work in B2B companies with 501 or more employees, based on the number of users regularly logging in from the same IP location.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 99697236,
+            "audience_size_upper_bound": 117243950
+        },
+        {
+            "id": "6080792228383",
+            "name": "Medium business-to-business enterprise employees (200 - 500 employees)",
+            "type": "industries",
+            "path": [
+                "Medium business-to-business enterprise employees (200 - 500 employees)"
+            ],
+            "description": "A proxy for people who work in B2B companies with 200-500 employees, based on the number of users regularly logging in from the same IP location.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 35852835,
+            "audience_size_upper_bound": 42162934
+        },
+        {
+            "id": "6080792282783",
+            "name": "Small business-to-business enterprise employees (10-200 employees)",
+            "type": "industries",
+            "path": [
+                "Small business-to-business enterprise employees (10-200 employees)"
+            ],
+            "description": "A proxy for people who work in B2B companies with 10-199 employees, based on the number of users regularly logging in from the same IP location.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 92030762,
+            "audience_size_upper_bound": 108228177
+        },
+        {
+            "id": "6107813079183",
+            "name": "Household income: top 5% of ZIP codes (US)",
+            "type": "income",
+            "path": [
+                "Household income: top 5% of ZIP codes (US)"
+            ],
+            "description": "People who live in the top 5% of US ZIP codes by average household income based on publicly available information",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 10078165,
+            "audience_size_upper_bound": 11851923
+        },
+        {
+            "id": "6107813551783",
+            "name": "Household income: top 10% of ZIP codes (US)",
+            "type": "income",
+            "path": [
+                "Household income: top 10% of ZIP codes (US)"
+            ],
+            "description": "People who live in the top 10% of US ZIP codes by average household income based on publicly available information",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 20991258,
+            "audience_size_upper_bound": 24685720
+        },
+        {
+            "id": "6107813553183",
+            "name": "Household income: top 10%-25% of ZIP codes (US)",
+            "type": "income",
+            "path": [
+                "Household income: top 10%-25% of ZIP codes (US)"
+            ],
+            "description": "People who live in the top 10%-25% of US ZIP codes by average household income based on publicly available information.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 26534352,
+            "audience_size_upper_bound": 31204398
+        },
+        {
+            "id": "6107813554583",
+            "name": "Household income: top 25%-50% of ZIP codes (US)",
+            "type": "income",
+            "path": [
+                "Household income: top 25%-50% of ZIP codes (US)"
+            ],
+            "description": "People who live in the top 25%-50% of US ZIP codes by average household income based on publicly available information.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 32491571,
+            "audience_size_upper_bound": 38210088
+        },
+        {
+            "id": "6203619820983",
+            "name": "Friends of Recently Moved",
+            "type": "life_events",
+            "path": [
+                "Friends of",
+                "Friends of Recently Moved"
+            ],
+            "description": "Friends of people who have moved in the past 30 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 998831088,
+            "audience_size_upper_bound": 1174625360
+        },
+        {
+            "id": "6203620854183",
+            "name": "Friends of people with birthdays in a month",
+            "type": "life_events",
+            "path": [
+                "Friends of",
+                "Friends of people with birthdays in a month"
+            ],
+            "description": "Friends of people with a birthday in 7-30 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1963655743,
+            "audience_size_upper_bound": 2309259154
+        },
+        {
+            "id": "6203621025983",
+            "name": "Friends of Women with a Birthday in 7-30 days",
+            "type": "life_events",
+            "path": [
+                "Friends of",
+                "Friends of Women with a Birthday in 7-30 days"
+            ],
+            "description": "Friends of Women with a Birthday in 7-30 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1753627332,
+            "audience_size_upper_bound": 2062265743
+        },
+        {
+            "id": "6203621119983",
+            "name": "Friends of Men with a Birthday in 7-30 days",
+            "type": "life_events",
+            "path": [
+                "Friends of",
+                "Friends of Men with a Birthday in 7-30 days"
+            ],
+            "description": "Friends of Men with a Birthday in 7-30 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1840766595,
+            "audience_size_upper_bound": 2164741516
+        },
+        {
+            "id": "6203621218383",
+            "name": "Friends of people with birthdays in a week",
+            "type": "life_events",
+            "path": [
+                "Friends of",
+                "Friends of people with birthdays in a week"
+            ],
+            "description": "Friends of people with a birthday in 0-7 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1775472775,
+            "audience_size_upper_bound": 2087955984
+        },
+        {
+            "id": "6203621325983",
+            "name": "Friends of Women with a Birthday in 0-7 days",
+            "type": "life_events",
+            "path": [
+                "Friends of",
+                "Friends of Women with a Birthday in 0-7 days"
+            ],
+            "description": "Friends of Women with a Birthday in 0-7 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1448446517,
+            "audience_size_upper_bound": 1703373104
+        },
+        {
+            "id": "6203621472783",
+            "name": "Friends of Men with a Birthday in 0-7 days",
+            "type": "life_events",
+            "path": [
+                "Friends of",
+                "Friends of Men with a Birthday in 0-7 days"
+            ],
+            "description": "Friends of Men with a Birthday in 0-7 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1573595821,
+            "audience_size_upper_bound": 1850548686
+        },
+        {
+            "id": "6262428231783",
+            "name": "Business Decision Makers",
+            "type": "industries",
+            "path": [
+                "Business Decision Makers"
+            ],
+            "description": "Business decision is a B2B audience segment that targets ads to people who are business decision makers in engineering/IT, operations, HR, strategy or marketing, based on their job titles.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 36039,
+            "audience_size_upper_bound": 42383
+        },
+        {
+            "id": "6262428248783",
+            "name": "IT Decision Makers",
+            "type": "industries",
+            "path": [
+                "IT Decision Makers"
+            ],
+            "description": "IT decision makers is A b2b audience segment that target ads to people who are IT decision makers based on their job titles.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 9858,
+            "audience_size_upper_bound": 11594
+        },
+        {
+            "id": "6262428209783",
+            "name": "Business decision maker titles and interests",
+            "type": "industries",
+            "path": [
+                "Business decision maker titles and interests"
+            ],
+            "description": "Business decision maker titles and interests is a b2b audience segment that targets ads to people who are business decision makers based on their job titles and interests.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 36020,
+            "audience_size_upper_bound": 42360
+        },
+        {
+            "id": "6377169550583",
+            "name": "Company size: 1-10 employees",
+            "type": "industries",
+            "path": [
+                "Company size: 1-10 employees"
+            ],
+            "description": "People who work for companies with 1 to 10 employees.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 576034,
+            "audience_size_upper_bound": 677417
+        },
+        {
+            "id": "6377134779583",
+            "name": "Company size: 11-100 employees",
+            "type": "industries",
+            "path": [
+                "Company size: 11-100 employees"
+            ],
+            "description": "People who work for companies with 11 to 100 employees.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 959763,
+            "audience_size_upper_bound": 1128682
+        },
+        {
+            "id": "6377169297783",
+            "name": "Company size: 101-500 employees",
+            "type": "industries",
+            "path": [
+                "Company size: 101-500 employees"
+            ],
+            "description": "People who work for companies with 101 to 500 employees.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 553088,
+            "audience_size_upper_bound": 650432
+        },
+        {
+            "id": "6377408290383",
+            "name": "Company size: more than 500 employees",
+            "type": "industries",
+            "path": [
+                "Company size: more than 500 employees"
+            ],
+            "description": "People who work for companies with more than 500 employees.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 641077,
+            "audience_size_upper_bound": 753907
+        },
+        {
+            "id": "6377168992983",
+            "name": "Company revenue: $1M to $10M",
+            "type": "industries",
+            "path": [
+                "Company revenue: $1M to $10M"
+            ],
+            "description": "People who work for companies with revenue of $1M to $10M.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 608989,
+            "audience_size_upper_bound": 716172
+        },
+        {
+            "id": "6377169088983",
+            "name": "Company revenue: less than $1M",
+            "type": "industries",
+            "path": [
+                "Company revenue: less than $1M"
+            ],
+            "description": "People who work for companies with revenue of less than $1M.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 307508,
+            "audience_size_upper_bound": 361630
+        },
+        {
+            "id": "6377408081983",
+            "name": "Company revenue: more than $10M",
+            "type": "industries",
+            "path": [
+                "Company revenue: more than $10M"
+            ],
+            "description": "People who work for companies with revenue of more than $10M.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 745281,
+            "audience_size_upper_bound": 876451
+        },
+        {
+            "id": "6377408028783",
+            "name": "Companies founded between 2000 and 2009",
+            "type": "industries",
+            "path": [
+                "Companies founded between 2000 and 2009"
+            ],
+            "description": "People who work for companies founded between 2000 and 2009.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 656407,
+            "audience_size_upper_bound": 771935
+        },
+        {
+            "id": "6377168689383",
+            "name": "Companies founded between 2010 and now",
+            "type": "industries",
+            "path": [
+                "Companies founded between 2010 and now"
+            ],
+            "description": "People who work for companies founded between 2010 and now.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 928104,
+            "audience_size_upper_bound": 1091451
+        },
+        {
+            "id": "6377134922183",
+            "name": "Companies founded before 2000",
+            "type": "industries",
+            "path": [
+                "Companies founded before 2000"
+            ],
+            "description": "People who work for companies founded before 2000.",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 955293,
+            "audience_size_upper_bound": 1123425
+        }
+    ]
+}

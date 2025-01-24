@@ -1,3 +1,5 @@
+import time
+
 import pandas as pd
 import json
 import requests
@@ -7,25 +9,30 @@ from datetime import datetime
 
 
 # params zone
-spec_cat = 'region'
-json_file_path,csv_file_path= file_paths(spec_cat)
+
+params_all = {key: value for key, value in params_all.items() if key not in ['region', 'country', 'city']}
+
+for spec_cat in params_all.keys():
+    print(spec_cat)
+    json_file_path,csv_file_path= file_paths(spec_cat)
 
 # situation1: directly send request and store the result (return num should be under 1000)
 
 # select the params for specific category, e.g. behaviour, country
-params = params_all[spec_cat]
+    params = params_all[spec_cat]
 
-response = requests.get(url, params=params)
-specs_json = json.loads(response.text)
-content = specs_json['data']
-df = pd.DataFrame(content)
+    response = requests.get(url, params=params)
+    specs_json = json.loads(response.text)
+    content = specs_json['data']
+    df = pd.DataFrame(content)
 
-# save jason file
-with open(json_file_path, 'w') as f:
-    f.write(json.dumps(specs_json,indent=4))
+    # save jason file
+    with open(json_file_path, 'w') as f:
+        f.write(json.dumps(specs_json,indent=4))
 
-# save df
-df.to_csv(csv_file_path, index=False)
+    # save df
+    df.to_csv(csv_file_path, index=False)
+    time.sleep(1)
 
 
 

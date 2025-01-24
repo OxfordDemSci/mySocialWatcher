@@ -1,0 +1,446 @@
+{
+    "data": [
+        {
+            "id": "6002714398172",
+            "name": "Newlywed (1 year)",
+            "type": "life_events",
+            "path": [
+                "Newlywed (1 year)"
+            ],
+            "description": "People who have been married for less than 1 year",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 14187285,
+            "audience_size_upper_bound": 16684248
+        },
+        {
+            "id": "6002714398772",
+            "name": "Newly-engaged (6 months)",
+            "type": "life_events",
+            "path": [
+                "Newly-engaged (6 months)"
+            ],
+            "description": "People who have been engaged for less than 6 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2484843,
+            "audience_size_upper_bound": 2922176
+        },
+        {
+            "id": "6002737124172",
+            "name": "Upcoming birthday",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Upcoming birthday"
+            ],
+            "description": "People who are going to have their birthday within one week",
+            "real_time_cluster": true,
+            "audience_size_lower_bound": 43978229,
+            "audience_size_upper_bound": 51718398
+        },
+        {
+            "id": "6003054185372",
+            "name": "Recently moved",
+            "type": "life_events",
+            "path": [
+                "Recently moved"
+            ],
+            "description": "People who have updated their profile with a new current city in the last 6 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 728102,
+            "audience_size_upper_bound": 856249
+        },
+        {
+            "id": "6003053984972",
+            "name": "Long-distance relationship",
+            "type": "life_events",
+            "path": [
+                "Long-distance relationship"
+            ],
+            "description": "People who are in a long-distance relationship",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 8675754,
+            "audience_size_upper_bound": 10202687
+        },
+        {
+            "id": "6003053860372",
+            "name": "Away from hometown",
+            "type": "life_events",
+            "path": [
+                "Away from hometown"
+            ],
+            "description": "People who are away from their hometowns",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 133035116,
+            "audience_size_upper_bound": 156449297
+        },
+        {
+            "id": "6003053857372",
+            "name": "Away from family",
+            "type": "life_events",
+            "path": [
+                "Away from family"
+            ],
+            "description": "People who are away from their family",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 132990029,
+            "audience_size_upper_bound": 156396275
+        },
+        {
+            "id": "6003050226972",
+            "name": "Newlywed (6 months)",
+            "type": "life_events",
+            "path": [
+                "Newlywed (6 months)"
+            ],
+            "description": "People who have been married for less than 6 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 7733695,
+            "audience_size_upper_bound": 9094826
+        },
+        {
+            "id": "6003050210972",
+            "name": "Newly engaged (1 year)",
+            "type": "life_events",
+            "path": [
+                "Newly engaged (1 year)"
+            ],
+            "description": "People who have been engaged for less than 1 year",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4033234,
+            "audience_size_upper_bound": 4743084
+        },
+        {
+            "id": "6005232221572",
+            "name": "New relationship",
+            "type": "life_events",
+            "path": [
+                "New relationship"
+            ],
+            "description": "People who have updated their profile with a new relationship in the last 6 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 2037931,
+            "audience_size_upper_bound": 2396608
+        },
+        {
+            "id": "6005149512172",
+            "name": "New job",
+            "type": "life_events",
+            "path": [
+                "New job"
+            ],
+            "description": "People who have updated their profile with a new job position in the last 6 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 115497,
+            "audience_size_upper_bound": 135825
+        },
+        {
+            "id": "6012631862383",
+            "name": "Newly engaged (3 months)",
+            "type": "life_events",
+            "path": [
+                "Newly engaged (3 months)"
+            ],
+            "description": "People who have been engaged for less than 3 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1411437,
+            "audience_size_upper_bound": 1659850
+        },
+        {
+            "id": "6013133420583",
+            "name": "Newlywed (3 months)",
+            "type": "life_events",
+            "path": [
+                "Newlywed (3 months)"
+            ],
+            "description": "People who have been married for less than 3 months",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 4287172,
+            "audience_size_upper_bound": 5041715
+        },
+        {
+            "id": "6017476616183",
+            "name": "Anniversary within 30 days",
+            "type": "life_events",
+            "path": [
+                "Anniversary",
+                "Anniversary within 30 days"
+            ],
+            "description": "People with a relationship anniversary (marriage, domestic partnership, etc.) occurring within the next 30 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 5335784,
+            "audience_size_upper_bound": 6274883
+        },
+        {
+            "id": "6018399723983",
+            "name": "Anniversary within 31-60 Days",
+            "type": "life_events",
+            "path": [
+                "Anniversary",
+                "Anniversary within 31-60 Days"
+            ],
+            "description": "People with a relationship anniversary (marriage, domestic partnership, etc.) occurring within the next 31- 60 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 7465059,
+            "audience_size_upper_bound": 8778910
+        },
+        {
+            "id": "6048267235783",
+            "name": "Birthday in January",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in January"
+            ],
+            "description": "People who have a birthday in January",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 223427448,
+            "audience_size_upper_bound": 262750679
+        },
+        {
+            "id": "6049083267183",
+            "name": "Birthday in February",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in February"
+            ],
+            "description": "People who have a birthday in February",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 151323742,
+            "audience_size_upper_bound": 177956721
+        },
+        {
+            "id": "6048026294583",
+            "name": "Birthday in March",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in March"
+            ],
+            "description": "People who have a birthday in March",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 159266588,
+            "audience_size_upper_bound": 187297508
+        },
+        {
+            "id": "6048026275783",
+            "name": "Birthday in April",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in April"
+            ],
+            "description": "People who have a birthday in April",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 157996392,
+            "audience_size_upper_bound": 185803757
+        },
+        {
+            "id": "6048026061783",
+            "name": "Birthday in May",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in May"
+            ],
+            "description": "People who have a birthday in May",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 166803063,
+            "audience_size_upper_bound": 196160403
+        },
+        {
+            "id": "6048026229983",
+            "name": "Birthday in June",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in June"
+            ],
+            "description": "People who have a birthday in June",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 148077970,
+            "audience_size_upper_bound": 174139693
+        },
+        {
+            "id": "6048808449583",
+            "name": "Birthday in July",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in July"
+            ],
+            "description": "People who have a birthday in July",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 150584101,
+            "audience_size_upper_bound": 177086903
+        },
+        {
+            "id": "6048810966183",
+            "name": "Birthday in August",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in August"
+            ],
+            "description": "People with a birthday in August",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 154477861,
+            "audience_size_upper_bound": 181665965
+        },
+        {
+            "id": "6048810961183",
+            "name": "Birthday in September",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in September"
+            ],
+            "description": "People with a birthday in September",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 143319839,
+            "audience_size_upper_bound": 168544131
+        },
+        {
+            "id": "6048810950583",
+            "name": "Birthday in October",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in October"
+            ],
+            "description": "People with a birthday in October",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 150927063,
+            "audience_size_upper_bound": 177490227
+        },
+        {
+            "id": "6048810938183",
+            "name": "Birthday in November",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in November"
+            ],
+            "description": "People with a birthday in November",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 138850704,
+            "audience_size_upper_bound": 163288428
+        },
+        {
+            "id": "6048810914583",
+            "name": "Birthday in December",
+            "type": "life_events",
+            "path": [
+                "Birthday",
+                "Birthday Month",
+                "Birthday in December"
+            ],
+            "description": "People with a birthday in December",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 177845822,
+            "audience_size_upper_bound": 209146687
+        },
+        {
+            "id": "6203619820983",
+            "name": "Friends of Recently Moved",
+            "type": "life_events",
+            "path": [
+                "Friends of",
+                "Friends of Recently Moved"
+            ],
+            "description": "Friends of people who have moved in the past 30 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 998831088,
+            "audience_size_upper_bound": 1174625360
+        },
+        {
+            "id": "6203620854183",
+            "name": "Friends of people with birthdays in a month",
+            "type": "life_events",
+            "path": [
+                "Friends of",
+                "Friends of people with birthdays in a month"
+            ],
+            "description": "Friends of people with a birthday in 7-30 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1963655743,
+            "audience_size_upper_bound": 2309259154
+        },
+        {
+            "id": "6203621025983",
+            "name": "Friends of Women with a Birthday in 7-30 days",
+            "type": "life_events",
+            "path": [
+                "Friends of",
+                "Friends of Women with a Birthday in 7-30 days"
+            ],
+            "description": "Friends of Women with a Birthday in 7-30 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1753627332,
+            "audience_size_upper_bound": 2062265743
+        },
+        {
+            "id": "6203621119983",
+            "name": "Friends of Men with a Birthday in 7-30 days",
+            "type": "life_events",
+            "path": [
+                "Friends of",
+                "Friends of Men with a Birthday in 7-30 days"
+            ],
+            "description": "Friends of Men with a Birthday in 7-30 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1840766595,
+            "audience_size_upper_bound": 2164741516
+        },
+        {
+            "id": "6203621218383",
+            "name": "Friends of people with birthdays in a week",
+            "type": "life_events",
+            "path": [
+                "Friends of",
+                "Friends of people with birthdays in a week"
+            ],
+            "description": "Friends of people with a birthday in 0-7 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1775472775,
+            "audience_size_upper_bound": 2087955984
+        },
+        {
+            "id": "6203621325983",
+            "name": "Friends of Women with a Birthday in 0-7 days",
+            "type": "life_events",
+            "path": [
+                "Friends of",
+                "Friends of Women with a Birthday in 0-7 days"
+            ],
+            "description": "Friends of Women with a Birthday in 0-7 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1448446517,
+            "audience_size_upper_bound": 1703373104
+        },
+        {
+            "id": "6203621472783",
+            "name": "Friends of Men with a Birthday in 0-7 days",
+            "type": "life_events",
+            "path": [
+                "Friends of",
+                "Friends of Men with a Birthday in 0-7 days"
+            ],
+            "description": "Friends of Men with a Birthday in 0-7 days",
+            "real_time_cluster": false,
+            "audience_size_lower_bound": 1573595821,
+            "audience_size_upper_bound": 1850548686
+        }
+    ]
+}
