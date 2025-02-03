@@ -1,0 +1,86 @@
+id,name,type,path,description,real_time_cluster,audience_size_lower_bound,audience_size_upper_bound
+6002714398172,Newlywed (1 year),life_events,['Newlywed (1 year)'],People who have been married for less than 1 year,False,14187285,16684248
+6002714398372,Parents (All),family_statuses,['Parents (All)'],People who are likely to be parents,False,248357808,292068783
+6002737124172,Upcoming birthday,life_events,"['Birthday', 'Upcoming birthday']",People who are going to have their birthday within one week,True,43978229,51718398
+6003054185372,Recently moved,life_events,['Recently moved'],People who have updated their profile with a new current city in the last 6 months,False,728102,856249
+6003053984972,Long-distance relationship,life_events,['Long-distance relationship'],People who are in a long-distance relationship,False,8675754,10202687
+6003053860372,Away from hometown,life_events,['Away from hometown'],People who are away from their hometowns,False,133035116,156449297
+6003053857372,Away from family,life_events,['Away from family'],People who are away from their family,False,132990029,156396275
+6003050226972,Newlywed (6 months),life_events,['Newlywed (6 months)'],People who have been married for less than 6 months,False,7733695,9094826
+6003050210972,Newly engaged (1 year),life_events,['Newly engaged (1 year)'],People who have been engaged for less than 1 year,False,4033234,4743084
+6005232221572,New relationship,life_events,['New relationship'],People who have updated their profile with a new relationship in the last 6 months,False,2037931,2396608
+6005149512172,New job,life_events,['New job'],People who have updated their profile with a new job position in the last 6 months,False,115497,135825
+6009003307783,Business and Finance,industries,['Business and Finance'],"People with roles in business and finance. Examples include: accountant, accounting manager, auditor, sales manager, financial advisor, chief financial officer, dealer, agent, etc.",False,6133391,7212868
+6008888954983,Administrative Services,industries,['Administrative Services'],"People with roles in administration. Examples include: secretary, administrative assistant, office manager, office assistant, apartment locator, personal assistant, branch manager, etc.",False,14449116,16992161
+6008888998983,Education and Libraries,industries,['Education and Libraries'],"People with roles in education or libraries. Examples include: educator, instructor, teacher, professor, lecturer, research assistant, tutor, librarian, principal, etc.",False,8583042,10093658
+6009003311983,Management,industries,['Management'],"People with roles in management. Examples include: manager, supervisor, director, president, chairman, etc.",False,13940586,16394130
+6008888980183,Sales,industries,['Sales'],"People with roles in sales. Examples include: sales assistant, retail manager, realtor, consultant, customer service representative, cashier, etc.",False,11231557,13208312
+6008888961983,IT and Technical Services,industries,['IT and Technical Services'],"People with roles in IT and technical services. Examples include: IT technician, web developer, IT consultant, etc.",False,5216207,6134260
+6008888972183,Legal Services,industries,['Legal Services'],"People with roles in legal services. Examples include: lawyer, corporate counsel, partner, paralegal, etc.",False,761772,895844
+6012631862383,Newly engaged (3 months),life_events,['Newly engaged (3 months)'],People who have been engaged for less than 3 months,False,1411437,1659850
+6012901802383,"Arts, Entertainment, Sports and Media",industries,"['Arts, Entertainment, Sports and Media']","People with roles in arts, entertainment, sports and media. Examples include: photographer, artist, actor, actress, singer, etc.",False,7864176,9248272
+6012903140583,Production,industries,['Production'],"People with roles in production. Examples include: miner, blacksmith, lumberjack, etc.",False,8969360,10547968
+6012903320983,Transportation and Moving,industries,['Transportation and Moving'],"People with roles in transportation and moving. Examples include: Driver, operator, sea captain, flight attendant, pilot, etc.",False,4952281,5823883
+6012903126783,Architecture and Engineering,industries,['Architecture and Engineering'],"People with roles in architecture and engineering. Examples include: software engineer, technician, electrician, machinist, etc.",False,5039111,5925995
+6012903127583,Food and Restaurants,industries,['Food and Restaurants'],"People with roles in food and restaurants. Examples include: cashier, server, waiter, waitress, chef, barista, line cook, etc.",False,3392679,3989791
+6012903128783,Construction and Extraction,industries,['Construction and Extraction'],"People with roles in construction and extraction. Examples include: service technician, electrician, brick layer, mechanic, machine operator, etc.",False,3278595,3855628
+6012903159383,Healthcare and Medical Services,industries,['Healthcare and Medical Services'],"People with roles in healthcare and medical services. Examples include: physician, dentist, cardiologist, etc.",False,8022044,9433924
+6012903160983,Installation and Repair Services,industries,['Installation and Repair Services'],"People with roles in installation and repair services. Examples include: technician, operator, mechanic, welder, etc.",False,5189473,6102821
+6012903167183,"Life, Physical and Social Sciences",industries,"['Life, Physical and Social Sciences']","People with roles in life, physical and social sciences. Examples include: professor, chemist, psychologist, geologist, etc.",False,3934185,4626602
+6012903167783,Computation and Mathematics,industries,['Computation and Mathematics'],"People with roles in computation and mathematics. Examples include: computer scientist, analyst, mathematician, etc.",False,5213395,6130953
+6012903168383,Community and Social Services,industries,['Community and Social Services'],"People with roles in community and social services. Examples include: minister, social worker, counselor, politician, etc.",False,6531914,7681532
+6012903299783,Protective Services,industries,['Protective Services'],"People with roles in protective services. Examples include: security guard, sergeant, life guard, police officer, firefighter, etc.",False,2241011,2635430
+6012903299983,"Farming, Fishing and Forestry",industries,"['Farming, Fishing and Forestry']","People with roles in farming, fishing and forestry. Examples include: farmer, rider, crew member, handyman, etc.",False,3196074,3758584
+6012903317583,Cleaning and Maintenance Services,industries,['Cleaning and Maintenance Services'],"People with roles in cleaning and maintenance. Examples include: janitor, housekeeper, gardener, handyman, etc.",False,2137357,2513533
+6012903320383,Military (Global),industries,['Military (Global)'],People with active roles in the military,False,792323,931773
+6013133420583,Newlywed (3 months),life_events,['Newlywed (3 months)'],People who have been married for less than 3 months,False,4287172,5041715
+6016671857383,Veterans (US),industries,['Veterans (US)'],People who were previously employed by the US military,False,1135574,1335436
+6017476616183,Anniversary within 30 days,life_events,"['Anniversary', 'Anniversary within 30 days']","People with a relationship anniversary (marriage, domestic partnership, etc.) occurring within the next 30 days",False,5335784,6274883
+6018399723983,Anniversary within 31-60 Days,life_events,"['Anniversary', 'Anniversary within 31-60 Days']","People with a relationship anniversary (marriage, domestic partnership, etc.) occurring within the next 31- 60 days",False,7465059,8778910
+6019621029983,Government Employees (Global),industries,['Government Employees (Global)'],People with roles in the government,False,667475,784951
+6023005372383,Parents (up to 12 months),family_statuses,['Parents (up to 12 months)'],People who are likely to be parents with children aged up to 12 months.,False,4371114,5140431
+6023005458383,Parents with toddlers (01-02 years),family_statuses,['Parents with toddlers (01-02 years)'],People who are likely to be parents with toddlers,False,2791870,3283240
+6023005529383,Parents with preschoolers (03-05 years),family_statuses,['Parents with preschoolers (03-05 years)'],People who are likely to be parents with preschoolers,False,4548094,5348559
+6023005570783,Parents with early school-age children (06-08 years),family_statuses,['Parents with early school-age children (06-08 years)'],People who are likely to be parents with early school-age children,False,7223893,8495299
+6023005681983,Parents with teenagers (13-17 years),family_statuses,['Parents with teenagers (13-17 years)'],People who are likely to be parents with teenagers,False,20892870,24570016
+6023005718983,Parents with adult children (18-26 years),family_statuses,['Parents with adult children (18-26 years)'],People who are likely to be parents with adult children,False,56550756,66503690
+6023080302983,Parents with preteens (09-12 years),family_statuses,['Parents with preteens (09-12 years)'],People who are likely to be parents with preteens,False,9272630,10904613
+6048267235783,Birthday in January,life_events,"['Birthday', 'Birthday Month', 'Birthday in January']",People who have a birthday in January,False,223427448,262750679
+6049083267183,Birthday in February,life_events,"['Birthday', 'Birthday Month', 'Birthday in February']",People who have a birthday in February,False,151323742,177956721
+6048026294583,Birthday in March,life_events,"['Birthday', 'Birthday Month', 'Birthday in March']",People who have a birthday in March,False,159266588,187297508
+6048026275783,Birthday in April,life_events,"['Birthday', 'Birthday Month', 'Birthday in April']",People who have a birthday in April,False,157996392,185803757
+6048026061783,Birthday in May,life_events,"['Birthday', 'Birthday Month', 'Birthday in May']",People who have a birthday in May,False,166803063,196160403
+6048026229983,Birthday in June,life_events,"['Birthday', 'Birthday Month', 'Birthday in June']",People who have a birthday in June,False,148077970,174139693
+6048808449583,Birthday in July,life_events,"['Birthday', 'Birthday Month', 'Birthday in July']",People who have a birthday in July,False,150584101,177086903
+6048810966183,Birthday in August,life_events,"['Birthday', 'Birthday Month', 'Birthday in August']",People with a birthday in August,False,154477861,181665965
+6048810961183,Birthday in September,life_events,"['Birthday', 'Birthday Month', 'Birthday in September']",People with a birthday in September,False,143319839,168544131
+6048810950583,Birthday in October,life_events,"['Birthday', 'Birthday Month', 'Birthday in October']",People with a birthday in October,False,150927063,177490227
+6048810938183,Birthday in November,life_events,"['Birthday', 'Birthday Month', 'Birthday in November']",People with a birthday in November,False,138850704,163288428
+6048810914583,Birthday in December,life_events,"['Birthday', 'Birthday Month', 'Birthday in December']",People with a birthday in December,False,177845822,209146687
+6075565069783,Large business-to-business enterprise employees (500+ employees),industries,['Large business-to-business enterprise employees (500+ employees)'],"A proxy for people who work in B2B companies with 501 or more employees, based on the number of users regularly logging in from the same IP location.",False,99697236,117243950
+6080792228383,Medium business-to-business enterprise employees (200 - 500 employees),industries,['Medium business-to-business enterprise employees (200 - 500 employees)'],"A proxy for people who work in B2B companies with 200-500 employees, based on the number of users regularly logging in from the same IP location.",False,35852835,42162934
+6080792282783,Small business-to-business enterprise employees (10-200 employees),industries,['Small business-to-business enterprise employees (10-200 employees)'],"A proxy for people who work in B2B companies with 10-199 employees, based on the number of users regularly logging in from the same IP location.",False,92030762,108228177
+6107813079183,Household income: top 5% of ZIP codes (US),income,['Household income: top 5% of ZIP codes (US)'],People who live in the top 5% of US ZIP codes by average household income based on publicly available information,False,10078165,11851923
+6107813551783,Household income: top 10% of ZIP codes (US),income,['Household income: top 10% of ZIP codes (US)'],People who live in the top 10% of US ZIP codes by average household income based on publicly available information,False,20991258,24685720
+6107813553183,Household income: top 10%-25% of ZIP codes (US),income,['Household income: top 10%-25% of ZIP codes (US)'],People who live in the top 10%-25% of US ZIP codes by average household income based on publicly available information.,False,26534352,31204398
+6107813554583,Household income: top 25%-50% of ZIP codes (US),income,['Household income: top 25%-50% of ZIP codes (US)'],People who live in the top 25%-50% of US ZIP codes by average household income based on publicly available information.,False,32491571,38210088
+6203619820983,Friends of Recently Moved,life_events,"['Friends of', 'Friends of Recently Moved']",Friends of people who have moved in the past 30 days,False,998831088,1174625360
+6203620854183,Friends of people with birthdays in a month,life_events,"['Friends of', 'Friends of people with birthdays in a month']",Friends of people with a birthday in 7-30 days,False,1963655743,2309259154
+6203621025983,Friends of Women with a Birthday in 7-30 days,life_events,"['Friends of', 'Friends of Women with a Birthday in 7-30 days']",Friends of Women with a Birthday in 7-30 days,False,1753627332,2062265743
+6203621119983,Friends of Men with a Birthday in 7-30 days,life_events,"['Friends of', 'Friends of Men with a Birthday in 7-30 days']",Friends of Men with a Birthday in 7-30 days,False,1840766595,2164741516
+6203621218383,Friends of people with birthdays in a week,life_events,"['Friends of', 'Friends of people with birthdays in a week']",Friends of people with a birthday in 0-7 days,False,1775472775,2087955984
+6203621325983,Friends of Women with a Birthday in 0-7 days,life_events,"['Friends of', 'Friends of Women with a Birthday in 0-7 days']",Friends of Women with a Birthday in 0-7 days,False,1448446517,1703373104
+6203621472783,Friends of Men with a Birthday in 0-7 days,life_events,"['Friends of', 'Friends of Men with a Birthday in 0-7 days']",Friends of Men with a Birthday in 0-7 days,False,1573595821,1850548686
+6262428231783,Business Decision Makers,industries,['Business Decision Makers'],"Business decision is a B2B audience segment that targets ads to people who are business decision makers in engineering/IT, operations, HR, strategy or marketing, based on their job titles.",False,36039,42383
+6262428248783,IT Decision Makers,industries,['IT Decision Makers'],IT decision makers is A b2b audience segment that target ads to people who are IT decision makers based on their job titles.,False,9858,11594
+6262428209783,Business decision maker titles and interests,industries,['Business decision maker titles and interests'],Business decision maker titles and interests is a b2b audience segment that targets ads to people who are business decision makers based on their job titles and interests.,False,36020,42360
+6377169550583,Company size: 1-10 employees,industries,['Company size: 1-10 employees'],People who work for companies with 1 to 10 employees.,False,576034,677417
+6377134779583,Company size: 11-100 employees,industries,['Company size: 11-100 employees'],People who work for companies with 11 to 100 employees.,False,959763,1128682
+6377169297783,Company size: 101-500 employees,industries,['Company size: 101-500 employees'],People who work for companies with 101 to 500 employees.,False,553088,650432
+6377408290383,Company size: more than 500 employees,industries,['Company size: more than 500 employees'],People who work for companies with more than 500 employees.,False,641077,753907
+6377168992983,Company revenue: $1M to $10M,industries,['Company revenue: $1M to $10M'],People who work for companies with revenue of $1M to $10M.,False,608989,716172
+6377169088983,Company revenue: less than $1M,industries,['Company revenue: less than $1M'],People who work for companies with revenue of less than $1M.,False,307508,361630
+6377408081983,Company revenue: more than $10M,industries,['Company revenue: more than $10M'],People who work for companies with revenue of more than $10M.,False,745281,876451
+6377408028783,Companies founded between 2000 and 2009,industries,['Companies founded between 2000 and 2009'],People who work for companies founded between 2000 and 2009.,False,656407,771935
+6377168689383,Companies founded between 2010 and now,industries,['Companies founded between 2010 and now'],People who work for companies founded between 2010 and now.,False,928104,1091451
+6377134922183,Companies founded before 2000,industries,['Companies founded before 2000'],People who work for companies founded before 2000.,False,955293,1123425

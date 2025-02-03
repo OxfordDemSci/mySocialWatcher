@@ -4,6 +4,7 @@ import copy
 import json
 import shutil
 import pandas as pd
+import numpy as np
 
 # virtual machine and collection
 vm = 'mingo'
@@ -15,9 +16,13 @@ if __name__ == '__main__':
     # ---- paths ---- #
     master_credentials_path = os.path.join('config', 'private', 'credentials_master.csv')
     specs_template_path = os.path.join('config', 'specs', 'examples', 'venezuelan_exodus.json')
-
     out_dir = os.path.join('docker', 'collectors', vm, collection)
     os.makedirs(out_dir, exist_ok=True)
+    yagmail_path = os.path.join('config', 'private', 'yagmail.csv')
+
+    # ---- yagmail credential ---- #
+    if os.path.exists(yagmail_path):
+        shutil.copy2(yagmail_path, os.path.join(out_dir, 'yagmail.csv'))
 
     # ---- credentials ---- #
 
@@ -30,6 +35,10 @@ if __name__ == '__main__':
     # filter vm and collection
     credentials = master_credentials.loc[(master_credentials.vm == vm) &
                                          (master_credentials.collection == collection)]
+
+    # convert app to int
+    credentials = credentials.copy()
+    credentials['app'] = credentials['app'].astype(np.int64)
 
     # save to csv
     credentials.to_csv(credentials_path,
@@ -54,6 +63,11 @@ if __name__ == '__main__':
     # modify template json
     # (no modification shown here other than defining the name of the collection)
     specs_template['name'] = collection
+
+    # location types
+    for i in range(len(specs_template['geo_locations'])):
+        if 'location_types' in specs_template['geo_locations'][i].keys():
+            del specs_template['geo_locations'][i]['location_types']
 
     # check if geo_location includes multiple countries
     def check_multi_country(loc):

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VM="saffron"
-COLLECTIONS=("ukraine_countries" "ukraine_europe" "ukraine_language" "ukraine_neighbours" "ukraine_regions")
+COLLECTIONS=("ukraine_europe_homerecent" "ukraine_language_homerecent" "ukraine_neighbours_homerecent" "ukraine_regions_homerecent")
 DIR="/home/ubuntu/mySocialWatcher"
 
 # cron
@@ -16,7 +16,7 @@ done
 
 # docker
 cd ${DIR}/docker/collectors/${VM}
-docker-compose up --build --no-start
+docker compose up --build --no-start
 
 unset VM
 unset COLLECTIONS

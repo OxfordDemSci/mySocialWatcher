@@ -1,0 +1,123 @@
+import os
+import json
+import pandas as pd
+import shutil
+import numpy as np
+
+# virtual machine and collection names
+vm = 'stitch'
+collection = 'israeli_cities_homerecent'
+
+if __name__ == '__main__':
+
+    # ---- paths ---- #
+    master_credentials_path = os.path.join('config', 'private', 'credentials_master.csv')
+    specs_template_path = os.path.join('config', 'specs', 'templates')
+    out_dir = os.path.join('docker', 'collectors', vm, collection)
+    os.makedirs(out_dir, exist_ok=True)
+    yagmail_path = os.path.join('config', 'private', 'yagmail.csv')
+
+    # ---- credentials ---- #
+
+    # path for output credentials.csv
+    credentials_path = os.path.join(out_dir, 'credentials.csv')
+
+    # load master credentials
+    master_credentials = pd.read_csv(master_credentials_path)
+
+    # filter vm and collection
+    credentials = master_credentials.loc[(master_credentials.vm == vm) &
+                                         (master_credentials.collection == collection)]
+
+    # convert app to int
+    credentials = credentials.copy()
+    credentials['app'] = credentials['app'].astype(np.int64)
+
+    # save to csv
+    credentials.to_csv(credentials_path,
+                       columns=['token', 'app'],
+                       header=False,
+                       index=False)
+
+    # ---- yagmail credential ---- #
+    if os.path.exists(yagmail_path):
+        shutil.copy2(yagmail_path, os.path.join(out_dir, 'yagmail.csv'))
+
+    # ---- collection specs ---- #
+
+    # output directory
+    specs_dir = os.path.join(out_dir, 'specs')
+    os.makedirs(specs_dir, exist_ok=True)
+
+    # cleanup old specs
+    for f in os.listdir(specs_dir):
+        os.remove(os.path.join(specs_dir, f))
+
+    # full city list
+    cities = pd.read_csv('config/specs/specs_explore/targets_csv/city.csv')
+    cities = cities.loc[cities['country_code'].eq('IL') &
+                        cities['type'].eq('city')]
+    cities.drop_duplicates(subset='key', keep=False, inplace=True)
+
+    # -- template specs --#
+    specs_file = os.path.join(specs_template_path, 'IL_regions.json')
+    if not os.path.exists(specs_file):
+        print('Specs template does not exist: ' + specs_file)
+
+    # template json
+    with open(specs_file) as f:
+        specs = json.load(f)
+    specs['name'] = collection
+
+    platforms = ['facebook', 'instagram']
+    languages = {'hebrew': 29, 'arabic': 28}
+
+    # cities
+    specs['geo_locations'] = []
+    for index, row in cities.iterrows():
+        specs['geo_locations'].append({
+            "name": "cities",
+            "values": [
+                {
+                    "key": row['key'],
+                    "region": row['region'],
+                    "region_id": row['region_id'],
+                    "country_code": row['country_code'],
+                    "name": row['name'],
+                    "distance_unit": "kilometer",
+                    "radius": 0
+                }
+            ]
+        })
+
+    # age groups
+    specs['ages_ranges'] = [
+        {'min': 13}, {'min': 18}, {'min': 20}, {'min': 50}, {'min': 60}, {'min': 65},
+        {'min': 13, 'max': 19}, {'min': 15, 'max': 49}, {'min': 15, 'max': 64}, {'min': 18, 'max': 34},
+        {'min': 20, 'max': 59}, {'min': 20, 'max': 49},
+        {'min': 20, 'max': 29}, {'min': 30, 'max': 39}, {'min': 40, 'max': 49}, {'min': 50, 'max': 59},
+        {'min': 60, 'max': 64}]
+
+    i = 0
+    for platform in platforms:
+        i += 1
+
+        # -- all languages --#
+        specs["publisher_platforms"] = [platform]
+        specs['languages'] = [None]
+
+        file_out = os.path.join(specs_dir, '_'.join([str(i).zfill(2), platform, 'all']) + '.json')
+        with open(file_out, "w") as f:
+            f.write(json.dumps(specs))
+
+        # specific languages
+        for language in languages.keys():
+            i += 1
+
+            # customise specs by platform and country
+            specs["publisher_platforms"] = [platform]
+            specs['languages'] = [{'name': language, 'values': [languages[language]]}]
+
+            file_out = os.path.join(specs_dir, '_'.join([str(i).zfill(2), platform, language]) + '.json')
+            with open(file_out, "w") as f:
+                f.write(json.dumps(specs))

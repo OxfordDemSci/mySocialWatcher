@@ -6,7 +6,14 @@ params_all = {'behaviour': {'type': 'adTargetingCategory','class': 'behaviors','
               'region':{'location_types':['region'],'type':'adgeolocation','q':'','limit':1000,'access_token': token},
               'country':{'location_types':['country'],'type':'adgeolocation','q':'','limit':1000,'access_token': token},
               'city':{'location_types':['city'],'type':'adgeolocation','q':'al','limit':1100,'access_token': token},
-              'locales': {'type': 'adlocale','q':'al','limit':1000,'access_token': token}}
+              'locales': {'type': 'adlocale','q':'al','limit':1000,'access_token': token},
+              'interests': {'type': 'adTargetingCategory','class': 'interests', 'limit':1000,'access_token': token},
+              'demographics': {'type': 'adTargetingCategory','class': 'demographics', 'limit':1000,'access_token': token},
+              'life_events': {'type': 'adTargetingCategory','class': 'life_events', 'limit':1000,'access_token': token},
+              'industries': {'type': 'adTargetingCategory','class': 'industries', 'limit':1000,'access_token': token},
+              'income': {'type': 'adTargetingCategory','class': 'income', 'limit':1000,'access_token': token},
+              'family_statuses': {'type': 'adTargetingCategory','class': 'family_statuses', 'limit':1000,'access_token': token},
+              'user_device': {'type': 'adTargetingCategory','class': 'user_device', 'limit':1000,'access_token': token}}
 def file_paths(spec_cat):
     json_file_path = Path.cwd()/f'config/specs/specs_explore/targets_json/{spec_cat}.json'
     csv_file_path = Path.cwd()/f'config/specs/specs_explore/targets_csv/{spec_cat}.csv'
