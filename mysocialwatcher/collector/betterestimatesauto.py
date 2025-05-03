@@ -32,13 +32,13 @@ countries_to_try = ['AD', 'AE', 'AG', 'AI', 'AS', 'AT', 'AU', 'AW', 'BB', 'BE', 
                     'KW', 'KY', 'LI', 'LT', 'LU', 'LV', 'MC', 'MF', 'MH', 'MO', 'MQ', 'MS', 'MT', 'MV', 'NC', 'NL', 'NO',
                     'NR', 'NZ', 'OM', 'PA', 'PF', 'PG', 'PL', 'PM', 'PR', 'PT', 'QA', 'RE', 'RO', 'SA', 'SE', 'SG', 'SH', 'SI',
                     'SJ', 'SK', 'SM', 'SX', 'TC', 'TT', 'TW', 'US', 'UY', 'VG', 'VI', 'WF', 'XK', 'YT']
-##
+## constants sleep
 constants.SLEEP_TIME = 0
 constants.SAVE_EVERY = 1000
 
-constants.REACHESTIMATE_URL = "https://graph.facebook.com/v17.0/act_{}/delivery_estimate"
-constants.GRAPH_SEARCH_URL = "https://graph.facebook.com/v17.0/search"
-constants.TARGETING_SEARCH_URL = "https://graph.facebook.com/v17.0/act_{}/targetingsearch"
+#constants.REACHESTIMATE_URL = "https://graph.facebook.com/v17.0/act_{}/delivery_estimate"
+#constants.GRAPH_SEARCH_URL = "https://graph.facebook.com/v17.0/search"
+#constants.TARGETING_SEARCH_URL = "https://graph.facebook.com/v17.0/act_{}/targetingsearch"
 
 
 ## Helper functions
@@ -321,41 +321,47 @@ def perform_collection(df):
 
 
 # function to make rerun attempts
-def rerun_collection(df):
+def rerun_collection(df, max_reruns=50):
     not_estimate_ready = r'estimate_ready":false'
-    idx_not_ready = (df[constants.RESPONSE_FIELD].astype(str).str.contains(not_estimate_ready))
+    idx_not_ready = df[constants.RESPONSE_FIELD].astype(str).str.contains(not_estimate_ready)
+
     if sum(idx_not_ready) == 0:
         print("All queries are estimate ready. Will not rerun.")
-        return(df)
-    
-    # will need to rerun the data collection
-    print("Number of queries that are not estimate ready:",sum(idx_not_ready))
+        return df
+
+    print("Number of queries that are not estimate ready:", sum(idx_not_ready))
     print("Will re-run the data collection for entries that are not estimate ready.")
     df.loc[idx_not_ready, constants.RESPONSE_FIELD] = None
-    
+
     rerun_number = 0
-    while True:
-        print("Starting rerun number: ",rerun_number)
-        
+    while rerun_number < max_reruns:
+        print("Starting rerun number:", rerun_number)
+
         try:
             df = watcherAPI.perform_collection_data_on_facebook(df)
         except Exception as err:
-            print("Found the following error: {0}".format(err))
-            print("Will keep trying again after ", time_wait, " seconds.")
+            print(f"Found the following error: {err}")
+            rerun_number += 1
+            print("Will keep trying again after", time_wait, "seconds.")
             time.sleep(time_wait)
             continue
-        
-        rerun_number = rerun_number + 1
-        idx_not_ready = (df[constants.RESPONSE_FIELD].astype(str).str.contains(not_estimate_ready))
+
+        idx_not_ready = df[constants.RESPONSE_FIELD].astype(str).str.contains(not_estimate_ready)
         if sum(idx_not_ready) == 0:
+            print("All estimates are ready.")
             break
-        else:
-            df.loc[idx_not_ready, constants.RESPONSE_FIELD] = None
-            print("Some estimates are still not ready.")
-            print("Collection will be rerun again in" + str(time_wait) + "seconds")
-            time.sleep(time_wait)
+
+        df.loc[idx_not_ready, constants.RESPONSE_FIELD] = None
+        rerun_number += 1
+        print("Some estimates are still not ready.")
+        print("Collection will be rerun again in", time_wait, "seconds")
+        time.sleep(time_wait)
+
+    if rerun_number == max_reruns:
+        print("Max rerun limit reached. Some queries may still be unresolved.")
+
     print("Rerun completed!")
-    return(df)
+    return df
 
 def setup_cache(cacheFolder, cacheFileName):
     curr_dir = os.getcwd()
