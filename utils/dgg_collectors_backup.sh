@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # define variables
-base_dir=~/ndph/J/backup/dgg_collectors
+base_dir=/home/doug/ndph/DemSci/data/db-backup/dgg_collectors
 past_backups=($(ls ${base_dir}))
 current_date=$(date +"%Y%m%d")
 last_backup=${past_backups[-1]}

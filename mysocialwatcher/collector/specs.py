@@ -1,9 +1,13 @@
+import ast
 import gzip
+import json
+
 import pandas as pd
+import json
 from pysocialwatcher.json_builder import JSONBuilder, AgeList, Age, Genders, LocationList, Location
 from pysocialwatcher import watcherAPI
 
-def master_specs(country, regions=True, cities=False):
+def master_specs(country, regions=True, cities=False, custom_tesselation = '', location_type='recent', platform='facebook'):
     """
     Master JSON for national, sub-national, and city-level demographic collections.
 
@@ -11,6 +15,9 @@ def master_specs(country, regions=True, cities=False):
         country (str): IS02 country code
         regions (boolean): Toggle region collection
         cities (boolean): Toggle city collections
+        custom_tesselation (str): path of json describing the custom tesselation
+        location_type (str): location type (e.g, 'home', 'recent)
+        platform (str): facebook or instagram
     returns:
         dict: specification for collections
     """
@@ -19,8 +26,9 @@ def master_specs(country, regions=True, cities=False):
     genderlist = Genders(True, True, True)
 
     # age
-    ages = [[13, None], [18, None], [20, None], [60, None], [65, None],
-            [13, 19], [15, 49], [15, 64], [20, 59], [18, 60],
+    ages = [[13, None], [15, None], [18, None], [20, None], [50, None], [60, None], [65, None],
+            [13, 19], [13, 17], [15, 24], [15, 49], [15, 59], [15, 64],
+            [18, 24], [18, 49], [18, 59], [18, 64], [20, 49], [20, 59], [20, 64], [25, 59],
             [20, 29], [30, 39], [40, 49], [50, 59],
             [15, 19], [20, 24], [25, 29], [30, 34], [35, 39], [40, 44], [45, 49], [50, 54], [55, 59], [60, 64]]
 
@@ -46,18 +54,31 @@ def master_specs(country, regions=True, cities=False):
         if isinstance(all_cities, pd.DataFrame):
             loclist.get_location_list_from_df(all_cities)
 
+
+
+
     # build json
     specs = JSONBuilder(name=country,
                         age_list=agelist,
                         location_list=loclist,
                         genders=genderlist).jsonfy()
 
+    # custom tesselation geolocation spec
+
+    if custom_tesselation != '':
+        specs['geo_locations'] = []
+        with open(custom_tesselation, "r", encoding='utf-8') as f:
+            for line in f:
+                specs['geo_locations'].append(json.loads(line))
+
     # platform
-    specs["publisher_platforms"] = ["facebook"]
+    specs["publisher_platforms"] = [platform]
 
     # location types
     for i in range(len(specs['geo_locations'])):
-        specs['geo_locations'][i]['location_types'] = ['recent']
+        specs['geo_locations'][i]['location_types'] = [location_type]
+
+    # TODO add language
 
     # return result
     return {'specs': specs, 'regions': all_regions, 'cities': all_cities}
@@ -166,3 +187,5 @@ def dgg_specs():
 
     # return json
     return specs
+
+

@@ -25,7 +25,20 @@ select
 	case
 	    when all_fields -> 'languages' ->> 'values' is null then '[]'
 	    else all_fields -> 'languages' ->> 'values'
-	    end as language_key
+	    end as language_key,
+  	case
+        when all_fields -> 'citizenship' ->> 'name' is null then 'all'
+        else all_fields -> 'citizenship' ->> 'name'
+        end as citizenship_name,
+   	case
+        when all_fields -> 'access_device' ->> 'name' is null then 'all'
+        else all_fields -> 'access_device' ->> 'name'
+        end as access_device_name,
+   	case
+        when all_fields -> 'scholarities' ->> 'name' is null then 'all'
+        else all_fields -> 'scholarities' ->> 'name'
+        end as scholarities_name,
+    all_fields
 from
  	facebook
 inner join
@@ -45,8 +58,14 @@ select
 	age_min, age_max,
 	country,
 	geo_locations ->> 'name' as geo_level,
-	(geo_locations -> 'values')[0] ->> 'key'::text as geo_key,
-	(geo_locations -> 'values')[0] ->> 'name' as geo_name,
+	case
+		when geo_locations ->> 'name' = 'custom_locations' then (geo_locations -> 'pySocialWatcherReference') ->> 'geo_id'::text
+		else (geo_locations -> 'values')[0] ->> 'key'::text
+		end as geo_key,
+	case
+		when geo_locations ->> 'name' = 'custom_locations' then (geo_locations -> 'pySocialWatcherReference') ->> 'geo_id'::text
+		else (geo_locations -> 'values')[0] ->> 'name'
+		end as geo_name,
 	case
 	    when geo_locations ->> 'location_types' is null then '["home", "recent"]'
 	    else geo_locations ->> 'location_types'
@@ -58,7 +77,20 @@ select
 	case
 	    when all_fields -> 'languages' ->> 'values' is null then '[]'
 	    else all_fields -> 'languages' ->> 'values'
-	    end as language_key
+	    end as language_key,
+  	case
+        when all_fields -> 'citizenship' ->> 'name' is null then 'all'
+        else all_fields -> 'citizenship' ->> 'name'
+        end as citizenship_name,
+   	case
+        when all_fields -> 'access_device' ->> 'name' is null then 'all'
+        else all_fields -> 'access_device' ->> 'name'
+        end as access_device_name,
+   	case
+        when all_fields -> 'scholarities' ->> 'name' is null then 'all'
+        else all_fields -> 'scholarities' ->> 'name'
+        end as scholarities_name,
+    all_fields
 from
  	facebook
 inner join
@@ -126,7 +158,20 @@ select
 	case
 	    when all_fields -> 'languages' ->> 'values' is null then '[]'
 	    else all_fields -> 'languages' ->> 'values'
-	    end as language_key
+	    end as language_key,
+  	case
+        when all_fields -> 'citizenship' ->> 'name' is null then 'all'
+        else all_fields -> 'citizenship' ->> 'name'
+        end as citizenship_name,
+   	case
+        when all_fields -> 'access_device' ->> 'name' is null then 'all'
+        else all_fields -> 'access_device' ->> 'name'
+        end as access_device_name,
+   	case
+        when all_fields -> 'scholarities' ->> 'name' is null then 'all'
+        else all_fields -> 'scholarities' ->> 'name'
+        end as scholarities_name,
+    all_fields
 from
  	instagram
 left join
@@ -146,8 +191,14 @@ select
 	age_min, age_max,
 	country,
 	geo_locations ->> 'name' as geo_level,
-	(geo_locations -> 'values')[0] ->> 'key'::text as geo_key,
-	(geo_locations -> 'values')[0] ->> 'name' as geo_name,
+	case
+		when geo_locations ->> 'name' = 'custom_locations' then (geo_locations -> 'pySocialWatcherReference') ->> 'geo_id'::text
+		else (geo_locations -> 'values')[0] ->> 'key'::text
+		end as geo_key,
+	case
+		when geo_locations ->> 'name' = 'custom_locations' then (geo_locations -> 'pySocialWatcherReference') ->> 'geo_id'::text
+		else (geo_locations -> 'values')[0] ->> 'name'
+		end as geo_name,
 	case
 	    when geo_locations ->> 'location_types' is null then '["home", "recent"]'
 	    else geo_locations ->> 'location_types'
@@ -159,7 +210,20 @@ select
 	case
 	    when all_fields -> 'languages' ->> 'values' is null then '[]'
 	    else all_fields -> 'languages' ->> 'values'
-	    end as language_key
+	    end as language_key,
+  	case
+        when all_fields -> 'citizenship' ->> 'name' is null then 'all'
+        else all_fields -> 'citizenship' ->> 'name'
+        end as citizenship_name,
+   	case
+        when all_fields -> 'access_device' ->> 'name' is null then 'all'
+        else all_fields -> 'access_device' ->> 'name'
+        end as access_device_name,
+   	case
+        when all_fields -> 'scholarities' ->> 'name' is null then 'all'
+        else all_fields -> 'scholarities' ->> 'name'
+        end as scholarities_name,
+    all_fields
 from
  	instagram
 left join

@@ -1,24 +1,29 @@
-# docker-compose to deploy multiple collectors
-version: '3.3'
-
 services:
 
-  israeli_conflict:
-    container_name: israeli_conflict
+  gaza_governorates_homerecent:
+    container_name: gaza_governorates_homerecent
     volumes:
-      - ./israeli_conflict:/app/in
-      - ./../../../data/stitch/israeli_conflict:/app/data
+      - ./gaza_governorates_homerecent:/app/in
+      - ./../../../data/stitch/gaza_governorates_homerecent:/app/data
     build:
+      args:
+        sleep_time: 2
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
-  gaza_cities:
-    container_name: gaza_cities
+  gaza_municipalities_homerecent:
+    container_name: gaza_municipalities_homerecent
     volumes:
-      - ./gaza_cities:/app/in
-      - ./../../../data/stitch/gaza_cities:/app/data
+      - ./gaza_municipalities_homerecent:/app/in
+      - ./../../../data/stitch/gaza_municipalities_homerecent:/app/data
     build:
+      args:
+        sleep_time: 2
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
@@ -29,77 +34,66 @@ services:
       - ./gaza_cities_homerecent:/app/in
       - ./../../../data/stitch/gaza_cities_homerecent:/app/data
     build:
+      args:
+        sleep_time: 11
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
-  westbank_cities:
-    container_name: westbank_cities
+  israeli_conflict_homerecent:
+    container_name: israeli_conflict_homerecent
     volumes:
-      - ./westbank_cities:/app/in
-      - ./../../../data/stitch/westbank_cities:/app/data
+      - ./israeli_conflict_homerecent:/app/in
+      - ./../../../data/stitch/israeli_conflict_homerecent:/app/data
     build:
+      args:
+        sleep_time: 11
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
+  westbank_cities_homerecent:
+    container_name: westbank_cities_homerecent
+    volumes:
+      - ./westbank_cities_homerecent:/app/in
+      - ./../../../data/stitch/westbank_cities_homerecent:/app/data
+    build:
+      args:
+        sleep_time: 11
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: always
 
-  israeli_cities:
-    container_name: israeli_cities
+  israeli_cities_homerecent:
+    container_name: israeli_cities_homerecent
     volumes:
-      - ./israeli_cities:/app/in
-      - ./../../../data/stitch/israeli_cities:/app/data
+      - ./israeli_cities_homerecent:/app/in
+      - ./../../../data/stitch/israeli_cities_homerecent:/app/data
     build:
+      args:
+        sleep_time: 11
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: always
 
-  lebanon_cities:
-    container_name: lebanon_cities
+  lebanon_cities_homerecent:
+    container_name: lebanon_cities_homerecent
     volumes:
-      - ./lebanon_cities:/app/in
-      - ./../../../data/stitch/lebanon_cities:/app/data
+      - ./lebanon_cities_homerecent:/app/in
+      - ./../../../data/stitch/lebanon_cities_homerecent:/app/data
     build:
+      args:
+        sleep_time: 11
+        email_notification_enable: "True"
+        email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: always
-
-#  psil_homerecent:
-#    container_name: psil_homerecent
-#    volumes:
-#      - ./psil_homerecent:/app/in
-#      - ./../../../data/stitch/psil_homerecent:/app/data
-#    build:
-#      context: ./../../../
-#      dockerfile: ./docker/collectors/Dockerfile
-#    restart: always
-
-#  turkey_earthquake:
-#    container_name: turkey_earthquake
-#    volumes:
-#      - ./turkey_earthquake:/app/in
-#      - ./../../../data/stitch/turkey_earthquake:/app/data
-#    build:
-#      context: ./../../../
-#      dockerfile: ./docker/collectors/Dockerfile
-#    restart: on-failure
-
-#  turkey_language:
-#    container_name: turkey_language
-#    volumes:
-#      - ./turkey_language:/app/in
-#      - ./../../../data/stitch/turkey_language:/app/data
-#    build:
-#      context: ./../../../
-#      dockerfile: ./docker/collectors/Dockerfile
-#    restart: on-failure
-
-#  sudan_conflict:
-#    container_name: sudan_conflict
-#    volumes:
-#      - ./sudan_conflict:/app/in
-#      - ./../../../data/stitch/sudan_conflict:/app/data
-#    build:
-#      context: ./../../../
-#      dockerfile: ./docker/collectors/Dockerfile
-#    restart: on-failure
-

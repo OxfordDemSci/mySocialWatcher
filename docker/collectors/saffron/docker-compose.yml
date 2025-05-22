@@ -1,74 +1,58 @@
-# docker-compose to deploy multiple collectors
-version: '3.3'
-
 services:
 
-  ukraine_regions:
-    container_name: ukraine_regions
+  ukraine_regions_homerecent:
+    container_name: ukraine_regions_homerecent
     volumes:
-      - ./ukraine_regions:/app/in
-      - ./../../../data/saffron/ukraine_regions:/app/data
+      - ./ukraine_regions_homerecent:/app/in
+      - ./../../../data/saffron/ukraine_regions_homerecent:/app/data
     build:
+      args:
+          sleep_time: 11
+          email_notification_enable: "True"
+          email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
-  ukraine_neighbours:
-    container_name: ukraine_neighbours
+  ukraine_neighbours_homerecent:
+    container_name: ukraine_neighbours_homerecent
     volumes:
-      - ./ukraine_neighbours:/app/in
-      - ./../../../data/saffron/ukraine_neighbours:/app/data
+      - ./ukraine_neighbours_homerecent:/app/in
+      - ./../../../data/saffron/ukraine_neighbours_homerecent:/app/data
     build:
+      args:
+          sleep_time: 11
+          email_notification_enable: "True"
+          email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
-  ukraine_language:
-    container_name: ukraine_language
+  ukraine_language_homerecent:
+    container_name: ukraine_language_homerecent
     volumes:
-      - ./ukraine_language:/app/in
-      - ./../../../data/saffron/ukraine_language:/app/data
+      - ./ukraine_language_homerecent:/app/in
+      - ./../../../data/saffron/ukraine_language_homerecent:/app/data
     build:
+      args:
+          sleep_time: 11
+          email_notification_enable: "True"
+          email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
-  ukraine_europe:
-    container_name: ukraine_europe
+  ukraine_europe_homerecent:
+    container_name: ukraine_europe_homerecent
     volumes:
-      - ./ukraine_europe:/app/in
-      - ./../../../data/saffron/ukraine_europe:/app/data
+      - ./ukraine_europe_homerecent:/app/in
+      - ./../../../data/saffron/ukraine_europe_homerecent:/app/data
     build:
+      args:
+          sleep_time: 11
+          email_notification_enable: "True"
+          email_receiver: "douglas.leasure@demography.ox.ac.uk,edith.darin@demography.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: unless-stopped
 
-#  ukraine_neighbours1:
-#    container_name: ukraine_neighbours1
-#    volumes:
-#      - ./ukraine_neighbours1:/app/in
-#      - ./../../../data/saffron/ukraine_neighbours1:/app/data
-#    build:
-#      context: ./../../../
-#      dockerfile: ./docker/collectors/Dockerfile
-#    restart: on-failure
-
-#  ukraine_neighbours2:
-#    container_name: ukraine_neighbours2
-#    volumes:
-#      - ./ukraine_neighbours2:/app/in
-#      - ./../../../data/saffron/ukraine_neighbours2:/app/data
-#    build:
-#      context: ./../../../
-#      dockerfile: ./docker/collectors/Dockerfile
-#    restart: on-failure
-
-#  ukraine_countries:
-#    container_name: ukraine_countries
-#    volumes:
-#      - ./ukraine_countries:/app/in
-#      - ./../../../data/saffron/ukraine_countries:/app/data
-#    build:
-#      context: ./../../../
-#      dockerfile: ./docker/collectors/Dockerfile
-#    restart: unless-stopped
