@@ -6,6 +6,8 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
       - ./public_html/:/var/www/public_html/
+      # - ./certs:/etc/letsencrypt/live
+      # - ./certbot-etc:/etc/letsencrypt
     ports:
       - "80:80"
       - "443:443"
@@ -13,6 +15,7 @@ services:
       - net
     depends_on:
       - datahub_api
+      # - certbot
     restart: unless-stopped
 
   # certbot:
