@@ -1,0 +1,210 @@
+{
+    "name": "ZWE",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4717,
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4717,
+                "name": "Bulawayo"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4698,
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4698,
+                "name": "Harare"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4716,
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4716,
+                "name": "Manicaland"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4071,
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4071,
+                "name": "Mashonaland Central"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4072,
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4072,
+                "name": "Mashonaland East"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4719,
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4719,
+                "name": "Mashonaland West"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4076,
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4076,
+                "name": "Masvingo"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4074,
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4074,
+                "name": "Matabeleland North"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4075,
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4075,
+                "name": "Matabeleland South"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4720,
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4720,
+                "name": "Midlands"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "ZW"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

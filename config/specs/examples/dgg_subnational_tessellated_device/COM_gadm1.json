@@ -179,13 +179,10 @@
                     "distance_unit": "kilometer"
                 }
             ],
-            "location_types": [
-                "home"
-            ],
             "pySocialWatcherReference": {
                 "geo_id": "COM.1_1",
-                " coverType": "interior_cover",
-                " expanded": "FALSE"
+                "coverType": "interior_cover",
+                "expanded": "FALSE"
             },
             "country_code": "KM"
         },
@@ -715,9 +712,6 @@
                     "distance_unit": "kilometer"
                 }
             ],
-            "location_types": [
-                "home"
-            ],
             "pySocialWatcherReference": {
                 "geo_id": "COM.2_1",
                 " coverType": "interior_cover",
@@ -1178,9 +1172,6 @@
                     "radius": 1,
                     "distance_unit": "kilometer"
                 }
-            ],
-            "location_types": [
-                "home"
             ],
             "pySocialWatcherReference": {
                 "geo_id": "COM.3_1",
