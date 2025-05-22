@@ -1,6 +1,4 @@
-# docker-compose to deploy multiple collectors
-version: '3.3'
-
+# docker-compose to deploy crawler
 services:
 
   crawler:

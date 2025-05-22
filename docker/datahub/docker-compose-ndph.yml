@@ -1,10 +1,11 @@
-version: "3.3"
-
 services:
 
   datahub_web:
     container_name: datahub_web
     image: nginx:latest
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile.nginx
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
       - ./public_html/:/var/www/public_html/
