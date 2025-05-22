@@ -1,5 +1,5 @@
 # Dockerfile used by the datahub_api
-FROM python:3.13-slim-bookworm
+FROM python:3.10-slim-bookworm
 
 RUN echo 'Acquire::http::Proxy "http://dmzproxy.ndph.ox.ac.uk:8080";' > /etc/apt/apt.conf.d/99ndphproxy
 RUN echo 'Acquire::https::Proxy "http://dmzproxy.ndph.ox.ac.uk:8080";' >> /etc/apt/apt.conf.d/99ndphproxy
@@ -7,7 +7,7 @@ RUN echo 'Acquire::https::Proxy "http://dmzproxy.ndph.ox.ac.uk:8080";' >> /etc/a
 WORKDIR /app
 
 RUN apt-get update -y
-RUN apt-get -y install libpq-dev gcc
+RUN apt-get -y install libpq-dev gcc gdal-bin libgdal-dev
 
 COPY docker/datahub/requirements.txt requirements.txt
 RUN pip install --proxy http://dmzproxy.ndph.ox.ac.uk:8080 psycopg2-binary
