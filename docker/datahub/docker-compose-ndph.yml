@@ -9,8 +9,6 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
       - ./public_html/:/var/www/public_html/
-      # - ./certs:/etc/letsencrypt/live
-      # - ./certbot-etc:/etc/letsencrypt
     ports:
       - "80:80"
       - "443:443"
@@ -18,17 +16,7 @@ services:
       - net
     depends_on:
       - datahub_api
-      # - certbot
     restart: unless-stopped
-
-  # certbot:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile.certbot
-  #   container_name: certbot
-  #   volumes:
-  #     - ./certbot-etc:/etc/letsencrypt
-  #     - ./html:/var/www/certbot
 
   datahub_api:
     container_name: datahub_api
