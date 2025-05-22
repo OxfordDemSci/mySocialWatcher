@@ -17,6 +17,15 @@ services:
       - datahub_api
     restart: unless-stopped
 
+  # certbot:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.certbot
+  #   container_name: certbot
+  #   volumes:
+  #     - ./certbot-etc:/etc/letsencrypt
+  #     - ./html:/var/www/certbot
+
   datahub_api:
     container_name: datahub_api
     env_file: .env
