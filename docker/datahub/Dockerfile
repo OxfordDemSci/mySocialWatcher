@@ -1,5 +1,5 @@
 # Dockerfile used by the datahub_api
-FROM python:3.10-slim-buster
+FROM python:3.13-slim-bookworm
 
 WORKDIR /app
 
