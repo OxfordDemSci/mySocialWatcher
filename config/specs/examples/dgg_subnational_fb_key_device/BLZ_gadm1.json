@@ -1,0 +1,124 @@
+{
+    "name": "BLZ",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 521,
+                    "country_code": "BZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 521,
+                "name": "Belize"
+            },
+            "country_code": "BZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 522,
+                    "country_code": "BZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 522,
+                "name": "Cayo"
+            },
+            "country_code": "BZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 523,
+                    "country_code": "BZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 523,
+                "name": "Corozal"
+            },
+            "country_code": "BZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 524,
+                    "country_code": "BZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 524,
+                "name": "Orange Walk"
+            },
+            "country_code": "BZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 525,
+                    "country_code": "BZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 525,
+                "name": "Stann Creek"
+            },
+            "country_code": "BZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 526,
+                    "country_code": "BZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 526,
+                "name": "Toledo"
+            },
+            "country_code": "BZ"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

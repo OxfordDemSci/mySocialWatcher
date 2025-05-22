@@ -1,0 +1,208 @@
+{
+    "name": "COG",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 569,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 569,
+                "name": "Bouenza"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 578,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 578,
+                "name": "Brazzaville"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4818,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4818,
+                "name": "Cuvette"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4818,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4818,
+                "name": "Cuvette-Ouest"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 571,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 571,
+                "name": "Kouilou"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 572,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 572,
+                "name": "L\u00e9koumou"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 573,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 573,
+                "name": "Likouala"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 574,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 574,
+                "name": "Niari"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 575,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 575,
+                "name": "Plateaux"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4819,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4819,
+                "name": "Pointe Noire"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 577,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 577,
+                "name": "Pool"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 576,
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 576,
+                "name": "Sangha"
+            },
+            "country_code": "CG"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

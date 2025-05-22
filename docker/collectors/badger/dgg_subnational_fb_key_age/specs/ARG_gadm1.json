@@ -1,0 +1,404 @@
+{
+    "name": "ARG",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 97,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 97,
+                "name": "Buenos Aires"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 98,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 98,
+                "name": "Catamarca"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 103,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 103,
+                "name": "Ciudad de Buenos Aires"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 101,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 101,
+                "name": "C\u00f3rdoba"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 102,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 102,
+                "name": "Corrientes"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 104,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 104,
+                "name": "Entre R\u00edos"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 105,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 105,
+                "name": "Formosa"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 106,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 106,
+                "name": "Jujuy"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 107,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 107,
+                "name": "La Pampa"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 108,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 108,
+                "name": "La Rioja"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 109,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 109,
+                "name": "Mendoza"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 111,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 111,
+                "name": "Neuqu\u00e9n"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 112,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 112,
+                "name": "R\u00edo Negro"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 113,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 113,
+                "name": "Salta"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 114,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 114,
+                "name": "San Juan"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 115,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 115,
+                "name": "San Luis"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 117,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 117,
+                "name": "Santa Cruz"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 117,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 117,
+                "name": "Santa Fe"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 118,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 118,
+                "name": "Santiago del Estero"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 119,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 119,
+                "name": "Tierra del Fuego"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 120,
+                    "country_code": "AR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 120,
+                "name": "Tucum\u00e1n"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "AR"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

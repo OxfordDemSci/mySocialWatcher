@@ -1,0 +1,676 @@
+{
+    "name": "NGA",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2631,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2631,
+                "name": "Abia"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2622,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2622,
+                "name": "Adamawa"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2610,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2610,
+                "name": "Akwa Ibom"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2614,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2614,
+                "name": "Anambra"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2632,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2632,
+                "name": "Bauchi"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2638,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2638,
+                "name": "Bayelsa"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2615,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2615,
+                "name": "Benue"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2616,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2616,
+                "name": "Borno"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2611,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2611,
+                "name": "Cross River"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2623,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2623,
+                "name": "Delta"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2639,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2639,
+                "name": "Ebonyi"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2624,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2624,
+                "name": "Edo"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2640,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2640,
+                "name": "Ekiti"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2633,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2633,
+                "name": "Enugu"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2608,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2608,
+                "name": "Federal Capital Territory"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2641,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2641,
+                "name": "Gombe"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2617,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2617,
+                "name": "Imo"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2625,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2625,
+                "name": "Jigawa"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2612,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2612,
+                "name": "Kaduna"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2618,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2618,
+                "name": "Kano"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2613,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2613,
+                "name": "Katsina"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2626,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2626,
+                "name": "Kebbi"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2627,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2627,
+                "name": "Kogi"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2619,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2619,
+                "name": "Kwara"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2607,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2607,
+                "name": "Lagos"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2642,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2642,
+                "name": "Nasarawa"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2620,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2620,
+                "name": "Niger"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2609,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2609,
+                "name": "Ogun"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2634,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2634,
+                "name": "Ondo"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2628,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2628,
+                "name": "Osun"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2621,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2621,
+                "name": "Oyo"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2635,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2635,
+                "name": "Plateau"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2636,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2636,
+                "name": "Rivers"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2637,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2637,
+                "name": "Sokoto"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2629,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2629,
+                "name": "Taraba"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2630,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2630,
+                "name": "Yobe"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2643,
+                    "country_code": "NG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2643,
+                "name": "Zamfara"
+            },
+            "location_types": [
+                "home"
+            ],
+            "country_code": "NG"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

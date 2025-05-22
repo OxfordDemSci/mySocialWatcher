@@ -1,0 +1,117 @@
+{
+    "name": "LBN",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2059,
+                    "country_code": "LB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2059,
+                "name": "Beirut"
+            },
+            "country_code": "LB"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2060,
+                    "country_code": "LB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2060,
+                "name": "Mount Lebanon"
+            },
+            "country_code": "LB"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4322,
+                    "country_code": "LB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4322,
+                "name": "Nabatiyeh"
+            },
+            "country_code": "LB"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2058,
+                    "country_code": "LB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2058,
+                "name": "North"
+            },
+            "country_code": "LB"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2061,
+                    "country_code": "LB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2061,
+                "name": "South"
+            },
+            "country_code": "LB"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

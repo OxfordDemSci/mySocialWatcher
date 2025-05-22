@@ -1,0 +1,243 @@
+{
+    "name": "LBR",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4856,
+                    "country_code": "LR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4856,
+                "name": "Bomi"
+            },
+            "country_code": "LR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2109,
+                    "country_code": "LR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2109,
+                "name": "Bong"
+            },
+            "country_code": "LR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4866,
+                    "country_code": "LR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4866,
+                "name": "Gbapolu"
+            },
+            "country_code": "LR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2117,
+                    "country_code": "LR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2117,
+                "name": "Grand Bassa"
+            },
+            "country_code": "LR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2111,
+                    "country_code": "LR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2111,
+                "name": "Grand Cape Mount"
+            },
+            "country_code": "LR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2110,
+                    "country_code": "LR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2110,
+                "name": "Grand Gedeh"
+            },
+            "country_code": "LR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4859,
+                    "country_code": "LR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4859,
+                "name": "Grand Kru"
+            },
+            "country_code": "LR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2112,
+                    "country_code": "LR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2112,
+                "name": "Lofa"
+            },
+            "country_code": "LR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4864,
+                    "country_code": "LR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4864,
+                "name": "Margibi"
+            },
+            "country_code": "LR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4861,
+                    "country_code": "LR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4861,
+                "name": "Maryland"
+            },
+            "country_code": "LR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2118,
+                    "country_code": "LR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2118,
+                "name": "Montserrado"
+            },
+            "country_code": "LR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2115,
+                    "country_code": "LR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2115,
+                "name": "Nimba"
+            },
+            "country_code": "LR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4863,
+                    "country_code": "LR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4863,
+                "name": "River Gee"
+            },
+            "country_code": "LR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2116,
+                    "country_code": "LR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2116,
+                "name": "Sinoe"
+            },
+            "country_code": "LR"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

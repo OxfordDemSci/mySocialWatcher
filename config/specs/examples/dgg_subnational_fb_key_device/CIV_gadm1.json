@@ -1,0 +1,236 @@
+{
+    "name": "CIV",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 5061,
+                    "country_code": "CI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 5061,
+                "name": "Abidjan"
+            },
+            "country_code": "CI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4500,
+                    "country_code": "CI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4500,
+                "name": "Bas-Sassandra"
+            },
+            "country_code": "CI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 5062,
+                    "country_code": "CI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 5062,
+                "name": "Como\u00e9"
+            },
+            "country_code": "CI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4497,
+                    "country_code": "CI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4497,
+                "name": "Dengu\u00e9l\u00e9"
+            },
+            "country_code": "CI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 5065,
+                    "country_code": "CI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 5065,
+                "name": "G\u00f4h-Djiboua"
+            },
+            "country_code": "CI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 5063,
+                    "country_code": "CI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 5063,
+                "name": "Lacs"
+            },
+            "country_code": "CI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 5071,
+                    "country_code": "CI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 5071,
+                "name": "Lagunes"
+            },
+            "country_code": "CI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 5064,
+                    "country_code": "CI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 5064,
+                "name": "Montagnes"
+            },
+            "country_code": "CI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 5072,
+                    "country_code": "CI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 5072,
+                "name": "Sassandra-Marahou\u00e9"
+            },
+            "country_code": "CI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4482,
+                    "country_code": "CI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4482,
+                "name": "Savanes"
+            },
+            "country_code": "CI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4501,
+                    "country_code": "CI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4501,
+                "name": "Vall\u00e9e du Bandama"
+            },
+            "country_code": "CI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 5070,
+                    "country_code": "CI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 5070,
+                "name": "Woroba"
+            },
+            "country_code": "CI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4496,
+                    "country_code": "CI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4496,
+                "name": "Yamoussoukro"
+            },
+            "country_code": "CI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4503,
+                    "country_code": "CI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4503,
+                "name": "Zanzan"
+            },
+            "country_code": "CI"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

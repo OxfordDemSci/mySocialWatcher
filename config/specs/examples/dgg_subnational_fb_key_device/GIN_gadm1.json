@@ -1,0 +1,152 @@
+{
+    "name": "GIN",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1442,
+                    "country_code": "GN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1442,
+                "name": "Bok\u00e9"
+            },
+            "country_code": "GN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1443,
+                    "country_code": "GN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1443,
+                "name": "Conakry"
+            },
+            "country_code": "GN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1447,
+                    "country_code": "GN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1447,
+                "name": "Faranah"
+            },
+            "country_code": "GN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1466,
+                    "country_code": "GN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1466,
+                "name": "Kankan"
+            },
+            "country_code": "GN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1453,
+                    "country_code": "GN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1453,
+                "name": "Kindia"
+            },
+            "country_code": "GN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1468,
+                    "country_code": "GN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1468,
+                "name": "Lab\u00e9"
+            },
+            "country_code": "GN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1459,
+                    "country_code": "GN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1459,
+                "name": "Mamou"
+            },
+            "country_code": "GN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1472,
+                    "country_code": "GN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1472,
+                "name": "Nz\u00e9r\u00e9kor\u00e9"
+            },
+            "country_code": "GN"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

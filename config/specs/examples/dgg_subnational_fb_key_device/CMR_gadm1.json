@@ -1,0 +1,152 @@
+{
+    "name": "CMR",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 680,
+                    "country_code": "CM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 680,
+                "name": "Adamaoua"
+            },
+            "country_code": "CM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 681,
+                    "country_code": "CM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 681,
+                "name": "Centre"
+            },
+            "country_code": "CM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 675,
+                    "country_code": "CM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 675,
+                "name": "Est"
+            },
+            "country_code": "CM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 676,
+                    "country_code": "CM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 676,
+                "name": "Littoral"
+            },
+            "country_code": "CM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 683,
+                    "country_code": "CM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 683,
+                "name": "Nord"
+            },
+            "country_code": "CM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 677,
+                    "country_code": "CM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 677,
+                "name": "Nord-Ouest"
+            },
+            "country_code": "CM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 679,
+                    "country_code": "CM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 679,
+                "name": "Ouest"
+            },
+            "country_code": "CM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 679,
+                    "country_code": "CM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 679,
+                "name": "Sud-Ouest"
+            },
+            "country_code": "CM"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

@@ -1,0 +1,166 @@
+{
+    "name": "ZAF",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4053,
+                    "country_code": "ZA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4053,
+                "name": "Eastern Cape"
+            },
+            "country_code": "ZA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4052,
+                    "country_code": "ZA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4052,
+                "name": "Free State"
+            },
+            "country_code": "ZA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4054,
+                    "country_code": "ZA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4054,
+                "name": "Gauteng"
+            },
+            "country_code": "ZA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4051,
+                    "country_code": "ZA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4051,
+                "name": "KwaZulu-Natal"
+            },
+            "country_code": "ZA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4057,
+                    "country_code": "ZA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4057,
+                "name": "Limpopo"
+            },
+            "country_code": "ZA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4055,
+                    "country_code": "ZA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4055,
+                "name": "Mpumalanga"
+            },
+            "country_code": "ZA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4058,
+                    "country_code": "ZA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4058,
+                "name": "North West"
+            },
+            "country_code": "ZA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4056,
+                    "country_code": "ZA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4056,
+                "name": "Northern Cape"
+            },
+            "country_code": "ZA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4059,
+                    "country_code": "ZA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4059,
+                "name": "Western Cape"
+            },
+            "country_code": "ZA"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

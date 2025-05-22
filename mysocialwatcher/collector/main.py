@@ -50,11 +50,11 @@ if __name__ == '__main__':
 
             # instantiate watcher, depending on whether argument pysocialwatcher_opt is true
             if pysocialwatcher_opt_flag:
-                watcher = pysocialwatcher_opt(api_version='19.0',
+                watcher = pysocialwatcher_opt(api_version='22.0',
                                               sleep_time=int(sleep_time),
                                               save_every_x=100)
             else:
-                watcher = watcherAPI(api_version='19.0',
+                watcher = watcherAPI(api_version='22.0',
                                      sleep_time=int(sleep_time),
                                      save_every_x=100,
                                      verbose=False)

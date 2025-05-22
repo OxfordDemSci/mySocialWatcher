@@ -1,0 +1,250 @@
+{
+    "name": "MAR",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4390,
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4390,
+                "name": "Chaouia - Ouardigha"
+            },
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4392,
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4392,
+                "name": "Doukkala - Abda"
+            },
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2212,
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2212,
+                "name": "F\u00e8s - Boulemane"
+            },
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4389,
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4389,
+                "name": "Gharb - Chrarda - B\u00e9ni Hssen"
+            },
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2206,
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2206,
+                "name": "Grand Casablanca"
+            },
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2230,
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2230,
+                "name": "Guelmim - Es-Semara"
+            },
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2232,
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2232,
+                "name": "La\u00e2youne - Boujdour - Sakia El H"
+            },
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2218,
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2218,
+                "name": "Marrakech - Tensift - Al Haouz"
+            },
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2219,
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2219,
+                "name": "Mekn\u00e8s - Tafilalet"
+            },
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4391,
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4391,
+                "name": "Oriental"
+            },
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2223,
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2223,
+                "name": "Rabat - Sal\u00e9 - Zemmour - Zaer"
+            },
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4388,
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4388,
+                "name": "Souss - Massa - Dra\u00e2"
+            },
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4393,
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4393,
+                "name": "Tadla - Azilal"
+            },
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2226,
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2226,
+                "name": "Tanger - T\u00e9touan"
+            },
+            "country_code": "MA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2228,
+                    "country_code": "MA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2228,
+                "name": "Taza - Al Hoceima - Taounate"
+            },
+            "country_code": "MA"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

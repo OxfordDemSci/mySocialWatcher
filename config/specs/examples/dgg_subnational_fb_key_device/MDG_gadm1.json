@@ -1,0 +1,110 @@
+{
+    "name": "MDG",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2253,
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2253,
+                "name": "Antananarivo"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2253,
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2253,
+                "name": "Antsiranana"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4571,
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4571,
+                "name": "Fianarantsoa"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4577,
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4577,
+                "name": "Mahajanga"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4573,
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4573,
+                "name": "Toamasina"
+            },
+            "country_code": "MG"
+        }
+    ],
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}
