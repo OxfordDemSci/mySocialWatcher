@@ -1,0 +1,520 @@
+{
+    "name": "MG_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "MG"
+            ],
+            "pySocialWatcherReference": {
+                "key": "MG",
+                "name": "Madagascar"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4572",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4572",
+                "name": "Bongolava"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4583",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4583",
+                "name": "Itasy Region"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4571",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4571",
+                "name": "Vakinankaratra"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4577",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4577",
+                "name": "Analamanga"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4572",
+                    "country_code": "MG"
+                },
+                {
+                    "key": "4583",
+                    "country_code": "MG"
+                },
+                {
+                    "key": "4571",
+                    "country_code": "MG"
+                },
+                {
+                    "key": "4577",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4572-4583-4571-4577",
+                "name": "Bongolava-Itasy Region-Vakinankaratra-Analamanga"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4565",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4565",
+                "name": "Diana Region"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4584",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4584",
+                "name": "Sava Region"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4565",
+                    "country_code": "MG"
+                },
+                {
+                    "key": "4584",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4565-4584",
+                "name": "Diana Region-Sava Region"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4573",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4573",
+                "name": "Atsimo-Atsinanana"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4581",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4581",
+                "name": "Amoron'i Mania"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4600",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4600",
+                "name": "Ihorombe"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4582",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4582",
+                "name": "Haute Matsiatra"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4586",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4586",
+                "name": "Vatovavy-Fitovinany"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4573",
+                    "country_code": "MG"
+                },
+                {
+                    "key": "4581",
+                    "country_code": "MG"
+                },
+                {
+                    "key": "4600",
+                    "country_code": "MG"
+                },
+                {
+                    "key": "4582",
+                    "country_code": "MG"
+                },
+                {
+                    "key": "4586",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4573-4581-4600-4582-4586",
+                "name": "Atsimo-Atsinanana-Amoron'i Mania-Ihorombe-Haute Matsiatra-Vatovavy-Fitovinany"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4585",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4585",
+                "name": "Sofia Region"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4598",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4598",
+                "name": "Boeny"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4578",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4578",
+                "name": "Melaky"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4599",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4599",
+                "name": "Betsiboka"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4585",
+                    "country_code": "MG"
+                },
+                {
+                    "key": "4598",
+                    "country_code": "MG"
+                },
+                {
+                    "key": "4578",
+                    "country_code": "MG"
+                },
+                {
+                    "key": "4599",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4585-4598-4578-4599",
+                "name": "Sofia Region-Boeny-Melaky-Betsiboka"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4580",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4580",
+                "name": "Analanjirofo"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4579",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4579",
+                "name": "Alaotra-Mangoro"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2253",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2253",
+                "name": "Atsinanana"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4580",
+                    "country_code": "MG"
+                },
+                {
+                    "key": "4579",
+                    "country_code": "MG"
+                },
+                {
+                    "key": "2253",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4580-4579-2253",
+                "name": "Analanjirofo-Alaotra-Mangoro-Atsinanana"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4590",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4590",
+                "name": "Anosy Region"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4588",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4588",
+                "name": "Menabe"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2257",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2257",
+                "name": "Atsimo-Andrefana"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4587",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4587",
+                "name": "Androy"
+            },
+            "country_code": "MG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4590",
+                    "country_code": "MG"
+                },
+                {
+                    "key": "4588",
+                    "country_code": "MG"
+                },
+                {
+                    "key": "2257",
+                    "country_code": "MG"
+                },
+                {
+                    "key": "4587",
+                    "country_code": "MG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4590-4588-2257-4587",
+                "name": "Anosy Region-Menabe-Atsimo-Andrefana-Androy"
+            },
+            "country_code": "MG"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "scholarities": [
+        {
+            "name": "unknown_unspecified",
+            "or": [
+                12
+            ]
+        },
+        {
+            "name": "No_high_school_degree",
+            "or": [
+                1,
+                13
+            ]
+        },
+        {
+            "name": "High_school_degree_but_not_more",
+            "or": [
+                2,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "name": "More_than_high_school_degree",
+            "or": [
+                3,
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        }
+    ]
+}

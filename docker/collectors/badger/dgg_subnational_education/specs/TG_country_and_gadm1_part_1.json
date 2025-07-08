@@ -1,0 +1,134 @@
+{
+    "name": "TG_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "TG"
+            ],
+            "pySocialWatcherReference": {
+                "key": "TG",
+                "name": "Togo"
+            },
+            "country_code": "TG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4929",
+                    "country_code": "TG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4929",
+                "name": "Centrale Region"
+            },
+            "country_code": "TG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4930",
+                    "country_code": "TG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4930",
+                "name": "Kara Region"
+            },
+            "country_code": "TG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4931",
+                    "country_code": "TG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4931",
+                "name": "Maritime Region"
+            },
+            "country_code": "TG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4934",
+                    "country_code": "TG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4934",
+                "name": "Plateaux Region"
+            },
+            "country_code": "TG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4939",
+                    "country_code": "TG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4939",
+                "name": "Savanes Region"
+            },
+            "country_code": "TG"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "scholarities": [
+        {
+            "name": "unknown_unspecified",
+            "or": [
+                12
+            ]
+        },
+        {
+            "name": "No_high_school_degree",
+            "or": [
+                1,
+                13
+            ]
+        },
+        {
+            "name": "High_school_degree_but_not_more",
+            "or": [
+                2,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "name": "More_than_high_school_degree",
+            "or": [
+                3,
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        }
+    ]
+}

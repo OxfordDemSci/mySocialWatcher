@@ -1,0 +1,107 @@
+{
+    "name": "SZ_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "SZ"
+            ],
+            "pySocialWatcherReference": {
+                "key": "SZ",
+                "name": "Eswatini"
+            },
+            "country_code": "SZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3508",
+                    "country_code": "SZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3508",
+                "name": "Hhohho Region"
+            },
+            "country_code": "SZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3509",
+                    "country_code": "SZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3509",
+                "name": "Lubombo Region"
+            },
+            "country_code": "SZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3510",
+                    "country_code": "SZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3510",
+                "name": "Manzini Region"
+            },
+            "country_code": "SZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3511",
+                    "country_code": "SZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3511",
+                "name": "Shiselweni Region"
+            },
+            "country_code": "SZ"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}
