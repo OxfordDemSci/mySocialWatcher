@@ -195,6 +195,9 @@ def crawler(data_dir, token, url='http://127.0.0.1/api/v1/write'):
             full_path = os.path.join(root, f)
             if "finished/dataframe_collected_finished_" in full_path:
                 file_list.append(full_path)
+    
+    # Sort by modification time, most recent first
+    file_list.sort(key=os.path.getmtime, reverse=True)
 
     # ---- finished ---- #
     for file in file_list:
