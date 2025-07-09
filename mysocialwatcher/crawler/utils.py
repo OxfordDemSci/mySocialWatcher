@@ -210,10 +210,10 @@ def crawler(data_dir, token, url='http://127.0.0.1/api/v1/write'):
             print('[' + str(datetime.datetime.now()) + '] ' + file)
 
             # create temp file for parallel processing
-            f = open(temp_path, "w")
-            f.write(
-            '[' + str(datetime.datetime.now()) + '] Begin processing data...'
-            )
+            with open(temp_path, "w") as f:
+                f.write(
+                '[' + str(datetime.datetime.now()) + '] Begin processing data...'
+                )
 
             try:
                 # load data
@@ -233,11 +233,11 @@ def crawler(data_dir, token, url='http://127.0.0.1/api/v1/write'):
                 response.to_csv(out_path)
 
             except Exception as e:
-                f.write('[' + str(datetime.datetime.now()) + ']  Exception: \n' + str(e) + '\n')
-                f.close()
+                with open(temp_path, "w") as f:
+                    f.write('[' + str(datetime.datetime.now()) + ']  Exception: \n' + str(e) + '\n')
                 os.rename(temp_path, error_path)
+            
             else:
-                f.close()
                 os.remove(temp_path)
 
 print('[' + str(datetime.datetime.now()) + '] Crawler finished.')
