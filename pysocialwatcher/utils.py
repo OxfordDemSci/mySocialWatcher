@@ -355,13 +355,27 @@ def get_api_field_name(field_name):
 
 
 def process_dau_audience_from_response(literal_response):
-    aud = json.loads(literal_response)["data"][0]
-    audience = aud["estimate_dau"]
-    return int(audience)
+    if 'b\'' in literal_response:
+        raw_bytes = ast.literal_eval(literal_response)
+        json_text = raw_bytes.decode('utf-8')
+    else:
+        json_text = literal_response
+    aud = json.loads(json_text)["data"][0]
+    if "estimate_dau" in aud:
+        audience = int(aud["estimate_dau"])
+    else:
+        audience = None
+    return audience
 
 
 def process_mau_audience_from_response(literal_response):
-    aud = json.loads(literal_response)["data"][0]
+    if 'b\'' in literal_response:
+        raw_bytes = ast.literal_eval(literal_response)
+        json_text = raw_bytes.decode('utf-8')
+    else:
+        json_text = literal_response
+    aud = json.loads(json_text)["data"][0]
+
     if "estimate_mau" in aud:
         audience=int(aud["estimate_mau"])
     else:
@@ -369,15 +383,33 @@ def process_mau_audience_from_response(literal_response):
     return audience
 
 def process_mau_upper_audience_from_response(literal_response):
-    aud = json.loads(literal_response)["data"][0]
-    audience=aud["estimate_mau_upper_bound"]
-    return int(audience)
+    if 'b\'' in literal_response:
+        raw_bytes = ast.literal_eval(literal_response)
+        json_text = raw_bytes.decode('utf-8')
+    else:
+        json_text = literal_response
+    aud = json.loads(json_text)["data"][0]
+
+    if "estimate_mau_upper_bound" in aud:
+        audience = int(aud["estimate_mau_upper_bound"])
+    else:
+        audience = None
+    return audience
 
 
 def process_mau_lower_audience_from_response(literal_response):
-    aud = json.loads(literal_response)["data"][0]
-    audience=aud["estimate_mau_lower_bound"]
-    return int(audience)
+    if 'b\'' in literal_response:
+        raw_bytes = ast.literal_eval(literal_response)
+        json_text = raw_bytes.decode('utf-8')
+    else:
+        json_text = literal_response
+    aud = json.loads(json_text)["data"][0]
+
+    if "estimate_mau_lower_bound" in aud:
+        audience = int(aud["estimate_mau_lower_bound"])
+    else:
+        audience = None
+    return audience
 
 
 def post_process_collection(collection_dataframe):
