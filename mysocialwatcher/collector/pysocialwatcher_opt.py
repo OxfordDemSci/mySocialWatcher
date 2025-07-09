@@ -507,7 +507,7 @@ class pysocialwatcher_opt(watcherAPI):
         pySocialWatcher's data collection function modified to call the optimized data collection algorithm
     """
     @staticmethod
-    def load_data_and_continue_collection(input_file_path, output_dir = ""):
+    def load_data_and_continue_collection(input_file_path, output_dir = "", remove_tmp_files=True):
         collection_dataframe = load_dataframe_from_file(input_file_path)
 
         idx = collection_dataframe[constants.RESPONSE_FIELD] == params.PLACE_HOLDER_DATA_RESPONSE_CONTENT
@@ -521,7 +521,7 @@ class pysocialwatcher_opt(watcherAPI):
             while data_collection_incomplete:
                 try:
                     ntries = ntries + 1
-                    collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = output_dir)
+                    collection_dataframe = pysocialwatcher_opt.perform_collection_data_on_facebook_with_optimization(collection_dataframe, output_dir = output_dir, remove_tmp_files = remove_tmp_files)
                     data_collection_incomplete = False
                 except Exception as err:
                     if ntries < params.MAX_TRY_ON_FAILED_QUERIES:
