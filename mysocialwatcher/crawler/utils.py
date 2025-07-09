@@ -211,9 +211,7 @@ def crawler(data_dir, token, url='http://127.0.0.1/api/v1/write'):
 
             # create temp file for parallel processing
             with open(temp_path, "w") as f:
-                f.write(
-                '[' + str(datetime.datetime.now()) + '] Begin processing data...'
-                )
+                f.write('[' + str(datetime.datetime.now()) + '] Begin processing data...' + '\n')
 
             try:
                 # load data
@@ -231,9 +229,12 @@ def crawler(data_dir, token, url='http://127.0.0.1/api/v1/write'):
 
                 # save API responses
                 response.to_csv(out_path)
-
+                
+                with open(temp_path, "a") as f:
+                    f.write('[' + str(datetime.datetime.now()) + '] Completed' + '\n')
+                
             except Exception as e:
-                with open(temp_path, "w") as f:
+                with open(temp_path, "a") as f:
                     f.write('[' + str(datetime.datetime.now()) + ']  Exception: \n' + str(e) + '\n')
                 os.rename(temp_path, error_path)
             
