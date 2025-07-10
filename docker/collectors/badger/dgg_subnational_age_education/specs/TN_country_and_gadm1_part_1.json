@@ -1,0 +1,429 @@
+{
+    "name": "TN_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "TN"
+            ],
+            "pySocialWatcherReference": {
+                "key": "TN",
+                "name": "Tunisia"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3629",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3629",
+                "name": "Kasserine Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3630",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3630",
+                "name": "Kairouan Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3631",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3631",
+                "name": "Jendouba Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3633",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3633",
+                "name": "Kef Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3634",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3634",
+                "name": "Mahdia Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3635",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3635",
+                "name": "Monastir Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3636",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3636",
+                "name": "Beja Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3637",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3637",
+                "name": "Bizerte Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3638",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3638",
+                "name": "Nabeul Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3639",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3639",
+                "name": "Siliana Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3640",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3640",
+                "name": "Sousse Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3641",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3641",
+                "name": "Ben Arous Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3642",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3642",
+                "name": "Medenine Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3643",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3643",
+                "name": "Gabes Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3644",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3644",
+                "name": "Kebili Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3645",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3645",
+                "name": "Sfax"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3646",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3646",
+                "name": "Sidi Bouzid Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3647",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3647",
+                "name": "Tataouine Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3648",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3648",
+                "name": "Tozeur Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3649",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3649",
+                "name": "Tunis Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3650",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3650",
+                "name": "Zaghouan Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4462",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4462",
+                "name": "Ariana Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4463",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4463",
+                "name": "Gafsa Governorate"
+            },
+            "country_code": "TN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4464",
+                    "country_code": "TN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4464",
+                "name": "Manouba Governorate"
+            },
+            "country_code": "TN"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ],
+    "scholarities": [
+        {
+            "name": "unknown_unspecified",
+            "or": [
+                12
+            ]
+        },
+        {
+            "name": "No_high_school_degree",
+            "or": [
+                1,
+                13
+            ]
+        },
+        {
+            "name": "High_school_degree_but_not_more",
+            "or": [
+                2,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "name": "More_than_high_school_degree",
+            "or": [
+                3,
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        }
+    ]
+}

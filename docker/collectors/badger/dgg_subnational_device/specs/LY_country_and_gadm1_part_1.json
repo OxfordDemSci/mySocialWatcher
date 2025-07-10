@@ -1,0 +1,359 @@
+{
+    "name": "LY_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "LY"
+            ],
+            "pySocialWatcherReference": {
+                "key": "LY",
+                "name": "Libya"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2176",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2176",
+                "name": "Jufra District"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2177",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2177",
+                "name": "Kufra District"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2178",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2178",
+                "name": "Wadi al Shatii District"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2179",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2179",
+                "name": "Murzuq District"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2180",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2180",
+                "name": "Sabha District"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2186",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2186",
+                "name": "Jabal al Akhdar"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2188",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2188",
+                "name": "Nuqat al Khams"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2190",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2190",
+                "name": "Zawiya District"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2192",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2192",
+                "name": "Derna District"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2195",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2195",
+                "name": "Misrata District"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2197",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2197",
+                "name": "Sirte District"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4445",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4445",
+                "name": "Tripoli District"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4446",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4446",
+                "name": "Jafara"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4447",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4447",
+                "name": "Butnan District"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4448",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4448",
+                "name": "Murqub District"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4449",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4449",
+                "name": "Nalut District"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4450",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4450",
+                "name": "Benghazi"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4451",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4451",
+                "name": "Jabal al Gharbi District"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4452",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4452",
+                "name": "Ghat District"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4453",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4453",
+                "name": "Wadi al Hayaa District"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4454",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4454",
+                "name": "Marj District"
+            },
+            "country_code": "LY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4477",
+                    "country_code": "LY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4477",
+                "name": "Al Wahat District"
+            },
+            "country_code": "LY"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}
