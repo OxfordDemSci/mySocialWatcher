@@ -1,0 +1,135 @@
+{
+    "name": "GM_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "GM"
+            ],
+            "pySocialWatcherReference": {
+                "key": "GM",
+                "name": "Gambia"
+            },
+            "country_code": "GM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1434",
+                    "country_code": "GM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1434",
+                "name": "Banjul"
+            },
+            "country_code": "GM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1435",
+                    "country_code": "GM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1435",
+                "name": "Lower River Division"
+            },
+            "country_code": "GM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1437",
+                    "country_code": "GM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1437",
+                "name": "Upper River Division"
+            },
+            "country_code": "GM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1438",
+                    "country_code": "GM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1438",
+                "name": "West Coast Division"
+            },
+            "country_code": "GM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1439",
+                    "country_code": "GM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1439",
+                "name": "North Bank Division"
+            },
+            "country_code": "GM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4865",
+                    "country_code": "GM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4865",
+                "name": "Central River Division"
+            },
+            "country_code": "GM"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

@@ -1,0 +1,212 @@
+{
+    "name": "MZ_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "MZ"
+            ],
+            "pySocialWatcherReference": {
+                "key": "MZ",
+                "name": "Mozambique"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2552",
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2552",
+                "name": "Cabo Delgado Province"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2553",
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2553",
+                "name": "Gaza Province"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2554",
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2554",
+                "name": "Inhambane Province"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2555",
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2555",
+                "name": "Maputo Province"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2556",
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2556",
+                "name": "Sofala Province"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2557",
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2557",
+                "name": "Nampula Province"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2558",
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2558",
+                "name": "Niassa Province"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2559",
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2559",
+                "name": "Tete Province"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2560",
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2560",
+                "name": "Zambezia Province"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2561",
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2561",
+                "name": "Manica Province"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4679",
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4679",
+                "name": "Maputo"
+            },
+            "country_code": "MZ"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

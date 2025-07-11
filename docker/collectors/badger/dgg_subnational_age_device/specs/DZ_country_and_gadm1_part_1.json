@@ -1,0 +1,833 @@
+{
+    "name": "DZ_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "DZ"
+            ],
+            "pySocialWatcherReference": {
+                "key": "DZ",
+                "name": "Algeria"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4517",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4517",
+                "name": "El Taref Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "900",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "900",
+                "name": "Algiers Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "901",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "901",
+                "name": "Batna Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "902",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "902",
+                "name": "Constantine Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "903",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "903",
+                "name": "Medea Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "904",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "904",
+                "name": "Mostaganem Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "905",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "905",
+                "name": "Oran Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "906",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "906",
+                "name": "Saida Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "907",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "907",
+                "name": "Setif Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "908",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "908",
+                "name": "Tiaret Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "909",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "909",
+                "name": "Tizi Ouzou Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "910",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "910",
+                "name": "Tlemcen Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "911",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "911",
+                "name": "Bejaia Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "912",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "912",
+                "name": "Biskra Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "913",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "913",
+                "name": "Blida Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "914",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "914",
+                "name": "Bouira Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "915",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "915",
+                "name": "Djelfa Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "916",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "916",
+                "name": "Guelma Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "917",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "917",
+                "name": "Jijel Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "918",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "918",
+                "name": "Laghouat Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "919",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "919",
+                "name": "Mascara Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "920",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "920",
+                "name": "M'Sila Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "921",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "921",
+                "name": "Oum El Bouaghi Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "922",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "922",
+                "name": "Sidi Bel Abbes Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "923",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "923",
+                "name": "Skikda Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "924",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "924",
+                "name": "Tebessa Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "925",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "925",
+                "name": "Adrar Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "926",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "926",
+                "name": "Ain Defla Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "927",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "927",
+                "name": "Ain Temouchent Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "928",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "928",
+                "name": "Annaba Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "929",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "929",
+                "name": "Bechar Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "930",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "930",
+                "name": "Bordj Bou Arreridj Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "931",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "931",
+                "name": "Boumerdes Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "932",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "932",
+                "name": "Chlef Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "933",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "933",
+                "name": "El Bayadh Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "934",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "934",
+                "name": "El Oued Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "936",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "936",
+                "name": "Ghardaia Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "937",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "937",
+                "name": "Illizi Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "938",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "938",
+                "name": "Khenchela Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "939",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "939",
+                "name": "Mila Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "940",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "940",
+                "name": "Naama Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "941",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "941",
+                "name": "Ouargla Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "942",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "942",
+                "name": "Relizane Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "943",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "943",
+                "name": "Souk Ahras Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "944",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "944",
+                "name": "Tamanrasset Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "945",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "945",
+                "name": "Tindouf Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "946",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "946",
+                "name": "Tipaza Province"
+            },
+            "country_code": "DZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "947",
+                    "country_code": "DZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "947",
+                "name": "Tissemsilt Province"
+            },
+            "country_code": "DZ"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6004386044572
+                ],
+                "name": "Android"
+            },
+            {
+                "not": [
+                    6004384041172,
+                    6004386044572
+                ],
+                "name": "Not_iOS_or_Android_OS"
+            },
+            {
+                "or": [
+                    6075237200983,
+                    6075237226583,
+                    6106223987983,
+                    6106224431383,
+                    6092512462983,
+                    6092512424583,
+                    6092512412783
+                ],
+                "name": "High_end_galaxy_phone_S8_S8p_S9_S9p_High_end_apple_iphone_X_8_and_8p"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253486583
+                ],
+                "name": "2G_Network"
+            },
+            {
+                "or": [
+                    6017253511583
+                ],
+                "name": "3G_Network"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            },
+            {
+                "not": [
+                    6015235495383,
+                    6017253486583,
+                    6017253511583,
+                    6017253531383
+                ],
+                "name": "Not_2G_3G_4G_or_WiFi_network"
+            },
+            {
+                "or": [
+                    6091658707783,
+                    6091658708183
+                ],
+                "name": "Uses_a_mobile_device_0_to_3_months"
+            },
+            {
+                "or": [
+                    6091658512983,
+                    6091658512183,
+                    6091658540583,
+                    6091658562383,
+                    6091658651583
+                ],
+                "name": "Uses_a_mobile_device_4_to_24_months"
+            },
+            {
+                "or": [
+                    6091658683183
+                ],
+                "name": "Uses_a_mobile_device_25_months_plus"
+            },
+            {
+                "or": [
+                    6002714898572
+                ],
+                "name": "Small_business_owners"
+            },
+            {
+                "not": [
+                    6002714898572
+                ],
+                "name": "Not_Small_business_owners"
+            }
+        ]
+    }
+}

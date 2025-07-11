@@ -1,0 +1,303 @@
+{
+    "name": "AO_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "AO"
+            ],
+            "pySocialWatcherReference": {
+                "key": "AO",
+                "name": "Angola"
+            },
+            "country_code": "AO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "88",
+                    "country_code": "AO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "88",
+                "name": "Hu\u00edla Province"
+            },
+            "country_code": "AO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "87",
+                    "country_code": "AO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "87",
+                "name": "Huambo Province"
+            },
+            "country_code": "AO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "90",
+                    "country_code": "AO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "90",
+                "name": "Moxico Province"
+            },
+            "country_code": "AO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "89",
+                    "country_code": "AO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "89",
+                "name": "Malanje Province"
+            },
+            "country_code": "AO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "81",
+                    "country_code": "AO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "81",
+                "name": "Bi\u00e9 Province"
+            },
+            "country_code": "AO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "82",
+                    "country_code": "AO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "82",
+                "name": "Cabinda Province"
+            },
+            "country_code": "AO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4515",
+                    "country_code": "AO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4515",
+                "name": "Namibe Province"
+            },
+            "country_code": "AO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "95",
+                    "country_code": "AO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "95",
+                "name": "Bengo Province"
+            },
+            "country_code": "AO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "93",
+                    "country_code": "AO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "93",
+                "name": "Lunda Norte Province"
+            },
+            "country_code": "AO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4514",
+                    "country_code": "AO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4514",
+                "name": "Luanda Province"
+            },
+            "country_code": "AO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "91",
+                    "country_code": "AO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "91",
+                "name": "U\u00edge Province"
+            },
+            "country_code": "AO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "85",
+                    "country_code": "AO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "85",
+                "name": "Cuanza Sul Province"
+            },
+            "country_code": "AO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "94",
+                    "country_code": "AO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "94",
+                "name": "Lunda Sul Province"
+            },
+            "country_code": "AO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "80",
+                    "country_code": "AO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "80",
+                "name": "Benguela Province"
+            },
+            "country_code": "AO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "83",
+                    "country_code": "AO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "83",
+                "name": "Cuando Cubango Province"
+            },
+            "country_code": "AO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "84",
+                    "country_code": "AO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "84",
+                "name": "Cuanza Norte Province"
+            },
+            "country_code": "AO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "86",
+                    "country_code": "AO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "86",
+                "name": "Cunene Province"
+            },
+            "country_code": "AO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "92",
+                    "country_code": "AO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "92",
+                "name": "Zaire Province"
+            },
+            "country_code": "AO"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

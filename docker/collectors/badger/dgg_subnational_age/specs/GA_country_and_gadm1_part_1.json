@@ -1,0 +1,184 @@
+{
+    "name": "GA_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "GA"
+            ],
+            "pySocialWatcherReference": {
+                "key": "GA",
+                "name": "Gabon"
+            },
+            "country_code": "GA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1090",
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1090",
+                "name": "Estuaire Province"
+            },
+            "country_code": "GA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1091",
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1091",
+                "name": "Haut-Ogooue Province"
+            },
+            "country_code": "GA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1092",
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1092",
+                "name": "Moyen-Ogooue Province"
+            },
+            "country_code": "GA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1093",
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1093",
+                "name": "Ngounie Province"
+            },
+            "country_code": "GA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1094",
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1094",
+                "name": "Nyanga Province"
+            },
+            "country_code": "GA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1095",
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1095",
+                "name": "Ogooue-Ivindo Province"
+            },
+            "country_code": "GA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1096",
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1096",
+                "name": "Ogooue-Lolo Province"
+            },
+            "country_code": "GA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1097",
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1097",
+                "name": "Ogooue-Maritime Province"
+            },
+            "country_code": "GA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1098",
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1098",
+                "name": "Woleu-Ntem Province"
+            },
+            "country_code": "GA"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}
