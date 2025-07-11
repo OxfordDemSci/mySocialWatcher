@@ -1,0 +1,176 @@
+{
+    "name": "GN_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "GN"
+            ],
+            "pySocialWatcherReference": {
+                "key": "GN",
+                "name": "Guinea"
+            },
+            "country_code": "GN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1472",
+                    "country_code": "GN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1472",
+                "name": "Nz\u00e9r\u00e9kor\u00e9 Region"
+            },
+            "country_code": "GN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1466",
+                    "country_code": "GN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1466",
+                "name": "Kankan Region"
+            },
+            "country_code": "GN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1459",
+                    "country_code": "GN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1459",
+                "name": "Mamou Region"
+            },
+            "country_code": "GN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1442",
+                    "country_code": "GN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1442",
+                "name": "Bok\u00e9 Region"
+            },
+            "country_code": "GN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1443",
+                    "country_code": "GN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1443",
+                "name": "Conakry"
+            },
+            "country_code": "GN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1447",
+                    "country_code": "GN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1447",
+                "name": "Faranah Region"
+            },
+            "country_code": "GN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1453",
+                    "country_code": "GN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1453",
+                "name": "Kindia Region"
+            },
+            "country_code": "GN"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1468",
+                    "country_code": "GN"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1468",
+                "name": "Lab\u00e9 Region"
+            },
+            "country_code": "GN"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "scholarities": [
+        {
+            "name": "unknown_unspecified",
+            "or": [
+                12
+            ]
+        },
+        {
+            "name": "No_high_school_degree",
+            "or": [
+                1,
+                13
+            ]
+        },
+        {
+            "name": "High_school_degree_but_not_more",
+            "or": [
+                2,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "name": "More_than_high_school_degree",
+            "or": [
+                3,
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        }
+    ]
+}

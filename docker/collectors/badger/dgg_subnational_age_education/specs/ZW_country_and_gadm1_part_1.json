@@ -1,0 +1,233 @@
+{
+    "name": "ZW_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "ZW"
+            ],
+            "pySocialWatcherReference": {
+                "key": "ZW",
+                "name": "Zimbabwe"
+            },
+            "country_code": "ZW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4072",
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4072",
+                "name": "Mashonaland East Province"
+            },
+            "country_code": "ZW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4074",
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4074",
+                "name": "Matabeleland North Province"
+            },
+            "country_code": "ZW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4075",
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4075",
+                "name": "Matabeleland South Province"
+            },
+            "country_code": "ZW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4071",
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4071",
+                "name": "Mashonaland Central Province"
+            },
+            "country_code": "ZW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4719",
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4719",
+                "name": "Mashonaland West Province"
+            },
+            "country_code": "ZW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4720",
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4720",
+                "name": "Midlands Province"
+            },
+            "country_code": "ZW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4716",
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4716",
+                "name": "Manicaland Province"
+            },
+            "country_code": "ZW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4698",
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4698",
+                "name": "Harare Province"
+            },
+            "country_code": "ZW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4717",
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4717",
+                "name": "Bulawayo"
+            },
+            "country_code": "ZW"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4076",
+                    "country_code": "ZW"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4076",
+                "name": "Masvingo Province"
+            },
+            "country_code": "ZW"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ],
+    "scholarities": [
+        {
+            "name": "unknown_unspecified",
+            "or": [
+                12
+            ]
+        },
+        {
+            "name": "No_high_school_degree",
+            "or": [
+                1,
+                13
+            ]
+        },
+        {
+            "name": "High_school_degree_but_not_more",
+            "or": [
+                2,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "name": "More_than_high_school_degree",
+            "or": [
+                3,
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        }
+    ]
+}

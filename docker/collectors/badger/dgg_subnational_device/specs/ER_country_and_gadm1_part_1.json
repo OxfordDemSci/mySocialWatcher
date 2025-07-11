@@ -1,0 +1,135 @@
+{
+    "name": "ER_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "ER"
+            ],
+            "pySocialWatcherReference": {
+                "key": "ER",
+                "name": "Eritrea"
+            },
+            "country_code": "ER"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4899",
+                    "country_code": "ER"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4899",
+                "name": "Maekel Region"
+            },
+            "country_code": "ER"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4900",
+                    "country_code": "ER"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4900",
+                "name": "Anseba Region"
+            },
+            "country_code": "ER"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4901",
+                    "country_code": "ER"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4901",
+                "name": "Gash-Barka Region"
+            },
+            "country_code": "ER"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4902",
+                    "country_code": "ER"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4902",
+                "name": "Southern Region"
+            },
+            "country_code": "ER"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4904",
+                    "country_code": "ER"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4904",
+                "name": "Northern Red Sea Region"
+            },
+            "country_code": "ER"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4905",
+                    "country_code": "ER"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4905",
+                "name": "Southern Red Sea Region"
+            },
+            "country_code": "ER"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

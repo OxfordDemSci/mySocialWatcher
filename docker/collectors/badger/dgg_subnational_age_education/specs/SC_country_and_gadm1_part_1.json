@@ -1,0 +1,457 @@
+{
+    "name": "SC_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "SC"
+            ],
+            "pySocialWatcherReference": {
+                "key": "SC",
+                "name": "Seychelles"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3227",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3227",
+                "name": "Beau Vallon"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4396",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4396",
+                "name": "Plaisance"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4397",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4397",
+                "name": "Anse-aux-Pins"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4400",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4400",
+                "name": "Anse Boileau"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4401",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4401",
+                "name": "Anse Etoile"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4402",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4402",
+                "name": "Au Cap"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4403",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4403",
+                "name": "Anse Royale"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4404",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4404",
+                "name": "Baie Lazare"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4405",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4405",
+                "name": "Glacis"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4406",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4406",
+                "name": "Bel Air"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4407",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4407",
+                "name": "Bel Ombre"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4408",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4408",
+                "name": "Cascade"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4409",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4409",
+                "name": "Grand'Anse Mahe"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4410",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4410",
+                "name": "La Riviere Anglaise"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4411",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4411",
+                "name": "Mont Buxton"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4412",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4412",
+                "name": "Mont Fleuri"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4413",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4413",
+                "name": "Pointe La Rue"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4414",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4414",
+                "name": "Port Glaud"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4415",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4415",
+                "name": "Saint Louis"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4416",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4416",
+                "name": "Takamaka"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4417",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4417",
+                "name": "Les Mamelles"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4418",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4418",
+                "name": "Grand'Anse Praslin"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4419",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4419",
+                "name": "Baie Sainte Anne"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4420",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4420",
+                "name": "Roche Caiman"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4421",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4421",
+                "name": "La Digue and Inner Islands"
+            },
+            "country_code": "SC"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4422",
+                    "country_code": "SC"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4422",
+                "name": "Outer Islands"
+            },
+            "country_code": "SC"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ],
+    "scholarities": [
+        {
+            "name": "unknown_unspecified",
+            "or": [
+                12
+            ]
+        },
+        {
+            "name": "No_high_school_degree",
+            "or": [
+                1,
+                13
+            ]
+        },
+        {
+            "name": "High_school_degree_but_not_more",
+            "or": [
+                2,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "name": "More_than_high_school_degree",
+            "or": [
+                3,
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        }
+    ]
+}

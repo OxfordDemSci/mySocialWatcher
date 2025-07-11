@@ -1,0 +1,93 @@
+{
+    "name": "KM_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "KM"
+            ],
+            "pySocialWatcherReference": {
+                "key": "KM",
+                "name": "Comoros"
+            },
+            "country_code": "KM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1969",
+                    "country_code": "KM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1969",
+                "name": "Anjouan"
+            },
+            "country_code": "KM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1970",
+                    "country_code": "KM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1970",
+                "name": "Grande Comore"
+            },
+            "country_code": "KM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "1971",
+                    "country_code": "KM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "1971",
+                "name": "Moheli"
+            },
+            "country_code": "KM"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}
