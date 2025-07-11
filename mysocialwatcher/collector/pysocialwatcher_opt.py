@@ -536,6 +536,7 @@ class pysocialwatcher_opt(watcherAPI):
                         break
 
             not_estimate_ready = r',"estimate_ready":false'
+            collection_dataframe[constants.RESPONSE_FIELD] = collection_dataframe[constants.RESPONSE_FIELD].apply(lambda x: x.decode('utf-8') if isinstance(x, bytes) else x)
             idx_rerun = (collection_dataframe[constants.RESPONSE_FIELD].str.contains(not_estimate_ready))
             if (not data_collection_incomplete):
                 print("Data collection completed successfully.")
