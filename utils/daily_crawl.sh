@@ -25,7 +25,7 @@ if [[ ! -x "$RSYNC_SCRIPT" ]]; then
   echo "Error: rsync script '$RSYNC_SCRIPT' not found or not executable." >&2
   exit 1
 fi
-"$RSYNC_SCRIPT"
+"$RSYNC_SCRIPT" "$REPO_DIR"
 
 # ——— STEP 2: stop existing crawlers ———
 echo ">>> Stopping any running crawler containers…"

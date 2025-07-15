@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# ——— USAGE & SANITY CHECK ———
+if [[ $# -ne 1 ]]; then
+  echo "Usage: $0 <path-to-repo>" >&2
+  exit 1
+fi
+
+# Local parent directory into which you’ll create one sub‐dir per host
+LOCAL_PARENT="$1/data"
+
 # ——— CONFIGURATION ———
 # List your servers (DNS name or IP)
 REMOTE_SERVERS=(
@@ -12,9 +21,6 @@ REMOTE_SERVERS=(
 
 # Path on each remote you want to sync (no trailing slash here)
 REMOTE_PATH="~/mySocialWatcher/data"
-
-# Local parent directory into which you’ll create one sub‐dir per host
-LOCAL_PARENT="~/git/OxfordDemSci/mySocialWatcher/data"
 
 # Local path to merge all crawler directories
 LOCAL_CRAWLER="${LOCAL_PARENT}/crawler"
