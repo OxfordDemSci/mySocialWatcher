@@ -5,8 +5,7 @@ services:
   crawler:
     network_mode: host
     volumes:
-      #- ./../../data:/app/data
-      - /research/nowpop/meta_collections/venezuela_qcri:/app/data
+      - ./../../data:/app/data
       - .env:/app/.env
     build:
       context: ./../../
