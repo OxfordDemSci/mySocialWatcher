@@ -1,0 +1,204 @@
+{
+    "name": "LS_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "LS"
+            ],
+            "pySocialWatcherReference": {
+                "key": "LS",
+                "name": "Lesotho"
+            },
+            "country_code": "LS"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2119",
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2119",
+                "name": "Berea District"
+            },
+            "country_code": "LS"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2120",
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2120",
+                "name": "Butha-Buthe District"
+            },
+            "country_code": "LS"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2121",
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2121",
+                "name": "Leribe District"
+            },
+            "country_code": "LS"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2122",
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2122",
+                "name": "Mafeteng District"
+            },
+            "country_code": "LS"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2123",
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2123",
+                "name": "Maseru District"
+            },
+            "country_code": "LS"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2124",
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2124",
+                "name": "Mohale's Hoek District"
+            },
+            "country_code": "LS"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2125",
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2125",
+                "name": "Mokhotlong District"
+            },
+            "country_code": "LS"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2126",
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2126",
+                "name": "Qacha's Nek District"
+            },
+            "country_code": "LS"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2127",
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2127",
+                "name": "Quthing District"
+            },
+            "country_code": "LS"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2128",
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2128",
+                "name": "Thaba-Tseka District"
+            },
+            "country_code": "LS"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "scholarities": [
+        {
+            "name": "unknown_unspecified",
+            "or": [
+                12
+            ]
+        },
+        {
+            "name": "No_high_school_degree",
+            "or": [
+                1,
+                13
+            ]
+        },
+        {
+            "name": "High_school_degree_but_not_more",
+            "or": [
+                2,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "name": "More_than_high_school_degree",
+            "or": [
+                3,
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        }
+    ]
+}

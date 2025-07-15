@@ -1,0 +1,310 @@
+{
+    "name": "SO_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "SO"
+            ],
+            "pySocialWatcherReference": {
+                "key": "SO",
+                "name": "Somalia"
+            },
+            "country_code": "SO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3452",
+                    "country_code": "SO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3452",
+                "name": "Bakool"
+            },
+            "country_code": "SO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3453",
+                    "country_code": "SO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3453",
+                "name": "Banaadir"
+            },
+            "country_code": "SO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3454",
+                    "country_code": "SO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3454",
+                "name": "Bari"
+            },
+            "country_code": "SO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3455",
+                    "country_code": "SO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3455",
+                "name": "Bay"
+            },
+            "country_code": "SO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3456",
+                    "country_code": "SO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3456",
+                "name": "Galguduud"
+            },
+            "country_code": "SO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3457",
+                    "country_code": "SO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3457",
+                "name": "Gedo"
+            },
+            "country_code": "SO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3458",
+                    "country_code": "SO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3458",
+                "name": "Hiran"
+            },
+            "country_code": "SO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3459",
+                    "country_code": "SO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3459",
+                "name": "Middle Juba"
+            },
+            "country_code": "SO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3460",
+                    "country_code": "SO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3460",
+                "name": "Lower Juba"
+            },
+            "country_code": "SO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3461",
+                    "country_code": "SO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3461",
+                "name": "Mudug"
+            },
+            "country_code": "SO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3462",
+                    "country_code": "SO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3462",
+                "name": "Nugal"
+            },
+            "country_code": "SO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3463",
+                    "country_code": "SO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3463",
+                "name": "Sanaag"
+            },
+            "country_code": "SO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3464",
+                    "country_code": "SO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3464",
+                "name": "Middle Shebelle"
+            },
+            "country_code": "SO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3465",
+                    "country_code": "SO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3465",
+                "name": "Lower Shebelle"
+            },
+            "country_code": "SO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3466",
+                    "country_code": "SO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3466",
+                "name": "Togdheer"
+            },
+            "country_code": "SO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3467",
+                    "country_code": "SO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3467",
+                "name": "Woqooyi Galbeed"
+            },
+            "country_code": "SO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4928",
+                    "country_code": "SO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4928",
+                "name": "Sool"
+            },
+            "country_code": "SO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4932",
+                    "country_code": "SO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4932",
+                "name": "Awdal"
+            },
+            "country_code": "SO"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

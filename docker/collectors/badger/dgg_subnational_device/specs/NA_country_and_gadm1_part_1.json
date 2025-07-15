@@ -1,0 +1,233 @@
+{
+    "name": "NA_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "NA"
+            ],
+            "pySocialWatcherReference": {
+                "key": "NA",
+                "name": "Namibia"
+            },
+            "country_code": "NA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2588",
+                    "country_code": "NA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2588",
+                "name": "Zambezi Region"
+            },
+            "country_code": "NA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2589",
+                    "country_code": "NA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2589",
+                "name": "Erongo Region"
+            },
+            "country_code": "NA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2590",
+                    "country_code": "NA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2590",
+                "name": "Hardap Region"
+            },
+            "country_code": "NA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2591",
+                    "country_code": "NA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2591",
+                "name": "?Karas Region"
+            },
+            "country_code": "NA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2592",
+                    "country_code": "NA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2592",
+                "name": "Kunene Region"
+            },
+            "country_code": "NA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2593",
+                    "country_code": "NA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2593",
+                "name": "Ohangwena Region"
+            },
+            "country_code": "NA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2595",
+                    "country_code": "NA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2595",
+                "name": "Omaheke Region"
+            },
+            "country_code": "NA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2596",
+                    "country_code": "NA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2596",
+                "name": "Omusati Region"
+            },
+            "country_code": "NA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2597",
+                    "country_code": "NA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2597",
+                "name": "Oshana Region"
+            },
+            "country_code": "NA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2598",
+                    "country_code": "NA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2598",
+                "name": "Oshikoto Region"
+            },
+            "country_code": "NA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2599",
+                    "country_code": "NA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2599",
+                "name": "Otjozondjupa Region"
+            },
+            "country_code": "NA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4675",
+                    "country_code": "NA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4675",
+                "name": "Kavango East"
+            },
+            "country_code": "NA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4681",
+                    "country_code": "NA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4681",
+                "name": "Khomas Region"
+            },
+            "country_code": "NA"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}
