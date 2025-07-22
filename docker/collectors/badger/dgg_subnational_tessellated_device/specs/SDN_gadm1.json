@@ -17,13 +17,10 @@
                     "distance_unit": "kilometer"
                 }
             ],
-            "location_types": [
-                "home"
-            ],
             "pySocialWatcherReference": {
                 "geo_id": "SDN.2_1",
-                " coverType": "exterior_cover",
-                " expanded": "TRUE"
+                "coverType": "exterior_cover",
+                "expanded": "TRUE"
             },
             "country_code": "SD"
         },
@@ -36,9 +33,6 @@
                     "radius": 15,
                     "distance_unit": "kilometer"
                 }
-            ],
-            "location_types": [
-                "home"
             ],
             "pySocialWatcherReference": {
                 "geo_id": "SDN.3_1",
@@ -62,9 +56,6 @@
                     "radius": 37,
                     "distance_unit": "kilometer"
                 }
-            ],
-            "location_types": [
-                "home"
             ],
             "pySocialWatcherReference": {
                 "geo_id": "SDN.10_1",
@@ -112,9 +103,6 @@
                     "radius": 21,
                     "distance_unit": "kilometer"
                 }
-            ],
-            "location_types": [
-                "home"
             ],
             "pySocialWatcherReference": {
                 "geo_id": "SDN.14_1",
@@ -204,9 +192,6 @@
                     "radius": 10,
                     "distance_unit": "kilometer"
                 }
-            ],
-            "location_types": [
-                "home"
             ],
             "pySocialWatcherReference": {
                 "geo_id": "SDN.16_1",

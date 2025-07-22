@@ -1,0 +1,233 @@
+{
+    "name": "MR_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "MR"
+            ],
+            "pySocialWatcherReference": {
+                "key": "MR",
+                "name": "Mauritania"
+            },
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2432",
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2432",
+                "name": "Hodh Ech Chargui Region"
+            },
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2433",
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2433",
+                "name": "Hodh El Gharbi Region"
+            },
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2434",
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2434",
+                "name": "Assaba Region"
+            },
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2435",
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2435",
+                "name": "Gorgol Region"
+            },
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2436",
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2436",
+                "name": "Brakna Region"
+            },
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2437",
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2437",
+                "name": "Trarza Region"
+            },
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2438",
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2438",
+                "name": "Adrar Region"
+            },
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2439",
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2439",
+                "name": "Dakhlet Nouadhibou Region"
+            },
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2440",
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2440",
+                "name": "Tagant Region"
+            },
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2441",
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2441",
+                "name": "Guidimaka Region"
+            },
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2442",
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2442",
+                "name": "Tiris Zemmour Region"
+            },
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "2443",
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "2443",
+                "name": "Inchiri Region"
+            },
+            "country_code": "MR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4682",
+                    "country_code": "MR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4682",
+                "name": "Nouakchott"
+            },
+            "country_code": "MR"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

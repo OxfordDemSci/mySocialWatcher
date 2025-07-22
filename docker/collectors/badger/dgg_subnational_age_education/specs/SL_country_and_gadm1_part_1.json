@@ -1,0 +1,149 @@
+{
+    "name": "SL_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "SL"
+            ],
+            "pySocialWatcherReference": {
+                "key": "SL",
+                "name": "SierraLeone"
+            },
+            "country_code": "SL"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3429",
+                    "country_code": "SL"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3429",
+                "name": "Eastern Province"
+            },
+            "country_code": "SL"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3430",
+                    "country_code": "SL"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3430",
+                "name": "Northern Province"
+            },
+            "country_code": "SL"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3431",
+                    "country_code": "SL"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3431",
+                "name": "Southern Province"
+            },
+            "country_code": "SL"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "3432",
+                    "country_code": "SL"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "3432",
+                "name": "Western Area"
+            },
+            "country_code": "SL"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ],
+    "scholarities": [
+        {
+            "name": "unknown_unspecified",
+            "or": [
+                12
+            ]
+        },
+        {
+            "name": "No_high_school_degree",
+            "or": [
+                1,
+                13
+            ]
+        },
+        {
+            "name": "High_school_degree_but_not_more",
+            "or": [
+                2,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "name": "More_than_high_school_degree",
+            "or": [
+                3,
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        }
+    ]
+}

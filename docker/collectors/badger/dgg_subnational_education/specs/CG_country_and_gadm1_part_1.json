@@ -1,0 +1,232 @@
+{
+    "name": "CG_country_and_gadm1_part_1",
+    "publisher_platforms": [
+        "facebook"
+    ],
+    "geo_locations": [
+        {
+            "name": "countries",
+            "values": [
+                "CG"
+            ],
+            "pySocialWatcherReference": {
+                "key": "CG",
+                "name": "Congo"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4818",
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4818",
+                "name": "Cuvette-Ouest Department"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "4819",
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "4819",
+                "name": "Pointe-Noire"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "569",
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "569",
+                "name": "Bouenza Department"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "570",
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "570",
+                "name": "Cuvette Department"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "571",
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "571",
+                "name": "Kouilou Department"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "572",
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "572",
+                "name": "Lekoumou Department"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "573",
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "573",
+                "name": "Likouala Department"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "574",
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "574",
+                "name": "Niari Department"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "575",
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "575",
+                "name": "Plateaux Department"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "576",
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "576",
+                "name": "Sangha Department"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "577",
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "577",
+                "name": "Pool Department"
+            },
+            "country_code": "CG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": "578",
+                    "country_code": "CG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": "578",
+                "name": "Brazzaville"
+            },
+            "country_code": "CG"
+        }
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "scholarities": [
+        {
+            "name": "unknown_unspecified",
+            "or": [
+                12
+            ]
+        },
+        {
+            "name": "No_high_school_degree",
+            "or": [
+                1,
+                13
+            ]
+        },
+        {
+            "name": "High_school_degree_but_not_more",
+            "or": [
+                2,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "name": "More_than_high_school_degree",
+            "or": [
+                3,
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        }
+    ]
+}

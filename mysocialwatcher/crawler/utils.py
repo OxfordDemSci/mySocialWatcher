@@ -195,6 +195,9 @@ def crawler(data_dir, token, url='http://127.0.0.1/api/v1/write'):
             full_path = os.path.join(root, f)
             if "finished/dataframe_collected_finished_" in full_path:
                 file_list.append(full_path)
+    
+    # Sort by modification time, most recent first
+    file_list.sort(key=os.path.getmtime, reverse=True)
 
     # ---- finished ---- #
     for file in file_list:
@@ -204,35 +207,41 @@ def crawler(data_dir, token, url='http://127.0.0.1/api/v1/write'):
         out_path = file.replace(data_dir, crawl_dir).replace('.csv.gz', '_log.csv.gz')
         os.makedirs(os.path.dirname(out_path), exist_ok=True)
         temp_path = out_path.replace('log.csv.gz', 'temp.txt')
+        error_path = out_path.replace('log.csv.gz', 'error.txt')
 
-        if not os.path.exists(out_path) and not os.path.exists(temp_path):
+        if not os.path.exists(out_path) and not os.path.exists(temp_path) and not os.path.exists(error_path):
             print('[' + str(datetime.datetime.now()) + '] ' + file)
 
             # create temp file for parallel processing
-            f = open(temp_path, "w")
-            f.write(
-            '[' + str(datetime.datetime.now()) + '] Processing...'
-            )
-            f.close()
+            with open(temp_path, "w") as f:
+                f.write('[' + str(datetime.datetime.now()) + '] Begin processing data...' + '\n')
 
-            # load data
-            df = pd.read_csv(file)
+            try:
+                # load data
+                df = pd.read_csv(file)
 
-            collection_name = file.split('/')[-3].lstrip('_')
+                collection_name = file.split('/')[-3].lstrip('_')
 
-            # write collection to SQL via API
-            response = psw_to_sql(
-                df=df,
-                collection_name=collection_name,
-                url=url,
-                token=token,
-                valid=True)
+                # write collection to SQL via API
+                response = psw_to_sql(
+                    df=df,
+                    collection_name=collection_name,
+                    url=url,
+                    token=token,
+                    valid=True)
 
-            # save API responses
-            response.to_csv(out_path)
-
-            # remove temp file
-            os.remove(temp_path)
-
+                # save API responses
+                response.to_csv(out_path)
+                
+                with open(temp_path, "a") as f:
+                    f.write('[' + str(datetime.datetime.now()) + '] Completed' + '\n')
+                
+            except Exception as e:
+                with open(temp_path, "a") as f:
+                    f.write('[' + str(datetime.datetime.now()) + ']  Exception: \n' + str(e) + '\n')
+                os.rename(temp_path, error_path)
+            
+            else:
+                os.remove(temp_path)
 
 print('[' + str(datetime.datetime.now()) + '] Crawler finished.')
