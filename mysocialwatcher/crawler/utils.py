@@ -46,7 +46,7 @@ def psw_to_sql(df, collection_name, token,
         index = row.Index
 
         # ---- platform ---- #
-        platform = literal_eval(row['publisher_platforms'])
+        platform = literal_eval(row.publisher_platforms)
 
         if len(platform) > 1:
             warnings.warn(f'More than one platform detected at index {index}.')
@@ -55,24 +55,24 @@ def psw_to_sql(df, collection_name, token,
             platform = platform[0]
 
         # ---- all_fields ---- #
-        all_fields = {k: v for k, v in literal_eval(row.get('all_fields'))}
+        all_fields = {k: v for k, v in literal_eval(row.all_fields)}
 
         # ---- targeting ---- #
-        targeting = literal_eval(row.get('targeting'))
+        targeting = literal_eval(row.targeting)
 
         # ---- response ----#
-        response = row.get('response')
+        response = row.response
         if response[0] == "{":
-            response = json.loads(row.get('response'))
+            response = json.loads(row.response)
         elif response[0] == '[':
-            response = literal_eval(row.get('response'))
+            response = literal_eval(row.response)
         elif response[:2] == "b\'":
-            response = json.loads(literal_eval(row.get('response')).decode('utf-8'))
+            response = json.loads(literal_eval(row.response).decode('utf-8'))
         elif response[:2] == "b'":
-            response = json.loads(literal_eval(row.get('response')).decode('utf-8'))
+            response = json.loads(literal_eval(row.response).decode('utf-8'))
 
         # ---- prepare: geo_locations ----#
-        geo = all_fields['geo_locations']  # literal_eval(row.get('geo_locations'))
+        geo = all_fields['geo_locations']  # literal_eval(row.geo_locations)
 
         # # ---- country ----#
         # country = countries_from_geo_locations(geo)
@@ -86,7 +86,7 @@ def psw_to_sql(df, collection_name, token,
         #     next
 
         # ---- age ---- #
-        ages_ranges = literal_eval(row.get('ages_ranges'))
+        ages_ranges = literal_eval(row.ages_ranges)
         if isinstance(ages_ranges, dict):
             age_min = ages_ranges.get('min')
             age_max = ages_ranges.get('max')
@@ -100,14 +100,14 @@ def psw_to_sql(df, collection_name, token,
                 'token': token,
                 'platform': platform,
                 # 'country': country,
-                'timestamp': row.get('timestamp'),
-                'gender': row.get('genders'),
+                'timestamp': row.timestamp,
+                'gender': row.genders,
                 'age_min': age_min,
                 'age_max': age_max,
-                'dau': row.get('dau_audience'),
-                'mau': row.get('mau_audience'),
-                'mau_upper': row.get('mau_audience_upper_bound'),
-                'mau_lower': row.get('mau_audience_lower_bound'),
+                'dau': row.dau_audience,
+                'mau': row.mau_audience,
+                'mau_upper': getattr(row, 'mau_audience_upper_bound', None),
+                'mau_lower': getattr(row, 'mau_audience_lower_bound', None),
                 'geo_locations': json.dumps(geo),
                 'all_fields': json.dumps(all_fields),
                 'targeting': json.dumps(targeting),
