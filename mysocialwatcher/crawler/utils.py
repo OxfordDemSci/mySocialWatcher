@@ -36,10 +36,14 @@ def psw_to_sql(df, collection_name, token,
                url='http://127.0.0.1/api/v1/write'):
     """Submit pysocialwatcher csv to /api/v1/fb/write"""
 
-    for index in range(len(df)):
+    response_timestamp = {}
+    response_status = {}
+    response_message = {}
+    
+    for row in df.itertuples(index=True):
         # index = 0
 
-        row = df.iloc[index]
+        index = row.Index
 
         # ---- platform ---- #
         platform = literal_eval(row['publisher_platforms'])
@@ -139,9 +143,9 @@ def psw_to_sql(df, collection_name, token,
 
             http_response_dict = json.loads(json.dumps(http_response.json()))
 
-            df.loc[index, 'timestamp_api'] = http_response_dict.get('timestamp')
-            df.loc[index, 'status_api'] = int(http_response_dict.get('status'))
-            df.loc[index, 'message_api'] = http_response_dict.get('message')
+            response_timestamp[index] = http_response_dict.get('timestamp')
+            response_status[index] = int(http_response_dict.get('status'))
+            response_message[index] = http_response_dict.get('message')
 
         except Exception as e:
             if isinstance(http_response, requests.models.Response):
@@ -151,9 +155,14 @@ def psw_to_sql(df, collection_name, token,
 
             message = 'EXCEPTION: "' + str(e) + '";/n HTTP RESPONSE: "' + http_response_text + '"'
             warnings.warn(message)
-            df.loc[index, 'timestamp_api'] = str(datetime.datetime.now())
-            df.loc[index, 'status_api'] = 500
-            df.loc[index, 'message_api'] = message
+            
+            response_timestamp[index] = str(datetime.datetime.now())
+            response_status[index] = 500
+            response_message[index] = message
+    
+    df['timestamp_api'] = df.index.map(response_timestamp)
+    df['status_api'] = df.index.map(response_status)
+    df['message_api'] = df.index.map(response_message)
 
     # return result
     return df[['timestamp_api', 'status_api', 'message_api']]
