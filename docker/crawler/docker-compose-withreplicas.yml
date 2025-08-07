@@ -1,4 +1,4 @@
-# docker-compose to deploy multiple collectors
+# docker-compose to deploy multiple crawlers
 
 services:
 
@@ -13,5 +13,5 @@ services:
     restart: on-failure
     deploy:
       mode: replicated
-      replicas: 40
+      replicas: ${CRAWLER_REPLICAS}
 
