@@ -40,6 +40,8 @@ def psw_to_sql(df, collection_name, token,
     response_status = {}
     response_message = {}
     
+    s = requests.Session()
+
     for row in df.itertuples(index=True):
         # index = 0
 
@@ -134,8 +136,6 @@ def psw_to_sql(df, collection_name, token,
         try:
             # http_response = requests.get(url=url, params=args)
             # http_response = requests.post(url=url, data=args)
-
-            s = requests.Session()
 
             request = requests.Request('POST', url, json=args)
             request_prep = request.prepare()

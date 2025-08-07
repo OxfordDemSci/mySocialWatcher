@@ -4,7 +4,8 @@ services:
     container_name: datahub_web
     image: nginx:latest
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx_server.conf:/etc/nginx/conf.d/nginx_server.conf
       - ./public_html/:/var/www/public_html/
     ports:
       - "80:80"
