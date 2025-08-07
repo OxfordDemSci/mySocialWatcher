@@ -14,7 +14,7 @@ loglevel = "info"
 capture_output = False
 
 # One worker per core (or slightly more if low CPU load)
-workers = multiprocessing.cpu_count() - 1
+workers = round(multiprocessing.cpu_count() / 2)
 
 # Type of worker ('sync', 'gthread')
 worker_class = "gthread"  # default = 'sync'
@@ -23,7 +23,7 @@ worker_class = "gthread"  # default = 'sync'
 # worker_connections = 1000
 
 # [if 'gthread' workers] Number of threads per worker - allows concurrency without needing more processes
-threads = 2
+threads = 3
 
 # Allow long-running requests (e.g., large POSTs)
 timeout = 120  # Keep this unless you notice timeouts under load
