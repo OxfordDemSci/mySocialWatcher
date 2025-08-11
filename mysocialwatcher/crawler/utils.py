@@ -36,13 +36,19 @@ def psw_to_sql(df, collection_name, token,
                url='http://127.0.0.1/api/v1/write'):
     """Submit pysocialwatcher csv to /api/v1/fb/write"""
 
-    for index in range(len(df)):
+    response_timestamp = {}
+    response_status = {}
+    response_message = {}
+    
+    s = requests.Session()
+
+    for row in df.itertuples(index=True):
         # index = 0
 
-        row = df.iloc[index]
+        index = row.Index
 
         # ---- platform ---- #
-        platform = literal_eval(row['publisher_platforms'])
+        platform = literal_eval(row.publisher_platforms)
 
         if len(platform) > 1:
             warnings.warn(f'More than one platform detected at index {index}.')
@@ -51,24 +57,24 @@ def psw_to_sql(df, collection_name, token,
             platform = platform[0]
 
         # ---- all_fields ---- #
-        all_fields = {k: v for k, v in literal_eval(row.get('all_fields'))}
+        all_fields = {k: v for k, v in literal_eval(row.all_fields)}
 
         # ---- targeting ---- #
-        targeting = literal_eval(row.get('targeting'))
+        targeting = literal_eval(row.targeting)
 
         # ---- response ----#
-        response = row.get('response')
+        response = row.response
         if response[0] == "{":
-            response = json.loads(row.get('response'))
+            response = json.loads(row.response)
         elif response[0] == '[':
-            response = literal_eval(row.get('response'))
+            response = literal_eval(row.response)
         elif response[:2] == "b\'":
-            response = json.loads(literal_eval(row.get('response')).decode('utf-8'))
+            response = json.loads(literal_eval(row.response).decode('utf-8'))
         elif response[:2] == "b'":
-            response = json.loads(literal_eval(row.get('response')).decode('utf-8'))
+            response = json.loads(literal_eval(row.response).decode('utf-8'))
 
         # ---- prepare: geo_locations ----#
-        geo = all_fields['geo_locations']  # literal_eval(row.get('geo_locations'))
+        geo = all_fields['geo_locations']  # literal_eval(row.geo_locations)
 
         # # ---- country ----#
         # country = countries_from_geo_locations(geo)
@@ -82,7 +88,7 @@ def psw_to_sql(df, collection_name, token,
         #     next
 
         # ---- age ---- #
-        ages_ranges = literal_eval(row.get('ages_ranges'))
+        ages_ranges = literal_eval(row.ages_ranges)
         if isinstance(ages_ranges, dict):
             age_min = ages_ranges.get('min')
             age_max = ages_ranges.get('max')
@@ -96,14 +102,14 @@ def psw_to_sql(df, collection_name, token,
                 'token': token,
                 'platform': platform,
                 # 'country': country,
-                'timestamp': row.get('timestamp'),
-                'gender': row.get('genders'),
+                'timestamp': row.timestamp,
+                'gender': row.genders,
                 'age_min': age_min,
                 'age_max': age_max,
-                'dau': row.get('dau_audience'),
-                'mau': row.get('mau_audience'),
-                'mau_upper': row.get('mau_audience_upper_bound'),
-                'mau_lower': row.get('mau_audience_lower_bound'),
+                'dau': row.dau_audience,
+                'mau': row.mau_audience,
+                'mau_upper': getattr(row, 'mau_audience_upper_bound', None),
+                'mau_lower': getattr(row, 'mau_audience_lower_bound', None),
                 'geo_locations': json.dumps(geo),
                 'all_fields': json.dumps(all_fields),
                 'targeting': json.dumps(targeting),
@@ -131,17 +137,15 @@ def psw_to_sql(df, collection_name, token,
             # http_response = requests.get(url=url, params=args)
             # http_response = requests.post(url=url, data=args)
 
-            s = requests.Session()
-
             request = requests.Request('POST', url, json=args)
             request_prep = request.prepare()
             http_response = s.send(request_prep)
 
             http_response_dict = json.loads(json.dumps(http_response.json()))
 
-            df.loc[index, 'timestamp_api'] = http_response_dict.get('timestamp')
-            df.loc[index, 'status_api'] = int(http_response_dict.get('status'))
-            df.loc[index, 'message_api'] = http_response_dict.get('message')
+            response_timestamp[index] = http_response_dict.get('timestamp')
+            response_status[index] = int(http_response_dict.get('status'))
+            response_message[index] = http_response_dict.get('message')
 
         except Exception as e:
             if isinstance(http_response, requests.models.Response):
@@ -151,9 +155,14 @@ def psw_to_sql(df, collection_name, token,
 
             message = 'EXCEPTION: "' + str(e) + '";/n HTTP RESPONSE: "' + http_response_text + '"'
             warnings.warn(message)
-            df.loc[index, 'timestamp_api'] = str(datetime.datetime.now())
-            df.loc[index, 'status_api'] = 500
-            df.loc[index, 'message_api'] = message
+            
+            response_timestamp[index] = str(datetime.datetime.now())
+            response_status[index] = 500
+            response_message[index] = message
+    
+    df['timestamp_api'] = df.index.map(response_timestamp)
+    df['status_api'] = df.index.map(response_status)
+    df['message_api'] = df.index.map(response_message)
 
     # return result
     return df[['timestamp_api', 'status_api', 'message_api']]
