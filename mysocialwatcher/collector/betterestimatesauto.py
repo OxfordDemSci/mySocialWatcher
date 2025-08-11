@@ -26,31 +26,19 @@ time_wait = 0 # waits 5 minutes between tries
 
 #countries_to_try = ["US","CA"]
 
-countries_to_try = ["AD", "AE", "AF", "AG", "AI", "AL", "AM", "AR", "AS", "AT",
-                    "AU", "AW", "AZ", "BA", "BB", "BD", "BE", "BG", "BH", "BL",
-                    "BM", "BN", "BO", "BQ", "BR", "BS", "BT", "BY", "BZ", "CA",
-                    "CH", "CK", "CL", "CN", "CO", "CR", "CW", "CY", "CZ", "DE",
-                    "DK", "DM", "DO", "EC", "EE", "ES", "FI", "FJ", "FK", "FM",
-                    "FO", "FR", "GB", "GD", "GE", "GF", "GG", "GI", "GL", "GP",
-                    "GR", "GT", "GU", "GY", "HK", "HN", "HR", "HT", "HU", "ID",
-                    "IE", "IL", "IM", "IN", "IQ", "IS", "IT", "JE", "JM", "JO",
-                    "JP", "KG", "KH", "KI", "KN", "KR", "KW", "KY", "KZ", "LA",
-                    "LB", "LC", "LI", "LK", "LT", "LU", "LV", "MC", "MD", "ME",
-                    "MF", "MH", "MK", "MM", "MN", "MO", "MP", "MQ", "MS", "MT",
-                    "MV", "MX", "MY", "NC", "NI", "NL", "NO", "NP", "NR", "NZ",
-                    "OM", "PA", "PE", "PF", "PG", "PH", "PK", "PL", "PM", "PR",
-                    "PS", "PT", "PW", "PY", "QA", "RE", "RO", "RS", "SA", "SB",
-                    "SE", "SG", "SH", "SI", "SJ", "SK", "SM", "SR", "SV", "SX",
-                    "TC", "TH", "TJ", "TL", "TM", "TO", "TR", "TT", "TV", "TW",
-                    "UA", "US", "UY", "UZ", "VC", "VE", "VG", "VI", "VN", "VU",
-                    "WF", "WS", "XK", "YE", "YT"]
-##
+countries_to_try = ['AD', 'AE', 'AG', 'AI', 'AS', 'AT', 'AU', 'AW', 'BB', 'BE', 'BH', 'BL', 'BM', 'BN', 'BQ', 'BS', 'CA', 'CH',
+                    'CK', 'CL', 'CN', 'CW', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FJ', 'FK', 'FO', 'FR', 'GB', 'GG',
+                    'GI', 'GL', 'GP', 'GR', 'GU', 'HK', 'HR', 'HU', 'IE', 'IL', 'IM', 'IS', 'IT', 'JE', 'JP', 'KI', 'KN', 'KR',
+                    'KW', 'KY', 'LI', 'LT', 'LU', 'LV', 'MC', 'MF', 'MH', 'MO', 'MQ', 'MS', 'MT', 'MV', 'NC', 'NL', 'NO',
+                    'NR', 'NZ', 'OM', 'PA', 'PF', 'PG', 'PL', 'PM', 'PR', 'PT', 'QA', 'RE', 'RO', 'SA', 'SE', 'SG', 'SH', 'SI',
+                    'SJ', 'SK', 'SM', 'SX', 'TC', 'TT', 'TW', 'US', 'UY', 'VG', 'VI', 'WF', 'XK', 'YT']
+## constants sleep
 constants.SLEEP_TIME = 0
 constants.SAVE_EVERY = 1000
 
-constants.REACHESTIMATE_URL = "https://graph.facebook.com/v17.0/act_{}/delivery_estimate"
-constants.GRAPH_SEARCH_URL = "https://graph.facebook.com/v17.0/search"
-constants.TARGETING_SEARCH_URL = "https://graph.facebook.com/v17.0/act_{}/targetingsearch"
+#constants.REACHESTIMATE_URL = "https://graph.facebook.com/v17.0/act_{}/delivery_estimate"
+#constants.GRAPH_SEARCH_URL = "https://graph.facebook.com/v17.0/search"
+#constants.TARGETING_SEARCH_URL = "https://graph.facebook.com/v17.0/act_{}/targetingsearch"
 
 
 ## Helper functions
@@ -333,41 +321,47 @@ def perform_collection(df):
 
 
 # function to make rerun attempts
-def rerun_collection(df):
+def rerun_collection(df, max_reruns=50):
     not_estimate_ready = r'estimate_ready":false'
-    idx_not_ready = (df[constants.RESPONSE_FIELD].astype(str).str.contains(not_estimate_ready))
+    idx_not_ready = df[constants.RESPONSE_FIELD].astype(str).str.contains(not_estimate_ready)
+
     if sum(idx_not_ready) == 0:
         print("All queries are estimate ready. Will not rerun.")
-        return(df)
-    
-    # will need to rerun the data collection
-    print("Number of queries that are not estimate ready:",sum(idx_not_ready))
+        return df
+
+    print("Number of queries that are not estimate ready:", sum(idx_not_ready))
     print("Will re-run the data collection for entries that are not estimate ready.")
     df.loc[idx_not_ready, constants.RESPONSE_FIELD] = None
-    
+
     rerun_number = 0
-    while True:
-        print("Starting rerun number: ",rerun_number)
-        
+    while rerun_number < max_reruns:
+        print("Starting rerun number:", rerun_number)
+
         try:
             df = watcherAPI.perform_collection_data_on_facebook(df)
         except Exception as err:
-            print("Found the following error: {0}".format(err))
-            print("Will keep trying again after ", time_wait, " seconds.")
+            print(f"Found the following error: {err}")
+            rerun_number += 1
+            print("Will keep trying again after", time_wait, "seconds.")
             time.sleep(time_wait)
             continue
-        
-        rerun_number = rerun_number + 1
-        idx_not_ready = (df[constants.RESPONSE_FIELD].astype(str).str.contains(not_estimate_ready))
+
+        idx_not_ready = df[constants.RESPONSE_FIELD].astype(str).str.contains(not_estimate_ready)
         if sum(idx_not_ready) == 0:
+            print("All estimates are ready.")
             break
-        else:
-            df.loc[idx_not_ready, constants.RESPONSE_FIELD] = None
-            print("Some estimates are still not ready.")
-            print("Collection will be rerun again in" + str(time_wait) + "seconds")
-            time.sleep(time_wait)
+
+        df.loc[idx_not_ready, constants.RESPONSE_FIELD] = None
+        rerun_number += 1
+        print("Some estimates are still not ready.")
+        print("Collection will be rerun again in", time_wait, "seconds")
+        time.sleep(time_wait)
+
+    if rerun_number == max_reruns:
+        print("Max rerun limit reached. Some queries may still be unresolved.")
+
     print("Rerun completed!")
-    return(df)
+    return df
 
 def setup_cache(cacheFolder, cacheFileName):
     curr_dir = os.getcwd()

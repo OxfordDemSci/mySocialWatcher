@@ -1,20 +1,25 @@
 # Dockerfile used by the datahub_api
-FROM python:3.10-slim-buster
+FROM python:3.10-slim-bookworm 
 
-RUN echo 'Acquire::http::Proxy "http://dmzproxy.ndph.ox.ac.uk:8080";' > /etc/apt/apt.conf.d/99ndphproxy
-RUN echo 'Acquire::https::Proxy "http://dmzproxy.ndph.ox.ac.uk:8080";' >> /etc/apt/apt.conf.d/99ndphproxy
+ENV http_proxy=http://dmzproxy.ndph.ox.ac.uk:8080
+ENV https_proxy=http://dmzproxy.ndph.ox.ac.uk:8080
+
+RUN echo 'Acquire::http::Proxy "http://dmzproxy.ndph.ox.ac.uk:8080";' > /etc/apt/apt.conf.d/99proxy && \
+    echo 'Acquire::https::Proxy "http://dmzproxy.ndph.ox.ac.uk:8080";' >> /etc/apt/apt.conf.d/99proxy
+
+RUN cat /etc/apt/apt.conf.d/99proxy
 
 WORKDIR /app
 
 RUN apt-get update -y
-RUN apt-get -y install libpq-dev gcc
+RUN apt-get -y install libpq-dev gcc gdal-bin libgdal-dev
 
 COPY docker/datahub/requirements.txt requirements.txt
 RUN pip install --proxy http://dmzproxy.ndph.ox.ac.uk:8080 psycopg2-binary
 RUN pip3 install --proxy http://dmzproxy.ndph.ox.ac.uk:8080 -r requirements.txt
 
 COPY mysocialwatcher mysocialwatcher
-COPY mysocialwatcher/api/gunicorn_config.py gunicorn_config.py
+# COPY mysocialwatcher/api/gunicorn_config.py gunicorn_config.py
 COPY mysocialwatcher/api/wsgi.py wsgi.py
 
 CMD [ "gunicorn", "--config", "gunicorn_config.py", "wsgi:app"]

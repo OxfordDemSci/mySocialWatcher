@@ -1,12 +1,14 @@
-version: "3.3"
-
 services:
 
   datahub_web:
     container_name: datahub_web
     image: nginx:latest
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile.nginx
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx_server.conf:/etc/nginx/conf.d/nginx_server.conf
       - ./public_html/:/var/www/public_html/
     ports:
       - "80:80"
@@ -23,6 +25,8 @@ services:
     build:
       dockerfile: ./docker/datahub/Dockerfile-ndph
       context: ./../../
+    volumes:
+      - ./gunicorn_config.py:/app/gunicorn_config.py
     depends_on:
       - datahub_db
     networks:
