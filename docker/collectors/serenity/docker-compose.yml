@@ -7,7 +7,7 @@ services:
       - ./../../../data/serenity/global_migration_core:/app/data
     build:
       args:
-          sleep_time: 11
+          sleep_time: 2
           email_notification_enable: "True"
           email_receiver: "douglas.leasure@demography.ox.ac.uk"
       context: ./../../../
