@@ -138,12 +138,6 @@ if __name__ == "__main__":
     drop_countries = drop_countries + ["CU", "SD", "IR", "SY", "RU"]
     countries = [i for i in countries if i not in drop_countries]
 
-    # geo_location specs
-    geo_locations = []
-    for country in countries:
-        geo_locations.append({"name": "countries", "values": [country]})
-    specs["geo_locations"] = geo_locations
-
     # ages
     specs["ages_ranges"] = [
         {"min": 13},
@@ -165,10 +159,18 @@ if __name__ == "__main__":
     platforms = ["facebook", "instagram"]
 
     for platform in platforms:
+
+        # platform
         specs["publisher_platforms"] = [platform]
 
-        file_out = os.path.join(
-            specs_dir, "migration_asia_pacific_" + platform + ".json"
-        )
-        with open(file_out, "w") as f:
-            f.write(json.dumps(specs))
+        for country in countries:
+            
+            # geo_location
+            specs["geo_locations"] = [{"name": "countries", "values": [country]}]
+
+            # save specs
+            file_out = os.path.join(
+                specs_dir, "migration_asia_pacific_" + platform + "_" + country + ".json"
+            )
+            with open(file_out, "w") as f:
+                f.write(json.dumps(specs))
