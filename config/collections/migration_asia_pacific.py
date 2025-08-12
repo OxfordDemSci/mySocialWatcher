@@ -156,7 +156,15 @@ if __name__ == "__main__":
         {"min": 60, "max": 64},
     ]
 
-    platforms = ["facebook", "instagram"]
+    # behaviors (drop two citizenship specs that return errors from Meta)
+    specs["behavior"]["citizenship"] = [
+        item
+        for item in specs["behavior"]["citizenship"]
+        if item is None or (isinstance(item, dict) and "not" not in item)
+    ]
+
+    # platform
+    # platforms = ["facebook", "instagram"]
 
     for platform in platforms:
 
@@ -164,13 +172,14 @@ if __name__ == "__main__":
         specs["publisher_platforms"] = [platform]
 
         for country in countries:
-            
+
             # geo_location
             specs["geo_locations"] = [{"name": "countries", "values": [country]}]
 
             # save specs
             file_out = os.path.join(
-                specs_dir, "migration_asia_pacific_" + platform + "_" + country + ".json"
+                specs_dir,
+                "migration_asia_pacific_" + platform + "_" + country + ".json",
             )
             with open(file_out, "w") as f:
                 f.write(json.dumps(specs))
