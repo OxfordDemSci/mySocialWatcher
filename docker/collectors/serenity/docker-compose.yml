@@ -1,10 +1,10 @@
 services:
 
-  global_migration_pacific:
-    container_name: global_migration_pacific
+  migration_asia_pacific:
+    container_name: migration_asia_pacific
     volumes:
-      - ./global_migration_pacific:/app/in
-      - ./../../../data/serenity/global_migration_pacific:/app/data
+      - ./migration_asia_pacific:/app/in
+      - ./../../../data/serenity/migration_asia_pacific:/app/data
     build:
       args:
           sleep_time: 2
