@@ -5,7 +5,7 @@ import numpy as np
 
 # virtual machine and collection
 vm = 'serenity'
-collection = 'global_migration'
+collection = 'global_migration_core'
 
 
 if __name__ == '__main__':

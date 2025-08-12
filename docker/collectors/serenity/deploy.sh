@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VM="serenity"
-COLLECTIONS=("global_migration")
+COLLECTIONS=("global_migration_core")
 DIR="/home/ubuntu/mySocialWatcher"
 
 # cron
