@@ -1,0 +1,264 @@
+{
+    "name": "MYS",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2537,
+                    "country_code": "MY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2537,
+                "name": "Johor"
+            },
+            "country_code": "MY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2538,
+                    "country_code": "MY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2538,
+                "name": "Kedah"
+            },
+            "country_code": "MY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2539,
+                    "country_code": "MY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2539,
+                "name": "Kelantan"
+            },
+            "country_code": "MY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2549,
+                    "country_code": "MY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2549,
+                "name": "Kuala Lumpur"
+            },
+            "country_code": "MY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2550,
+                    "country_code": "MY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2550,
+                "name": "Labuan"
+            },
+            "country_code": "MY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2540,
+                    "country_code": "MY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2540,
+                "name": "Melaka"
+            },
+            "country_code": "MY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2541,
+                    "country_code": "MY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2541,
+                "name": "Negeri Sembilan"
+            },
+            "country_code": "MY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2542,
+                    "country_code": "MY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2542,
+                "name": "Pahang"
+            },
+            "country_code": "MY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2543,
+                    "country_code": "MY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2543,
+                "name": "Perak"
+            },
+            "country_code": "MY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2544,
+                    "country_code": "MY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2544,
+                "name": "Perlis"
+            },
+            "country_code": "MY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2545,
+                    "country_code": "MY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2545,
+                "name": "Pulau Pinang"
+            },
+            "country_code": "MY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4090,
+                    "country_code": "MY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4090,
+                "name": "Putrajaya"
+            },
+            "country_code": "MY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2551,
+                    "country_code": "MY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2551,
+                "name": "Sabah"
+            },
+            "country_code": "MY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2546,
+                    "country_code": "MY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2546,
+                "name": "Sarawak"
+            },
+            "country_code": "MY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2547,
+                    "country_code": "MY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2547,
+                "name": "Selangor"
+            },
+            "country_code": "MY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2548,
+                    "country_code": "MY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2548,
+                "name": "Trengganu"
+            },
+            "country_code": "MY"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

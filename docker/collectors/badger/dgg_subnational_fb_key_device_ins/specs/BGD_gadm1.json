@@ -1,0 +1,138 @@
+{
+    "name": "BGD",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4371,
+                    "country_code": "BD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4371,
+                "name": "Barisal"
+            },
+            "country_code": "BD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4372,
+                    "country_code": "BD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4372,
+                "name": "Chittagong"
+            },
+            "country_code": "BD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4373,
+                    "country_code": "BD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4373,
+                "name": "Dhaka"
+            },
+            "country_code": "BD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4374,
+                    "country_code": "BD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4374,
+                "name": "Khulna"
+            },
+            "country_code": "BD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4375,
+                    "country_code": "BD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4375,
+                "name": "Rajshahi"
+            },
+            "country_code": "BD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4376,
+                    "country_code": "BD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4376,
+                "name": "Rangpur"
+            },
+            "country_code": "BD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4377,
+                    "country_code": "BD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4377,
+                "name": "Sylhet"
+            },
+            "country_code": "BD"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

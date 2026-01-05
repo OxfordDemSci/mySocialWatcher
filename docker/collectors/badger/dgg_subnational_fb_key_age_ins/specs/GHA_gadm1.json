@@ -1,0 +1,229 @@
+{
+    "name": "GHA",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1423,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1423,
+                "name": "Ahafo"
+            },
+            "country_code": "GH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1422,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1422,
+                "name": "Ashanti"
+            },
+            "country_code": "GH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1429,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1429,
+                "name": "Bono East"
+            },
+            "country_code": "GH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1424,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1424,
+                "name": "Central"
+            },
+            "country_code": "GH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1425,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1425,
+                "name": "Eastern"
+            },
+            "country_code": "GH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1421,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1421,
+                "name": "Greater Accra"
+            },
+            "country_code": "GH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1429,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1429,
+                "name": "North East"
+            },
+            "country_code": "GH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1426,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1426,
+                "name": "Northern"
+            },
+            "country_code": "GH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1429,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1429,
+                "name": "Upper East"
+            },
+            "country_code": "GH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1430,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1430,
+                "name": "Upper West"
+            },
+            "country_code": "GH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1427,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1427,
+                "name": "Volta"
+            },
+            "country_code": "GH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1428,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1428,
+                "name": "Western"
+            },
+            "country_code": "GH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1428,
+                    "country_code": "GH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1428,
+                "name": "Western North"
+            },
+            "country_code": "GH"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

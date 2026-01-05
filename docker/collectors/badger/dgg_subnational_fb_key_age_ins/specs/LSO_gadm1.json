@@ -1,0 +1,187 @@
+{
+    "name": "LSO",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2119,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2119,
+                "name": "Berea"
+            },
+            "country_code": "LS"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2120,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2120,
+                "name": "Butha-Buthe"
+            },
+            "country_code": "LS"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2121,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2121,
+                "name": "Leribe"
+            },
+            "country_code": "LS"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2122,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2122,
+                "name": "Mafeteng"
+            },
+            "country_code": "LS"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2123,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2123,
+                "name": "Maseru"
+            },
+            "country_code": "LS"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2124,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2124,
+                "name": "Mohale's Hoek"
+            },
+            "country_code": "LS"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2125,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2125,
+                "name": "Mokhotlong"
+            },
+            "country_code": "LS"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2126,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2126,
+                "name": "Qacha's Nek"
+            },
+            "country_code": "LS"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2127,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2127,
+                "name": "Quthing"
+            },
+            "country_code": "LS"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2128,
+                    "country_code": "LS"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2128,
+                "name": "Thaba-Tseka"
+            },
+            "country_code": "LS"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

@@ -1,0 +1,138 @@
+{
+    "name": "CRI",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 752,
+                    "country_code": "CR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 752,
+                "name": "Alajuela"
+            },
+            "country_code": "CR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 753,
+                    "country_code": "CR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 753,
+                "name": "Cartago"
+            },
+            "country_code": "CR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 754,
+                    "country_code": "CR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 754,
+                "name": "Guanacaste"
+            },
+            "country_code": "CR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 755,
+                    "country_code": "CR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 755,
+                "name": "Heredia"
+            },
+            "country_code": "CR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 756,
+                    "country_code": "CR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 756,
+                "name": "Lim\u00f3n"
+            },
+            "country_code": "CR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 757,
+                    "country_code": "CR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 757,
+                "name": "Puntarenas"
+            },
+            "country_code": "CR"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 758,
+                    "country_code": "CR"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 758,
+                "name": "San Jos\u00e9"
+            },
+            "country_code": "CR"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}
