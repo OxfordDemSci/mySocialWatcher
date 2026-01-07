@@ -354,67 +354,45 @@ def get_api_field_name(field_name):
     return constants.INPUT_TO_API_FIELD_NAME[field_name]
 
 
-def process_dau_audience_from_response(literal_response):
-    if 'b\'' in literal_response:
-        raw_bytes = ast.literal_eval(literal_response)
-        json_text = raw_bytes.decode('utf-8')
-    else:
-        json_text = literal_response
-    aud = json.loads(json_text)["data"][0]
-    if "estimate_dau" in aud:
-        audience = int(aud["estimate_dau"])
-    else:
-        audience = None
-    return audience
 
+def _safe_json_from_literal_response(literal_response):
+    try:
+        if isinstance(literal_response, bytes):
+            return literal_response.decode("utf-8")
+        elif isinstance(literal_response, str) and literal_response.startswith("b'"):
+            raw = ast.literal_eval(literal_response)
+            if isinstance(raw, bytes):
+                return raw.decode("utf-8")
+            return raw  # already decoded
+        else:
+            return literal_response
+    except Exception:
+        return None
+
+def _extract_audience(literal_response, key):
+    try:
+        json_text = _safe_json_from_literal_response(literal_response)
+        if not json_text:
+            return None
+        aud = json.loads(json_text)["data"][0]
+        return int(aud[key]) if key in aud else None
+    except Exception:
+        return None
+
+def process_dau_audience_from_response(literal_response):
+    return _extract_audience(literal_response, "estimate_dau")
 
 def process_mau_audience_from_response(literal_response):
-    if 'b\'' in literal_response:
-        raw_bytes = ast.literal_eval(literal_response)
-        json_text = raw_bytes.decode('utf-8')
-    else:
-        json_text = literal_response
-    aud = json.loads(json_text)["data"][0]
-
-    if "estimate_mau" in aud:
-        audience=int(aud["estimate_mau"])
-    else:
-        audience=None
-    return audience
+    return _extract_audience(literal_response, "estimate_mau")
 
 def process_mau_upper_audience_from_response(literal_response):
-    if 'b\'' in literal_response:
-        raw_bytes = ast.literal_eval(literal_response)
-        json_text = raw_bytes.decode('utf-8')
-    else:
-        json_text = literal_response
-    aud = json.loads(json_text)["data"][0]
-
-    if "estimate_mau_upper_bound" in aud:
-        audience = int(aud["estimate_mau_upper_bound"])
-    else:
-        audience = None
-    return audience
-
+    return _extract_audience(literal_response, "estimate_mau_upper_bound")
 
 def process_mau_lower_audience_from_response(literal_response):
-    if 'b\'' in literal_response:
-        raw_bytes = ast.literal_eval(literal_response)
-        json_text = raw_bytes.decode('utf-8')
-    else:
-        json_text = literal_response
-    aud = json.loads(json_text)["data"][0]
-
-    if "estimate_mau_lower_bound" in aud:
-        audience = int(aud["estimate_mau_lower_bound"])
-    else:
-        audience = None
-    return audience
-
+    return _extract_audience(literal_response, "estimate_mau_lower_bound")
 
 def post_process_collection(collection_dataframe):
     # For now just capture audience
-    print_info("Computing Audience and DAU column")
     collection_dataframe["dau_audience"] = collection_dataframe["response"].apply(
         lambda x: process_dau_audience_from_response(x))
 
@@ -426,10 +404,9 @@ def post_process_collection(collection_dataframe):
 
     collection_dataframe["mau_audience_lower_bound"] = collection_dataframe["response"].apply(
         lambda x: process_mau_lower_audience_from_response(x))
-    
+
     collection_dataframe = add_mocked_column(collection_dataframe)
     return collection_dataframe
-
 
 def select_advance_targeting_type_array_ids(segment_type, input_value, targeting):
     api_field_name = get_api_field_name(segment_type)
@@ -874,3 +851,7 @@ def get_all_countries(two_letters_code=True):
                 'Ukraine', 'Uganda', 'United States', 'Uruguay', 'Uzbekistan', 'Saint Vincent and the Grenadines',
                 'Venezuela', 'British Virgin Islands', 'US Virgin Islands', 'Vietnam', 'Vanuatu', 'Wallis and Futuna',
                 'Samoa', 'Kosovo', 'Mayotte', 'South Africa', 'Zambia', 'Zimbabwe']
+    
+    
+    
+
