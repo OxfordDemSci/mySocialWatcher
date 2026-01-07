@@ -5,7 +5,9 @@ VM="badger"
 COLLECTIONS=("dgg_national" "dgg_national_ins" "dgg_national_home_recent" "dgg_subnational_age"
              "dgg_subnational_education" "dgg_subnational_device" "dgg_subnational_age_device"
               "dgg_subnational_age_education" "dgg_subnational_tessellated_age" "dgg_subnational_tessellated_device"
-              "dgg_subnational_fb_key_device" "dgg_subnational_fb_key_age")
+              "dgg_subnational_fb_key_device" "dgg_subnational_fb_key_age" "dgg_subnational_fb_key_age_ins" 
+              "dgg_subnational_fb_key_device_ins" "dgg_subnational_tessellated_age_ins"
+              "dgg_subnational_tessellated_device_ins")
 
 
 DIR="/home/ubuntu/mySocialWatcher"

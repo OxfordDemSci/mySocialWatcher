@@ -95,4 +95,68 @@ services:
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
 
+  dgg_subnational_fb_key_age_ins:
+    container_name: dgg_subnational_fb_key_age_ins
+    volumes:
+      - ./dgg_subnational_fb_key_age:/app/in
+      - ./../../../data/badger/dgg_subnational_fb_key_age_ins:/app/data
+    build:
+      args:
+        pysocialwatcher_opt_flag: "true"
+        betterestimates_flag: "true"
+        email_notification_enable: "True"
+        email_receiver: "michael.chong@sociology.ox.ac.uk,jiani.yan@wolfson.ox.ac.uk"
+        sleep_time: 0
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
 
+  dgg_subnational_fb_key_device_ins:
+    container_name: dgg_subnational_fb_key_device_ins
+    volumes:
+      - ./dgg_subnational_fb_key_age:/app/in
+      - ./../../../data/badger/dgg_subnational_fb_key_device_ins:/app/data
+    build:
+      args:
+        pysocialwatcher_opt_flag: "true"
+        betterestimates_flag: "true"
+        email_notification_enable: "True"
+        email_receiver: "michael.chong@sociology.ox.ac.uk,jiani.yan@wolfson.ox.ac.uk"
+        sleep_time: 0
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+
+  dgg_subnational_tessellated_age_ins:
+    container_name: dgg_subnational_tessellated_age_ins
+    volumes:
+      - ./dgg_subnational_fb_key_age:/app/in
+      - ./../../../data/badger/dgg_subnational_tessellated_age_ins:/app/data
+    build:
+      args:
+        pysocialwatcher_opt_flag: "true"
+        betterestimates_flag: "true"
+        email_notification_enable: "True"
+        email_receiver: "michael.chong@sociology.ox.ac.uk,jiani.yan@wolfson.ox.ac.uk"
+        sleep_time: 0
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+    
+  dgg_subnational_tessellated_device_ins:
+    container_name: dgg_subnational_tessellated_device_ins
+    volumes:
+      - ./dgg_subnational_fb_key_age:/app/in
+      - ./../../../data/badger/dgg_subnational_tessellated_device_ins:/app/data
+    build:
+      args:
+        pysocialwatcher_opt_flag: "true"
+        betterestimates_flag: "true"
+        email_notification_enable: "True"
+        email_receiver: "michael.chong@sociology.ox.ac.uk,jiani.yan@wolfson.ox.ac.uk"
+        sleep_time: 0
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: on-failure
+    
+  
