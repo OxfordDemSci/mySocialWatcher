@@ -26,7 +26,6 @@ services:
       args:
         sleep_time: 0
         email_notification_enable: "True"
-        email_receiver: "scro3937@ox.ac.uk,casey.breen@demography.ox.ac.uk"
         email_receiver: "scro3937@ox.ac.uk,michael.chong@sociology.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
