@@ -1,0 +1,131 @@
+{
+    "name": "PAK",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2937,
+                    "country_code": "PK"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2937,
+                "name": "Balochistan"
+            },
+            "country_code": "PK"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2936,
+                    "country_code": "PK"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2936,
+                "name": "Federally Administered Tribal Ar"
+            },
+            "country_code": "PK"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2943,
+                    "country_code": "PK"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2943,
+                "name": "Islamabad"
+            },
+            "country_code": "PK"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2938,
+                    "country_code": "PK"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2938,
+                "name": "Khyber-Pakhtunkhwa"
+            },
+            "country_code": "PK"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2939,
+                    "country_code": "PK"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2939,
+                "name": "Punjab"
+            },
+            "country_code": "PK"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2940,
+                    "country_code": "PK"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2940,
+                "name": "Sindh"
+            },
+            "country_code": "PK"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

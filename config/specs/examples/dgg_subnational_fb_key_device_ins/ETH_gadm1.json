@@ -1,0 +1,180 @@
+{
+    "name": "ETH",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1037,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1037,
+                "name": "Addis Abeba"
+            },
+            "country_code": "ET"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1041,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1041,
+                "name": "Afar"
+            },
+            "country_code": "ET"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1034,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1034,
+                "name": "Amhara"
+            },
+            "country_code": "ET"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1040,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1040,
+                "name": "Benshangul-Gumaz"
+            },
+            "country_code": "ET"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1036,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1036,
+                "name": "Gambela Peoples"
+            },
+            "country_code": "ET"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4545,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4545,
+                "name": "Harari People"
+            },
+            "country_code": "ET"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4548,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4548,
+                "name": "Oromia"
+            },
+            "country_code": "ET"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1035,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1035,
+                "name": "Somali"
+            },
+            "country_code": "ET"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1038,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1038,
+                "name": "Southern Nations, Nationalities"
+            },
+            "country_code": "ET"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1039,
+                    "country_code": "ET"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1039,
+                "name": "Tigray"
+            },
+            "country_code": "ET"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

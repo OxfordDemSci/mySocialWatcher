@@ -12,7 +12,7 @@ services:
       args:
         sleep_time: 0
         email_notification_enable: "True"
-        email_receiver: "scro3937@ox.ac.uk,casey.breen@demography.ox.ac.uk"
+        email_receiver: "michael.chong@sociology.ox.ac.uk,scro3937@ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
@@ -27,6 +27,7 @@ services:
         sleep_time: 0
         email_notification_enable: "True"
         email_receiver: "scro3937@ox.ac.uk,casey.breen@demography.ox.ac.uk"
+        email_receiver: "scro3937@ox.ac.uk,michael.chong@sociology.ox.ac.uk"
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
@@ -41,7 +42,7 @@ services:
           pysocialwatcher_opt_flag: "true"
           betterestimates_flag: "true"
           email_notification_enable: "True"
-          email_receiver: "casey.breen@demography.ox.ac.uk"
+          email_receiver: "michael.chong@sociology.ox.ac.uk,scro3937@ox.ac.uk"
           sleep_time: 0
         context: ./../../../
         dockerfile: ./docker/collectors/Dockerfile
@@ -57,7 +58,7 @@ services:
             pysocialwatcher_opt_flag: "true"
             betterestimates_flag: "true"
             email_notification_enable: "True"
-            email_receiver: "casey.breen@demography.ox.ac.uk"
+            email_receiver: "michael.chong@sociology.ox.ac.uk,scro3937@ox.ac.uk"
             sleep_time: 0
           context: ./../../../
           dockerfile: ./docker/collectors/Dockerfile
@@ -73,7 +74,7 @@ services:
         pysocialwatcher_opt_flag: "true"
         betterestimates_flag: "true"
         email_notification_enable: "True"
-        email_receiver: "casey.breen@demography.ox.ac.uk"
+        email_receiver: "michael.chong@sociology.ox.ac.uk,scro3937@ox.ac.uk"
         sleep_time: 0
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
@@ -89,7 +90,7 @@ services:
         pysocialwatcher_opt_flag: "true"
         betterestimates_flag: "true"
         email_notification_enable: "True"
-        email_receiver: "casey.breen@demography.ox.ac.uk"
+        email_receiver: "michael.chong@sociology.ox.ac.uk,scro3937@ox.ac.uk"
         sleep_time: 0
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
@@ -98,14 +99,14 @@ services:
   dgg_subnational_fb_key_age_ins:
     container_name: dgg_subnational_fb_key_age_ins
     volumes:
-      - ./dgg_subnational_fb_key_age:/app/in
+      - ./dgg_subnational_fb_key_age_ins:/app/in
       - ./../../../data/badger/dgg_subnational_fb_key_age_ins:/app/data
     build:
       args:
         pysocialwatcher_opt_flag: "true"
         betterestimates_flag: "true"
         email_notification_enable: "True"
-        email_receiver: "michael.chong@sociology.ox.ac.uk,jiani.yan@wolfson.ox.ac.uk"
+        email_receiver: "michael.chong@sociology.ox.ac.uk,scro3937@ox.ac.uk"
         sleep_time: 0
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
@@ -114,14 +115,14 @@ services:
   dgg_subnational_fb_key_device_ins:
     container_name: dgg_subnational_fb_key_device_ins
     volumes:
-      - ./dgg_subnational_fb_key_age:/app/in
+      - ./dgg_subnational_fb_key_device_ins:/app/in
       - ./../../../data/badger/dgg_subnational_fb_key_device_ins:/app/data
     build:
       args:
         pysocialwatcher_opt_flag: "true"
         betterestimates_flag: "true"
         email_notification_enable: "True"
-        email_receiver: "michael.chong@sociology.ox.ac.uk,jiani.yan@wolfson.ox.ac.uk"
+        email_receiver: "michael.chong@sociology.ox.ac.uk,scro3937@ox.ac.uk"
         sleep_time: 0
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
@@ -130,33 +131,31 @@ services:
   dgg_subnational_tessellated_age_ins:
     container_name: dgg_subnational_tessellated_age_ins
     volumes:
-      - ./dgg_subnational_fb_key_age:/app/in
+      - ./dgg_subnational_tessellated_age_ins:/app/in
       - ./../../../data/badger/dgg_subnational_tessellated_age_ins:/app/data
     build:
       args:
         pysocialwatcher_opt_flag: "true"
         betterestimates_flag: "true"
         email_notification_enable: "True"
-        email_receiver: "michael.chong@sociology.ox.ac.uk,jiani.yan@wolfson.ox.ac.uk"
+        email_receiver: "michael.chong@sociology.ox.ac.uk,scro3937@ox.ac.uk"
         sleep_time: 0
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
-    
+
   dgg_subnational_tessellated_device_ins:
     container_name: dgg_subnational_tessellated_device_ins
     volumes:
-      - ./dgg_subnational_fb_key_age:/app/in
+      - ./dgg_subnational_tessellated_device_ins:/app/in
       - ./../../../data/badger/dgg_subnational_tessellated_device_ins:/app/data
     build:
       args:
         pysocialwatcher_opt_flag: "true"
         betterestimates_flag: "true"
         email_notification_enable: "True"
-        email_receiver: "michael.chong@sociology.ox.ac.uk,jiani.yan@wolfson.ox.ac.uk"
+        email_receiver: "michael.chong@sociology.ox.ac.uk,scro3937@ox.ac.uk"
         sleep_time: 0
       context: ./../../../
       dockerfile: ./docker/collectors/Dockerfile
     restart: on-failure
-    
-  

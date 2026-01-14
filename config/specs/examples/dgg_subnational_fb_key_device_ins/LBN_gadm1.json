@@ -1,0 +1,110 @@
+{
+    "name": "LBN",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2059,
+                    "country_code": "LB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2059,
+                "name": "Beirut"
+            },
+            "country_code": "LB"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2060,
+                    "country_code": "LB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2060,
+                "name": "Mount Lebanon"
+            },
+            "country_code": "LB"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4322,
+                    "country_code": "LB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4322,
+                "name": "Nabatiyeh"
+            },
+            "country_code": "LB"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2058,
+                    "country_code": "LB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2058,
+                "name": "North"
+            },
+            "country_code": "LB"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2061,
+                    "country_code": "LB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2061,
+                "name": "South"
+            },
+            "country_code": "LB"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

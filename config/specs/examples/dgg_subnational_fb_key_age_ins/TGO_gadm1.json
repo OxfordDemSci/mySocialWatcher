@@ -1,0 +1,117 @@
+{
+    "name": "TGO",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4929,
+                    "country_code": "TG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4929,
+                "name": "Centre"
+            },
+            "country_code": "TG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4930,
+                    "country_code": "TG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4930,
+                "name": "Kara"
+            },
+            "country_code": "TG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4931,
+                    "country_code": "TG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4931,
+                "name": "Maritime"
+            },
+            "country_code": "TG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4934,
+                    "country_code": "TG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4934,
+                "name": "Plateaux"
+            },
+            "country_code": "TG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4939,
+                    "country_code": "TG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4939,
+                "name": "Savanes"
+            },
+            "country_code": "TG"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

@@ -1,0 +1,103 @@
+{
+    "name": "GMB",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1434,
+                    "country_code": "GM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1434,
+                "name": "Banjul"
+            },
+            "country_code": "GM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1435,
+                    "country_code": "GM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1435,
+                "name": "Lower River"
+            },
+            "country_code": "GM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1439,
+                    "country_code": "GM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1439,
+                "name": "North Bank"
+            },
+            "country_code": "GM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1437,
+                    "country_code": "GM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1437,
+                "name": "Upper River"
+            },
+            "country_code": "GM"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}
