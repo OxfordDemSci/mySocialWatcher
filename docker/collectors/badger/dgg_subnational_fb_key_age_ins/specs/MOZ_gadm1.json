@@ -1,0 +1,187 @@
+{
+    "name": "MOZ",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2552,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2552,
+                "name": "Cabo Delgado"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2553,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2553,
+                "name": "Gaza"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2554,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2554,
+                "name": "Inhambane"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2561,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2561,
+                "name": "Manica"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4679,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4679,
+                "name": "Maputo"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4679,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4679,
+                "name": "Maputo City"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2557,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2557,
+                "name": "Nampula"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2556,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2556,
+                "name": "Sofala"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2559,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2559,
+                "name": "Tete"
+            },
+            "country_code": "MZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2560,
+                    "country_code": "MZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2560,
+                "name": "Zambezia"
+            },
+            "country_code": "MZ"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

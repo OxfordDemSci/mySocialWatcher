@@ -1,0 +1,103 @@
+{
+    "name": "ERI",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4900,
+                    "country_code": "ER"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4900,
+                "name": "Anseba"
+            },
+            "country_code": "ER"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4902,
+                    "country_code": "ER"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4902,
+                "name": "Debub"
+            },
+            "country_code": "ER"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4901,
+                    "country_code": "ER"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4901,
+                "name": "Gash Barka"
+            },
+            "country_code": "ER"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4899,
+                    "country_code": "ER"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4899,
+                "name": "Maekel"
+            },
+            "country_code": "ER"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

@@ -1,0 +1,278 @@
+{
+    "name": "BDI",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 385,
+                    "country_code": "BI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 385,
+                "name": "Bubanza"
+            },
+            "country_code": "BI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 384,
+                    "country_code": "BI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 384,
+                "name": "Bujumbura Mairie"
+            },
+            "country_code": "BI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4841,
+                    "country_code": "BI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4841,
+                "name": "Bujumbura Rural"
+            },
+            "country_code": "BI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 386,
+                    "country_code": "BI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 386,
+                "name": "Bururi"
+            },
+            "country_code": "BI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 387,
+                    "country_code": "BI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 387,
+                "name": "Cankuzo"
+            },
+            "country_code": "BI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 388,
+                    "country_code": "BI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 388,
+                "name": "Cibitoke"
+            },
+            "country_code": "BI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 389,
+                    "country_code": "BI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 389,
+                "name": "Gitega"
+            },
+            "country_code": "BI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 390,
+                    "country_code": "BI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 390,
+                "name": "Karuzi"
+            },
+            "country_code": "BI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 391,
+                    "country_code": "BI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 391,
+                "name": "Kayanza"
+            },
+            "country_code": "BI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 392,
+                    "country_code": "BI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 392,
+                "name": "Kirundo"
+            },
+            "country_code": "BI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 393,
+                    "country_code": "BI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 393,
+                "name": "Makamba"
+            },
+            "country_code": "BI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4844,
+                    "country_code": "BI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4844,
+                "name": "Muramvya"
+            },
+            "country_code": "BI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 394,
+                    "country_code": "BI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 394,
+                "name": "Muyinga"
+            },
+            "country_code": "BI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4845,
+                    "country_code": "BI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4845,
+                "name": "Mwaro"
+            },
+            "country_code": "BI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 395,
+                    "country_code": "BI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 395,
+                "name": "Ngozi"
+            },
+            "country_code": "BI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 396,
+                    "country_code": "BI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 396,
+                "name": "Rutana"
+            },
+            "country_code": "BI"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 397,
+                    "country_code": "BI"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 397,
+                "name": "Ruyigi"
+            },
+            "country_code": "BI"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

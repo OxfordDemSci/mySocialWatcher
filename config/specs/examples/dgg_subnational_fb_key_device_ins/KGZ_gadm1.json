@@ -1,0 +1,138 @@
+{
+    "name": "KGZ",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1945,
+                    "country_code": "KG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1945,
+                "name": "Batken"
+            },
+            "country_code": "KG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1938,
+                    "country_code": "KG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1938,
+                "name": "Bi\u0161kek"
+            },
+            "country_code": "KG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1940,
+                    "country_code": "KG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1940,
+                "name": "Jalal-Abad"
+            },
+            "country_code": "KG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1941,
+                    "country_code": "KG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1941,
+                "name": "Naryn"
+            },
+            "country_code": "KG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4576,
+                    "country_code": "KG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4576,
+                "name": "Osh"
+            },
+            "country_code": "KG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4576,
+                    "country_code": "KG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4576,
+                "name": "Osh (city)"
+            },
+            "country_code": "KG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1942,
+                    "country_code": "KG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1942,
+                "name": "Talas"
+            },
+            "country_code": "KG"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

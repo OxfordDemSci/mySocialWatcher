@@ -1,0 +1,180 @@
+{
+    "name": "HTI",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1614,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1614,
+                "name": "Centre"
+            },
+            "country_code": "HT"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1615,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1615,
+                "name": "Grand'Anse"
+            },
+            "country_code": "HT"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1613,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1613,
+                "name": "L'Artibonite"
+            },
+            "country_code": "HT"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4564,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4564,
+                "name": "Nippes"
+            },
+            "country_code": "HT"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1617,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1617,
+                "name": "Nord"
+            },
+            "country_code": "HT"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1617,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1617,
+                "name": "Nord-Est"
+            },
+            "country_code": "HT"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1612,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1612,
+                "name": "Nord-Ouest"
+            },
+            "country_code": "HT"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1612,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1612,
+                "name": "Ouest"
+            },
+            "country_code": "HT"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1620,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1620,
+                "name": "Sud"
+            },
+            "country_code": "HT"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1620,
+                    "country_code": "HT"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1620,
+                "name": "Sud-Est"
+            },
+            "country_code": "HT"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

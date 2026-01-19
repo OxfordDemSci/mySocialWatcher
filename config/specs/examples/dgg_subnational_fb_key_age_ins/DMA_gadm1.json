@@ -1,0 +1,187 @@
+{
+    "name": "DMA",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 860,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 860,
+                "name": "Saint Andrew"
+            },
+            "country_code": "DM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 861,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 861,
+                "name": "Saint David"
+            },
+            "country_code": "DM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 862,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 862,
+                "name": "Saint George"
+            },
+            "country_code": "DM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 863,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 863,
+                "name": "Saint John"
+            },
+            "country_code": "DM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 864,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 864,
+                "name": "Saint Joseph"
+            },
+            "country_code": "DM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 865,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 865,
+                "name": "Saint Luke"
+            },
+            "country_code": "DM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 866,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 866,
+                "name": "Saint Mark"
+            },
+            "country_code": "DM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 867,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 867,
+                "name": "Saint Patrick"
+            },
+            "country_code": "DM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 868,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 868,
+                "name": "Saint Paul"
+            },
+            "country_code": "DM"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 869,
+                    "country_code": "DM"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 869,
+                "name": "Saint Peter"
+            },
+            "country_code": "DM"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

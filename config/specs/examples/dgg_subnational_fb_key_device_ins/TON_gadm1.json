@@ -1,0 +1,110 @@
+{
+    "name": "TON",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4935,
+                    "country_code": "TO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4935,
+                "name": "'Eua"
+            },
+            "country_code": "TO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3653,
+                    "country_code": "TO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3653,
+                "name": "Ha'apai"
+            },
+            "country_code": "TO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4937,
+                    "country_code": "TO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4937,
+                "name": "Niuas"
+            },
+            "country_code": "TO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3654,
+                    "country_code": "TO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3654,
+                "name": "Tongatapu"
+            },
+            "country_code": "TO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3655,
+                    "country_code": "TO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3655,
+                "name": "Vava'u"
+            },
+            "country_code": "TO"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

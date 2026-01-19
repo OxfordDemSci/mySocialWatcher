@@ -1,0 +1,152 @@
+{
+    "name": "NER",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2600,
+                    "country_code": "NE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2600,
+                "name": "Agadez"
+            },
+            "country_code": "NE"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2601,
+                    "country_code": "NE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2601,
+                "name": "Diffa"
+            },
+            "country_code": "NE"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2602,
+                    "country_code": "NE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2602,
+                "name": "Dosso"
+            },
+            "country_code": "NE"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2603,
+                    "country_code": "NE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2603,
+                "name": "Maradi"
+            },
+            "country_code": "NE"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2604,
+                    "country_code": "NE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2604,
+                "name": "Niamey"
+            },
+            "country_code": "NE"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2605,
+                    "country_code": "NE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2605,
+                "name": "Tahoua"
+            },
+            "country_code": "NE"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4889,
+                    "country_code": "NE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4889,
+                "name": "Tillab\u00e9ry"
+            },
+            "country_code": "NE"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2606,
+                    "country_code": "NE"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2606,
+                "name": "Zinder"
+            },
+            "country_code": "NE"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

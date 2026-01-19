@@ -1,0 +1,145 @@
+{
+    "name": "BLR",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 514,
+                    "country_code": "BY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 514,
+                "name": "Brest"
+            },
+            "country_code": "BY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 515,
+                    "country_code": "BY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 515,
+                "name": "Gomel"
+            },
+            "country_code": "BY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 516,
+                    "country_code": "BY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 516,
+                "name": "Grodno"
+            },
+            "country_code": "BY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 517,
+                    "country_code": "BY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 517,
+                "name": "Minsk"
+            },
+            "country_code": "BY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 517,
+                    "country_code": "BY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 517,
+                "name": "Minsk"
+            },
+            "country_code": "BY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 519,
+                    "country_code": "BY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 519,
+                "name": "Mogilev"
+            },
+            "country_code": "BY"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 520,
+                    "country_code": "BY"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 520,
+                "name": "Vitebsk"
+            },
+            "country_code": "BY"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

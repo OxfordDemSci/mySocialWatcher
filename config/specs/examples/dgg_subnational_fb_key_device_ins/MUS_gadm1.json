@@ -1,0 +1,152 @@
+{
+    "name": "MUS",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2448,
+                    "country_code": "MU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2448,
+                "name": "Flacq"
+            },
+            "country_code": "MU"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2449,
+                    "country_code": "MU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2449,
+                "name": "Grand Port"
+            },
+            "country_code": "MU"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2450,
+                    "country_code": "MU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2450,
+                "name": "Moka"
+            },
+            "country_code": "MU"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2451,
+                    "country_code": "MU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2451,
+                "name": "Pamplemousses"
+            },
+            "country_code": "MU"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2452,
+                    "country_code": "MU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2452,
+                "name": "Plaines Wilhems"
+            },
+            "country_code": "MU"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2453,
+                    "country_code": "MU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2453,
+                "name": "Port Louis"
+            },
+            "country_code": "MU"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2454,
+                    "country_code": "MU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2454,
+                "name": "Rivi\u00e8re du Rempart"
+            },
+            "country_code": "MU"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2455,
+                    "country_code": "MU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2455,
+                "name": "Savanne"
+            },
+            "country_code": "MU"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

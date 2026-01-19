@@ -1,0 +1,131 @@
+{
+    "name": "VUT",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4920,
+                    "country_code": "VU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4920,
+                "name": "Malampa"
+            },
+            "country_code": "VU"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4922,
+                    "country_code": "VU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4922,
+                "name": "Penama"
+            },
+            "country_code": "VU"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4923,
+                    "country_code": "VU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4923,
+                "name": "Sanma"
+            },
+            "country_code": "VU"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4925,
+                    "country_code": "VU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4925,
+                "name": "Shefa"
+            },
+            "country_code": "VU"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4021,
+                    "country_code": "VU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4021,
+                "name": "Tafea"
+            },
+            "country_code": "VU"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4924,
+                    "country_code": "VU"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4924,
+                "name": "Torba"
+            },
+            "country_code": "VU"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

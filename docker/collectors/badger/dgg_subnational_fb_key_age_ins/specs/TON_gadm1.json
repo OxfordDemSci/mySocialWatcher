@@ -1,0 +1,117 @@
+{
+    "name": "TON",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4935,
+                    "country_code": "TO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4935,
+                "name": "'Eua"
+            },
+            "country_code": "TO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3653,
+                    "country_code": "TO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3653,
+                "name": "Ha'apai"
+            },
+            "country_code": "TO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4937,
+                    "country_code": "TO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4937,
+                "name": "Niuas"
+            },
+            "country_code": "TO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3654,
+                    "country_code": "TO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3654,
+                "name": "Tongatapu"
+            },
+            "country_code": "TO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3655,
+                    "country_code": "TO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3655,
+                "name": "Vava'u"
+            },
+            "country_code": "TO"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

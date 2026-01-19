@@ -1,0 +1,166 @@
+{
+    "name": "BOL",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 431,
+                    "country_code": "BO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 431,
+                "name": "Beni"
+            },
+            "country_code": "BO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 429,
+                    "country_code": "BO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 429,
+                "name": "Chuquisaca"
+            },
+            "country_code": "BO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 430,
+                    "country_code": "BO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 430,
+                "name": "Cochabamba"
+            },
+            "country_code": "BO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 432,
+                    "country_code": "BO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 432,
+                "name": "La Paz"
+            },
+            "country_code": "BO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 433,
+                    "country_code": "BO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 433,
+                "name": "Oruro"
+            },
+            "country_code": "BO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 434,
+                    "country_code": "BO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 434,
+                "name": "Pando"
+            },
+            "country_code": "BO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 435,
+                    "country_code": "BO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 435,
+                "name": "Potos\u00ed"
+            },
+            "country_code": "BO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 436,
+                    "country_code": "BO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 436,
+                "name": "Santa Cruz"
+            },
+            "country_code": "BO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 437,
+                    "country_code": "BO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 437,
+                "name": "Tarija"
+            },
+            "country_code": "BO"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

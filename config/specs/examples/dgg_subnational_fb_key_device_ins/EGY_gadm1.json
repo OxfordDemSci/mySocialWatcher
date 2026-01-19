@@ -1,0 +1,152 @@
+{
+    "name": "EGY",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1004,
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1004,
+                "name": "Al Gharbiyah"
+            },
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 999,
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 999,
+                "name": "Al Minufiyah"
+            },
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1000,
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1000,
+                "name": "Al Minya"
+            },
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1002,
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1002,
+                "name": "Al Qalyubiyah"
+            },
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1006,
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1006,
+                "name": "Aswan"
+            },
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1007,
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1007,
+                "name": "Asyut"
+            },
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1011,
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1011,
+                "name": "Kafr ash Shaykh"
+            },
+            "country_code": "EG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1012,
+                    "country_code": "EG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1012,
+                "name": "Matrouh"
+            },
+            "country_code": "EG"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

@@ -1,0 +1,236 @@
+{
+    "name": "SLV",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3480,
+                    "country_code": "SV"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3480,
+                "name": "Ahuachap\u00e1n"
+            },
+            "country_code": "SV"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3481,
+                    "country_code": "SV"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3481,
+                "name": "Caba\u00f1as"
+            },
+            "country_code": "SV"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3482,
+                    "country_code": "SV"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3482,
+                "name": "Chalatenango"
+            },
+            "country_code": "SV"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3483,
+                    "country_code": "SV"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3483,
+                "name": "Cuscatl\u00e1n"
+            },
+            "country_code": "SV"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3484,
+                    "country_code": "SV"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3484,
+                "name": "La Libertad"
+            },
+            "country_code": "SV"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3485,
+                    "country_code": "SV"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3485,
+                "name": "La Paz"
+            },
+            "country_code": "SV"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3486,
+                    "country_code": "SV"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3486,
+                "name": "La Uni\u00f3n"
+            },
+            "country_code": "SV"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3487,
+                    "country_code": "SV"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3487,
+                "name": "Moraz\u00e1n"
+            },
+            "country_code": "SV"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3488,
+                    "country_code": "SV"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3488,
+                "name": "San Miguel"
+            },
+            "country_code": "SV"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3489,
+                    "country_code": "SV"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3489,
+                "name": "San Salvador"
+            },
+            "country_code": "SV"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3491,
+                    "country_code": "SV"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3491,
+                "name": "San Vicente"
+            },
+            "country_code": "SV"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3490,
+                    "country_code": "SV"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3490,
+                "name": "Santa Ana"
+            },
+            "country_code": "SV"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3492,
+                    "country_code": "SV"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3492,
+                "name": "Sonsonate"
+            },
+            "country_code": "SV"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3493,
+                    "country_code": "SV"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3493,
+                "name": "Usulut\u00e1n"
+            },
+            "country_code": "SV"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

@@ -1,0 +1,460 @@
+{
+    "name": "PHL",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4192,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4192,
+                "name": "Abra"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4184,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4184,
+                "name": "Aklan"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4184,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4184,
+                "name": "Albay"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4185,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4185,
+                "name": "Aurora"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4192,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4192,
+                "name": "Batangas"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4186,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4186,
+                "name": "Biliran"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4182,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4182,
+                "name": "Cagayan"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4190,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4190,
+                "name": "Camarines Norte"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4182,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4182,
+                "name": "Compostela Valley"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4190,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4190,
+                "name": "Davao del Norte"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2825,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2825,
+                "name": "Davao del Sur"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2825,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2825,
+                "name": "Davao Oriental"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4189,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4189,
+                "name": "Eastern Samar"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4185,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4185,
+                "name": "Guimaras"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4181,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4181,
+                "name": "Ilocos Norte"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4181,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4181,
+                "name": "Ilocos Sur"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4181,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4181,
+                "name": "Iloilo"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4190,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4190,
+                "name": "Lanao del Norte"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4190,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4190,
+                "name": "Maguindanao"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4179,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4179,
+                "name": "Metropolitan Manila"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4190,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4190,
+                "name": "North Cotabato"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4190,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4190,
+                "name": "Northern Samar"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4188,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4188,
+                "name": "Nueva Vizcaya"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4190,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4190,
+                "name": "Oriental Mindoro"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4184,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4184,
+                "name": "Palawan"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4192,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4192,
+                "name": "Pampanga"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4192,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4192,
+                "name": "Sarangani"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2932,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2932,
+                "name": "Zamboanga del Norte"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2932,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2932,
+                "name": "Zamboanga del Sur"
+            },
+            "country_code": "PH"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 2932,
+                    "country_code": "PH"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 2932,
+                "name": "Zamboanga Sibugay"
+            },
+            "country_code": "PH"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

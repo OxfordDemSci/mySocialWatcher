@@ -1,0 +1,208 @@
+{
+    "name": "UZB",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3913,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3913,
+                "name": "Andijon"
+            },
+            "country_code": "UZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3915,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3915,
+                "name": "Farg'ona"
+            },
+            "country_code": "UZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3918,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3918,
+                "name": "Namangan"
+            },
+            "country_code": "UZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3919,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3919,
+                "name": "Navoiy"
+            },
+            "country_code": "UZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3921,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3921,
+                "name": "Qaraqalpaqstan"
+            },
+            "country_code": "UZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3920,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3920,
+                "name": "Qashqadaryo"
+            },
+            "country_code": "UZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3922,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3922,
+                "name": "Samarqand'"
+            },
+            "country_code": "UZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4727,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4727,
+                "name": "Sirdaryo"
+            },
+            "country_code": "UZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3924,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3924,
+                "name": "Surxondaryo"
+            },
+            "country_code": "UZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3926,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3926,
+                "name": "Toshkent"
+            },
+            "country_code": "UZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3926,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3926,
+                "name": "Toshkent Shahri"
+            },
+            "country_code": "UZ"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3917,
+                    "country_code": "UZ"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3917,
+                "name": "Xorazm"
+            },
+            "country_code": "UZ"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

@@ -1,0 +1,180 @@
+{
+    "name": "SLB",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4890,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4890,
+                "name": "Central"
+            },
+            "country_code": "SB"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4892,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4892,
+                "name": "Choiseul"
+            },
+            "country_code": "SB"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4893,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4893,
+                "name": "Guadalcanal"
+            },
+            "country_code": "SB"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4903,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4903,
+                "name": "Honiara"
+            },
+            "country_code": "SB"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4894,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4894,
+                "name": "Isabel"
+            },
+            "country_code": "SB"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3218,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3218,
+                "name": "Makira Ulawa"
+            },
+            "country_code": "SB"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4895,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4895,
+                "name": "Malaita"
+            },
+            "country_code": "SB"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4896,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4896,
+                "name": "Rennell and Bellona"
+            },
+            "country_code": "SB"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4898,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4898,
+                "name": "Temotu"
+            },
+            "country_code": "SB"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4897,
+                    "country_code": "SB"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4897,
+                "name": "Western"
+            },
+            "country_code": "SB"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

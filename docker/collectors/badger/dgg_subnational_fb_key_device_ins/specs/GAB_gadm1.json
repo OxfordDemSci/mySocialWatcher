@@ -1,0 +1,166 @@
+{
+    "name": "GAB",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1090,
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1090,
+                "name": "Estuaire"
+            },
+            "country_code": "GA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1091,
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1091,
+                "name": "Haut-Ogoou\u00e9"
+            },
+            "country_code": "GA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1092,
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1092,
+                "name": "Moyen-Ogoou\u00e9"
+            },
+            "country_code": "GA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1093,
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1093,
+                "name": "Ngouni\u00e9"
+            },
+            "country_code": "GA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1094,
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1094,
+                "name": "Nyanga"
+            },
+            "country_code": "GA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1095,
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1095,
+                "name": "Ogoou\u00e9-Ivindo"
+            },
+            "country_code": "GA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1096,
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1096,
+                "name": "Ogoou\u00e9-Lolo"
+            },
+            "country_code": "GA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1097,
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1097,
+                "name": "Ogoou\u00e9-Maritime"
+            },
+            "country_code": "GA"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1098,
+                    "country_code": "GA"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1098,
+                "name": "Wouleu-Ntem"
+            },
+            "country_code": "GA"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

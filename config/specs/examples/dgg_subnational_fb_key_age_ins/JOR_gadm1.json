@@ -1,0 +1,187 @@
+{
+    "name": "JOR",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1882,
+                    "country_code": "JO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1882,
+                "name": "Amman"
+            },
+            "country_code": "JO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4338,
+                    "country_code": "JO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4338,
+                "name": "Aqaba"
+            },
+            "country_code": "JO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1875,
+                    "country_code": "JO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1875,
+                "name": "Balqa"
+            },
+            "country_code": "JO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1881,
+                    "country_code": "JO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1881,
+                "name": "Irbid"
+            },
+            "country_code": "JO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1877,
+                    "country_code": "JO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1877,
+                "name": "Karak"
+            },
+            "country_code": "JO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1876,
+                    "country_code": "JO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1876,
+                "name": "Ma`an"
+            },
+            "country_code": "JO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4337,
+                    "country_code": "JO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4337,
+                "name": "Madaba"
+            },
+            "country_code": "JO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1878,
+                    "country_code": "JO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1878,
+                "name": "Mafraq"
+            },
+            "country_code": "JO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1879,
+                    "country_code": "JO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1879,
+                "name": "Tafilah"
+            },
+            "country_code": "JO"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1880,
+                    "country_code": "JO"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1880,
+                "name": "Zarqa"
+            },
+            "country_code": "JO"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}

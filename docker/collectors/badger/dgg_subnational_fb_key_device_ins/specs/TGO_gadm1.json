@@ -1,0 +1,110 @@
+{
+    "name": "TGO",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4929,
+                    "country_code": "TG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4929,
+                "name": "Centre"
+            },
+            "country_code": "TG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4930,
+                    "country_code": "TG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4930,
+                "name": "Kara"
+            },
+            "country_code": "TG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4931,
+                    "country_code": "TG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4931,
+                "name": "Maritime"
+            },
+            "country_code": "TG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4934,
+                    "country_code": "TG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4934,
+                "name": "Plateaux"
+            },
+            "country_code": "TG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4939,
+                    "country_code": "TG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4939,
+                "name": "Savanes"
+            },
+            "country_code": "TG"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

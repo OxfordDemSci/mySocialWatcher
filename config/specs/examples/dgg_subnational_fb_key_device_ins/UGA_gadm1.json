@@ -1,0 +1,824 @@
+{
+    "name": "UGA",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3816,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3816,
+                "name": "Adjumani"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4777,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4777,
+                "name": "Apac"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3822,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3822,
+                "name": "Arua"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3817,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3817,
+                "name": "Bugiri"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4795,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4795,
+                "name": "Bundibugyo"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4797,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4797,
+                "name": "Bushenyi"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3818,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3818,
+                "name": "Busia"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4779,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4779,
+                "name": "Gulu"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4798,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4798,
+                "name": "Hoima"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3823,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3823,
+                "name": "Iganga"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4757,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4757,
+                "name": "Jinja"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4801,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4801,
+                "name": "Kabale"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3824,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3824,
+                "name": "Kabarole"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3825,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3825,
+                "name": "Kaberamaido"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4736,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4736,
+                "name": "Kalangala"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3815,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3815,
+                "name": "Kampala"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4759,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4759,
+                "name": "Kamuli"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3826,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3826,
+                "name": "Kamwenge"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3827,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3827,
+                "name": "Kanungu"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4760,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4760,
+                "name": "Kapchorwa"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4699,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4699,
+                "name": "Kasese"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3819,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3819,
+                "name": "Katakwi"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3828,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3828,
+                "name": "Kayunga"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4794,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4794,
+                "name": "Kibale"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4738,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4738,
+                "name": "Kiboga"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4803,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4803,
+                "name": "Kisoro"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3829,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3829,
+                "name": "Kitgum"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4783,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4783,
+                "name": "Kotido"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4762,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4762,
+                "name": "Kumi"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3830,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3830,
+                "name": "Kyenjojo"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4785,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4785,
+                "name": "Lira"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4741,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4741,
+                "name": "Luwero"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4744,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4744,
+                "name": "Masaka"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4804,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4804,
+                "name": "Masindi"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3831,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3831,
+                "name": "Mayuge"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3832,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3832,
+                "name": "Mbale"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4805,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4805,
+                "name": "Mbarara"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3833,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3833,
+                "name": "Moroto"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4787,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4787,
+                "name": "Moyo"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3834,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3834,
+                "name": "Mpigi"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4746,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4746,
+                "name": "Mubende"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3835,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3835,
+                "name": "Mukono"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3836,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3836,
+                "name": "Nakapiripirit"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3820,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3820,
+                "name": "Nakasongola"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4789,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4789,
+                "name": "Nebbi"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4808,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4808,
+                "name": "Ntungamo"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3837,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3837,
+                "name": "Pader"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4769,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4769,
+                "name": "Pallisa"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4748,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4748,
+                "name": "Rakai"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3838,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3838,
+                "name": "Rukungiri"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3821,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3821,
+                "name": "Sembabule"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3839,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3839,
+                "name": "Sironko"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3840,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3840,
+                "name": "Soroti"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4771,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4771,
+                "name": "Tororo"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3841,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3841,
+                "name": "Wakiso"
+            },
+            "country_code": "UG"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 3842,
+                    "country_code": "UG"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 3842,
+                "name": "Yumbe"
+            },
+            "country_code": "UG"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        }
+    ],
+    "behavior": {
+        "access_device": [
+            {
+                "or": [
+                    6004384041172
+                ],
+                "name": "iOS"
+            },
+            {
+                "or": [
+                    6015235495383
+                ],
+                "name": "Wifi"
+            },
+            {
+                "or": [
+                    6017253531383
+                ],
+                "name": "4G_Network"
+            }
+        ]
+    }
+}

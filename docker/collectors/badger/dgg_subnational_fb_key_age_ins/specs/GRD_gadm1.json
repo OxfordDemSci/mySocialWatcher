@@ -1,0 +1,145 @@
+{
+    "name": "GRD",
+    "geo_locations": [
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 4569,
+                    "country_code": "GD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 4569,
+                "name": "Carriacou"
+            },
+            "country_code": "GD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1351,
+                    "country_code": "GD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1351,
+                "name": "Saint Andrew"
+            },
+            "country_code": "GD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1352,
+                    "country_code": "GD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1352,
+                "name": "Saint David"
+            },
+            "country_code": "GD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1353,
+                    "country_code": "GD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1353,
+                "name": "Saint George"
+            },
+            "country_code": "GD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1354,
+                    "country_code": "GD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1354,
+                "name": "Saint John"
+            },
+            "country_code": "GD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1355,
+                    "country_code": "GD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1355,
+                "name": "Saint Mark"
+            },
+            "country_code": "GD"
+        },
+        {
+            "name": "regions",
+            "values": [
+                {
+                    "key": 1356,
+                    "country_code": "GD"
+                }
+            ],
+            "pySocialWatcherReference": {
+                "key": 1356,
+                "name": "Saint Patrick"
+            },
+            "country_code": "GD"
+        }
+    ],
+    "publisher_platforms": [
+        "instagram"
+    ],
+    "genders": [
+        0,
+        1,
+        2
+    ],
+    "ages_ranges": [
+        {
+            "min": 13
+        },
+        {
+            "min": 15
+        },
+        {
+            "min": 18
+        },
+        {
+            "min": 15,
+            "max": 24
+        },
+        {
+            "min": 25,
+            "max": 59
+        },
+        {
+            "min": 60
+        },
+        {
+            "min": 15,
+            "max": 49
+        },
+        {
+            "min": 18,
+            "max": 24
+        },
+        {
+            "min": 18,
+            "max": 49
+        }
+    ]
+}
