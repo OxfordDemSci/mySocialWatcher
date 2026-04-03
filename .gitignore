@@ -47,3 +47,16 @@ mySocialWatcher.Rproj
 config/specs/examples/test.py
 config/specs/specs_explore/fb_gadm_match/gadm_fb_crosswalk.py
 
+config/collections/dgg_subnational_tessellated_device_ins_detail_ages.py
+config/collections/dgg_subnational_tessellated_age_ins_detail_ages.py
+config/collections/dgg_subnational_fb_key_device_ins_detail_ages.py
+config/collections/dgg_subnational_fb_key_age_ins_detail_ages.py
+/config/specs/examples/dgg_subnational_fb_key_age_ins_detail_ages
+/config/specs/examples/dgg_subnational_tessellated_age_ins_detail_ages
+/config/specs/examples/dgg_subnational_tessellated_device_ins_detail_ages
+/docker/collectors/badger/dgg_subnational_fb_key_age_ins_detail_ages
+/docker/collectors/badger/dgg_subnational_fb_key_device_ins_detail_ages
+/docker/collectors/badger/dgg_subnational_tessellated_age_ins_detail_ages
+/scripts
+/scratch
+docker/collectors/requirements.txt
