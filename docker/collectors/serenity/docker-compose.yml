@@ -1,0 +1,29 @@
+services:
+
+  migration_asia_pacific:
+    container_name: migration_asia_pacific
+    volumes:
+      - ./migration_asia_pacific:/app/in
+      - ./../../../data/serenity/migration_asia_pacific:/app/data
+    build:
+      args:
+          sleep_time: 2
+          email_notification_enable: "True"
+          email_receiver: "douglas.leasure@demography.ox.ac.uk"
+      context: ./../../../
+      dockerfile: ./docker/collectors/Dockerfile
+    restart: unless-stopped
+
+  # global_migration_core:
+  #   container_name: global_migration_core
+  #   volumes:
+  #     - ./global_migration_core:/app/in
+  #     - ./../../../data/serenity/global_migration_core:/app/data
+  #   build:
+  #     args:
+  #         sleep_time: 2
+  #         email_notification_enable: "True"
+  #         email_receiver: "douglas.leasure@demography.ox.ac.uk"
+  #     context: ./../../../
+  #     dockerfile: ./docker/collectors/Dockerfile
+  #   restart: unless-stopped
